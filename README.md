@@ -6,7 +6,7 @@
 4. Right-click one of the projects and select <code>Run</code> -> <code>Run As</code> -> <code>Eclipse Application</code>. This launches the Eclipse runtime with an empty runtime workspace (cf. next section). 
 
 ## Setup the Runtime Workspace
-1. Create an empty project (<code>File</code> -> <code>New</code> -> <code>Project</code>).
+1. Create a new general project (<code>File</code> -> <code>New</code> -> <code>Project...</code> -> <code>General</code> -> <code>Project</code>).
 2. In this project, create a new .bomi file (<code>File</code> -> <code>New</code> -> <code>Other...</code>) -> <code>Example EMF Model Creation Wizards</code> -> <code>Bomi Model</code>). In the final dialog, select in the topmost dropdown box <code>BOMI Model</code> as <code>Model Object</code>. The resulting .bomi file gets only opened in the plain tree and property editor without diagrams, which we add in the next step.
 3. In the project, create a representation file (Right-click project -> <code>Representations File</code>). 
    - In the wizard, select <code>Initialization from a semantic resource</code>
