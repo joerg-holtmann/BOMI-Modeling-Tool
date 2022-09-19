@@ -76,7 +76,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="Boundary Object" semanticCandidatesExpression="feature:boundaryObjects" domainClass="bomi::BoundaryObject" childrenPresentation="VerticalStack">
+        <containerMappings name="Boundary Object" semanticCandidatesExpression="feature:boundaryObjects" domainClass="bomi::BoundaryObject" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Boundary Object Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject" childrenPresentation="List">
             <subNodeMappings name="Super Type" preconditionExpression="aql:self.superType &lt;> bomi::BOSuperTypes::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
               <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Super Type: ' + self.superType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
@@ -200,7 +200,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
           </style>
         </containerMappings>
-        <containerMappings name="Methodological Island" semanticCandidatesExpression="feature:methodologicalIslands" domainClass="bomi::MethodologicalIsland" childrenPresentation="VerticalStack">
+        <containerMappings name="Methodological Island" semanticCandidatesExpression="feature:methodologicalIslands" domainClass="bomi::MethodologicalIsland" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Methodological Island Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::MethodologicalIsland" childrenPresentation="List">
             <subNodeMappings name="Type" preconditionExpression="aql:self.type &lt;> bomi::MIType::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::MethodologicalIsland">
               <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Type: ' + self.type" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
@@ -224,7 +224,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
           </style>
         </containerMappings>
-        <containerMappings name="Driver" semanticCandidatesExpression="feature:drivers" domainClass="bomi::Driver" childrenPresentation="VerticalStack">
+        <containerMappings name="Driver" semanticCandidatesExpression="feature:drivers" domainClass="bomi::Driver" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Driver Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::Driver" childrenPresentation="List">
             <subNodeMappings name="Driver Type" preconditionExpression="aql:self.driverType &lt;> bomi::DriverTypes::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
               <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Driver Type: ' + self.driverType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
