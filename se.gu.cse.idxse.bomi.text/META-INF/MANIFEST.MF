@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: se.gu.cse.idxse.bomi.text
+Bundle-ManifestVersion: 2
+Bundle-Name: se.gu.cse.idxse.bomi.text
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: se.gu.cse.idxse.bomi.text; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: se.gu.cse.idxse.bomi,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: se.gu.cse.idxse.bomi.text.scoping,
+ se.gu.cse.idxse.bomi.text.formatting2,
+ se.gu.cse.idxse.bomi.text.parser.antlr.internal,
+ se.gu.cse.idxse.bomi.text.serializer,
+ se.gu.cse.idxse.bomi.text.generator,
+ se.gu.cse.idxse.bomi.text.services,
+ se.gu.cse.idxse.bomi.text.validation,
+ se.gu.cse.idxse.bomi.text.parser.antlr,
+ se.gu.cse.idxse.bomi.text
+Import-Package: org.apache.log4j
