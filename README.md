@@ -1,7 +1,7 @@
 # BOMI-Views
 ## Setup the Development Workspace
 1. Get an <code>Eclipse Modeling Tools</code> for your operating system from <link>https://www.eclipse.org/downloads/packages/</link>
-2. Install all Sirius Components via <code>Help</code> -> <code>Install New Software...</code>. In the corresponding wizard, select, e.g., <code>Latest Eclipse Simultaneous Release</code> in the topmost dropdown box. After loading has finished, type in <code>Sirius</code> and simply select and install all the resulting components.
+2. Install all Sirius and Xtext Components via <code>Help</code> -> <code>Install New Software...</code>. In the corresponding wizard, select, e.g., <code>Latest Eclipse Simultaneous Release</code> in the topmost dropdown box. After loading has finished, type in <code>Sirius</code> and simply select and install all the resulting components. Do the same with typing <code>Xtext</code> and install the "Xtext Complete SDK". 
 3. Pull this repo and import all the projects <code>se.gu.cse.idxse.bomi<.x></code>. Best done directly in the Eclipse Git perspective (open via, e.g., <code>Window</code> -> <code>Perspective</code> -> <code>Open Perspective</code> -> <code>Git</code>), but you can also pull the repo in a different way and then import the projects.
 4. Create an empty folder <code>src</code> for the project <code>se.gu.cse.idxse.bomi</code> via Right-click -> <code>New</code> -> <code>Folder</code>. 
 5. Right-click one of the projects and select <code>Run</code> -> <code>Run As</code> -> <code>Eclipse Application</code>. This launches the Eclipse runtime with an empty runtime workspace (cf. next section). 
