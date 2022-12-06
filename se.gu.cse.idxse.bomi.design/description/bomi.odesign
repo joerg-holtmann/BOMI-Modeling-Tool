@@ -29,7 +29,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="BO/MI Coordination" semanticCandidatesExpression="feature:boMiCoordinations" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetFinderExpression="feature:methodologicalIslands" sourceFinderExpression="feature:boundaryObjects" domainClass="bomi::BOMICoordination" useDomainElement="true">
-          <style sizeComputationExpression="2" routingStyle="manhattan">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:name">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
@@ -37,7 +37,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="BO/Role Interaction" semanticCandidatesExpression="feature:boRoleInteractions" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:roles" domainClass="bomi::BORoleInteraction" useDomainElement="true">
-          <style sizeComputationExpression="2" routingStyle="manhattan">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:name">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
@@ -45,7 +45,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="BO/Team Governance" semanticCandidatesExpression="feature:boTeamGovernances" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Governance%20Team']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:governanceTeams" domainClass="bomi::BOTeamGovernance" useDomainElement="true">
-          <style sizeComputationExpression="2" routingStyle="manhattan">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:name">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
