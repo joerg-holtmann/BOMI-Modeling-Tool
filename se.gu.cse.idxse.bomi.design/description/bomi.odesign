@@ -4,8 +4,26 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="BOMI Detailed Diagram" domainClass="bomi::BOMIModel" enablePopupBars="true">
       <metamodel href="../../se.gu.cse.idxse.bomi/model/bomi.ecore#/"/>
       <validationSet>
-        <ownedRules xsi:type="validation:SemanticValidationRule" name="BOLowModularity" level="WARNING" message="The boundary object has a low modularity." targetClass="bomi::BoundaryObject">
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONoLowModularity" level="WARNING" message="The boundary object has a low modularity." targetClass="bomi::BoundaryObject">
           <audits auditExpression="aql:self.modularity &lt;> bomi::HighLow::Low"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONoLowInternalConsistency" level="WARNING" message="The boundary object has a low internal consistency." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:self.internalConsistency &lt;> bomi::HighLow::Low"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(HighDetailLevelAndHighFrequencyChange)" level="WARNING" message="The boundary object has a high level of detail and a high frequency of change." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:not (self.levelOfDetail = bomi::HighLow::High and self.frequencyOfChange = bomi::HighLow::High)"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo((Deprecated/RetiredLifecycleStage)AndHighFrequencyChange)" level="WARNING" message="The boundary object has a later lifecycle but a high frequency of change." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:not ((self.lifecycleStage = bomi::LifecycleStage::Deprecate or self.lifecycleStage = bomi::LifecycleStage::Retire) and self.frequencyOfChange = bomi::HighLow::High)"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNoLowFitforpurpose" level="WARNING" message="The usage is not fit for purpose." targetClass="bomi::UsageAssociation">
+          <audits auditExpression="aql:self.fitForPurpose &lt;> bomi::HighLow::Low"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNo(HighCriticalityAndLowStability)" level="WARNING" message="The usage has a high criticality but a low stability." targetClass="bomi::UsageAssociation">
+          <audits auditExpression="aql:not (self.criticality = bomi::HighLow::High and self.stability = bomi::HighLow::Low)"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(NoGovernanceTeam)" level="WARNING" message="The boundary object has no governance team." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:not self.eContainer().boTeamGovernances.boundaryObjects->excludes(self)"/>
         </ownedRules>
       </validationSet>
       <defaultLayer name="Default">
@@ -33,7 +51,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="BO/MI Coordination" semanticCandidatesExpression="feature:boMiCoordinations" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetFinderExpression="feature:methodologicalIslands" sourceFinderExpression="feature:boundaryObjects" domainClass="bomi::BOMICoordination" useDomainElement="true">
+        <edgeMappings name="BO/MI Usage" semanticCandidatesExpression="feature:boMiCoordinations" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:methodologicalIslands" domainClass="bomi::BOMICoordination" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Association: ' + self.name">
@@ -41,7 +59,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="BO/Role Interaction" semanticCandidatesExpression="feature:boRoleInteractions" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:roles" domainClass="bomi::BORoleInteraction" useDomainElement="true">
+        <edgeMappings name="BO/Role Usage" semanticCandidatesExpression="feature:boRoleInteractions" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:roles" domainClass="bomi::BORoleInteraction" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Association: ' + self.name">
@@ -343,7 +361,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="BO coordinates MI" edgeMappings="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='BO%2FMI%20Coordination']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="MI coordinates BO" edgeMappings="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='BO%2FMI%20Usage']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -351,14 +369,14 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer()/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="bomi::BOMICoordination" referenceName="boMiCoordinations" variableName="">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'boCoordinatesMi'+self.eContainer().eContents(bomi::BOMICoordination)->size()"/>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="boundaryObjects" valueExpression="var:source"/>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="methodologicalIslands" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'miCoordinatesBo'+self.eContainer().eContents(bomi::BOMICoordination)->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="methodologicalIslands" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="boundaryObjects" valueExpression="var:target"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Role interacts with BO" edgeMappings="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='BO%2FRole%20Interaction']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Role interacts with BO" edgeMappings="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='BO%2FRole%20Usage']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
