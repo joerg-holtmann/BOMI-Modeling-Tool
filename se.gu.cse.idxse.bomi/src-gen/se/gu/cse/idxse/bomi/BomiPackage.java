@@ -590,13 +590,58 @@ public interface BomiPackage extends EPackage {
 	int BO_ROLE_INTERACTION__ROLES = USAGE_ASSOCIATION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Responsible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BO_ROLE_INTERACTION__RESPONSIBLE = USAGE_ASSOCIATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Creates</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BO_ROLE_INTERACTION__CREATES = USAGE_ASSOCIATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Reads</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BO_ROLE_INTERACTION__READS = USAGE_ASSOCIATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Updates</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BO_ROLE_INTERACTION__UPDATES = USAGE_ASSOCIATION_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Deletes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BO_ROLE_INTERACTION__DELETES = USAGE_ASSOCIATION_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>BO Role Interaction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BO_ROLE_INTERACTION_FEATURE_COUNT = USAGE_ASSOCIATION_FEATURE_COUNT + 1;
+	int BO_ROLE_INTERACTION_FEATURE_COUNT = USAGE_ASSOCIATION_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>BO Role Interaction</em>' class.
@@ -1106,6 +1151,16 @@ public interface BomiPackage extends EPackage {
 	int DISTANCE_TYPES = 18;
 
 	/**
+	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.MyBoolean <em>My Boolean</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see se.gu.cse.idxse.bomi.MyBoolean
+	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getMyBoolean()
+	 * @generated
+	 */
+	int MY_BOOLEAN = 19;
+
+	/**
 	 * Returns the meta object for class '{@link se.gu.cse.idxse.bomi.BoundaryObject <em>Boundary Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1331,6 +1386,61 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBORoleInteraction_Roles();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BORoleInteraction#getResponsible <em>Responsible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Responsible</em>'.
+	 * @see se.gu.cse.idxse.bomi.BORoleInteraction#getResponsible()
+	 * @see #getBORoleInteraction()
+	 * @generated
+	 */
+	EAttribute getBORoleInteraction_Responsible();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BORoleInteraction#getCreates <em>Creates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Creates</em>'.
+	 * @see se.gu.cse.idxse.bomi.BORoleInteraction#getCreates()
+	 * @see #getBORoleInteraction()
+	 * @generated
+	 */
+	EAttribute getBORoleInteraction_Creates();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BORoleInteraction#getReads <em>Reads</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reads</em>'.
+	 * @see se.gu.cse.idxse.bomi.BORoleInteraction#getReads()
+	 * @see #getBORoleInteraction()
+	 * @generated
+	 */
+	EAttribute getBORoleInteraction_Reads();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BORoleInteraction#getUpdates <em>Updates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Updates</em>'.
+	 * @see se.gu.cse.idxse.bomi.BORoleInteraction#getUpdates()
+	 * @see #getBORoleInteraction()
+	 * @generated
+	 */
+	EAttribute getBORoleInteraction_Updates();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BORoleInteraction#getDeletes <em>Deletes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Deletes</em>'.
+	 * @see se.gu.cse.idxse.bomi.BORoleInteraction#getDeletes()
+	 * @see #getBORoleInteraction()
+	 * @generated
+	 */
+	EAttribute getBORoleInteraction_Deletes();
 
 	/**
 	 * Returns the meta object for class '{@link se.gu.cse.idxse.bomi.BOMIModel <em>BOMI Model</em>}'.
@@ -1736,6 +1846,16 @@ public interface BomiPackage extends EPackage {
 	EEnum getDistanceTypes();
 
 	/**
+	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.MyBoolean <em>My Boolean</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>My Boolean</em>'.
+	 * @see se.gu.cse.idxse.bomi.MyBoolean
+	 * @generated
+	 */
+	EEnum getMyBoolean();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1933,6 +2053,46 @@ public interface BomiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BO_ROLE_INTERACTION__ROLES = eINSTANCE.getBORoleInteraction_Roles();
+
+		/**
+		 * The meta object literal for the '<em><b>Responsible</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BO_ROLE_INTERACTION__RESPONSIBLE = eINSTANCE.getBORoleInteraction_Responsible();
+
+		/**
+		 * The meta object literal for the '<em><b>Creates</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BO_ROLE_INTERACTION__CREATES = eINSTANCE.getBORoleInteraction_Creates();
+
+		/**
+		 * The meta object literal for the '<em><b>Reads</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BO_ROLE_INTERACTION__READS = eINSTANCE.getBORoleInteraction_Reads();
+
+		/**
+		 * The meta object literal for the '<em><b>Updates</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BO_ROLE_INTERACTION__UPDATES = eINSTANCE.getBORoleInteraction_Updates();
+
+		/**
+		 * The meta object literal for the '<em><b>Deletes</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BO_ROLE_INTERACTION__DELETES = eINSTANCE.getBORoleInteraction_Deletes();
 
 		/**
 		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.impl.BOMIModelImpl <em>BOMI Model</em>}' class.
@@ -2268,6 +2428,16 @@ public interface BomiPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum DISTANCE_TYPES = eINSTANCE.getDistanceTypes();
+
+		/**
+		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.MyBoolean <em>My Boolean</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see se.gu.cse.idxse.bomi.MyBoolean
+		 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getMyBoolean()
+		 * @generated
+		 */
+		EEnum MY_BOOLEAN = eINSTANCE.getMyBoolean();
 
 	}
 

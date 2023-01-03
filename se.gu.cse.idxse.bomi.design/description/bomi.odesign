@@ -25,8 +25,14 @@
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(NoGovernanceTeam)" level="WARNING" message="The boundary object has no governance team." targetClass="bomi::BoundaryObject">
           <audits auditExpression="aql:not self.eContainer().boTeamGovernances.boundaryObjects->excludes(self)"/>
         </ownedRules>
-        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(NoResponsibleRole)" level="WARNING" message="The boundary object has no responsible role." targetClass="bomi::BoundaryObject">
-          <audits auditExpression="aql:not self.eContainer().boRoleInteractions.boundaryObjects->excludes(self)"/>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(NoRoleOrNoResponsibleRole)" level="WARNING" message="The boundary object has no responsible role." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->excludes(self) or (i.responsible &lt;> bomi::MyBoolean::True and i.boundaryObjects->includes(self)))->size() = 0"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(NoRoleOrNoUpdatingRole)" level="WARNING" message="The boundary object has no updating role." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->excludes(self) or (i.updates &lt;> bomi::MyBoolean::True and i.boundaryObjects->includes(self)))->size() = 0"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONoGoverningRoleInteractions" level="WARNING" message="For the governing roles of this boundary object, there should be an interaction between the roles and the boundary object." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:let referencingBOTeamGovernances = self.eContainer().boTeamGovernances->select(g | g.boundaryObjects->includes(self)) let referencingRoleInteractions = self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self)) referencingRoleInteractions.roles->select(r | r.partOfGovernanceTeams->intersection(referencingBOTeamGovernances.governanceTeams) &lt;> null)->size() > 0"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(HighFrequencyOfChangeAndLowFrequencyOfCoordination)" level="WARNING" message="The boundary object has a high frequency of change but it's team governance a low frequency of coordination." targetClass="bomi::BoundaryObject">
           <audits auditExpression="aql:self.frequencyOfChange &lt;> bomi::HighLow::High or self.eContainer().boTeamGovernances->select(g | g.frequencyOfCoordination = bomi::HighLow::Low and g.boundaryObjects->includes(self))->size()=0"/>

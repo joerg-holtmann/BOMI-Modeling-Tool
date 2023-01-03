@@ -77,6 +77,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="BORoleInteraction" eSuperTypes="#//UsageAssociation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
         eType="#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responsible" eType="#//MyBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creates" eType="#//MyBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reads" eType="#//MyBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updates" eType="#//MyBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deletes" eType="#//MyBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BOMIModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="boRoleInteractions" upperBound="-1"
@@ -131,5 +136,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PurposedElement" abstract="true" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MyBoolean">
+    <eLiterals name="NOT_SET"/>
+    <eLiterals name="True" value="1"/>
+    <eLiterals name="False" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

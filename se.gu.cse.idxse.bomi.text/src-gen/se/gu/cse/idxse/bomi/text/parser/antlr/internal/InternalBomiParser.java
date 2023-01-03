@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBomiParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'boundaryObjects'", "'{'", "','", "'}'", "'methodologicalIslands'", "'governanceTeams'", "'roles'", "'drivers'", "'BoundaryObject'", "'superType'", "'purpose'", "'levelOfDetail'", "'frequencyOfChange'", "'modularity'", "'maintainability'", "'prescriptive'", "'lifecycleStage'", "'representationFormat'", "'tooling'", "'versioning'", "'upToDate'", "'internalConsistency'", "'externalConsistency'", "'MethodologicalIsland'", "'type'", "'GovernanceTeam'", "'Role'", "'partOfGovernanceTeams'", "'('", "')'", "'partOfMIs'", "'Driver'", "'driverType'", "'distanceType'", "'distanceSize'", "'drivesMIs'", "'BOMICoordination'", "'accessability'", "'stability'", "'criticality'", "'fitForPurpose'", "'BORoleInteraction'", "'BOTeamGovernance'", "'coordinationMechanism'", "'frequencyOfCoordination'", "'NOT_SET'", "'High'", "'Medium'", "'Low'", "'Standard'", "'Technology'", "'Task'", "'Planning'", "'Value'", "'Product'", "'Other'", "'Operation'", "'Deprecate'", "'Retire'", "'Teams'", "'Silos'", "'Departments'", "'Organizations'", "'Process'", "'Organizational'", "'Cultural'", "'Geographical'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'boundaryObjects'", "'{'", "','", "'}'", "'methodologicalIslands'", "'governanceTeams'", "'roles'", "'drivers'", "'BoundaryObject'", "'superType'", "'purpose'", "'levelOfDetail'", "'frequencyOfChange'", "'modularity'", "'maintainability'", "'prescriptive'", "'lifecycleStage'", "'representationFormat'", "'tooling'", "'versioning'", "'upToDate'", "'internalConsistency'", "'externalConsistency'", "'MethodologicalIsland'", "'type'", "'GovernanceTeam'", "'Role'", "'partOfGovernanceTeams'", "'('", "')'", "'partOfMIs'", "'Driver'", "'driverType'", "'distanceType'", "'distanceSize'", "'drivesMIs'", "'BOMICoordination'", "'accessability'", "'stability'", "'criticality'", "'fitForPurpose'", "'BORoleInteraction'", "'responsible'", "'creates'", "'reads'", "'updates'", "'deletes'", "'BOTeamGovernance'", "'coordinationMechanism'", "'frequencyOfCoordination'", "'NOT_SET'", "'High'", "'Medium'", "'Low'", "'True'", "'False'", "'Standard'", "'Technology'", "'Task'", "'Planning'", "'Value'", "'Product'", "'Other'", "'Operation'", "'Deprecate'", "'Retire'", "'Teams'", "'Silos'", "'Departments'", "'Organizations'", "'Process'", "'Organizational'", "'Cultural'", "'Geographical'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -77,7 +77,9 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
     public static final int T__33=33;
     public static final int T__77=77;
     public static final int T__34=34;
+    public static final int T__78=78;
     public static final int T__35=35;
+    public static final int T__79=79;
     public static final int T__36=36;
     public static final int T__73=73;
     public static final int EOF=-1;
@@ -87,6 +89,10 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
     public static final int T__75=75;
     public static final int T__32=32;
     public static final int T__76=76;
+    public static final int T__80=80;
+    public static final int T__81=81;
+    public static final int T__82=82;
+    public static final int T__83=83;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
     public static final int T__48=48;
@@ -96,6 +102,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
     public static final int T__46=46;
     public static final int T__47=47;
     public static final int T__40=40;
+    public static final int T__84=84;
     public static final int T__41=41;
     public static final int T__42=42;
     public static final int T__43=43;
@@ -1070,7 +1077,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( (LA16_0==53) ) {
+            if ( (LA16_0==58) ) {
                 alt16=1;
             }
             switch (alt16) {
@@ -3870,7 +3877,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBORoleInteraction"
-    // InternalBomi.g:1695:1: ruleBORoleInteraction returns [EObject current=null] : ( () otherlv_1= 'BORoleInteraction' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'accessability' ( (lv_accessability_7_0= ruleHighLow ) ) )? (otherlv_8= 'stability' ( (lv_stability_9_0= ruleHighLow ) ) )? (otherlv_10= 'criticality' ( (lv_criticality_11_0= ruleHighLow ) ) )? (otherlv_12= 'fitForPurpose' ( (lv_fitForPurpose_13_0= ruleHighLow ) ) )? (otherlv_14= 'boundaryObjects' otherlv_15= '(' ( ( ruleEString ) ) (otherlv_17= ',' ( ( ruleEString ) ) )* otherlv_19= ')' )? (otherlv_20= 'roles' otherlv_21= '(' ( ( ruleEString ) ) (otherlv_23= ',' ( ( ruleEString ) ) )* otherlv_25= ')' )? otherlv_26= '}' ) ;
+    // InternalBomi.g:1695:1: ruleBORoleInteraction returns [EObject current=null] : ( () otherlv_1= 'BORoleInteraction' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'accessability' ( (lv_accessability_7_0= ruleHighLow ) ) )? (otherlv_8= 'stability' ( (lv_stability_9_0= ruleHighLow ) ) )? (otherlv_10= 'criticality' ( (lv_criticality_11_0= ruleHighLow ) ) )? (otherlv_12= 'fitForPurpose' ( (lv_fitForPurpose_13_0= ruleHighLow ) ) )? (otherlv_14= 'responsible' ( (lv_responsible_15_0= ruleMyBoolean ) ) )? (otherlv_16= 'creates' ( (lv_creates_17_0= ruleMyBoolean ) ) )? (otherlv_18= 'reads' ( (lv_reads_19_0= ruleMyBoolean ) ) )? (otherlv_20= 'updates' ( (lv_updates_21_0= ruleMyBoolean ) ) )? (otherlv_22= 'deletes' ( (lv_deletes_23_0= ruleMyBoolean ) ) )? (otherlv_24= 'boundaryObjects' otherlv_25= '(' ( ( ruleEString ) ) (otherlv_27= ',' ( ( ruleEString ) ) )* otherlv_29= ')' )? (otherlv_30= 'roles' otherlv_31= '(' ( ( ruleEString ) ) (otherlv_33= ',' ( ( ruleEString ) ) )* otherlv_35= ')' )? otherlv_36= '}' ) ;
     public final EObject ruleBORoleInteraction() throws RecognitionException {
         EObject current = null;
 
@@ -3882,14 +3889,19 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
         Token otherlv_10=null;
         Token otherlv_12=null;
         Token otherlv_14=null;
-        Token otherlv_15=null;
-        Token otherlv_17=null;
-        Token otherlv_19=null;
+        Token otherlv_16=null;
+        Token otherlv_18=null;
         Token otherlv_20=null;
-        Token otherlv_21=null;
-        Token otherlv_23=null;
+        Token otherlv_22=null;
+        Token otherlv_24=null;
         Token otherlv_25=null;
-        Token otherlv_26=null;
+        Token otherlv_27=null;
+        Token otherlv_29=null;
+        Token otherlv_30=null;
+        Token otherlv_31=null;
+        Token otherlv_33=null;
+        Token otherlv_35=null;
+        Token otherlv_36=null;
         AntlrDatatypeRuleToken lv_name_2_0 = null;
 
         AntlrDatatypeRuleToken lv_purpose_5_0 = null;
@@ -3902,16 +3914,26 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
         Enumerator lv_fitForPurpose_13_0 = null;
 
+        Enumerator lv_responsible_15_0 = null;
+
+        Enumerator lv_creates_17_0 = null;
+
+        Enumerator lv_reads_19_0 = null;
+
+        Enumerator lv_updates_21_0 = null;
+
+        Enumerator lv_deletes_23_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalBomi.g:1701:2: ( ( () otherlv_1= 'BORoleInteraction' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'accessability' ( (lv_accessability_7_0= ruleHighLow ) ) )? (otherlv_8= 'stability' ( (lv_stability_9_0= ruleHighLow ) ) )? (otherlv_10= 'criticality' ( (lv_criticality_11_0= ruleHighLow ) ) )? (otherlv_12= 'fitForPurpose' ( (lv_fitForPurpose_13_0= ruleHighLow ) ) )? (otherlv_14= 'boundaryObjects' otherlv_15= '(' ( ( ruleEString ) ) (otherlv_17= ',' ( ( ruleEString ) ) )* otherlv_19= ')' )? (otherlv_20= 'roles' otherlv_21= '(' ( ( ruleEString ) ) (otherlv_23= ',' ( ( ruleEString ) ) )* otherlv_25= ')' )? otherlv_26= '}' ) )
-            // InternalBomi.g:1702:2: ( () otherlv_1= 'BORoleInteraction' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'accessability' ( (lv_accessability_7_0= ruleHighLow ) ) )? (otherlv_8= 'stability' ( (lv_stability_9_0= ruleHighLow ) ) )? (otherlv_10= 'criticality' ( (lv_criticality_11_0= ruleHighLow ) ) )? (otherlv_12= 'fitForPurpose' ( (lv_fitForPurpose_13_0= ruleHighLow ) ) )? (otherlv_14= 'boundaryObjects' otherlv_15= '(' ( ( ruleEString ) ) (otherlv_17= ',' ( ( ruleEString ) ) )* otherlv_19= ')' )? (otherlv_20= 'roles' otherlv_21= '(' ( ( ruleEString ) ) (otherlv_23= ',' ( ( ruleEString ) ) )* otherlv_25= ')' )? otherlv_26= '}' )
+            // InternalBomi.g:1701:2: ( ( () otherlv_1= 'BORoleInteraction' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'accessability' ( (lv_accessability_7_0= ruleHighLow ) ) )? (otherlv_8= 'stability' ( (lv_stability_9_0= ruleHighLow ) ) )? (otherlv_10= 'criticality' ( (lv_criticality_11_0= ruleHighLow ) ) )? (otherlv_12= 'fitForPurpose' ( (lv_fitForPurpose_13_0= ruleHighLow ) ) )? (otherlv_14= 'responsible' ( (lv_responsible_15_0= ruleMyBoolean ) ) )? (otherlv_16= 'creates' ( (lv_creates_17_0= ruleMyBoolean ) ) )? (otherlv_18= 'reads' ( (lv_reads_19_0= ruleMyBoolean ) ) )? (otherlv_20= 'updates' ( (lv_updates_21_0= ruleMyBoolean ) ) )? (otherlv_22= 'deletes' ( (lv_deletes_23_0= ruleMyBoolean ) ) )? (otherlv_24= 'boundaryObjects' otherlv_25= '(' ( ( ruleEString ) ) (otherlv_27= ',' ( ( ruleEString ) ) )* otherlv_29= ')' )? (otherlv_30= 'roles' otherlv_31= '(' ( ( ruleEString ) ) (otherlv_33= ',' ( ( ruleEString ) ) )* otherlv_35= ')' )? otherlv_36= '}' ) )
+            // InternalBomi.g:1702:2: ( () otherlv_1= 'BORoleInteraction' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'accessability' ( (lv_accessability_7_0= ruleHighLow ) ) )? (otherlv_8= 'stability' ( (lv_stability_9_0= ruleHighLow ) ) )? (otherlv_10= 'criticality' ( (lv_criticality_11_0= ruleHighLow ) ) )? (otherlv_12= 'fitForPurpose' ( (lv_fitForPurpose_13_0= ruleHighLow ) ) )? (otherlv_14= 'responsible' ( (lv_responsible_15_0= ruleMyBoolean ) ) )? (otherlv_16= 'creates' ( (lv_creates_17_0= ruleMyBoolean ) ) )? (otherlv_18= 'reads' ( (lv_reads_19_0= ruleMyBoolean ) ) )? (otherlv_20= 'updates' ( (lv_updates_21_0= ruleMyBoolean ) ) )? (otherlv_22= 'deletes' ( (lv_deletes_23_0= ruleMyBoolean ) ) )? (otherlv_24= 'boundaryObjects' otherlv_25= '(' ( ( ruleEString ) ) (otherlv_27= ',' ( ( ruleEString ) ) )* otherlv_29= ')' )? (otherlv_30= 'roles' otherlv_31= '(' ( ( ruleEString ) ) (otherlv_33= ',' ( ( ruleEString ) ) )* otherlv_35= ')' )? otherlv_36= '}' )
             {
-            // InternalBomi.g:1702:2: ( () otherlv_1= 'BORoleInteraction' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'accessability' ( (lv_accessability_7_0= ruleHighLow ) ) )? (otherlv_8= 'stability' ( (lv_stability_9_0= ruleHighLow ) ) )? (otherlv_10= 'criticality' ( (lv_criticality_11_0= ruleHighLow ) ) )? (otherlv_12= 'fitForPurpose' ( (lv_fitForPurpose_13_0= ruleHighLow ) ) )? (otherlv_14= 'boundaryObjects' otherlv_15= '(' ( ( ruleEString ) ) (otherlv_17= ',' ( ( ruleEString ) ) )* otherlv_19= ')' )? (otherlv_20= 'roles' otherlv_21= '(' ( ( ruleEString ) ) (otherlv_23= ',' ( ( ruleEString ) ) )* otherlv_25= ')' )? otherlv_26= '}' )
-            // InternalBomi.g:1703:3: () otherlv_1= 'BORoleInteraction' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'accessability' ( (lv_accessability_7_0= ruleHighLow ) ) )? (otherlv_8= 'stability' ( (lv_stability_9_0= ruleHighLow ) ) )? (otherlv_10= 'criticality' ( (lv_criticality_11_0= ruleHighLow ) ) )? (otherlv_12= 'fitForPurpose' ( (lv_fitForPurpose_13_0= ruleHighLow ) ) )? (otherlv_14= 'boundaryObjects' otherlv_15= '(' ( ( ruleEString ) ) (otherlv_17= ',' ( ( ruleEString ) ) )* otherlv_19= ')' )? (otherlv_20= 'roles' otherlv_21= '(' ( ( ruleEString ) ) (otherlv_23= ',' ( ( ruleEString ) ) )* otherlv_25= ')' )? otherlv_26= '}'
+            // InternalBomi.g:1702:2: ( () otherlv_1= 'BORoleInteraction' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'accessability' ( (lv_accessability_7_0= ruleHighLow ) ) )? (otherlv_8= 'stability' ( (lv_stability_9_0= ruleHighLow ) ) )? (otherlv_10= 'criticality' ( (lv_criticality_11_0= ruleHighLow ) ) )? (otherlv_12= 'fitForPurpose' ( (lv_fitForPurpose_13_0= ruleHighLow ) ) )? (otherlv_14= 'responsible' ( (lv_responsible_15_0= ruleMyBoolean ) ) )? (otherlv_16= 'creates' ( (lv_creates_17_0= ruleMyBoolean ) ) )? (otherlv_18= 'reads' ( (lv_reads_19_0= ruleMyBoolean ) ) )? (otherlv_20= 'updates' ( (lv_updates_21_0= ruleMyBoolean ) ) )? (otherlv_22= 'deletes' ( (lv_deletes_23_0= ruleMyBoolean ) ) )? (otherlv_24= 'boundaryObjects' otherlv_25= '(' ( ( ruleEString ) ) (otherlv_27= ',' ( ( ruleEString ) ) )* otherlv_29= ')' )? (otherlv_30= 'roles' otherlv_31= '(' ( ( ruleEString ) ) (otherlv_33= ',' ( ( ruleEString ) ) )* otherlv_35= ')' )? otherlv_36= '}' )
+            // InternalBomi.g:1703:3: () otherlv_1= 'BORoleInteraction' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'accessability' ( (lv_accessability_7_0= ruleHighLow ) ) )? (otherlv_8= 'stability' ( (lv_stability_9_0= ruleHighLow ) ) )? (otherlv_10= 'criticality' ( (lv_criticality_11_0= ruleHighLow ) ) )? (otherlv_12= 'fitForPurpose' ( (lv_fitForPurpose_13_0= ruleHighLow ) ) )? (otherlv_14= 'responsible' ( (lv_responsible_15_0= ruleMyBoolean ) ) )? (otherlv_16= 'creates' ( (lv_creates_17_0= ruleMyBoolean ) ) )? (otherlv_18= 'reads' ( (lv_reads_19_0= ruleMyBoolean ) ) )? (otherlv_20= 'updates' ( (lv_updates_21_0= ruleMyBoolean ) ) )? (otherlv_22= 'deletes' ( (lv_deletes_23_0= ruleMyBoolean ) ) )? (otherlv_24= 'boundaryObjects' otherlv_25= '(' ( ( ruleEString ) ) (otherlv_27= ',' ( ( ruleEString ) ) )* otherlv_29= ')' )? (otherlv_30= 'roles' otherlv_31= '(' ( ( ruleEString ) ) (otherlv_33= ',' ( ( ruleEString ) ) )* otherlv_35= ')' )? otherlv_36= '}'
             {
             // InternalBomi.g:1703:3: ()
             // InternalBomi.g:1704:4: 
@@ -4223,45 +4245,96 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBomi.g:1862:3: (otherlv_14= 'boundaryObjects' otherlv_15= '(' ( ( ruleEString ) ) (otherlv_17= ',' ( ( ruleEString ) ) )* otherlv_19= ')' )?
+            // InternalBomi.g:1862:3: (otherlv_14= 'responsible' ( (lv_responsible_15_0= ruleMyBoolean ) ) )?
+            int alt55=2;
+            int LA55_0 = input.LA(1);
+
+            if ( (LA55_0==53) ) {
+                alt55=1;
+            }
+            switch (alt55) {
+                case 1 :
+                    // InternalBomi.g:1863:4: otherlv_14= 'responsible' ( (lv_responsible_15_0= ruleMyBoolean ) )
+                    {
+                    otherlv_14=(Token)match(input,53,FOLLOW_65); 
+
+                    				newLeafNode(otherlv_14, grammarAccess.getBORoleInteractionAccess().getResponsibleKeyword_9_0());
+                    			
+                    // InternalBomi.g:1867:4: ( (lv_responsible_15_0= ruleMyBoolean ) )
+                    // InternalBomi.g:1868:5: (lv_responsible_15_0= ruleMyBoolean )
+                    {
+                    // InternalBomi.g:1868:5: (lv_responsible_15_0= ruleMyBoolean )
+                    // InternalBomi.g:1869:6: lv_responsible_15_0= ruleMyBoolean
+                    {
+
+                    						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getResponsibleMyBooleanEnumRuleCall_9_1_0());
+                    					
+                    pushFollow(FOLLOW_66);
+                    lv_responsible_15_0=ruleMyBoolean();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"responsible",
+                    							lv_responsible_15_0,
+                    							"se.gu.cse.idxse.bomi.text.Bomi.MyBoolean");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalBomi.g:1887:3: (otherlv_16= 'creates' ( (lv_creates_17_0= ruleMyBoolean ) ) )?
             int alt56=2;
             int LA56_0 = input.LA(1);
 
-            if ( (LA56_0==11) ) {
+            if ( (LA56_0==54) ) {
                 alt56=1;
             }
             switch (alt56) {
                 case 1 :
-                    // InternalBomi.g:1863:4: otherlv_14= 'boundaryObjects' otherlv_15= '(' ( ( ruleEString ) ) (otherlv_17= ',' ( ( ruleEString ) ) )* otherlv_19= ')'
+                    // InternalBomi.g:1888:4: otherlv_16= 'creates' ( (lv_creates_17_0= ruleMyBoolean ) )
                     {
-                    otherlv_14=(Token)match(input,11,FOLLOW_43); 
+                    otherlv_16=(Token)match(input,54,FOLLOW_65); 
 
-                    				newLeafNode(otherlv_14, grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsKeyword_9_0());
+                    				newLeafNode(otherlv_16, grammarAccess.getBORoleInteractionAccess().getCreatesKeyword_10_0());
                     			
-                    otherlv_15=(Token)match(input,39,FOLLOW_21); 
-
-                    				newLeafNode(otherlv_15, grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_9_1());
-                    			
-                    // InternalBomi.g:1871:4: ( ( ruleEString ) )
-                    // InternalBomi.g:1872:5: ( ruleEString )
+                    // InternalBomi.g:1892:4: ( (lv_creates_17_0= ruleMyBoolean ) )
+                    // InternalBomi.g:1893:5: (lv_creates_17_0= ruleMyBoolean )
                     {
-                    // InternalBomi.g:1872:5: ( ruleEString )
-                    // InternalBomi.g:1873:6: ruleEString
+                    // InternalBomi.g:1893:5: (lv_creates_17_0= ruleMyBoolean )
+                    // InternalBomi.g:1894:6: lv_creates_17_0= ruleMyBoolean
                     {
 
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getBORoleInteractionRule());
-                    						}
+                    						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getCreatesMyBooleanEnumRuleCall_10_1_0());
                     					
-
-                    						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_9_2_0());
-                    					
-                    pushFollow(FOLLOW_44);
-                    ruleEString();
+                    pushFollow(FOLLOW_67);
+                    lv_creates_17_0=ruleMyBoolean();
 
                     state._fsp--;
 
 
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"creates",
+                    							lv_creates_17_0,
+                    							"se.gu.cse.idxse.bomi.text.Bomi.MyBoolean");
                     						afterParserOrEnumRuleCall();
                     					
 
@@ -4270,96 +4343,192 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalBomi.g:1887:4: (otherlv_17= ',' ( ( ruleEString ) ) )*
-                    loop55:
-                    do {
-                        int alt55=2;
-                        int LA55_0 = input.LA(1);
-
-                        if ( (LA55_0==13) ) {
-                            alt55=1;
-                        }
-
-
-                        switch (alt55) {
-                    	case 1 :
-                    	    // InternalBomi.g:1888:5: otherlv_17= ',' ( ( ruleEString ) )
-                    	    {
-                    	    otherlv_17=(Token)match(input,13,FOLLOW_21); 
-
-                    	    					newLeafNode(otherlv_17, grammarAccess.getBORoleInteractionAccess().getCommaKeyword_9_3_0());
-                    	    				
-                    	    // InternalBomi.g:1892:5: ( ( ruleEString ) )
-                    	    // InternalBomi.g:1893:6: ( ruleEString )
-                    	    {
-                    	    // InternalBomi.g:1893:6: ( ruleEString )
-                    	    // InternalBomi.g:1894:7: ruleEString
-                    	    {
-
-                    	    							if (current==null) {
-                    	    								current = createModelElement(grammarAccess.getBORoleInteractionRule());
-                    	    							}
-                    	    						
-
-                    	    							newCompositeNode(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_9_3_1_0());
-                    	    						
-                    	    pushFollow(FOLLOW_44);
-                    	    ruleEString();
-
-                    	    state._fsp--;
-
-
-                    	    							afterParserOrEnumRuleCall();
-                    	    						
-
-                    	    }
-
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop55;
-                        }
-                    } while (true);
-
-                    otherlv_19=(Token)match(input,40,FOLLOW_65); 
-
-                    				newLeafNode(otherlv_19, grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_9_4());
-                    			
 
                     }
                     break;
 
             }
 
-            // InternalBomi.g:1914:3: (otherlv_20= 'roles' otherlv_21= '(' ( ( ruleEString ) ) (otherlv_23= ',' ( ( ruleEString ) ) )* otherlv_25= ')' )?
+            // InternalBomi.g:1912:3: (otherlv_18= 'reads' ( (lv_reads_19_0= ruleMyBoolean ) ) )?
+            int alt57=2;
+            int LA57_0 = input.LA(1);
+
+            if ( (LA57_0==55) ) {
+                alt57=1;
+            }
+            switch (alt57) {
+                case 1 :
+                    // InternalBomi.g:1913:4: otherlv_18= 'reads' ( (lv_reads_19_0= ruleMyBoolean ) )
+                    {
+                    otherlv_18=(Token)match(input,55,FOLLOW_65); 
+
+                    				newLeafNode(otherlv_18, grammarAccess.getBORoleInteractionAccess().getReadsKeyword_11_0());
+                    			
+                    // InternalBomi.g:1917:4: ( (lv_reads_19_0= ruleMyBoolean ) )
+                    // InternalBomi.g:1918:5: (lv_reads_19_0= ruleMyBoolean )
+                    {
+                    // InternalBomi.g:1918:5: (lv_reads_19_0= ruleMyBoolean )
+                    // InternalBomi.g:1919:6: lv_reads_19_0= ruleMyBoolean
+                    {
+
+                    						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getReadsMyBooleanEnumRuleCall_11_1_0());
+                    					
+                    pushFollow(FOLLOW_68);
+                    lv_reads_19_0=ruleMyBoolean();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"reads",
+                    							lv_reads_19_0,
+                    							"se.gu.cse.idxse.bomi.text.Bomi.MyBoolean");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalBomi.g:1937:3: (otherlv_20= 'updates' ( (lv_updates_21_0= ruleMyBoolean ) ) )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
-            if ( (LA58_0==17) ) {
+            if ( (LA58_0==56) ) {
                 alt58=1;
             }
             switch (alt58) {
                 case 1 :
-                    // InternalBomi.g:1915:4: otherlv_20= 'roles' otherlv_21= '(' ( ( ruleEString ) ) (otherlv_23= ',' ( ( ruleEString ) ) )* otherlv_25= ')'
+                    // InternalBomi.g:1938:4: otherlv_20= 'updates' ( (lv_updates_21_0= ruleMyBoolean ) )
                     {
-                    otherlv_20=(Token)match(input,17,FOLLOW_43); 
+                    otherlv_20=(Token)match(input,56,FOLLOW_65); 
 
-                    				newLeafNode(otherlv_20, grammarAccess.getBORoleInteractionAccess().getRolesKeyword_10_0());
+                    				newLeafNode(otherlv_20, grammarAccess.getBORoleInteractionAccess().getUpdatesKeyword_12_0());
                     			
-                    otherlv_21=(Token)match(input,39,FOLLOW_21); 
-
-                    				newLeafNode(otherlv_21, grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_10_1());
-                    			
-                    // InternalBomi.g:1923:4: ( ( ruleEString ) )
-                    // InternalBomi.g:1924:5: ( ruleEString )
+                    // InternalBomi.g:1942:4: ( (lv_updates_21_0= ruleMyBoolean ) )
+                    // InternalBomi.g:1943:5: (lv_updates_21_0= ruleMyBoolean )
                     {
-                    // InternalBomi.g:1924:5: ( ruleEString )
-                    // InternalBomi.g:1925:6: ruleEString
+                    // InternalBomi.g:1943:5: (lv_updates_21_0= ruleMyBoolean )
+                    // InternalBomi.g:1944:6: lv_updates_21_0= ruleMyBoolean
+                    {
+
+                    						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getUpdatesMyBooleanEnumRuleCall_12_1_0());
+                    					
+                    pushFollow(FOLLOW_69);
+                    lv_updates_21_0=ruleMyBoolean();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"updates",
+                    							lv_updates_21_0,
+                    							"se.gu.cse.idxse.bomi.text.Bomi.MyBoolean");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalBomi.g:1962:3: (otherlv_22= 'deletes' ( (lv_deletes_23_0= ruleMyBoolean ) ) )?
+            int alt59=2;
+            int LA59_0 = input.LA(1);
+
+            if ( (LA59_0==57) ) {
+                alt59=1;
+            }
+            switch (alt59) {
+                case 1 :
+                    // InternalBomi.g:1963:4: otherlv_22= 'deletes' ( (lv_deletes_23_0= ruleMyBoolean ) )
+                    {
+                    otherlv_22=(Token)match(input,57,FOLLOW_65); 
+
+                    				newLeafNode(otherlv_22, grammarAccess.getBORoleInteractionAccess().getDeletesKeyword_13_0());
+                    			
+                    // InternalBomi.g:1967:4: ( (lv_deletes_23_0= ruleMyBoolean ) )
+                    // InternalBomi.g:1968:5: (lv_deletes_23_0= ruleMyBoolean )
+                    {
+                    // InternalBomi.g:1968:5: (lv_deletes_23_0= ruleMyBoolean )
+                    // InternalBomi.g:1969:6: lv_deletes_23_0= ruleMyBoolean
+                    {
+
+                    						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getDeletesMyBooleanEnumRuleCall_13_1_0());
+                    					
+                    pushFollow(FOLLOW_70);
+                    lv_deletes_23_0=ruleMyBoolean();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"deletes",
+                    							lv_deletes_23_0,
+                    							"se.gu.cse.idxse.bomi.text.Bomi.MyBoolean");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalBomi.g:1987:3: (otherlv_24= 'boundaryObjects' otherlv_25= '(' ( ( ruleEString ) ) (otherlv_27= ',' ( ( ruleEString ) ) )* otherlv_29= ')' )?
+            int alt61=2;
+            int LA61_0 = input.LA(1);
+
+            if ( (LA61_0==11) ) {
+                alt61=1;
+            }
+            switch (alt61) {
+                case 1 :
+                    // InternalBomi.g:1988:4: otherlv_24= 'boundaryObjects' otherlv_25= '(' ( ( ruleEString ) ) (otherlv_27= ',' ( ( ruleEString ) ) )* otherlv_29= ')'
+                    {
+                    otherlv_24=(Token)match(input,11,FOLLOW_43); 
+
+                    				newLeafNode(otherlv_24, grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsKeyword_14_0());
+                    			
+                    otherlv_25=(Token)match(input,39,FOLLOW_21); 
+
+                    				newLeafNode(otherlv_25, grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_14_1());
+                    			
+                    // InternalBomi.g:1996:4: ( ( ruleEString ) )
+                    // InternalBomi.g:1997:5: ( ruleEString )
+                    {
+                    // InternalBomi.g:1997:5: ( ruleEString )
+                    // InternalBomi.g:1998:6: ruleEString
                     {
 
                     						if (current==null) {
@@ -4367,7 +4536,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     						}
                     					
 
-                    						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_10_2_0());
+                    						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_14_2_0());
                     					
                     pushFollow(FOLLOW_44);
                     ruleEString();
@@ -4383,30 +4552,30 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalBomi.g:1939:4: (otherlv_23= ',' ( ( ruleEString ) ) )*
-                    loop57:
+                    // InternalBomi.g:2012:4: (otherlv_27= ',' ( ( ruleEString ) ) )*
+                    loop60:
                     do {
-                        int alt57=2;
-                        int LA57_0 = input.LA(1);
+                        int alt60=2;
+                        int LA60_0 = input.LA(1);
 
-                        if ( (LA57_0==13) ) {
-                            alt57=1;
+                        if ( (LA60_0==13) ) {
+                            alt60=1;
                         }
 
 
-                        switch (alt57) {
+                        switch (alt60) {
                     	case 1 :
-                    	    // InternalBomi.g:1940:5: otherlv_23= ',' ( ( ruleEString ) )
+                    	    // InternalBomi.g:2013:5: otherlv_27= ',' ( ( ruleEString ) )
                     	    {
-                    	    otherlv_23=(Token)match(input,13,FOLLOW_21); 
+                    	    otherlv_27=(Token)match(input,13,FOLLOW_21); 
 
-                    	    					newLeafNode(otherlv_23, grammarAccess.getBORoleInteractionAccess().getCommaKeyword_10_3_0());
+                    	    					newLeafNode(otherlv_27, grammarAccess.getBORoleInteractionAccess().getCommaKeyword_14_3_0());
                     	    				
-                    	    // InternalBomi.g:1944:5: ( ( ruleEString ) )
-                    	    // InternalBomi.g:1945:6: ( ruleEString )
+                    	    // InternalBomi.g:2017:5: ( ( ruleEString ) )
+                    	    // InternalBomi.g:2018:6: ( ruleEString )
                     	    {
-                    	    // InternalBomi.g:1945:6: ( ruleEString )
-                    	    // InternalBomi.g:1946:7: ruleEString
+                    	    // InternalBomi.g:2018:6: ( ruleEString )
+                    	    // InternalBomi.g:2019:7: ruleEString
                     	    {
 
                     	    							if (current==null) {
@@ -4414,7 +4583,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     	    							}
                     	    						
 
-                    	    							newCompositeNode(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_10_3_1_0());
+                    	    							newCompositeNode(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0());
                     	    						
                     	    pushFollow(FOLLOW_44);
                     	    ruleEString();
@@ -4435,13 +4604,13 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop57;
+                    	    break loop60;
                         }
                     } while (true);
 
-                    otherlv_25=(Token)match(input,40,FOLLOW_39); 
+                    otherlv_29=(Token)match(input,40,FOLLOW_71); 
 
-                    				newLeafNode(otherlv_25, grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_10_4());
+                    				newLeafNode(otherlv_29, grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_14_4());
                     			
 
                     }
@@ -4449,9 +4618,122 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_26=(Token)match(input,14,FOLLOW_2); 
+            // InternalBomi.g:2039:3: (otherlv_30= 'roles' otherlv_31= '(' ( ( ruleEString ) ) (otherlv_33= ',' ( ( ruleEString ) ) )* otherlv_35= ')' )?
+            int alt63=2;
+            int LA63_0 = input.LA(1);
 
-            			newLeafNode(otherlv_26, grammarAccess.getBORoleInteractionAccess().getRightCurlyBracketKeyword_11());
+            if ( (LA63_0==17) ) {
+                alt63=1;
+            }
+            switch (alt63) {
+                case 1 :
+                    // InternalBomi.g:2040:4: otherlv_30= 'roles' otherlv_31= '(' ( ( ruleEString ) ) (otherlv_33= ',' ( ( ruleEString ) ) )* otherlv_35= ')'
+                    {
+                    otherlv_30=(Token)match(input,17,FOLLOW_43); 
+
+                    				newLeafNode(otherlv_30, grammarAccess.getBORoleInteractionAccess().getRolesKeyword_15_0());
+                    			
+                    otherlv_31=(Token)match(input,39,FOLLOW_21); 
+
+                    				newLeafNode(otherlv_31, grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_15_1());
+                    			
+                    // InternalBomi.g:2048:4: ( ( ruleEString ) )
+                    // InternalBomi.g:2049:5: ( ruleEString )
+                    {
+                    // InternalBomi.g:2049:5: ( ruleEString )
+                    // InternalBomi.g:2050:6: ruleEString
+                    {
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getBORoleInteractionRule());
+                    						}
+                    					
+
+                    						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_15_2_0());
+                    					
+                    pushFollow(FOLLOW_44);
+                    ruleEString();
+
+                    state._fsp--;
+
+
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+                    // InternalBomi.g:2064:4: (otherlv_33= ',' ( ( ruleEString ) ) )*
+                    loop62:
+                    do {
+                        int alt62=2;
+                        int LA62_0 = input.LA(1);
+
+                        if ( (LA62_0==13) ) {
+                            alt62=1;
+                        }
+
+
+                        switch (alt62) {
+                    	case 1 :
+                    	    // InternalBomi.g:2065:5: otherlv_33= ',' ( ( ruleEString ) )
+                    	    {
+                    	    otherlv_33=(Token)match(input,13,FOLLOW_21); 
+
+                    	    					newLeafNode(otherlv_33, grammarAccess.getBORoleInteractionAccess().getCommaKeyword_15_3_0());
+                    	    				
+                    	    // InternalBomi.g:2069:5: ( ( ruleEString ) )
+                    	    // InternalBomi.g:2070:6: ( ruleEString )
+                    	    {
+                    	    // InternalBomi.g:2070:6: ( ruleEString )
+                    	    // InternalBomi.g:2071:7: ruleEString
+                    	    {
+
+                    	    							if (current==null) {
+                    	    								current = createModelElement(grammarAccess.getBORoleInteractionRule());
+                    	    							}
+                    	    						
+
+                    	    							newCompositeNode(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_15_3_1_0());
+                    	    						
+                    	    pushFollow(FOLLOW_44);
+                    	    ruleEString();
+
+                    	    state._fsp--;
+
+
+                    	    							afterParserOrEnumRuleCall();
+                    	    						
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop62;
+                        }
+                    } while (true);
+
+                    otherlv_35=(Token)match(input,40,FOLLOW_39); 
+
+                    				newLeafNode(otherlv_35, grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_15_4());
+                    			
+
+                    }
+                    break;
+
+            }
+
+            otherlv_36=(Token)match(input,14,FOLLOW_2); 
+
+            			newLeafNode(otherlv_36, grammarAccess.getBORoleInteractionAccess().getRightCurlyBracketKeyword_16());
             		
 
             }
@@ -4476,7 +4758,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBOTeamGovernance"
-    // InternalBomi.g:1974:1: entryRuleBOTeamGovernance returns [EObject current=null] : iv_ruleBOTeamGovernance= ruleBOTeamGovernance EOF ;
+    // InternalBomi.g:2099:1: entryRuleBOTeamGovernance returns [EObject current=null] : iv_ruleBOTeamGovernance= ruleBOTeamGovernance EOF ;
     public final EObject entryRuleBOTeamGovernance() throws RecognitionException {
         EObject current = null;
 
@@ -4484,8 +4766,8 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBomi.g:1974:57: (iv_ruleBOTeamGovernance= ruleBOTeamGovernance EOF )
-            // InternalBomi.g:1975:2: iv_ruleBOTeamGovernance= ruleBOTeamGovernance EOF
+            // InternalBomi.g:2099:57: (iv_ruleBOTeamGovernance= ruleBOTeamGovernance EOF )
+            // InternalBomi.g:2100:2: iv_ruleBOTeamGovernance= ruleBOTeamGovernance EOF
             {
              newCompositeNode(grammarAccess.getBOTeamGovernanceRule()); 
             pushFollow(FOLLOW_1);
@@ -4512,7 +4794,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBOTeamGovernance"
-    // InternalBomi.g:1981:1: ruleBOTeamGovernance returns [EObject current=null] : ( () otherlv_1= 'BOTeamGovernance' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )? (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )? (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )? (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )? otherlv_22= '}' ) ;
+    // InternalBomi.g:2106:1: ruleBOTeamGovernance returns [EObject current=null] : ( () otherlv_1= 'BOTeamGovernance' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )? (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )? (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )? (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )? otherlv_22= '}' ) ;
     public final EObject ruleBOTeamGovernance() throws RecognitionException {
         EObject current = null;
 
@@ -4543,14 +4825,14 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBomi.g:1987:2: ( ( () otherlv_1= 'BOTeamGovernance' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )? (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )? (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )? (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )? otherlv_22= '}' ) )
-            // InternalBomi.g:1988:2: ( () otherlv_1= 'BOTeamGovernance' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )? (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )? (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )? (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )? otherlv_22= '}' )
+            // InternalBomi.g:2112:2: ( ( () otherlv_1= 'BOTeamGovernance' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )? (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )? (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )? (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )? otherlv_22= '}' ) )
+            // InternalBomi.g:2113:2: ( () otherlv_1= 'BOTeamGovernance' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )? (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )? (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )? (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )? otherlv_22= '}' )
             {
-            // InternalBomi.g:1988:2: ( () otherlv_1= 'BOTeamGovernance' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )? (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )? (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )? (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )? otherlv_22= '}' )
-            // InternalBomi.g:1989:3: () otherlv_1= 'BOTeamGovernance' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )? (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )? (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )? (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )? otherlv_22= '}'
+            // InternalBomi.g:2113:2: ( () otherlv_1= 'BOTeamGovernance' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )? (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )? (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )? (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )? otherlv_22= '}' )
+            // InternalBomi.g:2114:3: () otherlv_1= 'BOTeamGovernance' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )? (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )? (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )? (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )? (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )? otherlv_22= '}'
             {
-            // InternalBomi.g:1989:3: ()
-            // InternalBomi.g:1990:4: 
+            // InternalBomi.g:2114:3: ()
+            // InternalBomi.g:2115:4: 
             {
 
             				current = forceCreateModelElement(
@@ -4560,15 +4842,15 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,53,FOLLOW_21); 
+            otherlv_1=(Token)match(input,58,FOLLOW_21); 
 
             			newLeafNode(otherlv_1, grammarAccess.getBOTeamGovernanceAccess().getBOTeamGovernanceKeyword_1());
             		
-            // InternalBomi.g:2000:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalBomi.g:2001:4: (lv_name_2_0= ruleEString )
+            // InternalBomi.g:2125:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalBomi.g:2126:4: (lv_name_2_0= ruleEString )
             {
-            // InternalBomi.g:2001:4: (lv_name_2_0= ruleEString )
-            // InternalBomi.g:2002:5: lv_name_2_0= ruleEString
+            // InternalBomi.g:2126:4: (lv_name_2_0= ruleEString )
+            // InternalBomi.g:2127:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getNameEStringParserRuleCall_2_0());
@@ -4595,35 +4877,35 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FOLLOW_66); 
+            otherlv_3=(Token)match(input,12,FOLLOW_72); 
 
             			newLeafNode(otherlv_3, grammarAccess.getBOTeamGovernanceAccess().getLeftCurlyBracketKeyword_3());
             		
-            // InternalBomi.g:2023:3: (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )?
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            // InternalBomi.g:2148:3: (otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) ) )?
+            int alt64=2;
+            int LA64_0 = input.LA(1);
 
-            if ( (LA59_0==21) ) {
-                alt59=1;
+            if ( (LA64_0==21) ) {
+                alt64=1;
             }
-            switch (alt59) {
+            switch (alt64) {
                 case 1 :
-                    // InternalBomi.g:2024:4: otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) )
+                    // InternalBomi.g:2149:4: otherlv_4= 'purpose' ( (lv_purpose_5_0= ruleEString ) )
                     {
                     otherlv_4=(Token)match(input,21,FOLLOW_21); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getBOTeamGovernanceAccess().getPurposeKeyword_4_0());
                     			
-                    // InternalBomi.g:2028:4: ( (lv_purpose_5_0= ruleEString ) )
-                    // InternalBomi.g:2029:5: (lv_purpose_5_0= ruleEString )
+                    // InternalBomi.g:2153:4: ( (lv_purpose_5_0= ruleEString ) )
+                    // InternalBomi.g:2154:5: (lv_purpose_5_0= ruleEString )
                     {
-                    // InternalBomi.g:2029:5: (lv_purpose_5_0= ruleEString )
-                    // InternalBomi.g:2030:6: lv_purpose_5_0= ruleEString
+                    // InternalBomi.g:2154:5: (lv_purpose_5_0= ruleEString )
+                    // InternalBomi.g:2155:6: lv_purpose_5_0= ruleEString
                     {
 
                     						newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getPurposeEStringParserRuleCall_4_1_0());
                     					
-                    pushFollow(FOLLOW_67);
+                    pushFollow(FOLLOW_73);
                     lv_purpose_5_0=ruleEString();
 
                     state._fsp--;
@@ -4651,31 +4933,31 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBomi.g:2048:3: (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            // InternalBomi.g:2173:3: (otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) ) )?
+            int alt65=2;
+            int LA65_0 = input.LA(1);
 
-            if ( (LA60_0==54) ) {
-                alt60=1;
+            if ( (LA65_0==59) ) {
+                alt65=1;
             }
-            switch (alt60) {
+            switch (alt65) {
                 case 1 :
-                    // InternalBomi.g:2049:4: otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) )
+                    // InternalBomi.g:2174:4: otherlv_6= 'coordinationMechanism' ( (lv_coordinationMechanism_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,54,FOLLOW_21); 
+                    otherlv_6=(Token)match(input,59,FOLLOW_21); 
 
                     				newLeafNode(otherlv_6, grammarAccess.getBOTeamGovernanceAccess().getCoordinationMechanismKeyword_5_0());
                     			
-                    // InternalBomi.g:2053:4: ( (lv_coordinationMechanism_7_0= ruleEString ) )
-                    // InternalBomi.g:2054:5: (lv_coordinationMechanism_7_0= ruleEString )
+                    // InternalBomi.g:2178:4: ( (lv_coordinationMechanism_7_0= ruleEString ) )
+                    // InternalBomi.g:2179:5: (lv_coordinationMechanism_7_0= ruleEString )
                     {
-                    // InternalBomi.g:2054:5: (lv_coordinationMechanism_7_0= ruleEString )
-                    // InternalBomi.g:2055:6: lv_coordinationMechanism_7_0= ruleEString
+                    // InternalBomi.g:2179:5: (lv_coordinationMechanism_7_0= ruleEString )
+                    // InternalBomi.g:2180:6: lv_coordinationMechanism_7_0= ruleEString
                     {
 
                     						newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getCoordinationMechanismEStringParserRuleCall_5_1_0());
                     					
-                    pushFollow(FOLLOW_68);
+                    pushFollow(FOLLOW_74);
                     lv_coordinationMechanism_7_0=ruleEString();
 
                     state._fsp--;
@@ -4703,31 +4985,31 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBomi.g:2073:3: (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            // InternalBomi.g:2198:3: (otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) ) )?
+            int alt66=2;
+            int LA66_0 = input.LA(1);
 
-            if ( (LA61_0==55) ) {
-                alt61=1;
+            if ( (LA66_0==60) ) {
+                alt66=1;
             }
-            switch (alt61) {
+            switch (alt66) {
                 case 1 :
-                    // InternalBomi.g:2074:4: otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) )
+                    // InternalBomi.g:2199:4: otherlv_8= 'frequencyOfCoordination' ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) )
                     {
-                    otherlv_8=(Token)match(input,55,FOLLOW_26); 
+                    otherlv_8=(Token)match(input,60,FOLLOW_26); 
 
                     				newLeafNode(otherlv_8, grammarAccess.getBOTeamGovernanceAccess().getFrequencyOfCoordinationKeyword_6_0());
                     			
-                    // InternalBomi.g:2078:4: ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) )
-                    // InternalBomi.g:2079:5: (lv_frequencyOfCoordination_9_0= ruleHighLow )
+                    // InternalBomi.g:2203:4: ( (lv_frequencyOfCoordination_9_0= ruleHighLow ) )
+                    // InternalBomi.g:2204:5: (lv_frequencyOfCoordination_9_0= ruleHighLow )
                     {
-                    // InternalBomi.g:2079:5: (lv_frequencyOfCoordination_9_0= ruleHighLow )
-                    // InternalBomi.g:2080:6: lv_frequencyOfCoordination_9_0= ruleHighLow
+                    // InternalBomi.g:2204:5: (lv_frequencyOfCoordination_9_0= ruleHighLow )
+                    // InternalBomi.g:2205:6: lv_frequencyOfCoordination_9_0= ruleHighLow
                     {
 
                     						newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getFrequencyOfCoordinationHighLowEnumRuleCall_6_1_0());
                     					
-                    pushFollow(FOLLOW_69);
+                    pushFollow(FOLLOW_75);
                     lv_frequencyOfCoordination_9_0=ruleHighLow();
 
                     state._fsp--;
@@ -4755,16 +5037,16 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBomi.g:2098:3: (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )?
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            // InternalBomi.g:2223:3: (otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')' )?
+            int alt68=2;
+            int LA68_0 = input.LA(1);
 
-            if ( (LA63_0==16) ) {
-                alt63=1;
+            if ( (LA68_0==16) ) {
+                alt68=1;
             }
-            switch (alt63) {
+            switch (alt68) {
                 case 1 :
-                    // InternalBomi.g:2099:4: otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')'
+                    // InternalBomi.g:2224:4: otherlv_10= 'governanceTeams' otherlv_11= '(' ( ( ruleEString ) ) (otherlv_13= ',' ( ( ruleEString ) ) )* otherlv_15= ')'
                     {
                     otherlv_10=(Token)match(input,16,FOLLOW_43); 
 
@@ -4774,11 +5056,11 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_11, grammarAccess.getBOTeamGovernanceAccess().getLeftParenthesisKeyword_7_1());
                     			
-                    // InternalBomi.g:2107:4: ( ( ruleEString ) )
-                    // InternalBomi.g:2108:5: ( ruleEString )
+                    // InternalBomi.g:2232:4: ( ( ruleEString ) )
+                    // InternalBomi.g:2233:5: ( ruleEString )
                     {
-                    // InternalBomi.g:2108:5: ( ruleEString )
-                    // InternalBomi.g:2109:6: ruleEString
+                    // InternalBomi.g:2233:5: ( ruleEString )
+                    // InternalBomi.g:2234:6: ruleEString
                     {
 
                     						if (current==null) {
@@ -4802,30 +5084,30 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalBomi.g:2123:4: (otherlv_13= ',' ( ( ruleEString ) ) )*
-                    loop62:
+                    // InternalBomi.g:2248:4: (otherlv_13= ',' ( ( ruleEString ) ) )*
+                    loop67:
                     do {
-                        int alt62=2;
-                        int LA62_0 = input.LA(1);
+                        int alt67=2;
+                        int LA67_0 = input.LA(1);
 
-                        if ( (LA62_0==13) ) {
-                            alt62=1;
+                        if ( (LA67_0==13) ) {
+                            alt67=1;
                         }
 
 
-                        switch (alt62) {
+                        switch (alt67) {
                     	case 1 :
-                    	    // InternalBomi.g:2124:5: otherlv_13= ',' ( ( ruleEString ) )
+                    	    // InternalBomi.g:2249:5: otherlv_13= ',' ( ( ruleEString ) )
                     	    {
                     	    otherlv_13=(Token)match(input,13,FOLLOW_21); 
 
                     	    					newLeafNode(otherlv_13, grammarAccess.getBOTeamGovernanceAccess().getCommaKeyword_7_3_0());
                     	    				
-                    	    // InternalBomi.g:2128:5: ( ( ruleEString ) )
-                    	    // InternalBomi.g:2129:6: ( ruleEString )
+                    	    // InternalBomi.g:2253:5: ( ( ruleEString ) )
+                    	    // InternalBomi.g:2254:6: ( ruleEString )
                     	    {
-                    	    // InternalBomi.g:2129:6: ( ruleEString )
-                    	    // InternalBomi.g:2130:7: ruleEString
+                    	    // InternalBomi.g:2254:6: ( ruleEString )
+                    	    // InternalBomi.g:2255:7: ruleEString
                     	    {
 
                     	    							if (current==null) {
@@ -4854,11 +5136,11 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop62;
+                    	    break loop67;
                         }
                     } while (true);
 
-                    otherlv_15=(Token)match(input,40,FOLLOW_70); 
+                    otherlv_15=(Token)match(input,40,FOLLOW_76); 
 
                     				newLeafNode(otherlv_15, grammarAccess.getBOTeamGovernanceAccess().getRightParenthesisKeyword_7_4());
                     			
@@ -4868,16 +5150,16 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBomi.g:2150:3: (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )?
-            int alt65=2;
-            int LA65_0 = input.LA(1);
+            // InternalBomi.g:2275:3: (otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')' )?
+            int alt70=2;
+            int LA70_0 = input.LA(1);
 
-            if ( (LA65_0==11) ) {
-                alt65=1;
+            if ( (LA70_0==11) ) {
+                alt70=1;
             }
-            switch (alt65) {
+            switch (alt70) {
                 case 1 :
-                    // InternalBomi.g:2151:4: otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')'
+                    // InternalBomi.g:2276:4: otherlv_16= 'boundaryObjects' otherlv_17= '(' ( ( ruleEString ) ) (otherlv_19= ',' ( ( ruleEString ) ) )* otherlv_21= ')'
                     {
                     otherlv_16=(Token)match(input,11,FOLLOW_43); 
 
@@ -4887,11 +5169,11 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_17, grammarAccess.getBOTeamGovernanceAccess().getLeftParenthesisKeyword_8_1());
                     			
-                    // InternalBomi.g:2159:4: ( ( ruleEString ) )
-                    // InternalBomi.g:2160:5: ( ruleEString )
+                    // InternalBomi.g:2284:4: ( ( ruleEString ) )
+                    // InternalBomi.g:2285:5: ( ruleEString )
                     {
-                    // InternalBomi.g:2160:5: ( ruleEString )
-                    // InternalBomi.g:2161:6: ruleEString
+                    // InternalBomi.g:2285:5: ( ruleEString )
+                    // InternalBomi.g:2286:6: ruleEString
                     {
 
                     						if (current==null) {
@@ -4915,30 +5197,30 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalBomi.g:2175:4: (otherlv_19= ',' ( ( ruleEString ) ) )*
-                    loop64:
+                    // InternalBomi.g:2300:4: (otherlv_19= ',' ( ( ruleEString ) ) )*
+                    loop69:
                     do {
-                        int alt64=2;
-                        int LA64_0 = input.LA(1);
+                        int alt69=2;
+                        int LA69_0 = input.LA(1);
 
-                        if ( (LA64_0==13) ) {
-                            alt64=1;
+                        if ( (LA69_0==13) ) {
+                            alt69=1;
                         }
 
 
-                        switch (alt64) {
+                        switch (alt69) {
                     	case 1 :
-                    	    // InternalBomi.g:2176:5: otherlv_19= ',' ( ( ruleEString ) )
+                    	    // InternalBomi.g:2301:5: otherlv_19= ',' ( ( ruleEString ) )
                     	    {
                     	    otherlv_19=(Token)match(input,13,FOLLOW_21); 
 
                     	    					newLeafNode(otherlv_19, grammarAccess.getBOTeamGovernanceAccess().getCommaKeyword_8_3_0());
                     	    				
-                    	    // InternalBomi.g:2180:5: ( ( ruleEString ) )
-                    	    // InternalBomi.g:2181:6: ( ruleEString )
+                    	    // InternalBomi.g:2305:5: ( ( ruleEString ) )
+                    	    // InternalBomi.g:2306:6: ( ruleEString )
                     	    {
-                    	    // InternalBomi.g:2181:6: ( ruleEString )
-                    	    // InternalBomi.g:2182:7: ruleEString
+                    	    // InternalBomi.g:2306:6: ( ruleEString )
+                    	    // InternalBomi.g:2307:7: ruleEString
                     	    {
 
                     	    							if (current==null) {
@@ -4967,7 +5249,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop64;
+                    	    break loop69;
                         }
                     } while (true);
 
@@ -5008,7 +5290,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEString"
-    // InternalBomi.g:2210:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // InternalBomi.g:2335:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -5016,8 +5298,8 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBomi.g:2210:47: (iv_ruleEString= ruleEString EOF )
-            // InternalBomi.g:2211:2: iv_ruleEString= ruleEString EOF
+            // InternalBomi.g:2335:47: (iv_ruleEString= ruleEString EOF )
+            // InternalBomi.g:2336:2: iv_ruleEString= ruleEString EOF
             {
              newCompositeNode(grammarAccess.getEStringRule()); 
             pushFollow(FOLLOW_1);
@@ -5044,7 +5326,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEString"
-    // InternalBomi.g:2217:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    // InternalBomi.g:2342:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5055,28 +5337,28 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBomi.g:2223:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // InternalBomi.g:2224:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // InternalBomi.g:2348:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
+            // InternalBomi.g:2349:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             {
-            // InternalBomi.g:2224:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
-            int alt66=2;
-            int LA66_0 = input.LA(1);
+            // InternalBomi.g:2349:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            int alt71=2;
+            int LA71_0 = input.LA(1);
 
-            if ( (LA66_0==RULE_STRING) ) {
-                alt66=1;
+            if ( (LA71_0==RULE_STRING) ) {
+                alt71=1;
             }
-            else if ( (LA66_0==RULE_ID) ) {
-                alt66=2;
+            else if ( (LA71_0==RULE_ID) ) {
+                alt71=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 66, 0, input);
+                    new NoViableAltException("", 71, 0, input);
 
                 throw nvae;
             }
-            switch (alt66) {
+            switch (alt71) {
                 case 1 :
-                    // InternalBomi.g:2225:3: this_STRING_0= RULE_STRING
+                    // InternalBomi.g:2350:3: this_STRING_0= RULE_STRING
                     {
                     this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
@@ -5089,7 +5371,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:2233:3: this_ID_1= RULE_ID
+                    // InternalBomi.g:2358:3: this_ID_1= RULE_ID
                     {
                     this_ID_1=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -5124,7 +5406,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHighLow"
-    // InternalBomi.g:2244:1: ruleHighLow returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'High' ) | (enumLiteral_2= 'Medium' ) | (enumLiteral_3= 'Low' ) ) ;
+    // InternalBomi.g:2369:1: ruleHighLow returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'High' ) | (enumLiteral_2= 'Medium' ) | (enumLiteral_3= 'Low' ) ) ;
     public final Enumerator ruleHighLow() throws RecognitionException {
         Enumerator current = null;
 
@@ -5137,47 +5419,47 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBomi.g:2250:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'High' ) | (enumLiteral_2= 'Medium' ) | (enumLiteral_3= 'Low' ) ) )
-            // InternalBomi.g:2251:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'High' ) | (enumLiteral_2= 'Medium' ) | (enumLiteral_3= 'Low' ) )
+            // InternalBomi.g:2375:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'High' ) | (enumLiteral_2= 'Medium' ) | (enumLiteral_3= 'Low' ) ) )
+            // InternalBomi.g:2376:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'High' ) | (enumLiteral_2= 'Medium' ) | (enumLiteral_3= 'Low' ) )
             {
-            // InternalBomi.g:2251:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'High' ) | (enumLiteral_2= 'Medium' ) | (enumLiteral_3= 'Low' ) )
-            int alt67=4;
+            // InternalBomi.g:2376:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'High' ) | (enumLiteral_2= 'Medium' ) | (enumLiteral_3= 'Low' ) )
+            int alt72=4;
             switch ( input.LA(1) ) {
-            case 56:
+            case 61:
                 {
-                alt67=1;
+                alt72=1;
                 }
                 break;
-            case 57:
+            case 62:
                 {
-                alt67=2;
+                alt72=2;
                 }
                 break;
-            case 58:
+            case 63:
                 {
-                alt67=3;
+                alt72=3;
                 }
                 break;
-            case 59:
+            case 64:
                 {
-                alt67=4;
+                alt72=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 67, 0, input);
+                    new NoViableAltException("", 72, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt67) {
+            switch (alt72) {
                 case 1 :
-                    // InternalBomi.g:2252:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2377:3: (enumLiteral_0= 'NOT_SET' )
                     {
-                    // InternalBomi.g:2252:3: (enumLiteral_0= 'NOT_SET' )
-                    // InternalBomi.g:2253:4: enumLiteral_0= 'NOT_SET'
+                    // InternalBomi.g:2377:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2378:4: enumLiteral_0= 'NOT_SET'
                     {
-                    enumLiteral_0=(Token)match(input,56,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,61,FOLLOW_2); 
 
                     				current = grammarAccess.getHighLowAccess().getNOT_SETEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getHighLowAccess().getNOT_SETEnumLiteralDeclaration_0());
@@ -5189,12 +5471,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:2260:3: (enumLiteral_1= 'High' )
+                    // InternalBomi.g:2385:3: (enumLiteral_1= 'High' )
                     {
-                    // InternalBomi.g:2260:3: (enumLiteral_1= 'High' )
-                    // InternalBomi.g:2261:4: enumLiteral_1= 'High'
+                    // InternalBomi.g:2385:3: (enumLiteral_1= 'High' )
+                    // InternalBomi.g:2386:4: enumLiteral_1= 'High'
                     {
-                    enumLiteral_1=(Token)match(input,57,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,62,FOLLOW_2); 
 
                     				current = grammarAccess.getHighLowAccess().getHighEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getHighLowAccess().getHighEnumLiteralDeclaration_1());
@@ -5206,12 +5488,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:2268:3: (enumLiteral_2= 'Medium' )
+                    // InternalBomi.g:2393:3: (enumLiteral_2= 'Medium' )
                     {
-                    // InternalBomi.g:2268:3: (enumLiteral_2= 'Medium' )
-                    // InternalBomi.g:2269:4: enumLiteral_2= 'Medium'
+                    // InternalBomi.g:2393:3: (enumLiteral_2= 'Medium' )
+                    // InternalBomi.g:2394:4: enumLiteral_2= 'Medium'
                     {
-                    enumLiteral_2=(Token)match(input,58,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,63,FOLLOW_2); 
 
                     				current = grammarAccess.getHighLowAccess().getMediumEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getHighLowAccess().getMediumEnumLiteralDeclaration_2());
@@ -5223,12 +5505,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:2276:3: (enumLiteral_3= 'Low' )
+                    // InternalBomi.g:2401:3: (enumLiteral_3= 'Low' )
                     {
-                    // InternalBomi.g:2276:3: (enumLiteral_3= 'Low' )
-                    // InternalBomi.g:2277:4: enumLiteral_3= 'Low'
+                    // InternalBomi.g:2401:3: (enumLiteral_3= 'Low' )
+                    // InternalBomi.g:2402:4: enumLiteral_3= 'Low'
                     {
-                    enumLiteral_3=(Token)match(input,59,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,64,FOLLOW_2); 
 
                     				current = grammarAccess.getHighLowAccess().getLowEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getHighLowAccess().getLowEnumLiteralDeclaration_3());
@@ -5261,8 +5543,123 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleHighLow"
 
 
+    // $ANTLR start "ruleMyBoolean"
+    // InternalBomi.g:2412:1: ruleMyBoolean returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'True' ) | (enumLiteral_2= 'False' ) ) ;
+    public final Enumerator ruleMyBoolean() throws RecognitionException {
+        Enumerator current = null;
+
+        Token enumLiteral_0=null;
+        Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalBomi.g:2418:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'True' ) | (enumLiteral_2= 'False' ) ) )
+            // InternalBomi.g:2419:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'True' ) | (enumLiteral_2= 'False' ) )
+            {
+            // InternalBomi.g:2419:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'True' ) | (enumLiteral_2= 'False' ) )
+            int alt73=3;
+            switch ( input.LA(1) ) {
+            case 61:
+                {
+                alt73=1;
+                }
+                break;
+            case 65:
+                {
+                alt73=2;
+                }
+                break;
+            case 66:
+                {
+                alt73=3;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 73, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt73) {
+                case 1 :
+                    // InternalBomi.g:2420:3: (enumLiteral_0= 'NOT_SET' )
+                    {
+                    // InternalBomi.g:2420:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2421:4: enumLiteral_0= 'NOT_SET'
+                    {
+                    enumLiteral_0=(Token)match(input,61,FOLLOW_2); 
+
+                    				current = grammarAccess.getMyBooleanAccess().getNOT_SETEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_0, grammarAccess.getMyBooleanAccess().getNOT_SETEnumLiteralDeclaration_0());
+                    			
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalBomi.g:2428:3: (enumLiteral_1= 'True' )
+                    {
+                    // InternalBomi.g:2428:3: (enumLiteral_1= 'True' )
+                    // InternalBomi.g:2429:4: enumLiteral_1= 'True'
+                    {
+                    enumLiteral_1=(Token)match(input,65,FOLLOW_2); 
+
+                    				current = grammarAccess.getMyBooleanAccess().getTrueEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_1, grammarAccess.getMyBooleanAccess().getTrueEnumLiteralDeclaration_1());
+                    			
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // InternalBomi.g:2436:3: (enumLiteral_2= 'False' )
+                    {
+                    // InternalBomi.g:2436:3: (enumLiteral_2= 'False' )
+                    // InternalBomi.g:2437:4: enumLiteral_2= 'False'
+                    {
+                    enumLiteral_2=(Token)match(input,66,FOLLOW_2); 
+
+                    				current = grammarAccess.getMyBooleanAccess().getFalseEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_2, grammarAccess.getMyBooleanAccess().getFalseEnumLiteralDeclaration_2());
+                    			
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleMyBoolean"
+
+
     // $ANTLR start "ruleBOSuperTypes"
-    // InternalBomi.g:2287:1: ruleBOSuperTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Standard' ) | (enumLiteral_2= 'Technology' ) | (enumLiteral_3= 'Task' ) | (enumLiteral_4= 'Planning' ) | (enumLiteral_5= 'Value' ) | (enumLiteral_6= 'Product' ) | (enumLiteral_7= 'Other' ) ) ;
+    // InternalBomi.g:2447:1: ruleBOSuperTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Standard' ) | (enumLiteral_2= 'Technology' ) | (enumLiteral_3= 'Task' ) | (enumLiteral_4= 'Planning' ) | (enumLiteral_5= 'Value' ) | (enumLiteral_6= 'Product' ) | (enumLiteral_7= 'Other' ) ) ;
     public final Enumerator ruleBOSuperTypes() throws RecognitionException {
         Enumerator current = null;
 
@@ -5279,67 +5676,67 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBomi.g:2293:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Standard' ) | (enumLiteral_2= 'Technology' ) | (enumLiteral_3= 'Task' ) | (enumLiteral_4= 'Planning' ) | (enumLiteral_5= 'Value' ) | (enumLiteral_6= 'Product' ) | (enumLiteral_7= 'Other' ) ) )
-            // InternalBomi.g:2294:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Standard' ) | (enumLiteral_2= 'Technology' ) | (enumLiteral_3= 'Task' ) | (enumLiteral_4= 'Planning' ) | (enumLiteral_5= 'Value' ) | (enumLiteral_6= 'Product' ) | (enumLiteral_7= 'Other' ) )
+            // InternalBomi.g:2453:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Standard' ) | (enumLiteral_2= 'Technology' ) | (enumLiteral_3= 'Task' ) | (enumLiteral_4= 'Planning' ) | (enumLiteral_5= 'Value' ) | (enumLiteral_6= 'Product' ) | (enumLiteral_7= 'Other' ) ) )
+            // InternalBomi.g:2454:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Standard' ) | (enumLiteral_2= 'Technology' ) | (enumLiteral_3= 'Task' ) | (enumLiteral_4= 'Planning' ) | (enumLiteral_5= 'Value' ) | (enumLiteral_6= 'Product' ) | (enumLiteral_7= 'Other' ) )
             {
-            // InternalBomi.g:2294:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Standard' ) | (enumLiteral_2= 'Technology' ) | (enumLiteral_3= 'Task' ) | (enumLiteral_4= 'Planning' ) | (enumLiteral_5= 'Value' ) | (enumLiteral_6= 'Product' ) | (enumLiteral_7= 'Other' ) )
-            int alt68=8;
+            // InternalBomi.g:2454:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Standard' ) | (enumLiteral_2= 'Technology' ) | (enumLiteral_3= 'Task' ) | (enumLiteral_4= 'Planning' ) | (enumLiteral_5= 'Value' ) | (enumLiteral_6= 'Product' ) | (enumLiteral_7= 'Other' ) )
+            int alt74=8;
             switch ( input.LA(1) ) {
-            case 56:
-                {
-                alt68=1;
-                }
-                break;
-            case 60:
-                {
-                alt68=2;
-                }
-                break;
             case 61:
                 {
-                alt68=3;
+                alt74=1;
                 }
                 break;
-            case 62:
+            case 67:
                 {
-                alt68=4;
+                alt74=2;
                 }
                 break;
-            case 63:
+            case 68:
                 {
-                alt68=5;
+                alt74=3;
                 }
                 break;
-            case 64:
+            case 69:
                 {
-                alt68=6;
+                alt74=4;
                 }
                 break;
-            case 65:
+            case 70:
                 {
-                alt68=7;
+                alt74=5;
                 }
                 break;
-            case 66:
+            case 71:
                 {
-                alt68=8;
+                alt74=6;
+                }
+                break;
+            case 72:
+                {
+                alt74=7;
+                }
+                break;
+            case 73:
+                {
+                alt74=8;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 68, 0, input);
+                    new NoViableAltException("", 74, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt68) {
+            switch (alt74) {
                 case 1 :
-                    // InternalBomi.g:2295:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2455:3: (enumLiteral_0= 'NOT_SET' )
                     {
-                    // InternalBomi.g:2295:3: (enumLiteral_0= 'NOT_SET' )
-                    // InternalBomi.g:2296:4: enumLiteral_0= 'NOT_SET'
+                    // InternalBomi.g:2455:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2456:4: enumLiteral_0= 'NOT_SET'
                     {
-                    enumLiteral_0=(Token)match(input,56,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,61,FOLLOW_2); 
 
                     				current = grammarAccess.getBOSuperTypesAccess().getNOT_SETEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getBOSuperTypesAccess().getNOT_SETEnumLiteralDeclaration_0());
@@ -5351,12 +5748,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:2303:3: (enumLiteral_1= 'Standard' )
+                    // InternalBomi.g:2463:3: (enumLiteral_1= 'Standard' )
                     {
-                    // InternalBomi.g:2303:3: (enumLiteral_1= 'Standard' )
-                    // InternalBomi.g:2304:4: enumLiteral_1= 'Standard'
+                    // InternalBomi.g:2463:3: (enumLiteral_1= 'Standard' )
+                    // InternalBomi.g:2464:4: enumLiteral_1= 'Standard'
                     {
-                    enumLiteral_1=(Token)match(input,60,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,67,FOLLOW_2); 
 
                     				current = grammarAccess.getBOSuperTypesAccess().getStandardEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getBOSuperTypesAccess().getStandardEnumLiteralDeclaration_1());
@@ -5368,12 +5765,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:2311:3: (enumLiteral_2= 'Technology' )
+                    // InternalBomi.g:2471:3: (enumLiteral_2= 'Technology' )
                     {
-                    // InternalBomi.g:2311:3: (enumLiteral_2= 'Technology' )
-                    // InternalBomi.g:2312:4: enumLiteral_2= 'Technology'
+                    // InternalBomi.g:2471:3: (enumLiteral_2= 'Technology' )
+                    // InternalBomi.g:2472:4: enumLiteral_2= 'Technology'
                     {
-                    enumLiteral_2=(Token)match(input,61,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,68,FOLLOW_2); 
 
                     				current = grammarAccess.getBOSuperTypesAccess().getTechnologyEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getBOSuperTypesAccess().getTechnologyEnumLiteralDeclaration_2());
@@ -5385,12 +5782,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:2319:3: (enumLiteral_3= 'Task' )
+                    // InternalBomi.g:2479:3: (enumLiteral_3= 'Task' )
                     {
-                    // InternalBomi.g:2319:3: (enumLiteral_3= 'Task' )
-                    // InternalBomi.g:2320:4: enumLiteral_3= 'Task'
+                    // InternalBomi.g:2479:3: (enumLiteral_3= 'Task' )
+                    // InternalBomi.g:2480:4: enumLiteral_3= 'Task'
                     {
-                    enumLiteral_3=(Token)match(input,62,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,69,FOLLOW_2); 
 
                     				current = grammarAccess.getBOSuperTypesAccess().getTaskEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getBOSuperTypesAccess().getTaskEnumLiteralDeclaration_3());
@@ -5402,12 +5799,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalBomi.g:2327:3: (enumLiteral_4= 'Planning' )
+                    // InternalBomi.g:2487:3: (enumLiteral_4= 'Planning' )
                     {
-                    // InternalBomi.g:2327:3: (enumLiteral_4= 'Planning' )
-                    // InternalBomi.g:2328:4: enumLiteral_4= 'Planning'
+                    // InternalBomi.g:2487:3: (enumLiteral_4= 'Planning' )
+                    // InternalBomi.g:2488:4: enumLiteral_4= 'Planning'
                     {
-                    enumLiteral_4=(Token)match(input,63,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,70,FOLLOW_2); 
 
                     				current = grammarAccess.getBOSuperTypesAccess().getPlanningEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getBOSuperTypesAccess().getPlanningEnumLiteralDeclaration_4());
@@ -5419,12 +5816,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalBomi.g:2335:3: (enumLiteral_5= 'Value' )
+                    // InternalBomi.g:2495:3: (enumLiteral_5= 'Value' )
                     {
-                    // InternalBomi.g:2335:3: (enumLiteral_5= 'Value' )
-                    // InternalBomi.g:2336:4: enumLiteral_5= 'Value'
+                    // InternalBomi.g:2495:3: (enumLiteral_5= 'Value' )
+                    // InternalBomi.g:2496:4: enumLiteral_5= 'Value'
                     {
-                    enumLiteral_5=(Token)match(input,64,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,71,FOLLOW_2); 
 
                     				current = grammarAccess.getBOSuperTypesAccess().getValueEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getBOSuperTypesAccess().getValueEnumLiteralDeclaration_5());
@@ -5436,12 +5833,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalBomi.g:2343:3: (enumLiteral_6= 'Product' )
+                    // InternalBomi.g:2503:3: (enumLiteral_6= 'Product' )
                     {
-                    // InternalBomi.g:2343:3: (enumLiteral_6= 'Product' )
-                    // InternalBomi.g:2344:4: enumLiteral_6= 'Product'
+                    // InternalBomi.g:2503:3: (enumLiteral_6= 'Product' )
+                    // InternalBomi.g:2504:4: enumLiteral_6= 'Product'
                     {
-                    enumLiteral_6=(Token)match(input,65,FOLLOW_2); 
+                    enumLiteral_6=(Token)match(input,72,FOLLOW_2); 
 
                     				current = grammarAccess.getBOSuperTypesAccess().getProductEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_6, grammarAccess.getBOSuperTypesAccess().getProductEnumLiteralDeclaration_6());
@@ -5453,12 +5850,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalBomi.g:2351:3: (enumLiteral_7= 'Other' )
+                    // InternalBomi.g:2511:3: (enumLiteral_7= 'Other' )
                     {
-                    // InternalBomi.g:2351:3: (enumLiteral_7= 'Other' )
-                    // InternalBomi.g:2352:4: enumLiteral_7= 'Other'
+                    // InternalBomi.g:2511:3: (enumLiteral_7= 'Other' )
+                    // InternalBomi.g:2512:4: enumLiteral_7= 'Other'
                     {
-                    enumLiteral_7=(Token)match(input,66,FOLLOW_2); 
+                    enumLiteral_7=(Token)match(input,73,FOLLOW_2); 
 
                     				current = grammarAccess.getBOSuperTypesAccess().getOtherEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_7, grammarAccess.getBOSuperTypesAccess().getOtherEnumLiteralDeclaration_7());
@@ -5492,7 +5889,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLifecycleStage"
-    // InternalBomi.g:2362:1: ruleLifecycleStage returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Planning' ) | (enumLiteral_2= 'Operation' ) | (enumLiteral_3= 'Deprecate' ) | (enumLiteral_4= 'Retire' ) ) ;
+    // InternalBomi.g:2522:1: ruleLifecycleStage returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Planning' ) | (enumLiteral_2= 'Operation' ) | (enumLiteral_3= 'Deprecate' ) | (enumLiteral_4= 'Retire' ) ) ;
     public final Enumerator ruleLifecycleStage() throws RecognitionException {
         Enumerator current = null;
 
@@ -5506,52 +5903,52 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBomi.g:2368:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Planning' ) | (enumLiteral_2= 'Operation' ) | (enumLiteral_3= 'Deprecate' ) | (enumLiteral_4= 'Retire' ) ) )
-            // InternalBomi.g:2369:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Planning' ) | (enumLiteral_2= 'Operation' ) | (enumLiteral_3= 'Deprecate' ) | (enumLiteral_4= 'Retire' ) )
+            // InternalBomi.g:2528:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Planning' ) | (enumLiteral_2= 'Operation' ) | (enumLiteral_3= 'Deprecate' ) | (enumLiteral_4= 'Retire' ) ) )
+            // InternalBomi.g:2529:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Planning' ) | (enumLiteral_2= 'Operation' ) | (enumLiteral_3= 'Deprecate' ) | (enumLiteral_4= 'Retire' ) )
             {
-            // InternalBomi.g:2369:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Planning' ) | (enumLiteral_2= 'Operation' ) | (enumLiteral_3= 'Deprecate' ) | (enumLiteral_4= 'Retire' ) )
-            int alt69=5;
+            // InternalBomi.g:2529:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Planning' ) | (enumLiteral_2= 'Operation' ) | (enumLiteral_3= 'Deprecate' ) | (enumLiteral_4= 'Retire' ) )
+            int alt75=5;
             switch ( input.LA(1) ) {
-            case 56:
+            case 61:
                 {
-                alt69=1;
+                alt75=1;
                 }
                 break;
-            case 63:
+            case 70:
                 {
-                alt69=2;
+                alt75=2;
                 }
                 break;
-            case 67:
+            case 74:
                 {
-                alt69=3;
+                alt75=3;
                 }
                 break;
-            case 68:
+            case 75:
                 {
-                alt69=4;
+                alt75=4;
                 }
                 break;
-            case 69:
+            case 76:
                 {
-                alt69=5;
+                alt75=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 69, 0, input);
+                    new NoViableAltException("", 75, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt69) {
+            switch (alt75) {
                 case 1 :
-                    // InternalBomi.g:2370:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2530:3: (enumLiteral_0= 'NOT_SET' )
                     {
-                    // InternalBomi.g:2370:3: (enumLiteral_0= 'NOT_SET' )
-                    // InternalBomi.g:2371:4: enumLiteral_0= 'NOT_SET'
+                    // InternalBomi.g:2530:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2531:4: enumLiteral_0= 'NOT_SET'
                     {
-                    enumLiteral_0=(Token)match(input,56,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,61,FOLLOW_2); 
 
                     				current = grammarAccess.getLifecycleStageAccess().getNOT_SETEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getLifecycleStageAccess().getNOT_SETEnumLiteralDeclaration_0());
@@ -5563,12 +5960,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:2378:3: (enumLiteral_1= 'Planning' )
+                    // InternalBomi.g:2538:3: (enumLiteral_1= 'Planning' )
                     {
-                    // InternalBomi.g:2378:3: (enumLiteral_1= 'Planning' )
-                    // InternalBomi.g:2379:4: enumLiteral_1= 'Planning'
+                    // InternalBomi.g:2538:3: (enumLiteral_1= 'Planning' )
+                    // InternalBomi.g:2539:4: enumLiteral_1= 'Planning'
                     {
-                    enumLiteral_1=(Token)match(input,63,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,70,FOLLOW_2); 
 
                     				current = grammarAccess.getLifecycleStageAccess().getPlanningEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getLifecycleStageAccess().getPlanningEnumLiteralDeclaration_1());
@@ -5580,12 +5977,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:2386:3: (enumLiteral_2= 'Operation' )
+                    // InternalBomi.g:2546:3: (enumLiteral_2= 'Operation' )
                     {
-                    // InternalBomi.g:2386:3: (enumLiteral_2= 'Operation' )
-                    // InternalBomi.g:2387:4: enumLiteral_2= 'Operation'
+                    // InternalBomi.g:2546:3: (enumLiteral_2= 'Operation' )
+                    // InternalBomi.g:2547:4: enumLiteral_2= 'Operation'
                     {
-                    enumLiteral_2=(Token)match(input,67,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,74,FOLLOW_2); 
 
                     				current = grammarAccess.getLifecycleStageAccess().getOperationEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getLifecycleStageAccess().getOperationEnumLiteralDeclaration_2());
@@ -5597,12 +5994,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:2394:3: (enumLiteral_3= 'Deprecate' )
+                    // InternalBomi.g:2554:3: (enumLiteral_3= 'Deprecate' )
                     {
-                    // InternalBomi.g:2394:3: (enumLiteral_3= 'Deprecate' )
-                    // InternalBomi.g:2395:4: enumLiteral_3= 'Deprecate'
+                    // InternalBomi.g:2554:3: (enumLiteral_3= 'Deprecate' )
+                    // InternalBomi.g:2555:4: enumLiteral_3= 'Deprecate'
                     {
-                    enumLiteral_3=(Token)match(input,68,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,75,FOLLOW_2); 
 
                     				current = grammarAccess.getLifecycleStageAccess().getDeprecateEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getLifecycleStageAccess().getDeprecateEnumLiteralDeclaration_3());
@@ -5614,12 +6011,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalBomi.g:2402:3: (enumLiteral_4= 'Retire' )
+                    // InternalBomi.g:2562:3: (enumLiteral_4= 'Retire' )
                     {
-                    // InternalBomi.g:2402:3: (enumLiteral_4= 'Retire' )
-                    // InternalBomi.g:2403:4: enumLiteral_4= 'Retire'
+                    // InternalBomi.g:2562:3: (enumLiteral_4= 'Retire' )
+                    // InternalBomi.g:2563:4: enumLiteral_4= 'Retire'
                     {
-                    enumLiteral_4=(Token)match(input,69,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,76,FOLLOW_2); 
 
                     				current = grammarAccess.getLifecycleStageAccess().getRetireEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getLifecycleStageAccess().getRetireEnumLiteralDeclaration_4());
@@ -5653,7 +6050,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMIType"
-    // InternalBomi.g:2413:1: ruleMIType returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Teams' ) | (enumLiteral_2= 'Silos' ) | (enumLiteral_3= 'Departments' ) | (enumLiteral_4= 'Organizations' ) ) ;
+    // InternalBomi.g:2573:1: ruleMIType returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Teams' ) | (enumLiteral_2= 'Silos' ) | (enumLiteral_3= 'Departments' ) | (enumLiteral_4= 'Organizations' ) ) ;
     public final Enumerator ruleMIType() throws RecognitionException {
         Enumerator current = null;
 
@@ -5667,52 +6064,52 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBomi.g:2419:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Teams' ) | (enumLiteral_2= 'Silos' ) | (enumLiteral_3= 'Departments' ) | (enumLiteral_4= 'Organizations' ) ) )
-            // InternalBomi.g:2420:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Teams' ) | (enumLiteral_2= 'Silos' ) | (enumLiteral_3= 'Departments' ) | (enumLiteral_4= 'Organizations' ) )
+            // InternalBomi.g:2579:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Teams' ) | (enumLiteral_2= 'Silos' ) | (enumLiteral_3= 'Departments' ) | (enumLiteral_4= 'Organizations' ) ) )
+            // InternalBomi.g:2580:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Teams' ) | (enumLiteral_2= 'Silos' ) | (enumLiteral_3= 'Departments' ) | (enumLiteral_4= 'Organizations' ) )
             {
-            // InternalBomi.g:2420:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Teams' ) | (enumLiteral_2= 'Silos' ) | (enumLiteral_3= 'Departments' ) | (enumLiteral_4= 'Organizations' ) )
-            int alt70=5;
+            // InternalBomi.g:2580:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Teams' ) | (enumLiteral_2= 'Silos' ) | (enumLiteral_3= 'Departments' ) | (enumLiteral_4= 'Organizations' ) )
+            int alt76=5;
             switch ( input.LA(1) ) {
-            case 56:
+            case 61:
                 {
-                alt70=1;
+                alt76=1;
                 }
                 break;
-            case 70:
+            case 77:
                 {
-                alt70=2;
+                alt76=2;
                 }
                 break;
-            case 71:
+            case 78:
                 {
-                alt70=3;
+                alt76=3;
                 }
                 break;
-            case 72:
+            case 79:
                 {
-                alt70=4;
+                alt76=4;
                 }
                 break;
-            case 73:
+            case 80:
                 {
-                alt70=5;
+                alt76=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 70, 0, input);
+                    new NoViableAltException("", 76, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt70) {
+            switch (alt76) {
                 case 1 :
-                    // InternalBomi.g:2421:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2581:3: (enumLiteral_0= 'NOT_SET' )
                     {
-                    // InternalBomi.g:2421:3: (enumLiteral_0= 'NOT_SET' )
-                    // InternalBomi.g:2422:4: enumLiteral_0= 'NOT_SET'
+                    // InternalBomi.g:2581:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2582:4: enumLiteral_0= 'NOT_SET'
                     {
-                    enumLiteral_0=(Token)match(input,56,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,61,FOLLOW_2); 
 
                     				current = grammarAccess.getMITypeAccess().getNOT_SETEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getMITypeAccess().getNOT_SETEnumLiteralDeclaration_0());
@@ -5724,12 +6121,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:2429:3: (enumLiteral_1= 'Teams' )
+                    // InternalBomi.g:2589:3: (enumLiteral_1= 'Teams' )
                     {
-                    // InternalBomi.g:2429:3: (enumLiteral_1= 'Teams' )
-                    // InternalBomi.g:2430:4: enumLiteral_1= 'Teams'
+                    // InternalBomi.g:2589:3: (enumLiteral_1= 'Teams' )
+                    // InternalBomi.g:2590:4: enumLiteral_1= 'Teams'
                     {
-                    enumLiteral_1=(Token)match(input,70,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,77,FOLLOW_2); 
 
                     				current = grammarAccess.getMITypeAccess().getTeamsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getMITypeAccess().getTeamsEnumLiteralDeclaration_1());
@@ -5741,12 +6138,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:2437:3: (enumLiteral_2= 'Silos' )
+                    // InternalBomi.g:2597:3: (enumLiteral_2= 'Silos' )
                     {
-                    // InternalBomi.g:2437:3: (enumLiteral_2= 'Silos' )
-                    // InternalBomi.g:2438:4: enumLiteral_2= 'Silos'
+                    // InternalBomi.g:2597:3: (enumLiteral_2= 'Silos' )
+                    // InternalBomi.g:2598:4: enumLiteral_2= 'Silos'
                     {
-                    enumLiteral_2=(Token)match(input,71,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,78,FOLLOW_2); 
 
                     				current = grammarAccess.getMITypeAccess().getSilosEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getMITypeAccess().getSilosEnumLiteralDeclaration_2());
@@ -5758,12 +6155,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:2445:3: (enumLiteral_3= 'Departments' )
+                    // InternalBomi.g:2605:3: (enumLiteral_3= 'Departments' )
                     {
-                    // InternalBomi.g:2445:3: (enumLiteral_3= 'Departments' )
-                    // InternalBomi.g:2446:4: enumLiteral_3= 'Departments'
+                    // InternalBomi.g:2605:3: (enumLiteral_3= 'Departments' )
+                    // InternalBomi.g:2606:4: enumLiteral_3= 'Departments'
                     {
-                    enumLiteral_3=(Token)match(input,72,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,79,FOLLOW_2); 
 
                     				current = grammarAccess.getMITypeAccess().getDepartmentsEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getMITypeAccess().getDepartmentsEnumLiteralDeclaration_3());
@@ -5775,12 +6172,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalBomi.g:2453:3: (enumLiteral_4= 'Organizations' )
+                    // InternalBomi.g:2613:3: (enumLiteral_4= 'Organizations' )
                     {
-                    // InternalBomi.g:2453:3: (enumLiteral_4= 'Organizations' )
-                    // InternalBomi.g:2454:4: enumLiteral_4= 'Organizations'
+                    // InternalBomi.g:2613:3: (enumLiteral_4= 'Organizations' )
+                    // InternalBomi.g:2614:4: enumLiteral_4= 'Organizations'
                     {
-                    enumLiteral_4=(Token)match(input,73,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,80,FOLLOW_2); 
 
                     				current = grammarAccess.getMITypeAccess().getOrganizationsEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getMITypeAccess().getOrganizationsEnumLiteralDeclaration_4());
@@ -5814,7 +6211,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDriverTypes"
-    // InternalBomi.g:2464:1: ruleDriverTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Technology' ) | (enumLiteral_2= 'Process' ) | (enumLiteral_3= 'Organizational' ) ) ;
+    // InternalBomi.g:2624:1: ruleDriverTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Technology' ) | (enumLiteral_2= 'Process' ) | (enumLiteral_3= 'Organizational' ) ) ;
     public final Enumerator ruleDriverTypes() throws RecognitionException {
         Enumerator current = null;
 
@@ -5827,47 +6224,47 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBomi.g:2470:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Technology' ) | (enumLiteral_2= 'Process' ) | (enumLiteral_3= 'Organizational' ) ) )
-            // InternalBomi.g:2471:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Technology' ) | (enumLiteral_2= 'Process' ) | (enumLiteral_3= 'Organizational' ) )
+            // InternalBomi.g:2630:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Technology' ) | (enumLiteral_2= 'Process' ) | (enumLiteral_3= 'Organizational' ) ) )
+            // InternalBomi.g:2631:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Technology' ) | (enumLiteral_2= 'Process' ) | (enumLiteral_3= 'Organizational' ) )
             {
-            // InternalBomi.g:2471:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Technology' ) | (enumLiteral_2= 'Process' ) | (enumLiteral_3= 'Organizational' ) )
-            int alt71=4;
+            // InternalBomi.g:2631:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Technology' ) | (enumLiteral_2= 'Process' ) | (enumLiteral_3= 'Organizational' ) )
+            int alt77=4;
             switch ( input.LA(1) ) {
-            case 56:
-                {
-                alt71=1;
-                }
-                break;
             case 61:
                 {
-                alt71=2;
+                alt77=1;
                 }
                 break;
-            case 74:
+            case 68:
                 {
-                alt71=3;
+                alt77=2;
                 }
                 break;
-            case 75:
+            case 81:
                 {
-                alt71=4;
+                alt77=3;
+                }
+                break;
+            case 82:
+                {
+                alt77=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 71, 0, input);
+                    new NoViableAltException("", 77, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt71) {
+            switch (alt77) {
                 case 1 :
-                    // InternalBomi.g:2472:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2632:3: (enumLiteral_0= 'NOT_SET' )
                     {
-                    // InternalBomi.g:2472:3: (enumLiteral_0= 'NOT_SET' )
-                    // InternalBomi.g:2473:4: enumLiteral_0= 'NOT_SET'
+                    // InternalBomi.g:2632:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2633:4: enumLiteral_0= 'NOT_SET'
                     {
-                    enumLiteral_0=(Token)match(input,56,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,61,FOLLOW_2); 
 
                     				current = grammarAccess.getDriverTypesAccess().getNOT_SETEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getDriverTypesAccess().getNOT_SETEnumLiteralDeclaration_0());
@@ -5879,12 +6276,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:2480:3: (enumLiteral_1= 'Technology' )
+                    // InternalBomi.g:2640:3: (enumLiteral_1= 'Technology' )
                     {
-                    // InternalBomi.g:2480:3: (enumLiteral_1= 'Technology' )
-                    // InternalBomi.g:2481:4: enumLiteral_1= 'Technology'
+                    // InternalBomi.g:2640:3: (enumLiteral_1= 'Technology' )
+                    // InternalBomi.g:2641:4: enumLiteral_1= 'Technology'
                     {
-                    enumLiteral_1=(Token)match(input,61,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,68,FOLLOW_2); 
 
                     				current = grammarAccess.getDriverTypesAccess().getTechnologyEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getDriverTypesAccess().getTechnologyEnumLiteralDeclaration_1());
@@ -5896,12 +6293,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:2488:3: (enumLiteral_2= 'Process' )
+                    // InternalBomi.g:2648:3: (enumLiteral_2= 'Process' )
                     {
-                    // InternalBomi.g:2488:3: (enumLiteral_2= 'Process' )
-                    // InternalBomi.g:2489:4: enumLiteral_2= 'Process'
+                    // InternalBomi.g:2648:3: (enumLiteral_2= 'Process' )
+                    // InternalBomi.g:2649:4: enumLiteral_2= 'Process'
                     {
-                    enumLiteral_2=(Token)match(input,74,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,81,FOLLOW_2); 
 
                     				current = grammarAccess.getDriverTypesAccess().getProcessEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getDriverTypesAccess().getProcessEnumLiteralDeclaration_2());
@@ -5913,12 +6310,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:2496:3: (enumLiteral_3= 'Organizational' )
+                    // InternalBomi.g:2656:3: (enumLiteral_3= 'Organizational' )
                     {
-                    // InternalBomi.g:2496:3: (enumLiteral_3= 'Organizational' )
-                    // InternalBomi.g:2497:4: enumLiteral_3= 'Organizational'
+                    // InternalBomi.g:2656:3: (enumLiteral_3= 'Organizational' )
+                    // InternalBomi.g:2657:4: enumLiteral_3= 'Organizational'
                     {
-                    enumLiteral_3=(Token)match(input,75,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,82,FOLLOW_2); 
 
                     				current = grammarAccess.getDriverTypesAccess().getOrganizationalEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getDriverTypesAccess().getOrganizationalEnumLiteralDeclaration_3());
@@ -5952,7 +6349,7 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDistanceTypes"
-    // InternalBomi.g:2507:1: ruleDistanceTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Cultural' ) | (enumLiteral_2= 'Geographical' ) | (enumLiteral_3= 'Organizational' ) ) ;
+    // InternalBomi.g:2667:1: ruleDistanceTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Cultural' ) | (enumLiteral_2= 'Geographical' ) | (enumLiteral_3= 'Organizational' ) ) ;
     public final Enumerator ruleDistanceTypes() throws RecognitionException {
         Enumerator current = null;
 
@@ -5965,47 +6362,47 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBomi.g:2513:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Cultural' ) | (enumLiteral_2= 'Geographical' ) | (enumLiteral_3= 'Organizational' ) ) )
-            // InternalBomi.g:2514:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Cultural' ) | (enumLiteral_2= 'Geographical' ) | (enumLiteral_3= 'Organizational' ) )
+            // InternalBomi.g:2673:2: ( ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Cultural' ) | (enumLiteral_2= 'Geographical' ) | (enumLiteral_3= 'Organizational' ) ) )
+            // InternalBomi.g:2674:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Cultural' ) | (enumLiteral_2= 'Geographical' ) | (enumLiteral_3= 'Organizational' ) )
             {
-            // InternalBomi.g:2514:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Cultural' ) | (enumLiteral_2= 'Geographical' ) | (enumLiteral_3= 'Organizational' ) )
-            int alt72=4;
+            // InternalBomi.g:2674:2: ( (enumLiteral_0= 'NOT_SET' ) | (enumLiteral_1= 'Cultural' ) | (enumLiteral_2= 'Geographical' ) | (enumLiteral_3= 'Organizational' ) )
+            int alt78=4;
             switch ( input.LA(1) ) {
-            case 56:
+            case 61:
                 {
-                alt72=1;
+                alt78=1;
                 }
                 break;
-            case 76:
+            case 83:
                 {
-                alt72=2;
+                alt78=2;
                 }
                 break;
-            case 77:
+            case 84:
                 {
-                alt72=3;
+                alt78=3;
                 }
                 break;
-            case 75:
+            case 82:
                 {
-                alt72=4;
+                alt78=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 72, 0, input);
+                    new NoViableAltException("", 78, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt72) {
+            switch (alt78) {
                 case 1 :
-                    // InternalBomi.g:2515:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2675:3: (enumLiteral_0= 'NOT_SET' )
                     {
-                    // InternalBomi.g:2515:3: (enumLiteral_0= 'NOT_SET' )
-                    // InternalBomi.g:2516:4: enumLiteral_0= 'NOT_SET'
+                    // InternalBomi.g:2675:3: (enumLiteral_0= 'NOT_SET' )
+                    // InternalBomi.g:2676:4: enumLiteral_0= 'NOT_SET'
                     {
-                    enumLiteral_0=(Token)match(input,56,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,61,FOLLOW_2); 
 
                     				current = grammarAccess.getDistanceTypesAccess().getNOT_SETEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getDistanceTypesAccess().getNOT_SETEnumLiteralDeclaration_0());
@@ -6017,12 +6414,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:2523:3: (enumLiteral_1= 'Cultural' )
+                    // InternalBomi.g:2683:3: (enumLiteral_1= 'Cultural' )
                     {
-                    // InternalBomi.g:2523:3: (enumLiteral_1= 'Cultural' )
-                    // InternalBomi.g:2524:4: enumLiteral_1= 'Cultural'
+                    // InternalBomi.g:2683:3: (enumLiteral_1= 'Cultural' )
+                    // InternalBomi.g:2684:4: enumLiteral_1= 'Cultural'
                     {
-                    enumLiteral_1=(Token)match(input,76,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,83,FOLLOW_2); 
 
                     				current = grammarAccess.getDistanceTypesAccess().getCulturalEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getDistanceTypesAccess().getCulturalEnumLiteralDeclaration_1());
@@ -6034,12 +6431,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:2531:3: (enumLiteral_2= 'Geographical' )
+                    // InternalBomi.g:2691:3: (enumLiteral_2= 'Geographical' )
                     {
-                    // InternalBomi.g:2531:3: (enumLiteral_2= 'Geographical' )
-                    // InternalBomi.g:2532:4: enumLiteral_2= 'Geographical'
+                    // InternalBomi.g:2691:3: (enumLiteral_2= 'Geographical' )
+                    // InternalBomi.g:2692:4: enumLiteral_2= 'Geographical'
                     {
-                    enumLiteral_2=(Token)match(input,77,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,84,FOLLOW_2); 
 
                     				current = grammarAccess.getDistanceTypesAccess().getGeographicalEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getDistanceTypesAccess().getGeographicalEnumLiteralDeclaration_2());
@@ -6051,12 +6448,12 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:2539:3: (enumLiteral_3= 'Organizational' )
+                    // InternalBomi.g:2699:3: (enumLiteral_3= 'Organizational' )
                     {
-                    // InternalBomi.g:2539:3: (enumLiteral_3= 'Organizational' )
-                    // InternalBomi.g:2540:4: enumLiteral_3= 'Organizational'
+                    // InternalBomi.g:2699:3: (enumLiteral_3= 'Organizational' )
+                    // InternalBomi.g:2700:4: enumLiteral_3= 'Organizational'
                     {
-                    enumLiteral_3=(Token)match(input,75,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,82,FOLLOW_2); 
 
                     				current = grammarAccess.getDistanceTypesAccess().getOrganizationalEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getDistanceTypesAccess().getOrganizationalEnumLiteralDeclaration_3());
@@ -6098,33 +6495,33 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000006000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0030800000078002L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0410800000078002L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0030800000070002L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0410800000070002L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0030800000060002L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0410800000060002L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0030800000040002L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0410800000040002L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0030800000000002L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0030000000002002L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0410800000000002L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0410000000002002L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0020000000002002L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0400000000002002L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0010000000000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0400000000000000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x00000003FFF04000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0xF100000000000000L,0x0000000000000007L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x2000000000000000L,0x00000000000003F8L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x00000003FFE04000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x00000003FFC04000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0F00000000000000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0xE000000000000000L,0x0000000000000001L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x00000003FF804000L});
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x00000003FF004000L});
     public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x00000003FE004000L});
     public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x00000003FC004000L});
     public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x00000003F8004000L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x8100000000000000L,0x0000000000000038L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x2000000000000000L,0x0000000000001C40L});
     public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x00000003F0004000L});
     public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x00000003E0004000L});
     public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x00000003C0004000L});
@@ -6133,15 +6530,15 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000200004000L});
     public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000000800004000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0100000000000000L,0x00000000000003C0L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x2000000000000000L,0x000000000001E000L});
     public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000024000004000L});
     public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000008000000000L});
     public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000010000002000L});
     public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000020000004000L});
     public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000780000004000L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x2100000000000000L,0x0000000000000C00L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x2000000000000000L,0x0000000000060010L});
     public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000700000004000L});
-    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0100000000000000L,0x0000000000003800L});
+    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x2000000000000000L,0x00000000001C0000L});
     public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000600000004000L});
     public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000400000004000L});
     public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x000F00000020C800L});
@@ -6151,17 +6548,23 @@ public class InternalBomiParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x000800000000C800L});
     public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x000000000000C800L});
     public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x000F000000224800L});
-    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x000F000000024800L});
-    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x000E000000024800L});
-    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x000C000000024800L});
-    public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0008000000024800L});
-    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0000000000024800L});
-    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000000024000L});
-    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x00C0000000214800L});
-    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x00C0000000014800L});
-    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0080000000014800L});
-    public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000014800L});
-    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000004800L});
+    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x03EF000000224800L});
+    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x03EF000000024800L});
+    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x03EE000000024800L});
+    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x03EC000000024800L});
+    public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x03E8000000024800L});
+    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x03E0000000024800L});
+    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x2000000000000000L,0x0000000000000006L});
+    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x03C0000000024800L});
+    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0380000000024800L});
+    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0300000000024800L});
+    public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0200000000024800L});
+    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000024800L});
+    public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000000024000L});
+    public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x1800000000214800L});
+    public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x1800000000014800L});
+    public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x1000000000014800L});
+    public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000000014800L});
+    public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000004800L});
 
 }

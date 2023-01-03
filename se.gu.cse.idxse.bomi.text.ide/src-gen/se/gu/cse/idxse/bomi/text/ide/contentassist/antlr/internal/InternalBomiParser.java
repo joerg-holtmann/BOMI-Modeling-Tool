@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBomiParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'NOT_SET'", "'High'", "'Medium'", "'Low'", "'Standard'", "'Technology'", "'Task'", "'Planning'", "'Value'", "'Product'", "'Other'", "'Operation'", "'Deprecate'", "'Retire'", "'Teams'", "'Silos'", "'Departments'", "'Organizations'", "'Process'", "'Organizational'", "'Cultural'", "'Geographical'", "'boundaryObjects'", "'{'", "'}'", "','", "'methodologicalIslands'", "'governanceTeams'", "'roles'", "'drivers'", "'BoundaryObject'", "'superType'", "'purpose'", "'levelOfDetail'", "'frequencyOfChange'", "'modularity'", "'maintainability'", "'prescriptive'", "'lifecycleStage'", "'representationFormat'", "'tooling'", "'versioning'", "'upToDate'", "'internalConsistency'", "'externalConsistency'", "'MethodologicalIsland'", "'type'", "'GovernanceTeam'", "'Role'", "'partOfGovernanceTeams'", "'('", "')'", "'partOfMIs'", "'Driver'", "'driverType'", "'distanceType'", "'distanceSize'", "'drivesMIs'", "'BOMICoordination'", "'accessability'", "'stability'", "'criticality'", "'fitForPurpose'", "'BORoleInteraction'", "'BOTeamGovernance'", "'coordinationMechanism'", "'frequencyOfCoordination'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'NOT_SET'", "'High'", "'Medium'", "'Low'", "'True'", "'False'", "'Standard'", "'Technology'", "'Task'", "'Planning'", "'Value'", "'Product'", "'Other'", "'Operation'", "'Deprecate'", "'Retire'", "'Teams'", "'Silos'", "'Departments'", "'Organizations'", "'Process'", "'Organizational'", "'Cultural'", "'Geographical'", "'boundaryObjects'", "'{'", "'}'", "','", "'methodologicalIslands'", "'governanceTeams'", "'roles'", "'drivers'", "'BoundaryObject'", "'superType'", "'purpose'", "'levelOfDetail'", "'frequencyOfChange'", "'modularity'", "'maintainability'", "'prescriptive'", "'lifecycleStage'", "'representationFormat'", "'tooling'", "'versioning'", "'upToDate'", "'internalConsistency'", "'externalConsistency'", "'MethodologicalIsland'", "'type'", "'GovernanceTeam'", "'Role'", "'partOfGovernanceTeams'", "'('", "')'", "'partOfMIs'", "'Driver'", "'driverType'", "'distanceType'", "'distanceSize'", "'drivesMIs'", "'BOMICoordination'", "'accessability'", "'stability'", "'criticality'", "'fitForPurpose'", "'BORoleInteraction'", "'responsible'", "'creates'", "'reads'", "'updates'", "'deletes'", "'BOTeamGovernance'", "'coordinationMechanism'", "'frequencyOfCoordination'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -77,7 +77,9 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
     public static final int T__33=33;
     public static final int T__77=77;
     public static final int T__34=34;
+    public static final int T__78=78;
     public static final int T__35=35;
+    public static final int T__79=79;
     public static final int T__36=36;
     public static final int T__73=73;
     public static final int EOF=-1;
@@ -87,6 +89,10 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
     public static final int T__75=75;
     public static final int T__32=32;
     public static final int T__76=76;
+    public static final int T__80=80;
+    public static final int T__81=81;
+    public static final int T__82=82;
+    public static final int T__83=83;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
     public static final int T__48=48;
@@ -96,6 +102,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
     public static final int T__46=46;
     public static final int T__47=47;
     public static final int T__40=40;
+    public static final int T__84=84;
     public static final int T__41=41;
     public static final int T__42=42;
     public static final int T__43=43;
@@ -952,22 +959,69 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleHighLow"
 
 
+    // $ANTLR start "ruleMyBoolean"
+    // InternalBomi.g:319:1: ruleMyBoolean : ( ( rule__MyBoolean__Alternatives ) ) ;
+    public final void ruleMyBoolean() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:323:1: ( ( ( rule__MyBoolean__Alternatives ) ) )
+            // InternalBomi.g:324:2: ( ( rule__MyBoolean__Alternatives ) )
+            {
+            // InternalBomi.g:324:2: ( ( rule__MyBoolean__Alternatives ) )
+            // InternalBomi.g:325:3: ( rule__MyBoolean__Alternatives )
+            {
+             before(grammarAccess.getMyBooleanAccess().getAlternatives()); 
+            // InternalBomi.g:326:3: ( rule__MyBoolean__Alternatives )
+            // InternalBomi.g:326:4: rule__MyBoolean__Alternatives
+            {
+            pushFollow(FOLLOW_2);
+            rule__MyBoolean__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getMyBooleanAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleMyBoolean"
+
+
     // $ANTLR start "ruleBOSuperTypes"
-    // InternalBomi.g:319:1: ruleBOSuperTypes : ( ( rule__BOSuperTypes__Alternatives ) ) ;
+    // InternalBomi.g:335:1: ruleBOSuperTypes : ( ( rule__BOSuperTypes__Alternatives ) ) ;
     public final void ruleBOSuperTypes() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:323:1: ( ( ( rule__BOSuperTypes__Alternatives ) ) )
-            // InternalBomi.g:324:2: ( ( rule__BOSuperTypes__Alternatives ) )
+            // InternalBomi.g:339:1: ( ( ( rule__BOSuperTypes__Alternatives ) ) )
+            // InternalBomi.g:340:2: ( ( rule__BOSuperTypes__Alternatives ) )
             {
-            // InternalBomi.g:324:2: ( ( rule__BOSuperTypes__Alternatives ) )
-            // InternalBomi.g:325:3: ( rule__BOSuperTypes__Alternatives )
+            // InternalBomi.g:340:2: ( ( rule__BOSuperTypes__Alternatives ) )
+            // InternalBomi.g:341:3: ( rule__BOSuperTypes__Alternatives )
             {
              before(grammarAccess.getBOSuperTypesAccess().getAlternatives()); 
-            // InternalBomi.g:326:3: ( rule__BOSuperTypes__Alternatives )
-            // InternalBomi.g:326:4: rule__BOSuperTypes__Alternatives
+            // InternalBomi.g:342:3: ( rule__BOSuperTypes__Alternatives )
+            // InternalBomi.g:342:4: rule__BOSuperTypes__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__BOSuperTypes__Alternatives();
@@ -1000,21 +1054,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleLifecycleStage"
-    // InternalBomi.g:335:1: ruleLifecycleStage : ( ( rule__LifecycleStage__Alternatives ) ) ;
+    // InternalBomi.g:351:1: ruleLifecycleStage : ( ( rule__LifecycleStage__Alternatives ) ) ;
     public final void ruleLifecycleStage() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:339:1: ( ( ( rule__LifecycleStage__Alternatives ) ) )
-            // InternalBomi.g:340:2: ( ( rule__LifecycleStage__Alternatives ) )
+            // InternalBomi.g:355:1: ( ( ( rule__LifecycleStage__Alternatives ) ) )
+            // InternalBomi.g:356:2: ( ( rule__LifecycleStage__Alternatives ) )
             {
-            // InternalBomi.g:340:2: ( ( rule__LifecycleStage__Alternatives ) )
-            // InternalBomi.g:341:3: ( rule__LifecycleStage__Alternatives )
+            // InternalBomi.g:356:2: ( ( rule__LifecycleStage__Alternatives ) )
+            // InternalBomi.g:357:3: ( rule__LifecycleStage__Alternatives )
             {
              before(grammarAccess.getLifecycleStageAccess().getAlternatives()); 
-            // InternalBomi.g:342:3: ( rule__LifecycleStage__Alternatives )
-            // InternalBomi.g:342:4: rule__LifecycleStage__Alternatives
+            // InternalBomi.g:358:3: ( rule__LifecycleStage__Alternatives )
+            // InternalBomi.g:358:4: rule__LifecycleStage__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__LifecycleStage__Alternatives();
@@ -1047,21 +1101,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleMIType"
-    // InternalBomi.g:351:1: ruleMIType : ( ( rule__MIType__Alternatives ) ) ;
+    // InternalBomi.g:367:1: ruleMIType : ( ( rule__MIType__Alternatives ) ) ;
     public final void ruleMIType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:355:1: ( ( ( rule__MIType__Alternatives ) ) )
-            // InternalBomi.g:356:2: ( ( rule__MIType__Alternatives ) )
+            // InternalBomi.g:371:1: ( ( ( rule__MIType__Alternatives ) ) )
+            // InternalBomi.g:372:2: ( ( rule__MIType__Alternatives ) )
             {
-            // InternalBomi.g:356:2: ( ( rule__MIType__Alternatives ) )
-            // InternalBomi.g:357:3: ( rule__MIType__Alternatives )
+            // InternalBomi.g:372:2: ( ( rule__MIType__Alternatives ) )
+            // InternalBomi.g:373:3: ( rule__MIType__Alternatives )
             {
              before(grammarAccess.getMITypeAccess().getAlternatives()); 
-            // InternalBomi.g:358:3: ( rule__MIType__Alternatives )
-            // InternalBomi.g:358:4: rule__MIType__Alternatives
+            // InternalBomi.g:374:3: ( rule__MIType__Alternatives )
+            // InternalBomi.g:374:4: rule__MIType__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__MIType__Alternatives();
@@ -1094,21 +1148,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleDriverTypes"
-    // InternalBomi.g:367:1: ruleDriverTypes : ( ( rule__DriverTypes__Alternatives ) ) ;
+    // InternalBomi.g:383:1: ruleDriverTypes : ( ( rule__DriverTypes__Alternatives ) ) ;
     public final void ruleDriverTypes() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:371:1: ( ( ( rule__DriverTypes__Alternatives ) ) )
-            // InternalBomi.g:372:2: ( ( rule__DriverTypes__Alternatives ) )
+            // InternalBomi.g:387:1: ( ( ( rule__DriverTypes__Alternatives ) ) )
+            // InternalBomi.g:388:2: ( ( rule__DriverTypes__Alternatives ) )
             {
-            // InternalBomi.g:372:2: ( ( rule__DriverTypes__Alternatives ) )
-            // InternalBomi.g:373:3: ( rule__DriverTypes__Alternatives )
+            // InternalBomi.g:388:2: ( ( rule__DriverTypes__Alternatives ) )
+            // InternalBomi.g:389:3: ( rule__DriverTypes__Alternatives )
             {
              before(grammarAccess.getDriverTypesAccess().getAlternatives()); 
-            // InternalBomi.g:374:3: ( rule__DriverTypes__Alternatives )
-            // InternalBomi.g:374:4: rule__DriverTypes__Alternatives
+            // InternalBomi.g:390:3: ( rule__DriverTypes__Alternatives )
+            // InternalBomi.g:390:4: rule__DriverTypes__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__DriverTypes__Alternatives();
@@ -1141,21 +1195,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleDistanceTypes"
-    // InternalBomi.g:383:1: ruleDistanceTypes : ( ( rule__DistanceTypes__Alternatives ) ) ;
+    // InternalBomi.g:399:1: ruleDistanceTypes : ( ( rule__DistanceTypes__Alternatives ) ) ;
     public final void ruleDistanceTypes() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:387:1: ( ( ( rule__DistanceTypes__Alternatives ) ) )
-            // InternalBomi.g:388:2: ( ( rule__DistanceTypes__Alternatives ) )
+            // InternalBomi.g:403:1: ( ( ( rule__DistanceTypes__Alternatives ) ) )
+            // InternalBomi.g:404:2: ( ( rule__DistanceTypes__Alternatives ) )
             {
-            // InternalBomi.g:388:2: ( ( rule__DistanceTypes__Alternatives ) )
-            // InternalBomi.g:389:3: ( rule__DistanceTypes__Alternatives )
+            // InternalBomi.g:404:2: ( ( rule__DistanceTypes__Alternatives ) )
+            // InternalBomi.g:405:3: ( rule__DistanceTypes__Alternatives )
             {
              before(grammarAccess.getDistanceTypesAccess().getAlternatives()); 
-            // InternalBomi.g:390:3: ( rule__DistanceTypes__Alternatives )
-            // InternalBomi.g:390:4: rule__DistanceTypes__Alternatives
+            // InternalBomi.g:406:3: ( rule__DistanceTypes__Alternatives )
+            // InternalBomi.g:406:4: rule__DistanceTypes__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__DistanceTypes__Alternatives();
@@ -1188,13 +1242,13 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EString__Alternatives"
-    // InternalBomi.g:398:1: rule__EString__Alternatives : ( ( RULE_STRING ) | ( RULE_ID ) );
+    // InternalBomi.g:414:1: rule__EString__Alternatives : ( ( RULE_STRING ) | ( RULE_ID ) );
     public final void rule__EString__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:402:1: ( ( RULE_STRING ) | ( RULE_ID ) )
+            // InternalBomi.g:418:1: ( ( RULE_STRING ) | ( RULE_ID ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1212,10 +1266,10 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalBomi.g:403:2: ( RULE_STRING )
+                    // InternalBomi.g:419:2: ( RULE_STRING )
                     {
-                    // InternalBomi.g:403:2: ( RULE_STRING )
-                    // InternalBomi.g:404:3: RULE_STRING
+                    // InternalBomi.g:419:2: ( RULE_STRING )
+                    // InternalBomi.g:420:3: RULE_STRING
                     {
                      before(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
                     match(input,RULE_STRING,FOLLOW_2); 
@@ -1227,10 +1281,10 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:409:2: ( RULE_ID )
+                    // InternalBomi.g:425:2: ( RULE_ID )
                     {
-                    // InternalBomi.g:409:2: ( RULE_ID )
-                    // InternalBomi.g:410:3: RULE_ID
+                    // InternalBomi.g:425:2: ( RULE_ID )
+                    // InternalBomi.g:426:3: RULE_ID
                     {
                      before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
                     match(input,RULE_ID,FOLLOW_2); 
@@ -1259,13 +1313,13 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HighLow__Alternatives"
-    // InternalBomi.g:419:1: rule__HighLow__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'High' ) ) | ( ( 'Medium' ) ) | ( ( 'Low' ) ) );
+    // InternalBomi.g:435:1: rule__HighLow__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'High' ) ) | ( ( 'Medium' ) ) | ( ( 'Low' ) ) );
     public final void rule__HighLow__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:423:1: ( ( ( 'NOT_SET' ) ) | ( ( 'High' ) ) | ( ( 'Medium' ) ) | ( ( 'Low' ) ) )
+            // InternalBomi.g:439:1: ( ( ( 'NOT_SET' ) ) | ( ( 'High' ) ) | ( ( 'Medium' ) ) | ( ( 'Low' ) ) )
             int alt2=4;
             switch ( input.LA(1) ) {
             case 11:
@@ -1297,14 +1351,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
             switch (alt2) {
                 case 1 :
-                    // InternalBomi.g:424:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:440:2: ( ( 'NOT_SET' ) )
                     {
-                    // InternalBomi.g:424:2: ( ( 'NOT_SET' ) )
-                    // InternalBomi.g:425:3: ( 'NOT_SET' )
+                    // InternalBomi.g:440:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:441:3: ( 'NOT_SET' )
                     {
                      before(grammarAccess.getHighLowAccess().getNOT_SETEnumLiteralDeclaration_0()); 
-                    // InternalBomi.g:426:3: ( 'NOT_SET' )
-                    // InternalBomi.g:426:4: 'NOT_SET'
+                    // InternalBomi.g:442:3: ( 'NOT_SET' )
+                    // InternalBomi.g:442:4: 'NOT_SET'
                     {
                     match(input,11,FOLLOW_2); 
 
@@ -1318,14 +1372,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:430:2: ( ( 'High' ) )
+                    // InternalBomi.g:446:2: ( ( 'High' ) )
                     {
-                    // InternalBomi.g:430:2: ( ( 'High' ) )
-                    // InternalBomi.g:431:3: ( 'High' )
+                    // InternalBomi.g:446:2: ( ( 'High' ) )
+                    // InternalBomi.g:447:3: ( 'High' )
                     {
                      before(grammarAccess.getHighLowAccess().getHighEnumLiteralDeclaration_1()); 
-                    // InternalBomi.g:432:3: ( 'High' )
-                    // InternalBomi.g:432:4: 'High'
+                    // InternalBomi.g:448:3: ( 'High' )
+                    // InternalBomi.g:448:4: 'High'
                     {
                     match(input,12,FOLLOW_2); 
 
@@ -1339,14 +1393,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:436:2: ( ( 'Medium' ) )
+                    // InternalBomi.g:452:2: ( ( 'Medium' ) )
                     {
-                    // InternalBomi.g:436:2: ( ( 'Medium' ) )
-                    // InternalBomi.g:437:3: ( 'Medium' )
+                    // InternalBomi.g:452:2: ( ( 'Medium' ) )
+                    // InternalBomi.g:453:3: ( 'Medium' )
                     {
                      before(grammarAccess.getHighLowAccess().getMediumEnumLiteralDeclaration_2()); 
-                    // InternalBomi.g:438:3: ( 'Medium' )
-                    // InternalBomi.g:438:4: 'Medium'
+                    // InternalBomi.g:454:3: ( 'Medium' )
+                    // InternalBomi.g:454:4: 'Medium'
                     {
                     match(input,13,FOLLOW_2); 
 
@@ -1360,14 +1414,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:442:2: ( ( 'Low' ) )
+                    // InternalBomi.g:458:2: ( ( 'Low' ) )
                     {
-                    // InternalBomi.g:442:2: ( ( 'Low' ) )
-                    // InternalBomi.g:443:3: ( 'Low' )
+                    // InternalBomi.g:458:2: ( ( 'Low' ) )
+                    // InternalBomi.g:459:3: ( 'Low' )
                     {
                      before(grammarAccess.getHighLowAccess().getLowEnumLiteralDeclaration_3()); 
-                    // InternalBomi.g:444:3: ( 'Low' )
-                    // InternalBomi.g:444:4: 'Low'
+                    // InternalBomi.g:460:3: ( 'Low' )
+                    // InternalBomi.g:460:4: 'Low'
                     {
                     match(input,14,FOLLOW_2); 
 
@@ -1397,15 +1451,15 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__HighLow__Alternatives"
 
 
-    // $ANTLR start "rule__BOSuperTypes__Alternatives"
-    // InternalBomi.g:452:1: rule__BOSuperTypes__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'Standard' ) ) | ( ( 'Technology' ) ) | ( ( 'Task' ) ) | ( ( 'Planning' ) ) | ( ( 'Value' ) ) | ( ( 'Product' ) ) | ( ( 'Other' ) ) );
-    public final void rule__BOSuperTypes__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__MyBoolean__Alternatives"
+    // InternalBomi.g:468:1: rule__MyBoolean__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'True' ) ) | ( ( 'False' ) ) );
+    public final void rule__MyBoolean__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:456:1: ( ( ( 'NOT_SET' ) ) | ( ( 'Standard' ) ) | ( ( 'Technology' ) ) | ( ( 'Task' ) ) | ( ( 'Planning' ) ) | ( ( 'Value' ) ) | ( ( 'Product' ) ) | ( ( 'Other' ) ) )
-            int alt3=8;
+            // InternalBomi.g:472:1: ( ( ( 'NOT_SET' ) ) | ( ( 'True' ) ) | ( ( 'False' ) ) )
+            int alt3=3;
             switch ( input.LA(1) ) {
             case 11:
                 {
@@ -1422,31 +1476,6 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                 alt3=3;
                 }
                 break;
-            case 17:
-                {
-                alt3=4;
-                }
-                break;
-            case 18:
-                {
-                alt3=5;
-                }
-                break;
-            case 19:
-                {
-                alt3=6;
-                }
-                break;
-            case 20:
-                {
-                alt3=7;
-                }
-                break;
-            case 21:
-                {
-                alt3=8;
-                }
-                break;
             default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 3, 0, input);
@@ -1456,14 +1485,152 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
             switch (alt3) {
                 case 1 :
-                    // InternalBomi.g:457:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:473:2: ( ( 'NOT_SET' ) )
                     {
-                    // InternalBomi.g:457:2: ( ( 'NOT_SET' ) )
-                    // InternalBomi.g:458:3: ( 'NOT_SET' )
+                    // InternalBomi.g:473:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:474:3: ( 'NOT_SET' )
+                    {
+                     before(grammarAccess.getMyBooleanAccess().getNOT_SETEnumLiteralDeclaration_0()); 
+                    // InternalBomi.g:475:3: ( 'NOT_SET' )
+                    // InternalBomi.g:475:4: 'NOT_SET'
+                    {
+                    match(input,11,FOLLOW_2); 
+
+                    }
+
+                     after(grammarAccess.getMyBooleanAccess().getNOT_SETEnumLiteralDeclaration_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalBomi.g:479:2: ( ( 'True' ) )
+                    {
+                    // InternalBomi.g:479:2: ( ( 'True' ) )
+                    // InternalBomi.g:480:3: ( 'True' )
+                    {
+                     before(grammarAccess.getMyBooleanAccess().getTrueEnumLiteralDeclaration_1()); 
+                    // InternalBomi.g:481:3: ( 'True' )
+                    // InternalBomi.g:481:4: 'True'
+                    {
+                    match(input,15,FOLLOW_2); 
+
+                    }
+
+                     after(grammarAccess.getMyBooleanAccess().getTrueEnumLiteralDeclaration_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // InternalBomi.g:485:2: ( ( 'False' ) )
+                    {
+                    // InternalBomi.g:485:2: ( ( 'False' ) )
+                    // InternalBomi.g:486:3: ( 'False' )
+                    {
+                     before(grammarAccess.getMyBooleanAccess().getFalseEnumLiteralDeclaration_2()); 
+                    // InternalBomi.g:487:3: ( 'False' )
+                    // InternalBomi.g:487:4: 'False'
+                    {
+                    match(input,16,FOLLOW_2); 
+
+                    }
+
+                     after(grammarAccess.getMyBooleanAccess().getFalseEnumLiteralDeclaration_2()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MyBoolean__Alternatives"
+
+
+    // $ANTLR start "rule__BOSuperTypes__Alternatives"
+    // InternalBomi.g:495:1: rule__BOSuperTypes__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'Standard' ) ) | ( ( 'Technology' ) ) | ( ( 'Task' ) ) | ( ( 'Planning' ) ) | ( ( 'Value' ) ) | ( ( 'Product' ) ) | ( ( 'Other' ) ) );
+    public final void rule__BOSuperTypes__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:499:1: ( ( ( 'NOT_SET' ) ) | ( ( 'Standard' ) ) | ( ( 'Technology' ) ) | ( ( 'Task' ) ) | ( ( 'Planning' ) ) | ( ( 'Value' ) ) | ( ( 'Product' ) ) | ( ( 'Other' ) ) )
+            int alt4=8;
+            switch ( input.LA(1) ) {
+            case 11:
+                {
+                alt4=1;
+                }
+                break;
+            case 17:
+                {
+                alt4=2;
+                }
+                break;
+            case 18:
+                {
+                alt4=3;
+                }
+                break;
+            case 19:
+                {
+                alt4=4;
+                }
+                break;
+            case 20:
+                {
+                alt4=5;
+                }
+                break;
+            case 21:
+                {
+                alt4=6;
+                }
+                break;
+            case 22:
+                {
+                alt4=7;
+                }
+                break;
+            case 23:
+                {
+                alt4=8;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 4, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt4) {
+                case 1 :
+                    // InternalBomi.g:500:2: ( ( 'NOT_SET' ) )
+                    {
+                    // InternalBomi.g:500:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:501:3: ( 'NOT_SET' )
                     {
                      before(grammarAccess.getBOSuperTypesAccess().getNOT_SETEnumLiteralDeclaration_0()); 
-                    // InternalBomi.g:459:3: ( 'NOT_SET' )
-                    // InternalBomi.g:459:4: 'NOT_SET'
+                    // InternalBomi.g:502:3: ( 'NOT_SET' )
+                    // InternalBomi.g:502:4: 'NOT_SET'
                     {
                     match(input,11,FOLLOW_2); 
 
@@ -1477,16 +1644,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:463:2: ( ( 'Standard' ) )
+                    // InternalBomi.g:506:2: ( ( 'Standard' ) )
                     {
-                    // InternalBomi.g:463:2: ( ( 'Standard' ) )
-                    // InternalBomi.g:464:3: ( 'Standard' )
+                    // InternalBomi.g:506:2: ( ( 'Standard' ) )
+                    // InternalBomi.g:507:3: ( 'Standard' )
                     {
                      before(grammarAccess.getBOSuperTypesAccess().getStandardEnumLiteralDeclaration_1()); 
-                    // InternalBomi.g:465:3: ( 'Standard' )
-                    // InternalBomi.g:465:4: 'Standard'
+                    // InternalBomi.g:508:3: ( 'Standard' )
+                    // InternalBomi.g:508:4: 'Standard'
                     {
-                    match(input,15,FOLLOW_2); 
+                    match(input,17,FOLLOW_2); 
 
                     }
 
@@ -1498,16 +1665,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:469:2: ( ( 'Technology' ) )
+                    // InternalBomi.g:512:2: ( ( 'Technology' ) )
                     {
-                    // InternalBomi.g:469:2: ( ( 'Technology' ) )
-                    // InternalBomi.g:470:3: ( 'Technology' )
+                    // InternalBomi.g:512:2: ( ( 'Technology' ) )
+                    // InternalBomi.g:513:3: ( 'Technology' )
                     {
                      before(grammarAccess.getBOSuperTypesAccess().getTechnologyEnumLiteralDeclaration_2()); 
-                    // InternalBomi.g:471:3: ( 'Technology' )
-                    // InternalBomi.g:471:4: 'Technology'
+                    // InternalBomi.g:514:3: ( 'Technology' )
+                    // InternalBomi.g:514:4: 'Technology'
                     {
-                    match(input,16,FOLLOW_2); 
+                    match(input,18,FOLLOW_2); 
 
                     }
 
@@ -1519,16 +1686,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:475:2: ( ( 'Task' ) )
+                    // InternalBomi.g:518:2: ( ( 'Task' ) )
                     {
-                    // InternalBomi.g:475:2: ( ( 'Task' ) )
-                    // InternalBomi.g:476:3: ( 'Task' )
+                    // InternalBomi.g:518:2: ( ( 'Task' ) )
+                    // InternalBomi.g:519:3: ( 'Task' )
                     {
                      before(grammarAccess.getBOSuperTypesAccess().getTaskEnumLiteralDeclaration_3()); 
-                    // InternalBomi.g:477:3: ( 'Task' )
-                    // InternalBomi.g:477:4: 'Task'
+                    // InternalBomi.g:520:3: ( 'Task' )
+                    // InternalBomi.g:520:4: 'Task'
                     {
-                    match(input,17,FOLLOW_2); 
+                    match(input,19,FOLLOW_2); 
 
                     }
 
@@ -1540,16 +1707,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalBomi.g:481:2: ( ( 'Planning' ) )
+                    // InternalBomi.g:524:2: ( ( 'Planning' ) )
                     {
-                    // InternalBomi.g:481:2: ( ( 'Planning' ) )
-                    // InternalBomi.g:482:3: ( 'Planning' )
+                    // InternalBomi.g:524:2: ( ( 'Planning' ) )
+                    // InternalBomi.g:525:3: ( 'Planning' )
                     {
                      before(grammarAccess.getBOSuperTypesAccess().getPlanningEnumLiteralDeclaration_4()); 
-                    // InternalBomi.g:483:3: ( 'Planning' )
-                    // InternalBomi.g:483:4: 'Planning'
+                    // InternalBomi.g:526:3: ( 'Planning' )
+                    // InternalBomi.g:526:4: 'Planning'
                     {
-                    match(input,18,FOLLOW_2); 
+                    match(input,20,FOLLOW_2); 
 
                     }
 
@@ -1561,16 +1728,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // InternalBomi.g:487:2: ( ( 'Value' ) )
+                    // InternalBomi.g:530:2: ( ( 'Value' ) )
                     {
-                    // InternalBomi.g:487:2: ( ( 'Value' ) )
-                    // InternalBomi.g:488:3: ( 'Value' )
+                    // InternalBomi.g:530:2: ( ( 'Value' ) )
+                    // InternalBomi.g:531:3: ( 'Value' )
                     {
                      before(grammarAccess.getBOSuperTypesAccess().getValueEnumLiteralDeclaration_5()); 
-                    // InternalBomi.g:489:3: ( 'Value' )
-                    // InternalBomi.g:489:4: 'Value'
+                    // InternalBomi.g:532:3: ( 'Value' )
+                    // InternalBomi.g:532:4: 'Value'
                     {
-                    match(input,19,FOLLOW_2); 
+                    match(input,21,FOLLOW_2); 
 
                     }
 
@@ -1582,16 +1749,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // InternalBomi.g:493:2: ( ( 'Product' ) )
+                    // InternalBomi.g:536:2: ( ( 'Product' ) )
                     {
-                    // InternalBomi.g:493:2: ( ( 'Product' ) )
-                    // InternalBomi.g:494:3: ( 'Product' )
+                    // InternalBomi.g:536:2: ( ( 'Product' ) )
+                    // InternalBomi.g:537:3: ( 'Product' )
                     {
                      before(grammarAccess.getBOSuperTypesAccess().getProductEnumLiteralDeclaration_6()); 
-                    // InternalBomi.g:495:3: ( 'Product' )
-                    // InternalBomi.g:495:4: 'Product'
+                    // InternalBomi.g:538:3: ( 'Product' )
+                    // InternalBomi.g:538:4: 'Product'
                     {
-                    match(input,20,FOLLOW_2); 
+                    match(input,22,FOLLOW_2); 
 
                     }
 
@@ -1603,16 +1770,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 8 :
-                    // InternalBomi.g:499:2: ( ( 'Other' ) )
+                    // InternalBomi.g:542:2: ( ( 'Other' ) )
                     {
-                    // InternalBomi.g:499:2: ( ( 'Other' ) )
-                    // InternalBomi.g:500:3: ( 'Other' )
+                    // InternalBomi.g:542:2: ( ( 'Other' ) )
+                    // InternalBomi.g:543:3: ( 'Other' )
                     {
                      before(grammarAccess.getBOSuperTypesAccess().getOtherEnumLiteralDeclaration_7()); 
-                    // InternalBomi.g:501:3: ( 'Other' )
-                    // InternalBomi.g:501:4: 'Other'
+                    // InternalBomi.g:544:3: ( 'Other' )
+                    // InternalBomi.g:544:4: 'Other'
                     {
-                    match(input,21,FOLLOW_2); 
+                    match(input,23,FOLLOW_2); 
 
                     }
 
@@ -1641,57 +1808,57 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LifecycleStage__Alternatives"
-    // InternalBomi.g:509:1: rule__LifecycleStage__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'Planning' ) ) | ( ( 'Operation' ) ) | ( ( 'Deprecate' ) ) | ( ( 'Retire' ) ) );
+    // InternalBomi.g:552:1: rule__LifecycleStage__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'Planning' ) ) | ( ( 'Operation' ) ) | ( ( 'Deprecate' ) ) | ( ( 'Retire' ) ) );
     public final void rule__LifecycleStage__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:513:1: ( ( ( 'NOT_SET' ) ) | ( ( 'Planning' ) ) | ( ( 'Operation' ) ) | ( ( 'Deprecate' ) ) | ( ( 'Retire' ) ) )
-            int alt4=5;
+            // InternalBomi.g:556:1: ( ( ( 'NOT_SET' ) ) | ( ( 'Planning' ) ) | ( ( 'Operation' ) ) | ( ( 'Deprecate' ) ) | ( ( 'Retire' ) ) )
+            int alt5=5;
             switch ( input.LA(1) ) {
             case 11:
                 {
-                alt4=1;
+                alt5=1;
                 }
                 break;
-            case 18:
+            case 20:
                 {
-                alt4=2;
-                }
-                break;
-            case 22:
-                {
-                alt4=3;
-                }
-                break;
-            case 23:
-                {
-                alt4=4;
+                alt5=2;
                 }
                 break;
             case 24:
                 {
-                alt4=5;
+                alt5=3;
+                }
+                break;
+            case 25:
+                {
+                alt5=4;
+                }
+                break;
+            case 26:
+                {
+                alt5=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt4) {
+            switch (alt5) {
                 case 1 :
-                    // InternalBomi.g:514:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:557:2: ( ( 'NOT_SET' ) )
                     {
-                    // InternalBomi.g:514:2: ( ( 'NOT_SET' ) )
-                    // InternalBomi.g:515:3: ( 'NOT_SET' )
+                    // InternalBomi.g:557:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:558:3: ( 'NOT_SET' )
                     {
                      before(grammarAccess.getLifecycleStageAccess().getNOT_SETEnumLiteralDeclaration_0()); 
-                    // InternalBomi.g:516:3: ( 'NOT_SET' )
-                    // InternalBomi.g:516:4: 'NOT_SET'
+                    // InternalBomi.g:559:3: ( 'NOT_SET' )
+                    // InternalBomi.g:559:4: 'NOT_SET'
                     {
                     match(input,11,FOLLOW_2); 
 
@@ -1705,16 +1872,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:520:2: ( ( 'Planning' ) )
+                    // InternalBomi.g:563:2: ( ( 'Planning' ) )
                     {
-                    // InternalBomi.g:520:2: ( ( 'Planning' ) )
-                    // InternalBomi.g:521:3: ( 'Planning' )
+                    // InternalBomi.g:563:2: ( ( 'Planning' ) )
+                    // InternalBomi.g:564:3: ( 'Planning' )
                     {
                      before(grammarAccess.getLifecycleStageAccess().getPlanningEnumLiteralDeclaration_1()); 
-                    // InternalBomi.g:522:3: ( 'Planning' )
-                    // InternalBomi.g:522:4: 'Planning'
+                    // InternalBomi.g:565:3: ( 'Planning' )
+                    // InternalBomi.g:565:4: 'Planning'
                     {
-                    match(input,18,FOLLOW_2); 
+                    match(input,20,FOLLOW_2); 
 
                     }
 
@@ -1726,16 +1893,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:526:2: ( ( 'Operation' ) )
+                    // InternalBomi.g:569:2: ( ( 'Operation' ) )
                     {
-                    // InternalBomi.g:526:2: ( ( 'Operation' ) )
-                    // InternalBomi.g:527:3: ( 'Operation' )
+                    // InternalBomi.g:569:2: ( ( 'Operation' ) )
+                    // InternalBomi.g:570:3: ( 'Operation' )
                     {
                      before(grammarAccess.getLifecycleStageAccess().getOperationEnumLiteralDeclaration_2()); 
-                    // InternalBomi.g:528:3: ( 'Operation' )
-                    // InternalBomi.g:528:4: 'Operation'
+                    // InternalBomi.g:571:3: ( 'Operation' )
+                    // InternalBomi.g:571:4: 'Operation'
                     {
-                    match(input,22,FOLLOW_2); 
+                    match(input,24,FOLLOW_2); 
 
                     }
 
@@ -1747,16 +1914,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:532:2: ( ( 'Deprecate' ) )
+                    // InternalBomi.g:575:2: ( ( 'Deprecate' ) )
                     {
-                    // InternalBomi.g:532:2: ( ( 'Deprecate' ) )
-                    // InternalBomi.g:533:3: ( 'Deprecate' )
+                    // InternalBomi.g:575:2: ( ( 'Deprecate' ) )
+                    // InternalBomi.g:576:3: ( 'Deprecate' )
                     {
                      before(grammarAccess.getLifecycleStageAccess().getDeprecateEnumLiteralDeclaration_3()); 
-                    // InternalBomi.g:534:3: ( 'Deprecate' )
-                    // InternalBomi.g:534:4: 'Deprecate'
+                    // InternalBomi.g:577:3: ( 'Deprecate' )
+                    // InternalBomi.g:577:4: 'Deprecate'
                     {
-                    match(input,23,FOLLOW_2); 
+                    match(input,25,FOLLOW_2); 
 
                     }
 
@@ -1768,16 +1935,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalBomi.g:538:2: ( ( 'Retire' ) )
+                    // InternalBomi.g:581:2: ( ( 'Retire' ) )
                     {
-                    // InternalBomi.g:538:2: ( ( 'Retire' ) )
-                    // InternalBomi.g:539:3: ( 'Retire' )
+                    // InternalBomi.g:581:2: ( ( 'Retire' ) )
+                    // InternalBomi.g:582:3: ( 'Retire' )
                     {
                      before(grammarAccess.getLifecycleStageAccess().getRetireEnumLiteralDeclaration_4()); 
-                    // InternalBomi.g:540:3: ( 'Retire' )
-                    // InternalBomi.g:540:4: 'Retire'
+                    // InternalBomi.g:583:3: ( 'Retire' )
+                    // InternalBomi.g:583:4: 'Retire'
                     {
-                    match(input,24,FOLLOW_2); 
+                    match(input,26,FOLLOW_2); 
 
                     }
 
@@ -1806,57 +1973,57 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MIType__Alternatives"
-    // InternalBomi.g:548:1: rule__MIType__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'Teams' ) ) | ( ( 'Silos' ) ) | ( ( 'Departments' ) ) | ( ( 'Organizations' ) ) );
+    // InternalBomi.g:591:1: rule__MIType__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'Teams' ) ) | ( ( 'Silos' ) ) | ( ( 'Departments' ) ) | ( ( 'Organizations' ) ) );
     public final void rule__MIType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:552:1: ( ( ( 'NOT_SET' ) ) | ( ( 'Teams' ) ) | ( ( 'Silos' ) ) | ( ( 'Departments' ) ) | ( ( 'Organizations' ) ) )
-            int alt5=5;
+            // InternalBomi.g:595:1: ( ( ( 'NOT_SET' ) ) | ( ( 'Teams' ) ) | ( ( 'Silos' ) ) | ( ( 'Departments' ) ) | ( ( 'Organizations' ) ) )
+            int alt6=5;
             switch ( input.LA(1) ) {
             case 11:
                 {
-                alt5=1;
-                }
-                break;
-            case 25:
-                {
-                alt5=2;
-                }
-                break;
-            case 26:
-                {
-                alt5=3;
+                alt6=1;
                 }
                 break;
             case 27:
                 {
-                alt5=4;
+                alt6=2;
                 }
                 break;
             case 28:
                 {
-                alt5=5;
+                alt6=3;
+                }
+                break;
+            case 29:
+                {
+                alt6=4;
+                }
+                break;
+            case 30:
+                {
+                alt6=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // InternalBomi.g:553:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:596:2: ( ( 'NOT_SET' ) )
                     {
-                    // InternalBomi.g:553:2: ( ( 'NOT_SET' ) )
-                    // InternalBomi.g:554:3: ( 'NOT_SET' )
+                    // InternalBomi.g:596:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:597:3: ( 'NOT_SET' )
                     {
                      before(grammarAccess.getMITypeAccess().getNOT_SETEnumLiteralDeclaration_0()); 
-                    // InternalBomi.g:555:3: ( 'NOT_SET' )
-                    // InternalBomi.g:555:4: 'NOT_SET'
+                    // InternalBomi.g:598:3: ( 'NOT_SET' )
+                    // InternalBomi.g:598:4: 'NOT_SET'
                     {
                     match(input,11,FOLLOW_2); 
 
@@ -1870,16 +2037,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:559:2: ( ( 'Teams' ) )
+                    // InternalBomi.g:602:2: ( ( 'Teams' ) )
                     {
-                    // InternalBomi.g:559:2: ( ( 'Teams' ) )
-                    // InternalBomi.g:560:3: ( 'Teams' )
+                    // InternalBomi.g:602:2: ( ( 'Teams' ) )
+                    // InternalBomi.g:603:3: ( 'Teams' )
                     {
                      before(grammarAccess.getMITypeAccess().getTeamsEnumLiteralDeclaration_1()); 
-                    // InternalBomi.g:561:3: ( 'Teams' )
-                    // InternalBomi.g:561:4: 'Teams'
+                    // InternalBomi.g:604:3: ( 'Teams' )
+                    // InternalBomi.g:604:4: 'Teams'
                     {
-                    match(input,25,FOLLOW_2); 
+                    match(input,27,FOLLOW_2); 
 
                     }
 
@@ -1891,16 +2058,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:565:2: ( ( 'Silos' ) )
+                    // InternalBomi.g:608:2: ( ( 'Silos' ) )
                     {
-                    // InternalBomi.g:565:2: ( ( 'Silos' ) )
-                    // InternalBomi.g:566:3: ( 'Silos' )
+                    // InternalBomi.g:608:2: ( ( 'Silos' ) )
+                    // InternalBomi.g:609:3: ( 'Silos' )
                     {
                      before(grammarAccess.getMITypeAccess().getSilosEnumLiteralDeclaration_2()); 
-                    // InternalBomi.g:567:3: ( 'Silos' )
-                    // InternalBomi.g:567:4: 'Silos'
+                    // InternalBomi.g:610:3: ( 'Silos' )
+                    // InternalBomi.g:610:4: 'Silos'
                     {
-                    match(input,26,FOLLOW_2); 
+                    match(input,28,FOLLOW_2); 
 
                     }
 
@@ -1912,16 +2079,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:571:2: ( ( 'Departments' ) )
+                    // InternalBomi.g:614:2: ( ( 'Departments' ) )
                     {
-                    // InternalBomi.g:571:2: ( ( 'Departments' ) )
-                    // InternalBomi.g:572:3: ( 'Departments' )
+                    // InternalBomi.g:614:2: ( ( 'Departments' ) )
+                    // InternalBomi.g:615:3: ( 'Departments' )
                     {
                      before(grammarAccess.getMITypeAccess().getDepartmentsEnumLiteralDeclaration_3()); 
-                    // InternalBomi.g:573:3: ( 'Departments' )
-                    // InternalBomi.g:573:4: 'Departments'
+                    // InternalBomi.g:616:3: ( 'Departments' )
+                    // InternalBomi.g:616:4: 'Departments'
                     {
-                    match(input,27,FOLLOW_2); 
+                    match(input,29,FOLLOW_2); 
 
                     }
 
@@ -1933,16 +2100,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalBomi.g:577:2: ( ( 'Organizations' ) )
+                    // InternalBomi.g:620:2: ( ( 'Organizations' ) )
                     {
-                    // InternalBomi.g:577:2: ( ( 'Organizations' ) )
-                    // InternalBomi.g:578:3: ( 'Organizations' )
+                    // InternalBomi.g:620:2: ( ( 'Organizations' ) )
+                    // InternalBomi.g:621:3: ( 'Organizations' )
                     {
                      before(grammarAccess.getMITypeAccess().getOrganizationsEnumLiteralDeclaration_4()); 
-                    // InternalBomi.g:579:3: ( 'Organizations' )
-                    // InternalBomi.g:579:4: 'Organizations'
+                    // InternalBomi.g:622:3: ( 'Organizations' )
+                    // InternalBomi.g:622:4: 'Organizations'
                     {
-                    match(input,28,FOLLOW_2); 
+                    match(input,30,FOLLOW_2); 
 
                     }
 
@@ -1971,52 +2138,52 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DriverTypes__Alternatives"
-    // InternalBomi.g:587:1: rule__DriverTypes__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'Technology' ) ) | ( ( 'Process' ) ) | ( ( 'Organizational' ) ) );
+    // InternalBomi.g:630:1: rule__DriverTypes__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'Technology' ) ) | ( ( 'Process' ) ) | ( ( 'Organizational' ) ) );
     public final void rule__DriverTypes__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:591:1: ( ( ( 'NOT_SET' ) ) | ( ( 'Technology' ) ) | ( ( 'Process' ) ) | ( ( 'Organizational' ) ) )
-            int alt6=4;
+            // InternalBomi.g:634:1: ( ( ( 'NOT_SET' ) ) | ( ( 'Technology' ) ) | ( ( 'Process' ) ) | ( ( 'Organizational' ) ) )
+            int alt7=4;
             switch ( input.LA(1) ) {
             case 11:
                 {
-                alt6=1;
+                alt7=1;
                 }
                 break;
-            case 16:
+            case 18:
                 {
-                alt6=2;
+                alt7=2;
                 }
                 break;
-            case 29:
+            case 31:
                 {
-                alt6=3;
+                alt7=3;
                 }
                 break;
-            case 30:
+            case 32:
                 {
-                alt6=4;
+                alt7=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // InternalBomi.g:592:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:635:2: ( ( 'NOT_SET' ) )
                     {
-                    // InternalBomi.g:592:2: ( ( 'NOT_SET' ) )
-                    // InternalBomi.g:593:3: ( 'NOT_SET' )
+                    // InternalBomi.g:635:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:636:3: ( 'NOT_SET' )
                     {
                      before(grammarAccess.getDriverTypesAccess().getNOT_SETEnumLiteralDeclaration_0()); 
-                    // InternalBomi.g:594:3: ( 'NOT_SET' )
-                    // InternalBomi.g:594:4: 'NOT_SET'
+                    // InternalBomi.g:637:3: ( 'NOT_SET' )
+                    // InternalBomi.g:637:4: 'NOT_SET'
                     {
                     match(input,11,FOLLOW_2); 
 
@@ -2030,16 +2197,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:598:2: ( ( 'Technology' ) )
+                    // InternalBomi.g:641:2: ( ( 'Technology' ) )
                     {
-                    // InternalBomi.g:598:2: ( ( 'Technology' ) )
-                    // InternalBomi.g:599:3: ( 'Technology' )
+                    // InternalBomi.g:641:2: ( ( 'Technology' ) )
+                    // InternalBomi.g:642:3: ( 'Technology' )
                     {
                      before(grammarAccess.getDriverTypesAccess().getTechnologyEnumLiteralDeclaration_1()); 
-                    // InternalBomi.g:600:3: ( 'Technology' )
-                    // InternalBomi.g:600:4: 'Technology'
+                    // InternalBomi.g:643:3: ( 'Technology' )
+                    // InternalBomi.g:643:4: 'Technology'
                     {
-                    match(input,16,FOLLOW_2); 
+                    match(input,18,FOLLOW_2); 
 
                     }
 
@@ -2051,16 +2218,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:604:2: ( ( 'Process' ) )
+                    // InternalBomi.g:647:2: ( ( 'Process' ) )
                     {
-                    // InternalBomi.g:604:2: ( ( 'Process' ) )
-                    // InternalBomi.g:605:3: ( 'Process' )
+                    // InternalBomi.g:647:2: ( ( 'Process' ) )
+                    // InternalBomi.g:648:3: ( 'Process' )
                     {
                      before(grammarAccess.getDriverTypesAccess().getProcessEnumLiteralDeclaration_2()); 
-                    // InternalBomi.g:606:3: ( 'Process' )
-                    // InternalBomi.g:606:4: 'Process'
+                    // InternalBomi.g:649:3: ( 'Process' )
+                    // InternalBomi.g:649:4: 'Process'
                     {
-                    match(input,29,FOLLOW_2); 
+                    match(input,31,FOLLOW_2); 
 
                     }
 
@@ -2072,16 +2239,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:610:2: ( ( 'Organizational' ) )
+                    // InternalBomi.g:653:2: ( ( 'Organizational' ) )
                     {
-                    // InternalBomi.g:610:2: ( ( 'Organizational' ) )
-                    // InternalBomi.g:611:3: ( 'Organizational' )
+                    // InternalBomi.g:653:2: ( ( 'Organizational' ) )
+                    // InternalBomi.g:654:3: ( 'Organizational' )
                     {
                      before(grammarAccess.getDriverTypesAccess().getOrganizationalEnumLiteralDeclaration_3()); 
-                    // InternalBomi.g:612:3: ( 'Organizational' )
-                    // InternalBomi.g:612:4: 'Organizational'
+                    // InternalBomi.g:655:3: ( 'Organizational' )
+                    // InternalBomi.g:655:4: 'Organizational'
                     {
-                    match(input,30,FOLLOW_2); 
+                    match(input,32,FOLLOW_2); 
 
                     }
 
@@ -2110,52 +2277,52 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DistanceTypes__Alternatives"
-    // InternalBomi.g:620:1: rule__DistanceTypes__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'Cultural' ) ) | ( ( 'Geographical' ) ) | ( ( 'Organizational' ) ) );
+    // InternalBomi.g:663:1: rule__DistanceTypes__Alternatives : ( ( ( 'NOT_SET' ) ) | ( ( 'Cultural' ) ) | ( ( 'Geographical' ) ) | ( ( 'Organizational' ) ) );
     public final void rule__DistanceTypes__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:624:1: ( ( ( 'NOT_SET' ) ) | ( ( 'Cultural' ) ) | ( ( 'Geographical' ) ) | ( ( 'Organizational' ) ) )
-            int alt7=4;
+            // InternalBomi.g:667:1: ( ( ( 'NOT_SET' ) ) | ( ( 'Cultural' ) ) | ( ( 'Geographical' ) ) | ( ( 'Organizational' ) ) )
+            int alt8=4;
             switch ( input.LA(1) ) {
             case 11:
                 {
-                alt7=1;
+                alt8=1;
                 }
                 break;
-            case 31:
+            case 33:
                 {
-                alt7=2;
+                alt8=2;
+                }
+                break;
+            case 34:
+                {
+                alt8=3;
                 }
                 break;
             case 32:
                 {
-                alt7=3;
-                }
-                break;
-            case 30:
-                {
-                alt7=4;
+                alt8=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // InternalBomi.g:625:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:668:2: ( ( 'NOT_SET' ) )
                     {
-                    // InternalBomi.g:625:2: ( ( 'NOT_SET' ) )
-                    // InternalBomi.g:626:3: ( 'NOT_SET' )
+                    // InternalBomi.g:668:2: ( ( 'NOT_SET' ) )
+                    // InternalBomi.g:669:3: ( 'NOT_SET' )
                     {
                      before(grammarAccess.getDistanceTypesAccess().getNOT_SETEnumLiteralDeclaration_0()); 
-                    // InternalBomi.g:627:3: ( 'NOT_SET' )
-                    // InternalBomi.g:627:4: 'NOT_SET'
+                    // InternalBomi.g:670:3: ( 'NOT_SET' )
+                    // InternalBomi.g:670:4: 'NOT_SET'
                     {
                     match(input,11,FOLLOW_2); 
 
@@ -2169,16 +2336,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalBomi.g:631:2: ( ( 'Cultural' ) )
+                    // InternalBomi.g:674:2: ( ( 'Cultural' ) )
                     {
-                    // InternalBomi.g:631:2: ( ( 'Cultural' ) )
-                    // InternalBomi.g:632:3: ( 'Cultural' )
+                    // InternalBomi.g:674:2: ( ( 'Cultural' ) )
+                    // InternalBomi.g:675:3: ( 'Cultural' )
                     {
                      before(grammarAccess.getDistanceTypesAccess().getCulturalEnumLiteralDeclaration_1()); 
-                    // InternalBomi.g:633:3: ( 'Cultural' )
-                    // InternalBomi.g:633:4: 'Cultural'
+                    // InternalBomi.g:676:3: ( 'Cultural' )
+                    // InternalBomi.g:676:4: 'Cultural'
                     {
-                    match(input,31,FOLLOW_2); 
+                    match(input,33,FOLLOW_2); 
 
                     }
 
@@ -2190,16 +2357,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalBomi.g:637:2: ( ( 'Geographical' ) )
+                    // InternalBomi.g:680:2: ( ( 'Geographical' ) )
                     {
-                    // InternalBomi.g:637:2: ( ( 'Geographical' ) )
-                    // InternalBomi.g:638:3: ( 'Geographical' )
+                    // InternalBomi.g:680:2: ( ( 'Geographical' ) )
+                    // InternalBomi.g:681:3: ( 'Geographical' )
                     {
                      before(grammarAccess.getDistanceTypesAccess().getGeographicalEnumLiteralDeclaration_2()); 
-                    // InternalBomi.g:639:3: ( 'Geographical' )
-                    // InternalBomi.g:639:4: 'Geographical'
+                    // InternalBomi.g:682:3: ( 'Geographical' )
+                    // InternalBomi.g:682:4: 'Geographical'
                     {
-                    match(input,32,FOLLOW_2); 
+                    match(input,34,FOLLOW_2); 
 
                     }
 
@@ -2211,16 +2378,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalBomi.g:643:2: ( ( 'Organizational' ) )
+                    // InternalBomi.g:686:2: ( ( 'Organizational' ) )
                     {
-                    // InternalBomi.g:643:2: ( ( 'Organizational' ) )
-                    // InternalBomi.g:644:3: ( 'Organizational' )
+                    // InternalBomi.g:686:2: ( ( 'Organizational' ) )
+                    // InternalBomi.g:687:3: ( 'Organizational' )
                     {
                      before(grammarAccess.getDistanceTypesAccess().getOrganizationalEnumLiteralDeclaration_3()); 
-                    // InternalBomi.g:645:3: ( 'Organizational' )
-                    // InternalBomi.g:645:4: 'Organizational'
+                    // InternalBomi.g:688:3: ( 'Organizational' )
+                    // InternalBomi.g:688:4: 'Organizational'
                     {
-                    match(input,30,FOLLOW_2); 
+                    match(input,32,FOLLOW_2); 
 
                     }
 
@@ -2249,14 +2416,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__0"
-    // InternalBomi.g:653:1: rule__BOMIModel__Group__0 : rule__BOMIModel__Group__0__Impl rule__BOMIModel__Group__1 ;
+    // InternalBomi.g:696:1: rule__BOMIModel__Group__0 : rule__BOMIModel__Group__0__Impl rule__BOMIModel__Group__1 ;
     public final void rule__BOMIModel__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:657:1: ( rule__BOMIModel__Group__0__Impl rule__BOMIModel__Group__1 )
-            // InternalBomi.g:658:2: rule__BOMIModel__Group__0__Impl rule__BOMIModel__Group__1
+            // InternalBomi.g:700:1: ( rule__BOMIModel__Group__0__Impl rule__BOMIModel__Group__1 )
+            // InternalBomi.g:701:2: rule__BOMIModel__Group__0__Impl rule__BOMIModel__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__BOMIModel__Group__0__Impl();
@@ -2287,21 +2454,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__0__Impl"
-    // InternalBomi.g:665:1: rule__BOMIModel__Group__0__Impl : ( () ) ;
+    // InternalBomi.g:708:1: rule__BOMIModel__Group__0__Impl : ( () ) ;
     public final void rule__BOMIModel__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:669:1: ( ( () ) )
-            // InternalBomi.g:670:1: ( () )
+            // InternalBomi.g:712:1: ( ( () ) )
+            // InternalBomi.g:713:1: ( () )
             {
-            // InternalBomi.g:670:1: ( () )
-            // InternalBomi.g:671:2: ()
+            // InternalBomi.g:713:1: ( () )
+            // InternalBomi.g:714:2: ()
             {
              before(grammarAccess.getBOMIModelAccess().getBOMIModelAction_0()); 
-            // InternalBomi.g:672:2: ()
-            // InternalBomi.g:672:3: 
+            // InternalBomi.g:715:2: ()
+            // InternalBomi.g:715:3: 
             {
             }
 
@@ -2324,14 +2491,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__1"
-    // InternalBomi.g:680:1: rule__BOMIModel__Group__1 : rule__BOMIModel__Group__1__Impl rule__BOMIModel__Group__2 ;
+    // InternalBomi.g:723:1: rule__BOMIModel__Group__1 : rule__BOMIModel__Group__1__Impl rule__BOMIModel__Group__2 ;
     public final void rule__BOMIModel__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:684:1: ( rule__BOMIModel__Group__1__Impl rule__BOMIModel__Group__2 )
-            // InternalBomi.g:685:2: rule__BOMIModel__Group__1__Impl rule__BOMIModel__Group__2
+            // InternalBomi.g:727:1: ( rule__BOMIModel__Group__1__Impl rule__BOMIModel__Group__2 )
+            // InternalBomi.g:728:2: rule__BOMIModel__Group__1__Impl rule__BOMIModel__Group__2
             {
             pushFollow(FOLLOW_3);
             rule__BOMIModel__Group__1__Impl();
@@ -2362,29 +2529,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__1__Impl"
-    // InternalBomi.g:692:1: rule__BOMIModel__Group__1__Impl : ( ( rule__BOMIModel__Group_1__0 )? ) ;
+    // InternalBomi.g:735:1: rule__BOMIModel__Group__1__Impl : ( ( rule__BOMIModel__Group_1__0 )? ) ;
     public final void rule__BOMIModel__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:696:1: ( ( ( rule__BOMIModel__Group_1__0 )? ) )
-            // InternalBomi.g:697:1: ( ( rule__BOMIModel__Group_1__0 )? )
+            // InternalBomi.g:739:1: ( ( ( rule__BOMIModel__Group_1__0 )? ) )
+            // InternalBomi.g:740:1: ( ( rule__BOMIModel__Group_1__0 )? )
             {
-            // InternalBomi.g:697:1: ( ( rule__BOMIModel__Group_1__0 )? )
-            // InternalBomi.g:698:2: ( rule__BOMIModel__Group_1__0 )?
+            // InternalBomi.g:740:1: ( ( rule__BOMIModel__Group_1__0 )? )
+            // InternalBomi.g:741:2: ( rule__BOMIModel__Group_1__0 )?
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_1()); 
-            // InternalBomi.g:699:2: ( rule__BOMIModel__Group_1__0 )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            // InternalBomi.g:742:2: ( rule__BOMIModel__Group_1__0 )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA8_0==33) ) {
-                alt8=1;
+            if ( (LA9_0==35) ) {
+                alt9=1;
             }
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
-                    // InternalBomi.g:699:3: rule__BOMIModel__Group_1__0
+                    // InternalBomi.g:742:3: rule__BOMIModel__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMIModel__Group_1__0();
@@ -2420,14 +2587,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__2"
-    // InternalBomi.g:707:1: rule__BOMIModel__Group__2 : rule__BOMIModel__Group__2__Impl rule__BOMIModel__Group__3 ;
+    // InternalBomi.g:750:1: rule__BOMIModel__Group__2 : rule__BOMIModel__Group__2__Impl rule__BOMIModel__Group__3 ;
     public final void rule__BOMIModel__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:711:1: ( rule__BOMIModel__Group__2__Impl rule__BOMIModel__Group__3 )
-            // InternalBomi.g:712:2: rule__BOMIModel__Group__2__Impl rule__BOMIModel__Group__3
+            // InternalBomi.g:754:1: ( rule__BOMIModel__Group__2__Impl rule__BOMIModel__Group__3 )
+            // InternalBomi.g:755:2: rule__BOMIModel__Group__2__Impl rule__BOMIModel__Group__3
             {
             pushFollow(FOLLOW_3);
             rule__BOMIModel__Group__2__Impl();
@@ -2458,29 +2625,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__2__Impl"
-    // InternalBomi.g:719:1: rule__BOMIModel__Group__2__Impl : ( ( rule__BOMIModel__Group_2__0 )? ) ;
+    // InternalBomi.g:762:1: rule__BOMIModel__Group__2__Impl : ( ( rule__BOMIModel__Group_2__0 )? ) ;
     public final void rule__BOMIModel__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:723:1: ( ( ( rule__BOMIModel__Group_2__0 )? ) )
-            // InternalBomi.g:724:1: ( ( rule__BOMIModel__Group_2__0 )? )
+            // InternalBomi.g:766:1: ( ( ( rule__BOMIModel__Group_2__0 )? ) )
+            // InternalBomi.g:767:1: ( ( rule__BOMIModel__Group_2__0 )? )
             {
-            // InternalBomi.g:724:1: ( ( rule__BOMIModel__Group_2__0 )? )
-            // InternalBomi.g:725:2: ( rule__BOMIModel__Group_2__0 )?
+            // InternalBomi.g:767:1: ( ( rule__BOMIModel__Group_2__0 )? )
+            // InternalBomi.g:768:2: ( rule__BOMIModel__Group_2__0 )?
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_2()); 
-            // InternalBomi.g:726:2: ( rule__BOMIModel__Group_2__0 )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // InternalBomi.g:769:2: ( rule__BOMIModel__Group_2__0 )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA9_0==37) ) {
-                alt9=1;
+            if ( (LA10_0==39) ) {
+                alt10=1;
             }
-            switch (alt9) {
+            switch (alt10) {
                 case 1 :
-                    // InternalBomi.g:726:3: rule__BOMIModel__Group_2__0
+                    // InternalBomi.g:769:3: rule__BOMIModel__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMIModel__Group_2__0();
@@ -2516,14 +2683,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__3"
-    // InternalBomi.g:734:1: rule__BOMIModel__Group__3 : rule__BOMIModel__Group__3__Impl rule__BOMIModel__Group__4 ;
+    // InternalBomi.g:777:1: rule__BOMIModel__Group__3 : rule__BOMIModel__Group__3__Impl rule__BOMIModel__Group__4 ;
     public final void rule__BOMIModel__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:738:1: ( rule__BOMIModel__Group__3__Impl rule__BOMIModel__Group__4 )
-            // InternalBomi.g:739:2: rule__BOMIModel__Group__3__Impl rule__BOMIModel__Group__4
+            // InternalBomi.g:781:1: ( rule__BOMIModel__Group__3__Impl rule__BOMIModel__Group__4 )
+            // InternalBomi.g:782:2: rule__BOMIModel__Group__3__Impl rule__BOMIModel__Group__4
             {
             pushFollow(FOLLOW_3);
             rule__BOMIModel__Group__3__Impl();
@@ -2554,29 +2721,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__3__Impl"
-    // InternalBomi.g:746:1: rule__BOMIModel__Group__3__Impl : ( ( rule__BOMIModel__Group_3__0 )? ) ;
+    // InternalBomi.g:789:1: rule__BOMIModel__Group__3__Impl : ( ( rule__BOMIModel__Group_3__0 )? ) ;
     public final void rule__BOMIModel__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:750:1: ( ( ( rule__BOMIModel__Group_3__0 )? ) )
-            // InternalBomi.g:751:1: ( ( rule__BOMIModel__Group_3__0 )? )
+            // InternalBomi.g:793:1: ( ( ( rule__BOMIModel__Group_3__0 )? ) )
+            // InternalBomi.g:794:1: ( ( rule__BOMIModel__Group_3__0 )? )
             {
-            // InternalBomi.g:751:1: ( ( rule__BOMIModel__Group_3__0 )? )
-            // InternalBomi.g:752:2: ( rule__BOMIModel__Group_3__0 )?
+            // InternalBomi.g:794:1: ( ( rule__BOMIModel__Group_3__0 )? )
+            // InternalBomi.g:795:2: ( rule__BOMIModel__Group_3__0 )?
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_3()); 
-            // InternalBomi.g:753:2: ( rule__BOMIModel__Group_3__0 )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // InternalBomi.g:796:2: ( rule__BOMIModel__Group_3__0 )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA10_0==38) ) {
-                alt10=1;
+            if ( (LA11_0==40) ) {
+                alt11=1;
             }
-            switch (alt10) {
+            switch (alt11) {
                 case 1 :
-                    // InternalBomi.g:753:3: rule__BOMIModel__Group_3__0
+                    // InternalBomi.g:796:3: rule__BOMIModel__Group_3__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMIModel__Group_3__0();
@@ -2612,14 +2779,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__4"
-    // InternalBomi.g:761:1: rule__BOMIModel__Group__4 : rule__BOMIModel__Group__4__Impl rule__BOMIModel__Group__5 ;
+    // InternalBomi.g:804:1: rule__BOMIModel__Group__4 : rule__BOMIModel__Group__4__Impl rule__BOMIModel__Group__5 ;
     public final void rule__BOMIModel__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:765:1: ( rule__BOMIModel__Group__4__Impl rule__BOMIModel__Group__5 )
-            // InternalBomi.g:766:2: rule__BOMIModel__Group__4__Impl rule__BOMIModel__Group__5
+            // InternalBomi.g:808:1: ( rule__BOMIModel__Group__4__Impl rule__BOMIModel__Group__5 )
+            // InternalBomi.g:809:2: rule__BOMIModel__Group__4__Impl rule__BOMIModel__Group__5
             {
             pushFollow(FOLLOW_3);
             rule__BOMIModel__Group__4__Impl();
@@ -2650,29 +2817,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__4__Impl"
-    // InternalBomi.g:773:1: rule__BOMIModel__Group__4__Impl : ( ( rule__BOMIModel__Group_4__0 )? ) ;
+    // InternalBomi.g:816:1: rule__BOMIModel__Group__4__Impl : ( ( rule__BOMIModel__Group_4__0 )? ) ;
     public final void rule__BOMIModel__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:777:1: ( ( ( rule__BOMIModel__Group_4__0 )? ) )
-            // InternalBomi.g:778:1: ( ( rule__BOMIModel__Group_4__0 )? )
+            // InternalBomi.g:820:1: ( ( ( rule__BOMIModel__Group_4__0 )? ) )
+            // InternalBomi.g:821:1: ( ( rule__BOMIModel__Group_4__0 )? )
             {
-            // InternalBomi.g:778:1: ( ( rule__BOMIModel__Group_4__0 )? )
-            // InternalBomi.g:779:2: ( rule__BOMIModel__Group_4__0 )?
+            // InternalBomi.g:821:1: ( ( rule__BOMIModel__Group_4__0 )? )
+            // InternalBomi.g:822:2: ( rule__BOMIModel__Group_4__0 )?
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_4()); 
-            // InternalBomi.g:780:2: ( rule__BOMIModel__Group_4__0 )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // InternalBomi.g:823:2: ( rule__BOMIModel__Group_4__0 )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA11_0==39) ) {
-                alt11=1;
+            if ( (LA12_0==41) ) {
+                alt12=1;
             }
-            switch (alt11) {
+            switch (alt12) {
                 case 1 :
-                    // InternalBomi.g:780:3: rule__BOMIModel__Group_4__0
+                    // InternalBomi.g:823:3: rule__BOMIModel__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMIModel__Group_4__0();
@@ -2708,14 +2875,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__5"
-    // InternalBomi.g:788:1: rule__BOMIModel__Group__5 : rule__BOMIModel__Group__5__Impl rule__BOMIModel__Group__6 ;
+    // InternalBomi.g:831:1: rule__BOMIModel__Group__5 : rule__BOMIModel__Group__5__Impl rule__BOMIModel__Group__6 ;
     public final void rule__BOMIModel__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:792:1: ( rule__BOMIModel__Group__5__Impl rule__BOMIModel__Group__6 )
-            // InternalBomi.g:793:2: rule__BOMIModel__Group__5__Impl rule__BOMIModel__Group__6
+            // InternalBomi.g:835:1: ( rule__BOMIModel__Group__5__Impl rule__BOMIModel__Group__6 )
+            // InternalBomi.g:836:2: rule__BOMIModel__Group__5__Impl rule__BOMIModel__Group__6
             {
             pushFollow(FOLLOW_3);
             rule__BOMIModel__Group__5__Impl();
@@ -2746,29 +2913,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__5__Impl"
-    // InternalBomi.g:800:1: rule__BOMIModel__Group__5__Impl : ( ( rule__BOMIModel__Group_5__0 )? ) ;
+    // InternalBomi.g:843:1: rule__BOMIModel__Group__5__Impl : ( ( rule__BOMIModel__Group_5__0 )? ) ;
     public final void rule__BOMIModel__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:804:1: ( ( ( rule__BOMIModel__Group_5__0 )? ) )
-            // InternalBomi.g:805:1: ( ( rule__BOMIModel__Group_5__0 )? )
+            // InternalBomi.g:847:1: ( ( ( rule__BOMIModel__Group_5__0 )? ) )
+            // InternalBomi.g:848:1: ( ( rule__BOMIModel__Group_5__0 )? )
             {
-            // InternalBomi.g:805:1: ( ( rule__BOMIModel__Group_5__0 )? )
-            // InternalBomi.g:806:2: ( rule__BOMIModel__Group_5__0 )?
+            // InternalBomi.g:848:1: ( ( rule__BOMIModel__Group_5__0 )? )
+            // InternalBomi.g:849:2: ( rule__BOMIModel__Group_5__0 )?
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_5()); 
-            // InternalBomi.g:807:2: ( rule__BOMIModel__Group_5__0 )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // InternalBomi.g:850:2: ( rule__BOMIModel__Group_5__0 )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA12_0==40) ) {
-                alt12=1;
+            if ( (LA13_0==42) ) {
+                alt13=1;
             }
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
-                    // InternalBomi.g:807:3: rule__BOMIModel__Group_5__0
+                    // InternalBomi.g:850:3: rule__BOMIModel__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMIModel__Group_5__0();
@@ -2804,14 +2971,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__6"
-    // InternalBomi.g:815:1: rule__BOMIModel__Group__6 : rule__BOMIModel__Group__6__Impl rule__BOMIModel__Group__7 ;
+    // InternalBomi.g:858:1: rule__BOMIModel__Group__6 : rule__BOMIModel__Group__6__Impl rule__BOMIModel__Group__7 ;
     public final void rule__BOMIModel__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:819:1: ( rule__BOMIModel__Group__6__Impl rule__BOMIModel__Group__7 )
-            // InternalBomi.g:820:2: rule__BOMIModel__Group__6__Impl rule__BOMIModel__Group__7
+            // InternalBomi.g:862:1: ( rule__BOMIModel__Group__6__Impl rule__BOMIModel__Group__7 )
+            // InternalBomi.g:863:2: rule__BOMIModel__Group__6__Impl rule__BOMIModel__Group__7
             {
             pushFollow(FOLLOW_3);
             rule__BOMIModel__Group__6__Impl();
@@ -2842,29 +3009,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__6__Impl"
-    // InternalBomi.g:827:1: rule__BOMIModel__Group__6__Impl : ( ( rule__BOMIModel__Group_6__0 )? ) ;
+    // InternalBomi.g:870:1: rule__BOMIModel__Group__6__Impl : ( ( rule__BOMIModel__Group_6__0 )? ) ;
     public final void rule__BOMIModel__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:831:1: ( ( ( rule__BOMIModel__Group_6__0 )? ) )
-            // InternalBomi.g:832:1: ( ( rule__BOMIModel__Group_6__0 )? )
+            // InternalBomi.g:874:1: ( ( ( rule__BOMIModel__Group_6__0 )? ) )
+            // InternalBomi.g:875:1: ( ( rule__BOMIModel__Group_6__0 )? )
             {
-            // InternalBomi.g:832:1: ( ( rule__BOMIModel__Group_6__0 )? )
-            // InternalBomi.g:833:2: ( rule__BOMIModel__Group_6__0 )?
+            // InternalBomi.g:875:1: ( ( rule__BOMIModel__Group_6__0 )? )
+            // InternalBomi.g:876:2: ( rule__BOMIModel__Group_6__0 )?
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_6()); 
-            // InternalBomi.g:834:2: ( rule__BOMIModel__Group_6__0 )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // InternalBomi.g:877:2: ( rule__BOMIModel__Group_6__0 )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA13_0==69) ) {
-                alt13=1;
+            if ( (LA14_0==71) ) {
+                alt14=1;
             }
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
-                    // InternalBomi.g:834:3: rule__BOMIModel__Group_6__0
+                    // InternalBomi.g:877:3: rule__BOMIModel__Group_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMIModel__Group_6__0();
@@ -2900,14 +3067,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__7"
-    // InternalBomi.g:842:1: rule__BOMIModel__Group__7 : rule__BOMIModel__Group__7__Impl rule__BOMIModel__Group__8 ;
+    // InternalBomi.g:885:1: rule__BOMIModel__Group__7 : rule__BOMIModel__Group__7__Impl rule__BOMIModel__Group__8 ;
     public final void rule__BOMIModel__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:846:1: ( rule__BOMIModel__Group__7__Impl rule__BOMIModel__Group__8 )
-            // InternalBomi.g:847:2: rule__BOMIModel__Group__7__Impl rule__BOMIModel__Group__8
+            // InternalBomi.g:889:1: ( rule__BOMIModel__Group__7__Impl rule__BOMIModel__Group__8 )
+            // InternalBomi.g:890:2: rule__BOMIModel__Group__7__Impl rule__BOMIModel__Group__8
             {
             pushFollow(FOLLOW_3);
             rule__BOMIModel__Group__7__Impl();
@@ -2938,29 +3105,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__7__Impl"
-    // InternalBomi.g:854:1: rule__BOMIModel__Group__7__Impl : ( ( rule__BOMIModel__Group_7__0 )? ) ;
+    // InternalBomi.g:897:1: rule__BOMIModel__Group__7__Impl : ( ( rule__BOMIModel__Group_7__0 )? ) ;
     public final void rule__BOMIModel__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:858:1: ( ( ( rule__BOMIModel__Group_7__0 )? ) )
-            // InternalBomi.g:859:1: ( ( rule__BOMIModel__Group_7__0 )? )
+            // InternalBomi.g:901:1: ( ( ( rule__BOMIModel__Group_7__0 )? ) )
+            // InternalBomi.g:902:1: ( ( rule__BOMIModel__Group_7__0 )? )
             {
-            // InternalBomi.g:859:1: ( ( rule__BOMIModel__Group_7__0 )? )
-            // InternalBomi.g:860:2: ( rule__BOMIModel__Group_7__0 )?
+            // InternalBomi.g:902:1: ( ( rule__BOMIModel__Group_7__0 )? )
+            // InternalBomi.g:903:2: ( rule__BOMIModel__Group_7__0 )?
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_7()); 
-            // InternalBomi.g:861:2: ( rule__BOMIModel__Group_7__0 )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // InternalBomi.g:904:2: ( rule__BOMIModel__Group_7__0 )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==74) ) {
-                alt14=1;
+            if ( (LA15_0==76) ) {
+                alt15=1;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // InternalBomi.g:861:3: rule__BOMIModel__Group_7__0
+                    // InternalBomi.g:904:3: rule__BOMIModel__Group_7__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMIModel__Group_7__0();
@@ -2996,14 +3163,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__8"
-    // InternalBomi.g:869:1: rule__BOMIModel__Group__8 : rule__BOMIModel__Group__8__Impl ;
+    // InternalBomi.g:912:1: rule__BOMIModel__Group__8 : rule__BOMIModel__Group__8__Impl ;
     public final void rule__BOMIModel__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:873:1: ( rule__BOMIModel__Group__8__Impl )
-            // InternalBomi.g:874:2: rule__BOMIModel__Group__8__Impl
+            // InternalBomi.g:916:1: ( rule__BOMIModel__Group__8__Impl )
+            // InternalBomi.g:917:2: rule__BOMIModel__Group__8__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group__8__Impl();
@@ -3029,29 +3196,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group__8__Impl"
-    // InternalBomi.g:880:1: rule__BOMIModel__Group__8__Impl : ( ( rule__BOMIModel__Group_8__0 )? ) ;
+    // InternalBomi.g:923:1: rule__BOMIModel__Group__8__Impl : ( ( rule__BOMIModel__Group_8__0 )? ) ;
     public final void rule__BOMIModel__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:884:1: ( ( ( rule__BOMIModel__Group_8__0 )? ) )
-            // InternalBomi.g:885:1: ( ( rule__BOMIModel__Group_8__0 )? )
+            // InternalBomi.g:927:1: ( ( ( rule__BOMIModel__Group_8__0 )? ) )
+            // InternalBomi.g:928:1: ( ( rule__BOMIModel__Group_8__0 )? )
             {
-            // InternalBomi.g:885:1: ( ( rule__BOMIModel__Group_8__0 )? )
-            // InternalBomi.g:886:2: ( rule__BOMIModel__Group_8__0 )?
+            // InternalBomi.g:928:1: ( ( rule__BOMIModel__Group_8__0 )? )
+            // InternalBomi.g:929:2: ( rule__BOMIModel__Group_8__0 )?
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_8()); 
-            // InternalBomi.g:887:2: ( rule__BOMIModel__Group_8__0 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // InternalBomi.g:930:2: ( rule__BOMIModel__Group_8__0 )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA15_0==75) ) {
-                alt15=1;
+            if ( (LA16_0==82) ) {
+                alt16=1;
             }
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // InternalBomi.g:887:3: rule__BOMIModel__Group_8__0
+                    // InternalBomi.g:930:3: rule__BOMIModel__Group_8__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMIModel__Group_8__0();
@@ -3087,14 +3254,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1__0"
-    // InternalBomi.g:896:1: rule__BOMIModel__Group_1__0 : rule__BOMIModel__Group_1__0__Impl rule__BOMIModel__Group_1__1 ;
+    // InternalBomi.g:939:1: rule__BOMIModel__Group_1__0 : rule__BOMIModel__Group_1__0__Impl rule__BOMIModel__Group_1__1 ;
     public final void rule__BOMIModel__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:900:1: ( rule__BOMIModel__Group_1__0__Impl rule__BOMIModel__Group_1__1 )
-            // InternalBomi.g:901:2: rule__BOMIModel__Group_1__0__Impl rule__BOMIModel__Group_1__1
+            // InternalBomi.g:943:1: ( rule__BOMIModel__Group_1__0__Impl rule__BOMIModel__Group_1__1 )
+            // InternalBomi.g:944:2: rule__BOMIModel__Group_1__0__Impl rule__BOMIModel__Group_1__1
             {
             pushFollow(FOLLOW_4);
             rule__BOMIModel__Group_1__0__Impl();
@@ -3125,20 +3292,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1__0__Impl"
-    // InternalBomi.g:908:1: rule__BOMIModel__Group_1__0__Impl : ( 'boundaryObjects' ) ;
+    // InternalBomi.g:951:1: rule__BOMIModel__Group_1__0__Impl : ( 'boundaryObjects' ) ;
     public final void rule__BOMIModel__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:912:1: ( ( 'boundaryObjects' ) )
-            // InternalBomi.g:913:1: ( 'boundaryObjects' )
+            // InternalBomi.g:955:1: ( ( 'boundaryObjects' ) )
+            // InternalBomi.g:956:1: ( 'boundaryObjects' )
             {
-            // InternalBomi.g:913:1: ( 'boundaryObjects' )
-            // InternalBomi.g:914:2: 'boundaryObjects'
+            // InternalBomi.g:956:1: ( 'boundaryObjects' )
+            // InternalBomi.g:957:2: 'boundaryObjects'
             {
              before(grammarAccess.getBOMIModelAccess().getBoundaryObjectsKeyword_1_0()); 
-            match(input,33,FOLLOW_2); 
+            match(input,35,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getBoundaryObjectsKeyword_1_0()); 
 
             }
@@ -3162,14 +3329,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1__1"
-    // InternalBomi.g:923:1: rule__BOMIModel__Group_1__1 : rule__BOMIModel__Group_1__1__Impl rule__BOMIModel__Group_1__2 ;
+    // InternalBomi.g:966:1: rule__BOMIModel__Group_1__1 : rule__BOMIModel__Group_1__1__Impl rule__BOMIModel__Group_1__2 ;
     public final void rule__BOMIModel__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:927:1: ( rule__BOMIModel__Group_1__1__Impl rule__BOMIModel__Group_1__2 )
-            // InternalBomi.g:928:2: rule__BOMIModel__Group_1__1__Impl rule__BOMIModel__Group_1__2
+            // InternalBomi.g:970:1: ( rule__BOMIModel__Group_1__1__Impl rule__BOMIModel__Group_1__2 )
+            // InternalBomi.g:971:2: rule__BOMIModel__Group_1__1__Impl rule__BOMIModel__Group_1__2
             {
             pushFollow(FOLLOW_5);
             rule__BOMIModel__Group_1__1__Impl();
@@ -3200,20 +3367,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1__1__Impl"
-    // InternalBomi.g:935:1: rule__BOMIModel__Group_1__1__Impl : ( '{' ) ;
+    // InternalBomi.g:978:1: rule__BOMIModel__Group_1__1__Impl : ( '{' ) ;
     public final void rule__BOMIModel__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:939:1: ( ( '{' ) )
-            // InternalBomi.g:940:1: ( '{' )
+            // InternalBomi.g:982:1: ( ( '{' ) )
+            // InternalBomi.g:983:1: ( '{' )
             {
-            // InternalBomi.g:940:1: ( '{' )
-            // InternalBomi.g:941:2: '{'
+            // InternalBomi.g:983:1: ( '{' )
+            // InternalBomi.g:984:2: '{'
             {
              before(grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_1_1()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_1_1()); 
 
             }
@@ -3237,14 +3404,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1__2"
-    // InternalBomi.g:950:1: rule__BOMIModel__Group_1__2 : rule__BOMIModel__Group_1__2__Impl rule__BOMIModel__Group_1__3 ;
+    // InternalBomi.g:993:1: rule__BOMIModel__Group_1__2 : rule__BOMIModel__Group_1__2__Impl rule__BOMIModel__Group_1__3 ;
     public final void rule__BOMIModel__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:954:1: ( rule__BOMIModel__Group_1__2__Impl rule__BOMIModel__Group_1__3 )
-            // InternalBomi.g:955:2: rule__BOMIModel__Group_1__2__Impl rule__BOMIModel__Group_1__3
+            // InternalBomi.g:997:1: ( rule__BOMIModel__Group_1__2__Impl rule__BOMIModel__Group_1__3 )
+            // InternalBomi.g:998:2: rule__BOMIModel__Group_1__2__Impl rule__BOMIModel__Group_1__3
             {
             pushFollow(FOLLOW_6);
             rule__BOMIModel__Group_1__2__Impl();
@@ -3275,21 +3442,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1__2__Impl"
-    // InternalBomi.g:962:1: rule__BOMIModel__Group_1__2__Impl : ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 ) ) ;
+    // InternalBomi.g:1005:1: rule__BOMIModel__Group_1__2__Impl : ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 ) ) ;
     public final void rule__BOMIModel__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:966:1: ( ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 ) ) )
-            // InternalBomi.g:967:1: ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 ) )
+            // InternalBomi.g:1009:1: ( ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 ) ) )
+            // InternalBomi.g:1010:1: ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 ) )
             {
-            // InternalBomi.g:967:1: ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 ) )
-            // InternalBomi.g:968:2: ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 )
+            // InternalBomi.g:1010:1: ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 ) )
+            // InternalBomi.g:1011:2: ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 )
             {
              before(grammarAccess.getBOMIModelAccess().getBoundaryObjectsAssignment_1_2()); 
-            // InternalBomi.g:969:2: ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 )
-            // InternalBomi.g:969:3: rule__BOMIModel__BoundaryObjectsAssignment_1_2
+            // InternalBomi.g:1012:2: ( rule__BOMIModel__BoundaryObjectsAssignment_1_2 )
+            // InternalBomi.g:1012:3: rule__BOMIModel__BoundaryObjectsAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__BoundaryObjectsAssignment_1_2();
@@ -3322,14 +3489,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1__3"
-    // InternalBomi.g:977:1: rule__BOMIModel__Group_1__3 : rule__BOMIModel__Group_1__3__Impl rule__BOMIModel__Group_1__4 ;
+    // InternalBomi.g:1020:1: rule__BOMIModel__Group_1__3 : rule__BOMIModel__Group_1__3__Impl rule__BOMIModel__Group_1__4 ;
     public final void rule__BOMIModel__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:981:1: ( rule__BOMIModel__Group_1__3__Impl rule__BOMIModel__Group_1__4 )
-            // InternalBomi.g:982:2: rule__BOMIModel__Group_1__3__Impl rule__BOMIModel__Group_1__4
+            // InternalBomi.g:1024:1: ( rule__BOMIModel__Group_1__3__Impl rule__BOMIModel__Group_1__4 )
+            // InternalBomi.g:1025:2: rule__BOMIModel__Group_1__3__Impl rule__BOMIModel__Group_1__4
             {
             pushFollow(FOLLOW_6);
             rule__BOMIModel__Group_1__3__Impl();
@@ -3360,33 +3527,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1__3__Impl"
-    // InternalBomi.g:989:1: rule__BOMIModel__Group_1__3__Impl : ( ( rule__BOMIModel__Group_1_3__0 )* ) ;
+    // InternalBomi.g:1032:1: rule__BOMIModel__Group_1__3__Impl : ( ( rule__BOMIModel__Group_1_3__0 )* ) ;
     public final void rule__BOMIModel__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:993:1: ( ( ( rule__BOMIModel__Group_1_3__0 )* ) )
-            // InternalBomi.g:994:1: ( ( rule__BOMIModel__Group_1_3__0 )* )
+            // InternalBomi.g:1036:1: ( ( ( rule__BOMIModel__Group_1_3__0 )* ) )
+            // InternalBomi.g:1037:1: ( ( rule__BOMIModel__Group_1_3__0 )* )
             {
-            // InternalBomi.g:994:1: ( ( rule__BOMIModel__Group_1_3__0 )* )
-            // InternalBomi.g:995:2: ( rule__BOMIModel__Group_1_3__0 )*
+            // InternalBomi.g:1037:1: ( ( rule__BOMIModel__Group_1_3__0 )* )
+            // InternalBomi.g:1038:2: ( rule__BOMIModel__Group_1_3__0 )*
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_1_3()); 
-            // InternalBomi.g:996:2: ( rule__BOMIModel__Group_1_3__0 )*
-            loop16:
+            // InternalBomi.g:1039:2: ( rule__BOMIModel__Group_1_3__0 )*
+            loop17:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( (LA16_0==36) ) {
-                    alt16=1;
+                if ( (LA17_0==38) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt17) {
             	case 1 :
-            	    // InternalBomi.g:996:3: rule__BOMIModel__Group_1_3__0
+            	    // InternalBomi.g:1039:3: rule__BOMIModel__Group_1_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOMIModel__Group_1_3__0();
@@ -3398,7 +3565,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop17;
                 }
             } while (true);
 
@@ -3425,14 +3592,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1__4"
-    // InternalBomi.g:1004:1: rule__BOMIModel__Group_1__4 : rule__BOMIModel__Group_1__4__Impl ;
+    // InternalBomi.g:1047:1: rule__BOMIModel__Group_1__4 : rule__BOMIModel__Group_1__4__Impl ;
     public final void rule__BOMIModel__Group_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1008:1: ( rule__BOMIModel__Group_1__4__Impl )
-            // InternalBomi.g:1009:2: rule__BOMIModel__Group_1__4__Impl
+            // InternalBomi.g:1051:1: ( rule__BOMIModel__Group_1__4__Impl )
+            // InternalBomi.g:1052:2: rule__BOMIModel__Group_1__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_1__4__Impl();
@@ -3458,20 +3625,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1__4__Impl"
-    // InternalBomi.g:1015:1: rule__BOMIModel__Group_1__4__Impl : ( '}' ) ;
+    // InternalBomi.g:1058:1: rule__BOMIModel__Group_1__4__Impl : ( '}' ) ;
     public final void rule__BOMIModel__Group_1__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1019:1: ( ( '}' ) )
-            // InternalBomi.g:1020:1: ( '}' )
+            // InternalBomi.g:1062:1: ( ( '}' ) )
+            // InternalBomi.g:1063:1: ( '}' )
             {
-            // InternalBomi.g:1020:1: ( '}' )
-            // InternalBomi.g:1021:2: '}'
+            // InternalBomi.g:1063:1: ( '}' )
+            // InternalBomi.g:1064:2: '}'
             {
              before(grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_1_4()); 
-            match(input,35,FOLLOW_2); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_1_4()); 
 
             }
@@ -3495,14 +3662,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1_3__0"
-    // InternalBomi.g:1031:1: rule__BOMIModel__Group_1_3__0 : rule__BOMIModel__Group_1_3__0__Impl rule__BOMIModel__Group_1_3__1 ;
+    // InternalBomi.g:1074:1: rule__BOMIModel__Group_1_3__0 : rule__BOMIModel__Group_1_3__0__Impl rule__BOMIModel__Group_1_3__1 ;
     public final void rule__BOMIModel__Group_1_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1035:1: ( rule__BOMIModel__Group_1_3__0__Impl rule__BOMIModel__Group_1_3__1 )
-            // InternalBomi.g:1036:2: rule__BOMIModel__Group_1_3__0__Impl rule__BOMIModel__Group_1_3__1
+            // InternalBomi.g:1078:1: ( rule__BOMIModel__Group_1_3__0__Impl rule__BOMIModel__Group_1_3__1 )
+            // InternalBomi.g:1079:2: rule__BOMIModel__Group_1_3__0__Impl rule__BOMIModel__Group_1_3__1
             {
             pushFollow(FOLLOW_5);
             rule__BOMIModel__Group_1_3__0__Impl();
@@ -3533,20 +3700,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1_3__0__Impl"
-    // InternalBomi.g:1043:1: rule__BOMIModel__Group_1_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:1086:1: rule__BOMIModel__Group_1_3__0__Impl : ( ',' ) ;
     public final void rule__BOMIModel__Group_1_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1047:1: ( ( ',' ) )
-            // InternalBomi.g:1048:1: ( ',' )
+            // InternalBomi.g:1090:1: ( ( ',' ) )
+            // InternalBomi.g:1091:1: ( ',' )
             {
-            // InternalBomi.g:1048:1: ( ',' )
-            // InternalBomi.g:1049:2: ','
+            // InternalBomi.g:1091:1: ( ',' )
+            // InternalBomi.g:1092:2: ','
             {
              before(grammarAccess.getBOMIModelAccess().getCommaKeyword_1_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getCommaKeyword_1_3_0()); 
 
             }
@@ -3570,14 +3737,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1_3__1"
-    // InternalBomi.g:1058:1: rule__BOMIModel__Group_1_3__1 : rule__BOMIModel__Group_1_3__1__Impl ;
+    // InternalBomi.g:1101:1: rule__BOMIModel__Group_1_3__1 : rule__BOMIModel__Group_1_3__1__Impl ;
     public final void rule__BOMIModel__Group_1_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1062:1: ( rule__BOMIModel__Group_1_3__1__Impl )
-            // InternalBomi.g:1063:2: rule__BOMIModel__Group_1_3__1__Impl
+            // InternalBomi.g:1105:1: ( rule__BOMIModel__Group_1_3__1__Impl )
+            // InternalBomi.g:1106:2: rule__BOMIModel__Group_1_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_1_3__1__Impl();
@@ -3603,21 +3770,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_1_3__1__Impl"
-    // InternalBomi.g:1069:1: rule__BOMIModel__Group_1_3__1__Impl : ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 ) ) ;
+    // InternalBomi.g:1112:1: rule__BOMIModel__Group_1_3__1__Impl : ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 ) ) ;
     public final void rule__BOMIModel__Group_1_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1073:1: ( ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 ) ) )
-            // InternalBomi.g:1074:1: ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 ) )
+            // InternalBomi.g:1116:1: ( ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 ) ) )
+            // InternalBomi.g:1117:1: ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 ) )
             {
-            // InternalBomi.g:1074:1: ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 ) )
-            // InternalBomi.g:1075:2: ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 )
+            // InternalBomi.g:1117:1: ( ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 ) )
+            // InternalBomi.g:1118:2: ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 )
             {
              before(grammarAccess.getBOMIModelAccess().getBoundaryObjectsAssignment_1_3_1()); 
-            // InternalBomi.g:1076:2: ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 )
-            // InternalBomi.g:1076:3: rule__BOMIModel__BoundaryObjectsAssignment_1_3_1
+            // InternalBomi.g:1119:2: ( rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 )
+            // InternalBomi.g:1119:3: rule__BOMIModel__BoundaryObjectsAssignment_1_3_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__BoundaryObjectsAssignment_1_3_1();
@@ -3650,14 +3817,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2__0"
-    // InternalBomi.g:1085:1: rule__BOMIModel__Group_2__0 : rule__BOMIModel__Group_2__0__Impl rule__BOMIModel__Group_2__1 ;
+    // InternalBomi.g:1128:1: rule__BOMIModel__Group_2__0 : rule__BOMIModel__Group_2__0__Impl rule__BOMIModel__Group_2__1 ;
     public final void rule__BOMIModel__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1089:1: ( rule__BOMIModel__Group_2__0__Impl rule__BOMIModel__Group_2__1 )
-            // InternalBomi.g:1090:2: rule__BOMIModel__Group_2__0__Impl rule__BOMIModel__Group_2__1
+            // InternalBomi.g:1132:1: ( rule__BOMIModel__Group_2__0__Impl rule__BOMIModel__Group_2__1 )
+            // InternalBomi.g:1133:2: rule__BOMIModel__Group_2__0__Impl rule__BOMIModel__Group_2__1
             {
             pushFollow(FOLLOW_4);
             rule__BOMIModel__Group_2__0__Impl();
@@ -3688,20 +3855,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2__0__Impl"
-    // InternalBomi.g:1097:1: rule__BOMIModel__Group_2__0__Impl : ( 'methodologicalIslands' ) ;
+    // InternalBomi.g:1140:1: rule__BOMIModel__Group_2__0__Impl : ( 'methodologicalIslands' ) ;
     public final void rule__BOMIModel__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1101:1: ( ( 'methodologicalIslands' ) )
-            // InternalBomi.g:1102:1: ( 'methodologicalIslands' )
+            // InternalBomi.g:1144:1: ( ( 'methodologicalIslands' ) )
+            // InternalBomi.g:1145:1: ( 'methodologicalIslands' )
             {
-            // InternalBomi.g:1102:1: ( 'methodologicalIslands' )
-            // InternalBomi.g:1103:2: 'methodologicalIslands'
+            // InternalBomi.g:1145:1: ( 'methodologicalIslands' )
+            // InternalBomi.g:1146:2: 'methodologicalIslands'
             {
              before(grammarAccess.getBOMIModelAccess().getMethodologicalIslandsKeyword_2_0()); 
-            match(input,37,FOLLOW_2); 
+            match(input,39,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getMethodologicalIslandsKeyword_2_0()); 
 
             }
@@ -3725,14 +3892,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2__1"
-    // InternalBomi.g:1112:1: rule__BOMIModel__Group_2__1 : rule__BOMIModel__Group_2__1__Impl rule__BOMIModel__Group_2__2 ;
+    // InternalBomi.g:1155:1: rule__BOMIModel__Group_2__1 : rule__BOMIModel__Group_2__1__Impl rule__BOMIModel__Group_2__2 ;
     public final void rule__BOMIModel__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1116:1: ( rule__BOMIModel__Group_2__1__Impl rule__BOMIModel__Group_2__2 )
-            // InternalBomi.g:1117:2: rule__BOMIModel__Group_2__1__Impl rule__BOMIModel__Group_2__2
+            // InternalBomi.g:1159:1: ( rule__BOMIModel__Group_2__1__Impl rule__BOMIModel__Group_2__2 )
+            // InternalBomi.g:1160:2: rule__BOMIModel__Group_2__1__Impl rule__BOMIModel__Group_2__2
             {
             pushFollow(FOLLOW_8);
             rule__BOMIModel__Group_2__1__Impl();
@@ -3763,20 +3930,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2__1__Impl"
-    // InternalBomi.g:1124:1: rule__BOMIModel__Group_2__1__Impl : ( '{' ) ;
+    // InternalBomi.g:1167:1: rule__BOMIModel__Group_2__1__Impl : ( '{' ) ;
     public final void rule__BOMIModel__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1128:1: ( ( '{' ) )
-            // InternalBomi.g:1129:1: ( '{' )
+            // InternalBomi.g:1171:1: ( ( '{' ) )
+            // InternalBomi.g:1172:1: ( '{' )
             {
-            // InternalBomi.g:1129:1: ( '{' )
-            // InternalBomi.g:1130:2: '{'
+            // InternalBomi.g:1172:1: ( '{' )
+            // InternalBomi.g:1173:2: '{'
             {
              before(grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_2_1()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_2_1()); 
 
             }
@@ -3800,14 +3967,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2__2"
-    // InternalBomi.g:1139:1: rule__BOMIModel__Group_2__2 : rule__BOMIModel__Group_2__2__Impl rule__BOMIModel__Group_2__3 ;
+    // InternalBomi.g:1182:1: rule__BOMIModel__Group_2__2 : rule__BOMIModel__Group_2__2__Impl rule__BOMIModel__Group_2__3 ;
     public final void rule__BOMIModel__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1143:1: ( rule__BOMIModel__Group_2__2__Impl rule__BOMIModel__Group_2__3 )
-            // InternalBomi.g:1144:2: rule__BOMIModel__Group_2__2__Impl rule__BOMIModel__Group_2__3
+            // InternalBomi.g:1186:1: ( rule__BOMIModel__Group_2__2__Impl rule__BOMIModel__Group_2__3 )
+            // InternalBomi.g:1187:2: rule__BOMIModel__Group_2__2__Impl rule__BOMIModel__Group_2__3
             {
             pushFollow(FOLLOW_6);
             rule__BOMIModel__Group_2__2__Impl();
@@ -3838,21 +4005,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2__2__Impl"
-    // InternalBomi.g:1151:1: rule__BOMIModel__Group_2__2__Impl : ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 ) ) ;
+    // InternalBomi.g:1194:1: rule__BOMIModel__Group_2__2__Impl : ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 ) ) ;
     public final void rule__BOMIModel__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1155:1: ( ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 ) ) )
-            // InternalBomi.g:1156:1: ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 ) )
+            // InternalBomi.g:1198:1: ( ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 ) ) )
+            // InternalBomi.g:1199:1: ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 ) )
             {
-            // InternalBomi.g:1156:1: ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 ) )
-            // InternalBomi.g:1157:2: ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 )
+            // InternalBomi.g:1199:1: ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 ) )
+            // InternalBomi.g:1200:2: ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 )
             {
              before(grammarAccess.getBOMIModelAccess().getMethodologicalIslandsAssignment_2_2()); 
-            // InternalBomi.g:1158:2: ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 )
-            // InternalBomi.g:1158:3: rule__BOMIModel__MethodologicalIslandsAssignment_2_2
+            // InternalBomi.g:1201:2: ( rule__BOMIModel__MethodologicalIslandsAssignment_2_2 )
+            // InternalBomi.g:1201:3: rule__BOMIModel__MethodologicalIslandsAssignment_2_2
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__MethodologicalIslandsAssignment_2_2();
@@ -3885,14 +4052,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2__3"
-    // InternalBomi.g:1166:1: rule__BOMIModel__Group_2__3 : rule__BOMIModel__Group_2__3__Impl rule__BOMIModel__Group_2__4 ;
+    // InternalBomi.g:1209:1: rule__BOMIModel__Group_2__3 : rule__BOMIModel__Group_2__3__Impl rule__BOMIModel__Group_2__4 ;
     public final void rule__BOMIModel__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1170:1: ( rule__BOMIModel__Group_2__3__Impl rule__BOMIModel__Group_2__4 )
-            // InternalBomi.g:1171:2: rule__BOMIModel__Group_2__3__Impl rule__BOMIModel__Group_2__4
+            // InternalBomi.g:1213:1: ( rule__BOMIModel__Group_2__3__Impl rule__BOMIModel__Group_2__4 )
+            // InternalBomi.g:1214:2: rule__BOMIModel__Group_2__3__Impl rule__BOMIModel__Group_2__4
             {
             pushFollow(FOLLOW_6);
             rule__BOMIModel__Group_2__3__Impl();
@@ -3923,33 +4090,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2__3__Impl"
-    // InternalBomi.g:1178:1: rule__BOMIModel__Group_2__3__Impl : ( ( rule__BOMIModel__Group_2_3__0 )* ) ;
+    // InternalBomi.g:1221:1: rule__BOMIModel__Group_2__3__Impl : ( ( rule__BOMIModel__Group_2_3__0 )* ) ;
     public final void rule__BOMIModel__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1182:1: ( ( ( rule__BOMIModel__Group_2_3__0 )* ) )
-            // InternalBomi.g:1183:1: ( ( rule__BOMIModel__Group_2_3__0 )* )
+            // InternalBomi.g:1225:1: ( ( ( rule__BOMIModel__Group_2_3__0 )* ) )
+            // InternalBomi.g:1226:1: ( ( rule__BOMIModel__Group_2_3__0 )* )
             {
-            // InternalBomi.g:1183:1: ( ( rule__BOMIModel__Group_2_3__0 )* )
-            // InternalBomi.g:1184:2: ( rule__BOMIModel__Group_2_3__0 )*
+            // InternalBomi.g:1226:1: ( ( rule__BOMIModel__Group_2_3__0 )* )
+            // InternalBomi.g:1227:2: ( rule__BOMIModel__Group_2_3__0 )*
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_2_3()); 
-            // InternalBomi.g:1185:2: ( rule__BOMIModel__Group_2_3__0 )*
-            loop17:
+            // InternalBomi.g:1228:2: ( rule__BOMIModel__Group_2_3__0 )*
+            loop18:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( (LA17_0==36) ) {
-                    alt17=1;
+                if ( (LA18_0==38) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt18) {
             	case 1 :
-            	    // InternalBomi.g:1185:3: rule__BOMIModel__Group_2_3__0
+            	    // InternalBomi.g:1228:3: rule__BOMIModel__Group_2_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOMIModel__Group_2_3__0();
@@ -3961,7 +4128,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop18;
                 }
             } while (true);
 
@@ -3988,14 +4155,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2__4"
-    // InternalBomi.g:1193:1: rule__BOMIModel__Group_2__4 : rule__BOMIModel__Group_2__4__Impl ;
+    // InternalBomi.g:1236:1: rule__BOMIModel__Group_2__4 : rule__BOMIModel__Group_2__4__Impl ;
     public final void rule__BOMIModel__Group_2__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1197:1: ( rule__BOMIModel__Group_2__4__Impl )
-            // InternalBomi.g:1198:2: rule__BOMIModel__Group_2__4__Impl
+            // InternalBomi.g:1240:1: ( rule__BOMIModel__Group_2__4__Impl )
+            // InternalBomi.g:1241:2: rule__BOMIModel__Group_2__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_2__4__Impl();
@@ -4021,20 +4188,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2__4__Impl"
-    // InternalBomi.g:1204:1: rule__BOMIModel__Group_2__4__Impl : ( '}' ) ;
+    // InternalBomi.g:1247:1: rule__BOMIModel__Group_2__4__Impl : ( '}' ) ;
     public final void rule__BOMIModel__Group_2__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1208:1: ( ( '}' ) )
-            // InternalBomi.g:1209:1: ( '}' )
+            // InternalBomi.g:1251:1: ( ( '}' ) )
+            // InternalBomi.g:1252:1: ( '}' )
             {
-            // InternalBomi.g:1209:1: ( '}' )
-            // InternalBomi.g:1210:2: '}'
+            // InternalBomi.g:1252:1: ( '}' )
+            // InternalBomi.g:1253:2: '}'
             {
              before(grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_2_4()); 
-            match(input,35,FOLLOW_2); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_2_4()); 
 
             }
@@ -4058,14 +4225,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2_3__0"
-    // InternalBomi.g:1220:1: rule__BOMIModel__Group_2_3__0 : rule__BOMIModel__Group_2_3__0__Impl rule__BOMIModel__Group_2_3__1 ;
+    // InternalBomi.g:1263:1: rule__BOMIModel__Group_2_3__0 : rule__BOMIModel__Group_2_3__0__Impl rule__BOMIModel__Group_2_3__1 ;
     public final void rule__BOMIModel__Group_2_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1224:1: ( rule__BOMIModel__Group_2_3__0__Impl rule__BOMIModel__Group_2_3__1 )
-            // InternalBomi.g:1225:2: rule__BOMIModel__Group_2_3__0__Impl rule__BOMIModel__Group_2_3__1
+            // InternalBomi.g:1267:1: ( rule__BOMIModel__Group_2_3__0__Impl rule__BOMIModel__Group_2_3__1 )
+            // InternalBomi.g:1268:2: rule__BOMIModel__Group_2_3__0__Impl rule__BOMIModel__Group_2_3__1
             {
             pushFollow(FOLLOW_8);
             rule__BOMIModel__Group_2_3__0__Impl();
@@ -4096,20 +4263,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2_3__0__Impl"
-    // InternalBomi.g:1232:1: rule__BOMIModel__Group_2_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:1275:1: rule__BOMIModel__Group_2_3__0__Impl : ( ',' ) ;
     public final void rule__BOMIModel__Group_2_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1236:1: ( ( ',' ) )
-            // InternalBomi.g:1237:1: ( ',' )
+            // InternalBomi.g:1279:1: ( ( ',' ) )
+            // InternalBomi.g:1280:1: ( ',' )
             {
-            // InternalBomi.g:1237:1: ( ',' )
-            // InternalBomi.g:1238:2: ','
+            // InternalBomi.g:1280:1: ( ',' )
+            // InternalBomi.g:1281:2: ','
             {
              before(grammarAccess.getBOMIModelAccess().getCommaKeyword_2_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getCommaKeyword_2_3_0()); 
 
             }
@@ -4133,14 +4300,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2_3__1"
-    // InternalBomi.g:1247:1: rule__BOMIModel__Group_2_3__1 : rule__BOMIModel__Group_2_3__1__Impl ;
+    // InternalBomi.g:1290:1: rule__BOMIModel__Group_2_3__1 : rule__BOMIModel__Group_2_3__1__Impl ;
     public final void rule__BOMIModel__Group_2_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1251:1: ( rule__BOMIModel__Group_2_3__1__Impl )
-            // InternalBomi.g:1252:2: rule__BOMIModel__Group_2_3__1__Impl
+            // InternalBomi.g:1294:1: ( rule__BOMIModel__Group_2_3__1__Impl )
+            // InternalBomi.g:1295:2: rule__BOMIModel__Group_2_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_2_3__1__Impl();
@@ -4166,21 +4333,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_2_3__1__Impl"
-    // InternalBomi.g:1258:1: rule__BOMIModel__Group_2_3__1__Impl : ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 ) ) ;
+    // InternalBomi.g:1301:1: rule__BOMIModel__Group_2_3__1__Impl : ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 ) ) ;
     public final void rule__BOMIModel__Group_2_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1262:1: ( ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 ) ) )
-            // InternalBomi.g:1263:1: ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 ) )
+            // InternalBomi.g:1305:1: ( ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 ) ) )
+            // InternalBomi.g:1306:1: ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 ) )
             {
-            // InternalBomi.g:1263:1: ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 ) )
-            // InternalBomi.g:1264:2: ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 )
+            // InternalBomi.g:1306:1: ( ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 ) )
+            // InternalBomi.g:1307:2: ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 )
             {
              before(grammarAccess.getBOMIModelAccess().getMethodologicalIslandsAssignment_2_3_1()); 
-            // InternalBomi.g:1265:2: ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 )
-            // InternalBomi.g:1265:3: rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1
+            // InternalBomi.g:1308:2: ( rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 )
+            // InternalBomi.g:1308:3: rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1();
@@ -4213,14 +4380,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3__0"
-    // InternalBomi.g:1274:1: rule__BOMIModel__Group_3__0 : rule__BOMIModel__Group_3__0__Impl rule__BOMIModel__Group_3__1 ;
+    // InternalBomi.g:1317:1: rule__BOMIModel__Group_3__0 : rule__BOMIModel__Group_3__0__Impl rule__BOMIModel__Group_3__1 ;
     public final void rule__BOMIModel__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1278:1: ( rule__BOMIModel__Group_3__0__Impl rule__BOMIModel__Group_3__1 )
-            // InternalBomi.g:1279:2: rule__BOMIModel__Group_3__0__Impl rule__BOMIModel__Group_3__1
+            // InternalBomi.g:1321:1: ( rule__BOMIModel__Group_3__0__Impl rule__BOMIModel__Group_3__1 )
+            // InternalBomi.g:1322:2: rule__BOMIModel__Group_3__0__Impl rule__BOMIModel__Group_3__1
             {
             pushFollow(FOLLOW_4);
             rule__BOMIModel__Group_3__0__Impl();
@@ -4251,20 +4418,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3__0__Impl"
-    // InternalBomi.g:1286:1: rule__BOMIModel__Group_3__0__Impl : ( 'governanceTeams' ) ;
+    // InternalBomi.g:1329:1: rule__BOMIModel__Group_3__0__Impl : ( 'governanceTeams' ) ;
     public final void rule__BOMIModel__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1290:1: ( ( 'governanceTeams' ) )
-            // InternalBomi.g:1291:1: ( 'governanceTeams' )
+            // InternalBomi.g:1333:1: ( ( 'governanceTeams' ) )
+            // InternalBomi.g:1334:1: ( 'governanceTeams' )
             {
-            // InternalBomi.g:1291:1: ( 'governanceTeams' )
-            // InternalBomi.g:1292:2: 'governanceTeams'
+            // InternalBomi.g:1334:1: ( 'governanceTeams' )
+            // InternalBomi.g:1335:2: 'governanceTeams'
             {
              before(grammarAccess.getBOMIModelAccess().getGovernanceTeamsKeyword_3_0()); 
-            match(input,38,FOLLOW_2); 
+            match(input,40,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getGovernanceTeamsKeyword_3_0()); 
 
             }
@@ -4288,14 +4455,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3__1"
-    // InternalBomi.g:1301:1: rule__BOMIModel__Group_3__1 : rule__BOMIModel__Group_3__1__Impl rule__BOMIModel__Group_3__2 ;
+    // InternalBomi.g:1344:1: rule__BOMIModel__Group_3__1 : rule__BOMIModel__Group_3__1__Impl rule__BOMIModel__Group_3__2 ;
     public final void rule__BOMIModel__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1305:1: ( rule__BOMIModel__Group_3__1__Impl rule__BOMIModel__Group_3__2 )
-            // InternalBomi.g:1306:2: rule__BOMIModel__Group_3__1__Impl rule__BOMIModel__Group_3__2
+            // InternalBomi.g:1348:1: ( rule__BOMIModel__Group_3__1__Impl rule__BOMIModel__Group_3__2 )
+            // InternalBomi.g:1349:2: rule__BOMIModel__Group_3__1__Impl rule__BOMIModel__Group_3__2
             {
             pushFollow(FOLLOW_9);
             rule__BOMIModel__Group_3__1__Impl();
@@ -4326,20 +4493,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3__1__Impl"
-    // InternalBomi.g:1313:1: rule__BOMIModel__Group_3__1__Impl : ( '{' ) ;
+    // InternalBomi.g:1356:1: rule__BOMIModel__Group_3__1__Impl : ( '{' ) ;
     public final void rule__BOMIModel__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1317:1: ( ( '{' ) )
-            // InternalBomi.g:1318:1: ( '{' )
+            // InternalBomi.g:1360:1: ( ( '{' ) )
+            // InternalBomi.g:1361:1: ( '{' )
             {
-            // InternalBomi.g:1318:1: ( '{' )
-            // InternalBomi.g:1319:2: '{'
+            // InternalBomi.g:1361:1: ( '{' )
+            // InternalBomi.g:1362:2: '{'
             {
              before(grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_3_1()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_3_1()); 
 
             }
@@ -4363,14 +4530,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3__2"
-    // InternalBomi.g:1328:1: rule__BOMIModel__Group_3__2 : rule__BOMIModel__Group_3__2__Impl rule__BOMIModel__Group_3__3 ;
+    // InternalBomi.g:1371:1: rule__BOMIModel__Group_3__2 : rule__BOMIModel__Group_3__2__Impl rule__BOMIModel__Group_3__3 ;
     public final void rule__BOMIModel__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1332:1: ( rule__BOMIModel__Group_3__2__Impl rule__BOMIModel__Group_3__3 )
-            // InternalBomi.g:1333:2: rule__BOMIModel__Group_3__2__Impl rule__BOMIModel__Group_3__3
+            // InternalBomi.g:1375:1: ( rule__BOMIModel__Group_3__2__Impl rule__BOMIModel__Group_3__3 )
+            // InternalBomi.g:1376:2: rule__BOMIModel__Group_3__2__Impl rule__BOMIModel__Group_3__3
             {
             pushFollow(FOLLOW_6);
             rule__BOMIModel__Group_3__2__Impl();
@@ -4401,21 +4568,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3__2__Impl"
-    // InternalBomi.g:1340:1: rule__BOMIModel__Group_3__2__Impl : ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 ) ) ;
+    // InternalBomi.g:1383:1: rule__BOMIModel__Group_3__2__Impl : ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 ) ) ;
     public final void rule__BOMIModel__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1344:1: ( ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 ) ) )
-            // InternalBomi.g:1345:1: ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 ) )
+            // InternalBomi.g:1387:1: ( ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 ) ) )
+            // InternalBomi.g:1388:1: ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 ) )
             {
-            // InternalBomi.g:1345:1: ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 ) )
-            // InternalBomi.g:1346:2: ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 )
+            // InternalBomi.g:1388:1: ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 ) )
+            // InternalBomi.g:1389:2: ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 )
             {
              before(grammarAccess.getBOMIModelAccess().getGovernanceTeamsAssignment_3_2()); 
-            // InternalBomi.g:1347:2: ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 )
-            // InternalBomi.g:1347:3: rule__BOMIModel__GovernanceTeamsAssignment_3_2
+            // InternalBomi.g:1390:2: ( rule__BOMIModel__GovernanceTeamsAssignment_3_2 )
+            // InternalBomi.g:1390:3: rule__BOMIModel__GovernanceTeamsAssignment_3_2
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__GovernanceTeamsAssignment_3_2();
@@ -4448,14 +4615,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3__3"
-    // InternalBomi.g:1355:1: rule__BOMIModel__Group_3__3 : rule__BOMIModel__Group_3__3__Impl rule__BOMIModel__Group_3__4 ;
+    // InternalBomi.g:1398:1: rule__BOMIModel__Group_3__3 : rule__BOMIModel__Group_3__3__Impl rule__BOMIModel__Group_3__4 ;
     public final void rule__BOMIModel__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1359:1: ( rule__BOMIModel__Group_3__3__Impl rule__BOMIModel__Group_3__4 )
-            // InternalBomi.g:1360:2: rule__BOMIModel__Group_3__3__Impl rule__BOMIModel__Group_3__4
+            // InternalBomi.g:1402:1: ( rule__BOMIModel__Group_3__3__Impl rule__BOMIModel__Group_3__4 )
+            // InternalBomi.g:1403:2: rule__BOMIModel__Group_3__3__Impl rule__BOMIModel__Group_3__4
             {
             pushFollow(FOLLOW_6);
             rule__BOMIModel__Group_3__3__Impl();
@@ -4486,33 +4653,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3__3__Impl"
-    // InternalBomi.g:1367:1: rule__BOMIModel__Group_3__3__Impl : ( ( rule__BOMIModel__Group_3_3__0 )* ) ;
+    // InternalBomi.g:1410:1: rule__BOMIModel__Group_3__3__Impl : ( ( rule__BOMIModel__Group_3_3__0 )* ) ;
     public final void rule__BOMIModel__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1371:1: ( ( ( rule__BOMIModel__Group_3_3__0 )* ) )
-            // InternalBomi.g:1372:1: ( ( rule__BOMIModel__Group_3_3__0 )* )
+            // InternalBomi.g:1414:1: ( ( ( rule__BOMIModel__Group_3_3__0 )* ) )
+            // InternalBomi.g:1415:1: ( ( rule__BOMIModel__Group_3_3__0 )* )
             {
-            // InternalBomi.g:1372:1: ( ( rule__BOMIModel__Group_3_3__0 )* )
-            // InternalBomi.g:1373:2: ( rule__BOMIModel__Group_3_3__0 )*
+            // InternalBomi.g:1415:1: ( ( rule__BOMIModel__Group_3_3__0 )* )
+            // InternalBomi.g:1416:2: ( rule__BOMIModel__Group_3_3__0 )*
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_3_3()); 
-            // InternalBomi.g:1374:2: ( rule__BOMIModel__Group_3_3__0 )*
-            loop18:
+            // InternalBomi.g:1417:2: ( rule__BOMIModel__Group_3_3__0 )*
+            loop19:
             do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( (LA18_0==36) ) {
-                    alt18=1;
+                if ( (LA19_0==38) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt18) {
+                switch (alt19) {
             	case 1 :
-            	    // InternalBomi.g:1374:3: rule__BOMIModel__Group_3_3__0
+            	    // InternalBomi.g:1417:3: rule__BOMIModel__Group_3_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOMIModel__Group_3_3__0();
@@ -4524,7 +4691,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop18;
+            	    break loop19;
                 }
             } while (true);
 
@@ -4551,14 +4718,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3__4"
-    // InternalBomi.g:1382:1: rule__BOMIModel__Group_3__4 : rule__BOMIModel__Group_3__4__Impl ;
+    // InternalBomi.g:1425:1: rule__BOMIModel__Group_3__4 : rule__BOMIModel__Group_3__4__Impl ;
     public final void rule__BOMIModel__Group_3__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1386:1: ( rule__BOMIModel__Group_3__4__Impl )
-            // InternalBomi.g:1387:2: rule__BOMIModel__Group_3__4__Impl
+            // InternalBomi.g:1429:1: ( rule__BOMIModel__Group_3__4__Impl )
+            // InternalBomi.g:1430:2: rule__BOMIModel__Group_3__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_3__4__Impl();
@@ -4584,20 +4751,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3__4__Impl"
-    // InternalBomi.g:1393:1: rule__BOMIModel__Group_3__4__Impl : ( '}' ) ;
+    // InternalBomi.g:1436:1: rule__BOMIModel__Group_3__4__Impl : ( '}' ) ;
     public final void rule__BOMIModel__Group_3__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1397:1: ( ( '}' ) )
-            // InternalBomi.g:1398:1: ( '}' )
+            // InternalBomi.g:1440:1: ( ( '}' ) )
+            // InternalBomi.g:1441:1: ( '}' )
             {
-            // InternalBomi.g:1398:1: ( '}' )
-            // InternalBomi.g:1399:2: '}'
+            // InternalBomi.g:1441:1: ( '}' )
+            // InternalBomi.g:1442:2: '}'
             {
              before(grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_3_4()); 
-            match(input,35,FOLLOW_2); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_3_4()); 
 
             }
@@ -4621,14 +4788,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3_3__0"
-    // InternalBomi.g:1409:1: rule__BOMIModel__Group_3_3__0 : rule__BOMIModel__Group_3_3__0__Impl rule__BOMIModel__Group_3_3__1 ;
+    // InternalBomi.g:1452:1: rule__BOMIModel__Group_3_3__0 : rule__BOMIModel__Group_3_3__0__Impl rule__BOMIModel__Group_3_3__1 ;
     public final void rule__BOMIModel__Group_3_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1413:1: ( rule__BOMIModel__Group_3_3__0__Impl rule__BOMIModel__Group_3_3__1 )
-            // InternalBomi.g:1414:2: rule__BOMIModel__Group_3_3__0__Impl rule__BOMIModel__Group_3_3__1
+            // InternalBomi.g:1456:1: ( rule__BOMIModel__Group_3_3__0__Impl rule__BOMIModel__Group_3_3__1 )
+            // InternalBomi.g:1457:2: rule__BOMIModel__Group_3_3__0__Impl rule__BOMIModel__Group_3_3__1
             {
             pushFollow(FOLLOW_9);
             rule__BOMIModel__Group_3_3__0__Impl();
@@ -4659,20 +4826,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3_3__0__Impl"
-    // InternalBomi.g:1421:1: rule__BOMIModel__Group_3_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:1464:1: rule__BOMIModel__Group_3_3__0__Impl : ( ',' ) ;
     public final void rule__BOMIModel__Group_3_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1425:1: ( ( ',' ) )
-            // InternalBomi.g:1426:1: ( ',' )
+            // InternalBomi.g:1468:1: ( ( ',' ) )
+            // InternalBomi.g:1469:1: ( ',' )
             {
-            // InternalBomi.g:1426:1: ( ',' )
-            // InternalBomi.g:1427:2: ','
+            // InternalBomi.g:1469:1: ( ',' )
+            // InternalBomi.g:1470:2: ','
             {
              before(grammarAccess.getBOMIModelAccess().getCommaKeyword_3_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getCommaKeyword_3_3_0()); 
 
             }
@@ -4696,14 +4863,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3_3__1"
-    // InternalBomi.g:1436:1: rule__BOMIModel__Group_3_3__1 : rule__BOMIModel__Group_3_3__1__Impl ;
+    // InternalBomi.g:1479:1: rule__BOMIModel__Group_3_3__1 : rule__BOMIModel__Group_3_3__1__Impl ;
     public final void rule__BOMIModel__Group_3_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1440:1: ( rule__BOMIModel__Group_3_3__1__Impl )
-            // InternalBomi.g:1441:2: rule__BOMIModel__Group_3_3__1__Impl
+            // InternalBomi.g:1483:1: ( rule__BOMIModel__Group_3_3__1__Impl )
+            // InternalBomi.g:1484:2: rule__BOMIModel__Group_3_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_3_3__1__Impl();
@@ -4729,21 +4896,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_3_3__1__Impl"
-    // InternalBomi.g:1447:1: rule__BOMIModel__Group_3_3__1__Impl : ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 ) ) ;
+    // InternalBomi.g:1490:1: rule__BOMIModel__Group_3_3__1__Impl : ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 ) ) ;
     public final void rule__BOMIModel__Group_3_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1451:1: ( ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 ) ) )
-            // InternalBomi.g:1452:1: ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 ) )
+            // InternalBomi.g:1494:1: ( ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 ) ) )
+            // InternalBomi.g:1495:1: ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 ) )
             {
-            // InternalBomi.g:1452:1: ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 ) )
-            // InternalBomi.g:1453:2: ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 )
+            // InternalBomi.g:1495:1: ( ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 ) )
+            // InternalBomi.g:1496:2: ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 )
             {
              before(grammarAccess.getBOMIModelAccess().getGovernanceTeamsAssignment_3_3_1()); 
-            // InternalBomi.g:1454:2: ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 )
-            // InternalBomi.g:1454:3: rule__BOMIModel__GovernanceTeamsAssignment_3_3_1
+            // InternalBomi.g:1497:2: ( rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 )
+            // InternalBomi.g:1497:3: rule__BOMIModel__GovernanceTeamsAssignment_3_3_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__GovernanceTeamsAssignment_3_3_1();
@@ -4776,14 +4943,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4__0"
-    // InternalBomi.g:1463:1: rule__BOMIModel__Group_4__0 : rule__BOMIModel__Group_4__0__Impl rule__BOMIModel__Group_4__1 ;
+    // InternalBomi.g:1506:1: rule__BOMIModel__Group_4__0 : rule__BOMIModel__Group_4__0__Impl rule__BOMIModel__Group_4__1 ;
     public final void rule__BOMIModel__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1467:1: ( rule__BOMIModel__Group_4__0__Impl rule__BOMIModel__Group_4__1 )
-            // InternalBomi.g:1468:2: rule__BOMIModel__Group_4__0__Impl rule__BOMIModel__Group_4__1
+            // InternalBomi.g:1510:1: ( rule__BOMIModel__Group_4__0__Impl rule__BOMIModel__Group_4__1 )
+            // InternalBomi.g:1511:2: rule__BOMIModel__Group_4__0__Impl rule__BOMIModel__Group_4__1
             {
             pushFollow(FOLLOW_4);
             rule__BOMIModel__Group_4__0__Impl();
@@ -4814,20 +4981,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4__0__Impl"
-    // InternalBomi.g:1475:1: rule__BOMIModel__Group_4__0__Impl : ( 'roles' ) ;
+    // InternalBomi.g:1518:1: rule__BOMIModel__Group_4__0__Impl : ( 'roles' ) ;
     public final void rule__BOMIModel__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1479:1: ( ( 'roles' ) )
-            // InternalBomi.g:1480:1: ( 'roles' )
+            // InternalBomi.g:1522:1: ( ( 'roles' ) )
+            // InternalBomi.g:1523:1: ( 'roles' )
             {
-            // InternalBomi.g:1480:1: ( 'roles' )
-            // InternalBomi.g:1481:2: 'roles'
+            // InternalBomi.g:1523:1: ( 'roles' )
+            // InternalBomi.g:1524:2: 'roles'
             {
              before(grammarAccess.getBOMIModelAccess().getRolesKeyword_4_0()); 
-            match(input,39,FOLLOW_2); 
+            match(input,41,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getRolesKeyword_4_0()); 
 
             }
@@ -4851,14 +5018,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4__1"
-    // InternalBomi.g:1490:1: rule__BOMIModel__Group_4__1 : rule__BOMIModel__Group_4__1__Impl rule__BOMIModel__Group_4__2 ;
+    // InternalBomi.g:1533:1: rule__BOMIModel__Group_4__1 : rule__BOMIModel__Group_4__1__Impl rule__BOMIModel__Group_4__2 ;
     public final void rule__BOMIModel__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1494:1: ( rule__BOMIModel__Group_4__1__Impl rule__BOMIModel__Group_4__2 )
-            // InternalBomi.g:1495:2: rule__BOMIModel__Group_4__1__Impl rule__BOMIModel__Group_4__2
+            // InternalBomi.g:1537:1: ( rule__BOMIModel__Group_4__1__Impl rule__BOMIModel__Group_4__2 )
+            // InternalBomi.g:1538:2: rule__BOMIModel__Group_4__1__Impl rule__BOMIModel__Group_4__2
             {
             pushFollow(FOLLOW_10);
             rule__BOMIModel__Group_4__1__Impl();
@@ -4889,20 +5056,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4__1__Impl"
-    // InternalBomi.g:1502:1: rule__BOMIModel__Group_4__1__Impl : ( '{' ) ;
+    // InternalBomi.g:1545:1: rule__BOMIModel__Group_4__1__Impl : ( '{' ) ;
     public final void rule__BOMIModel__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1506:1: ( ( '{' ) )
-            // InternalBomi.g:1507:1: ( '{' )
+            // InternalBomi.g:1549:1: ( ( '{' ) )
+            // InternalBomi.g:1550:1: ( '{' )
             {
-            // InternalBomi.g:1507:1: ( '{' )
-            // InternalBomi.g:1508:2: '{'
+            // InternalBomi.g:1550:1: ( '{' )
+            // InternalBomi.g:1551:2: '{'
             {
              before(grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_4_1()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_4_1()); 
 
             }
@@ -4926,14 +5093,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4__2"
-    // InternalBomi.g:1517:1: rule__BOMIModel__Group_4__2 : rule__BOMIModel__Group_4__2__Impl rule__BOMIModel__Group_4__3 ;
+    // InternalBomi.g:1560:1: rule__BOMIModel__Group_4__2 : rule__BOMIModel__Group_4__2__Impl rule__BOMIModel__Group_4__3 ;
     public final void rule__BOMIModel__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1521:1: ( rule__BOMIModel__Group_4__2__Impl rule__BOMIModel__Group_4__3 )
-            // InternalBomi.g:1522:2: rule__BOMIModel__Group_4__2__Impl rule__BOMIModel__Group_4__3
+            // InternalBomi.g:1564:1: ( rule__BOMIModel__Group_4__2__Impl rule__BOMIModel__Group_4__3 )
+            // InternalBomi.g:1565:2: rule__BOMIModel__Group_4__2__Impl rule__BOMIModel__Group_4__3
             {
             pushFollow(FOLLOW_6);
             rule__BOMIModel__Group_4__2__Impl();
@@ -4964,21 +5131,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4__2__Impl"
-    // InternalBomi.g:1529:1: rule__BOMIModel__Group_4__2__Impl : ( ( rule__BOMIModel__RolesAssignment_4_2 ) ) ;
+    // InternalBomi.g:1572:1: rule__BOMIModel__Group_4__2__Impl : ( ( rule__BOMIModel__RolesAssignment_4_2 ) ) ;
     public final void rule__BOMIModel__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1533:1: ( ( ( rule__BOMIModel__RolesAssignment_4_2 ) ) )
-            // InternalBomi.g:1534:1: ( ( rule__BOMIModel__RolesAssignment_4_2 ) )
+            // InternalBomi.g:1576:1: ( ( ( rule__BOMIModel__RolesAssignment_4_2 ) ) )
+            // InternalBomi.g:1577:1: ( ( rule__BOMIModel__RolesAssignment_4_2 ) )
             {
-            // InternalBomi.g:1534:1: ( ( rule__BOMIModel__RolesAssignment_4_2 ) )
-            // InternalBomi.g:1535:2: ( rule__BOMIModel__RolesAssignment_4_2 )
+            // InternalBomi.g:1577:1: ( ( rule__BOMIModel__RolesAssignment_4_2 ) )
+            // InternalBomi.g:1578:2: ( rule__BOMIModel__RolesAssignment_4_2 )
             {
              before(grammarAccess.getBOMIModelAccess().getRolesAssignment_4_2()); 
-            // InternalBomi.g:1536:2: ( rule__BOMIModel__RolesAssignment_4_2 )
-            // InternalBomi.g:1536:3: rule__BOMIModel__RolesAssignment_4_2
+            // InternalBomi.g:1579:2: ( rule__BOMIModel__RolesAssignment_4_2 )
+            // InternalBomi.g:1579:3: rule__BOMIModel__RolesAssignment_4_2
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__RolesAssignment_4_2();
@@ -5011,14 +5178,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4__3"
-    // InternalBomi.g:1544:1: rule__BOMIModel__Group_4__3 : rule__BOMIModel__Group_4__3__Impl rule__BOMIModel__Group_4__4 ;
+    // InternalBomi.g:1587:1: rule__BOMIModel__Group_4__3 : rule__BOMIModel__Group_4__3__Impl rule__BOMIModel__Group_4__4 ;
     public final void rule__BOMIModel__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1548:1: ( rule__BOMIModel__Group_4__3__Impl rule__BOMIModel__Group_4__4 )
-            // InternalBomi.g:1549:2: rule__BOMIModel__Group_4__3__Impl rule__BOMIModel__Group_4__4
+            // InternalBomi.g:1591:1: ( rule__BOMIModel__Group_4__3__Impl rule__BOMIModel__Group_4__4 )
+            // InternalBomi.g:1592:2: rule__BOMIModel__Group_4__3__Impl rule__BOMIModel__Group_4__4
             {
             pushFollow(FOLLOW_6);
             rule__BOMIModel__Group_4__3__Impl();
@@ -5049,33 +5216,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4__3__Impl"
-    // InternalBomi.g:1556:1: rule__BOMIModel__Group_4__3__Impl : ( ( rule__BOMIModel__Group_4_3__0 )* ) ;
+    // InternalBomi.g:1599:1: rule__BOMIModel__Group_4__3__Impl : ( ( rule__BOMIModel__Group_4_3__0 )* ) ;
     public final void rule__BOMIModel__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1560:1: ( ( ( rule__BOMIModel__Group_4_3__0 )* ) )
-            // InternalBomi.g:1561:1: ( ( rule__BOMIModel__Group_4_3__0 )* )
+            // InternalBomi.g:1603:1: ( ( ( rule__BOMIModel__Group_4_3__0 )* ) )
+            // InternalBomi.g:1604:1: ( ( rule__BOMIModel__Group_4_3__0 )* )
             {
-            // InternalBomi.g:1561:1: ( ( rule__BOMIModel__Group_4_3__0 )* )
-            // InternalBomi.g:1562:2: ( rule__BOMIModel__Group_4_3__0 )*
+            // InternalBomi.g:1604:1: ( ( rule__BOMIModel__Group_4_3__0 )* )
+            // InternalBomi.g:1605:2: ( rule__BOMIModel__Group_4_3__0 )*
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_4_3()); 
-            // InternalBomi.g:1563:2: ( rule__BOMIModel__Group_4_3__0 )*
-            loop19:
+            // InternalBomi.g:1606:2: ( rule__BOMIModel__Group_4_3__0 )*
+            loop20:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( (LA19_0==36) ) {
-                    alt19=1;
+                if ( (LA20_0==38) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt20) {
             	case 1 :
-            	    // InternalBomi.g:1563:3: rule__BOMIModel__Group_4_3__0
+            	    // InternalBomi.g:1606:3: rule__BOMIModel__Group_4_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOMIModel__Group_4_3__0();
@@ -5087,7 +5254,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop20;
                 }
             } while (true);
 
@@ -5114,14 +5281,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4__4"
-    // InternalBomi.g:1571:1: rule__BOMIModel__Group_4__4 : rule__BOMIModel__Group_4__4__Impl ;
+    // InternalBomi.g:1614:1: rule__BOMIModel__Group_4__4 : rule__BOMIModel__Group_4__4__Impl ;
     public final void rule__BOMIModel__Group_4__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1575:1: ( rule__BOMIModel__Group_4__4__Impl )
-            // InternalBomi.g:1576:2: rule__BOMIModel__Group_4__4__Impl
+            // InternalBomi.g:1618:1: ( rule__BOMIModel__Group_4__4__Impl )
+            // InternalBomi.g:1619:2: rule__BOMIModel__Group_4__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_4__4__Impl();
@@ -5147,20 +5314,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4__4__Impl"
-    // InternalBomi.g:1582:1: rule__BOMIModel__Group_4__4__Impl : ( '}' ) ;
+    // InternalBomi.g:1625:1: rule__BOMIModel__Group_4__4__Impl : ( '}' ) ;
     public final void rule__BOMIModel__Group_4__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1586:1: ( ( '}' ) )
-            // InternalBomi.g:1587:1: ( '}' )
+            // InternalBomi.g:1629:1: ( ( '}' ) )
+            // InternalBomi.g:1630:1: ( '}' )
             {
-            // InternalBomi.g:1587:1: ( '}' )
-            // InternalBomi.g:1588:2: '}'
+            // InternalBomi.g:1630:1: ( '}' )
+            // InternalBomi.g:1631:2: '}'
             {
              before(grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_4_4()); 
-            match(input,35,FOLLOW_2); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_4_4()); 
 
             }
@@ -5184,14 +5351,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4_3__0"
-    // InternalBomi.g:1598:1: rule__BOMIModel__Group_4_3__0 : rule__BOMIModel__Group_4_3__0__Impl rule__BOMIModel__Group_4_3__1 ;
+    // InternalBomi.g:1641:1: rule__BOMIModel__Group_4_3__0 : rule__BOMIModel__Group_4_3__0__Impl rule__BOMIModel__Group_4_3__1 ;
     public final void rule__BOMIModel__Group_4_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1602:1: ( rule__BOMIModel__Group_4_3__0__Impl rule__BOMIModel__Group_4_3__1 )
-            // InternalBomi.g:1603:2: rule__BOMIModel__Group_4_3__0__Impl rule__BOMIModel__Group_4_3__1
+            // InternalBomi.g:1645:1: ( rule__BOMIModel__Group_4_3__0__Impl rule__BOMIModel__Group_4_3__1 )
+            // InternalBomi.g:1646:2: rule__BOMIModel__Group_4_3__0__Impl rule__BOMIModel__Group_4_3__1
             {
             pushFollow(FOLLOW_10);
             rule__BOMIModel__Group_4_3__0__Impl();
@@ -5222,20 +5389,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4_3__0__Impl"
-    // InternalBomi.g:1610:1: rule__BOMIModel__Group_4_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:1653:1: rule__BOMIModel__Group_4_3__0__Impl : ( ',' ) ;
     public final void rule__BOMIModel__Group_4_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1614:1: ( ( ',' ) )
-            // InternalBomi.g:1615:1: ( ',' )
+            // InternalBomi.g:1657:1: ( ( ',' ) )
+            // InternalBomi.g:1658:1: ( ',' )
             {
-            // InternalBomi.g:1615:1: ( ',' )
-            // InternalBomi.g:1616:2: ','
+            // InternalBomi.g:1658:1: ( ',' )
+            // InternalBomi.g:1659:2: ','
             {
              before(grammarAccess.getBOMIModelAccess().getCommaKeyword_4_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getCommaKeyword_4_3_0()); 
 
             }
@@ -5259,14 +5426,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4_3__1"
-    // InternalBomi.g:1625:1: rule__BOMIModel__Group_4_3__1 : rule__BOMIModel__Group_4_3__1__Impl ;
+    // InternalBomi.g:1668:1: rule__BOMIModel__Group_4_3__1 : rule__BOMIModel__Group_4_3__1__Impl ;
     public final void rule__BOMIModel__Group_4_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1629:1: ( rule__BOMIModel__Group_4_3__1__Impl )
-            // InternalBomi.g:1630:2: rule__BOMIModel__Group_4_3__1__Impl
+            // InternalBomi.g:1672:1: ( rule__BOMIModel__Group_4_3__1__Impl )
+            // InternalBomi.g:1673:2: rule__BOMIModel__Group_4_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_4_3__1__Impl();
@@ -5292,21 +5459,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_4_3__1__Impl"
-    // InternalBomi.g:1636:1: rule__BOMIModel__Group_4_3__1__Impl : ( ( rule__BOMIModel__RolesAssignment_4_3_1 ) ) ;
+    // InternalBomi.g:1679:1: rule__BOMIModel__Group_4_3__1__Impl : ( ( rule__BOMIModel__RolesAssignment_4_3_1 ) ) ;
     public final void rule__BOMIModel__Group_4_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1640:1: ( ( ( rule__BOMIModel__RolesAssignment_4_3_1 ) ) )
-            // InternalBomi.g:1641:1: ( ( rule__BOMIModel__RolesAssignment_4_3_1 ) )
+            // InternalBomi.g:1683:1: ( ( ( rule__BOMIModel__RolesAssignment_4_3_1 ) ) )
+            // InternalBomi.g:1684:1: ( ( rule__BOMIModel__RolesAssignment_4_3_1 ) )
             {
-            // InternalBomi.g:1641:1: ( ( rule__BOMIModel__RolesAssignment_4_3_1 ) )
-            // InternalBomi.g:1642:2: ( rule__BOMIModel__RolesAssignment_4_3_1 )
+            // InternalBomi.g:1684:1: ( ( rule__BOMIModel__RolesAssignment_4_3_1 ) )
+            // InternalBomi.g:1685:2: ( rule__BOMIModel__RolesAssignment_4_3_1 )
             {
              before(grammarAccess.getBOMIModelAccess().getRolesAssignment_4_3_1()); 
-            // InternalBomi.g:1643:2: ( rule__BOMIModel__RolesAssignment_4_3_1 )
-            // InternalBomi.g:1643:3: rule__BOMIModel__RolesAssignment_4_3_1
+            // InternalBomi.g:1686:2: ( rule__BOMIModel__RolesAssignment_4_3_1 )
+            // InternalBomi.g:1686:3: rule__BOMIModel__RolesAssignment_4_3_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__RolesAssignment_4_3_1();
@@ -5339,14 +5506,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5__0"
-    // InternalBomi.g:1652:1: rule__BOMIModel__Group_5__0 : rule__BOMIModel__Group_5__0__Impl rule__BOMIModel__Group_5__1 ;
+    // InternalBomi.g:1695:1: rule__BOMIModel__Group_5__0 : rule__BOMIModel__Group_5__0__Impl rule__BOMIModel__Group_5__1 ;
     public final void rule__BOMIModel__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1656:1: ( rule__BOMIModel__Group_5__0__Impl rule__BOMIModel__Group_5__1 )
-            // InternalBomi.g:1657:2: rule__BOMIModel__Group_5__0__Impl rule__BOMIModel__Group_5__1
+            // InternalBomi.g:1699:1: ( rule__BOMIModel__Group_5__0__Impl rule__BOMIModel__Group_5__1 )
+            // InternalBomi.g:1700:2: rule__BOMIModel__Group_5__0__Impl rule__BOMIModel__Group_5__1
             {
             pushFollow(FOLLOW_4);
             rule__BOMIModel__Group_5__0__Impl();
@@ -5377,20 +5544,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5__0__Impl"
-    // InternalBomi.g:1664:1: rule__BOMIModel__Group_5__0__Impl : ( 'drivers' ) ;
+    // InternalBomi.g:1707:1: rule__BOMIModel__Group_5__0__Impl : ( 'drivers' ) ;
     public final void rule__BOMIModel__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1668:1: ( ( 'drivers' ) )
-            // InternalBomi.g:1669:1: ( 'drivers' )
+            // InternalBomi.g:1711:1: ( ( 'drivers' ) )
+            // InternalBomi.g:1712:1: ( 'drivers' )
             {
-            // InternalBomi.g:1669:1: ( 'drivers' )
-            // InternalBomi.g:1670:2: 'drivers'
+            // InternalBomi.g:1712:1: ( 'drivers' )
+            // InternalBomi.g:1713:2: 'drivers'
             {
              before(grammarAccess.getBOMIModelAccess().getDriversKeyword_5_0()); 
-            match(input,40,FOLLOW_2); 
+            match(input,42,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getDriversKeyword_5_0()); 
 
             }
@@ -5414,14 +5581,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5__1"
-    // InternalBomi.g:1679:1: rule__BOMIModel__Group_5__1 : rule__BOMIModel__Group_5__1__Impl rule__BOMIModel__Group_5__2 ;
+    // InternalBomi.g:1722:1: rule__BOMIModel__Group_5__1 : rule__BOMIModel__Group_5__1__Impl rule__BOMIModel__Group_5__2 ;
     public final void rule__BOMIModel__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1683:1: ( rule__BOMIModel__Group_5__1__Impl rule__BOMIModel__Group_5__2 )
-            // InternalBomi.g:1684:2: rule__BOMIModel__Group_5__1__Impl rule__BOMIModel__Group_5__2
+            // InternalBomi.g:1726:1: ( rule__BOMIModel__Group_5__1__Impl rule__BOMIModel__Group_5__2 )
+            // InternalBomi.g:1727:2: rule__BOMIModel__Group_5__1__Impl rule__BOMIModel__Group_5__2
             {
             pushFollow(FOLLOW_11);
             rule__BOMIModel__Group_5__1__Impl();
@@ -5452,20 +5619,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5__1__Impl"
-    // InternalBomi.g:1691:1: rule__BOMIModel__Group_5__1__Impl : ( '{' ) ;
+    // InternalBomi.g:1734:1: rule__BOMIModel__Group_5__1__Impl : ( '{' ) ;
     public final void rule__BOMIModel__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1695:1: ( ( '{' ) )
-            // InternalBomi.g:1696:1: ( '{' )
+            // InternalBomi.g:1738:1: ( ( '{' ) )
+            // InternalBomi.g:1739:1: ( '{' )
             {
-            // InternalBomi.g:1696:1: ( '{' )
-            // InternalBomi.g:1697:2: '{'
+            // InternalBomi.g:1739:1: ( '{' )
+            // InternalBomi.g:1740:2: '{'
             {
              before(grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_5_1()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_5_1()); 
 
             }
@@ -5489,14 +5656,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5__2"
-    // InternalBomi.g:1706:1: rule__BOMIModel__Group_5__2 : rule__BOMIModel__Group_5__2__Impl rule__BOMIModel__Group_5__3 ;
+    // InternalBomi.g:1749:1: rule__BOMIModel__Group_5__2 : rule__BOMIModel__Group_5__2__Impl rule__BOMIModel__Group_5__3 ;
     public final void rule__BOMIModel__Group_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1710:1: ( rule__BOMIModel__Group_5__2__Impl rule__BOMIModel__Group_5__3 )
-            // InternalBomi.g:1711:2: rule__BOMIModel__Group_5__2__Impl rule__BOMIModel__Group_5__3
+            // InternalBomi.g:1753:1: ( rule__BOMIModel__Group_5__2__Impl rule__BOMIModel__Group_5__3 )
+            // InternalBomi.g:1754:2: rule__BOMIModel__Group_5__2__Impl rule__BOMIModel__Group_5__3
             {
             pushFollow(FOLLOW_6);
             rule__BOMIModel__Group_5__2__Impl();
@@ -5527,21 +5694,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5__2__Impl"
-    // InternalBomi.g:1718:1: rule__BOMIModel__Group_5__2__Impl : ( ( rule__BOMIModel__DriversAssignment_5_2 ) ) ;
+    // InternalBomi.g:1761:1: rule__BOMIModel__Group_5__2__Impl : ( ( rule__BOMIModel__DriversAssignment_5_2 ) ) ;
     public final void rule__BOMIModel__Group_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1722:1: ( ( ( rule__BOMIModel__DriversAssignment_5_2 ) ) )
-            // InternalBomi.g:1723:1: ( ( rule__BOMIModel__DriversAssignment_5_2 ) )
+            // InternalBomi.g:1765:1: ( ( ( rule__BOMIModel__DriversAssignment_5_2 ) ) )
+            // InternalBomi.g:1766:1: ( ( rule__BOMIModel__DriversAssignment_5_2 ) )
             {
-            // InternalBomi.g:1723:1: ( ( rule__BOMIModel__DriversAssignment_5_2 ) )
-            // InternalBomi.g:1724:2: ( rule__BOMIModel__DriversAssignment_5_2 )
+            // InternalBomi.g:1766:1: ( ( rule__BOMIModel__DriversAssignment_5_2 ) )
+            // InternalBomi.g:1767:2: ( rule__BOMIModel__DriversAssignment_5_2 )
             {
              before(grammarAccess.getBOMIModelAccess().getDriversAssignment_5_2()); 
-            // InternalBomi.g:1725:2: ( rule__BOMIModel__DriversAssignment_5_2 )
-            // InternalBomi.g:1725:3: rule__BOMIModel__DriversAssignment_5_2
+            // InternalBomi.g:1768:2: ( rule__BOMIModel__DriversAssignment_5_2 )
+            // InternalBomi.g:1768:3: rule__BOMIModel__DriversAssignment_5_2
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__DriversAssignment_5_2();
@@ -5574,14 +5741,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5__3"
-    // InternalBomi.g:1733:1: rule__BOMIModel__Group_5__3 : rule__BOMIModel__Group_5__3__Impl rule__BOMIModel__Group_5__4 ;
+    // InternalBomi.g:1776:1: rule__BOMIModel__Group_5__3 : rule__BOMIModel__Group_5__3__Impl rule__BOMIModel__Group_5__4 ;
     public final void rule__BOMIModel__Group_5__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1737:1: ( rule__BOMIModel__Group_5__3__Impl rule__BOMIModel__Group_5__4 )
-            // InternalBomi.g:1738:2: rule__BOMIModel__Group_5__3__Impl rule__BOMIModel__Group_5__4
+            // InternalBomi.g:1780:1: ( rule__BOMIModel__Group_5__3__Impl rule__BOMIModel__Group_5__4 )
+            // InternalBomi.g:1781:2: rule__BOMIModel__Group_5__3__Impl rule__BOMIModel__Group_5__4
             {
             pushFollow(FOLLOW_6);
             rule__BOMIModel__Group_5__3__Impl();
@@ -5612,33 +5779,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5__3__Impl"
-    // InternalBomi.g:1745:1: rule__BOMIModel__Group_5__3__Impl : ( ( rule__BOMIModel__Group_5_3__0 )* ) ;
+    // InternalBomi.g:1788:1: rule__BOMIModel__Group_5__3__Impl : ( ( rule__BOMIModel__Group_5_3__0 )* ) ;
     public final void rule__BOMIModel__Group_5__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1749:1: ( ( ( rule__BOMIModel__Group_5_3__0 )* ) )
-            // InternalBomi.g:1750:1: ( ( rule__BOMIModel__Group_5_3__0 )* )
+            // InternalBomi.g:1792:1: ( ( ( rule__BOMIModel__Group_5_3__0 )* ) )
+            // InternalBomi.g:1793:1: ( ( rule__BOMIModel__Group_5_3__0 )* )
             {
-            // InternalBomi.g:1750:1: ( ( rule__BOMIModel__Group_5_3__0 )* )
-            // InternalBomi.g:1751:2: ( rule__BOMIModel__Group_5_3__0 )*
+            // InternalBomi.g:1793:1: ( ( rule__BOMIModel__Group_5_3__0 )* )
+            // InternalBomi.g:1794:2: ( rule__BOMIModel__Group_5_3__0 )*
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_5_3()); 
-            // InternalBomi.g:1752:2: ( rule__BOMIModel__Group_5_3__0 )*
-            loop20:
+            // InternalBomi.g:1795:2: ( rule__BOMIModel__Group_5_3__0 )*
+            loop21:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA20_0==36) ) {
-                    alt20=1;
+                if ( (LA21_0==38) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt21) {
             	case 1 :
-            	    // InternalBomi.g:1752:3: rule__BOMIModel__Group_5_3__0
+            	    // InternalBomi.g:1795:3: rule__BOMIModel__Group_5_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOMIModel__Group_5_3__0();
@@ -5650,7 +5817,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop21;
                 }
             } while (true);
 
@@ -5677,14 +5844,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5__4"
-    // InternalBomi.g:1760:1: rule__BOMIModel__Group_5__4 : rule__BOMIModel__Group_5__4__Impl ;
+    // InternalBomi.g:1803:1: rule__BOMIModel__Group_5__4 : rule__BOMIModel__Group_5__4__Impl ;
     public final void rule__BOMIModel__Group_5__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1764:1: ( rule__BOMIModel__Group_5__4__Impl )
-            // InternalBomi.g:1765:2: rule__BOMIModel__Group_5__4__Impl
+            // InternalBomi.g:1807:1: ( rule__BOMIModel__Group_5__4__Impl )
+            // InternalBomi.g:1808:2: rule__BOMIModel__Group_5__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_5__4__Impl();
@@ -5710,20 +5877,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5__4__Impl"
-    // InternalBomi.g:1771:1: rule__BOMIModel__Group_5__4__Impl : ( '}' ) ;
+    // InternalBomi.g:1814:1: rule__BOMIModel__Group_5__4__Impl : ( '}' ) ;
     public final void rule__BOMIModel__Group_5__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1775:1: ( ( '}' ) )
-            // InternalBomi.g:1776:1: ( '}' )
+            // InternalBomi.g:1818:1: ( ( '}' ) )
+            // InternalBomi.g:1819:1: ( '}' )
             {
-            // InternalBomi.g:1776:1: ( '}' )
-            // InternalBomi.g:1777:2: '}'
+            // InternalBomi.g:1819:1: ( '}' )
+            // InternalBomi.g:1820:2: '}'
             {
              before(grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_5_4()); 
-            match(input,35,FOLLOW_2); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_5_4()); 
 
             }
@@ -5747,14 +5914,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5_3__0"
-    // InternalBomi.g:1787:1: rule__BOMIModel__Group_5_3__0 : rule__BOMIModel__Group_5_3__0__Impl rule__BOMIModel__Group_5_3__1 ;
+    // InternalBomi.g:1830:1: rule__BOMIModel__Group_5_3__0 : rule__BOMIModel__Group_5_3__0__Impl rule__BOMIModel__Group_5_3__1 ;
     public final void rule__BOMIModel__Group_5_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1791:1: ( rule__BOMIModel__Group_5_3__0__Impl rule__BOMIModel__Group_5_3__1 )
-            // InternalBomi.g:1792:2: rule__BOMIModel__Group_5_3__0__Impl rule__BOMIModel__Group_5_3__1
+            // InternalBomi.g:1834:1: ( rule__BOMIModel__Group_5_3__0__Impl rule__BOMIModel__Group_5_3__1 )
+            // InternalBomi.g:1835:2: rule__BOMIModel__Group_5_3__0__Impl rule__BOMIModel__Group_5_3__1
             {
             pushFollow(FOLLOW_11);
             rule__BOMIModel__Group_5_3__0__Impl();
@@ -5785,20 +5952,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5_3__0__Impl"
-    // InternalBomi.g:1799:1: rule__BOMIModel__Group_5_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:1842:1: rule__BOMIModel__Group_5_3__0__Impl : ( ',' ) ;
     public final void rule__BOMIModel__Group_5_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1803:1: ( ( ',' ) )
-            // InternalBomi.g:1804:1: ( ',' )
+            // InternalBomi.g:1846:1: ( ( ',' ) )
+            // InternalBomi.g:1847:1: ( ',' )
             {
-            // InternalBomi.g:1804:1: ( ',' )
-            // InternalBomi.g:1805:2: ','
+            // InternalBomi.g:1847:1: ( ',' )
+            // InternalBomi.g:1848:2: ','
             {
              before(grammarAccess.getBOMIModelAccess().getCommaKeyword_5_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getCommaKeyword_5_3_0()); 
 
             }
@@ -5822,14 +5989,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5_3__1"
-    // InternalBomi.g:1814:1: rule__BOMIModel__Group_5_3__1 : rule__BOMIModel__Group_5_3__1__Impl ;
+    // InternalBomi.g:1857:1: rule__BOMIModel__Group_5_3__1 : rule__BOMIModel__Group_5_3__1__Impl ;
     public final void rule__BOMIModel__Group_5_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1818:1: ( rule__BOMIModel__Group_5_3__1__Impl )
-            // InternalBomi.g:1819:2: rule__BOMIModel__Group_5_3__1__Impl
+            // InternalBomi.g:1861:1: ( rule__BOMIModel__Group_5_3__1__Impl )
+            // InternalBomi.g:1862:2: rule__BOMIModel__Group_5_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_5_3__1__Impl();
@@ -5855,21 +6022,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_5_3__1__Impl"
-    // InternalBomi.g:1825:1: rule__BOMIModel__Group_5_3__1__Impl : ( ( rule__BOMIModel__DriversAssignment_5_3_1 ) ) ;
+    // InternalBomi.g:1868:1: rule__BOMIModel__Group_5_3__1__Impl : ( ( rule__BOMIModel__DriversAssignment_5_3_1 ) ) ;
     public final void rule__BOMIModel__Group_5_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1829:1: ( ( ( rule__BOMIModel__DriversAssignment_5_3_1 ) ) )
-            // InternalBomi.g:1830:1: ( ( rule__BOMIModel__DriversAssignment_5_3_1 ) )
+            // InternalBomi.g:1872:1: ( ( ( rule__BOMIModel__DriversAssignment_5_3_1 ) ) )
+            // InternalBomi.g:1873:1: ( ( rule__BOMIModel__DriversAssignment_5_3_1 ) )
             {
-            // InternalBomi.g:1830:1: ( ( rule__BOMIModel__DriversAssignment_5_3_1 ) )
-            // InternalBomi.g:1831:2: ( rule__BOMIModel__DriversAssignment_5_3_1 )
+            // InternalBomi.g:1873:1: ( ( rule__BOMIModel__DriversAssignment_5_3_1 ) )
+            // InternalBomi.g:1874:2: ( rule__BOMIModel__DriversAssignment_5_3_1 )
             {
              before(grammarAccess.getBOMIModelAccess().getDriversAssignment_5_3_1()); 
-            // InternalBomi.g:1832:2: ( rule__BOMIModel__DriversAssignment_5_3_1 )
-            // InternalBomi.g:1832:3: rule__BOMIModel__DriversAssignment_5_3_1
+            // InternalBomi.g:1875:2: ( rule__BOMIModel__DriversAssignment_5_3_1 )
+            // InternalBomi.g:1875:3: rule__BOMIModel__DriversAssignment_5_3_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__DriversAssignment_5_3_1();
@@ -5902,14 +6069,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_6__0"
-    // InternalBomi.g:1841:1: rule__BOMIModel__Group_6__0 : rule__BOMIModel__Group_6__0__Impl rule__BOMIModel__Group_6__1 ;
+    // InternalBomi.g:1884:1: rule__BOMIModel__Group_6__0 : rule__BOMIModel__Group_6__0__Impl rule__BOMIModel__Group_6__1 ;
     public final void rule__BOMIModel__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1845:1: ( rule__BOMIModel__Group_6__0__Impl rule__BOMIModel__Group_6__1 )
-            // InternalBomi.g:1846:2: rule__BOMIModel__Group_6__0__Impl rule__BOMIModel__Group_6__1
+            // InternalBomi.g:1888:1: ( rule__BOMIModel__Group_6__0__Impl rule__BOMIModel__Group_6__1 )
+            // InternalBomi.g:1889:2: rule__BOMIModel__Group_6__0__Impl rule__BOMIModel__Group_6__1
             {
             pushFollow(FOLLOW_12);
             rule__BOMIModel__Group_6__0__Impl();
@@ -5940,21 +6107,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_6__0__Impl"
-    // InternalBomi.g:1853:1: rule__BOMIModel__Group_6__0__Impl : ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 ) ) ;
+    // InternalBomi.g:1896:1: rule__BOMIModel__Group_6__0__Impl : ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 ) ) ;
     public final void rule__BOMIModel__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1857:1: ( ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 ) ) )
-            // InternalBomi.g:1858:1: ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 ) )
+            // InternalBomi.g:1900:1: ( ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 ) ) )
+            // InternalBomi.g:1901:1: ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 ) )
             {
-            // InternalBomi.g:1858:1: ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 ) )
-            // InternalBomi.g:1859:2: ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 )
+            // InternalBomi.g:1901:1: ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 ) )
+            // InternalBomi.g:1902:2: ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 )
             {
              before(grammarAccess.getBOMIModelAccess().getBoMiCoordinationsAssignment_6_0()); 
-            // InternalBomi.g:1860:2: ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 )
-            // InternalBomi.g:1860:3: rule__BOMIModel__BoMiCoordinationsAssignment_6_0
+            // InternalBomi.g:1903:2: ( rule__BOMIModel__BoMiCoordinationsAssignment_6_0 )
+            // InternalBomi.g:1903:3: rule__BOMIModel__BoMiCoordinationsAssignment_6_0
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__BoMiCoordinationsAssignment_6_0();
@@ -5987,14 +6154,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_6__1"
-    // InternalBomi.g:1868:1: rule__BOMIModel__Group_6__1 : rule__BOMIModel__Group_6__1__Impl ;
+    // InternalBomi.g:1911:1: rule__BOMIModel__Group_6__1 : rule__BOMIModel__Group_6__1__Impl ;
     public final void rule__BOMIModel__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1872:1: ( rule__BOMIModel__Group_6__1__Impl )
-            // InternalBomi.g:1873:2: rule__BOMIModel__Group_6__1__Impl
+            // InternalBomi.g:1915:1: ( rule__BOMIModel__Group_6__1__Impl )
+            // InternalBomi.g:1916:2: rule__BOMIModel__Group_6__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_6__1__Impl();
@@ -6020,33 +6187,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_6__1__Impl"
-    // InternalBomi.g:1879:1: rule__BOMIModel__Group_6__1__Impl : ( ( rule__BOMIModel__Group_6_1__0 )* ) ;
+    // InternalBomi.g:1922:1: rule__BOMIModel__Group_6__1__Impl : ( ( rule__BOMIModel__Group_6_1__0 )* ) ;
     public final void rule__BOMIModel__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1883:1: ( ( ( rule__BOMIModel__Group_6_1__0 )* ) )
-            // InternalBomi.g:1884:1: ( ( rule__BOMIModel__Group_6_1__0 )* )
+            // InternalBomi.g:1926:1: ( ( ( rule__BOMIModel__Group_6_1__0 )* ) )
+            // InternalBomi.g:1927:1: ( ( rule__BOMIModel__Group_6_1__0 )* )
             {
-            // InternalBomi.g:1884:1: ( ( rule__BOMIModel__Group_6_1__0 )* )
-            // InternalBomi.g:1885:2: ( rule__BOMIModel__Group_6_1__0 )*
+            // InternalBomi.g:1927:1: ( ( rule__BOMIModel__Group_6_1__0 )* )
+            // InternalBomi.g:1928:2: ( rule__BOMIModel__Group_6_1__0 )*
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_6_1()); 
-            // InternalBomi.g:1886:2: ( rule__BOMIModel__Group_6_1__0 )*
-            loop21:
+            // InternalBomi.g:1929:2: ( rule__BOMIModel__Group_6_1__0 )*
+            loop22:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-                if ( (LA21_0==36) ) {
-                    alt21=1;
+                if ( (LA22_0==38) ) {
+                    alt22=1;
                 }
 
 
-                switch (alt21) {
+                switch (alt22) {
             	case 1 :
-            	    // InternalBomi.g:1886:3: rule__BOMIModel__Group_6_1__0
+            	    // InternalBomi.g:1929:3: rule__BOMIModel__Group_6_1__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOMIModel__Group_6_1__0();
@@ -6058,7 +6225,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop22;
                 }
             } while (true);
 
@@ -6085,14 +6252,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_6_1__0"
-    // InternalBomi.g:1895:1: rule__BOMIModel__Group_6_1__0 : rule__BOMIModel__Group_6_1__0__Impl rule__BOMIModel__Group_6_1__1 ;
+    // InternalBomi.g:1938:1: rule__BOMIModel__Group_6_1__0 : rule__BOMIModel__Group_6_1__0__Impl rule__BOMIModel__Group_6_1__1 ;
     public final void rule__BOMIModel__Group_6_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1899:1: ( rule__BOMIModel__Group_6_1__0__Impl rule__BOMIModel__Group_6_1__1 )
-            // InternalBomi.g:1900:2: rule__BOMIModel__Group_6_1__0__Impl rule__BOMIModel__Group_6_1__1
+            // InternalBomi.g:1942:1: ( rule__BOMIModel__Group_6_1__0__Impl rule__BOMIModel__Group_6_1__1 )
+            // InternalBomi.g:1943:2: rule__BOMIModel__Group_6_1__0__Impl rule__BOMIModel__Group_6_1__1
             {
             pushFollow(FOLLOW_13);
             rule__BOMIModel__Group_6_1__0__Impl();
@@ -6123,20 +6290,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_6_1__0__Impl"
-    // InternalBomi.g:1907:1: rule__BOMIModel__Group_6_1__0__Impl : ( ',' ) ;
+    // InternalBomi.g:1950:1: rule__BOMIModel__Group_6_1__0__Impl : ( ',' ) ;
     public final void rule__BOMIModel__Group_6_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1911:1: ( ( ',' ) )
-            // InternalBomi.g:1912:1: ( ',' )
+            // InternalBomi.g:1954:1: ( ( ',' ) )
+            // InternalBomi.g:1955:1: ( ',' )
             {
-            // InternalBomi.g:1912:1: ( ',' )
-            // InternalBomi.g:1913:2: ','
+            // InternalBomi.g:1955:1: ( ',' )
+            // InternalBomi.g:1956:2: ','
             {
              before(grammarAccess.getBOMIModelAccess().getCommaKeyword_6_1_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getCommaKeyword_6_1_0()); 
 
             }
@@ -6160,14 +6327,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_6_1__1"
-    // InternalBomi.g:1922:1: rule__BOMIModel__Group_6_1__1 : rule__BOMIModel__Group_6_1__1__Impl ;
+    // InternalBomi.g:1965:1: rule__BOMIModel__Group_6_1__1 : rule__BOMIModel__Group_6_1__1__Impl ;
     public final void rule__BOMIModel__Group_6_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1926:1: ( rule__BOMIModel__Group_6_1__1__Impl )
-            // InternalBomi.g:1927:2: rule__BOMIModel__Group_6_1__1__Impl
+            // InternalBomi.g:1969:1: ( rule__BOMIModel__Group_6_1__1__Impl )
+            // InternalBomi.g:1970:2: rule__BOMIModel__Group_6_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_6_1__1__Impl();
@@ -6193,21 +6360,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_6_1__1__Impl"
-    // InternalBomi.g:1933:1: rule__BOMIModel__Group_6_1__1__Impl : ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 ) ) ;
+    // InternalBomi.g:1976:1: rule__BOMIModel__Group_6_1__1__Impl : ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 ) ) ;
     public final void rule__BOMIModel__Group_6_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1937:1: ( ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 ) ) )
-            // InternalBomi.g:1938:1: ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 ) )
+            // InternalBomi.g:1980:1: ( ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 ) ) )
+            // InternalBomi.g:1981:1: ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 ) )
             {
-            // InternalBomi.g:1938:1: ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 ) )
-            // InternalBomi.g:1939:2: ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 )
+            // InternalBomi.g:1981:1: ( ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 ) )
+            // InternalBomi.g:1982:2: ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 )
             {
              before(grammarAccess.getBOMIModelAccess().getBoMiCoordinationsAssignment_6_1_1()); 
-            // InternalBomi.g:1940:2: ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 )
-            // InternalBomi.g:1940:3: rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1
+            // InternalBomi.g:1983:2: ( rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 )
+            // InternalBomi.g:1983:3: rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1();
@@ -6240,14 +6407,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_7__0"
-    // InternalBomi.g:1949:1: rule__BOMIModel__Group_7__0 : rule__BOMIModel__Group_7__0__Impl rule__BOMIModel__Group_7__1 ;
+    // InternalBomi.g:1992:1: rule__BOMIModel__Group_7__0 : rule__BOMIModel__Group_7__0__Impl rule__BOMIModel__Group_7__1 ;
     public final void rule__BOMIModel__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1953:1: ( rule__BOMIModel__Group_7__0__Impl rule__BOMIModel__Group_7__1 )
-            // InternalBomi.g:1954:2: rule__BOMIModel__Group_7__0__Impl rule__BOMIModel__Group_7__1
+            // InternalBomi.g:1996:1: ( rule__BOMIModel__Group_7__0__Impl rule__BOMIModel__Group_7__1 )
+            // InternalBomi.g:1997:2: rule__BOMIModel__Group_7__0__Impl rule__BOMIModel__Group_7__1
             {
             pushFollow(FOLLOW_12);
             rule__BOMIModel__Group_7__0__Impl();
@@ -6278,21 +6445,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_7__0__Impl"
-    // InternalBomi.g:1961:1: rule__BOMIModel__Group_7__0__Impl : ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 ) ) ;
+    // InternalBomi.g:2004:1: rule__BOMIModel__Group_7__0__Impl : ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 ) ) ;
     public final void rule__BOMIModel__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1965:1: ( ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 ) ) )
-            // InternalBomi.g:1966:1: ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 ) )
+            // InternalBomi.g:2008:1: ( ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 ) ) )
+            // InternalBomi.g:2009:1: ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 ) )
             {
-            // InternalBomi.g:1966:1: ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 ) )
-            // InternalBomi.g:1967:2: ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 )
+            // InternalBomi.g:2009:1: ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 ) )
+            // InternalBomi.g:2010:2: ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 )
             {
              before(grammarAccess.getBOMIModelAccess().getBoRoleInteractionsAssignment_7_0()); 
-            // InternalBomi.g:1968:2: ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 )
-            // InternalBomi.g:1968:3: rule__BOMIModel__BoRoleInteractionsAssignment_7_0
+            // InternalBomi.g:2011:2: ( rule__BOMIModel__BoRoleInteractionsAssignment_7_0 )
+            // InternalBomi.g:2011:3: rule__BOMIModel__BoRoleInteractionsAssignment_7_0
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__BoRoleInteractionsAssignment_7_0();
@@ -6325,14 +6492,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_7__1"
-    // InternalBomi.g:1976:1: rule__BOMIModel__Group_7__1 : rule__BOMIModel__Group_7__1__Impl ;
+    // InternalBomi.g:2019:1: rule__BOMIModel__Group_7__1 : rule__BOMIModel__Group_7__1__Impl ;
     public final void rule__BOMIModel__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1980:1: ( rule__BOMIModel__Group_7__1__Impl )
-            // InternalBomi.g:1981:2: rule__BOMIModel__Group_7__1__Impl
+            // InternalBomi.g:2023:1: ( rule__BOMIModel__Group_7__1__Impl )
+            // InternalBomi.g:2024:2: rule__BOMIModel__Group_7__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_7__1__Impl();
@@ -6358,33 +6525,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_7__1__Impl"
-    // InternalBomi.g:1987:1: rule__BOMIModel__Group_7__1__Impl : ( ( rule__BOMIModel__Group_7_1__0 )* ) ;
+    // InternalBomi.g:2030:1: rule__BOMIModel__Group_7__1__Impl : ( ( rule__BOMIModel__Group_7_1__0 )* ) ;
     public final void rule__BOMIModel__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:1991:1: ( ( ( rule__BOMIModel__Group_7_1__0 )* ) )
-            // InternalBomi.g:1992:1: ( ( rule__BOMIModel__Group_7_1__0 )* )
+            // InternalBomi.g:2034:1: ( ( ( rule__BOMIModel__Group_7_1__0 )* ) )
+            // InternalBomi.g:2035:1: ( ( rule__BOMIModel__Group_7_1__0 )* )
             {
-            // InternalBomi.g:1992:1: ( ( rule__BOMIModel__Group_7_1__0 )* )
-            // InternalBomi.g:1993:2: ( rule__BOMIModel__Group_7_1__0 )*
+            // InternalBomi.g:2035:1: ( ( rule__BOMIModel__Group_7_1__0 )* )
+            // InternalBomi.g:2036:2: ( rule__BOMIModel__Group_7_1__0 )*
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_7_1()); 
-            // InternalBomi.g:1994:2: ( rule__BOMIModel__Group_7_1__0 )*
-            loop22:
+            // InternalBomi.g:2037:2: ( rule__BOMIModel__Group_7_1__0 )*
+            loop23:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt23=2;
+                int LA23_0 = input.LA(1);
 
-                if ( (LA22_0==36) ) {
-                    alt22=1;
+                if ( (LA23_0==38) ) {
+                    alt23=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt23) {
             	case 1 :
-            	    // InternalBomi.g:1994:3: rule__BOMIModel__Group_7_1__0
+            	    // InternalBomi.g:2037:3: rule__BOMIModel__Group_7_1__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOMIModel__Group_7_1__0();
@@ -6396,7 +6563,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop22;
+            	    break loop23;
                 }
             } while (true);
 
@@ -6423,14 +6590,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_7_1__0"
-    // InternalBomi.g:2003:1: rule__BOMIModel__Group_7_1__0 : rule__BOMIModel__Group_7_1__0__Impl rule__BOMIModel__Group_7_1__1 ;
+    // InternalBomi.g:2046:1: rule__BOMIModel__Group_7_1__0 : rule__BOMIModel__Group_7_1__0__Impl rule__BOMIModel__Group_7_1__1 ;
     public final void rule__BOMIModel__Group_7_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2007:1: ( rule__BOMIModel__Group_7_1__0__Impl rule__BOMIModel__Group_7_1__1 )
-            // InternalBomi.g:2008:2: rule__BOMIModel__Group_7_1__0__Impl rule__BOMIModel__Group_7_1__1
+            // InternalBomi.g:2050:1: ( rule__BOMIModel__Group_7_1__0__Impl rule__BOMIModel__Group_7_1__1 )
+            // InternalBomi.g:2051:2: rule__BOMIModel__Group_7_1__0__Impl rule__BOMIModel__Group_7_1__1
             {
             pushFollow(FOLLOW_14);
             rule__BOMIModel__Group_7_1__0__Impl();
@@ -6461,20 +6628,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_7_1__0__Impl"
-    // InternalBomi.g:2015:1: rule__BOMIModel__Group_7_1__0__Impl : ( ',' ) ;
+    // InternalBomi.g:2058:1: rule__BOMIModel__Group_7_1__0__Impl : ( ',' ) ;
     public final void rule__BOMIModel__Group_7_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2019:1: ( ( ',' ) )
-            // InternalBomi.g:2020:1: ( ',' )
+            // InternalBomi.g:2062:1: ( ( ',' ) )
+            // InternalBomi.g:2063:1: ( ',' )
             {
-            // InternalBomi.g:2020:1: ( ',' )
-            // InternalBomi.g:2021:2: ','
+            // InternalBomi.g:2063:1: ( ',' )
+            // InternalBomi.g:2064:2: ','
             {
              before(grammarAccess.getBOMIModelAccess().getCommaKeyword_7_1_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getCommaKeyword_7_1_0()); 
 
             }
@@ -6498,14 +6665,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_7_1__1"
-    // InternalBomi.g:2030:1: rule__BOMIModel__Group_7_1__1 : rule__BOMIModel__Group_7_1__1__Impl ;
+    // InternalBomi.g:2073:1: rule__BOMIModel__Group_7_1__1 : rule__BOMIModel__Group_7_1__1__Impl ;
     public final void rule__BOMIModel__Group_7_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2034:1: ( rule__BOMIModel__Group_7_1__1__Impl )
-            // InternalBomi.g:2035:2: rule__BOMIModel__Group_7_1__1__Impl
+            // InternalBomi.g:2077:1: ( rule__BOMIModel__Group_7_1__1__Impl )
+            // InternalBomi.g:2078:2: rule__BOMIModel__Group_7_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_7_1__1__Impl();
@@ -6531,21 +6698,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_7_1__1__Impl"
-    // InternalBomi.g:2041:1: rule__BOMIModel__Group_7_1__1__Impl : ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 ) ) ;
+    // InternalBomi.g:2084:1: rule__BOMIModel__Group_7_1__1__Impl : ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 ) ) ;
     public final void rule__BOMIModel__Group_7_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2045:1: ( ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 ) ) )
-            // InternalBomi.g:2046:1: ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 ) )
+            // InternalBomi.g:2088:1: ( ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 ) ) )
+            // InternalBomi.g:2089:1: ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 ) )
             {
-            // InternalBomi.g:2046:1: ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 ) )
-            // InternalBomi.g:2047:2: ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 )
+            // InternalBomi.g:2089:1: ( ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 ) )
+            // InternalBomi.g:2090:2: ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 )
             {
              before(grammarAccess.getBOMIModelAccess().getBoRoleInteractionsAssignment_7_1_1()); 
-            // InternalBomi.g:2048:2: ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 )
-            // InternalBomi.g:2048:3: rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1
+            // InternalBomi.g:2091:2: ( rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 )
+            // InternalBomi.g:2091:3: rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1();
@@ -6578,14 +6745,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_8__0"
-    // InternalBomi.g:2057:1: rule__BOMIModel__Group_8__0 : rule__BOMIModel__Group_8__0__Impl rule__BOMIModel__Group_8__1 ;
+    // InternalBomi.g:2100:1: rule__BOMIModel__Group_8__0 : rule__BOMIModel__Group_8__0__Impl rule__BOMIModel__Group_8__1 ;
     public final void rule__BOMIModel__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2061:1: ( rule__BOMIModel__Group_8__0__Impl rule__BOMIModel__Group_8__1 )
-            // InternalBomi.g:2062:2: rule__BOMIModel__Group_8__0__Impl rule__BOMIModel__Group_8__1
+            // InternalBomi.g:2104:1: ( rule__BOMIModel__Group_8__0__Impl rule__BOMIModel__Group_8__1 )
+            // InternalBomi.g:2105:2: rule__BOMIModel__Group_8__0__Impl rule__BOMIModel__Group_8__1
             {
             pushFollow(FOLLOW_12);
             rule__BOMIModel__Group_8__0__Impl();
@@ -6616,21 +6783,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_8__0__Impl"
-    // InternalBomi.g:2069:1: rule__BOMIModel__Group_8__0__Impl : ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 ) ) ;
+    // InternalBomi.g:2112:1: rule__BOMIModel__Group_8__0__Impl : ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 ) ) ;
     public final void rule__BOMIModel__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2073:1: ( ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 ) ) )
-            // InternalBomi.g:2074:1: ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 ) )
+            // InternalBomi.g:2116:1: ( ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 ) ) )
+            // InternalBomi.g:2117:1: ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 ) )
             {
-            // InternalBomi.g:2074:1: ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 ) )
-            // InternalBomi.g:2075:2: ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 )
+            // InternalBomi.g:2117:1: ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 ) )
+            // InternalBomi.g:2118:2: ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 )
             {
              before(grammarAccess.getBOMIModelAccess().getBoTeamGovernancesAssignment_8_0()); 
-            // InternalBomi.g:2076:2: ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 )
-            // InternalBomi.g:2076:3: rule__BOMIModel__BoTeamGovernancesAssignment_8_0
+            // InternalBomi.g:2119:2: ( rule__BOMIModel__BoTeamGovernancesAssignment_8_0 )
+            // InternalBomi.g:2119:3: rule__BOMIModel__BoTeamGovernancesAssignment_8_0
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__BoTeamGovernancesAssignment_8_0();
@@ -6663,14 +6830,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_8__1"
-    // InternalBomi.g:2084:1: rule__BOMIModel__Group_8__1 : rule__BOMIModel__Group_8__1__Impl ;
+    // InternalBomi.g:2127:1: rule__BOMIModel__Group_8__1 : rule__BOMIModel__Group_8__1__Impl ;
     public final void rule__BOMIModel__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2088:1: ( rule__BOMIModel__Group_8__1__Impl )
-            // InternalBomi.g:2089:2: rule__BOMIModel__Group_8__1__Impl
+            // InternalBomi.g:2131:1: ( rule__BOMIModel__Group_8__1__Impl )
+            // InternalBomi.g:2132:2: rule__BOMIModel__Group_8__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_8__1__Impl();
@@ -6696,33 +6863,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_8__1__Impl"
-    // InternalBomi.g:2095:1: rule__BOMIModel__Group_8__1__Impl : ( ( rule__BOMIModel__Group_8_1__0 )* ) ;
+    // InternalBomi.g:2138:1: rule__BOMIModel__Group_8__1__Impl : ( ( rule__BOMIModel__Group_8_1__0 )* ) ;
     public final void rule__BOMIModel__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2099:1: ( ( ( rule__BOMIModel__Group_8_1__0 )* ) )
-            // InternalBomi.g:2100:1: ( ( rule__BOMIModel__Group_8_1__0 )* )
+            // InternalBomi.g:2142:1: ( ( ( rule__BOMIModel__Group_8_1__0 )* ) )
+            // InternalBomi.g:2143:1: ( ( rule__BOMIModel__Group_8_1__0 )* )
             {
-            // InternalBomi.g:2100:1: ( ( rule__BOMIModel__Group_8_1__0 )* )
-            // InternalBomi.g:2101:2: ( rule__BOMIModel__Group_8_1__0 )*
+            // InternalBomi.g:2143:1: ( ( rule__BOMIModel__Group_8_1__0 )* )
+            // InternalBomi.g:2144:2: ( rule__BOMIModel__Group_8_1__0 )*
             {
              before(grammarAccess.getBOMIModelAccess().getGroup_8_1()); 
-            // InternalBomi.g:2102:2: ( rule__BOMIModel__Group_8_1__0 )*
-            loop23:
+            // InternalBomi.g:2145:2: ( rule__BOMIModel__Group_8_1__0 )*
+            loop24:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA23_0==36) ) {
-                    alt23=1;
+                if ( (LA24_0==38) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt24) {
             	case 1 :
-            	    // InternalBomi.g:2102:3: rule__BOMIModel__Group_8_1__0
+            	    // InternalBomi.g:2145:3: rule__BOMIModel__Group_8_1__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOMIModel__Group_8_1__0();
@@ -6734,7 +6901,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop24;
                 }
             } while (true);
 
@@ -6761,14 +6928,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_8_1__0"
-    // InternalBomi.g:2111:1: rule__BOMIModel__Group_8_1__0 : rule__BOMIModel__Group_8_1__0__Impl rule__BOMIModel__Group_8_1__1 ;
+    // InternalBomi.g:2154:1: rule__BOMIModel__Group_8_1__0 : rule__BOMIModel__Group_8_1__0__Impl rule__BOMIModel__Group_8_1__1 ;
     public final void rule__BOMIModel__Group_8_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2115:1: ( rule__BOMIModel__Group_8_1__0__Impl rule__BOMIModel__Group_8_1__1 )
-            // InternalBomi.g:2116:2: rule__BOMIModel__Group_8_1__0__Impl rule__BOMIModel__Group_8_1__1
+            // InternalBomi.g:2158:1: ( rule__BOMIModel__Group_8_1__0__Impl rule__BOMIModel__Group_8_1__1 )
+            // InternalBomi.g:2159:2: rule__BOMIModel__Group_8_1__0__Impl rule__BOMIModel__Group_8_1__1
             {
             pushFollow(FOLLOW_15);
             rule__BOMIModel__Group_8_1__0__Impl();
@@ -6799,20 +6966,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_8_1__0__Impl"
-    // InternalBomi.g:2123:1: rule__BOMIModel__Group_8_1__0__Impl : ( ',' ) ;
+    // InternalBomi.g:2166:1: rule__BOMIModel__Group_8_1__0__Impl : ( ',' ) ;
     public final void rule__BOMIModel__Group_8_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2127:1: ( ( ',' ) )
-            // InternalBomi.g:2128:1: ( ',' )
+            // InternalBomi.g:2170:1: ( ( ',' ) )
+            // InternalBomi.g:2171:1: ( ',' )
             {
-            // InternalBomi.g:2128:1: ( ',' )
-            // InternalBomi.g:2129:2: ','
+            // InternalBomi.g:2171:1: ( ',' )
+            // InternalBomi.g:2172:2: ','
             {
              before(grammarAccess.getBOMIModelAccess().getCommaKeyword_8_1_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOMIModelAccess().getCommaKeyword_8_1_0()); 
 
             }
@@ -6836,14 +7003,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_8_1__1"
-    // InternalBomi.g:2138:1: rule__BOMIModel__Group_8_1__1 : rule__BOMIModel__Group_8_1__1__Impl ;
+    // InternalBomi.g:2181:1: rule__BOMIModel__Group_8_1__1 : rule__BOMIModel__Group_8_1__1__Impl ;
     public final void rule__BOMIModel__Group_8_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2142:1: ( rule__BOMIModel__Group_8_1__1__Impl )
-            // InternalBomi.g:2143:2: rule__BOMIModel__Group_8_1__1__Impl
+            // InternalBomi.g:2185:1: ( rule__BOMIModel__Group_8_1__1__Impl )
+            // InternalBomi.g:2186:2: rule__BOMIModel__Group_8_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__Group_8_1__1__Impl();
@@ -6869,21 +7036,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__Group_8_1__1__Impl"
-    // InternalBomi.g:2149:1: rule__BOMIModel__Group_8_1__1__Impl : ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 ) ) ;
+    // InternalBomi.g:2192:1: rule__BOMIModel__Group_8_1__1__Impl : ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 ) ) ;
     public final void rule__BOMIModel__Group_8_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2153:1: ( ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 ) ) )
-            // InternalBomi.g:2154:1: ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 ) )
+            // InternalBomi.g:2196:1: ( ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 ) ) )
+            // InternalBomi.g:2197:1: ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 ) )
             {
-            // InternalBomi.g:2154:1: ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 ) )
-            // InternalBomi.g:2155:2: ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 )
+            // InternalBomi.g:2197:1: ( ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 ) )
+            // InternalBomi.g:2198:2: ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 )
             {
              before(grammarAccess.getBOMIModelAccess().getBoTeamGovernancesAssignment_8_1_1()); 
-            // InternalBomi.g:2156:2: ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 )
-            // InternalBomi.g:2156:3: rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1
+            // InternalBomi.g:2199:2: ( rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 )
+            // InternalBomi.g:2199:3: rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1();
@@ -6916,14 +7083,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__0"
-    // InternalBomi.g:2165:1: rule__BoundaryObject__Group__0 : rule__BoundaryObject__Group__0__Impl rule__BoundaryObject__Group__1 ;
+    // InternalBomi.g:2208:1: rule__BoundaryObject__Group__0 : rule__BoundaryObject__Group__0__Impl rule__BoundaryObject__Group__1 ;
     public final void rule__BoundaryObject__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2169:1: ( rule__BoundaryObject__Group__0__Impl rule__BoundaryObject__Group__1 )
-            // InternalBomi.g:2170:2: rule__BoundaryObject__Group__0__Impl rule__BoundaryObject__Group__1
+            // InternalBomi.g:2212:1: ( rule__BoundaryObject__Group__0__Impl rule__BoundaryObject__Group__1 )
+            // InternalBomi.g:2213:2: rule__BoundaryObject__Group__0__Impl rule__BoundaryObject__Group__1
             {
             pushFollow(FOLLOW_5);
             rule__BoundaryObject__Group__0__Impl();
@@ -6954,21 +7121,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__0__Impl"
-    // InternalBomi.g:2177:1: rule__BoundaryObject__Group__0__Impl : ( () ) ;
+    // InternalBomi.g:2220:1: rule__BoundaryObject__Group__0__Impl : ( () ) ;
     public final void rule__BoundaryObject__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2181:1: ( ( () ) )
-            // InternalBomi.g:2182:1: ( () )
+            // InternalBomi.g:2224:1: ( ( () ) )
+            // InternalBomi.g:2225:1: ( () )
             {
-            // InternalBomi.g:2182:1: ( () )
-            // InternalBomi.g:2183:2: ()
+            // InternalBomi.g:2225:1: ( () )
+            // InternalBomi.g:2226:2: ()
             {
              before(grammarAccess.getBoundaryObjectAccess().getBoundaryObjectAction_0()); 
-            // InternalBomi.g:2184:2: ()
-            // InternalBomi.g:2184:3: 
+            // InternalBomi.g:2227:2: ()
+            // InternalBomi.g:2227:3: 
             {
             }
 
@@ -6991,14 +7158,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__1"
-    // InternalBomi.g:2192:1: rule__BoundaryObject__Group__1 : rule__BoundaryObject__Group__1__Impl rule__BoundaryObject__Group__2 ;
+    // InternalBomi.g:2235:1: rule__BoundaryObject__Group__1 : rule__BoundaryObject__Group__1__Impl rule__BoundaryObject__Group__2 ;
     public final void rule__BoundaryObject__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2196:1: ( rule__BoundaryObject__Group__1__Impl rule__BoundaryObject__Group__2 )
-            // InternalBomi.g:2197:2: rule__BoundaryObject__Group__1__Impl rule__BoundaryObject__Group__2
+            // InternalBomi.g:2239:1: ( rule__BoundaryObject__Group__1__Impl rule__BoundaryObject__Group__2 )
+            // InternalBomi.g:2240:2: rule__BoundaryObject__Group__1__Impl rule__BoundaryObject__Group__2
             {
             pushFollow(FOLLOW_16);
             rule__BoundaryObject__Group__1__Impl();
@@ -7029,20 +7196,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__1__Impl"
-    // InternalBomi.g:2204:1: rule__BoundaryObject__Group__1__Impl : ( 'BoundaryObject' ) ;
+    // InternalBomi.g:2247:1: rule__BoundaryObject__Group__1__Impl : ( 'BoundaryObject' ) ;
     public final void rule__BoundaryObject__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2208:1: ( ( 'BoundaryObject' ) )
-            // InternalBomi.g:2209:1: ( 'BoundaryObject' )
+            // InternalBomi.g:2251:1: ( ( 'BoundaryObject' ) )
+            // InternalBomi.g:2252:1: ( 'BoundaryObject' )
             {
-            // InternalBomi.g:2209:1: ( 'BoundaryObject' )
-            // InternalBomi.g:2210:2: 'BoundaryObject'
+            // InternalBomi.g:2252:1: ( 'BoundaryObject' )
+            // InternalBomi.g:2253:2: 'BoundaryObject'
             {
              before(grammarAccess.getBoundaryObjectAccess().getBoundaryObjectKeyword_1()); 
-            match(input,41,FOLLOW_2); 
+            match(input,43,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getBoundaryObjectKeyword_1()); 
 
             }
@@ -7066,14 +7233,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__2"
-    // InternalBomi.g:2219:1: rule__BoundaryObject__Group__2 : rule__BoundaryObject__Group__2__Impl rule__BoundaryObject__Group__3 ;
+    // InternalBomi.g:2262:1: rule__BoundaryObject__Group__2 : rule__BoundaryObject__Group__2__Impl rule__BoundaryObject__Group__3 ;
     public final void rule__BoundaryObject__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2223:1: ( rule__BoundaryObject__Group__2__Impl rule__BoundaryObject__Group__3 )
-            // InternalBomi.g:2224:2: rule__BoundaryObject__Group__2__Impl rule__BoundaryObject__Group__3
+            // InternalBomi.g:2266:1: ( rule__BoundaryObject__Group__2__Impl rule__BoundaryObject__Group__3 )
+            // InternalBomi.g:2267:2: rule__BoundaryObject__Group__2__Impl rule__BoundaryObject__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__BoundaryObject__Group__2__Impl();
@@ -7104,21 +7271,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__2__Impl"
-    // InternalBomi.g:2231:1: rule__BoundaryObject__Group__2__Impl : ( ( rule__BoundaryObject__NameAssignment_2 ) ) ;
+    // InternalBomi.g:2274:1: rule__BoundaryObject__Group__2__Impl : ( ( rule__BoundaryObject__NameAssignment_2 ) ) ;
     public final void rule__BoundaryObject__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2235:1: ( ( ( rule__BoundaryObject__NameAssignment_2 ) ) )
-            // InternalBomi.g:2236:1: ( ( rule__BoundaryObject__NameAssignment_2 ) )
+            // InternalBomi.g:2278:1: ( ( ( rule__BoundaryObject__NameAssignment_2 ) ) )
+            // InternalBomi.g:2279:1: ( ( rule__BoundaryObject__NameAssignment_2 ) )
             {
-            // InternalBomi.g:2236:1: ( ( rule__BoundaryObject__NameAssignment_2 ) )
-            // InternalBomi.g:2237:2: ( rule__BoundaryObject__NameAssignment_2 )
+            // InternalBomi.g:2279:1: ( ( rule__BoundaryObject__NameAssignment_2 ) )
+            // InternalBomi.g:2280:2: ( rule__BoundaryObject__NameAssignment_2 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getNameAssignment_2()); 
-            // InternalBomi.g:2238:2: ( rule__BoundaryObject__NameAssignment_2 )
-            // InternalBomi.g:2238:3: rule__BoundaryObject__NameAssignment_2
+            // InternalBomi.g:2281:2: ( rule__BoundaryObject__NameAssignment_2 )
+            // InternalBomi.g:2281:3: rule__BoundaryObject__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__NameAssignment_2();
@@ -7151,14 +7318,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__3"
-    // InternalBomi.g:2246:1: rule__BoundaryObject__Group__3 : rule__BoundaryObject__Group__3__Impl rule__BoundaryObject__Group__4 ;
+    // InternalBomi.g:2289:1: rule__BoundaryObject__Group__3 : rule__BoundaryObject__Group__3__Impl rule__BoundaryObject__Group__4 ;
     public final void rule__BoundaryObject__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2250:1: ( rule__BoundaryObject__Group__3__Impl rule__BoundaryObject__Group__4 )
-            // InternalBomi.g:2251:2: rule__BoundaryObject__Group__3__Impl rule__BoundaryObject__Group__4
+            // InternalBomi.g:2293:1: ( rule__BoundaryObject__Group__3__Impl rule__BoundaryObject__Group__4 )
+            // InternalBomi.g:2294:2: rule__BoundaryObject__Group__3__Impl rule__BoundaryObject__Group__4
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__3__Impl();
@@ -7189,20 +7356,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__3__Impl"
-    // InternalBomi.g:2258:1: rule__BoundaryObject__Group__3__Impl : ( '{' ) ;
+    // InternalBomi.g:2301:1: rule__BoundaryObject__Group__3__Impl : ( '{' ) ;
     public final void rule__BoundaryObject__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2262:1: ( ( '{' ) )
-            // InternalBomi.g:2263:1: ( '{' )
+            // InternalBomi.g:2305:1: ( ( '{' ) )
+            // InternalBomi.g:2306:1: ( '{' )
             {
-            // InternalBomi.g:2263:1: ( '{' )
-            // InternalBomi.g:2264:2: '{'
+            // InternalBomi.g:2306:1: ( '{' )
+            // InternalBomi.g:2307:2: '{'
             {
              before(grammarAccess.getBoundaryObjectAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -7226,14 +7393,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__4"
-    // InternalBomi.g:2273:1: rule__BoundaryObject__Group__4 : rule__BoundaryObject__Group__4__Impl rule__BoundaryObject__Group__5 ;
+    // InternalBomi.g:2316:1: rule__BoundaryObject__Group__4 : rule__BoundaryObject__Group__4__Impl rule__BoundaryObject__Group__5 ;
     public final void rule__BoundaryObject__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2277:1: ( rule__BoundaryObject__Group__4__Impl rule__BoundaryObject__Group__5 )
-            // InternalBomi.g:2278:2: rule__BoundaryObject__Group__4__Impl rule__BoundaryObject__Group__5
+            // InternalBomi.g:2320:1: ( rule__BoundaryObject__Group__4__Impl rule__BoundaryObject__Group__5 )
+            // InternalBomi.g:2321:2: rule__BoundaryObject__Group__4__Impl rule__BoundaryObject__Group__5
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__4__Impl();
@@ -7264,29 +7431,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__4__Impl"
-    // InternalBomi.g:2285:1: rule__BoundaryObject__Group__4__Impl : ( ( rule__BoundaryObject__Group_4__0 )? ) ;
+    // InternalBomi.g:2328:1: rule__BoundaryObject__Group__4__Impl : ( ( rule__BoundaryObject__Group_4__0 )? ) ;
     public final void rule__BoundaryObject__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2289:1: ( ( ( rule__BoundaryObject__Group_4__0 )? ) )
-            // InternalBomi.g:2290:1: ( ( rule__BoundaryObject__Group_4__0 )? )
+            // InternalBomi.g:2332:1: ( ( ( rule__BoundaryObject__Group_4__0 )? ) )
+            // InternalBomi.g:2333:1: ( ( rule__BoundaryObject__Group_4__0 )? )
             {
-            // InternalBomi.g:2290:1: ( ( rule__BoundaryObject__Group_4__0 )? )
-            // InternalBomi.g:2291:2: ( rule__BoundaryObject__Group_4__0 )?
+            // InternalBomi.g:2333:1: ( ( rule__BoundaryObject__Group_4__0 )? )
+            // InternalBomi.g:2334:2: ( rule__BoundaryObject__Group_4__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_4()); 
-            // InternalBomi.g:2292:2: ( rule__BoundaryObject__Group_4__0 )?
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // InternalBomi.g:2335:2: ( rule__BoundaryObject__Group_4__0 )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA24_0==42) ) {
-                alt24=1;
+            if ( (LA25_0==44) ) {
+                alt25=1;
             }
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
-                    // InternalBomi.g:2292:3: rule__BoundaryObject__Group_4__0
+                    // InternalBomi.g:2335:3: rule__BoundaryObject__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_4__0();
@@ -7322,14 +7489,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__5"
-    // InternalBomi.g:2300:1: rule__BoundaryObject__Group__5 : rule__BoundaryObject__Group__5__Impl rule__BoundaryObject__Group__6 ;
+    // InternalBomi.g:2343:1: rule__BoundaryObject__Group__5 : rule__BoundaryObject__Group__5__Impl rule__BoundaryObject__Group__6 ;
     public final void rule__BoundaryObject__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2304:1: ( rule__BoundaryObject__Group__5__Impl rule__BoundaryObject__Group__6 )
-            // InternalBomi.g:2305:2: rule__BoundaryObject__Group__5__Impl rule__BoundaryObject__Group__6
+            // InternalBomi.g:2347:1: ( rule__BoundaryObject__Group__5__Impl rule__BoundaryObject__Group__6 )
+            // InternalBomi.g:2348:2: rule__BoundaryObject__Group__5__Impl rule__BoundaryObject__Group__6
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__5__Impl();
@@ -7360,29 +7527,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__5__Impl"
-    // InternalBomi.g:2312:1: rule__BoundaryObject__Group__5__Impl : ( ( rule__BoundaryObject__Group_5__0 )? ) ;
+    // InternalBomi.g:2355:1: rule__BoundaryObject__Group__5__Impl : ( ( rule__BoundaryObject__Group_5__0 )? ) ;
     public final void rule__BoundaryObject__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2316:1: ( ( ( rule__BoundaryObject__Group_5__0 )? ) )
-            // InternalBomi.g:2317:1: ( ( rule__BoundaryObject__Group_5__0 )? )
+            // InternalBomi.g:2359:1: ( ( ( rule__BoundaryObject__Group_5__0 )? ) )
+            // InternalBomi.g:2360:1: ( ( rule__BoundaryObject__Group_5__0 )? )
             {
-            // InternalBomi.g:2317:1: ( ( rule__BoundaryObject__Group_5__0 )? )
-            // InternalBomi.g:2318:2: ( rule__BoundaryObject__Group_5__0 )?
+            // InternalBomi.g:2360:1: ( ( rule__BoundaryObject__Group_5__0 )? )
+            // InternalBomi.g:2361:2: ( rule__BoundaryObject__Group_5__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_5()); 
-            // InternalBomi.g:2319:2: ( rule__BoundaryObject__Group_5__0 )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // InternalBomi.g:2362:2: ( rule__BoundaryObject__Group_5__0 )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA25_0==43) ) {
-                alt25=1;
+            if ( (LA26_0==45) ) {
+                alt26=1;
             }
-            switch (alt25) {
+            switch (alt26) {
                 case 1 :
-                    // InternalBomi.g:2319:3: rule__BoundaryObject__Group_5__0
+                    // InternalBomi.g:2362:3: rule__BoundaryObject__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_5__0();
@@ -7418,14 +7585,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__6"
-    // InternalBomi.g:2327:1: rule__BoundaryObject__Group__6 : rule__BoundaryObject__Group__6__Impl rule__BoundaryObject__Group__7 ;
+    // InternalBomi.g:2370:1: rule__BoundaryObject__Group__6 : rule__BoundaryObject__Group__6__Impl rule__BoundaryObject__Group__7 ;
     public final void rule__BoundaryObject__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2331:1: ( rule__BoundaryObject__Group__6__Impl rule__BoundaryObject__Group__7 )
-            // InternalBomi.g:2332:2: rule__BoundaryObject__Group__6__Impl rule__BoundaryObject__Group__7
+            // InternalBomi.g:2374:1: ( rule__BoundaryObject__Group__6__Impl rule__BoundaryObject__Group__7 )
+            // InternalBomi.g:2375:2: rule__BoundaryObject__Group__6__Impl rule__BoundaryObject__Group__7
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__6__Impl();
@@ -7456,29 +7623,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__6__Impl"
-    // InternalBomi.g:2339:1: rule__BoundaryObject__Group__6__Impl : ( ( rule__BoundaryObject__Group_6__0 )? ) ;
+    // InternalBomi.g:2382:1: rule__BoundaryObject__Group__6__Impl : ( ( rule__BoundaryObject__Group_6__0 )? ) ;
     public final void rule__BoundaryObject__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2343:1: ( ( ( rule__BoundaryObject__Group_6__0 )? ) )
-            // InternalBomi.g:2344:1: ( ( rule__BoundaryObject__Group_6__0 )? )
+            // InternalBomi.g:2386:1: ( ( ( rule__BoundaryObject__Group_6__0 )? ) )
+            // InternalBomi.g:2387:1: ( ( rule__BoundaryObject__Group_6__0 )? )
             {
-            // InternalBomi.g:2344:1: ( ( rule__BoundaryObject__Group_6__0 )? )
-            // InternalBomi.g:2345:2: ( rule__BoundaryObject__Group_6__0 )?
+            // InternalBomi.g:2387:1: ( ( rule__BoundaryObject__Group_6__0 )? )
+            // InternalBomi.g:2388:2: ( rule__BoundaryObject__Group_6__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_6()); 
-            // InternalBomi.g:2346:2: ( rule__BoundaryObject__Group_6__0 )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // InternalBomi.g:2389:2: ( rule__BoundaryObject__Group_6__0 )?
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA26_0==44) ) {
-                alt26=1;
+            if ( (LA27_0==46) ) {
+                alt27=1;
             }
-            switch (alt26) {
+            switch (alt27) {
                 case 1 :
-                    // InternalBomi.g:2346:3: rule__BoundaryObject__Group_6__0
+                    // InternalBomi.g:2389:3: rule__BoundaryObject__Group_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_6__0();
@@ -7514,14 +7681,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__7"
-    // InternalBomi.g:2354:1: rule__BoundaryObject__Group__7 : rule__BoundaryObject__Group__7__Impl rule__BoundaryObject__Group__8 ;
+    // InternalBomi.g:2397:1: rule__BoundaryObject__Group__7 : rule__BoundaryObject__Group__7__Impl rule__BoundaryObject__Group__8 ;
     public final void rule__BoundaryObject__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2358:1: ( rule__BoundaryObject__Group__7__Impl rule__BoundaryObject__Group__8 )
-            // InternalBomi.g:2359:2: rule__BoundaryObject__Group__7__Impl rule__BoundaryObject__Group__8
+            // InternalBomi.g:2401:1: ( rule__BoundaryObject__Group__7__Impl rule__BoundaryObject__Group__8 )
+            // InternalBomi.g:2402:2: rule__BoundaryObject__Group__7__Impl rule__BoundaryObject__Group__8
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__7__Impl();
@@ -7552,29 +7719,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__7__Impl"
-    // InternalBomi.g:2366:1: rule__BoundaryObject__Group__7__Impl : ( ( rule__BoundaryObject__Group_7__0 )? ) ;
+    // InternalBomi.g:2409:1: rule__BoundaryObject__Group__7__Impl : ( ( rule__BoundaryObject__Group_7__0 )? ) ;
     public final void rule__BoundaryObject__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2370:1: ( ( ( rule__BoundaryObject__Group_7__0 )? ) )
-            // InternalBomi.g:2371:1: ( ( rule__BoundaryObject__Group_7__0 )? )
+            // InternalBomi.g:2413:1: ( ( ( rule__BoundaryObject__Group_7__0 )? ) )
+            // InternalBomi.g:2414:1: ( ( rule__BoundaryObject__Group_7__0 )? )
             {
-            // InternalBomi.g:2371:1: ( ( rule__BoundaryObject__Group_7__0 )? )
-            // InternalBomi.g:2372:2: ( rule__BoundaryObject__Group_7__0 )?
+            // InternalBomi.g:2414:1: ( ( rule__BoundaryObject__Group_7__0 )? )
+            // InternalBomi.g:2415:2: ( rule__BoundaryObject__Group_7__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_7()); 
-            // InternalBomi.g:2373:2: ( rule__BoundaryObject__Group_7__0 )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // InternalBomi.g:2416:2: ( rule__BoundaryObject__Group_7__0 )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA27_0==45) ) {
-                alt27=1;
+            if ( (LA28_0==47) ) {
+                alt28=1;
             }
-            switch (alt27) {
+            switch (alt28) {
                 case 1 :
-                    // InternalBomi.g:2373:3: rule__BoundaryObject__Group_7__0
+                    // InternalBomi.g:2416:3: rule__BoundaryObject__Group_7__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_7__0();
@@ -7610,14 +7777,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__8"
-    // InternalBomi.g:2381:1: rule__BoundaryObject__Group__8 : rule__BoundaryObject__Group__8__Impl rule__BoundaryObject__Group__9 ;
+    // InternalBomi.g:2424:1: rule__BoundaryObject__Group__8 : rule__BoundaryObject__Group__8__Impl rule__BoundaryObject__Group__9 ;
     public final void rule__BoundaryObject__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2385:1: ( rule__BoundaryObject__Group__8__Impl rule__BoundaryObject__Group__9 )
-            // InternalBomi.g:2386:2: rule__BoundaryObject__Group__8__Impl rule__BoundaryObject__Group__9
+            // InternalBomi.g:2428:1: ( rule__BoundaryObject__Group__8__Impl rule__BoundaryObject__Group__9 )
+            // InternalBomi.g:2429:2: rule__BoundaryObject__Group__8__Impl rule__BoundaryObject__Group__9
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__8__Impl();
@@ -7648,29 +7815,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__8__Impl"
-    // InternalBomi.g:2393:1: rule__BoundaryObject__Group__8__Impl : ( ( rule__BoundaryObject__Group_8__0 )? ) ;
+    // InternalBomi.g:2436:1: rule__BoundaryObject__Group__8__Impl : ( ( rule__BoundaryObject__Group_8__0 )? ) ;
     public final void rule__BoundaryObject__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2397:1: ( ( ( rule__BoundaryObject__Group_8__0 )? ) )
-            // InternalBomi.g:2398:1: ( ( rule__BoundaryObject__Group_8__0 )? )
+            // InternalBomi.g:2440:1: ( ( ( rule__BoundaryObject__Group_8__0 )? ) )
+            // InternalBomi.g:2441:1: ( ( rule__BoundaryObject__Group_8__0 )? )
             {
-            // InternalBomi.g:2398:1: ( ( rule__BoundaryObject__Group_8__0 )? )
-            // InternalBomi.g:2399:2: ( rule__BoundaryObject__Group_8__0 )?
+            // InternalBomi.g:2441:1: ( ( rule__BoundaryObject__Group_8__0 )? )
+            // InternalBomi.g:2442:2: ( rule__BoundaryObject__Group_8__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_8()); 
-            // InternalBomi.g:2400:2: ( rule__BoundaryObject__Group_8__0 )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // InternalBomi.g:2443:2: ( rule__BoundaryObject__Group_8__0 )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA28_0==46) ) {
-                alt28=1;
+            if ( (LA29_0==48) ) {
+                alt29=1;
             }
-            switch (alt28) {
+            switch (alt29) {
                 case 1 :
-                    // InternalBomi.g:2400:3: rule__BoundaryObject__Group_8__0
+                    // InternalBomi.g:2443:3: rule__BoundaryObject__Group_8__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_8__0();
@@ -7706,14 +7873,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__9"
-    // InternalBomi.g:2408:1: rule__BoundaryObject__Group__9 : rule__BoundaryObject__Group__9__Impl rule__BoundaryObject__Group__10 ;
+    // InternalBomi.g:2451:1: rule__BoundaryObject__Group__9 : rule__BoundaryObject__Group__9__Impl rule__BoundaryObject__Group__10 ;
     public final void rule__BoundaryObject__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2412:1: ( rule__BoundaryObject__Group__9__Impl rule__BoundaryObject__Group__10 )
-            // InternalBomi.g:2413:2: rule__BoundaryObject__Group__9__Impl rule__BoundaryObject__Group__10
+            // InternalBomi.g:2455:1: ( rule__BoundaryObject__Group__9__Impl rule__BoundaryObject__Group__10 )
+            // InternalBomi.g:2456:2: rule__BoundaryObject__Group__9__Impl rule__BoundaryObject__Group__10
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__9__Impl();
@@ -7744,29 +7911,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__9__Impl"
-    // InternalBomi.g:2420:1: rule__BoundaryObject__Group__9__Impl : ( ( rule__BoundaryObject__Group_9__0 )? ) ;
+    // InternalBomi.g:2463:1: rule__BoundaryObject__Group__9__Impl : ( ( rule__BoundaryObject__Group_9__0 )? ) ;
     public final void rule__BoundaryObject__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2424:1: ( ( ( rule__BoundaryObject__Group_9__0 )? ) )
-            // InternalBomi.g:2425:1: ( ( rule__BoundaryObject__Group_9__0 )? )
+            // InternalBomi.g:2467:1: ( ( ( rule__BoundaryObject__Group_9__0 )? ) )
+            // InternalBomi.g:2468:1: ( ( rule__BoundaryObject__Group_9__0 )? )
             {
-            // InternalBomi.g:2425:1: ( ( rule__BoundaryObject__Group_9__0 )? )
-            // InternalBomi.g:2426:2: ( rule__BoundaryObject__Group_9__0 )?
+            // InternalBomi.g:2468:1: ( ( rule__BoundaryObject__Group_9__0 )? )
+            // InternalBomi.g:2469:2: ( rule__BoundaryObject__Group_9__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_9()); 
-            // InternalBomi.g:2427:2: ( rule__BoundaryObject__Group_9__0 )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // InternalBomi.g:2470:2: ( rule__BoundaryObject__Group_9__0 )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA29_0==47) ) {
-                alt29=1;
+            if ( (LA30_0==49) ) {
+                alt30=1;
             }
-            switch (alt29) {
+            switch (alt30) {
                 case 1 :
-                    // InternalBomi.g:2427:3: rule__BoundaryObject__Group_9__0
+                    // InternalBomi.g:2470:3: rule__BoundaryObject__Group_9__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_9__0();
@@ -7802,14 +7969,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__10"
-    // InternalBomi.g:2435:1: rule__BoundaryObject__Group__10 : rule__BoundaryObject__Group__10__Impl rule__BoundaryObject__Group__11 ;
+    // InternalBomi.g:2478:1: rule__BoundaryObject__Group__10 : rule__BoundaryObject__Group__10__Impl rule__BoundaryObject__Group__11 ;
     public final void rule__BoundaryObject__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2439:1: ( rule__BoundaryObject__Group__10__Impl rule__BoundaryObject__Group__11 )
-            // InternalBomi.g:2440:2: rule__BoundaryObject__Group__10__Impl rule__BoundaryObject__Group__11
+            // InternalBomi.g:2482:1: ( rule__BoundaryObject__Group__10__Impl rule__BoundaryObject__Group__11 )
+            // InternalBomi.g:2483:2: rule__BoundaryObject__Group__10__Impl rule__BoundaryObject__Group__11
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__10__Impl();
@@ -7840,29 +8007,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__10__Impl"
-    // InternalBomi.g:2447:1: rule__BoundaryObject__Group__10__Impl : ( ( rule__BoundaryObject__Group_10__0 )? ) ;
+    // InternalBomi.g:2490:1: rule__BoundaryObject__Group__10__Impl : ( ( rule__BoundaryObject__Group_10__0 )? ) ;
     public final void rule__BoundaryObject__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2451:1: ( ( ( rule__BoundaryObject__Group_10__0 )? ) )
-            // InternalBomi.g:2452:1: ( ( rule__BoundaryObject__Group_10__0 )? )
+            // InternalBomi.g:2494:1: ( ( ( rule__BoundaryObject__Group_10__0 )? ) )
+            // InternalBomi.g:2495:1: ( ( rule__BoundaryObject__Group_10__0 )? )
             {
-            // InternalBomi.g:2452:1: ( ( rule__BoundaryObject__Group_10__0 )? )
-            // InternalBomi.g:2453:2: ( rule__BoundaryObject__Group_10__0 )?
+            // InternalBomi.g:2495:1: ( ( rule__BoundaryObject__Group_10__0 )? )
+            // InternalBomi.g:2496:2: ( rule__BoundaryObject__Group_10__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_10()); 
-            // InternalBomi.g:2454:2: ( rule__BoundaryObject__Group_10__0 )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // InternalBomi.g:2497:2: ( rule__BoundaryObject__Group_10__0 )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA30_0==48) ) {
-                alt30=1;
+            if ( (LA31_0==50) ) {
+                alt31=1;
             }
-            switch (alt30) {
+            switch (alt31) {
                 case 1 :
-                    // InternalBomi.g:2454:3: rule__BoundaryObject__Group_10__0
+                    // InternalBomi.g:2497:3: rule__BoundaryObject__Group_10__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_10__0();
@@ -7898,14 +8065,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__11"
-    // InternalBomi.g:2462:1: rule__BoundaryObject__Group__11 : rule__BoundaryObject__Group__11__Impl rule__BoundaryObject__Group__12 ;
+    // InternalBomi.g:2505:1: rule__BoundaryObject__Group__11 : rule__BoundaryObject__Group__11__Impl rule__BoundaryObject__Group__12 ;
     public final void rule__BoundaryObject__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2466:1: ( rule__BoundaryObject__Group__11__Impl rule__BoundaryObject__Group__12 )
-            // InternalBomi.g:2467:2: rule__BoundaryObject__Group__11__Impl rule__BoundaryObject__Group__12
+            // InternalBomi.g:2509:1: ( rule__BoundaryObject__Group__11__Impl rule__BoundaryObject__Group__12 )
+            // InternalBomi.g:2510:2: rule__BoundaryObject__Group__11__Impl rule__BoundaryObject__Group__12
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__11__Impl();
@@ -7936,29 +8103,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__11__Impl"
-    // InternalBomi.g:2474:1: rule__BoundaryObject__Group__11__Impl : ( ( rule__BoundaryObject__Group_11__0 )? ) ;
+    // InternalBomi.g:2517:1: rule__BoundaryObject__Group__11__Impl : ( ( rule__BoundaryObject__Group_11__0 )? ) ;
     public final void rule__BoundaryObject__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2478:1: ( ( ( rule__BoundaryObject__Group_11__0 )? ) )
-            // InternalBomi.g:2479:1: ( ( rule__BoundaryObject__Group_11__0 )? )
+            // InternalBomi.g:2521:1: ( ( ( rule__BoundaryObject__Group_11__0 )? ) )
+            // InternalBomi.g:2522:1: ( ( rule__BoundaryObject__Group_11__0 )? )
             {
-            // InternalBomi.g:2479:1: ( ( rule__BoundaryObject__Group_11__0 )? )
-            // InternalBomi.g:2480:2: ( rule__BoundaryObject__Group_11__0 )?
+            // InternalBomi.g:2522:1: ( ( rule__BoundaryObject__Group_11__0 )? )
+            // InternalBomi.g:2523:2: ( rule__BoundaryObject__Group_11__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_11()); 
-            // InternalBomi.g:2481:2: ( rule__BoundaryObject__Group_11__0 )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // InternalBomi.g:2524:2: ( rule__BoundaryObject__Group_11__0 )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA31_0==49) ) {
-                alt31=1;
+            if ( (LA32_0==51) ) {
+                alt32=1;
             }
-            switch (alt31) {
+            switch (alt32) {
                 case 1 :
-                    // InternalBomi.g:2481:3: rule__BoundaryObject__Group_11__0
+                    // InternalBomi.g:2524:3: rule__BoundaryObject__Group_11__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_11__0();
@@ -7994,14 +8161,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__12"
-    // InternalBomi.g:2489:1: rule__BoundaryObject__Group__12 : rule__BoundaryObject__Group__12__Impl rule__BoundaryObject__Group__13 ;
+    // InternalBomi.g:2532:1: rule__BoundaryObject__Group__12 : rule__BoundaryObject__Group__12__Impl rule__BoundaryObject__Group__13 ;
     public final void rule__BoundaryObject__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2493:1: ( rule__BoundaryObject__Group__12__Impl rule__BoundaryObject__Group__13 )
-            // InternalBomi.g:2494:2: rule__BoundaryObject__Group__12__Impl rule__BoundaryObject__Group__13
+            // InternalBomi.g:2536:1: ( rule__BoundaryObject__Group__12__Impl rule__BoundaryObject__Group__13 )
+            // InternalBomi.g:2537:2: rule__BoundaryObject__Group__12__Impl rule__BoundaryObject__Group__13
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__12__Impl();
@@ -8032,29 +8199,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__12__Impl"
-    // InternalBomi.g:2501:1: rule__BoundaryObject__Group__12__Impl : ( ( rule__BoundaryObject__Group_12__0 )? ) ;
+    // InternalBomi.g:2544:1: rule__BoundaryObject__Group__12__Impl : ( ( rule__BoundaryObject__Group_12__0 )? ) ;
     public final void rule__BoundaryObject__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2505:1: ( ( ( rule__BoundaryObject__Group_12__0 )? ) )
-            // InternalBomi.g:2506:1: ( ( rule__BoundaryObject__Group_12__0 )? )
+            // InternalBomi.g:2548:1: ( ( ( rule__BoundaryObject__Group_12__0 )? ) )
+            // InternalBomi.g:2549:1: ( ( rule__BoundaryObject__Group_12__0 )? )
             {
-            // InternalBomi.g:2506:1: ( ( rule__BoundaryObject__Group_12__0 )? )
-            // InternalBomi.g:2507:2: ( rule__BoundaryObject__Group_12__0 )?
+            // InternalBomi.g:2549:1: ( ( rule__BoundaryObject__Group_12__0 )? )
+            // InternalBomi.g:2550:2: ( rule__BoundaryObject__Group_12__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_12()); 
-            // InternalBomi.g:2508:2: ( rule__BoundaryObject__Group_12__0 )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // InternalBomi.g:2551:2: ( rule__BoundaryObject__Group_12__0 )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA32_0==50) ) {
-                alt32=1;
+            if ( (LA33_0==52) ) {
+                alt33=1;
             }
-            switch (alt32) {
+            switch (alt33) {
                 case 1 :
-                    // InternalBomi.g:2508:3: rule__BoundaryObject__Group_12__0
+                    // InternalBomi.g:2551:3: rule__BoundaryObject__Group_12__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_12__0();
@@ -8090,14 +8257,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__13"
-    // InternalBomi.g:2516:1: rule__BoundaryObject__Group__13 : rule__BoundaryObject__Group__13__Impl rule__BoundaryObject__Group__14 ;
+    // InternalBomi.g:2559:1: rule__BoundaryObject__Group__13 : rule__BoundaryObject__Group__13__Impl rule__BoundaryObject__Group__14 ;
     public final void rule__BoundaryObject__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2520:1: ( rule__BoundaryObject__Group__13__Impl rule__BoundaryObject__Group__14 )
-            // InternalBomi.g:2521:2: rule__BoundaryObject__Group__13__Impl rule__BoundaryObject__Group__14
+            // InternalBomi.g:2563:1: ( rule__BoundaryObject__Group__13__Impl rule__BoundaryObject__Group__14 )
+            // InternalBomi.g:2564:2: rule__BoundaryObject__Group__13__Impl rule__BoundaryObject__Group__14
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__13__Impl();
@@ -8128,29 +8295,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__13__Impl"
-    // InternalBomi.g:2528:1: rule__BoundaryObject__Group__13__Impl : ( ( rule__BoundaryObject__Group_13__0 )? ) ;
+    // InternalBomi.g:2571:1: rule__BoundaryObject__Group__13__Impl : ( ( rule__BoundaryObject__Group_13__0 )? ) ;
     public final void rule__BoundaryObject__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2532:1: ( ( ( rule__BoundaryObject__Group_13__0 )? ) )
-            // InternalBomi.g:2533:1: ( ( rule__BoundaryObject__Group_13__0 )? )
+            // InternalBomi.g:2575:1: ( ( ( rule__BoundaryObject__Group_13__0 )? ) )
+            // InternalBomi.g:2576:1: ( ( rule__BoundaryObject__Group_13__0 )? )
             {
-            // InternalBomi.g:2533:1: ( ( rule__BoundaryObject__Group_13__0 )? )
-            // InternalBomi.g:2534:2: ( rule__BoundaryObject__Group_13__0 )?
+            // InternalBomi.g:2576:1: ( ( rule__BoundaryObject__Group_13__0 )? )
+            // InternalBomi.g:2577:2: ( rule__BoundaryObject__Group_13__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_13()); 
-            // InternalBomi.g:2535:2: ( rule__BoundaryObject__Group_13__0 )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // InternalBomi.g:2578:2: ( rule__BoundaryObject__Group_13__0 )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA33_0==51) ) {
-                alt33=1;
+            if ( (LA34_0==53) ) {
+                alt34=1;
             }
-            switch (alt33) {
+            switch (alt34) {
                 case 1 :
-                    // InternalBomi.g:2535:3: rule__BoundaryObject__Group_13__0
+                    // InternalBomi.g:2578:3: rule__BoundaryObject__Group_13__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_13__0();
@@ -8186,14 +8353,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__14"
-    // InternalBomi.g:2543:1: rule__BoundaryObject__Group__14 : rule__BoundaryObject__Group__14__Impl rule__BoundaryObject__Group__15 ;
+    // InternalBomi.g:2586:1: rule__BoundaryObject__Group__14 : rule__BoundaryObject__Group__14__Impl rule__BoundaryObject__Group__15 ;
     public final void rule__BoundaryObject__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2547:1: ( rule__BoundaryObject__Group__14__Impl rule__BoundaryObject__Group__15 )
-            // InternalBomi.g:2548:2: rule__BoundaryObject__Group__14__Impl rule__BoundaryObject__Group__15
+            // InternalBomi.g:2590:1: ( rule__BoundaryObject__Group__14__Impl rule__BoundaryObject__Group__15 )
+            // InternalBomi.g:2591:2: rule__BoundaryObject__Group__14__Impl rule__BoundaryObject__Group__15
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__14__Impl();
@@ -8224,29 +8391,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__14__Impl"
-    // InternalBomi.g:2555:1: rule__BoundaryObject__Group__14__Impl : ( ( rule__BoundaryObject__Group_14__0 )? ) ;
+    // InternalBomi.g:2598:1: rule__BoundaryObject__Group__14__Impl : ( ( rule__BoundaryObject__Group_14__0 )? ) ;
     public final void rule__BoundaryObject__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2559:1: ( ( ( rule__BoundaryObject__Group_14__0 )? ) )
-            // InternalBomi.g:2560:1: ( ( rule__BoundaryObject__Group_14__0 )? )
+            // InternalBomi.g:2602:1: ( ( ( rule__BoundaryObject__Group_14__0 )? ) )
+            // InternalBomi.g:2603:1: ( ( rule__BoundaryObject__Group_14__0 )? )
             {
-            // InternalBomi.g:2560:1: ( ( rule__BoundaryObject__Group_14__0 )? )
-            // InternalBomi.g:2561:2: ( rule__BoundaryObject__Group_14__0 )?
+            // InternalBomi.g:2603:1: ( ( rule__BoundaryObject__Group_14__0 )? )
+            // InternalBomi.g:2604:2: ( rule__BoundaryObject__Group_14__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_14()); 
-            // InternalBomi.g:2562:2: ( rule__BoundaryObject__Group_14__0 )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // InternalBomi.g:2605:2: ( rule__BoundaryObject__Group_14__0 )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA34_0==52) ) {
-                alt34=1;
+            if ( (LA35_0==54) ) {
+                alt35=1;
             }
-            switch (alt34) {
+            switch (alt35) {
                 case 1 :
-                    // InternalBomi.g:2562:3: rule__BoundaryObject__Group_14__0
+                    // InternalBomi.g:2605:3: rule__BoundaryObject__Group_14__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_14__0();
@@ -8282,14 +8449,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__15"
-    // InternalBomi.g:2570:1: rule__BoundaryObject__Group__15 : rule__BoundaryObject__Group__15__Impl rule__BoundaryObject__Group__16 ;
+    // InternalBomi.g:2613:1: rule__BoundaryObject__Group__15 : rule__BoundaryObject__Group__15__Impl rule__BoundaryObject__Group__16 ;
     public final void rule__BoundaryObject__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2574:1: ( rule__BoundaryObject__Group__15__Impl rule__BoundaryObject__Group__16 )
-            // InternalBomi.g:2575:2: rule__BoundaryObject__Group__15__Impl rule__BoundaryObject__Group__16
+            // InternalBomi.g:2617:1: ( rule__BoundaryObject__Group__15__Impl rule__BoundaryObject__Group__16 )
+            // InternalBomi.g:2618:2: rule__BoundaryObject__Group__15__Impl rule__BoundaryObject__Group__16
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__15__Impl();
@@ -8320,29 +8487,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__15__Impl"
-    // InternalBomi.g:2582:1: rule__BoundaryObject__Group__15__Impl : ( ( rule__BoundaryObject__Group_15__0 )? ) ;
+    // InternalBomi.g:2625:1: rule__BoundaryObject__Group__15__Impl : ( ( rule__BoundaryObject__Group_15__0 )? ) ;
     public final void rule__BoundaryObject__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2586:1: ( ( ( rule__BoundaryObject__Group_15__0 )? ) )
-            // InternalBomi.g:2587:1: ( ( rule__BoundaryObject__Group_15__0 )? )
+            // InternalBomi.g:2629:1: ( ( ( rule__BoundaryObject__Group_15__0 )? ) )
+            // InternalBomi.g:2630:1: ( ( rule__BoundaryObject__Group_15__0 )? )
             {
-            // InternalBomi.g:2587:1: ( ( rule__BoundaryObject__Group_15__0 )? )
-            // InternalBomi.g:2588:2: ( rule__BoundaryObject__Group_15__0 )?
+            // InternalBomi.g:2630:1: ( ( rule__BoundaryObject__Group_15__0 )? )
+            // InternalBomi.g:2631:2: ( rule__BoundaryObject__Group_15__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_15()); 
-            // InternalBomi.g:2589:2: ( rule__BoundaryObject__Group_15__0 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // InternalBomi.g:2632:2: ( rule__BoundaryObject__Group_15__0 )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA35_0==53) ) {
-                alt35=1;
+            if ( (LA36_0==55) ) {
+                alt36=1;
             }
-            switch (alt35) {
+            switch (alt36) {
                 case 1 :
-                    // InternalBomi.g:2589:3: rule__BoundaryObject__Group_15__0
+                    // InternalBomi.g:2632:3: rule__BoundaryObject__Group_15__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_15__0();
@@ -8378,14 +8545,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__16"
-    // InternalBomi.g:2597:1: rule__BoundaryObject__Group__16 : rule__BoundaryObject__Group__16__Impl rule__BoundaryObject__Group__17 ;
+    // InternalBomi.g:2640:1: rule__BoundaryObject__Group__16 : rule__BoundaryObject__Group__16__Impl rule__BoundaryObject__Group__17 ;
     public final void rule__BoundaryObject__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2601:1: ( rule__BoundaryObject__Group__16__Impl rule__BoundaryObject__Group__17 )
-            // InternalBomi.g:2602:2: rule__BoundaryObject__Group__16__Impl rule__BoundaryObject__Group__17
+            // InternalBomi.g:2644:1: ( rule__BoundaryObject__Group__16__Impl rule__BoundaryObject__Group__17 )
+            // InternalBomi.g:2645:2: rule__BoundaryObject__Group__16__Impl rule__BoundaryObject__Group__17
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__16__Impl();
@@ -8416,29 +8583,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__16__Impl"
-    // InternalBomi.g:2609:1: rule__BoundaryObject__Group__16__Impl : ( ( rule__BoundaryObject__Group_16__0 )? ) ;
+    // InternalBomi.g:2652:1: rule__BoundaryObject__Group__16__Impl : ( ( rule__BoundaryObject__Group_16__0 )? ) ;
     public final void rule__BoundaryObject__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2613:1: ( ( ( rule__BoundaryObject__Group_16__0 )? ) )
-            // InternalBomi.g:2614:1: ( ( rule__BoundaryObject__Group_16__0 )? )
+            // InternalBomi.g:2656:1: ( ( ( rule__BoundaryObject__Group_16__0 )? ) )
+            // InternalBomi.g:2657:1: ( ( rule__BoundaryObject__Group_16__0 )? )
             {
-            // InternalBomi.g:2614:1: ( ( rule__BoundaryObject__Group_16__0 )? )
-            // InternalBomi.g:2615:2: ( rule__BoundaryObject__Group_16__0 )?
+            // InternalBomi.g:2657:1: ( ( rule__BoundaryObject__Group_16__0 )? )
+            // InternalBomi.g:2658:2: ( rule__BoundaryObject__Group_16__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_16()); 
-            // InternalBomi.g:2616:2: ( rule__BoundaryObject__Group_16__0 )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // InternalBomi.g:2659:2: ( rule__BoundaryObject__Group_16__0 )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA36_0==54) ) {
-                alt36=1;
+            if ( (LA37_0==56) ) {
+                alt37=1;
             }
-            switch (alt36) {
+            switch (alt37) {
                 case 1 :
-                    // InternalBomi.g:2616:3: rule__BoundaryObject__Group_16__0
+                    // InternalBomi.g:2659:3: rule__BoundaryObject__Group_16__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_16__0();
@@ -8474,14 +8641,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__17"
-    // InternalBomi.g:2624:1: rule__BoundaryObject__Group__17 : rule__BoundaryObject__Group__17__Impl rule__BoundaryObject__Group__18 ;
+    // InternalBomi.g:2667:1: rule__BoundaryObject__Group__17 : rule__BoundaryObject__Group__17__Impl rule__BoundaryObject__Group__18 ;
     public final void rule__BoundaryObject__Group__17() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2628:1: ( rule__BoundaryObject__Group__17__Impl rule__BoundaryObject__Group__18 )
-            // InternalBomi.g:2629:2: rule__BoundaryObject__Group__17__Impl rule__BoundaryObject__Group__18
+            // InternalBomi.g:2671:1: ( rule__BoundaryObject__Group__17__Impl rule__BoundaryObject__Group__18 )
+            // InternalBomi.g:2672:2: rule__BoundaryObject__Group__17__Impl rule__BoundaryObject__Group__18
             {
             pushFollow(FOLLOW_17);
             rule__BoundaryObject__Group__17__Impl();
@@ -8512,29 +8679,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__17__Impl"
-    // InternalBomi.g:2636:1: rule__BoundaryObject__Group__17__Impl : ( ( rule__BoundaryObject__Group_17__0 )? ) ;
+    // InternalBomi.g:2679:1: rule__BoundaryObject__Group__17__Impl : ( ( rule__BoundaryObject__Group_17__0 )? ) ;
     public final void rule__BoundaryObject__Group__17__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2640:1: ( ( ( rule__BoundaryObject__Group_17__0 )? ) )
-            // InternalBomi.g:2641:1: ( ( rule__BoundaryObject__Group_17__0 )? )
+            // InternalBomi.g:2683:1: ( ( ( rule__BoundaryObject__Group_17__0 )? ) )
+            // InternalBomi.g:2684:1: ( ( rule__BoundaryObject__Group_17__0 )? )
             {
-            // InternalBomi.g:2641:1: ( ( rule__BoundaryObject__Group_17__0 )? )
-            // InternalBomi.g:2642:2: ( rule__BoundaryObject__Group_17__0 )?
+            // InternalBomi.g:2684:1: ( ( rule__BoundaryObject__Group_17__0 )? )
+            // InternalBomi.g:2685:2: ( rule__BoundaryObject__Group_17__0 )?
             {
              before(grammarAccess.getBoundaryObjectAccess().getGroup_17()); 
-            // InternalBomi.g:2643:2: ( rule__BoundaryObject__Group_17__0 )?
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            // InternalBomi.g:2686:2: ( rule__BoundaryObject__Group_17__0 )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA37_0==55) ) {
-                alt37=1;
+            if ( (LA38_0==57) ) {
+                alt38=1;
             }
-            switch (alt37) {
+            switch (alt38) {
                 case 1 :
-                    // InternalBomi.g:2643:3: rule__BoundaryObject__Group_17__0
+                    // InternalBomi.g:2686:3: rule__BoundaryObject__Group_17__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BoundaryObject__Group_17__0();
@@ -8570,14 +8737,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__18"
-    // InternalBomi.g:2651:1: rule__BoundaryObject__Group__18 : rule__BoundaryObject__Group__18__Impl ;
+    // InternalBomi.g:2694:1: rule__BoundaryObject__Group__18 : rule__BoundaryObject__Group__18__Impl ;
     public final void rule__BoundaryObject__Group__18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2655:1: ( rule__BoundaryObject__Group__18__Impl )
-            // InternalBomi.g:2656:2: rule__BoundaryObject__Group__18__Impl
+            // InternalBomi.g:2698:1: ( rule__BoundaryObject__Group__18__Impl )
+            // InternalBomi.g:2699:2: rule__BoundaryObject__Group__18__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group__18__Impl();
@@ -8603,20 +8770,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group__18__Impl"
-    // InternalBomi.g:2662:1: rule__BoundaryObject__Group__18__Impl : ( '}' ) ;
+    // InternalBomi.g:2705:1: rule__BoundaryObject__Group__18__Impl : ( '}' ) ;
     public final void rule__BoundaryObject__Group__18__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2666:1: ( ( '}' ) )
-            // InternalBomi.g:2667:1: ( '}' )
+            // InternalBomi.g:2709:1: ( ( '}' ) )
+            // InternalBomi.g:2710:1: ( '}' )
             {
-            // InternalBomi.g:2667:1: ( '}' )
-            // InternalBomi.g:2668:2: '}'
+            // InternalBomi.g:2710:1: ( '}' )
+            // InternalBomi.g:2711:2: '}'
             {
              before(grammarAccess.getBoundaryObjectAccess().getRightCurlyBracketKeyword_18()); 
-            match(input,35,FOLLOW_2); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getRightCurlyBracketKeyword_18()); 
 
             }
@@ -8640,14 +8807,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_4__0"
-    // InternalBomi.g:2678:1: rule__BoundaryObject__Group_4__0 : rule__BoundaryObject__Group_4__0__Impl rule__BoundaryObject__Group_4__1 ;
+    // InternalBomi.g:2721:1: rule__BoundaryObject__Group_4__0 : rule__BoundaryObject__Group_4__0__Impl rule__BoundaryObject__Group_4__1 ;
     public final void rule__BoundaryObject__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2682:1: ( rule__BoundaryObject__Group_4__0__Impl rule__BoundaryObject__Group_4__1 )
-            // InternalBomi.g:2683:2: rule__BoundaryObject__Group_4__0__Impl rule__BoundaryObject__Group_4__1
+            // InternalBomi.g:2725:1: ( rule__BoundaryObject__Group_4__0__Impl rule__BoundaryObject__Group_4__1 )
+            // InternalBomi.g:2726:2: rule__BoundaryObject__Group_4__0__Impl rule__BoundaryObject__Group_4__1
             {
             pushFollow(FOLLOW_18);
             rule__BoundaryObject__Group_4__0__Impl();
@@ -8678,20 +8845,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_4__0__Impl"
-    // InternalBomi.g:2690:1: rule__BoundaryObject__Group_4__0__Impl : ( 'superType' ) ;
+    // InternalBomi.g:2733:1: rule__BoundaryObject__Group_4__0__Impl : ( 'superType' ) ;
     public final void rule__BoundaryObject__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2694:1: ( ( 'superType' ) )
-            // InternalBomi.g:2695:1: ( 'superType' )
+            // InternalBomi.g:2737:1: ( ( 'superType' ) )
+            // InternalBomi.g:2738:1: ( 'superType' )
             {
-            // InternalBomi.g:2695:1: ( 'superType' )
-            // InternalBomi.g:2696:2: 'superType'
+            // InternalBomi.g:2738:1: ( 'superType' )
+            // InternalBomi.g:2739:2: 'superType'
             {
              before(grammarAccess.getBoundaryObjectAccess().getSuperTypeKeyword_4_0()); 
-            match(input,42,FOLLOW_2); 
+            match(input,44,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getSuperTypeKeyword_4_0()); 
 
             }
@@ -8715,14 +8882,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_4__1"
-    // InternalBomi.g:2705:1: rule__BoundaryObject__Group_4__1 : rule__BoundaryObject__Group_4__1__Impl ;
+    // InternalBomi.g:2748:1: rule__BoundaryObject__Group_4__1 : rule__BoundaryObject__Group_4__1__Impl ;
     public final void rule__BoundaryObject__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2709:1: ( rule__BoundaryObject__Group_4__1__Impl )
-            // InternalBomi.g:2710:2: rule__BoundaryObject__Group_4__1__Impl
+            // InternalBomi.g:2752:1: ( rule__BoundaryObject__Group_4__1__Impl )
+            // InternalBomi.g:2753:2: rule__BoundaryObject__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_4__1__Impl();
@@ -8748,21 +8915,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_4__1__Impl"
-    // InternalBomi.g:2716:1: rule__BoundaryObject__Group_4__1__Impl : ( ( rule__BoundaryObject__SuperTypeAssignment_4_1 ) ) ;
+    // InternalBomi.g:2759:1: rule__BoundaryObject__Group_4__1__Impl : ( ( rule__BoundaryObject__SuperTypeAssignment_4_1 ) ) ;
     public final void rule__BoundaryObject__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2720:1: ( ( ( rule__BoundaryObject__SuperTypeAssignment_4_1 ) ) )
-            // InternalBomi.g:2721:1: ( ( rule__BoundaryObject__SuperTypeAssignment_4_1 ) )
+            // InternalBomi.g:2763:1: ( ( ( rule__BoundaryObject__SuperTypeAssignment_4_1 ) ) )
+            // InternalBomi.g:2764:1: ( ( rule__BoundaryObject__SuperTypeAssignment_4_1 ) )
             {
-            // InternalBomi.g:2721:1: ( ( rule__BoundaryObject__SuperTypeAssignment_4_1 ) )
-            // InternalBomi.g:2722:2: ( rule__BoundaryObject__SuperTypeAssignment_4_1 )
+            // InternalBomi.g:2764:1: ( ( rule__BoundaryObject__SuperTypeAssignment_4_1 ) )
+            // InternalBomi.g:2765:2: ( rule__BoundaryObject__SuperTypeAssignment_4_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getSuperTypeAssignment_4_1()); 
-            // InternalBomi.g:2723:2: ( rule__BoundaryObject__SuperTypeAssignment_4_1 )
-            // InternalBomi.g:2723:3: rule__BoundaryObject__SuperTypeAssignment_4_1
+            // InternalBomi.g:2766:2: ( rule__BoundaryObject__SuperTypeAssignment_4_1 )
+            // InternalBomi.g:2766:3: rule__BoundaryObject__SuperTypeAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__SuperTypeAssignment_4_1();
@@ -8795,14 +8962,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_5__0"
-    // InternalBomi.g:2732:1: rule__BoundaryObject__Group_5__0 : rule__BoundaryObject__Group_5__0__Impl rule__BoundaryObject__Group_5__1 ;
+    // InternalBomi.g:2775:1: rule__BoundaryObject__Group_5__0 : rule__BoundaryObject__Group_5__0__Impl rule__BoundaryObject__Group_5__1 ;
     public final void rule__BoundaryObject__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2736:1: ( rule__BoundaryObject__Group_5__0__Impl rule__BoundaryObject__Group_5__1 )
-            // InternalBomi.g:2737:2: rule__BoundaryObject__Group_5__0__Impl rule__BoundaryObject__Group_5__1
+            // InternalBomi.g:2779:1: ( rule__BoundaryObject__Group_5__0__Impl rule__BoundaryObject__Group_5__1 )
+            // InternalBomi.g:2780:2: rule__BoundaryObject__Group_5__0__Impl rule__BoundaryObject__Group_5__1
             {
             pushFollow(FOLLOW_16);
             rule__BoundaryObject__Group_5__0__Impl();
@@ -8833,20 +9000,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_5__0__Impl"
-    // InternalBomi.g:2744:1: rule__BoundaryObject__Group_5__0__Impl : ( 'purpose' ) ;
+    // InternalBomi.g:2787:1: rule__BoundaryObject__Group_5__0__Impl : ( 'purpose' ) ;
     public final void rule__BoundaryObject__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2748:1: ( ( 'purpose' ) )
-            // InternalBomi.g:2749:1: ( 'purpose' )
+            // InternalBomi.g:2791:1: ( ( 'purpose' ) )
+            // InternalBomi.g:2792:1: ( 'purpose' )
             {
-            // InternalBomi.g:2749:1: ( 'purpose' )
-            // InternalBomi.g:2750:2: 'purpose'
+            // InternalBomi.g:2792:1: ( 'purpose' )
+            // InternalBomi.g:2793:2: 'purpose'
             {
              before(grammarAccess.getBoundaryObjectAccess().getPurposeKeyword_5_0()); 
-            match(input,43,FOLLOW_2); 
+            match(input,45,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getPurposeKeyword_5_0()); 
 
             }
@@ -8870,14 +9037,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_5__1"
-    // InternalBomi.g:2759:1: rule__BoundaryObject__Group_5__1 : rule__BoundaryObject__Group_5__1__Impl ;
+    // InternalBomi.g:2802:1: rule__BoundaryObject__Group_5__1 : rule__BoundaryObject__Group_5__1__Impl ;
     public final void rule__BoundaryObject__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2763:1: ( rule__BoundaryObject__Group_5__1__Impl )
-            // InternalBomi.g:2764:2: rule__BoundaryObject__Group_5__1__Impl
+            // InternalBomi.g:2806:1: ( rule__BoundaryObject__Group_5__1__Impl )
+            // InternalBomi.g:2807:2: rule__BoundaryObject__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_5__1__Impl();
@@ -8903,21 +9070,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_5__1__Impl"
-    // InternalBomi.g:2770:1: rule__BoundaryObject__Group_5__1__Impl : ( ( rule__BoundaryObject__PurposeAssignment_5_1 ) ) ;
+    // InternalBomi.g:2813:1: rule__BoundaryObject__Group_5__1__Impl : ( ( rule__BoundaryObject__PurposeAssignment_5_1 ) ) ;
     public final void rule__BoundaryObject__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2774:1: ( ( ( rule__BoundaryObject__PurposeAssignment_5_1 ) ) )
-            // InternalBomi.g:2775:1: ( ( rule__BoundaryObject__PurposeAssignment_5_1 ) )
+            // InternalBomi.g:2817:1: ( ( ( rule__BoundaryObject__PurposeAssignment_5_1 ) ) )
+            // InternalBomi.g:2818:1: ( ( rule__BoundaryObject__PurposeAssignment_5_1 ) )
             {
-            // InternalBomi.g:2775:1: ( ( rule__BoundaryObject__PurposeAssignment_5_1 ) )
-            // InternalBomi.g:2776:2: ( rule__BoundaryObject__PurposeAssignment_5_1 )
+            // InternalBomi.g:2818:1: ( ( rule__BoundaryObject__PurposeAssignment_5_1 ) )
+            // InternalBomi.g:2819:2: ( rule__BoundaryObject__PurposeAssignment_5_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getPurposeAssignment_5_1()); 
-            // InternalBomi.g:2777:2: ( rule__BoundaryObject__PurposeAssignment_5_1 )
-            // InternalBomi.g:2777:3: rule__BoundaryObject__PurposeAssignment_5_1
+            // InternalBomi.g:2820:2: ( rule__BoundaryObject__PurposeAssignment_5_1 )
+            // InternalBomi.g:2820:3: rule__BoundaryObject__PurposeAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__PurposeAssignment_5_1();
@@ -8950,14 +9117,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_6__0"
-    // InternalBomi.g:2786:1: rule__BoundaryObject__Group_6__0 : rule__BoundaryObject__Group_6__0__Impl rule__BoundaryObject__Group_6__1 ;
+    // InternalBomi.g:2829:1: rule__BoundaryObject__Group_6__0 : rule__BoundaryObject__Group_6__0__Impl rule__BoundaryObject__Group_6__1 ;
     public final void rule__BoundaryObject__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2790:1: ( rule__BoundaryObject__Group_6__0__Impl rule__BoundaryObject__Group_6__1 )
-            // InternalBomi.g:2791:2: rule__BoundaryObject__Group_6__0__Impl rule__BoundaryObject__Group_6__1
+            // InternalBomi.g:2833:1: ( rule__BoundaryObject__Group_6__0__Impl rule__BoundaryObject__Group_6__1 )
+            // InternalBomi.g:2834:2: rule__BoundaryObject__Group_6__0__Impl rule__BoundaryObject__Group_6__1
             {
             pushFollow(FOLLOW_19);
             rule__BoundaryObject__Group_6__0__Impl();
@@ -8988,20 +9155,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_6__0__Impl"
-    // InternalBomi.g:2798:1: rule__BoundaryObject__Group_6__0__Impl : ( 'levelOfDetail' ) ;
+    // InternalBomi.g:2841:1: rule__BoundaryObject__Group_6__0__Impl : ( 'levelOfDetail' ) ;
     public final void rule__BoundaryObject__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2802:1: ( ( 'levelOfDetail' ) )
-            // InternalBomi.g:2803:1: ( 'levelOfDetail' )
+            // InternalBomi.g:2845:1: ( ( 'levelOfDetail' ) )
+            // InternalBomi.g:2846:1: ( 'levelOfDetail' )
             {
-            // InternalBomi.g:2803:1: ( 'levelOfDetail' )
-            // InternalBomi.g:2804:2: 'levelOfDetail'
+            // InternalBomi.g:2846:1: ( 'levelOfDetail' )
+            // InternalBomi.g:2847:2: 'levelOfDetail'
             {
              before(grammarAccess.getBoundaryObjectAccess().getLevelOfDetailKeyword_6_0()); 
-            match(input,44,FOLLOW_2); 
+            match(input,46,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getLevelOfDetailKeyword_6_0()); 
 
             }
@@ -9025,14 +9192,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_6__1"
-    // InternalBomi.g:2813:1: rule__BoundaryObject__Group_6__1 : rule__BoundaryObject__Group_6__1__Impl ;
+    // InternalBomi.g:2856:1: rule__BoundaryObject__Group_6__1 : rule__BoundaryObject__Group_6__1__Impl ;
     public final void rule__BoundaryObject__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2817:1: ( rule__BoundaryObject__Group_6__1__Impl )
-            // InternalBomi.g:2818:2: rule__BoundaryObject__Group_6__1__Impl
+            // InternalBomi.g:2860:1: ( rule__BoundaryObject__Group_6__1__Impl )
+            // InternalBomi.g:2861:2: rule__BoundaryObject__Group_6__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_6__1__Impl();
@@ -9058,21 +9225,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_6__1__Impl"
-    // InternalBomi.g:2824:1: rule__BoundaryObject__Group_6__1__Impl : ( ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 ) ) ;
+    // InternalBomi.g:2867:1: rule__BoundaryObject__Group_6__1__Impl : ( ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 ) ) ;
     public final void rule__BoundaryObject__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2828:1: ( ( ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 ) ) )
-            // InternalBomi.g:2829:1: ( ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 ) )
+            // InternalBomi.g:2871:1: ( ( ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 ) ) )
+            // InternalBomi.g:2872:1: ( ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 ) )
             {
-            // InternalBomi.g:2829:1: ( ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 ) )
-            // InternalBomi.g:2830:2: ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 )
+            // InternalBomi.g:2872:1: ( ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 ) )
+            // InternalBomi.g:2873:2: ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getLevelOfDetailAssignment_6_1()); 
-            // InternalBomi.g:2831:2: ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 )
-            // InternalBomi.g:2831:3: rule__BoundaryObject__LevelOfDetailAssignment_6_1
+            // InternalBomi.g:2874:2: ( rule__BoundaryObject__LevelOfDetailAssignment_6_1 )
+            // InternalBomi.g:2874:3: rule__BoundaryObject__LevelOfDetailAssignment_6_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__LevelOfDetailAssignment_6_1();
@@ -9105,14 +9272,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_7__0"
-    // InternalBomi.g:2840:1: rule__BoundaryObject__Group_7__0 : rule__BoundaryObject__Group_7__0__Impl rule__BoundaryObject__Group_7__1 ;
+    // InternalBomi.g:2883:1: rule__BoundaryObject__Group_7__0 : rule__BoundaryObject__Group_7__0__Impl rule__BoundaryObject__Group_7__1 ;
     public final void rule__BoundaryObject__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2844:1: ( rule__BoundaryObject__Group_7__0__Impl rule__BoundaryObject__Group_7__1 )
-            // InternalBomi.g:2845:2: rule__BoundaryObject__Group_7__0__Impl rule__BoundaryObject__Group_7__1
+            // InternalBomi.g:2887:1: ( rule__BoundaryObject__Group_7__0__Impl rule__BoundaryObject__Group_7__1 )
+            // InternalBomi.g:2888:2: rule__BoundaryObject__Group_7__0__Impl rule__BoundaryObject__Group_7__1
             {
             pushFollow(FOLLOW_19);
             rule__BoundaryObject__Group_7__0__Impl();
@@ -9143,20 +9310,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_7__0__Impl"
-    // InternalBomi.g:2852:1: rule__BoundaryObject__Group_7__0__Impl : ( 'frequencyOfChange' ) ;
+    // InternalBomi.g:2895:1: rule__BoundaryObject__Group_7__0__Impl : ( 'frequencyOfChange' ) ;
     public final void rule__BoundaryObject__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2856:1: ( ( 'frequencyOfChange' ) )
-            // InternalBomi.g:2857:1: ( 'frequencyOfChange' )
+            // InternalBomi.g:2899:1: ( ( 'frequencyOfChange' ) )
+            // InternalBomi.g:2900:1: ( 'frequencyOfChange' )
             {
-            // InternalBomi.g:2857:1: ( 'frequencyOfChange' )
-            // InternalBomi.g:2858:2: 'frequencyOfChange'
+            // InternalBomi.g:2900:1: ( 'frequencyOfChange' )
+            // InternalBomi.g:2901:2: 'frequencyOfChange'
             {
              before(grammarAccess.getBoundaryObjectAccess().getFrequencyOfChangeKeyword_7_0()); 
-            match(input,45,FOLLOW_2); 
+            match(input,47,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getFrequencyOfChangeKeyword_7_0()); 
 
             }
@@ -9180,14 +9347,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_7__1"
-    // InternalBomi.g:2867:1: rule__BoundaryObject__Group_7__1 : rule__BoundaryObject__Group_7__1__Impl ;
+    // InternalBomi.g:2910:1: rule__BoundaryObject__Group_7__1 : rule__BoundaryObject__Group_7__1__Impl ;
     public final void rule__BoundaryObject__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2871:1: ( rule__BoundaryObject__Group_7__1__Impl )
-            // InternalBomi.g:2872:2: rule__BoundaryObject__Group_7__1__Impl
+            // InternalBomi.g:2914:1: ( rule__BoundaryObject__Group_7__1__Impl )
+            // InternalBomi.g:2915:2: rule__BoundaryObject__Group_7__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_7__1__Impl();
@@ -9213,21 +9380,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_7__1__Impl"
-    // InternalBomi.g:2878:1: rule__BoundaryObject__Group_7__1__Impl : ( ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 ) ) ;
+    // InternalBomi.g:2921:1: rule__BoundaryObject__Group_7__1__Impl : ( ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 ) ) ;
     public final void rule__BoundaryObject__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2882:1: ( ( ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 ) ) )
-            // InternalBomi.g:2883:1: ( ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 ) )
+            // InternalBomi.g:2925:1: ( ( ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 ) ) )
+            // InternalBomi.g:2926:1: ( ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 ) )
             {
-            // InternalBomi.g:2883:1: ( ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 ) )
-            // InternalBomi.g:2884:2: ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 )
+            // InternalBomi.g:2926:1: ( ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 ) )
+            // InternalBomi.g:2927:2: ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getFrequencyOfChangeAssignment_7_1()); 
-            // InternalBomi.g:2885:2: ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 )
-            // InternalBomi.g:2885:3: rule__BoundaryObject__FrequencyOfChangeAssignment_7_1
+            // InternalBomi.g:2928:2: ( rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 )
+            // InternalBomi.g:2928:3: rule__BoundaryObject__FrequencyOfChangeAssignment_7_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__FrequencyOfChangeAssignment_7_1();
@@ -9260,14 +9427,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_8__0"
-    // InternalBomi.g:2894:1: rule__BoundaryObject__Group_8__0 : rule__BoundaryObject__Group_8__0__Impl rule__BoundaryObject__Group_8__1 ;
+    // InternalBomi.g:2937:1: rule__BoundaryObject__Group_8__0 : rule__BoundaryObject__Group_8__0__Impl rule__BoundaryObject__Group_8__1 ;
     public final void rule__BoundaryObject__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2898:1: ( rule__BoundaryObject__Group_8__0__Impl rule__BoundaryObject__Group_8__1 )
-            // InternalBomi.g:2899:2: rule__BoundaryObject__Group_8__0__Impl rule__BoundaryObject__Group_8__1
+            // InternalBomi.g:2941:1: ( rule__BoundaryObject__Group_8__0__Impl rule__BoundaryObject__Group_8__1 )
+            // InternalBomi.g:2942:2: rule__BoundaryObject__Group_8__0__Impl rule__BoundaryObject__Group_8__1
             {
             pushFollow(FOLLOW_19);
             rule__BoundaryObject__Group_8__0__Impl();
@@ -9298,20 +9465,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_8__0__Impl"
-    // InternalBomi.g:2906:1: rule__BoundaryObject__Group_8__0__Impl : ( 'modularity' ) ;
+    // InternalBomi.g:2949:1: rule__BoundaryObject__Group_8__0__Impl : ( 'modularity' ) ;
     public final void rule__BoundaryObject__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2910:1: ( ( 'modularity' ) )
-            // InternalBomi.g:2911:1: ( 'modularity' )
+            // InternalBomi.g:2953:1: ( ( 'modularity' ) )
+            // InternalBomi.g:2954:1: ( 'modularity' )
             {
-            // InternalBomi.g:2911:1: ( 'modularity' )
-            // InternalBomi.g:2912:2: 'modularity'
+            // InternalBomi.g:2954:1: ( 'modularity' )
+            // InternalBomi.g:2955:2: 'modularity'
             {
              before(grammarAccess.getBoundaryObjectAccess().getModularityKeyword_8_0()); 
-            match(input,46,FOLLOW_2); 
+            match(input,48,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getModularityKeyword_8_0()); 
 
             }
@@ -9335,14 +9502,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_8__1"
-    // InternalBomi.g:2921:1: rule__BoundaryObject__Group_8__1 : rule__BoundaryObject__Group_8__1__Impl ;
+    // InternalBomi.g:2964:1: rule__BoundaryObject__Group_8__1 : rule__BoundaryObject__Group_8__1__Impl ;
     public final void rule__BoundaryObject__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2925:1: ( rule__BoundaryObject__Group_8__1__Impl )
-            // InternalBomi.g:2926:2: rule__BoundaryObject__Group_8__1__Impl
+            // InternalBomi.g:2968:1: ( rule__BoundaryObject__Group_8__1__Impl )
+            // InternalBomi.g:2969:2: rule__BoundaryObject__Group_8__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_8__1__Impl();
@@ -9368,21 +9535,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_8__1__Impl"
-    // InternalBomi.g:2932:1: rule__BoundaryObject__Group_8__1__Impl : ( ( rule__BoundaryObject__ModularityAssignment_8_1 ) ) ;
+    // InternalBomi.g:2975:1: rule__BoundaryObject__Group_8__1__Impl : ( ( rule__BoundaryObject__ModularityAssignment_8_1 ) ) ;
     public final void rule__BoundaryObject__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2936:1: ( ( ( rule__BoundaryObject__ModularityAssignment_8_1 ) ) )
-            // InternalBomi.g:2937:1: ( ( rule__BoundaryObject__ModularityAssignment_8_1 ) )
+            // InternalBomi.g:2979:1: ( ( ( rule__BoundaryObject__ModularityAssignment_8_1 ) ) )
+            // InternalBomi.g:2980:1: ( ( rule__BoundaryObject__ModularityAssignment_8_1 ) )
             {
-            // InternalBomi.g:2937:1: ( ( rule__BoundaryObject__ModularityAssignment_8_1 ) )
-            // InternalBomi.g:2938:2: ( rule__BoundaryObject__ModularityAssignment_8_1 )
+            // InternalBomi.g:2980:1: ( ( rule__BoundaryObject__ModularityAssignment_8_1 ) )
+            // InternalBomi.g:2981:2: ( rule__BoundaryObject__ModularityAssignment_8_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getModularityAssignment_8_1()); 
-            // InternalBomi.g:2939:2: ( rule__BoundaryObject__ModularityAssignment_8_1 )
-            // InternalBomi.g:2939:3: rule__BoundaryObject__ModularityAssignment_8_1
+            // InternalBomi.g:2982:2: ( rule__BoundaryObject__ModularityAssignment_8_1 )
+            // InternalBomi.g:2982:3: rule__BoundaryObject__ModularityAssignment_8_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__ModularityAssignment_8_1();
@@ -9415,14 +9582,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_9__0"
-    // InternalBomi.g:2948:1: rule__BoundaryObject__Group_9__0 : rule__BoundaryObject__Group_9__0__Impl rule__BoundaryObject__Group_9__1 ;
+    // InternalBomi.g:2991:1: rule__BoundaryObject__Group_9__0 : rule__BoundaryObject__Group_9__0__Impl rule__BoundaryObject__Group_9__1 ;
     public final void rule__BoundaryObject__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2952:1: ( rule__BoundaryObject__Group_9__0__Impl rule__BoundaryObject__Group_9__1 )
-            // InternalBomi.g:2953:2: rule__BoundaryObject__Group_9__0__Impl rule__BoundaryObject__Group_9__1
+            // InternalBomi.g:2995:1: ( rule__BoundaryObject__Group_9__0__Impl rule__BoundaryObject__Group_9__1 )
+            // InternalBomi.g:2996:2: rule__BoundaryObject__Group_9__0__Impl rule__BoundaryObject__Group_9__1
             {
             pushFollow(FOLLOW_19);
             rule__BoundaryObject__Group_9__0__Impl();
@@ -9453,20 +9620,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_9__0__Impl"
-    // InternalBomi.g:2960:1: rule__BoundaryObject__Group_9__0__Impl : ( 'maintainability' ) ;
+    // InternalBomi.g:3003:1: rule__BoundaryObject__Group_9__0__Impl : ( 'maintainability' ) ;
     public final void rule__BoundaryObject__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2964:1: ( ( 'maintainability' ) )
-            // InternalBomi.g:2965:1: ( 'maintainability' )
+            // InternalBomi.g:3007:1: ( ( 'maintainability' ) )
+            // InternalBomi.g:3008:1: ( 'maintainability' )
             {
-            // InternalBomi.g:2965:1: ( 'maintainability' )
-            // InternalBomi.g:2966:2: 'maintainability'
+            // InternalBomi.g:3008:1: ( 'maintainability' )
+            // InternalBomi.g:3009:2: 'maintainability'
             {
              before(grammarAccess.getBoundaryObjectAccess().getMaintainabilityKeyword_9_0()); 
-            match(input,47,FOLLOW_2); 
+            match(input,49,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getMaintainabilityKeyword_9_0()); 
 
             }
@@ -9490,14 +9657,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_9__1"
-    // InternalBomi.g:2975:1: rule__BoundaryObject__Group_9__1 : rule__BoundaryObject__Group_9__1__Impl ;
+    // InternalBomi.g:3018:1: rule__BoundaryObject__Group_9__1 : rule__BoundaryObject__Group_9__1__Impl ;
     public final void rule__BoundaryObject__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2979:1: ( rule__BoundaryObject__Group_9__1__Impl )
-            // InternalBomi.g:2980:2: rule__BoundaryObject__Group_9__1__Impl
+            // InternalBomi.g:3022:1: ( rule__BoundaryObject__Group_9__1__Impl )
+            // InternalBomi.g:3023:2: rule__BoundaryObject__Group_9__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_9__1__Impl();
@@ -9523,21 +9690,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_9__1__Impl"
-    // InternalBomi.g:2986:1: rule__BoundaryObject__Group_9__1__Impl : ( ( rule__BoundaryObject__MaintainabilityAssignment_9_1 ) ) ;
+    // InternalBomi.g:3029:1: rule__BoundaryObject__Group_9__1__Impl : ( ( rule__BoundaryObject__MaintainabilityAssignment_9_1 ) ) ;
     public final void rule__BoundaryObject__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:2990:1: ( ( ( rule__BoundaryObject__MaintainabilityAssignment_9_1 ) ) )
-            // InternalBomi.g:2991:1: ( ( rule__BoundaryObject__MaintainabilityAssignment_9_1 ) )
+            // InternalBomi.g:3033:1: ( ( ( rule__BoundaryObject__MaintainabilityAssignment_9_1 ) ) )
+            // InternalBomi.g:3034:1: ( ( rule__BoundaryObject__MaintainabilityAssignment_9_1 ) )
             {
-            // InternalBomi.g:2991:1: ( ( rule__BoundaryObject__MaintainabilityAssignment_9_1 ) )
-            // InternalBomi.g:2992:2: ( rule__BoundaryObject__MaintainabilityAssignment_9_1 )
+            // InternalBomi.g:3034:1: ( ( rule__BoundaryObject__MaintainabilityAssignment_9_1 ) )
+            // InternalBomi.g:3035:2: ( rule__BoundaryObject__MaintainabilityAssignment_9_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getMaintainabilityAssignment_9_1()); 
-            // InternalBomi.g:2993:2: ( rule__BoundaryObject__MaintainabilityAssignment_9_1 )
-            // InternalBomi.g:2993:3: rule__BoundaryObject__MaintainabilityAssignment_9_1
+            // InternalBomi.g:3036:2: ( rule__BoundaryObject__MaintainabilityAssignment_9_1 )
+            // InternalBomi.g:3036:3: rule__BoundaryObject__MaintainabilityAssignment_9_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__MaintainabilityAssignment_9_1();
@@ -9570,14 +9737,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_10__0"
-    // InternalBomi.g:3002:1: rule__BoundaryObject__Group_10__0 : rule__BoundaryObject__Group_10__0__Impl rule__BoundaryObject__Group_10__1 ;
+    // InternalBomi.g:3045:1: rule__BoundaryObject__Group_10__0 : rule__BoundaryObject__Group_10__0__Impl rule__BoundaryObject__Group_10__1 ;
     public final void rule__BoundaryObject__Group_10__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3006:1: ( rule__BoundaryObject__Group_10__0__Impl rule__BoundaryObject__Group_10__1 )
-            // InternalBomi.g:3007:2: rule__BoundaryObject__Group_10__0__Impl rule__BoundaryObject__Group_10__1
+            // InternalBomi.g:3049:1: ( rule__BoundaryObject__Group_10__0__Impl rule__BoundaryObject__Group_10__1 )
+            // InternalBomi.g:3050:2: rule__BoundaryObject__Group_10__0__Impl rule__BoundaryObject__Group_10__1
             {
             pushFollow(FOLLOW_19);
             rule__BoundaryObject__Group_10__0__Impl();
@@ -9608,20 +9775,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_10__0__Impl"
-    // InternalBomi.g:3014:1: rule__BoundaryObject__Group_10__0__Impl : ( 'prescriptive' ) ;
+    // InternalBomi.g:3057:1: rule__BoundaryObject__Group_10__0__Impl : ( 'prescriptive' ) ;
     public final void rule__BoundaryObject__Group_10__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3018:1: ( ( 'prescriptive' ) )
-            // InternalBomi.g:3019:1: ( 'prescriptive' )
+            // InternalBomi.g:3061:1: ( ( 'prescriptive' ) )
+            // InternalBomi.g:3062:1: ( 'prescriptive' )
             {
-            // InternalBomi.g:3019:1: ( 'prescriptive' )
-            // InternalBomi.g:3020:2: 'prescriptive'
+            // InternalBomi.g:3062:1: ( 'prescriptive' )
+            // InternalBomi.g:3063:2: 'prescriptive'
             {
              before(grammarAccess.getBoundaryObjectAccess().getPrescriptiveKeyword_10_0()); 
-            match(input,48,FOLLOW_2); 
+            match(input,50,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getPrescriptiveKeyword_10_0()); 
 
             }
@@ -9645,14 +9812,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_10__1"
-    // InternalBomi.g:3029:1: rule__BoundaryObject__Group_10__1 : rule__BoundaryObject__Group_10__1__Impl ;
+    // InternalBomi.g:3072:1: rule__BoundaryObject__Group_10__1 : rule__BoundaryObject__Group_10__1__Impl ;
     public final void rule__BoundaryObject__Group_10__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3033:1: ( rule__BoundaryObject__Group_10__1__Impl )
-            // InternalBomi.g:3034:2: rule__BoundaryObject__Group_10__1__Impl
+            // InternalBomi.g:3076:1: ( rule__BoundaryObject__Group_10__1__Impl )
+            // InternalBomi.g:3077:2: rule__BoundaryObject__Group_10__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_10__1__Impl();
@@ -9678,21 +9845,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_10__1__Impl"
-    // InternalBomi.g:3040:1: rule__BoundaryObject__Group_10__1__Impl : ( ( rule__BoundaryObject__PrescriptiveAssignment_10_1 ) ) ;
+    // InternalBomi.g:3083:1: rule__BoundaryObject__Group_10__1__Impl : ( ( rule__BoundaryObject__PrescriptiveAssignment_10_1 ) ) ;
     public final void rule__BoundaryObject__Group_10__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3044:1: ( ( ( rule__BoundaryObject__PrescriptiveAssignment_10_1 ) ) )
-            // InternalBomi.g:3045:1: ( ( rule__BoundaryObject__PrescriptiveAssignment_10_1 ) )
+            // InternalBomi.g:3087:1: ( ( ( rule__BoundaryObject__PrescriptiveAssignment_10_1 ) ) )
+            // InternalBomi.g:3088:1: ( ( rule__BoundaryObject__PrescriptiveAssignment_10_1 ) )
             {
-            // InternalBomi.g:3045:1: ( ( rule__BoundaryObject__PrescriptiveAssignment_10_1 ) )
-            // InternalBomi.g:3046:2: ( rule__BoundaryObject__PrescriptiveAssignment_10_1 )
+            // InternalBomi.g:3088:1: ( ( rule__BoundaryObject__PrescriptiveAssignment_10_1 ) )
+            // InternalBomi.g:3089:2: ( rule__BoundaryObject__PrescriptiveAssignment_10_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getPrescriptiveAssignment_10_1()); 
-            // InternalBomi.g:3047:2: ( rule__BoundaryObject__PrescriptiveAssignment_10_1 )
-            // InternalBomi.g:3047:3: rule__BoundaryObject__PrescriptiveAssignment_10_1
+            // InternalBomi.g:3090:2: ( rule__BoundaryObject__PrescriptiveAssignment_10_1 )
+            // InternalBomi.g:3090:3: rule__BoundaryObject__PrescriptiveAssignment_10_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__PrescriptiveAssignment_10_1();
@@ -9725,14 +9892,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_11__0"
-    // InternalBomi.g:3056:1: rule__BoundaryObject__Group_11__0 : rule__BoundaryObject__Group_11__0__Impl rule__BoundaryObject__Group_11__1 ;
+    // InternalBomi.g:3099:1: rule__BoundaryObject__Group_11__0 : rule__BoundaryObject__Group_11__0__Impl rule__BoundaryObject__Group_11__1 ;
     public final void rule__BoundaryObject__Group_11__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3060:1: ( rule__BoundaryObject__Group_11__0__Impl rule__BoundaryObject__Group_11__1 )
-            // InternalBomi.g:3061:2: rule__BoundaryObject__Group_11__0__Impl rule__BoundaryObject__Group_11__1
+            // InternalBomi.g:3103:1: ( rule__BoundaryObject__Group_11__0__Impl rule__BoundaryObject__Group_11__1 )
+            // InternalBomi.g:3104:2: rule__BoundaryObject__Group_11__0__Impl rule__BoundaryObject__Group_11__1
             {
             pushFollow(FOLLOW_20);
             rule__BoundaryObject__Group_11__0__Impl();
@@ -9763,20 +9930,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_11__0__Impl"
-    // InternalBomi.g:3068:1: rule__BoundaryObject__Group_11__0__Impl : ( 'lifecycleStage' ) ;
+    // InternalBomi.g:3111:1: rule__BoundaryObject__Group_11__0__Impl : ( 'lifecycleStage' ) ;
     public final void rule__BoundaryObject__Group_11__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3072:1: ( ( 'lifecycleStage' ) )
-            // InternalBomi.g:3073:1: ( 'lifecycleStage' )
+            // InternalBomi.g:3115:1: ( ( 'lifecycleStage' ) )
+            // InternalBomi.g:3116:1: ( 'lifecycleStage' )
             {
-            // InternalBomi.g:3073:1: ( 'lifecycleStage' )
-            // InternalBomi.g:3074:2: 'lifecycleStage'
+            // InternalBomi.g:3116:1: ( 'lifecycleStage' )
+            // InternalBomi.g:3117:2: 'lifecycleStage'
             {
              before(grammarAccess.getBoundaryObjectAccess().getLifecycleStageKeyword_11_0()); 
-            match(input,49,FOLLOW_2); 
+            match(input,51,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getLifecycleStageKeyword_11_0()); 
 
             }
@@ -9800,14 +9967,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_11__1"
-    // InternalBomi.g:3083:1: rule__BoundaryObject__Group_11__1 : rule__BoundaryObject__Group_11__1__Impl ;
+    // InternalBomi.g:3126:1: rule__BoundaryObject__Group_11__1 : rule__BoundaryObject__Group_11__1__Impl ;
     public final void rule__BoundaryObject__Group_11__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3087:1: ( rule__BoundaryObject__Group_11__1__Impl )
-            // InternalBomi.g:3088:2: rule__BoundaryObject__Group_11__1__Impl
+            // InternalBomi.g:3130:1: ( rule__BoundaryObject__Group_11__1__Impl )
+            // InternalBomi.g:3131:2: rule__BoundaryObject__Group_11__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_11__1__Impl();
@@ -9833,21 +10000,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_11__1__Impl"
-    // InternalBomi.g:3094:1: rule__BoundaryObject__Group_11__1__Impl : ( ( rule__BoundaryObject__LifecycleStageAssignment_11_1 ) ) ;
+    // InternalBomi.g:3137:1: rule__BoundaryObject__Group_11__1__Impl : ( ( rule__BoundaryObject__LifecycleStageAssignment_11_1 ) ) ;
     public final void rule__BoundaryObject__Group_11__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3098:1: ( ( ( rule__BoundaryObject__LifecycleStageAssignment_11_1 ) ) )
-            // InternalBomi.g:3099:1: ( ( rule__BoundaryObject__LifecycleStageAssignment_11_1 ) )
+            // InternalBomi.g:3141:1: ( ( ( rule__BoundaryObject__LifecycleStageAssignment_11_1 ) ) )
+            // InternalBomi.g:3142:1: ( ( rule__BoundaryObject__LifecycleStageAssignment_11_1 ) )
             {
-            // InternalBomi.g:3099:1: ( ( rule__BoundaryObject__LifecycleStageAssignment_11_1 ) )
-            // InternalBomi.g:3100:2: ( rule__BoundaryObject__LifecycleStageAssignment_11_1 )
+            // InternalBomi.g:3142:1: ( ( rule__BoundaryObject__LifecycleStageAssignment_11_1 ) )
+            // InternalBomi.g:3143:2: ( rule__BoundaryObject__LifecycleStageAssignment_11_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getLifecycleStageAssignment_11_1()); 
-            // InternalBomi.g:3101:2: ( rule__BoundaryObject__LifecycleStageAssignment_11_1 )
-            // InternalBomi.g:3101:3: rule__BoundaryObject__LifecycleStageAssignment_11_1
+            // InternalBomi.g:3144:2: ( rule__BoundaryObject__LifecycleStageAssignment_11_1 )
+            // InternalBomi.g:3144:3: rule__BoundaryObject__LifecycleStageAssignment_11_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__LifecycleStageAssignment_11_1();
@@ -9880,14 +10047,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_12__0"
-    // InternalBomi.g:3110:1: rule__BoundaryObject__Group_12__0 : rule__BoundaryObject__Group_12__0__Impl rule__BoundaryObject__Group_12__1 ;
+    // InternalBomi.g:3153:1: rule__BoundaryObject__Group_12__0 : rule__BoundaryObject__Group_12__0__Impl rule__BoundaryObject__Group_12__1 ;
     public final void rule__BoundaryObject__Group_12__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3114:1: ( rule__BoundaryObject__Group_12__0__Impl rule__BoundaryObject__Group_12__1 )
-            // InternalBomi.g:3115:2: rule__BoundaryObject__Group_12__0__Impl rule__BoundaryObject__Group_12__1
+            // InternalBomi.g:3157:1: ( rule__BoundaryObject__Group_12__0__Impl rule__BoundaryObject__Group_12__1 )
+            // InternalBomi.g:3158:2: rule__BoundaryObject__Group_12__0__Impl rule__BoundaryObject__Group_12__1
             {
             pushFollow(FOLLOW_16);
             rule__BoundaryObject__Group_12__0__Impl();
@@ -9918,20 +10085,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_12__0__Impl"
-    // InternalBomi.g:3122:1: rule__BoundaryObject__Group_12__0__Impl : ( 'representationFormat' ) ;
+    // InternalBomi.g:3165:1: rule__BoundaryObject__Group_12__0__Impl : ( 'representationFormat' ) ;
     public final void rule__BoundaryObject__Group_12__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3126:1: ( ( 'representationFormat' ) )
-            // InternalBomi.g:3127:1: ( 'representationFormat' )
+            // InternalBomi.g:3169:1: ( ( 'representationFormat' ) )
+            // InternalBomi.g:3170:1: ( 'representationFormat' )
             {
-            // InternalBomi.g:3127:1: ( 'representationFormat' )
-            // InternalBomi.g:3128:2: 'representationFormat'
+            // InternalBomi.g:3170:1: ( 'representationFormat' )
+            // InternalBomi.g:3171:2: 'representationFormat'
             {
              before(grammarAccess.getBoundaryObjectAccess().getRepresentationFormatKeyword_12_0()); 
-            match(input,50,FOLLOW_2); 
+            match(input,52,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getRepresentationFormatKeyword_12_0()); 
 
             }
@@ -9955,14 +10122,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_12__1"
-    // InternalBomi.g:3137:1: rule__BoundaryObject__Group_12__1 : rule__BoundaryObject__Group_12__1__Impl ;
+    // InternalBomi.g:3180:1: rule__BoundaryObject__Group_12__1 : rule__BoundaryObject__Group_12__1__Impl ;
     public final void rule__BoundaryObject__Group_12__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3141:1: ( rule__BoundaryObject__Group_12__1__Impl )
-            // InternalBomi.g:3142:2: rule__BoundaryObject__Group_12__1__Impl
+            // InternalBomi.g:3184:1: ( rule__BoundaryObject__Group_12__1__Impl )
+            // InternalBomi.g:3185:2: rule__BoundaryObject__Group_12__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_12__1__Impl();
@@ -9988,21 +10155,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_12__1__Impl"
-    // InternalBomi.g:3148:1: rule__BoundaryObject__Group_12__1__Impl : ( ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 ) ) ;
+    // InternalBomi.g:3191:1: rule__BoundaryObject__Group_12__1__Impl : ( ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 ) ) ;
     public final void rule__BoundaryObject__Group_12__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3152:1: ( ( ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 ) ) )
-            // InternalBomi.g:3153:1: ( ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 ) )
+            // InternalBomi.g:3195:1: ( ( ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 ) ) )
+            // InternalBomi.g:3196:1: ( ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 ) )
             {
-            // InternalBomi.g:3153:1: ( ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 ) )
-            // InternalBomi.g:3154:2: ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 )
+            // InternalBomi.g:3196:1: ( ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 ) )
+            // InternalBomi.g:3197:2: ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getRepresentationFormatAssignment_12_1()); 
-            // InternalBomi.g:3155:2: ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 )
-            // InternalBomi.g:3155:3: rule__BoundaryObject__RepresentationFormatAssignment_12_1
+            // InternalBomi.g:3198:2: ( rule__BoundaryObject__RepresentationFormatAssignment_12_1 )
+            // InternalBomi.g:3198:3: rule__BoundaryObject__RepresentationFormatAssignment_12_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__RepresentationFormatAssignment_12_1();
@@ -10035,14 +10202,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_13__0"
-    // InternalBomi.g:3164:1: rule__BoundaryObject__Group_13__0 : rule__BoundaryObject__Group_13__0__Impl rule__BoundaryObject__Group_13__1 ;
+    // InternalBomi.g:3207:1: rule__BoundaryObject__Group_13__0 : rule__BoundaryObject__Group_13__0__Impl rule__BoundaryObject__Group_13__1 ;
     public final void rule__BoundaryObject__Group_13__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3168:1: ( rule__BoundaryObject__Group_13__0__Impl rule__BoundaryObject__Group_13__1 )
-            // InternalBomi.g:3169:2: rule__BoundaryObject__Group_13__0__Impl rule__BoundaryObject__Group_13__1
+            // InternalBomi.g:3211:1: ( rule__BoundaryObject__Group_13__0__Impl rule__BoundaryObject__Group_13__1 )
+            // InternalBomi.g:3212:2: rule__BoundaryObject__Group_13__0__Impl rule__BoundaryObject__Group_13__1
             {
             pushFollow(FOLLOW_16);
             rule__BoundaryObject__Group_13__0__Impl();
@@ -10073,20 +10240,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_13__0__Impl"
-    // InternalBomi.g:3176:1: rule__BoundaryObject__Group_13__0__Impl : ( 'tooling' ) ;
+    // InternalBomi.g:3219:1: rule__BoundaryObject__Group_13__0__Impl : ( 'tooling' ) ;
     public final void rule__BoundaryObject__Group_13__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3180:1: ( ( 'tooling' ) )
-            // InternalBomi.g:3181:1: ( 'tooling' )
+            // InternalBomi.g:3223:1: ( ( 'tooling' ) )
+            // InternalBomi.g:3224:1: ( 'tooling' )
             {
-            // InternalBomi.g:3181:1: ( 'tooling' )
-            // InternalBomi.g:3182:2: 'tooling'
+            // InternalBomi.g:3224:1: ( 'tooling' )
+            // InternalBomi.g:3225:2: 'tooling'
             {
              before(grammarAccess.getBoundaryObjectAccess().getToolingKeyword_13_0()); 
-            match(input,51,FOLLOW_2); 
+            match(input,53,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getToolingKeyword_13_0()); 
 
             }
@@ -10110,14 +10277,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_13__1"
-    // InternalBomi.g:3191:1: rule__BoundaryObject__Group_13__1 : rule__BoundaryObject__Group_13__1__Impl ;
+    // InternalBomi.g:3234:1: rule__BoundaryObject__Group_13__1 : rule__BoundaryObject__Group_13__1__Impl ;
     public final void rule__BoundaryObject__Group_13__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3195:1: ( rule__BoundaryObject__Group_13__1__Impl )
-            // InternalBomi.g:3196:2: rule__BoundaryObject__Group_13__1__Impl
+            // InternalBomi.g:3238:1: ( rule__BoundaryObject__Group_13__1__Impl )
+            // InternalBomi.g:3239:2: rule__BoundaryObject__Group_13__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_13__1__Impl();
@@ -10143,21 +10310,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_13__1__Impl"
-    // InternalBomi.g:3202:1: rule__BoundaryObject__Group_13__1__Impl : ( ( rule__BoundaryObject__ToolingAssignment_13_1 ) ) ;
+    // InternalBomi.g:3245:1: rule__BoundaryObject__Group_13__1__Impl : ( ( rule__BoundaryObject__ToolingAssignment_13_1 ) ) ;
     public final void rule__BoundaryObject__Group_13__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3206:1: ( ( ( rule__BoundaryObject__ToolingAssignment_13_1 ) ) )
-            // InternalBomi.g:3207:1: ( ( rule__BoundaryObject__ToolingAssignment_13_1 ) )
+            // InternalBomi.g:3249:1: ( ( ( rule__BoundaryObject__ToolingAssignment_13_1 ) ) )
+            // InternalBomi.g:3250:1: ( ( rule__BoundaryObject__ToolingAssignment_13_1 ) )
             {
-            // InternalBomi.g:3207:1: ( ( rule__BoundaryObject__ToolingAssignment_13_1 ) )
-            // InternalBomi.g:3208:2: ( rule__BoundaryObject__ToolingAssignment_13_1 )
+            // InternalBomi.g:3250:1: ( ( rule__BoundaryObject__ToolingAssignment_13_1 ) )
+            // InternalBomi.g:3251:2: ( rule__BoundaryObject__ToolingAssignment_13_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getToolingAssignment_13_1()); 
-            // InternalBomi.g:3209:2: ( rule__BoundaryObject__ToolingAssignment_13_1 )
-            // InternalBomi.g:3209:3: rule__BoundaryObject__ToolingAssignment_13_1
+            // InternalBomi.g:3252:2: ( rule__BoundaryObject__ToolingAssignment_13_1 )
+            // InternalBomi.g:3252:3: rule__BoundaryObject__ToolingAssignment_13_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__ToolingAssignment_13_1();
@@ -10190,14 +10357,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_14__0"
-    // InternalBomi.g:3218:1: rule__BoundaryObject__Group_14__0 : rule__BoundaryObject__Group_14__0__Impl rule__BoundaryObject__Group_14__1 ;
+    // InternalBomi.g:3261:1: rule__BoundaryObject__Group_14__0 : rule__BoundaryObject__Group_14__0__Impl rule__BoundaryObject__Group_14__1 ;
     public final void rule__BoundaryObject__Group_14__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3222:1: ( rule__BoundaryObject__Group_14__0__Impl rule__BoundaryObject__Group_14__1 )
-            // InternalBomi.g:3223:2: rule__BoundaryObject__Group_14__0__Impl rule__BoundaryObject__Group_14__1
+            // InternalBomi.g:3265:1: ( rule__BoundaryObject__Group_14__0__Impl rule__BoundaryObject__Group_14__1 )
+            // InternalBomi.g:3266:2: rule__BoundaryObject__Group_14__0__Impl rule__BoundaryObject__Group_14__1
             {
             pushFollow(FOLLOW_16);
             rule__BoundaryObject__Group_14__0__Impl();
@@ -10228,20 +10395,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_14__0__Impl"
-    // InternalBomi.g:3230:1: rule__BoundaryObject__Group_14__0__Impl : ( 'versioning' ) ;
+    // InternalBomi.g:3273:1: rule__BoundaryObject__Group_14__0__Impl : ( 'versioning' ) ;
     public final void rule__BoundaryObject__Group_14__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3234:1: ( ( 'versioning' ) )
-            // InternalBomi.g:3235:1: ( 'versioning' )
+            // InternalBomi.g:3277:1: ( ( 'versioning' ) )
+            // InternalBomi.g:3278:1: ( 'versioning' )
             {
-            // InternalBomi.g:3235:1: ( 'versioning' )
-            // InternalBomi.g:3236:2: 'versioning'
+            // InternalBomi.g:3278:1: ( 'versioning' )
+            // InternalBomi.g:3279:2: 'versioning'
             {
              before(grammarAccess.getBoundaryObjectAccess().getVersioningKeyword_14_0()); 
-            match(input,52,FOLLOW_2); 
+            match(input,54,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getVersioningKeyword_14_0()); 
 
             }
@@ -10265,14 +10432,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_14__1"
-    // InternalBomi.g:3245:1: rule__BoundaryObject__Group_14__1 : rule__BoundaryObject__Group_14__1__Impl ;
+    // InternalBomi.g:3288:1: rule__BoundaryObject__Group_14__1 : rule__BoundaryObject__Group_14__1__Impl ;
     public final void rule__BoundaryObject__Group_14__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3249:1: ( rule__BoundaryObject__Group_14__1__Impl )
-            // InternalBomi.g:3250:2: rule__BoundaryObject__Group_14__1__Impl
+            // InternalBomi.g:3292:1: ( rule__BoundaryObject__Group_14__1__Impl )
+            // InternalBomi.g:3293:2: rule__BoundaryObject__Group_14__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_14__1__Impl();
@@ -10298,21 +10465,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_14__1__Impl"
-    // InternalBomi.g:3256:1: rule__BoundaryObject__Group_14__1__Impl : ( ( rule__BoundaryObject__VersioningAssignment_14_1 ) ) ;
+    // InternalBomi.g:3299:1: rule__BoundaryObject__Group_14__1__Impl : ( ( rule__BoundaryObject__VersioningAssignment_14_1 ) ) ;
     public final void rule__BoundaryObject__Group_14__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3260:1: ( ( ( rule__BoundaryObject__VersioningAssignment_14_1 ) ) )
-            // InternalBomi.g:3261:1: ( ( rule__BoundaryObject__VersioningAssignment_14_1 ) )
+            // InternalBomi.g:3303:1: ( ( ( rule__BoundaryObject__VersioningAssignment_14_1 ) ) )
+            // InternalBomi.g:3304:1: ( ( rule__BoundaryObject__VersioningAssignment_14_1 ) )
             {
-            // InternalBomi.g:3261:1: ( ( rule__BoundaryObject__VersioningAssignment_14_1 ) )
-            // InternalBomi.g:3262:2: ( rule__BoundaryObject__VersioningAssignment_14_1 )
+            // InternalBomi.g:3304:1: ( ( rule__BoundaryObject__VersioningAssignment_14_1 ) )
+            // InternalBomi.g:3305:2: ( rule__BoundaryObject__VersioningAssignment_14_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getVersioningAssignment_14_1()); 
-            // InternalBomi.g:3263:2: ( rule__BoundaryObject__VersioningAssignment_14_1 )
-            // InternalBomi.g:3263:3: rule__BoundaryObject__VersioningAssignment_14_1
+            // InternalBomi.g:3306:2: ( rule__BoundaryObject__VersioningAssignment_14_1 )
+            // InternalBomi.g:3306:3: rule__BoundaryObject__VersioningAssignment_14_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__VersioningAssignment_14_1();
@@ -10345,14 +10512,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_15__0"
-    // InternalBomi.g:3272:1: rule__BoundaryObject__Group_15__0 : rule__BoundaryObject__Group_15__0__Impl rule__BoundaryObject__Group_15__1 ;
+    // InternalBomi.g:3315:1: rule__BoundaryObject__Group_15__0 : rule__BoundaryObject__Group_15__0__Impl rule__BoundaryObject__Group_15__1 ;
     public final void rule__BoundaryObject__Group_15__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3276:1: ( rule__BoundaryObject__Group_15__0__Impl rule__BoundaryObject__Group_15__1 )
-            // InternalBomi.g:3277:2: rule__BoundaryObject__Group_15__0__Impl rule__BoundaryObject__Group_15__1
+            // InternalBomi.g:3319:1: ( rule__BoundaryObject__Group_15__0__Impl rule__BoundaryObject__Group_15__1 )
+            // InternalBomi.g:3320:2: rule__BoundaryObject__Group_15__0__Impl rule__BoundaryObject__Group_15__1
             {
             pushFollow(FOLLOW_16);
             rule__BoundaryObject__Group_15__0__Impl();
@@ -10383,20 +10550,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_15__0__Impl"
-    // InternalBomi.g:3284:1: rule__BoundaryObject__Group_15__0__Impl : ( 'upToDate' ) ;
+    // InternalBomi.g:3327:1: rule__BoundaryObject__Group_15__0__Impl : ( 'upToDate' ) ;
     public final void rule__BoundaryObject__Group_15__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3288:1: ( ( 'upToDate' ) )
-            // InternalBomi.g:3289:1: ( 'upToDate' )
+            // InternalBomi.g:3331:1: ( ( 'upToDate' ) )
+            // InternalBomi.g:3332:1: ( 'upToDate' )
             {
-            // InternalBomi.g:3289:1: ( 'upToDate' )
-            // InternalBomi.g:3290:2: 'upToDate'
+            // InternalBomi.g:3332:1: ( 'upToDate' )
+            // InternalBomi.g:3333:2: 'upToDate'
             {
              before(grammarAccess.getBoundaryObjectAccess().getUpToDateKeyword_15_0()); 
-            match(input,53,FOLLOW_2); 
+            match(input,55,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getUpToDateKeyword_15_0()); 
 
             }
@@ -10420,14 +10587,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_15__1"
-    // InternalBomi.g:3299:1: rule__BoundaryObject__Group_15__1 : rule__BoundaryObject__Group_15__1__Impl ;
+    // InternalBomi.g:3342:1: rule__BoundaryObject__Group_15__1 : rule__BoundaryObject__Group_15__1__Impl ;
     public final void rule__BoundaryObject__Group_15__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3303:1: ( rule__BoundaryObject__Group_15__1__Impl )
-            // InternalBomi.g:3304:2: rule__BoundaryObject__Group_15__1__Impl
+            // InternalBomi.g:3346:1: ( rule__BoundaryObject__Group_15__1__Impl )
+            // InternalBomi.g:3347:2: rule__BoundaryObject__Group_15__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_15__1__Impl();
@@ -10453,21 +10620,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_15__1__Impl"
-    // InternalBomi.g:3310:1: rule__BoundaryObject__Group_15__1__Impl : ( ( rule__BoundaryObject__UpToDateAssignment_15_1 ) ) ;
+    // InternalBomi.g:3353:1: rule__BoundaryObject__Group_15__1__Impl : ( ( rule__BoundaryObject__UpToDateAssignment_15_1 ) ) ;
     public final void rule__BoundaryObject__Group_15__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3314:1: ( ( ( rule__BoundaryObject__UpToDateAssignment_15_1 ) ) )
-            // InternalBomi.g:3315:1: ( ( rule__BoundaryObject__UpToDateAssignment_15_1 ) )
+            // InternalBomi.g:3357:1: ( ( ( rule__BoundaryObject__UpToDateAssignment_15_1 ) ) )
+            // InternalBomi.g:3358:1: ( ( rule__BoundaryObject__UpToDateAssignment_15_1 ) )
             {
-            // InternalBomi.g:3315:1: ( ( rule__BoundaryObject__UpToDateAssignment_15_1 ) )
-            // InternalBomi.g:3316:2: ( rule__BoundaryObject__UpToDateAssignment_15_1 )
+            // InternalBomi.g:3358:1: ( ( rule__BoundaryObject__UpToDateAssignment_15_1 ) )
+            // InternalBomi.g:3359:2: ( rule__BoundaryObject__UpToDateAssignment_15_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getUpToDateAssignment_15_1()); 
-            // InternalBomi.g:3317:2: ( rule__BoundaryObject__UpToDateAssignment_15_1 )
-            // InternalBomi.g:3317:3: rule__BoundaryObject__UpToDateAssignment_15_1
+            // InternalBomi.g:3360:2: ( rule__BoundaryObject__UpToDateAssignment_15_1 )
+            // InternalBomi.g:3360:3: rule__BoundaryObject__UpToDateAssignment_15_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__UpToDateAssignment_15_1();
@@ -10500,14 +10667,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_16__0"
-    // InternalBomi.g:3326:1: rule__BoundaryObject__Group_16__0 : rule__BoundaryObject__Group_16__0__Impl rule__BoundaryObject__Group_16__1 ;
+    // InternalBomi.g:3369:1: rule__BoundaryObject__Group_16__0 : rule__BoundaryObject__Group_16__0__Impl rule__BoundaryObject__Group_16__1 ;
     public final void rule__BoundaryObject__Group_16__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3330:1: ( rule__BoundaryObject__Group_16__0__Impl rule__BoundaryObject__Group_16__1 )
-            // InternalBomi.g:3331:2: rule__BoundaryObject__Group_16__0__Impl rule__BoundaryObject__Group_16__1
+            // InternalBomi.g:3373:1: ( rule__BoundaryObject__Group_16__0__Impl rule__BoundaryObject__Group_16__1 )
+            // InternalBomi.g:3374:2: rule__BoundaryObject__Group_16__0__Impl rule__BoundaryObject__Group_16__1
             {
             pushFollow(FOLLOW_19);
             rule__BoundaryObject__Group_16__0__Impl();
@@ -10538,20 +10705,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_16__0__Impl"
-    // InternalBomi.g:3338:1: rule__BoundaryObject__Group_16__0__Impl : ( 'internalConsistency' ) ;
+    // InternalBomi.g:3381:1: rule__BoundaryObject__Group_16__0__Impl : ( 'internalConsistency' ) ;
     public final void rule__BoundaryObject__Group_16__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3342:1: ( ( 'internalConsistency' ) )
-            // InternalBomi.g:3343:1: ( 'internalConsistency' )
+            // InternalBomi.g:3385:1: ( ( 'internalConsistency' ) )
+            // InternalBomi.g:3386:1: ( 'internalConsistency' )
             {
-            // InternalBomi.g:3343:1: ( 'internalConsistency' )
-            // InternalBomi.g:3344:2: 'internalConsistency'
+            // InternalBomi.g:3386:1: ( 'internalConsistency' )
+            // InternalBomi.g:3387:2: 'internalConsistency'
             {
              before(grammarAccess.getBoundaryObjectAccess().getInternalConsistencyKeyword_16_0()); 
-            match(input,54,FOLLOW_2); 
+            match(input,56,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getInternalConsistencyKeyword_16_0()); 
 
             }
@@ -10575,14 +10742,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_16__1"
-    // InternalBomi.g:3353:1: rule__BoundaryObject__Group_16__1 : rule__BoundaryObject__Group_16__1__Impl ;
+    // InternalBomi.g:3396:1: rule__BoundaryObject__Group_16__1 : rule__BoundaryObject__Group_16__1__Impl ;
     public final void rule__BoundaryObject__Group_16__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3357:1: ( rule__BoundaryObject__Group_16__1__Impl )
-            // InternalBomi.g:3358:2: rule__BoundaryObject__Group_16__1__Impl
+            // InternalBomi.g:3400:1: ( rule__BoundaryObject__Group_16__1__Impl )
+            // InternalBomi.g:3401:2: rule__BoundaryObject__Group_16__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_16__1__Impl();
@@ -10608,21 +10775,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_16__1__Impl"
-    // InternalBomi.g:3364:1: rule__BoundaryObject__Group_16__1__Impl : ( ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 ) ) ;
+    // InternalBomi.g:3407:1: rule__BoundaryObject__Group_16__1__Impl : ( ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 ) ) ;
     public final void rule__BoundaryObject__Group_16__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3368:1: ( ( ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 ) ) )
-            // InternalBomi.g:3369:1: ( ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 ) )
+            // InternalBomi.g:3411:1: ( ( ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 ) ) )
+            // InternalBomi.g:3412:1: ( ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 ) )
             {
-            // InternalBomi.g:3369:1: ( ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 ) )
-            // InternalBomi.g:3370:2: ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 )
+            // InternalBomi.g:3412:1: ( ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 ) )
+            // InternalBomi.g:3413:2: ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getInternalConsistencyAssignment_16_1()); 
-            // InternalBomi.g:3371:2: ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 )
-            // InternalBomi.g:3371:3: rule__BoundaryObject__InternalConsistencyAssignment_16_1
+            // InternalBomi.g:3414:2: ( rule__BoundaryObject__InternalConsistencyAssignment_16_1 )
+            // InternalBomi.g:3414:3: rule__BoundaryObject__InternalConsistencyAssignment_16_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__InternalConsistencyAssignment_16_1();
@@ -10655,14 +10822,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_17__0"
-    // InternalBomi.g:3380:1: rule__BoundaryObject__Group_17__0 : rule__BoundaryObject__Group_17__0__Impl rule__BoundaryObject__Group_17__1 ;
+    // InternalBomi.g:3423:1: rule__BoundaryObject__Group_17__0 : rule__BoundaryObject__Group_17__0__Impl rule__BoundaryObject__Group_17__1 ;
     public final void rule__BoundaryObject__Group_17__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3384:1: ( rule__BoundaryObject__Group_17__0__Impl rule__BoundaryObject__Group_17__1 )
-            // InternalBomi.g:3385:2: rule__BoundaryObject__Group_17__0__Impl rule__BoundaryObject__Group_17__1
+            // InternalBomi.g:3427:1: ( rule__BoundaryObject__Group_17__0__Impl rule__BoundaryObject__Group_17__1 )
+            // InternalBomi.g:3428:2: rule__BoundaryObject__Group_17__0__Impl rule__BoundaryObject__Group_17__1
             {
             pushFollow(FOLLOW_19);
             rule__BoundaryObject__Group_17__0__Impl();
@@ -10693,20 +10860,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_17__0__Impl"
-    // InternalBomi.g:3392:1: rule__BoundaryObject__Group_17__0__Impl : ( 'externalConsistency' ) ;
+    // InternalBomi.g:3435:1: rule__BoundaryObject__Group_17__0__Impl : ( 'externalConsistency' ) ;
     public final void rule__BoundaryObject__Group_17__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3396:1: ( ( 'externalConsistency' ) )
-            // InternalBomi.g:3397:1: ( 'externalConsistency' )
+            // InternalBomi.g:3439:1: ( ( 'externalConsistency' ) )
+            // InternalBomi.g:3440:1: ( 'externalConsistency' )
             {
-            // InternalBomi.g:3397:1: ( 'externalConsistency' )
-            // InternalBomi.g:3398:2: 'externalConsistency'
+            // InternalBomi.g:3440:1: ( 'externalConsistency' )
+            // InternalBomi.g:3441:2: 'externalConsistency'
             {
              before(grammarAccess.getBoundaryObjectAccess().getExternalConsistencyKeyword_17_0()); 
-            match(input,55,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getBoundaryObjectAccess().getExternalConsistencyKeyword_17_0()); 
 
             }
@@ -10730,14 +10897,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_17__1"
-    // InternalBomi.g:3407:1: rule__BoundaryObject__Group_17__1 : rule__BoundaryObject__Group_17__1__Impl ;
+    // InternalBomi.g:3450:1: rule__BoundaryObject__Group_17__1 : rule__BoundaryObject__Group_17__1__Impl ;
     public final void rule__BoundaryObject__Group_17__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3411:1: ( rule__BoundaryObject__Group_17__1__Impl )
-            // InternalBomi.g:3412:2: rule__BoundaryObject__Group_17__1__Impl
+            // InternalBomi.g:3454:1: ( rule__BoundaryObject__Group_17__1__Impl )
+            // InternalBomi.g:3455:2: rule__BoundaryObject__Group_17__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__Group_17__1__Impl();
@@ -10763,21 +10930,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__Group_17__1__Impl"
-    // InternalBomi.g:3418:1: rule__BoundaryObject__Group_17__1__Impl : ( ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 ) ) ;
+    // InternalBomi.g:3461:1: rule__BoundaryObject__Group_17__1__Impl : ( ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 ) ) ;
     public final void rule__BoundaryObject__Group_17__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3422:1: ( ( ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 ) ) )
-            // InternalBomi.g:3423:1: ( ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 ) )
+            // InternalBomi.g:3465:1: ( ( ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 ) ) )
+            // InternalBomi.g:3466:1: ( ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 ) )
             {
-            // InternalBomi.g:3423:1: ( ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 ) )
-            // InternalBomi.g:3424:2: ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 )
+            // InternalBomi.g:3466:1: ( ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 ) )
+            // InternalBomi.g:3467:2: ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 )
             {
              before(grammarAccess.getBoundaryObjectAccess().getExternalConsistencyAssignment_17_1()); 
-            // InternalBomi.g:3425:2: ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 )
-            // InternalBomi.g:3425:3: rule__BoundaryObject__ExternalConsistencyAssignment_17_1
+            // InternalBomi.g:3468:2: ( rule__BoundaryObject__ExternalConsistencyAssignment_17_1 )
+            // InternalBomi.g:3468:3: rule__BoundaryObject__ExternalConsistencyAssignment_17_1
             {
             pushFollow(FOLLOW_2);
             rule__BoundaryObject__ExternalConsistencyAssignment_17_1();
@@ -10810,14 +10977,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__0"
-    // InternalBomi.g:3434:1: rule__MethodologicalIsland__Group__0 : rule__MethodologicalIsland__Group__0__Impl rule__MethodologicalIsland__Group__1 ;
+    // InternalBomi.g:3477:1: rule__MethodologicalIsland__Group__0 : rule__MethodologicalIsland__Group__0__Impl rule__MethodologicalIsland__Group__1 ;
     public final void rule__MethodologicalIsland__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3438:1: ( rule__MethodologicalIsland__Group__0__Impl rule__MethodologicalIsland__Group__1 )
-            // InternalBomi.g:3439:2: rule__MethodologicalIsland__Group__0__Impl rule__MethodologicalIsland__Group__1
+            // InternalBomi.g:3481:1: ( rule__MethodologicalIsland__Group__0__Impl rule__MethodologicalIsland__Group__1 )
+            // InternalBomi.g:3482:2: rule__MethodologicalIsland__Group__0__Impl rule__MethodologicalIsland__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__MethodologicalIsland__Group__0__Impl();
@@ -10848,21 +11015,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__0__Impl"
-    // InternalBomi.g:3446:1: rule__MethodologicalIsland__Group__0__Impl : ( () ) ;
+    // InternalBomi.g:3489:1: rule__MethodologicalIsland__Group__0__Impl : ( () ) ;
     public final void rule__MethodologicalIsland__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3450:1: ( ( () ) )
-            // InternalBomi.g:3451:1: ( () )
+            // InternalBomi.g:3493:1: ( ( () ) )
+            // InternalBomi.g:3494:1: ( () )
             {
-            // InternalBomi.g:3451:1: ( () )
-            // InternalBomi.g:3452:2: ()
+            // InternalBomi.g:3494:1: ( () )
+            // InternalBomi.g:3495:2: ()
             {
              before(grammarAccess.getMethodologicalIslandAccess().getMethodologicalIslandAction_0()); 
-            // InternalBomi.g:3453:2: ()
-            // InternalBomi.g:3453:3: 
+            // InternalBomi.g:3496:2: ()
+            // InternalBomi.g:3496:3: 
             {
             }
 
@@ -10885,14 +11052,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__1"
-    // InternalBomi.g:3461:1: rule__MethodologicalIsland__Group__1 : rule__MethodologicalIsland__Group__1__Impl rule__MethodologicalIsland__Group__2 ;
+    // InternalBomi.g:3504:1: rule__MethodologicalIsland__Group__1 : rule__MethodologicalIsland__Group__1__Impl rule__MethodologicalIsland__Group__2 ;
     public final void rule__MethodologicalIsland__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3465:1: ( rule__MethodologicalIsland__Group__1__Impl rule__MethodologicalIsland__Group__2 )
-            // InternalBomi.g:3466:2: rule__MethodologicalIsland__Group__1__Impl rule__MethodologicalIsland__Group__2
+            // InternalBomi.g:3508:1: ( rule__MethodologicalIsland__Group__1__Impl rule__MethodologicalIsland__Group__2 )
+            // InternalBomi.g:3509:2: rule__MethodologicalIsland__Group__1__Impl rule__MethodologicalIsland__Group__2
             {
             pushFollow(FOLLOW_16);
             rule__MethodologicalIsland__Group__1__Impl();
@@ -10923,20 +11090,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__1__Impl"
-    // InternalBomi.g:3473:1: rule__MethodologicalIsland__Group__1__Impl : ( 'MethodologicalIsland' ) ;
+    // InternalBomi.g:3516:1: rule__MethodologicalIsland__Group__1__Impl : ( 'MethodologicalIsland' ) ;
     public final void rule__MethodologicalIsland__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3477:1: ( ( 'MethodologicalIsland' ) )
-            // InternalBomi.g:3478:1: ( 'MethodologicalIsland' )
+            // InternalBomi.g:3520:1: ( ( 'MethodologicalIsland' ) )
+            // InternalBomi.g:3521:1: ( 'MethodologicalIsland' )
             {
-            // InternalBomi.g:3478:1: ( 'MethodologicalIsland' )
-            // InternalBomi.g:3479:2: 'MethodologicalIsland'
+            // InternalBomi.g:3521:1: ( 'MethodologicalIsland' )
+            // InternalBomi.g:3522:2: 'MethodologicalIsland'
             {
              before(grammarAccess.getMethodologicalIslandAccess().getMethodologicalIslandKeyword_1()); 
-            match(input,56,FOLLOW_2); 
+            match(input,58,FOLLOW_2); 
              after(grammarAccess.getMethodologicalIslandAccess().getMethodologicalIslandKeyword_1()); 
 
             }
@@ -10960,14 +11127,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__2"
-    // InternalBomi.g:3488:1: rule__MethodologicalIsland__Group__2 : rule__MethodologicalIsland__Group__2__Impl rule__MethodologicalIsland__Group__3 ;
+    // InternalBomi.g:3531:1: rule__MethodologicalIsland__Group__2 : rule__MethodologicalIsland__Group__2__Impl rule__MethodologicalIsland__Group__3 ;
     public final void rule__MethodologicalIsland__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3492:1: ( rule__MethodologicalIsland__Group__2__Impl rule__MethodologicalIsland__Group__3 )
-            // InternalBomi.g:3493:2: rule__MethodologicalIsland__Group__2__Impl rule__MethodologicalIsland__Group__3
+            // InternalBomi.g:3535:1: ( rule__MethodologicalIsland__Group__2__Impl rule__MethodologicalIsland__Group__3 )
+            // InternalBomi.g:3536:2: rule__MethodologicalIsland__Group__2__Impl rule__MethodologicalIsland__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__MethodologicalIsland__Group__2__Impl();
@@ -10998,21 +11165,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__2__Impl"
-    // InternalBomi.g:3500:1: rule__MethodologicalIsland__Group__2__Impl : ( ( rule__MethodologicalIsland__NameAssignment_2 ) ) ;
+    // InternalBomi.g:3543:1: rule__MethodologicalIsland__Group__2__Impl : ( ( rule__MethodologicalIsland__NameAssignment_2 ) ) ;
     public final void rule__MethodologicalIsland__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3504:1: ( ( ( rule__MethodologicalIsland__NameAssignment_2 ) ) )
-            // InternalBomi.g:3505:1: ( ( rule__MethodologicalIsland__NameAssignment_2 ) )
+            // InternalBomi.g:3547:1: ( ( ( rule__MethodologicalIsland__NameAssignment_2 ) ) )
+            // InternalBomi.g:3548:1: ( ( rule__MethodologicalIsland__NameAssignment_2 ) )
             {
-            // InternalBomi.g:3505:1: ( ( rule__MethodologicalIsland__NameAssignment_2 ) )
-            // InternalBomi.g:3506:2: ( rule__MethodologicalIsland__NameAssignment_2 )
+            // InternalBomi.g:3548:1: ( ( rule__MethodologicalIsland__NameAssignment_2 ) )
+            // InternalBomi.g:3549:2: ( rule__MethodologicalIsland__NameAssignment_2 )
             {
              before(grammarAccess.getMethodologicalIslandAccess().getNameAssignment_2()); 
-            // InternalBomi.g:3507:2: ( rule__MethodologicalIsland__NameAssignment_2 )
-            // InternalBomi.g:3507:3: rule__MethodologicalIsland__NameAssignment_2
+            // InternalBomi.g:3550:2: ( rule__MethodologicalIsland__NameAssignment_2 )
+            // InternalBomi.g:3550:3: rule__MethodologicalIsland__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__MethodologicalIsland__NameAssignment_2();
@@ -11045,14 +11212,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__3"
-    // InternalBomi.g:3515:1: rule__MethodologicalIsland__Group__3 : rule__MethodologicalIsland__Group__3__Impl rule__MethodologicalIsland__Group__4 ;
+    // InternalBomi.g:3558:1: rule__MethodologicalIsland__Group__3 : rule__MethodologicalIsland__Group__3__Impl rule__MethodologicalIsland__Group__4 ;
     public final void rule__MethodologicalIsland__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3519:1: ( rule__MethodologicalIsland__Group__3__Impl rule__MethodologicalIsland__Group__4 )
-            // InternalBomi.g:3520:2: rule__MethodologicalIsland__Group__3__Impl rule__MethodologicalIsland__Group__4
+            // InternalBomi.g:3562:1: ( rule__MethodologicalIsland__Group__3__Impl rule__MethodologicalIsland__Group__4 )
+            // InternalBomi.g:3563:2: rule__MethodologicalIsland__Group__3__Impl rule__MethodologicalIsland__Group__4
             {
             pushFollow(FOLLOW_21);
             rule__MethodologicalIsland__Group__3__Impl();
@@ -11083,20 +11250,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__3__Impl"
-    // InternalBomi.g:3527:1: rule__MethodologicalIsland__Group__3__Impl : ( '{' ) ;
+    // InternalBomi.g:3570:1: rule__MethodologicalIsland__Group__3__Impl : ( '{' ) ;
     public final void rule__MethodologicalIsland__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3531:1: ( ( '{' ) )
-            // InternalBomi.g:3532:1: ( '{' )
+            // InternalBomi.g:3574:1: ( ( '{' ) )
+            // InternalBomi.g:3575:1: ( '{' )
             {
-            // InternalBomi.g:3532:1: ( '{' )
-            // InternalBomi.g:3533:2: '{'
+            // InternalBomi.g:3575:1: ( '{' )
+            // InternalBomi.g:3576:2: '{'
             {
              before(grammarAccess.getMethodologicalIslandAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getMethodologicalIslandAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -11120,14 +11287,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__4"
-    // InternalBomi.g:3542:1: rule__MethodologicalIsland__Group__4 : rule__MethodologicalIsland__Group__4__Impl rule__MethodologicalIsland__Group__5 ;
+    // InternalBomi.g:3585:1: rule__MethodologicalIsland__Group__4 : rule__MethodologicalIsland__Group__4__Impl rule__MethodologicalIsland__Group__5 ;
     public final void rule__MethodologicalIsland__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3546:1: ( rule__MethodologicalIsland__Group__4__Impl rule__MethodologicalIsland__Group__5 )
-            // InternalBomi.g:3547:2: rule__MethodologicalIsland__Group__4__Impl rule__MethodologicalIsland__Group__5
+            // InternalBomi.g:3589:1: ( rule__MethodologicalIsland__Group__4__Impl rule__MethodologicalIsland__Group__5 )
+            // InternalBomi.g:3590:2: rule__MethodologicalIsland__Group__4__Impl rule__MethodologicalIsland__Group__5
             {
             pushFollow(FOLLOW_21);
             rule__MethodologicalIsland__Group__4__Impl();
@@ -11158,29 +11325,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__4__Impl"
-    // InternalBomi.g:3554:1: rule__MethodologicalIsland__Group__4__Impl : ( ( rule__MethodologicalIsland__Group_4__0 )? ) ;
+    // InternalBomi.g:3597:1: rule__MethodologicalIsland__Group__4__Impl : ( ( rule__MethodologicalIsland__Group_4__0 )? ) ;
     public final void rule__MethodologicalIsland__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3558:1: ( ( ( rule__MethodologicalIsland__Group_4__0 )? ) )
-            // InternalBomi.g:3559:1: ( ( rule__MethodologicalIsland__Group_4__0 )? )
+            // InternalBomi.g:3601:1: ( ( ( rule__MethodologicalIsland__Group_4__0 )? ) )
+            // InternalBomi.g:3602:1: ( ( rule__MethodologicalIsland__Group_4__0 )? )
             {
-            // InternalBomi.g:3559:1: ( ( rule__MethodologicalIsland__Group_4__0 )? )
-            // InternalBomi.g:3560:2: ( rule__MethodologicalIsland__Group_4__0 )?
+            // InternalBomi.g:3602:1: ( ( rule__MethodologicalIsland__Group_4__0 )? )
+            // InternalBomi.g:3603:2: ( rule__MethodologicalIsland__Group_4__0 )?
             {
              before(grammarAccess.getMethodologicalIslandAccess().getGroup_4()); 
-            // InternalBomi.g:3561:2: ( rule__MethodologicalIsland__Group_4__0 )?
-            int alt38=2;
-            int LA38_0 = input.LA(1);
+            // InternalBomi.g:3604:2: ( rule__MethodologicalIsland__Group_4__0 )?
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA38_0==57) ) {
-                alt38=1;
+            if ( (LA39_0==59) ) {
+                alt39=1;
             }
-            switch (alt38) {
+            switch (alt39) {
                 case 1 :
-                    // InternalBomi.g:3561:3: rule__MethodologicalIsland__Group_4__0
+                    // InternalBomi.g:3604:3: rule__MethodologicalIsland__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__MethodologicalIsland__Group_4__0();
@@ -11216,14 +11383,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__5"
-    // InternalBomi.g:3569:1: rule__MethodologicalIsland__Group__5 : rule__MethodologicalIsland__Group__5__Impl ;
+    // InternalBomi.g:3612:1: rule__MethodologicalIsland__Group__5 : rule__MethodologicalIsland__Group__5__Impl ;
     public final void rule__MethodologicalIsland__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3573:1: ( rule__MethodologicalIsland__Group__5__Impl )
-            // InternalBomi.g:3574:2: rule__MethodologicalIsland__Group__5__Impl
+            // InternalBomi.g:3616:1: ( rule__MethodologicalIsland__Group__5__Impl )
+            // InternalBomi.g:3617:2: rule__MethodologicalIsland__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MethodologicalIsland__Group__5__Impl();
@@ -11249,20 +11416,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group__5__Impl"
-    // InternalBomi.g:3580:1: rule__MethodologicalIsland__Group__5__Impl : ( '}' ) ;
+    // InternalBomi.g:3623:1: rule__MethodologicalIsland__Group__5__Impl : ( '}' ) ;
     public final void rule__MethodologicalIsland__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3584:1: ( ( '}' ) )
-            // InternalBomi.g:3585:1: ( '}' )
+            // InternalBomi.g:3627:1: ( ( '}' ) )
+            // InternalBomi.g:3628:1: ( '}' )
             {
-            // InternalBomi.g:3585:1: ( '}' )
-            // InternalBomi.g:3586:2: '}'
+            // InternalBomi.g:3628:1: ( '}' )
+            // InternalBomi.g:3629:2: '}'
             {
              before(grammarAccess.getMethodologicalIslandAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,35,FOLLOW_2); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getMethodologicalIslandAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -11286,14 +11453,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group_4__0"
-    // InternalBomi.g:3596:1: rule__MethodologicalIsland__Group_4__0 : rule__MethodologicalIsland__Group_4__0__Impl rule__MethodologicalIsland__Group_4__1 ;
+    // InternalBomi.g:3639:1: rule__MethodologicalIsland__Group_4__0 : rule__MethodologicalIsland__Group_4__0__Impl rule__MethodologicalIsland__Group_4__1 ;
     public final void rule__MethodologicalIsland__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3600:1: ( rule__MethodologicalIsland__Group_4__0__Impl rule__MethodologicalIsland__Group_4__1 )
-            // InternalBomi.g:3601:2: rule__MethodologicalIsland__Group_4__0__Impl rule__MethodologicalIsland__Group_4__1
+            // InternalBomi.g:3643:1: ( rule__MethodologicalIsland__Group_4__0__Impl rule__MethodologicalIsland__Group_4__1 )
+            // InternalBomi.g:3644:2: rule__MethodologicalIsland__Group_4__0__Impl rule__MethodologicalIsland__Group_4__1
             {
             pushFollow(FOLLOW_22);
             rule__MethodologicalIsland__Group_4__0__Impl();
@@ -11324,20 +11491,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group_4__0__Impl"
-    // InternalBomi.g:3608:1: rule__MethodologicalIsland__Group_4__0__Impl : ( 'type' ) ;
+    // InternalBomi.g:3651:1: rule__MethodologicalIsland__Group_4__0__Impl : ( 'type' ) ;
     public final void rule__MethodologicalIsland__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3612:1: ( ( 'type' ) )
-            // InternalBomi.g:3613:1: ( 'type' )
+            // InternalBomi.g:3655:1: ( ( 'type' ) )
+            // InternalBomi.g:3656:1: ( 'type' )
             {
-            // InternalBomi.g:3613:1: ( 'type' )
-            // InternalBomi.g:3614:2: 'type'
+            // InternalBomi.g:3656:1: ( 'type' )
+            // InternalBomi.g:3657:2: 'type'
             {
              before(grammarAccess.getMethodologicalIslandAccess().getTypeKeyword_4_0()); 
-            match(input,57,FOLLOW_2); 
+            match(input,59,FOLLOW_2); 
              after(grammarAccess.getMethodologicalIslandAccess().getTypeKeyword_4_0()); 
 
             }
@@ -11361,14 +11528,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group_4__1"
-    // InternalBomi.g:3623:1: rule__MethodologicalIsland__Group_4__1 : rule__MethodologicalIsland__Group_4__1__Impl ;
+    // InternalBomi.g:3666:1: rule__MethodologicalIsland__Group_4__1 : rule__MethodologicalIsland__Group_4__1__Impl ;
     public final void rule__MethodologicalIsland__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3627:1: ( rule__MethodologicalIsland__Group_4__1__Impl )
-            // InternalBomi.g:3628:2: rule__MethodologicalIsland__Group_4__1__Impl
+            // InternalBomi.g:3670:1: ( rule__MethodologicalIsland__Group_4__1__Impl )
+            // InternalBomi.g:3671:2: rule__MethodologicalIsland__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MethodologicalIsland__Group_4__1__Impl();
@@ -11394,21 +11561,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__Group_4__1__Impl"
-    // InternalBomi.g:3634:1: rule__MethodologicalIsland__Group_4__1__Impl : ( ( rule__MethodologicalIsland__TypeAssignment_4_1 ) ) ;
+    // InternalBomi.g:3677:1: rule__MethodologicalIsland__Group_4__1__Impl : ( ( rule__MethodologicalIsland__TypeAssignment_4_1 ) ) ;
     public final void rule__MethodologicalIsland__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3638:1: ( ( ( rule__MethodologicalIsland__TypeAssignment_4_1 ) ) )
-            // InternalBomi.g:3639:1: ( ( rule__MethodologicalIsland__TypeAssignment_4_1 ) )
+            // InternalBomi.g:3681:1: ( ( ( rule__MethodologicalIsland__TypeAssignment_4_1 ) ) )
+            // InternalBomi.g:3682:1: ( ( rule__MethodologicalIsland__TypeAssignment_4_1 ) )
             {
-            // InternalBomi.g:3639:1: ( ( rule__MethodologicalIsland__TypeAssignment_4_1 ) )
-            // InternalBomi.g:3640:2: ( rule__MethodologicalIsland__TypeAssignment_4_1 )
+            // InternalBomi.g:3682:1: ( ( rule__MethodologicalIsland__TypeAssignment_4_1 ) )
+            // InternalBomi.g:3683:2: ( rule__MethodologicalIsland__TypeAssignment_4_1 )
             {
              before(grammarAccess.getMethodologicalIslandAccess().getTypeAssignment_4_1()); 
-            // InternalBomi.g:3641:2: ( rule__MethodologicalIsland__TypeAssignment_4_1 )
-            // InternalBomi.g:3641:3: rule__MethodologicalIsland__TypeAssignment_4_1
+            // InternalBomi.g:3684:2: ( rule__MethodologicalIsland__TypeAssignment_4_1 )
+            // InternalBomi.g:3684:3: rule__MethodologicalIsland__TypeAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__MethodologicalIsland__TypeAssignment_4_1();
@@ -11441,14 +11608,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GovernanceTeam__Group__0"
-    // InternalBomi.g:3650:1: rule__GovernanceTeam__Group__0 : rule__GovernanceTeam__Group__0__Impl rule__GovernanceTeam__Group__1 ;
+    // InternalBomi.g:3693:1: rule__GovernanceTeam__Group__0 : rule__GovernanceTeam__Group__0__Impl rule__GovernanceTeam__Group__1 ;
     public final void rule__GovernanceTeam__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3654:1: ( rule__GovernanceTeam__Group__0__Impl rule__GovernanceTeam__Group__1 )
-            // InternalBomi.g:3655:2: rule__GovernanceTeam__Group__0__Impl rule__GovernanceTeam__Group__1
+            // InternalBomi.g:3697:1: ( rule__GovernanceTeam__Group__0__Impl rule__GovernanceTeam__Group__1 )
+            // InternalBomi.g:3698:2: rule__GovernanceTeam__Group__0__Impl rule__GovernanceTeam__Group__1
             {
             pushFollow(FOLLOW_9);
             rule__GovernanceTeam__Group__0__Impl();
@@ -11479,21 +11646,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GovernanceTeam__Group__0__Impl"
-    // InternalBomi.g:3662:1: rule__GovernanceTeam__Group__0__Impl : ( () ) ;
+    // InternalBomi.g:3705:1: rule__GovernanceTeam__Group__0__Impl : ( () ) ;
     public final void rule__GovernanceTeam__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3666:1: ( ( () ) )
-            // InternalBomi.g:3667:1: ( () )
+            // InternalBomi.g:3709:1: ( ( () ) )
+            // InternalBomi.g:3710:1: ( () )
             {
-            // InternalBomi.g:3667:1: ( () )
-            // InternalBomi.g:3668:2: ()
+            // InternalBomi.g:3710:1: ( () )
+            // InternalBomi.g:3711:2: ()
             {
              before(grammarAccess.getGovernanceTeamAccess().getGovernanceTeamAction_0()); 
-            // InternalBomi.g:3669:2: ()
-            // InternalBomi.g:3669:3: 
+            // InternalBomi.g:3712:2: ()
+            // InternalBomi.g:3712:3: 
             {
             }
 
@@ -11516,14 +11683,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GovernanceTeam__Group__1"
-    // InternalBomi.g:3677:1: rule__GovernanceTeam__Group__1 : rule__GovernanceTeam__Group__1__Impl rule__GovernanceTeam__Group__2 ;
+    // InternalBomi.g:3720:1: rule__GovernanceTeam__Group__1 : rule__GovernanceTeam__Group__1__Impl rule__GovernanceTeam__Group__2 ;
     public final void rule__GovernanceTeam__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3681:1: ( rule__GovernanceTeam__Group__1__Impl rule__GovernanceTeam__Group__2 )
-            // InternalBomi.g:3682:2: rule__GovernanceTeam__Group__1__Impl rule__GovernanceTeam__Group__2
+            // InternalBomi.g:3724:1: ( rule__GovernanceTeam__Group__1__Impl rule__GovernanceTeam__Group__2 )
+            // InternalBomi.g:3725:2: rule__GovernanceTeam__Group__1__Impl rule__GovernanceTeam__Group__2
             {
             pushFollow(FOLLOW_16);
             rule__GovernanceTeam__Group__1__Impl();
@@ -11554,20 +11721,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GovernanceTeam__Group__1__Impl"
-    // InternalBomi.g:3689:1: rule__GovernanceTeam__Group__1__Impl : ( 'GovernanceTeam' ) ;
+    // InternalBomi.g:3732:1: rule__GovernanceTeam__Group__1__Impl : ( 'GovernanceTeam' ) ;
     public final void rule__GovernanceTeam__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3693:1: ( ( 'GovernanceTeam' ) )
-            // InternalBomi.g:3694:1: ( 'GovernanceTeam' )
+            // InternalBomi.g:3736:1: ( ( 'GovernanceTeam' ) )
+            // InternalBomi.g:3737:1: ( 'GovernanceTeam' )
             {
-            // InternalBomi.g:3694:1: ( 'GovernanceTeam' )
-            // InternalBomi.g:3695:2: 'GovernanceTeam'
+            // InternalBomi.g:3737:1: ( 'GovernanceTeam' )
+            // InternalBomi.g:3738:2: 'GovernanceTeam'
             {
              before(grammarAccess.getGovernanceTeamAccess().getGovernanceTeamKeyword_1()); 
-            match(input,58,FOLLOW_2); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getGovernanceTeamAccess().getGovernanceTeamKeyword_1()); 
 
             }
@@ -11591,14 +11758,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GovernanceTeam__Group__2"
-    // InternalBomi.g:3704:1: rule__GovernanceTeam__Group__2 : rule__GovernanceTeam__Group__2__Impl ;
+    // InternalBomi.g:3747:1: rule__GovernanceTeam__Group__2 : rule__GovernanceTeam__Group__2__Impl ;
     public final void rule__GovernanceTeam__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3708:1: ( rule__GovernanceTeam__Group__2__Impl )
-            // InternalBomi.g:3709:2: rule__GovernanceTeam__Group__2__Impl
+            // InternalBomi.g:3751:1: ( rule__GovernanceTeam__Group__2__Impl )
+            // InternalBomi.g:3752:2: rule__GovernanceTeam__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__GovernanceTeam__Group__2__Impl();
@@ -11624,21 +11791,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GovernanceTeam__Group__2__Impl"
-    // InternalBomi.g:3715:1: rule__GovernanceTeam__Group__2__Impl : ( ( rule__GovernanceTeam__NameAssignment_2 ) ) ;
+    // InternalBomi.g:3758:1: rule__GovernanceTeam__Group__2__Impl : ( ( rule__GovernanceTeam__NameAssignment_2 ) ) ;
     public final void rule__GovernanceTeam__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3719:1: ( ( ( rule__GovernanceTeam__NameAssignment_2 ) ) )
-            // InternalBomi.g:3720:1: ( ( rule__GovernanceTeam__NameAssignment_2 ) )
+            // InternalBomi.g:3762:1: ( ( ( rule__GovernanceTeam__NameAssignment_2 ) ) )
+            // InternalBomi.g:3763:1: ( ( rule__GovernanceTeam__NameAssignment_2 ) )
             {
-            // InternalBomi.g:3720:1: ( ( rule__GovernanceTeam__NameAssignment_2 ) )
-            // InternalBomi.g:3721:2: ( rule__GovernanceTeam__NameAssignment_2 )
+            // InternalBomi.g:3763:1: ( ( rule__GovernanceTeam__NameAssignment_2 ) )
+            // InternalBomi.g:3764:2: ( rule__GovernanceTeam__NameAssignment_2 )
             {
              before(grammarAccess.getGovernanceTeamAccess().getNameAssignment_2()); 
-            // InternalBomi.g:3722:2: ( rule__GovernanceTeam__NameAssignment_2 )
-            // InternalBomi.g:3722:3: rule__GovernanceTeam__NameAssignment_2
+            // InternalBomi.g:3765:2: ( rule__GovernanceTeam__NameAssignment_2 )
+            // InternalBomi.g:3765:3: rule__GovernanceTeam__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__GovernanceTeam__NameAssignment_2();
@@ -11671,14 +11838,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__0"
-    // InternalBomi.g:3731:1: rule__Role__Group__0 : rule__Role__Group__0__Impl rule__Role__Group__1 ;
+    // InternalBomi.g:3774:1: rule__Role__Group__0 : rule__Role__Group__0__Impl rule__Role__Group__1 ;
     public final void rule__Role__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3735:1: ( rule__Role__Group__0__Impl rule__Role__Group__1 )
-            // InternalBomi.g:3736:2: rule__Role__Group__0__Impl rule__Role__Group__1
+            // InternalBomi.g:3778:1: ( rule__Role__Group__0__Impl rule__Role__Group__1 )
+            // InternalBomi.g:3779:2: rule__Role__Group__0__Impl rule__Role__Group__1
             {
             pushFollow(FOLLOW_10);
             rule__Role__Group__0__Impl();
@@ -11709,21 +11876,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__0__Impl"
-    // InternalBomi.g:3743:1: rule__Role__Group__0__Impl : ( () ) ;
+    // InternalBomi.g:3786:1: rule__Role__Group__0__Impl : ( () ) ;
     public final void rule__Role__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3747:1: ( ( () ) )
-            // InternalBomi.g:3748:1: ( () )
+            // InternalBomi.g:3790:1: ( ( () ) )
+            // InternalBomi.g:3791:1: ( () )
             {
-            // InternalBomi.g:3748:1: ( () )
-            // InternalBomi.g:3749:2: ()
+            // InternalBomi.g:3791:1: ( () )
+            // InternalBomi.g:3792:2: ()
             {
              before(grammarAccess.getRoleAccess().getRoleAction_0()); 
-            // InternalBomi.g:3750:2: ()
-            // InternalBomi.g:3750:3: 
+            // InternalBomi.g:3793:2: ()
+            // InternalBomi.g:3793:3: 
             {
             }
 
@@ -11746,14 +11913,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__1"
-    // InternalBomi.g:3758:1: rule__Role__Group__1 : rule__Role__Group__1__Impl rule__Role__Group__2 ;
+    // InternalBomi.g:3801:1: rule__Role__Group__1 : rule__Role__Group__1__Impl rule__Role__Group__2 ;
     public final void rule__Role__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3762:1: ( rule__Role__Group__1__Impl rule__Role__Group__2 )
-            // InternalBomi.g:3763:2: rule__Role__Group__1__Impl rule__Role__Group__2
+            // InternalBomi.g:3805:1: ( rule__Role__Group__1__Impl rule__Role__Group__2 )
+            // InternalBomi.g:3806:2: rule__Role__Group__1__Impl rule__Role__Group__2
             {
             pushFollow(FOLLOW_16);
             rule__Role__Group__1__Impl();
@@ -11784,20 +11951,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__1__Impl"
-    // InternalBomi.g:3770:1: rule__Role__Group__1__Impl : ( 'Role' ) ;
+    // InternalBomi.g:3813:1: rule__Role__Group__1__Impl : ( 'Role' ) ;
     public final void rule__Role__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3774:1: ( ( 'Role' ) )
-            // InternalBomi.g:3775:1: ( 'Role' )
+            // InternalBomi.g:3817:1: ( ( 'Role' ) )
+            // InternalBomi.g:3818:1: ( 'Role' )
             {
-            // InternalBomi.g:3775:1: ( 'Role' )
-            // InternalBomi.g:3776:2: 'Role'
+            // InternalBomi.g:3818:1: ( 'Role' )
+            // InternalBomi.g:3819:2: 'Role'
             {
              before(grammarAccess.getRoleAccess().getRoleKeyword_1()); 
-            match(input,59,FOLLOW_2); 
+            match(input,61,FOLLOW_2); 
              after(grammarAccess.getRoleAccess().getRoleKeyword_1()); 
 
             }
@@ -11821,14 +11988,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__2"
-    // InternalBomi.g:3785:1: rule__Role__Group__2 : rule__Role__Group__2__Impl rule__Role__Group__3 ;
+    // InternalBomi.g:3828:1: rule__Role__Group__2 : rule__Role__Group__2__Impl rule__Role__Group__3 ;
     public final void rule__Role__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3789:1: ( rule__Role__Group__2__Impl rule__Role__Group__3 )
-            // InternalBomi.g:3790:2: rule__Role__Group__2__Impl rule__Role__Group__3
+            // InternalBomi.g:3832:1: ( rule__Role__Group__2__Impl rule__Role__Group__3 )
+            // InternalBomi.g:3833:2: rule__Role__Group__2__Impl rule__Role__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__Role__Group__2__Impl();
@@ -11859,21 +12026,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__2__Impl"
-    // InternalBomi.g:3797:1: rule__Role__Group__2__Impl : ( ( rule__Role__NameAssignment_2 ) ) ;
+    // InternalBomi.g:3840:1: rule__Role__Group__2__Impl : ( ( rule__Role__NameAssignment_2 ) ) ;
     public final void rule__Role__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3801:1: ( ( ( rule__Role__NameAssignment_2 ) ) )
-            // InternalBomi.g:3802:1: ( ( rule__Role__NameAssignment_2 ) )
+            // InternalBomi.g:3844:1: ( ( ( rule__Role__NameAssignment_2 ) ) )
+            // InternalBomi.g:3845:1: ( ( rule__Role__NameAssignment_2 ) )
             {
-            // InternalBomi.g:3802:1: ( ( rule__Role__NameAssignment_2 ) )
-            // InternalBomi.g:3803:2: ( rule__Role__NameAssignment_2 )
+            // InternalBomi.g:3845:1: ( ( rule__Role__NameAssignment_2 ) )
+            // InternalBomi.g:3846:2: ( rule__Role__NameAssignment_2 )
             {
              before(grammarAccess.getRoleAccess().getNameAssignment_2()); 
-            // InternalBomi.g:3804:2: ( rule__Role__NameAssignment_2 )
-            // InternalBomi.g:3804:3: rule__Role__NameAssignment_2
+            // InternalBomi.g:3847:2: ( rule__Role__NameAssignment_2 )
+            // InternalBomi.g:3847:3: rule__Role__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Role__NameAssignment_2();
@@ -11906,14 +12073,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__3"
-    // InternalBomi.g:3812:1: rule__Role__Group__3 : rule__Role__Group__3__Impl rule__Role__Group__4 ;
+    // InternalBomi.g:3855:1: rule__Role__Group__3 : rule__Role__Group__3__Impl rule__Role__Group__4 ;
     public final void rule__Role__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3816:1: ( rule__Role__Group__3__Impl rule__Role__Group__4 )
-            // InternalBomi.g:3817:2: rule__Role__Group__3__Impl rule__Role__Group__4
+            // InternalBomi.g:3859:1: ( rule__Role__Group__3__Impl rule__Role__Group__4 )
+            // InternalBomi.g:3860:2: rule__Role__Group__3__Impl rule__Role__Group__4
             {
             pushFollow(FOLLOW_23);
             rule__Role__Group__3__Impl();
@@ -11944,20 +12111,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__3__Impl"
-    // InternalBomi.g:3824:1: rule__Role__Group__3__Impl : ( '{' ) ;
+    // InternalBomi.g:3867:1: rule__Role__Group__3__Impl : ( '{' ) ;
     public final void rule__Role__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3828:1: ( ( '{' ) )
-            // InternalBomi.g:3829:1: ( '{' )
+            // InternalBomi.g:3871:1: ( ( '{' ) )
+            // InternalBomi.g:3872:1: ( '{' )
             {
-            // InternalBomi.g:3829:1: ( '{' )
-            // InternalBomi.g:3830:2: '{'
+            // InternalBomi.g:3872:1: ( '{' )
+            // InternalBomi.g:3873:2: '{'
             {
              before(grammarAccess.getRoleAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getRoleAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -11981,14 +12148,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__4"
-    // InternalBomi.g:3839:1: rule__Role__Group__4 : rule__Role__Group__4__Impl rule__Role__Group__5 ;
+    // InternalBomi.g:3882:1: rule__Role__Group__4 : rule__Role__Group__4__Impl rule__Role__Group__5 ;
     public final void rule__Role__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3843:1: ( rule__Role__Group__4__Impl rule__Role__Group__5 )
-            // InternalBomi.g:3844:2: rule__Role__Group__4__Impl rule__Role__Group__5
+            // InternalBomi.g:3886:1: ( rule__Role__Group__4__Impl rule__Role__Group__5 )
+            // InternalBomi.g:3887:2: rule__Role__Group__4__Impl rule__Role__Group__5
             {
             pushFollow(FOLLOW_23);
             rule__Role__Group__4__Impl();
@@ -12019,29 +12186,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__4__Impl"
-    // InternalBomi.g:3851:1: rule__Role__Group__4__Impl : ( ( rule__Role__Group_4__0 )? ) ;
+    // InternalBomi.g:3894:1: rule__Role__Group__4__Impl : ( ( rule__Role__Group_4__0 )? ) ;
     public final void rule__Role__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3855:1: ( ( ( rule__Role__Group_4__0 )? ) )
-            // InternalBomi.g:3856:1: ( ( rule__Role__Group_4__0 )? )
+            // InternalBomi.g:3898:1: ( ( ( rule__Role__Group_4__0 )? ) )
+            // InternalBomi.g:3899:1: ( ( rule__Role__Group_4__0 )? )
             {
-            // InternalBomi.g:3856:1: ( ( rule__Role__Group_4__0 )? )
-            // InternalBomi.g:3857:2: ( rule__Role__Group_4__0 )?
+            // InternalBomi.g:3899:1: ( ( rule__Role__Group_4__0 )? )
+            // InternalBomi.g:3900:2: ( rule__Role__Group_4__0 )?
             {
              before(grammarAccess.getRoleAccess().getGroup_4()); 
-            // InternalBomi.g:3858:2: ( rule__Role__Group_4__0 )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            // InternalBomi.g:3901:2: ( rule__Role__Group_4__0 )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA39_0==60) ) {
-                alt39=1;
+            if ( (LA40_0==62) ) {
+                alt40=1;
             }
-            switch (alt39) {
+            switch (alt40) {
                 case 1 :
-                    // InternalBomi.g:3858:3: rule__Role__Group_4__0
+                    // InternalBomi.g:3901:3: rule__Role__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Role__Group_4__0();
@@ -12077,14 +12244,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__5"
-    // InternalBomi.g:3866:1: rule__Role__Group__5 : rule__Role__Group__5__Impl rule__Role__Group__6 ;
+    // InternalBomi.g:3909:1: rule__Role__Group__5 : rule__Role__Group__5__Impl rule__Role__Group__6 ;
     public final void rule__Role__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3870:1: ( rule__Role__Group__5__Impl rule__Role__Group__6 )
-            // InternalBomi.g:3871:2: rule__Role__Group__5__Impl rule__Role__Group__6
+            // InternalBomi.g:3913:1: ( rule__Role__Group__5__Impl rule__Role__Group__6 )
+            // InternalBomi.g:3914:2: rule__Role__Group__5__Impl rule__Role__Group__6
             {
             pushFollow(FOLLOW_23);
             rule__Role__Group__5__Impl();
@@ -12115,29 +12282,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__5__Impl"
-    // InternalBomi.g:3878:1: rule__Role__Group__5__Impl : ( ( rule__Role__Group_5__0 )? ) ;
+    // InternalBomi.g:3921:1: rule__Role__Group__5__Impl : ( ( rule__Role__Group_5__0 )? ) ;
     public final void rule__Role__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3882:1: ( ( ( rule__Role__Group_5__0 )? ) )
-            // InternalBomi.g:3883:1: ( ( rule__Role__Group_5__0 )? )
+            // InternalBomi.g:3925:1: ( ( ( rule__Role__Group_5__0 )? ) )
+            // InternalBomi.g:3926:1: ( ( rule__Role__Group_5__0 )? )
             {
-            // InternalBomi.g:3883:1: ( ( rule__Role__Group_5__0 )? )
-            // InternalBomi.g:3884:2: ( rule__Role__Group_5__0 )?
+            // InternalBomi.g:3926:1: ( ( rule__Role__Group_5__0 )? )
+            // InternalBomi.g:3927:2: ( rule__Role__Group_5__0 )?
             {
              before(grammarAccess.getRoleAccess().getGroup_5()); 
-            // InternalBomi.g:3885:2: ( rule__Role__Group_5__0 )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // InternalBomi.g:3928:2: ( rule__Role__Group_5__0 )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA40_0==63) ) {
-                alt40=1;
+            if ( (LA41_0==65) ) {
+                alt41=1;
             }
-            switch (alt40) {
+            switch (alt41) {
                 case 1 :
-                    // InternalBomi.g:3885:3: rule__Role__Group_5__0
+                    // InternalBomi.g:3928:3: rule__Role__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Role__Group_5__0();
@@ -12173,14 +12340,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__6"
-    // InternalBomi.g:3893:1: rule__Role__Group__6 : rule__Role__Group__6__Impl ;
+    // InternalBomi.g:3936:1: rule__Role__Group__6 : rule__Role__Group__6__Impl ;
     public final void rule__Role__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3897:1: ( rule__Role__Group__6__Impl )
-            // InternalBomi.g:3898:2: rule__Role__Group__6__Impl
+            // InternalBomi.g:3940:1: ( rule__Role__Group__6__Impl )
+            // InternalBomi.g:3941:2: rule__Role__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Role__Group__6__Impl();
@@ -12206,20 +12373,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__6__Impl"
-    // InternalBomi.g:3904:1: rule__Role__Group__6__Impl : ( '}' ) ;
+    // InternalBomi.g:3947:1: rule__Role__Group__6__Impl : ( '}' ) ;
     public final void rule__Role__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3908:1: ( ( '}' ) )
-            // InternalBomi.g:3909:1: ( '}' )
+            // InternalBomi.g:3951:1: ( ( '}' ) )
+            // InternalBomi.g:3952:1: ( '}' )
             {
-            // InternalBomi.g:3909:1: ( '}' )
-            // InternalBomi.g:3910:2: '}'
+            // InternalBomi.g:3952:1: ( '}' )
+            // InternalBomi.g:3953:2: '}'
             {
              before(grammarAccess.getRoleAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,35,FOLLOW_2); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getRoleAccess().getRightCurlyBracketKeyword_6()); 
 
             }
@@ -12243,14 +12410,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4__0"
-    // InternalBomi.g:3920:1: rule__Role__Group_4__0 : rule__Role__Group_4__0__Impl rule__Role__Group_4__1 ;
+    // InternalBomi.g:3963:1: rule__Role__Group_4__0 : rule__Role__Group_4__0__Impl rule__Role__Group_4__1 ;
     public final void rule__Role__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3924:1: ( rule__Role__Group_4__0__Impl rule__Role__Group_4__1 )
-            // InternalBomi.g:3925:2: rule__Role__Group_4__0__Impl rule__Role__Group_4__1
+            // InternalBomi.g:3967:1: ( rule__Role__Group_4__0__Impl rule__Role__Group_4__1 )
+            // InternalBomi.g:3968:2: rule__Role__Group_4__0__Impl rule__Role__Group_4__1
             {
             pushFollow(FOLLOW_24);
             rule__Role__Group_4__0__Impl();
@@ -12281,20 +12448,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4__0__Impl"
-    // InternalBomi.g:3932:1: rule__Role__Group_4__0__Impl : ( 'partOfGovernanceTeams' ) ;
+    // InternalBomi.g:3975:1: rule__Role__Group_4__0__Impl : ( 'partOfGovernanceTeams' ) ;
     public final void rule__Role__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3936:1: ( ( 'partOfGovernanceTeams' ) )
-            // InternalBomi.g:3937:1: ( 'partOfGovernanceTeams' )
+            // InternalBomi.g:3979:1: ( ( 'partOfGovernanceTeams' ) )
+            // InternalBomi.g:3980:1: ( 'partOfGovernanceTeams' )
             {
-            // InternalBomi.g:3937:1: ( 'partOfGovernanceTeams' )
-            // InternalBomi.g:3938:2: 'partOfGovernanceTeams'
+            // InternalBomi.g:3980:1: ( 'partOfGovernanceTeams' )
+            // InternalBomi.g:3981:2: 'partOfGovernanceTeams'
             {
              before(grammarAccess.getRoleAccess().getPartOfGovernanceTeamsKeyword_4_0()); 
-            match(input,60,FOLLOW_2); 
+            match(input,62,FOLLOW_2); 
              after(grammarAccess.getRoleAccess().getPartOfGovernanceTeamsKeyword_4_0()); 
 
             }
@@ -12318,14 +12485,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4__1"
-    // InternalBomi.g:3947:1: rule__Role__Group_4__1 : rule__Role__Group_4__1__Impl rule__Role__Group_4__2 ;
+    // InternalBomi.g:3990:1: rule__Role__Group_4__1 : rule__Role__Group_4__1__Impl rule__Role__Group_4__2 ;
     public final void rule__Role__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3951:1: ( rule__Role__Group_4__1__Impl rule__Role__Group_4__2 )
-            // InternalBomi.g:3952:2: rule__Role__Group_4__1__Impl rule__Role__Group_4__2
+            // InternalBomi.g:3994:1: ( rule__Role__Group_4__1__Impl rule__Role__Group_4__2 )
+            // InternalBomi.g:3995:2: rule__Role__Group_4__1__Impl rule__Role__Group_4__2
             {
             pushFollow(FOLLOW_16);
             rule__Role__Group_4__1__Impl();
@@ -12356,20 +12523,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4__1__Impl"
-    // InternalBomi.g:3959:1: rule__Role__Group_4__1__Impl : ( '(' ) ;
+    // InternalBomi.g:4002:1: rule__Role__Group_4__1__Impl : ( '(' ) ;
     public final void rule__Role__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3963:1: ( ( '(' ) )
-            // InternalBomi.g:3964:1: ( '(' )
+            // InternalBomi.g:4006:1: ( ( '(' ) )
+            // InternalBomi.g:4007:1: ( '(' )
             {
-            // InternalBomi.g:3964:1: ( '(' )
-            // InternalBomi.g:3965:2: '('
+            // InternalBomi.g:4007:1: ( '(' )
+            // InternalBomi.g:4008:2: '('
             {
              before(grammarAccess.getRoleAccess().getLeftParenthesisKeyword_4_1()); 
-            match(input,61,FOLLOW_2); 
+            match(input,63,FOLLOW_2); 
              after(grammarAccess.getRoleAccess().getLeftParenthesisKeyword_4_1()); 
 
             }
@@ -12393,14 +12560,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4__2"
-    // InternalBomi.g:3974:1: rule__Role__Group_4__2 : rule__Role__Group_4__2__Impl rule__Role__Group_4__3 ;
+    // InternalBomi.g:4017:1: rule__Role__Group_4__2 : rule__Role__Group_4__2__Impl rule__Role__Group_4__3 ;
     public final void rule__Role__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3978:1: ( rule__Role__Group_4__2__Impl rule__Role__Group_4__3 )
-            // InternalBomi.g:3979:2: rule__Role__Group_4__2__Impl rule__Role__Group_4__3
+            // InternalBomi.g:4021:1: ( rule__Role__Group_4__2__Impl rule__Role__Group_4__3 )
+            // InternalBomi.g:4022:2: rule__Role__Group_4__2__Impl rule__Role__Group_4__3
             {
             pushFollow(FOLLOW_25);
             rule__Role__Group_4__2__Impl();
@@ -12431,21 +12598,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4__2__Impl"
-    // InternalBomi.g:3986:1: rule__Role__Group_4__2__Impl : ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 ) ) ;
+    // InternalBomi.g:4029:1: rule__Role__Group_4__2__Impl : ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 ) ) ;
     public final void rule__Role__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:3990:1: ( ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 ) ) )
-            // InternalBomi.g:3991:1: ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 ) )
+            // InternalBomi.g:4033:1: ( ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 ) ) )
+            // InternalBomi.g:4034:1: ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 ) )
             {
-            // InternalBomi.g:3991:1: ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 ) )
-            // InternalBomi.g:3992:2: ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 )
+            // InternalBomi.g:4034:1: ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 ) )
+            // InternalBomi.g:4035:2: ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 )
             {
              before(grammarAccess.getRoleAccess().getPartOfGovernanceTeamsAssignment_4_2()); 
-            // InternalBomi.g:3993:2: ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 )
-            // InternalBomi.g:3993:3: rule__Role__PartOfGovernanceTeamsAssignment_4_2
+            // InternalBomi.g:4036:2: ( rule__Role__PartOfGovernanceTeamsAssignment_4_2 )
+            // InternalBomi.g:4036:3: rule__Role__PartOfGovernanceTeamsAssignment_4_2
             {
             pushFollow(FOLLOW_2);
             rule__Role__PartOfGovernanceTeamsAssignment_4_2();
@@ -12478,14 +12645,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4__3"
-    // InternalBomi.g:4001:1: rule__Role__Group_4__3 : rule__Role__Group_4__3__Impl rule__Role__Group_4__4 ;
+    // InternalBomi.g:4044:1: rule__Role__Group_4__3 : rule__Role__Group_4__3__Impl rule__Role__Group_4__4 ;
     public final void rule__Role__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4005:1: ( rule__Role__Group_4__3__Impl rule__Role__Group_4__4 )
-            // InternalBomi.g:4006:2: rule__Role__Group_4__3__Impl rule__Role__Group_4__4
+            // InternalBomi.g:4048:1: ( rule__Role__Group_4__3__Impl rule__Role__Group_4__4 )
+            // InternalBomi.g:4049:2: rule__Role__Group_4__3__Impl rule__Role__Group_4__4
             {
             pushFollow(FOLLOW_25);
             rule__Role__Group_4__3__Impl();
@@ -12516,33 +12683,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4__3__Impl"
-    // InternalBomi.g:4013:1: rule__Role__Group_4__3__Impl : ( ( rule__Role__Group_4_3__0 )* ) ;
+    // InternalBomi.g:4056:1: rule__Role__Group_4__3__Impl : ( ( rule__Role__Group_4_3__0 )* ) ;
     public final void rule__Role__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4017:1: ( ( ( rule__Role__Group_4_3__0 )* ) )
-            // InternalBomi.g:4018:1: ( ( rule__Role__Group_4_3__0 )* )
+            // InternalBomi.g:4060:1: ( ( ( rule__Role__Group_4_3__0 )* ) )
+            // InternalBomi.g:4061:1: ( ( rule__Role__Group_4_3__0 )* )
             {
-            // InternalBomi.g:4018:1: ( ( rule__Role__Group_4_3__0 )* )
-            // InternalBomi.g:4019:2: ( rule__Role__Group_4_3__0 )*
+            // InternalBomi.g:4061:1: ( ( rule__Role__Group_4_3__0 )* )
+            // InternalBomi.g:4062:2: ( rule__Role__Group_4_3__0 )*
             {
              before(grammarAccess.getRoleAccess().getGroup_4_3()); 
-            // InternalBomi.g:4020:2: ( rule__Role__Group_4_3__0 )*
-            loop41:
+            // InternalBomi.g:4063:2: ( rule__Role__Group_4_3__0 )*
+            loop42:
             do {
-                int alt41=2;
-                int LA41_0 = input.LA(1);
+                int alt42=2;
+                int LA42_0 = input.LA(1);
 
-                if ( (LA41_0==36) ) {
-                    alt41=1;
+                if ( (LA42_0==38) ) {
+                    alt42=1;
                 }
 
 
-                switch (alt41) {
+                switch (alt42) {
             	case 1 :
-            	    // InternalBomi.g:4020:3: rule__Role__Group_4_3__0
+            	    // InternalBomi.g:4063:3: rule__Role__Group_4_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__Role__Group_4_3__0();
@@ -12554,7 +12721,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop41;
+            	    break loop42;
                 }
             } while (true);
 
@@ -12581,14 +12748,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4__4"
-    // InternalBomi.g:4028:1: rule__Role__Group_4__4 : rule__Role__Group_4__4__Impl ;
+    // InternalBomi.g:4071:1: rule__Role__Group_4__4 : rule__Role__Group_4__4__Impl ;
     public final void rule__Role__Group_4__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4032:1: ( rule__Role__Group_4__4__Impl )
-            // InternalBomi.g:4033:2: rule__Role__Group_4__4__Impl
+            // InternalBomi.g:4075:1: ( rule__Role__Group_4__4__Impl )
+            // InternalBomi.g:4076:2: rule__Role__Group_4__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Role__Group_4__4__Impl();
@@ -12614,20 +12781,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4__4__Impl"
-    // InternalBomi.g:4039:1: rule__Role__Group_4__4__Impl : ( ')' ) ;
+    // InternalBomi.g:4082:1: rule__Role__Group_4__4__Impl : ( ')' ) ;
     public final void rule__Role__Group_4__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4043:1: ( ( ')' ) )
-            // InternalBomi.g:4044:1: ( ')' )
+            // InternalBomi.g:4086:1: ( ( ')' ) )
+            // InternalBomi.g:4087:1: ( ')' )
             {
-            // InternalBomi.g:4044:1: ( ')' )
-            // InternalBomi.g:4045:2: ')'
+            // InternalBomi.g:4087:1: ( ')' )
+            // InternalBomi.g:4088:2: ')'
             {
              before(grammarAccess.getRoleAccess().getRightParenthesisKeyword_4_4()); 
-            match(input,62,FOLLOW_2); 
+            match(input,64,FOLLOW_2); 
              after(grammarAccess.getRoleAccess().getRightParenthesisKeyword_4_4()); 
 
             }
@@ -12651,14 +12818,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4_3__0"
-    // InternalBomi.g:4055:1: rule__Role__Group_4_3__0 : rule__Role__Group_4_3__0__Impl rule__Role__Group_4_3__1 ;
+    // InternalBomi.g:4098:1: rule__Role__Group_4_3__0 : rule__Role__Group_4_3__0__Impl rule__Role__Group_4_3__1 ;
     public final void rule__Role__Group_4_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4059:1: ( rule__Role__Group_4_3__0__Impl rule__Role__Group_4_3__1 )
-            // InternalBomi.g:4060:2: rule__Role__Group_4_3__0__Impl rule__Role__Group_4_3__1
+            // InternalBomi.g:4102:1: ( rule__Role__Group_4_3__0__Impl rule__Role__Group_4_3__1 )
+            // InternalBomi.g:4103:2: rule__Role__Group_4_3__0__Impl rule__Role__Group_4_3__1
             {
             pushFollow(FOLLOW_16);
             rule__Role__Group_4_3__0__Impl();
@@ -12689,20 +12856,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4_3__0__Impl"
-    // InternalBomi.g:4067:1: rule__Role__Group_4_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:4110:1: rule__Role__Group_4_3__0__Impl : ( ',' ) ;
     public final void rule__Role__Group_4_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4071:1: ( ( ',' ) )
-            // InternalBomi.g:4072:1: ( ',' )
+            // InternalBomi.g:4114:1: ( ( ',' ) )
+            // InternalBomi.g:4115:1: ( ',' )
             {
-            // InternalBomi.g:4072:1: ( ',' )
-            // InternalBomi.g:4073:2: ','
+            // InternalBomi.g:4115:1: ( ',' )
+            // InternalBomi.g:4116:2: ','
             {
              before(grammarAccess.getRoleAccess().getCommaKeyword_4_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getRoleAccess().getCommaKeyword_4_3_0()); 
 
             }
@@ -12726,14 +12893,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4_3__1"
-    // InternalBomi.g:4082:1: rule__Role__Group_4_3__1 : rule__Role__Group_4_3__1__Impl ;
+    // InternalBomi.g:4125:1: rule__Role__Group_4_3__1 : rule__Role__Group_4_3__1__Impl ;
     public final void rule__Role__Group_4_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4086:1: ( rule__Role__Group_4_3__1__Impl )
-            // InternalBomi.g:4087:2: rule__Role__Group_4_3__1__Impl
+            // InternalBomi.g:4129:1: ( rule__Role__Group_4_3__1__Impl )
+            // InternalBomi.g:4130:2: rule__Role__Group_4_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Role__Group_4_3__1__Impl();
@@ -12759,21 +12926,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_4_3__1__Impl"
-    // InternalBomi.g:4093:1: rule__Role__Group_4_3__1__Impl : ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 ) ) ;
+    // InternalBomi.g:4136:1: rule__Role__Group_4_3__1__Impl : ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 ) ) ;
     public final void rule__Role__Group_4_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4097:1: ( ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 ) ) )
-            // InternalBomi.g:4098:1: ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 ) )
+            // InternalBomi.g:4140:1: ( ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 ) ) )
+            // InternalBomi.g:4141:1: ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 ) )
             {
-            // InternalBomi.g:4098:1: ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 ) )
-            // InternalBomi.g:4099:2: ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 )
+            // InternalBomi.g:4141:1: ( ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 ) )
+            // InternalBomi.g:4142:2: ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 )
             {
              before(grammarAccess.getRoleAccess().getPartOfGovernanceTeamsAssignment_4_3_1()); 
-            // InternalBomi.g:4100:2: ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 )
-            // InternalBomi.g:4100:3: rule__Role__PartOfGovernanceTeamsAssignment_4_3_1
+            // InternalBomi.g:4143:2: ( rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 )
+            // InternalBomi.g:4143:3: rule__Role__PartOfGovernanceTeamsAssignment_4_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Role__PartOfGovernanceTeamsAssignment_4_3_1();
@@ -12806,14 +12973,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5__0"
-    // InternalBomi.g:4109:1: rule__Role__Group_5__0 : rule__Role__Group_5__0__Impl rule__Role__Group_5__1 ;
+    // InternalBomi.g:4152:1: rule__Role__Group_5__0 : rule__Role__Group_5__0__Impl rule__Role__Group_5__1 ;
     public final void rule__Role__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4113:1: ( rule__Role__Group_5__0__Impl rule__Role__Group_5__1 )
-            // InternalBomi.g:4114:2: rule__Role__Group_5__0__Impl rule__Role__Group_5__1
+            // InternalBomi.g:4156:1: ( rule__Role__Group_5__0__Impl rule__Role__Group_5__1 )
+            // InternalBomi.g:4157:2: rule__Role__Group_5__0__Impl rule__Role__Group_5__1
             {
             pushFollow(FOLLOW_24);
             rule__Role__Group_5__0__Impl();
@@ -12844,20 +13011,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5__0__Impl"
-    // InternalBomi.g:4121:1: rule__Role__Group_5__0__Impl : ( 'partOfMIs' ) ;
+    // InternalBomi.g:4164:1: rule__Role__Group_5__0__Impl : ( 'partOfMIs' ) ;
     public final void rule__Role__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4125:1: ( ( 'partOfMIs' ) )
-            // InternalBomi.g:4126:1: ( 'partOfMIs' )
+            // InternalBomi.g:4168:1: ( ( 'partOfMIs' ) )
+            // InternalBomi.g:4169:1: ( 'partOfMIs' )
             {
-            // InternalBomi.g:4126:1: ( 'partOfMIs' )
-            // InternalBomi.g:4127:2: 'partOfMIs'
+            // InternalBomi.g:4169:1: ( 'partOfMIs' )
+            // InternalBomi.g:4170:2: 'partOfMIs'
             {
              before(grammarAccess.getRoleAccess().getPartOfMIsKeyword_5_0()); 
-            match(input,63,FOLLOW_2); 
+            match(input,65,FOLLOW_2); 
              after(grammarAccess.getRoleAccess().getPartOfMIsKeyword_5_0()); 
 
             }
@@ -12881,14 +13048,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5__1"
-    // InternalBomi.g:4136:1: rule__Role__Group_5__1 : rule__Role__Group_5__1__Impl rule__Role__Group_5__2 ;
+    // InternalBomi.g:4179:1: rule__Role__Group_5__1 : rule__Role__Group_5__1__Impl rule__Role__Group_5__2 ;
     public final void rule__Role__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4140:1: ( rule__Role__Group_5__1__Impl rule__Role__Group_5__2 )
-            // InternalBomi.g:4141:2: rule__Role__Group_5__1__Impl rule__Role__Group_5__2
+            // InternalBomi.g:4183:1: ( rule__Role__Group_5__1__Impl rule__Role__Group_5__2 )
+            // InternalBomi.g:4184:2: rule__Role__Group_5__1__Impl rule__Role__Group_5__2
             {
             pushFollow(FOLLOW_16);
             rule__Role__Group_5__1__Impl();
@@ -12919,20 +13086,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5__1__Impl"
-    // InternalBomi.g:4148:1: rule__Role__Group_5__1__Impl : ( '(' ) ;
+    // InternalBomi.g:4191:1: rule__Role__Group_5__1__Impl : ( '(' ) ;
     public final void rule__Role__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4152:1: ( ( '(' ) )
-            // InternalBomi.g:4153:1: ( '(' )
+            // InternalBomi.g:4195:1: ( ( '(' ) )
+            // InternalBomi.g:4196:1: ( '(' )
             {
-            // InternalBomi.g:4153:1: ( '(' )
-            // InternalBomi.g:4154:2: '('
+            // InternalBomi.g:4196:1: ( '(' )
+            // InternalBomi.g:4197:2: '('
             {
              before(grammarAccess.getRoleAccess().getLeftParenthesisKeyword_5_1()); 
-            match(input,61,FOLLOW_2); 
+            match(input,63,FOLLOW_2); 
              after(grammarAccess.getRoleAccess().getLeftParenthesisKeyword_5_1()); 
 
             }
@@ -12956,14 +13123,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5__2"
-    // InternalBomi.g:4163:1: rule__Role__Group_5__2 : rule__Role__Group_5__2__Impl rule__Role__Group_5__3 ;
+    // InternalBomi.g:4206:1: rule__Role__Group_5__2 : rule__Role__Group_5__2__Impl rule__Role__Group_5__3 ;
     public final void rule__Role__Group_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4167:1: ( rule__Role__Group_5__2__Impl rule__Role__Group_5__3 )
-            // InternalBomi.g:4168:2: rule__Role__Group_5__2__Impl rule__Role__Group_5__3
+            // InternalBomi.g:4210:1: ( rule__Role__Group_5__2__Impl rule__Role__Group_5__3 )
+            // InternalBomi.g:4211:2: rule__Role__Group_5__2__Impl rule__Role__Group_5__3
             {
             pushFollow(FOLLOW_25);
             rule__Role__Group_5__2__Impl();
@@ -12994,21 +13161,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5__2__Impl"
-    // InternalBomi.g:4175:1: rule__Role__Group_5__2__Impl : ( ( rule__Role__PartOfMIsAssignment_5_2 ) ) ;
+    // InternalBomi.g:4218:1: rule__Role__Group_5__2__Impl : ( ( rule__Role__PartOfMIsAssignment_5_2 ) ) ;
     public final void rule__Role__Group_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4179:1: ( ( ( rule__Role__PartOfMIsAssignment_5_2 ) ) )
-            // InternalBomi.g:4180:1: ( ( rule__Role__PartOfMIsAssignment_5_2 ) )
+            // InternalBomi.g:4222:1: ( ( ( rule__Role__PartOfMIsAssignment_5_2 ) ) )
+            // InternalBomi.g:4223:1: ( ( rule__Role__PartOfMIsAssignment_5_2 ) )
             {
-            // InternalBomi.g:4180:1: ( ( rule__Role__PartOfMIsAssignment_5_2 ) )
-            // InternalBomi.g:4181:2: ( rule__Role__PartOfMIsAssignment_5_2 )
+            // InternalBomi.g:4223:1: ( ( rule__Role__PartOfMIsAssignment_5_2 ) )
+            // InternalBomi.g:4224:2: ( rule__Role__PartOfMIsAssignment_5_2 )
             {
              before(grammarAccess.getRoleAccess().getPartOfMIsAssignment_5_2()); 
-            // InternalBomi.g:4182:2: ( rule__Role__PartOfMIsAssignment_5_2 )
-            // InternalBomi.g:4182:3: rule__Role__PartOfMIsAssignment_5_2
+            // InternalBomi.g:4225:2: ( rule__Role__PartOfMIsAssignment_5_2 )
+            // InternalBomi.g:4225:3: rule__Role__PartOfMIsAssignment_5_2
             {
             pushFollow(FOLLOW_2);
             rule__Role__PartOfMIsAssignment_5_2();
@@ -13041,14 +13208,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5__3"
-    // InternalBomi.g:4190:1: rule__Role__Group_5__3 : rule__Role__Group_5__3__Impl rule__Role__Group_5__4 ;
+    // InternalBomi.g:4233:1: rule__Role__Group_5__3 : rule__Role__Group_5__3__Impl rule__Role__Group_5__4 ;
     public final void rule__Role__Group_5__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4194:1: ( rule__Role__Group_5__3__Impl rule__Role__Group_5__4 )
-            // InternalBomi.g:4195:2: rule__Role__Group_5__3__Impl rule__Role__Group_5__4
+            // InternalBomi.g:4237:1: ( rule__Role__Group_5__3__Impl rule__Role__Group_5__4 )
+            // InternalBomi.g:4238:2: rule__Role__Group_5__3__Impl rule__Role__Group_5__4
             {
             pushFollow(FOLLOW_25);
             rule__Role__Group_5__3__Impl();
@@ -13079,33 +13246,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5__3__Impl"
-    // InternalBomi.g:4202:1: rule__Role__Group_5__3__Impl : ( ( rule__Role__Group_5_3__0 )* ) ;
+    // InternalBomi.g:4245:1: rule__Role__Group_5__3__Impl : ( ( rule__Role__Group_5_3__0 )* ) ;
     public final void rule__Role__Group_5__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4206:1: ( ( ( rule__Role__Group_5_3__0 )* ) )
-            // InternalBomi.g:4207:1: ( ( rule__Role__Group_5_3__0 )* )
+            // InternalBomi.g:4249:1: ( ( ( rule__Role__Group_5_3__0 )* ) )
+            // InternalBomi.g:4250:1: ( ( rule__Role__Group_5_3__0 )* )
             {
-            // InternalBomi.g:4207:1: ( ( rule__Role__Group_5_3__0 )* )
-            // InternalBomi.g:4208:2: ( rule__Role__Group_5_3__0 )*
+            // InternalBomi.g:4250:1: ( ( rule__Role__Group_5_3__0 )* )
+            // InternalBomi.g:4251:2: ( rule__Role__Group_5_3__0 )*
             {
              before(grammarAccess.getRoleAccess().getGroup_5_3()); 
-            // InternalBomi.g:4209:2: ( rule__Role__Group_5_3__0 )*
-            loop42:
+            // InternalBomi.g:4252:2: ( rule__Role__Group_5_3__0 )*
+            loop43:
             do {
-                int alt42=2;
-                int LA42_0 = input.LA(1);
+                int alt43=2;
+                int LA43_0 = input.LA(1);
 
-                if ( (LA42_0==36) ) {
-                    alt42=1;
+                if ( (LA43_0==38) ) {
+                    alt43=1;
                 }
 
 
-                switch (alt42) {
+                switch (alt43) {
             	case 1 :
-            	    // InternalBomi.g:4209:3: rule__Role__Group_5_3__0
+            	    // InternalBomi.g:4252:3: rule__Role__Group_5_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__Role__Group_5_3__0();
@@ -13117,7 +13284,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop42;
+            	    break loop43;
                 }
             } while (true);
 
@@ -13144,14 +13311,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5__4"
-    // InternalBomi.g:4217:1: rule__Role__Group_5__4 : rule__Role__Group_5__4__Impl ;
+    // InternalBomi.g:4260:1: rule__Role__Group_5__4 : rule__Role__Group_5__4__Impl ;
     public final void rule__Role__Group_5__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4221:1: ( rule__Role__Group_5__4__Impl )
-            // InternalBomi.g:4222:2: rule__Role__Group_5__4__Impl
+            // InternalBomi.g:4264:1: ( rule__Role__Group_5__4__Impl )
+            // InternalBomi.g:4265:2: rule__Role__Group_5__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Role__Group_5__4__Impl();
@@ -13177,20 +13344,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5__4__Impl"
-    // InternalBomi.g:4228:1: rule__Role__Group_5__4__Impl : ( ')' ) ;
+    // InternalBomi.g:4271:1: rule__Role__Group_5__4__Impl : ( ')' ) ;
     public final void rule__Role__Group_5__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4232:1: ( ( ')' ) )
-            // InternalBomi.g:4233:1: ( ')' )
+            // InternalBomi.g:4275:1: ( ( ')' ) )
+            // InternalBomi.g:4276:1: ( ')' )
             {
-            // InternalBomi.g:4233:1: ( ')' )
-            // InternalBomi.g:4234:2: ')'
+            // InternalBomi.g:4276:1: ( ')' )
+            // InternalBomi.g:4277:2: ')'
             {
              before(grammarAccess.getRoleAccess().getRightParenthesisKeyword_5_4()); 
-            match(input,62,FOLLOW_2); 
+            match(input,64,FOLLOW_2); 
              after(grammarAccess.getRoleAccess().getRightParenthesisKeyword_5_4()); 
 
             }
@@ -13214,14 +13381,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5_3__0"
-    // InternalBomi.g:4244:1: rule__Role__Group_5_3__0 : rule__Role__Group_5_3__0__Impl rule__Role__Group_5_3__1 ;
+    // InternalBomi.g:4287:1: rule__Role__Group_5_3__0 : rule__Role__Group_5_3__0__Impl rule__Role__Group_5_3__1 ;
     public final void rule__Role__Group_5_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4248:1: ( rule__Role__Group_5_3__0__Impl rule__Role__Group_5_3__1 )
-            // InternalBomi.g:4249:2: rule__Role__Group_5_3__0__Impl rule__Role__Group_5_3__1
+            // InternalBomi.g:4291:1: ( rule__Role__Group_5_3__0__Impl rule__Role__Group_5_3__1 )
+            // InternalBomi.g:4292:2: rule__Role__Group_5_3__0__Impl rule__Role__Group_5_3__1
             {
             pushFollow(FOLLOW_16);
             rule__Role__Group_5_3__0__Impl();
@@ -13252,20 +13419,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5_3__0__Impl"
-    // InternalBomi.g:4256:1: rule__Role__Group_5_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:4299:1: rule__Role__Group_5_3__0__Impl : ( ',' ) ;
     public final void rule__Role__Group_5_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4260:1: ( ( ',' ) )
-            // InternalBomi.g:4261:1: ( ',' )
+            // InternalBomi.g:4303:1: ( ( ',' ) )
+            // InternalBomi.g:4304:1: ( ',' )
             {
-            // InternalBomi.g:4261:1: ( ',' )
-            // InternalBomi.g:4262:2: ','
+            // InternalBomi.g:4304:1: ( ',' )
+            // InternalBomi.g:4305:2: ','
             {
              before(grammarAccess.getRoleAccess().getCommaKeyword_5_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getRoleAccess().getCommaKeyword_5_3_0()); 
 
             }
@@ -13289,14 +13456,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5_3__1"
-    // InternalBomi.g:4271:1: rule__Role__Group_5_3__1 : rule__Role__Group_5_3__1__Impl ;
+    // InternalBomi.g:4314:1: rule__Role__Group_5_3__1 : rule__Role__Group_5_3__1__Impl ;
     public final void rule__Role__Group_5_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4275:1: ( rule__Role__Group_5_3__1__Impl )
-            // InternalBomi.g:4276:2: rule__Role__Group_5_3__1__Impl
+            // InternalBomi.g:4318:1: ( rule__Role__Group_5_3__1__Impl )
+            // InternalBomi.g:4319:2: rule__Role__Group_5_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Role__Group_5_3__1__Impl();
@@ -13322,21 +13489,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group_5_3__1__Impl"
-    // InternalBomi.g:4282:1: rule__Role__Group_5_3__1__Impl : ( ( rule__Role__PartOfMIsAssignment_5_3_1 ) ) ;
+    // InternalBomi.g:4325:1: rule__Role__Group_5_3__1__Impl : ( ( rule__Role__PartOfMIsAssignment_5_3_1 ) ) ;
     public final void rule__Role__Group_5_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4286:1: ( ( ( rule__Role__PartOfMIsAssignment_5_3_1 ) ) )
-            // InternalBomi.g:4287:1: ( ( rule__Role__PartOfMIsAssignment_5_3_1 ) )
+            // InternalBomi.g:4329:1: ( ( ( rule__Role__PartOfMIsAssignment_5_3_1 ) ) )
+            // InternalBomi.g:4330:1: ( ( rule__Role__PartOfMIsAssignment_5_3_1 ) )
             {
-            // InternalBomi.g:4287:1: ( ( rule__Role__PartOfMIsAssignment_5_3_1 ) )
-            // InternalBomi.g:4288:2: ( rule__Role__PartOfMIsAssignment_5_3_1 )
+            // InternalBomi.g:4330:1: ( ( rule__Role__PartOfMIsAssignment_5_3_1 ) )
+            // InternalBomi.g:4331:2: ( rule__Role__PartOfMIsAssignment_5_3_1 )
             {
              before(grammarAccess.getRoleAccess().getPartOfMIsAssignment_5_3_1()); 
-            // InternalBomi.g:4289:2: ( rule__Role__PartOfMIsAssignment_5_3_1 )
-            // InternalBomi.g:4289:3: rule__Role__PartOfMIsAssignment_5_3_1
+            // InternalBomi.g:4332:2: ( rule__Role__PartOfMIsAssignment_5_3_1 )
+            // InternalBomi.g:4332:3: rule__Role__PartOfMIsAssignment_5_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Role__PartOfMIsAssignment_5_3_1();
@@ -13369,14 +13536,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__0"
-    // InternalBomi.g:4298:1: rule__Driver__Group__0 : rule__Driver__Group__0__Impl rule__Driver__Group__1 ;
+    // InternalBomi.g:4341:1: rule__Driver__Group__0 : rule__Driver__Group__0__Impl rule__Driver__Group__1 ;
     public final void rule__Driver__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4302:1: ( rule__Driver__Group__0__Impl rule__Driver__Group__1 )
-            // InternalBomi.g:4303:2: rule__Driver__Group__0__Impl rule__Driver__Group__1
+            // InternalBomi.g:4345:1: ( rule__Driver__Group__0__Impl rule__Driver__Group__1 )
+            // InternalBomi.g:4346:2: rule__Driver__Group__0__Impl rule__Driver__Group__1
             {
             pushFollow(FOLLOW_11);
             rule__Driver__Group__0__Impl();
@@ -13407,21 +13574,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__0__Impl"
-    // InternalBomi.g:4310:1: rule__Driver__Group__0__Impl : ( () ) ;
+    // InternalBomi.g:4353:1: rule__Driver__Group__0__Impl : ( () ) ;
     public final void rule__Driver__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4314:1: ( ( () ) )
-            // InternalBomi.g:4315:1: ( () )
+            // InternalBomi.g:4357:1: ( ( () ) )
+            // InternalBomi.g:4358:1: ( () )
             {
-            // InternalBomi.g:4315:1: ( () )
-            // InternalBomi.g:4316:2: ()
+            // InternalBomi.g:4358:1: ( () )
+            // InternalBomi.g:4359:2: ()
             {
              before(grammarAccess.getDriverAccess().getDriverAction_0()); 
-            // InternalBomi.g:4317:2: ()
-            // InternalBomi.g:4317:3: 
+            // InternalBomi.g:4360:2: ()
+            // InternalBomi.g:4360:3: 
             {
             }
 
@@ -13444,14 +13611,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__1"
-    // InternalBomi.g:4325:1: rule__Driver__Group__1 : rule__Driver__Group__1__Impl rule__Driver__Group__2 ;
+    // InternalBomi.g:4368:1: rule__Driver__Group__1 : rule__Driver__Group__1__Impl rule__Driver__Group__2 ;
     public final void rule__Driver__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4329:1: ( rule__Driver__Group__1__Impl rule__Driver__Group__2 )
-            // InternalBomi.g:4330:2: rule__Driver__Group__1__Impl rule__Driver__Group__2
+            // InternalBomi.g:4372:1: ( rule__Driver__Group__1__Impl rule__Driver__Group__2 )
+            // InternalBomi.g:4373:2: rule__Driver__Group__1__Impl rule__Driver__Group__2
             {
             pushFollow(FOLLOW_16);
             rule__Driver__Group__1__Impl();
@@ -13482,20 +13649,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__1__Impl"
-    // InternalBomi.g:4337:1: rule__Driver__Group__1__Impl : ( 'Driver' ) ;
+    // InternalBomi.g:4380:1: rule__Driver__Group__1__Impl : ( 'Driver' ) ;
     public final void rule__Driver__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4341:1: ( ( 'Driver' ) )
-            // InternalBomi.g:4342:1: ( 'Driver' )
+            // InternalBomi.g:4384:1: ( ( 'Driver' ) )
+            // InternalBomi.g:4385:1: ( 'Driver' )
             {
-            // InternalBomi.g:4342:1: ( 'Driver' )
-            // InternalBomi.g:4343:2: 'Driver'
+            // InternalBomi.g:4385:1: ( 'Driver' )
+            // InternalBomi.g:4386:2: 'Driver'
             {
              before(grammarAccess.getDriverAccess().getDriverKeyword_1()); 
-            match(input,64,FOLLOW_2); 
+            match(input,66,FOLLOW_2); 
              after(grammarAccess.getDriverAccess().getDriverKeyword_1()); 
 
             }
@@ -13519,14 +13686,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__2"
-    // InternalBomi.g:4352:1: rule__Driver__Group__2 : rule__Driver__Group__2__Impl rule__Driver__Group__3 ;
+    // InternalBomi.g:4395:1: rule__Driver__Group__2 : rule__Driver__Group__2__Impl rule__Driver__Group__3 ;
     public final void rule__Driver__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4356:1: ( rule__Driver__Group__2__Impl rule__Driver__Group__3 )
-            // InternalBomi.g:4357:2: rule__Driver__Group__2__Impl rule__Driver__Group__3
+            // InternalBomi.g:4399:1: ( rule__Driver__Group__2__Impl rule__Driver__Group__3 )
+            // InternalBomi.g:4400:2: rule__Driver__Group__2__Impl rule__Driver__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__Driver__Group__2__Impl();
@@ -13557,21 +13724,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__2__Impl"
-    // InternalBomi.g:4364:1: rule__Driver__Group__2__Impl : ( ( rule__Driver__NameAssignment_2 ) ) ;
+    // InternalBomi.g:4407:1: rule__Driver__Group__2__Impl : ( ( rule__Driver__NameAssignment_2 ) ) ;
     public final void rule__Driver__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4368:1: ( ( ( rule__Driver__NameAssignment_2 ) ) )
-            // InternalBomi.g:4369:1: ( ( rule__Driver__NameAssignment_2 ) )
+            // InternalBomi.g:4411:1: ( ( ( rule__Driver__NameAssignment_2 ) ) )
+            // InternalBomi.g:4412:1: ( ( rule__Driver__NameAssignment_2 ) )
             {
-            // InternalBomi.g:4369:1: ( ( rule__Driver__NameAssignment_2 ) )
-            // InternalBomi.g:4370:2: ( rule__Driver__NameAssignment_2 )
+            // InternalBomi.g:4412:1: ( ( rule__Driver__NameAssignment_2 ) )
+            // InternalBomi.g:4413:2: ( rule__Driver__NameAssignment_2 )
             {
              before(grammarAccess.getDriverAccess().getNameAssignment_2()); 
-            // InternalBomi.g:4371:2: ( rule__Driver__NameAssignment_2 )
-            // InternalBomi.g:4371:3: rule__Driver__NameAssignment_2
+            // InternalBomi.g:4414:2: ( rule__Driver__NameAssignment_2 )
+            // InternalBomi.g:4414:3: rule__Driver__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Driver__NameAssignment_2();
@@ -13604,14 +13771,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__3"
-    // InternalBomi.g:4379:1: rule__Driver__Group__3 : rule__Driver__Group__3__Impl rule__Driver__Group__4 ;
+    // InternalBomi.g:4422:1: rule__Driver__Group__3 : rule__Driver__Group__3__Impl rule__Driver__Group__4 ;
     public final void rule__Driver__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4383:1: ( rule__Driver__Group__3__Impl rule__Driver__Group__4 )
-            // InternalBomi.g:4384:2: rule__Driver__Group__3__Impl rule__Driver__Group__4
+            // InternalBomi.g:4426:1: ( rule__Driver__Group__3__Impl rule__Driver__Group__4 )
+            // InternalBomi.g:4427:2: rule__Driver__Group__3__Impl rule__Driver__Group__4
             {
             pushFollow(FOLLOW_26);
             rule__Driver__Group__3__Impl();
@@ -13642,20 +13809,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__3__Impl"
-    // InternalBomi.g:4391:1: rule__Driver__Group__3__Impl : ( '{' ) ;
+    // InternalBomi.g:4434:1: rule__Driver__Group__3__Impl : ( '{' ) ;
     public final void rule__Driver__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4395:1: ( ( '{' ) )
-            // InternalBomi.g:4396:1: ( '{' )
+            // InternalBomi.g:4438:1: ( ( '{' ) )
+            // InternalBomi.g:4439:1: ( '{' )
             {
-            // InternalBomi.g:4396:1: ( '{' )
-            // InternalBomi.g:4397:2: '{'
+            // InternalBomi.g:4439:1: ( '{' )
+            // InternalBomi.g:4440:2: '{'
             {
              before(grammarAccess.getDriverAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getDriverAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -13679,14 +13846,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__4"
-    // InternalBomi.g:4406:1: rule__Driver__Group__4 : rule__Driver__Group__4__Impl rule__Driver__Group__5 ;
+    // InternalBomi.g:4449:1: rule__Driver__Group__4 : rule__Driver__Group__4__Impl rule__Driver__Group__5 ;
     public final void rule__Driver__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4410:1: ( rule__Driver__Group__4__Impl rule__Driver__Group__5 )
-            // InternalBomi.g:4411:2: rule__Driver__Group__4__Impl rule__Driver__Group__5
+            // InternalBomi.g:4453:1: ( rule__Driver__Group__4__Impl rule__Driver__Group__5 )
+            // InternalBomi.g:4454:2: rule__Driver__Group__4__Impl rule__Driver__Group__5
             {
             pushFollow(FOLLOW_26);
             rule__Driver__Group__4__Impl();
@@ -13717,29 +13884,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__4__Impl"
-    // InternalBomi.g:4418:1: rule__Driver__Group__4__Impl : ( ( rule__Driver__Group_4__0 )? ) ;
+    // InternalBomi.g:4461:1: rule__Driver__Group__4__Impl : ( ( rule__Driver__Group_4__0 )? ) ;
     public final void rule__Driver__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4422:1: ( ( ( rule__Driver__Group_4__0 )? ) )
-            // InternalBomi.g:4423:1: ( ( rule__Driver__Group_4__0 )? )
+            // InternalBomi.g:4465:1: ( ( ( rule__Driver__Group_4__0 )? ) )
+            // InternalBomi.g:4466:1: ( ( rule__Driver__Group_4__0 )? )
             {
-            // InternalBomi.g:4423:1: ( ( rule__Driver__Group_4__0 )? )
-            // InternalBomi.g:4424:2: ( rule__Driver__Group_4__0 )?
+            // InternalBomi.g:4466:1: ( ( rule__Driver__Group_4__0 )? )
+            // InternalBomi.g:4467:2: ( rule__Driver__Group_4__0 )?
             {
              before(grammarAccess.getDriverAccess().getGroup_4()); 
-            // InternalBomi.g:4425:2: ( rule__Driver__Group_4__0 )?
-            int alt43=2;
-            int LA43_0 = input.LA(1);
+            // InternalBomi.g:4468:2: ( rule__Driver__Group_4__0 )?
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA43_0==65) ) {
-                alt43=1;
+            if ( (LA44_0==67) ) {
+                alt44=1;
             }
-            switch (alt43) {
+            switch (alt44) {
                 case 1 :
-                    // InternalBomi.g:4425:3: rule__Driver__Group_4__0
+                    // InternalBomi.g:4468:3: rule__Driver__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Driver__Group_4__0();
@@ -13775,14 +13942,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__5"
-    // InternalBomi.g:4433:1: rule__Driver__Group__5 : rule__Driver__Group__5__Impl rule__Driver__Group__6 ;
+    // InternalBomi.g:4476:1: rule__Driver__Group__5 : rule__Driver__Group__5__Impl rule__Driver__Group__6 ;
     public final void rule__Driver__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4437:1: ( rule__Driver__Group__5__Impl rule__Driver__Group__6 )
-            // InternalBomi.g:4438:2: rule__Driver__Group__5__Impl rule__Driver__Group__6
+            // InternalBomi.g:4480:1: ( rule__Driver__Group__5__Impl rule__Driver__Group__6 )
+            // InternalBomi.g:4481:2: rule__Driver__Group__5__Impl rule__Driver__Group__6
             {
             pushFollow(FOLLOW_26);
             rule__Driver__Group__5__Impl();
@@ -13813,29 +13980,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__5__Impl"
-    // InternalBomi.g:4445:1: rule__Driver__Group__5__Impl : ( ( rule__Driver__Group_5__0 )? ) ;
+    // InternalBomi.g:4488:1: rule__Driver__Group__5__Impl : ( ( rule__Driver__Group_5__0 )? ) ;
     public final void rule__Driver__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4449:1: ( ( ( rule__Driver__Group_5__0 )? ) )
-            // InternalBomi.g:4450:1: ( ( rule__Driver__Group_5__0 )? )
+            // InternalBomi.g:4492:1: ( ( ( rule__Driver__Group_5__0 )? ) )
+            // InternalBomi.g:4493:1: ( ( rule__Driver__Group_5__0 )? )
             {
-            // InternalBomi.g:4450:1: ( ( rule__Driver__Group_5__0 )? )
-            // InternalBomi.g:4451:2: ( rule__Driver__Group_5__0 )?
+            // InternalBomi.g:4493:1: ( ( rule__Driver__Group_5__0 )? )
+            // InternalBomi.g:4494:2: ( rule__Driver__Group_5__0 )?
             {
              before(grammarAccess.getDriverAccess().getGroup_5()); 
-            // InternalBomi.g:4452:2: ( rule__Driver__Group_5__0 )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            // InternalBomi.g:4495:2: ( rule__Driver__Group_5__0 )?
+            int alt45=2;
+            int LA45_0 = input.LA(1);
 
-            if ( (LA44_0==66) ) {
-                alt44=1;
+            if ( (LA45_0==68) ) {
+                alt45=1;
             }
-            switch (alt44) {
+            switch (alt45) {
                 case 1 :
-                    // InternalBomi.g:4452:3: rule__Driver__Group_5__0
+                    // InternalBomi.g:4495:3: rule__Driver__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Driver__Group_5__0();
@@ -13871,14 +14038,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__6"
-    // InternalBomi.g:4460:1: rule__Driver__Group__6 : rule__Driver__Group__6__Impl rule__Driver__Group__7 ;
+    // InternalBomi.g:4503:1: rule__Driver__Group__6 : rule__Driver__Group__6__Impl rule__Driver__Group__7 ;
     public final void rule__Driver__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4464:1: ( rule__Driver__Group__6__Impl rule__Driver__Group__7 )
-            // InternalBomi.g:4465:2: rule__Driver__Group__6__Impl rule__Driver__Group__7
+            // InternalBomi.g:4507:1: ( rule__Driver__Group__6__Impl rule__Driver__Group__7 )
+            // InternalBomi.g:4508:2: rule__Driver__Group__6__Impl rule__Driver__Group__7
             {
             pushFollow(FOLLOW_26);
             rule__Driver__Group__6__Impl();
@@ -13909,29 +14076,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__6__Impl"
-    // InternalBomi.g:4472:1: rule__Driver__Group__6__Impl : ( ( rule__Driver__Group_6__0 )? ) ;
+    // InternalBomi.g:4515:1: rule__Driver__Group__6__Impl : ( ( rule__Driver__Group_6__0 )? ) ;
     public final void rule__Driver__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4476:1: ( ( ( rule__Driver__Group_6__0 )? ) )
-            // InternalBomi.g:4477:1: ( ( rule__Driver__Group_6__0 )? )
+            // InternalBomi.g:4519:1: ( ( ( rule__Driver__Group_6__0 )? ) )
+            // InternalBomi.g:4520:1: ( ( rule__Driver__Group_6__0 )? )
             {
-            // InternalBomi.g:4477:1: ( ( rule__Driver__Group_6__0 )? )
-            // InternalBomi.g:4478:2: ( rule__Driver__Group_6__0 )?
+            // InternalBomi.g:4520:1: ( ( rule__Driver__Group_6__0 )? )
+            // InternalBomi.g:4521:2: ( rule__Driver__Group_6__0 )?
             {
              before(grammarAccess.getDriverAccess().getGroup_6()); 
-            // InternalBomi.g:4479:2: ( rule__Driver__Group_6__0 )?
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // InternalBomi.g:4522:2: ( rule__Driver__Group_6__0 )?
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA45_0==67) ) {
-                alt45=1;
+            if ( (LA46_0==69) ) {
+                alt46=1;
             }
-            switch (alt45) {
+            switch (alt46) {
                 case 1 :
-                    // InternalBomi.g:4479:3: rule__Driver__Group_6__0
+                    // InternalBomi.g:4522:3: rule__Driver__Group_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Driver__Group_6__0();
@@ -13967,14 +14134,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__7"
-    // InternalBomi.g:4487:1: rule__Driver__Group__7 : rule__Driver__Group__7__Impl rule__Driver__Group__8 ;
+    // InternalBomi.g:4530:1: rule__Driver__Group__7 : rule__Driver__Group__7__Impl rule__Driver__Group__8 ;
     public final void rule__Driver__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4491:1: ( rule__Driver__Group__7__Impl rule__Driver__Group__8 )
-            // InternalBomi.g:4492:2: rule__Driver__Group__7__Impl rule__Driver__Group__8
+            // InternalBomi.g:4534:1: ( rule__Driver__Group__7__Impl rule__Driver__Group__8 )
+            // InternalBomi.g:4535:2: rule__Driver__Group__7__Impl rule__Driver__Group__8
             {
             pushFollow(FOLLOW_26);
             rule__Driver__Group__7__Impl();
@@ -14005,29 +14172,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__7__Impl"
-    // InternalBomi.g:4499:1: rule__Driver__Group__7__Impl : ( ( rule__Driver__Group_7__0 )? ) ;
+    // InternalBomi.g:4542:1: rule__Driver__Group__7__Impl : ( ( rule__Driver__Group_7__0 )? ) ;
     public final void rule__Driver__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4503:1: ( ( ( rule__Driver__Group_7__0 )? ) )
-            // InternalBomi.g:4504:1: ( ( rule__Driver__Group_7__0 )? )
+            // InternalBomi.g:4546:1: ( ( ( rule__Driver__Group_7__0 )? ) )
+            // InternalBomi.g:4547:1: ( ( rule__Driver__Group_7__0 )? )
             {
-            // InternalBomi.g:4504:1: ( ( rule__Driver__Group_7__0 )? )
-            // InternalBomi.g:4505:2: ( rule__Driver__Group_7__0 )?
+            // InternalBomi.g:4547:1: ( ( rule__Driver__Group_7__0 )? )
+            // InternalBomi.g:4548:2: ( rule__Driver__Group_7__0 )?
             {
              before(grammarAccess.getDriverAccess().getGroup_7()); 
-            // InternalBomi.g:4506:2: ( rule__Driver__Group_7__0 )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
+            // InternalBomi.g:4549:2: ( rule__Driver__Group_7__0 )?
+            int alt47=2;
+            int LA47_0 = input.LA(1);
 
-            if ( (LA46_0==68) ) {
-                alt46=1;
+            if ( (LA47_0==70) ) {
+                alt47=1;
             }
-            switch (alt46) {
+            switch (alt47) {
                 case 1 :
-                    // InternalBomi.g:4506:3: rule__Driver__Group_7__0
+                    // InternalBomi.g:4549:3: rule__Driver__Group_7__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Driver__Group_7__0();
@@ -14063,14 +14230,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__8"
-    // InternalBomi.g:4514:1: rule__Driver__Group__8 : rule__Driver__Group__8__Impl ;
+    // InternalBomi.g:4557:1: rule__Driver__Group__8 : rule__Driver__Group__8__Impl ;
     public final void rule__Driver__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4518:1: ( rule__Driver__Group__8__Impl )
-            // InternalBomi.g:4519:2: rule__Driver__Group__8__Impl
+            // InternalBomi.g:4561:1: ( rule__Driver__Group__8__Impl )
+            // InternalBomi.g:4562:2: rule__Driver__Group__8__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Driver__Group__8__Impl();
@@ -14096,20 +14263,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group__8__Impl"
-    // InternalBomi.g:4525:1: rule__Driver__Group__8__Impl : ( '}' ) ;
+    // InternalBomi.g:4568:1: rule__Driver__Group__8__Impl : ( '}' ) ;
     public final void rule__Driver__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4529:1: ( ( '}' ) )
-            // InternalBomi.g:4530:1: ( '}' )
+            // InternalBomi.g:4572:1: ( ( '}' ) )
+            // InternalBomi.g:4573:1: ( '}' )
             {
-            // InternalBomi.g:4530:1: ( '}' )
-            // InternalBomi.g:4531:2: '}'
+            // InternalBomi.g:4573:1: ( '}' )
+            // InternalBomi.g:4574:2: '}'
             {
              before(grammarAccess.getDriverAccess().getRightCurlyBracketKeyword_8()); 
-            match(input,35,FOLLOW_2); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getDriverAccess().getRightCurlyBracketKeyword_8()); 
 
             }
@@ -14133,14 +14300,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_4__0"
-    // InternalBomi.g:4541:1: rule__Driver__Group_4__0 : rule__Driver__Group_4__0__Impl rule__Driver__Group_4__1 ;
+    // InternalBomi.g:4584:1: rule__Driver__Group_4__0 : rule__Driver__Group_4__0__Impl rule__Driver__Group_4__1 ;
     public final void rule__Driver__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4545:1: ( rule__Driver__Group_4__0__Impl rule__Driver__Group_4__1 )
-            // InternalBomi.g:4546:2: rule__Driver__Group_4__0__Impl rule__Driver__Group_4__1
+            // InternalBomi.g:4588:1: ( rule__Driver__Group_4__0__Impl rule__Driver__Group_4__1 )
+            // InternalBomi.g:4589:2: rule__Driver__Group_4__0__Impl rule__Driver__Group_4__1
             {
             pushFollow(FOLLOW_27);
             rule__Driver__Group_4__0__Impl();
@@ -14171,20 +14338,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_4__0__Impl"
-    // InternalBomi.g:4553:1: rule__Driver__Group_4__0__Impl : ( 'driverType' ) ;
+    // InternalBomi.g:4596:1: rule__Driver__Group_4__0__Impl : ( 'driverType' ) ;
     public final void rule__Driver__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4557:1: ( ( 'driverType' ) )
-            // InternalBomi.g:4558:1: ( 'driverType' )
+            // InternalBomi.g:4600:1: ( ( 'driverType' ) )
+            // InternalBomi.g:4601:1: ( 'driverType' )
             {
-            // InternalBomi.g:4558:1: ( 'driverType' )
-            // InternalBomi.g:4559:2: 'driverType'
+            // InternalBomi.g:4601:1: ( 'driverType' )
+            // InternalBomi.g:4602:2: 'driverType'
             {
              before(grammarAccess.getDriverAccess().getDriverTypeKeyword_4_0()); 
-            match(input,65,FOLLOW_2); 
+            match(input,67,FOLLOW_2); 
              after(grammarAccess.getDriverAccess().getDriverTypeKeyword_4_0()); 
 
             }
@@ -14208,14 +14375,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_4__1"
-    // InternalBomi.g:4568:1: rule__Driver__Group_4__1 : rule__Driver__Group_4__1__Impl ;
+    // InternalBomi.g:4611:1: rule__Driver__Group_4__1 : rule__Driver__Group_4__1__Impl ;
     public final void rule__Driver__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4572:1: ( rule__Driver__Group_4__1__Impl )
-            // InternalBomi.g:4573:2: rule__Driver__Group_4__1__Impl
+            // InternalBomi.g:4615:1: ( rule__Driver__Group_4__1__Impl )
+            // InternalBomi.g:4616:2: rule__Driver__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Driver__Group_4__1__Impl();
@@ -14241,21 +14408,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_4__1__Impl"
-    // InternalBomi.g:4579:1: rule__Driver__Group_4__1__Impl : ( ( rule__Driver__DriverTypeAssignment_4_1 ) ) ;
+    // InternalBomi.g:4622:1: rule__Driver__Group_4__1__Impl : ( ( rule__Driver__DriverTypeAssignment_4_1 ) ) ;
     public final void rule__Driver__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4583:1: ( ( ( rule__Driver__DriverTypeAssignment_4_1 ) ) )
-            // InternalBomi.g:4584:1: ( ( rule__Driver__DriverTypeAssignment_4_1 ) )
+            // InternalBomi.g:4626:1: ( ( ( rule__Driver__DriverTypeAssignment_4_1 ) ) )
+            // InternalBomi.g:4627:1: ( ( rule__Driver__DriverTypeAssignment_4_1 ) )
             {
-            // InternalBomi.g:4584:1: ( ( rule__Driver__DriverTypeAssignment_4_1 ) )
-            // InternalBomi.g:4585:2: ( rule__Driver__DriverTypeAssignment_4_1 )
+            // InternalBomi.g:4627:1: ( ( rule__Driver__DriverTypeAssignment_4_1 ) )
+            // InternalBomi.g:4628:2: ( rule__Driver__DriverTypeAssignment_4_1 )
             {
              before(grammarAccess.getDriverAccess().getDriverTypeAssignment_4_1()); 
-            // InternalBomi.g:4586:2: ( rule__Driver__DriverTypeAssignment_4_1 )
-            // InternalBomi.g:4586:3: rule__Driver__DriverTypeAssignment_4_1
+            // InternalBomi.g:4629:2: ( rule__Driver__DriverTypeAssignment_4_1 )
+            // InternalBomi.g:4629:3: rule__Driver__DriverTypeAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__Driver__DriverTypeAssignment_4_1();
@@ -14288,14 +14455,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_5__0"
-    // InternalBomi.g:4595:1: rule__Driver__Group_5__0 : rule__Driver__Group_5__0__Impl rule__Driver__Group_5__1 ;
+    // InternalBomi.g:4638:1: rule__Driver__Group_5__0 : rule__Driver__Group_5__0__Impl rule__Driver__Group_5__1 ;
     public final void rule__Driver__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4599:1: ( rule__Driver__Group_5__0__Impl rule__Driver__Group_5__1 )
-            // InternalBomi.g:4600:2: rule__Driver__Group_5__0__Impl rule__Driver__Group_5__1
+            // InternalBomi.g:4642:1: ( rule__Driver__Group_5__0__Impl rule__Driver__Group_5__1 )
+            // InternalBomi.g:4643:2: rule__Driver__Group_5__0__Impl rule__Driver__Group_5__1
             {
             pushFollow(FOLLOW_28);
             rule__Driver__Group_5__0__Impl();
@@ -14326,20 +14493,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_5__0__Impl"
-    // InternalBomi.g:4607:1: rule__Driver__Group_5__0__Impl : ( 'distanceType' ) ;
+    // InternalBomi.g:4650:1: rule__Driver__Group_5__0__Impl : ( 'distanceType' ) ;
     public final void rule__Driver__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4611:1: ( ( 'distanceType' ) )
-            // InternalBomi.g:4612:1: ( 'distanceType' )
+            // InternalBomi.g:4654:1: ( ( 'distanceType' ) )
+            // InternalBomi.g:4655:1: ( 'distanceType' )
             {
-            // InternalBomi.g:4612:1: ( 'distanceType' )
-            // InternalBomi.g:4613:2: 'distanceType'
+            // InternalBomi.g:4655:1: ( 'distanceType' )
+            // InternalBomi.g:4656:2: 'distanceType'
             {
              before(grammarAccess.getDriverAccess().getDistanceTypeKeyword_5_0()); 
-            match(input,66,FOLLOW_2); 
+            match(input,68,FOLLOW_2); 
              after(grammarAccess.getDriverAccess().getDistanceTypeKeyword_5_0()); 
 
             }
@@ -14363,14 +14530,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_5__1"
-    // InternalBomi.g:4622:1: rule__Driver__Group_5__1 : rule__Driver__Group_5__1__Impl ;
+    // InternalBomi.g:4665:1: rule__Driver__Group_5__1 : rule__Driver__Group_5__1__Impl ;
     public final void rule__Driver__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4626:1: ( rule__Driver__Group_5__1__Impl )
-            // InternalBomi.g:4627:2: rule__Driver__Group_5__1__Impl
+            // InternalBomi.g:4669:1: ( rule__Driver__Group_5__1__Impl )
+            // InternalBomi.g:4670:2: rule__Driver__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Driver__Group_5__1__Impl();
@@ -14396,21 +14563,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_5__1__Impl"
-    // InternalBomi.g:4633:1: rule__Driver__Group_5__1__Impl : ( ( rule__Driver__DistanceTypeAssignment_5_1 ) ) ;
+    // InternalBomi.g:4676:1: rule__Driver__Group_5__1__Impl : ( ( rule__Driver__DistanceTypeAssignment_5_1 ) ) ;
     public final void rule__Driver__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4637:1: ( ( ( rule__Driver__DistanceTypeAssignment_5_1 ) ) )
-            // InternalBomi.g:4638:1: ( ( rule__Driver__DistanceTypeAssignment_5_1 ) )
+            // InternalBomi.g:4680:1: ( ( ( rule__Driver__DistanceTypeAssignment_5_1 ) ) )
+            // InternalBomi.g:4681:1: ( ( rule__Driver__DistanceTypeAssignment_5_1 ) )
             {
-            // InternalBomi.g:4638:1: ( ( rule__Driver__DistanceTypeAssignment_5_1 ) )
-            // InternalBomi.g:4639:2: ( rule__Driver__DistanceTypeAssignment_5_1 )
+            // InternalBomi.g:4681:1: ( ( rule__Driver__DistanceTypeAssignment_5_1 ) )
+            // InternalBomi.g:4682:2: ( rule__Driver__DistanceTypeAssignment_5_1 )
             {
              before(grammarAccess.getDriverAccess().getDistanceTypeAssignment_5_1()); 
-            // InternalBomi.g:4640:2: ( rule__Driver__DistanceTypeAssignment_5_1 )
-            // InternalBomi.g:4640:3: rule__Driver__DistanceTypeAssignment_5_1
+            // InternalBomi.g:4683:2: ( rule__Driver__DistanceTypeAssignment_5_1 )
+            // InternalBomi.g:4683:3: rule__Driver__DistanceTypeAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__Driver__DistanceTypeAssignment_5_1();
@@ -14443,14 +14610,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_6__0"
-    // InternalBomi.g:4649:1: rule__Driver__Group_6__0 : rule__Driver__Group_6__0__Impl rule__Driver__Group_6__1 ;
+    // InternalBomi.g:4692:1: rule__Driver__Group_6__0 : rule__Driver__Group_6__0__Impl rule__Driver__Group_6__1 ;
     public final void rule__Driver__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4653:1: ( rule__Driver__Group_6__0__Impl rule__Driver__Group_6__1 )
-            // InternalBomi.g:4654:2: rule__Driver__Group_6__0__Impl rule__Driver__Group_6__1
+            // InternalBomi.g:4696:1: ( rule__Driver__Group_6__0__Impl rule__Driver__Group_6__1 )
+            // InternalBomi.g:4697:2: rule__Driver__Group_6__0__Impl rule__Driver__Group_6__1
             {
             pushFollow(FOLLOW_19);
             rule__Driver__Group_6__0__Impl();
@@ -14481,20 +14648,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_6__0__Impl"
-    // InternalBomi.g:4661:1: rule__Driver__Group_6__0__Impl : ( 'distanceSize' ) ;
+    // InternalBomi.g:4704:1: rule__Driver__Group_6__0__Impl : ( 'distanceSize' ) ;
     public final void rule__Driver__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4665:1: ( ( 'distanceSize' ) )
-            // InternalBomi.g:4666:1: ( 'distanceSize' )
+            // InternalBomi.g:4708:1: ( ( 'distanceSize' ) )
+            // InternalBomi.g:4709:1: ( 'distanceSize' )
             {
-            // InternalBomi.g:4666:1: ( 'distanceSize' )
-            // InternalBomi.g:4667:2: 'distanceSize'
+            // InternalBomi.g:4709:1: ( 'distanceSize' )
+            // InternalBomi.g:4710:2: 'distanceSize'
             {
              before(grammarAccess.getDriverAccess().getDistanceSizeKeyword_6_0()); 
-            match(input,67,FOLLOW_2); 
+            match(input,69,FOLLOW_2); 
              after(grammarAccess.getDriverAccess().getDistanceSizeKeyword_6_0()); 
 
             }
@@ -14518,14 +14685,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_6__1"
-    // InternalBomi.g:4676:1: rule__Driver__Group_6__1 : rule__Driver__Group_6__1__Impl ;
+    // InternalBomi.g:4719:1: rule__Driver__Group_6__1 : rule__Driver__Group_6__1__Impl ;
     public final void rule__Driver__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4680:1: ( rule__Driver__Group_6__1__Impl )
-            // InternalBomi.g:4681:2: rule__Driver__Group_6__1__Impl
+            // InternalBomi.g:4723:1: ( rule__Driver__Group_6__1__Impl )
+            // InternalBomi.g:4724:2: rule__Driver__Group_6__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Driver__Group_6__1__Impl();
@@ -14551,21 +14718,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_6__1__Impl"
-    // InternalBomi.g:4687:1: rule__Driver__Group_6__1__Impl : ( ( rule__Driver__DistanceSizeAssignment_6_1 ) ) ;
+    // InternalBomi.g:4730:1: rule__Driver__Group_6__1__Impl : ( ( rule__Driver__DistanceSizeAssignment_6_1 ) ) ;
     public final void rule__Driver__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4691:1: ( ( ( rule__Driver__DistanceSizeAssignment_6_1 ) ) )
-            // InternalBomi.g:4692:1: ( ( rule__Driver__DistanceSizeAssignment_6_1 ) )
+            // InternalBomi.g:4734:1: ( ( ( rule__Driver__DistanceSizeAssignment_6_1 ) ) )
+            // InternalBomi.g:4735:1: ( ( rule__Driver__DistanceSizeAssignment_6_1 ) )
             {
-            // InternalBomi.g:4692:1: ( ( rule__Driver__DistanceSizeAssignment_6_1 ) )
-            // InternalBomi.g:4693:2: ( rule__Driver__DistanceSizeAssignment_6_1 )
+            // InternalBomi.g:4735:1: ( ( rule__Driver__DistanceSizeAssignment_6_1 ) )
+            // InternalBomi.g:4736:2: ( rule__Driver__DistanceSizeAssignment_6_1 )
             {
              before(grammarAccess.getDriverAccess().getDistanceSizeAssignment_6_1()); 
-            // InternalBomi.g:4694:2: ( rule__Driver__DistanceSizeAssignment_6_1 )
-            // InternalBomi.g:4694:3: rule__Driver__DistanceSizeAssignment_6_1
+            // InternalBomi.g:4737:2: ( rule__Driver__DistanceSizeAssignment_6_1 )
+            // InternalBomi.g:4737:3: rule__Driver__DistanceSizeAssignment_6_1
             {
             pushFollow(FOLLOW_2);
             rule__Driver__DistanceSizeAssignment_6_1();
@@ -14598,14 +14765,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7__0"
-    // InternalBomi.g:4703:1: rule__Driver__Group_7__0 : rule__Driver__Group_7__0__Impl rule__Driver__Group_7__1 ;
+    // InternalBomi.g:4746:1: rule__Driver__Group_7__0 : rule__Driver__Group_7__0__Impl rule__Driver__Group_7__1 ;
     public final void rule__Driver__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4707:1: ( rule__Driver__Group_7__0__Impl rule__Driver__Group_7__1 )
-            // InternalBomi.g:4708:2: rule__Driver__Group_7__0__Impl rule__Driver__Group_7__1
+            // InternalBomi.g:4750:1: ( rule__Driver__Group_7__0__Impl rule__Driver__Group_7__1 )
+            // InternalBomi.g:4751:2: rule__Driver__Group_7__0__Impl rule__Driver__Group_7__1
             {
             pushFollow(FOLLOW_24);
             rule__Driver__Group_7__0__Impl();
@@ -14636,20 +14803,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7__0__Impl"
-    // InternalBomi.g:4715:1: rule__Driver__Group_7__0__Impl : ( 'drivesMIs' ) ;
+    // InternalBomi.g:4758:1: rule__Driver__Group_7__0__Impl : ( 'drivesMIs' ) ;
     public final void rule__Driver__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4719:1: ( ( 'drivesMIs' ) )
-            // InternalBomi.g:4720:1: ( 'drivesMIs' )
+            // InternalBomi.g:4762:1: ( ( 'drivesMIs' ) )
+            // InternalBomi.g:4763:1: ( 'drivesMIs' )
             {
-            // InternalBomi.g:4720:1: ( 'drivesMIs' )
-            // InternalBomi.g:4721:2: 'drivesMIs'
+            // InternalBomi.g:4763:1: ( 'drivesMIs' )
+            // InternalBomi.g:4764:2: 'drivesMIs'
             {
              before(grammarAccess.getDriverAccess().getDrivesMIsKeyword_7_0()); 
-            match(input,68,FOLLOW_2); 
+            match(input,70,FOLLOW_2); 
              after(grammarAccess.getDriverAccess().getDrivesMIsKeyword_7_0()); 
 
             }
@@ -14673,14 +14840,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7__1"
-    // InternalBomi.g:4730:1: rule__Driver__Group_7__1 : rule__Driver__Group_7__1__Impl rule__Driver__Group_7__2 ;
+    // InternalBomi.g:4773:1: rule__Driver__Group_7__1 : rule__Driver__Group_7__1__Impl rule__Driver__Group_7__2 ;
     public final void rule__Driver__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4734:1: ( rule__Driver__Group_7__1__Impl rule__Driver__Group_7__2 )
-            // InternalBomi.g:4735:2: rule__Driver__Group_7__1__Impl rule__Driver__Group_7__2
+            // InternalBomi.g:4777:1: ( rule__Driver__Group_7__1__Impl rule__Driver__Group_7__2 )
+            // InternalBomi.g:4778:2: rule__Driver__Group_7__1__Impl rule__Driver__Group_7__2
             {
             pushFollow(FOLLOW_16);
             rule__Driver__Group_7__1__Impl();
@@ -14711,20 +14878,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7__1__Impl"
-    // InternalBomi.g:4742:1: rule__Driver__Group_7__1__Impl : ( '(' ) ;
+    // InternalBomi.g:4785:1: rule__Driver__Group_7__1__Impl : ( '(' ) ;
     public final void rule__Driver__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4746:1: ( ( '(' ) )
-            // InternalBomi.g:4747:1: ( '(' )
+            // InternalBomi.g:4789:1: ( ( '(' ) )
+            // InternalBomi.g:4790:1: ( '(' )
             {
-            // InternalBomi.g:4747:1: ( '(' )
-            // InternalBomi.g:4748:2: '('
+            // InternalBomi.g:4790:1: ( '(' )
+            // InternalBomi.g:4791:2: '('
             {
              before(grammarAccess.getDriverAccess().getLeftParenthesisKeyword_7_1()); 
-            match(input,61,FOLLOW_2); 
+            match(input,63,FOLLOW_2); 
              after(grammarAccess.getDriverAccess().getLeftParenthesisKeyword_7_1()); 
 
             }
@@ -14748,14 +14915,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7__2"
-    // InternalBomi.g:4757:1: rule__Driver__Group_7__2 : rule__Driver__Group_7__2__Impl rule__Driver__Group_7__3 ;
+    // InternalBomi.g:4800:1: rule__Driver__Group_7__2 : rule__Driver__Group_7__2__Impl rule__Driver__Group_7__3 ;
     public final void rule__Driver__Group_7__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4761:1: ( rule__Driver__Group_7__2__Impl rule__Driver__Group_7__3 )
-            // InternalBomi.g:4762:2: rule__Driver__Group_7__2__Impl rule__Driver__Group_7__3
+            // InternalBomi.g:4804:1: ( rule__Driver__Group_7__2__Impl rule__Driver__Group_7__3 )
+            // InternalBomi.g:4805:2: rule__Driver__Group_7__2__Impl rule__Driver__Group_7__3
             {
             pushFollow(FOLLOW_25);
             rule__Driver__Group_7__2__Impl();
@@ -14786,21 +14953,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7__2__Impl"
-    // InternalBomi.g:4769:1: rule__Driver__Group_7__2__Impl : ( ( rule__Driver__DrivesMIsAssignment_7_2 ) ) ;
+    // InternalBomi.g:4812:1: rule__Driver__Group_7__2__Impl : ( ( rule__Driver__DrivesMIsAssignment_7_2 ) ) ;
     public final void rule__Driver__Group_7__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4773:1: ( ( ( rule__Driver__DrivesMIsAssignment_7_2 ) ) )
-            // InternalBomi.g:4774:1: ( ( rule__Driver__DrivesMIsAssignment_7_2 ) )
+            // InternalBomi.g:4816:1: ( ( ( rule__Driver__DrivesMIsAssignment_7_2 ) ) )
+            // InternalBomi.g:4817:1: ( ( rule__Driver__DrivesMIsAssignment_7_2 ) )
             {
-            // InternalBomi.g:4774:1: ( ( rule__Driver__DrivesMIsAssignment_7_2 ) )
-            // InternalBomi.g:4775:2: ( rule__Driver__DrivesMIsAssignment_7_2 )
+            // InternalBomi.g:4817:1: ( ( rule__Driver__DrivesMIsAssignment_7_2 ) )
+            // InternalBomi.g:4818:2: ( rule__Driver__DrivesMIsAssignment_7_2 )
             {
              before(grammarAccess.getDriverAccess().getDrivesMIsAssignment_7_2()); 
-            // InternalBomi.g:4776:2: ( rule__Driver__DrivesMIsAssignment_7_2 )
-            // InternalBomi.g:4776:3: rule__Driver__DrivesMIsAssignment_7_2
+            // InternalBomi.g:4819:2: ( rule__Driver__DrivesMIsAssignment_7_2 )
+            // InternalBomi.g:4819:3: rule__Driver__DrivesMIsAssignment_7_2
             {
             pushFollow(FOLLOW_2);
             rule__Driver__DrivesMIsAssignment_7_2();
@@ -14833,14 +15000,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7__3"
-    // InternalBomi.g:4784:1: rule__Driver__Group_7__3 : rule__Driver__Group_7__3__Impl rule__Driver__Group_7__4 ;
+    // InternalBomi.g:4827:1: rule__Driver__Group_7__3 : rule__Driver__Group_7__3__Impl rule__Driver__Group_7__4 ;
     public final void rule__Driver__Group_7__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4788:1: ( rule__Driver__Group_7__3__Impl rule__Driver__Group_7__4 )
-            // InternalBomi.g:4789:2: rule__Driver__Group_7__3__Impl rule__Driver__Group_7__4
+            // InternalBomi.g:4831:1: ( rule__Driver__Group_7__3__Impl rule__Driver__Group_7__4 )
+            // InternalBomi.g:4832:2: rule__Driver__Group_7__3__Impl rule__Driver__Group_7__4
             {
             pushFollow(FOLLOW_25);
             rule__Driver__Group_7__3__Impl();
@@ -14871,33 +15038,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7__3__Impl"
-    // InternalBomi.g:4796:1: rule__Driver__Group_7__3__Impl : ( ( rule__Driver__Group_7_3__0 )* ) ;
+    // InternalBomi.g:4839:1: rule__Driver__Group_7__3__Impl : ( ( rule__Driver__Group_7_3__0 )* ) ;
     public final void rule__Driver__Group_7__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4800:1: ( ( ( rule__Driver__Group_7_3__0 )* ) )
-            // InternalBomi.g:4801:1: ( ( rule__Driver__Group_7_3__0 )* )
+            // InternalBomi.g:4843:1: ( ( ( rule__Driver__Group_7_3__0 )* ) )
+            // InternalBomi.g:4844:1: ( ( rule__Driver__Group_7_3__0 )* )
             {
-            // InternalBomi.g:4801:1: ( ( rule__Driver__Group_7_3__0 )* )
-            // InternalBomi.g:4802:2: ( rule__Driver__Group_7_3__0 )*
+            // InternalBomi.g:4844:1: ( ( rule__Driver__Group_7_3__0 )* )
+            // InternalBomi.g:4845:2: ( rule__Driver__Group_7_3__0 )*
             {
              before(grammarAccess.getDriverAccess().getGroup_7_3()); 
-            // InternalBomi.g:4803:2: ( rule__Driver__Group_7_3__0 )*
-            loop47:
+            // InternalBomi.g:4846:2: ( rule__Driver__Group_7_3__0 )*
+            loop48:
             do {
-                int alt47=2;
-                int LA47_0 = input.LA(1);
+                int alt48=2;
+                int LA48_0 = input.LA(1);
 
-                if ( (LA47_0==36) ) {
-                    alt47=1;
+                if ( (LA48_0==38) ) {
+                    alt48=1;
                 }
 
 
-                switch (alt47) {
+                switch (alt48) {
             	case 1 :
-            	    // InternalBomi.g:4803:3: rule__Driver__Group_7_3__0
+            	    // InternalBomi.g:4846:3: rule__Driver__Group_7_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__Driver__Group_7_3__0();
@@ -14909,7 +15076,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop47;
+            	    break loop48;
                 }
             } while (true);
 
@@ -14936,14 +15103,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7__4"
-    // InternalBomi.g:4811:1: rule__Driver__Group_7__4 : rule__Driver__Group_7__4__Impl ;
+    // InternalBomi.g:4854:1: rule__Driver__Group_7__4 : rule__Driver__Group_7__4__Impl ;
     public final void rule__Driver__Group_7__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4815:1: ( rule__Driver__Group_7__4__Impl )
-            // InternalBomi.g:4816:2: rule__Driver__Group_7__4__Impl
+            // InternalBomi.g:4858:1: ( rule__Driver__Group_7__4__Impl )
+            // InternalBomi.g:4859:2: rule__Driver__Group_7__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Driver__Group_7__4__Impl();
@@ -14969,20 +15136,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7__4__Impl"
-    // InternalBomi.g:4822:1: rule__Driver__Group_7__4__Impl : ( ')' ) ;
+    // InternalBomi.g:4865:1: rule__Driver__Group_7__4__Impl : ( ')' ) ;
     public final void rule__Driver__Group_7__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4826:1: ( ( ')' ) )
-            // InternalBomi.g:4827:1: ( ')' )
+            // InternalBomi.g:4869:1: ( ( ')' ) )
+            // InternalBomi.g:4870:1: ( ')' )
             {
-            // InternalBomi.g:4827:1: ( ')' )
-            // InternalBomi.g:4828:2: ')'
+            // InternalBomi.g:4870:1: ( ')' )
+            // InternalBomi.g:4871:2: ')'
             {
              before(grammarAccess.getDriverAccess().getRightParenthesisKeyword_7_4()); 
-            match(input,62,FOLLOW_2); 
+            match(input,64,FOLLOW_2); 
              after(grammarAccess.getDriverAccess().getRightParenthesisKeyword_7_4()); 
 
             }
@@ -15006,14 +15173,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7_3__0"
-    // InternalBomi.g:4838:1: rule__Driver__Group_7_3__0 : rule__Driver__Group_7_3__0__Impl rule__Driver__Group_7_3__1 ;
+    // InternalBomi.g:4881:1: rule__Driver__Group_7_3__0 : rule__Driver__Group_7_3__0__Impl rule__Driver__Group_7_3__1 ;
     public final void rule__Driver__Group_7_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4842:1: ( rule__Driver__Group_7_3__0__Impl rule__Driver__Group_7_3__1 )
-            // InternalBomi.g:4843:2: rule__Driver__Group_7_3__0__Impl rule__Driver__Group_7_3__1
+            // InternalBomi.g:4885:1: ( rule__Driver__Group_7_3__0__Impl rule__Driver__Group_7_3__1 )
+            // InternalBomi.g:4886:2: rule__Driver__Group_7_3__0__Impl rule__Driver__Group_7_3__1
             {
             pushFollow(FOLLOW_16);
             rule__Driver__Group_7_3__0__Impl();
@@ -15044,20 +15211,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7_3__0__Impl"
-    // InternalBomi.g:4850:1: rule__Driver__Group_7_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:4893:1: rule__Driver__Group_7_3__0__Impl : ( ',' ) ;
     public final void rule__Driver__Group_7_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4854:1: ( ( ',' ) )
-            // InternalBomi.g:4855:1: ( ',' )
+            // InternalBomi.g:4897:1: ( ( ',' ) )
+            // InternalBomi.g:4898:1: ( ',' )
             {
-            // InternalBomi.g:4855:1: ( ',' )
-            // InternalBomi.g:4856:2: ','
+            // InternalBomi.g:4898:1: ( ',' )
+            // InternalBomi.g:4899:2: ','
             {
              before(grammarAccess.getDriverAccess().getCommaKeyword_7_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getDriverAccess().getCommaKeyword_7_3_0()); 
 
             }
@@ -15081,14 +15248,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7_3__1"
-    // InternalBomi.g:4865:1: rule__Driver__Group_7_3__1 : rule__Driver__Group_7_3__1__Impl ;
+    // InternalBomi.g:4908:1: rule__Driver__Group_7_3__1 : rule__Driver__Group_7_3__1__Impl ;
     public final void rule__Driver__Group_7_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4869:1: ( rule__Driver__Group_7_3__1__Impl )
-            // InternalBomi.g:4870:2: rule__Driver__Group_7_3__1__Impl
+            // InternalBomi.g:4912:1: ( rule__Driver__Group_7_3__1__Impl )
+            // InternalBomi.g:4913:2: rule__Driver__Group_7_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Driver__Group_7_3__1__Impl();
@@ -15114,21 +15281,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__Group_7_3__1__Impl"
-    // InternalBomi.g:4876:1: rule__Driver__Group_7_3__1__Impl : ( ( rule__Driver__DrivesMIsAssignment_7_3_1 ) ) ;
+    // InternalBomi.g:4919:1: rule__Driver__Group_7_3__1__Impl : ( ( rule__Driver__DrivesMIsAssignment_7_3_1 ) ) ;
     public final void rule__Driver__Group_7_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4880:1: ( ( ( rule__Driver__DrivesMIsAssignment_7_3_1 ) ) )
-            // InternalBomi.g:4881:1: ( ( rule__Driver__DrivesMIsAssignment_7_3_1 ) )
+            // InternalBomi.g:4923:1: ( ( ( rule__Driver__DrivesMIsAssignment_7_3_1 ) ) )
+            // InternalBomi.g:4924:1: ( ( rule__Driver__DrivesMIsAssignment_7_3_1 ) )
             {
-            // InternalBomi.g:4881:1: ( ( rule__Driver__DrivesMIsAssignment_7_3_1 ) )
-            // InternalBomi.g:4882:2: ( rule__Driver__DrivesMIsAssignment_7_3_1 )
+            // InternalBomi.g:4924:1: ( ( rule__Driver__DrivesMIsAssignment_7_3_1 ) )
+            // InternalBomi.g:4925:2: ( rule__Driver__DrivesMIsAssignment_7_3_1 )
             {
              before(grammarAccess.getDriverAccess().getDrivesMIsAssignment_7_3_1()); 
-            // InternalBomi.g:4883:2: ( rule__Driver__DrivesMIsAssignment_7_3_1 )
-            // InternalBomi.g:4883:3: rule__Driver__DrivesMIsAssignment_7_3_1
+            // InternalBomi.g:4926:2: ( rule__Driver__DrivesMIsAssignment_7_3_1 )
+            // InternalBomi.g:4926:3: rule__Driver__DrivesMIsAssignment_7_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Driver__DrivesMIsAssignment_7_3_1();
@@ -15161,14 +15328,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__0"
-    // InternalBomi.g:4892:1: rule__BOMICoordination__Group__0 : rule__BOMICoordination__Group__0__Impl rule__BOMICoordination__Group__1 ;
+    // InternalBomi.g:4935:1: rule__BOMICoordination__Group__0 : rule__BOMICoordination__Group__0__Impl rule__BOMICoordination__Group__1 ;
     public final void rule__BOMICoordination__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4896:1: ( rule__BOMICoordination__Group__0__Impl rule__BOMICoordination__Group__1 )
-            // InternalBomi.g:4897:2: rule__BOMICoordination__Group__0__Impl rule__BOMICoordination__Group__1
+            // InternalBomi.g:4939:1: ( rule__BOMICoordination__Group__0__Impl rule__BOMICoordination__Group__1 )
+            // InternalBomi.g:4940:2: rule__BOMICoordination__Group__0__Impl rule__BOMICoordination__Group__1
             {
             pushFollow(FOLLOW_13);
             rule__BOMICoordination__Group__0__Impl();
@@ -15199,21 +15366,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__0__Impl"
-    // InternalBomi.g:4904:1: rule__BOMICoordination__Group__0__Impl : ( () ) ;
+    // InternalBomi.g:4947:1: rule__BOMICoordination__Group__0__Impl : ( () ) ;
     public final void rule__BOMICoordination__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4908:1: ( ( () ) )
-            // InternalBomi.g:4909:1: ( () )
+            // InternalBomi.g:4951:1: ( ( () ) )
+            // InternalBomi.g:4952:1: ( () )
             {
-            // InternalBomi.g:4909:1: ( () )
-            // InternalBomi.g:4910:2: ()
+            // InternalBomi.g:4952:1: ( () )
+            // InternalBomi.g:4953:2: ()
             {
              before(grammarAccess.getBOMICoordinationAccess().getBOMICoordinationAction_0()); 
-            // InternalBomi.g:4911:2: ()
-            // InternalBomi.g:4911:3: 
+            // InternalBomi.g:4954:2: ()
+            // InternalBomi.g:4954:3: 
             {
             }
 
@@ -15236,14 +15403,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__1"
-    // InternalBomi.g:4919:1: rule__BOMICoordination__Group__1 : rule__BOMICoordination__Group__1__Impl rule__BOMICoordination__Group__2 ;
+    // InternalBomi.g:4962:1: rule__BOMICoordination__Group__1 : rule__BOMICoordination__Group__1__Impl rule__BOMICoordination__Group__2 ;
     public final void rule__BOMICoordination__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4923:1: ( rule__BOMICoordination__Group__1__Impl rule__BOMICoordination__Group__2 )
-            // InternalBomi.g:4924:2: rule__BOMICoordination__Group__1__Impl rule__BOMICoordination__Group__2
+            // InternalBomi.g:4966:1: ( rule__BOMICoordination__Group__1__Impl rule__BOMICoordination__Group__2 )
+            // InternalBomi.g:4967:2: rule__BOMICoordination__Group__1__Impl rule__BOMICoordination__Group__2
             {
             pushFollow(FOLLOW_16);
             rule__BOMICoordination__Group__1__Impl();
@@ -15274,20 +15441,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__1__Impl"
-    // InternalBomi.g:4931:1: rule__BOMICoordination__Group__1__Impl : ( 'BOMICoordination' ) ;
+    // InternalBomi.g:4974:1: rule__BOMICoordination__Group__1__Impl : ( 'BOMICoordination' ) ;
     public final void rule__BOMICoordination__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4935:1: ( ( 'BOMICoordination' ) )
-            // InternalBomi.g:4936:1: ( 'BOMICoordination' )
+            // InternalBomi.g:4978:1: ( ( 'BOMICoordination' ) )
+            // InternalBomi.g:4979:1: ( 'BOMICoordination' )
             {
-            // InternalBomi.g:4936:1: ( 'BOMICoordination' )
-            // InternalBomi.g:4937:2: 'BOMICoordination'
+            // InternalBomi.g:4979:1: ( 'BOMICoordination' )
+            // InternalBomi.g:4980:2: 'BOMICoordination'
             {
              before(grammarAccess.getBOMICoordinationAccess().getBOMICoordinationKeyword_1()); 
-            match(input,69,FOLLOW_2); 
+            match(input,71,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getBOMICoordinationKeyword_1()); 
 
             }
@@ -15311,14 +15478,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__2"
-    // InternalBomi.g:4946:1: rule__BOMICoordination__Group__2 : rule__BOMICoordination__Group__2__Impl rule__BOMICoordination__Group__3 ;
+    // InternalBomi.g:4989:1: rule__BOMICoordination__Group__2 : rule__BOMICoordination__Group__2__Impl rule__BOMICoordination__Group__3 ;
     public final void rule__BOMICoordination__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4950:1: ( rule__BOMICoordination__Group__2__Impl rule__BOMICoordination__Group__3 )
-            // InternalBomi.g:4951:2: rule__BOMICoordination__Group__2__Impl rule__BOMICoordination__Group__3
+            // InternalBomi.g:4993:1: ( rule__BOMICoordination__Group__2__Impl rule__BOMICoordination__Group__3 )
+            // InternalBomi.g:4994:2: rule__BOMICoordination__Group__2__Impl rule__BOMICoordination__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__BOMICoordination__Group__2__Impl();
@@ -15349,21 +15516,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__2__Impl"
-    // InternalBomi.g:4958:1: rule__BOMICoordination__Group__2__Impl : ( ( rule__BOMICoordination__NameAssignment_2 ) ) ;
+    // InternalBomi.g:5001:1: rule__BOMICoordination__Group__2__Impl : ( ( rule__BOMICoordination__NameAssignment_2 ) ) ;
     public final void rule__BOMICoordination__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4962:1: ( ( ( rule__BOMICoordination__NameAssignment_2 ) ) )
-            // InternalBomi.g:4963:1: ( ( rule__BOMICoordination__NameAssignment_2 ) )
+            // InternalBomi.g:5005:1: ( ( ( rule__BOMICoordination__NameAssignment_2 ) ) )
+            // InternalBomi.g:5006:1: ( ( rule__BOMICoordination__NameAssignment_2 ) )
             {
-            // InternalBomi.g:4963:1: ( ( rule__BOMICoordination__NameAssignment_2 ) )
-            // InternalBomi.g:4964:2: ( rule__BOMICoordination__NameAssignment_2 )
+            // InternalBomi.g:5006:1: ( ( rule__BOMICoordination__NameAssignment_2 ) )
+            // InternalBomi.g:5007:2: ( rule__BOMICoordination__NameAssignment_2 )
             {
              before(grammarAccess.getBOMICoordinationAccess().getNameAssignment_2()); 
-            // InternalBomi.g:4965:2: ( rule__BOMICoordination__NameAssignment_2 )
-            // InternalBomi.g:4965:3: rule__BOMICoordination__NameAssignment_2
+            // InternalBomi.g:5008:2: ( rule__BOMICoordination__NameAssignment_2 )
+            // InternalBomi.g:5008:3: rule__BOMICoordination__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__NameAssignment_2();
@@ -15396,14 +15563,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__3"
-    // InternalBomi.g:4973:1: rule__BOMICoordination__Group__3 : rule__BOMICoordination__Group__3__Impl rule__BOMICoordination__Group__4 ;
+    // InternalBomi.g:5016:1: rule__BOMICoordination__Group__3 : rule__BOMICoordination__Group__3__Impl rule__BOMICoordination__Group__4 ;
     public final void rule__BOMICoordination__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4977:1: ( rule__BOMICoordination__Group__3__Impl rule__BOMICoordination__Group__4 )
-            // InternalBomi.g:4978:2: rule__BOMICoordination__Group__3__Impl rule__BOMICoordination__Group__4
+            // InternalBomi.g:5020:1: ( rule__BOMICoordination__Group__3__Impl rule__BOMICoordination__Group__4 )
+            // InternalBomi.g:5021:2: rule__BOMICoordination__Group__3__Impl rule__BOMICoordination__Group__4
             {
             pushFollow(FOLLOW_29);
             rule__BOMICoordination__Group__3__Impl();
@@ -15434,20 +15601,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__3__Impl"
-    // InternalBomi.g:4985:1: rule__BOMICoordination__Group__3__Impl : ( '{' ) ;
+    // InternalBomi.g:5028:1: rule__BOMICoordination__Group__3__Impl : ( '{' ) ;
     public final void rule__BOMICoordination__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:4989:1: ( ( '{' ) )
-            // InternalBomi.g:4990:1: ( '{' )
+            // InternalBomi.g:5032:1: ( ( '{' ) )
+            // InternalBomi.g:5033:1: ( '{' )
             {
-            // InternalBomi.g:4990:1: ( '{' )
-            // InternalBomi.g:4991:2: '{'
+            // InternalBomi.g:5033:1: ( '{' )
+            // InternalBomi.g:5034:2: '{'
             {
              before(grammarAccess.getBOMICoordinationAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -15471,14 +15638,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__4"
-    // InternalBomi.g:5000:1: rule__BOMICoordination__Group__4 : rule__BOMICoordination__Group__4__Impl rule__BOMICoordination__Group__5 ;
+    // InternalBomi.g:5043:1: rule__BOMICoordination__Group__4 : rule__BOMICoordination__Group__4__Impl rule__BOMICoordination__Group__5 ;
     public final void rule__BOMICoordination__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5004:1: ( rule__BOMICoordination__Group__4__Impl rule__BOMICoordination__Group__5 )
-            // InternalBomi.g:5005:2: rule__BOMICoordination__Group__4__Impl rule__BOMICoordination__Group__5
+            // InternalBomi.g:5047:1: ( rule__BOMICoordination__Group__4__Impl rule__BOMICoordination__Group__5 )
+            // InternalBomi.g:5048:2: rule__BOMICoordination__Group__4__Impl rule__BOMICoordination__Group__5
             {
             pushFollow(FOLLOW_29);
             rule__BOMICoordination__Group__4__Impl();
@@ -15509,29 +15676,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__4__Impl"
-    // InternalBomi.g:5012:1: rule__BOMICoordination__Group__4__Impl : ( ( rule__BOMICoordination__Group_4__0 )? ) ;
+    // InternalBomi.g:5055:1: rule__BOMICoordination__Group__4__Impl : ( ( rule__BOMICoordination__Group_4__0 )? ) ;
     public final void rule__BOMICoordination__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5016:1: ( ( ( rule__BOMICoordination__Group_4__0 )? ) )
-            // InternalBomi.g:5017:1: ( ( rule__BOMICoordination__Group_4__0 )? )
+            // InternalBomi.g:5059:1: ( ( ( rule__BOMICoordination__Group_4__0 )? ) )
+            // InternalBomi.g:5060:1: ( ( rule__BOMICoordination__Group_4__0 )? )
             {
-            // InternalBomi.g:5017:1: ( ( rule__BOMICoordination__Group_4__0 )? )
-            // InternalBomi.g:5018:2: ( rule__BOMICoordination__Group_4__0 )?
+            // InternalBomi.g:5060:1: ( ( rule__BOMICoordination__Group_4__0 )? )
+            // InternalBomi.g:5061:2: ( rule__BOMICoordination__Group_4__0 )?
             {
              before(grammarAccess.getBOMICoordinationAccess().getGroup_4()); 
-            // InternalBomi.g:5019:2: ( rule__BOMICoordination__Group_4__0 )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            // InternalBomi.g:5062:2: ( rule__BOMICoordination__Group_4__0 )?
+            int alt49=2;
+            int LA49_0 = input.LA(1);
 
-            if ( (LA48_0==43) ) {
-                alt48=1;
+            if ( (LA49_0==45) ) {
+                alt49=1;
             }
-            switch (alt48) {
+            switch (alt49) {
                 case 1 :
-                    // InternalBomi.g:5019:3: rule__BOMICoordination__Group_4__0
+                    // InternalBomi.g:5062:3: rule__BOMICoordination__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMICoordination__Group_4__0();
@@ -15567,14 +15734,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__5"
-    // InternalBomi.g:5027:1: rule__BOMICoordination__Group__5 : rule__BOMICoordination__Group__5__Impl rule__BOMICoordination__Group__6 ;
+    // InternalBomi.g:5070:1: rule__BOMICoordination__Group__5 : rule__BOMICoordination__Group__5__Impl rule__BOMICoordination__Group__6 ;
     public final void rule__BOMICoordination__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5031:1: ( rule__BOMICoordination__Group__5__Impl rule__BOMICoordination__Group__6 )
-            // InternalBomi.g:5032:2: rule__BOMICoordination__Group__5__Impl rule__BOMICoordination__Group__6
+            // InternalBomi.g:5074:1: ( rule__BOMICoordination__Group__5__Impl rule__BOMICoordination__Group__6 )
+            // InternalBomi.g:5075:2: rule__BOMICoordination__Group__5__Impl rule__BOMICoordination__Group__6
             {
             pushFollow(FOLLOW_29);
             rule__BOMICoordination__Group__5__Impl();
@@ -15605,29 +15772,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__5__Impl"
-    // InternalBomi.g:5039:1: rule__BOMICoordination__Group__5__Impl : ( ( rule__BOMICoordination__Group_5__0 )? ) ;
+    // InternalBomi.g:5082:1: rule__BOMICoordination__Group__5__Impl : ( ( rule__BOMICoordination__Group_5__0 )? ) ;
     public final void rule__BOMICoordination__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5043:1: ( ( ( rule__BOMICoordination__Group_5__0 )? ) )
-            // InternalBomi.g:5044:1: ( ( rule__BOMICoordination__Group_5__0 )? )
+            // InternalBomi.g:5086:1: ( ( ( rule__BOMICoordination__Group_5__0 )? ) )
+            // InternalBomi.g:5087:1: ( ( rule__BOMICoordination__Group_5__0 )? )
             {
-            // InternalBomi.g:5044:1: ( ( rule__BOMICoordination__Group_5__0 )? )
-            // InternalBomi.g:5045:2: ( rule__BOMICoordination__Group_5__0 )?
+            // InternalBomi.g:5087:1: ( ( rule__BOMICoordination__Group_5__0 )? )
+            // InternalBomi.g:5088:2: ( rule__BOMICoordination__Group_5__0 )?
             {
              before(grammarAccess.getBOMICoordinationAccess().getGroup_5()); 
-            // InternalBomi.g:5046:2: ( rule__BOMICoordination__Group_5__0 )?
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            // InternalBomi.g:5089:2: ( rule__BOMICoordination__Group_5__0 )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA49_0==70) ) {
-                alt49=1;
+            if ( (LA50_0==72) ) {
+                alt50=1;
             }
-            switch (alt49) {
+            switch (alt50) {
                 case 1 :
-                    // InternalBomi.g:5046:3: rule__BOMICoordination__Group_5__0
+                    // InternalBomi.g:5089:3: rule__BOMICoordination__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMICoordination__Group_5__0();
@@ -15663,14 +15830,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__6"
-    // InternalBomi.g:5054:1: rule__BOMICoordination__Group__6 : rule__BOMICoordination__Group__6__Impl rule__BOMICoordination__Group__7 ;
+    // InternalBomi.g:5097:1: rule__BOMICoordination__Group__6 : rule__BOMICoordination__Group__6__Impl rule__BOMICoordination__Group__7 ;
     public final void rule__BOMICoordination__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5058:1: ( rule__BOMICoordination__Group__6__Impl rule__BOMICoordination__Group__7 )
-            // InternalBomi.g:5059:2: rule__BOMICoordination__Group__6__Impl rule__BOMICoordination__Group__7
+            // InternalBomi.g:5101:1: ( rule__BOMICoordination__Group__6__Impl rule__BOMICoordination__Group__7 )
+            // InternalBomi.g:5102:2: rule__BOMICoordination__Group__6__Impl rule__BOMICoordination__Group__7
             {
             pushFollow(FOLLOW_29);
             rule__BOMICoordination__Group__6__Impl();
@@ -15701,29 +15868,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__6__Impl"
-    // InternalBomi.g:5066:1: rule__BOMICoordination__Group__6__Impl : ( ( rule__BOMICoordination__Group_6__0 )? ) ;
+    // InternalBomi.g:5109:1: rule__BOMICoordination__Group__6__Impl : ( ( rule__BOMICoordination__Group_6__0 )? ) ;
     public final void rule__BOMICoordination__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5070:1: ( ( ( rule__BOMICoordination__Group_6__0 )? ) )
-            // InternalBomi.g:5071:1: ( ( rule__BOMICoordination__Group_6__0 )? )
+            // InternalBomi.g:5113:1: ( ( ( rule__BOMICoordination__Group_6__0 )? ) )
+            // InternalBomi.g:5114:1: ( ( rule__BOMICoordination__Group_6__0 )? )
             {
-            // InternalBomi.g:5071:1: ( ( rule__BOMICoordination__Group_6__0 )? )
-            // InternalBomi.g:5072:2: ( rule__BOMICoordination__Group_6__0 )?
+            // InternalBomi.g:5114:1: ( ( rule__BOMICoordination__Group_6__0 )? )
+            // InternalBomi.g:5115:2: ( rule__BOMICoordination__Group_6__0 )?
             {
              before(grammarAccess.getBOMICoordinationAccess().getGroup_6()); 
-            // InternalBomi.g:5073:2: ( rule__BOMICoordination__Group_6__0 )?
-            int alt50=2;
-            int LA50_0 = input.LA(1);
+            // InternalBomi.g:5116:2: ( rule__BOMICoordination__Group_6__0 )?
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA50_0==71) ) {
-                alt50=1;
+            if ( (LA51_0==73) ) {
+                alt51=1;
             }
-            switch (alt50) {
+            switch (alt51) {
                 case 1 :
-                    // InternalBomi.g:5073:3: rule__BOMICoordination__Group_6__0
+                    // InternalBomi.g:5116:3: rule__BOMICoordination__Group_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMICoordination__Group_6__0();
@@ -15759,14 +15926,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__7"
-    // InternalBomi.g:5081:1: rule__BOMICoordination__Group__7 : rule__BOMICoordination__Group__7__Impl rule__BOMICoordination__Group__8 ;
+    // InternalBomi.g:5124:1: rule__BOMICoordination__Group__7 : rule__BOMICoordination__Group__7__Impl rule__BOMICoordination__Group__8 ;
     public final void rule__BOMICoordination__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5085:1: ( rule__BOMICoordination__Group__7__Impl rule__BOMICoordination__Group__8 )
-            // InternalBomi.g:5086:2: rule__BOMICoordination__Group__7__Impl rule__BOMICoordination__Group__8
+            // InternalBomi.g:5128:1: ( rule__BOMICoordination__Group__7__Impl rule__BOMICoordination__Group__8 )
+            // InternalBomi.g:5129:2: rule__BOMICoordination__Group__7__Impl rule__BOMICoordination__Group__8
             {
             pushFollow(FOLLOW_29);
             rule__BOMICoordination__Group__7__Impl();
@@ -15797,29 +15964,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__7__Impl"
-    // InternalBomi.g:5093:1: rule__BOMICoordination__Group__7__Impl : ( ( rule__BOMICoordination__Group_7__0 )? ) ;
+    // InternalBomi.g:5136:1: rule__BOMICoordination__Group__7__Impl : ( ( rule__BOMICoordination__Group_7__0 )? ) ;
     public final void rule__BOMICoordination__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5097:1: ( ( ( rule__BOMICoordination__Group_7__0 )? ) )
-            // InternalBomi.g:5098:1: ( ( rule__BOMICoordination__Group_7__0 )? )
+            // InternalBomi.g:5140:1: ( ( ( rule__BOMICoordination__Group_7__0 )? ) )
+            // InternalBomi.g:5141:1: ( ( rule__BOMICoordination__Group_7__0 )? )
             {
-            // InternalBomi.g:5098:1: ( ( rule__BOMICoordination__Group_7__0 )? )
-            // InternalBomi.g:5099:2: ( rule__BOMICoordination__Group_7__0 )?
+            // InternalBomi.g:5141:1: ( ( rule__BOMICoordination__Group_7__0 )? )
+            // InternalBomi.g:5142:2: ( rule__BOMICoordination__Group_7__0 )?
             {
              before(grammarAccess.getBOMICoordinationAccess().getGroup_7()); 
-            // InternalBomi.g:5100:2: ( rule__BOMICoordination__Group_7__0 )?
-            int alt51=2;
-            int LA51_0 = input.LA(1);
+            // InternalBomi.g:5143:2: ( rule__BOMICoordination__Group_7__0 )?
+            int alt52=2;
+            int LA52_0 = input.LA(1);
 
-            if ( (LA51_0==72) ) {
-                alt51=1;
+            if ( (LA52_0==74) ) {
+                alt52=1;
             }
-            switch (alt51) {
+            switch (alt52) {
                 case 1 :
-                    // InternalBomi.g:5100:3: rule__BOMICoordination__Group_7__0
+                    // InternalBomi.g:5143:3: rule__BOMICoordination__Group_7__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMICoordination__Group_7__0();
@@ -15855,14 +16022,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__8"
-    // InternalBomi.g:5108:1: rule__BOMICoordination__Group__8 : rule__BOMICoordination__Group__8__Impl rule__BOMICoordination__Group__9 ;
+    // InternalBomi.g:5151:1: rule__BOMICoordination__Group__8 : rule__BOMICoordination__Group__8__Impl rule__BOMICoordination__Group__9 ;
     public final void rule__BOMICoordination__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5112:1: ( rule__BOMICoordination__Group__8__Impl rule__BOMICoordination__Group__9 )
-            // InternalBomi.g:5113:2: rule__BOMICoordination__Group__8__Impl rule__BOMICoordination__Group__9
+            // InternalBomi.g:5155:1: ( rule__BOMICoordination__Group__8__Impl rule__BOMICoordination__Group__9 )
+            // InternalBomi.g:5156:2: rule__BOMICoordination__Group__8__Impl rule__BOMICoordination__Group__9
             {
             pushFollow(FOLLOW_29);
             rule__BOMICoordination__Group__8__Impl();
@@ -15893,29 +16060,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__8__Impl"
-    // InternalBomi.g:5120:1: rule__BOMICoordination__Group__8__Impl : ( ( rule__BOMICoordination__Group_8__0 )? ) ;
+    // InternalBomi.g:5163:1: rule__BOMICoordination__Group__8__Impl : ( ( rule__BOMICoordination__Group_8__0 )? ) ;
     public final void rule__BOMICoordination__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5124:1: ( ( ( rule__BOMICoordination__Group_8__0 )? ) )
-            // InternalBomi.g:5125:1: ( ( rule__BOMICoordination__Group_8__0 )? )
+            // InternalBomi.g:5167:1: ( ( ( rule__BOMICoordination__Group_8__0 )? ) )
+            // InternalBomi.g:5168:1: ( ( rule__BOMICoordination__Group_8__0 )? )
             {
-            // InternalBomi.g:5125:1: ( ( rule__BOMICoordination__Group_8__0 )? )
-            // InternalBomi.g:5126:2: ( rule__BOMICoordination__Group_8__0 )?
+            // InternalBomi.g:5168:1: ( ( rule__BOMICoordination__Group_8__0 )? )
+            // InternalBomi.g:5169:2: ( rule__BOMICoordination__Group_8__0 )?
             {
              before(grammarAccess.getBOMICoordinationAccess().getGroup_8()); 
-            // InternalBomi.g:5127:2: ( rule__BOMICoordination__Group_8__0 )?
-            int alt52=2;
-            int LA52_0 = input.LA(1);
+            // InternalBomi.g:5170:2: ( rule__BOMICoordination__Group_8__0 )?
+            int alt53=2;
+            int LA53_0 = input.LA(1);
 
-            if ( (LA52_0==73) ) {
-                alt52=1;
+            if ( (LA53_0==75) ) {
+                alt53=1;
             }
-            switch (alt52) {
+            switch (alt53) {
                 case 1 :
-                    // InternalBomi.g:5127:3: rule__BOMICoordination__Group_8__0
+                    // InternalBomi.g:5170:3: rule__BOMICoordination__Group_8__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMICoordination__Group_8__0();
@@ -15951,14 +16118,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__9"
-    // InternalBomi.g:5135:1: rule__BOMICoordination__Group__9 : rule__BOMICoordination__Group__9__Impl rule__BOMICoordination__Group__10 ;
+    // InternalBomi.g:5178:1: rule__BOMICoordination__Group__9 : rule__BOMICoordination__Group__9__Impl rule__BOMICoordination__Group__10 ;
     public final void rule__BOMICoordination__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5139:1: ( rule__BOMICoordination__Group__9__Impl rule__BOMICoordination__Group__10 )
-            // InternalBomi.g:5140:2: rule__BOMICoordination__Group__9__Impl rule__BOMICoordination__Group__10
+            // InternalBomi.g:5182:1: ( rule__BOMICoordination__Group__9__Impl rule__BOMICoordination__Group__10 )
+            // InternalBomi.g:5183:2: rule__BOMICoordination__Group__9__Impl rule__BOMICoordination__Group__10
             {
             pushFollow(FOLLOW_29);
             rule__BOMICoordination__Group__9__Impl();
@@ -15989,29 +16156,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__9__Impl"
-    // InternalBomi.g:5147:1: rule__BOMICoordination__Group__9__Impl : ( ( rule__BOMICoordination__Group_9__0 )? ) ;
+    // InternalBomi.g:5190:1: rule__BOMICoordination__Group__9__Impl : ( ( rule__BOMICoordination__Group_9__0 )? ) ;
     public final void rule__BOMICoordination__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5151:1: ( ( ( rule__BOMICoordination__Group_9__0 )? ) )
-            // InternalBomi.g:5152:1: ( ( rule__BOMICoordination__Group_9__0 )? )
+            // InternalBomi.g:5194:1: ( ( ( rule__BOMICoordination__Group_9__0 )? ) )
+            // InternalBomi.g:5195:1: ( ( rule__BOMICoordination__Group_9__0 )? )
             {
-            // InternalBomi.g:5152:1: ( ( rule__BOMICoordination__Group_9__0 )? )
-            // InternalBomi.g:5153:2: ( rule__BOMICoordination__Group_9__0 )?
+            // InternalBomi.g:5195:1: ( ( rule__BOMICoordination__Group_9__0 )? )
+            // InternalBomi.g:5196:2: ( rule__BOMICoordination__Group_9__0 )?
             {
              before(grammarAccess.getBOMICoordinationAccess().getGroup_9()); 
-            // InternalBomi.g:5154:2: ( rule__BOMICoordination__Group_9__0 )?
-            int alt53=2;
-            int LA53_0 = input.LA(1);
+            // InternalBomi.g:5197:2: ( rule__BOMICoordination__Group_9__0 )?
+            int alt54=2;
+            int LA54_0 = input.LA(1);
 
-            if ( (LA53_0==33) ) {
-                alt53=1;
+            if ( (LA54_0==35) ) {
+                alt54=1;
             }
-            switch (alt53) {
+            switch (alt54) {
                 case 1 :
-                    // InternalBomi.g:5154:3: rule__BOMICoordination__Group_9__0
+                    // InternalBomi.g:5197:3: rule__BOMICoordination__Group_9__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMICoordination__Group_9__0();
@@ -16047,14 +16214,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__10"
-    // InternalBomi.g:5162:1: rule__BOMICoordination__Group__10 : rule__BOMICoordination__Group__10__Impl rule__BOMICoordination__Group__11 ;
+    // InternalBomi.g:5205:1: rule__BOMICoordination__Group__10 : rule__BOMICoordination__Group__10__Impl rule__BOMICoordination__Group__11 ;
     public final void rule__BOMICoordination__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5166:1: ( rule__BOMICoordination__Group__10__Impl rule__BOMICoordination__Group__11 )
-            // InternalBomi.g:5167:2: rule__BOMICoordination__Group__10__Impl rule__BOMICoordination__Group__11
+            // InternalBomi.g:5209:1: ( rule__BOMICoordination__Group__10__Impl rule__BOMICoordination__Group__11 )
+            // InternalBomi.g:5210:2: rule__BOMICoordination__Group__10__Impl rule__BOMICoordination__Group__11
             {
             pushFollow(FOLLOW_29);
             rule__BOMICoordination__Group__10__Impl();
@@ -16085,29 +16252,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__10__Impl"
-    // InternalBomi.g:5174:1: rule__BOMICoordination__Group__10__Impl : ( ( rule__BOMICoordination__Group_10__0 )? ) ;
+    // InternalBomi.g:5217:1: rule__BOMICoordination__Group__10__Impl : ( ( rule__BOMICoordination__Group_10__0 )? ) ;
     public final void rule__BOMICoordination__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5178:1: ( ( ( rule__BOMICoordination__Group_10__0 )? ) )
-            // InternalBomi.g:5179:1: ( ( rule__BOMICoordination__Group_10__0 )? )
+            // InternalBomi.g:5221:1: ( ( ( rule__BOMICoordination__Group_10__0 )? ) )
+            // InternalBomi.g:5222:1: ( ( rule__BOMICoordination__Group_10__0 )? )
             {
-            // InternalBomi.g:5179:1: ( ( rule__BOMICoordination__Group_10__0 )? )
-            // InternalBomi.g:5180:2: ( rule__BOMICoordination__Group_10__0 )?
+            // InternalBomi.g:5222:1: ( ( rule__BOMICoordination__Group_10__0 )? )
+            // InternalBomi.g:5223:2: ( rule__BOMICoordination__Group_10__0 )?
             {
              before(grammarAccess.getBOMICoordinationAccess().getGroup_10()); 
-            // InternalBomi.g:5181:2: ( rule__BOMICoordination__Group_10__0 )?
-            int alt54=2;
-            int LA54_0 = input.LA(1);
+            // InternalBomi.g:5224:2: ( rule__BOMICoordination__Group_10__0 )?
+            int alt55=2;
+            int LA55_0 = input.LA(1);
 
-            if ( (LA54_0==37) ) {
-                alt54=1;
+            if ( (LA55_0==39) ) {
+                alt55=1;
             }
-            switch (alt54) {
+            switch (alt55) {
                 case 1 :
-                    // InternalBomi.g:5181:3: rule__BOMICoordination__Group_10__0
+                    // InternalBomi.g:5224:3: rule__BOMICoordination__Group_10__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOMICoordination__Group_10__0();
@@ -16143,14 +16310,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__11"
-    // InternalBomi.g:5189:1: rule__BOMICoordination__Group__11 : rule__BOMICoordination__Group__11__Impl ;
+    // InternalBomi.g:5232:1: rule__BOMICoordination__Group__11 : rule__BOMICoordination__Group__11__Impl ;
     public final void rule__BOMICoordination__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5193:1: ( rule__BOMICoordination__Group__11__Impl )
-            // InternalBomi.g:5194:2: rule__BOMICoordination__Group__11__Impl
+            // InternalBomi.g:5236:1: ( rule__BOMICoordination__Group__11__Impl )
+            // InternalBomi.g:5237:2: rule__BOMICoordination__Group__11__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__Group__11__Impl();
@@ -16176,20 +16343,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group__11__Impl"
-    // InternalBomi.g:5200:1: rule__BOMICoordination__Group__11__Impl : ( '}' ) ;
+    // InternalBomi.g:5243:1: rule__BOMICoordination__Group__11__Impl : ( '}' ) ;
     public final void rule__BOMICoordination__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5204:1: ( ( '}' ) )
-            // InternalBomi.g:5205:1: ( '}' )
+            // InternalBomi.g:5247:1: ( ( '}' ) )
+            // InternalBomi.g:5248:1: ( '}' )
             {
-            // InternalBomi.g:5205:1: ( '}' )
-            // InternalBomi.g:5206:2: '}'
+            // InternalBomi.g:5248:1: ( '}' )
+            // InternalBomi.g:5249:2: '}'
             {
              before(grammarAccess.getBOMICoordinationAccess().getRightCurlyBracketKeyword_11()); 
-            match(input,35,FOLLOW_2); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getRightCurlyBracketKeyword_11()); 
 
             }
@@ -16213,14 +16380,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_4__0"
-    // InternalBomi.g:5216:1: rule__BOMICoordination__Group_4__0 : rule__BOMICoordination__Group_4__0__Impl rule__BOMICoordination__Group_4__1 ;
+    // InternalBomi.g:5259:1: rule__BOMICoordination__Group_4__0 : rule__BOMICoordination__Group_4__0__Impl rule__BOMICoordination__Group_4__1 ;
     public final void rule__BOMICoordination__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5220:1: ( rule__BOMICoordination__Group_4__0__Impl rule__BOMICoordination__Group_4__1 )
-            // InternalBomi.g:5221:2: rule__BOMICoordination__Group_4__0__Impl rule__BOMICoordination__Group_4__1
+            // InternalBomi.g:5263:1: ( rule__BOMICoordination__Group_4__0__Impl rule__BOMICoordination__Group_4__1 )
+            // InternalBomi.g:5264:2: rule__BOMICoordination__Group_4__0__Impl rule__BOMICoordination__Group_4__1
             {
             pushFollow(FOLLOW_16);
             rule__BOMICoordination__Group_4__0__Impl();
@@ -16251,20 +16418,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_4__0__Impl"
-    // InternalBomi.g:5228:1: rule__BOMICoordination__Group_4__0__Impl : ( 'purpose' ) ;
+    // InternalBomi.g:5271:1: rule__BOMICoordination__Group_4__0__Impl : ( 'purpose' ) ;
     public final void rule__BOMICoordination__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5232:1: ( ( 'purpose' ) )
-            // InternalBomi.g:5233:1: ( 'purpose' )
+            // InternalBomi.g:5275:1: ( ( 'purpose' ) )
+            // InternalBomi.g:5276:1: ( 'purpose' )
             {
-            // InternalBomi.g:5233:1: ( 'purpose' )
-            // InternalBomi.g:5234:2: 'purpose'
+            // InternalBomi.g:5276:1: ( 'purpose' )
+            // InternalBomi.g:5277:2: 'purpose'
             {
              before(grammarAccess.getBOMICoordinationAccess().getPurposeKeyword_4_0()); 
-            match(input,43,FOLLOW_2); 
+            match(input,45,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getPurposeKeyword_4_0()); 
 
             }
@@ -16288,14 +16455,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_4__1"
-    // InternalBomi.g:5243:1: rule__BOMICoordination__Group_4__1 : rule__BOMICoordination__Group_4__1__Impl ;
+    // InternalBomi.g:5286:1: rule__BOMICoordination__Group_4__1 : rule__BOMICoordination__Group_4__1__Impl ;
     public final void rule__BOMICoordination__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5247:1: ( rule__BOMICoordination__Group_4__1__Impl )
-            // InternalBomi.g:5248:2: rule__BOMICoordination__Group_4__1__Impl
+            // InternalBomi.g:5290:1: ( rule__BOMICoordination__Group_4__1__Impl )
+            // InternalBomi.g:5291:2: rule__BOMICoordination__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__Group_4__1__Impl();
@@ -16321,21 +16488,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_4__1__Impl"
-    // InternalBomi.g:5254:1: rule__BOMICoordination__Group_4__1__Impl : ( ( rule__BOMICoordination__PurposeAssignment_4_1 ) ) ;
+    // InternalBomi.g:5297:1: rule__BOMICoordination__Group_4__1__Impl : ( ( rule__BOMICoordination__PurposeAssignment_4_1 ) ) ;
     public final void rule__BOMICoordination__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5258:1: ( ( ( rule__BOMICoordination__PurposeAssignment_4_1 ) ) )
-            // InternalBomi.g:5259:1: ( ( rule__BOMICoordination__PurposeAssignment_4_1 ) )
+            // InternalBomi.g:5301:1: ( ( ( rule__BOMICoordination__PurposeAssignment_4_1 ) ) )
+            // InternalBomi.g:5302:1: ( ( rule__BOMICoordination__PurposeAssignment_4_1 ) )
             {
-            // InternalBomi.g:5259:1: ( ( rule__BOMICoordination__PurposeAssignment_4_1 ) )
-            // InternalBomi.g:5260:2: ( rule__BOMICoordination__PurposeAssignment_4_1 )
+            // InternalBomi.g:5302:1: ( ( rule__BOMICoordination__PurposeAssignment_4_1 ) )
+            // InternalBomi.g:5303:2: ( rule__BOMICoordination__PurposeAssignment_4_1 )
             {
              before(grammarAccess.getBOMICoordinationAccess().getPurposeAssignment_4_1()); 
-            // InternalBomi.g:5261:2: ( rule__BOMICoordination__PurposeAssignment_4_1 )
-            // InternalBomi.g:5261:3: rule__BOMICoordination__PurposeAssignment_4_1
+            // InternalBomi.g:5304:2: ( rule__BOMICoordination__PurposeAssignment_4_1 )
+            // InternalBomi.g:5304:3: rule__BOMICoordination__PurposeAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__PurposeAssignment_4_1();
@@ -16368,14 +16535,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_5__0"
-    // InternalBomi.g:5270:1: rule__BOMICoordination__Group_5__0 : rule__BOMICoordination__Group_5__0__Impl rule__BOMICoordination__Group_5__1 ;
+    // InternalBomi.g:5313:1: rule__BOMICoordination__Group_5__0 : rule__BOMICoordination__Group_5__0__Impl rule__BOMICoordination__Group_5__1 ;
     public final void rule__BOMICoordination__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5274:1: ( rule__BOMICoordination__Group_5__0__Impl rule__BOMICoordination__Group_5__1 )
-            // InternalBomi.g:5275:2: rule__BOMICoordination__Group_5__0__Impl rule__BOMICoordination__Group_5__1
+            // InternalBomi.g:5317:1: ( rule__BOMICoordination__Group_5__0__Impl rule__BOMICoordination__Group_5__1 )
+            // InternalBomi.g:5318:2: rule__BOMICoordination__Group_5__0__Impl rule__BOMICoordination__Group_5__1
             {
             pushFollow(FOLLOW_19);
             rule__BOMICoordination__Group_5__0__Impl();
@@ -16406,20 +16573,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_5__0__Impl"
-    // InternalBomi.g:5282:1: rule__BOMICoordination__Group_5__0__Impl : ( 'accessability' ) ;
+    // InternalBomi.g:5325:1: rule__BOMICoordination__Group_5__0__Impl : ( 'accessability' ) ;
     public final void rule__BOMICoordination__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5286:1: ( ( 'accessability' ) )
-            // InternalBomi.g:5287:1: ( 'accessability' )
+            // InternalBomi.g:5329:1: ( ( 'accessability' ) )
+            // InternalBomi.g:5330:1: ( 'accessability' )
             {
-            // InternalBomi.g:5287:1: ( 'accessability' )
-            // InternalBomi.g:5288:2: 'accessability'
+            // InternalBomi.g:5330:1: ( 'accessability' )
+            // InternalBomi.g:5331:2: 'accessability'
             {
              before(grammarAccess.getBOMICoordinationAccess().getAccessabilityKeyword_5_0()); 
-            match(input,70,FOLLOW_2); 
+            match(input,72,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getAccessabilityKeyword_5_0()); 
 
             }
@@ -16443,14 +16610,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_5__1"
-    // InternalBomi.g:5297:1: rule__BOMICoordination__Group_5__1 : rule__BOMICoordination__Group_5__1__Impl ;
+    // InternalBomi.g:5340:1: rule__BOMICoordination__Group_5__1 : rule__BOMICoordination__Group_5__1__Impl ;
     public final void rule__BOMICoordination__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5301:1: ( rule__BOMICoordination__Group_5__1__Impl )
-            // InternalBomi.g:5302:2: rule__BOMICoordination__Group_5__1__Impl
+            // InternalBomi.g:5344:1: ( rule__BOMICoordination__Group_5__1__Impl )
+            // InternalBomi.g:5345:2: rule__BOMICoordination__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__Group_5__1__Impl();
@@ -16476,21 +16643,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_5__1__Impl"
-    // InternalBomi.g:5308:1: rule__BOMICoordination__Group_5__1__Impl : ( ( rule__BOMICoordination__AccessabilityAssignment_5_1 ) ) ;
+    // InternalBomi.g:5351:1: rule__BOMICoordination__Group_5__1__Impl : ( ( rule__BOMICoordination__AccessabilityAssignment_5_1 ) ) ;
     public final void rule__BOMICoordination__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5312:1: ( ( ( rule__BOMICoordination__AccessabilityAssignment_5_1 ) ) )
-            // InternalBomi.g:5313:1: ( ( rule__BOMICoordination__AccessabilityAssignment_5_1 ) )
+            // InternalBomi.g:5355:1: ( ( ( rule__BOMICoordination__AccessabilityAssignment_5_1 ) ) )
+            // InternalBomi.g:5356:1: ( ( rule__BOMICoordination__AccessabilityAssignment_5_1 ) )
             {
-            // InternalBomi.g:5313:1: ( ( rule__BOMICoordination__AccessabilityAssignment_5_1 ) )
-            // InternalBomi.g:5314:2: ( rule__BOMICoordination__AccessabilityAssignment_5_1 )
+            // InternalBomi.g:5356:1: ( ( rule__BOMICoordination__AccessabilityAssignment_5_1 ) )
+            // InternalBomi.g:5357:2: ( rule__BOMICoordination__AccessabilityAssignment_5_1 )
             {
              before(grammarAccess.getBOMICoordinationAccess().getAccessabilityAssignment_5_1()); 
-            // InternalBomi.g:5315:2: ( rule__BOMICoordination__AccessabilityAssignment_5_1 )
-            // InternalBomi.g:5315:3: rule__BOMICoordination__AccessabilityAssignment_5_1
+            // InternalBomi.g:5358:2: ( rule__BOMICoordination__AccessabilityAssignment_5_1 )
+            // InternalBomi.g:5358:3: rule__BOMICoordination__AccessabilityAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__AccessabilityAssignment_5_1();
@@ -16523,14 +16690,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_6__0"
-    // InternalBomi.g:5324:1: rule__BOMICoordination__Group_6__0 : rule__BOMICoordination__Group_6__0__Impl rule__BOMICoordination__Group_6__1 ;
+    // InternalBomi.g:5367:1: rule__BOMICoordination__Group_6__0 : rule__BOMICoordination__Group_6__0__Impl rule__BOMICoordination__Group_6__1 ;
     public final void rule__BOMICoordination__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5328:1: ( rule__BOMICoordination__Group_6__0__Impl rule__BOMICoordination__Group_6__1 )
-            // InternalBomi.g:5329:2: rule__BOMICoordination__Group_6__0__Impl rule__BOMICoordination__Group_6__1
+            // InternalBomi.g:5371:1: ( rule__BOMICoordination__Group_6__0__Impl rule__BOMICoordination__Group_6__1 )
+            // InternalBomi.g:5372:2: rule__BOMICoordination__Group_6__0__Impl rule__BOMICoordination__Group_6__1
             {
             pushFollow(FOLLOW_19);
             rule__BOMICoordination__Group_6__0__Impl();
@@ -16561,20 +16728,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_6__0__Impl"
-    // InternalBomi.g:5336:1: rule__BOMICoordination__Group_6__0__Impl : ( 'stability' ) ;
+    // InternalBomi.g:5379:1: rule__BOMICoordination__Group_6__0__Impl : ( 'stability' ) ;
     public final void rule__BOMICoordination__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5340:1: ( ( 'stability' ) )
-            // InternalBomi.g:5341:1: ( 'stability' )
+            // InternalBomi.g:5383:1: ( ( 'stability' ) )
+            // InternalBomi.g:5384:1: ( 'stability' )
             {
-            // InternalBomi.g:5341:1: ( 'stability' )
-            // InternalBomi.g:5342:2: 'stability'
+            // InternalBomi.g:5384:1: ( 'stability' )
+            // InternalBomi.g:5385:2: 'stability'
             {
              before(grammarAccess.getBOMICoordinationAccess().getStabilityKeyword_6_0()); 
-            match(input,71,FOLLOW_2); 
+            match(input,73,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getStabilityKeyword_6_0()); 
 
             }
@@ -16598,14 +16765,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_6__1"
-    // InternalBomi.g:5351:1: rule__BOMICoordination__Group_6__1 : rule__BOMICoordination__Group_6__1__Impl ;
+    // InternalBomi.g:5394:1: rule__BOMICoordination__Group_6__1 : rule__BOMICoordination__Group_6__1__Impl ;
     public final void rule__BOMICoordination__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5355:1: ( rule__BOMICoordination__Group_6__1__Impl )
-            // InternalBomi.g:5356:2: rule__BOMICoordination__Group_6__1__Impl
+            // InternalBomi.g:5398:1: ( rule__BOMICoordination__Group_6__1__Impl )
+            // InternalBomi.g:5399:2: rule__BOMICoordination__Group_6__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__Group_6__1__Impl();
@@ -16631,21 +16798,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_6__1__Impl"
-    // InternalBomi.g:5362:1: rule__BOMICoordination__Group_6__1__Impl : ( ( rule__BOMICoordination__StabilityAssignment_6_1 ) ) ;
+    // InternalBomi.g:5405:1: rule__BOMICoordination__Group_6__1__Impl : ( ( rule__BOMICoordination__StabilityAssignment_6_1 ) ) ;
     public final void rule__BOMICoordination__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5366:1: ( ( ( rule__BOMICoordination__StabilityAssignment_6_1 ) ) )
-            // InternalBomi.g:5367:1: ( ( rule__BOMICoordination__StabilityAssignment_6_1 ) )
+            // InternalBomi.g:5409:1: ( ( ( rule__BOMICoordination__StabilityAssignment_6_1 ) ) )
+            // InternalBomi.g:5410:1: ( ( rule__BOMICoordination__StabilityAssignment_6_1 ) )
             {
-            // InternalBomi.g:5367:1: ( ( rule__BOMICoordination__StabilityAssignment_6_1 ) )
-            // InternalBomi.g:5368:2: ( rule__BOMICoordination__StabilityAssignment_6_1 )
+            // InternalBomi.g:5410:1: ( ( rule__BOMICoordination__StabilityAssignment_6_1 ) )
+            // InternalBomi.g:5411:2: ( rule__BOMICoordination__StabilityAssignment_6_1 )
             {
              before(grammarAccess.getBOMICoordinationAccess().getStabilityAssignment_6_1()); 
-            // InternalBomi.g:5369:2: ( rule__BOMICoordination__StabilityAssignment_6_1 )
-            // InternalBomi.g:5369:3: rule__BOMICoordination__StabilityAssignment_6_1
+            // InternalBomi.g:5412:2: ( rule__BOMICoordination__StabilityAssignment_6_1 )
+            // InternalBomi.g:5412:3: rule__BOMICoordination__StabilityAssignment_6_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__StabilityAssignment_6_1();
@@ -16678,14 +16845,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_7__0"
-    // InternalBomi.g:5378:1: rule__BOMICoordination__Group_7__0 : rule__BOMICoordination__Group_7__0__Impl rule__BOMICoordination__Group_7__1 ;
+    // InternalBomi.g:5421:1: rule__BOMICoordination__Group_7__0 : rule__BOMICoordination__Group_7__0__Impl rule__BOMICoordination__Group_7__1 ;
     public final void rule__BOMICoordination__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5382:1: ( rule__BOMICoordination__Group_7__0__Impl rule__BOMICoordination__Group_7__1 )
-            // InternalBomi.g:5383:2: rule__BOMICoordination__Group_7__0__Impl rule__BOMICoordination__Group_7__1
+            // InternalBomi.g:5425:1: ( rule__BOMICoordination__Group_7__0__Impl rule__BOMICoordination__Group_7__1 )
+            // InternalBomi.g:5426:2: rule__BOMICoordination__Group_7__0__Impl rule__BOMICoordination__Group_7__1
             {
             pushFollow(FOLLOW_19);
             rule__BOMICoordination__Group_7__0__Impl();
@@ -16716,20 +16883,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_7__0__Impl"
-    // InternalBomi.g:5390:1: rule__BOMICoordination__Group_7__0__Impl : ( 'criticality' ) ;
+    // InternalBomi.g:5433:1: rule__BOMICoordination__Group_7__0__Impl : ( 'criticality' ) ;
     public final void rule__BOMICoordination__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5394:1: ( ( 'criticality' ) )
-            // InternalBomi.g:5395:1: ( 'criticality' )
+            // InternalBomi.g:5437:1: ( ( 'criticality' ) )
+            // InternalBomi.g:5438:1: ( 'criticality' )
             {
-            // InternalBomi.g:5395:1: ( 'criticality' )
-            // InternalBomi.g:5396:2: 'criticality'
+            // InternalBomi.g:5438:1: ( 'criticality' )
+            // InternalBomi.g:5439:2: 'criticality'
             {
              before(grammarAccess.getBOMICoordinationAccess().getCriticalityKeyword_7_0()); 
-            match(input,72,FOLLOW_2); 
+            match(input,74,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getCriticalityKeyword_7_0()); 
 
             }
@@ -16753,14 +16920,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_7__1"
-    // InternalBomi.g:5405:1: rule__BOMICoordination__Group_7__1 : rule__BOMICoordination__Group_7__1__Impl ;
+    // InternalBomi.g:5448:1: rule__BOMICoordination__Group_7__1 : rule__BOMICoordination__Group_7__1__Impl ;
     public final void rule__BOMICoordination__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5409:1: ( rule__BOMICoordination__Group_7__1__Impl )
-            // InternalBomi.g:5410:2: rule__BOMICoordination__Group_7__1__Impl
+            // InternalBomi.g:5452:1: ( rule__BOMICoordination__Group_7__1__Impl )
+            // InternalBomi.g:5453:2: rule__BOMICoordination__Group_7__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__Group_7__1__Impl();
@@ -16786,21 +16953,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_7__1__Impl"
-    // InternalBomi.g:5416:1: rule__BOMICoordination__Group_7__1__Impl : ( ( rule__BOMICoordination__CriticalityAssignment_7_1 ) ) ;
+    // InternalBomi.g:5459:1: rule__BOMICoordination__Group_7__1__Impl : ( ( rule__BOMICoordination__CriticalityAssignment_7_1 ) ) ;
     public final void rule__BOMICoordination__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5420:1: ( ( ( rule__BOMICoordination__CriticalityAssignment_7_1 ) ) )
-            // InternalBomi.g:5421:1: ( ( rule__BOMICoordination__CriticalityAssignment_7_1 ) )
+            // InternalBomi.g:5463:1: ( ( ( rule__BOMICoordination__CriticalityAssignment_7_1 ) ) )
+            // InternalBomi.g:5464:1: ( ( rule__BOMICoordination__CriticalityAssignment_7_1 ) )
             {
-            // InternalBomi.g:5421:1: ( ( rule__BOMICoordination__CriticalityAssignment_7_1 ) )
-            // InternalBomi.g:5422:2: ( rule__BOMICoordination__CriticalityAssignment_7_1 )
+            // InternalBomi.g:5464:1: ( ( rule__BOMICoordination__CriticalityAssignment_7_1 ) )
+            // InternalBomi.g:5465:2: ( rule__BOMICoordination__CriticalityAssignment_7_1 )
             {
              before(grammarAccess.getBOMICoordinationAccess().getCriticalityAssignment_7_1()); 
-            // InternalBomi.g:5423:2: ( rule__BOMICoordination__CriticalityAssignment_7_1 )
-            // InternalBomi.g:5423:3: rule__BOMICoordination__CriticalityAssignment_7_1
+            // InternalBomi.g:5466:2: ( rule__BOMICoordination__CriticalityAssignment_7_1 )
+            // InternalBomi.g:5466:3: rule__BOMICoordination__CriticalityAssignment_7_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__CriticalityAssignment_7_1();
@@ -16833,14 +17000,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_8__0"
-    // InternalBomi.g:5432:1: rule__BOMICoordination__Group_8__0 : rule__BOMICoordination__Group_8__0__Impl rule__BOMICoordination__Group_8__1 ;
+    // InternalBomi.g:5475:1: rule__BOMICoordination__Group_8__0 : rule__BOMICoordination__Group_8__0__Impl rule__BOMICoordination__Group_8__1 ;
     public final void rule__BOMICoordination__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5436:1: ( rule__BOMICoordination__Group_8__0__Impl rule__BOMICoordination__Group_8__1 )
-            // InternalBomi.g:5437:2: rule__BOMICoordination__Group_8__0__Impl rule__BOMICoordination__Group_8__1
+            // InternalBomi.g:5479:1: ( rule__BOMICoordination__Group_8__0__Impl rule__BOMICoordination__Group_8__1 )
+            // InternalBomi.g:5480:2: rule__BOMICoordination__Group_8__0__Impl rule__BOMICoordination__Group_8__1
             {
             pushFollow(FOLLOW_19);
             rule__BOMICoordination__Group_8__0__Impl();
@@ -16871,20 +17038,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_8__0__Impl"
-    // InternalBomi.g:5444:1: rule__BOMICoordination__Group_8__0__Impl : ( 'fitForPurpose' ) ;
+    // InternalBomi.g:5487:1: rule__BOMICoordination__Group_8__0__Impl : ( 'fitForPurpose' ) ;
     public final void rule__BOMICoordination__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5448:1: ( ( 'fitForPurpose' ) )
-            // InternalBomi.g:5449:1: ( 'fitForPurpose' )
+            // InternalBomi.g:5491:1: ( ( 'fitForPurpose' ) )
+            // InternalBomi.g:5492:1: ( 'fitForPurpose' )
             {
-            // InternalBomi.g:5449:1: ( 'fitForPurpose' )
-            // InternalBomi.g:5450:2: 'fitForPurpose'
+            // InternalBomi.g:5492:1: ( 'fitForPurpose' )
+            // InternalBomi.g:5493:2: 'fitForPurpose'
             {
              before(grammarAccess.getBOMICoordinationAccess().getFitForPurposeKeyword_8_0()); 
-            match(input,73,FOLLOW_2); 
+            match(input,75,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getFitForPurposeKeyword_8_0()); 
 
             }
@@ -16908,14 +17075,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_8__1"
-    // InternalBomi.g:5459:1: rule__BOMICoordination__Group_8__1 : rule__BOMICoordination__Group_8__1__Impl ;
+    // InternalBomi.g:5502:1: rule__BOMICoordination__Group_8__1 : rule__BOMICoordination__Group_8__1__Impl ;
     public final void rule__BOMICoordination__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5463:1: ( rule__BOMICoordination__Group_8__1__Impl )
-            // InternalBomi.g:5464:2: rule__BOMICoordination__Group_8__1__Impl
+            // InternalBomi.g:5506:1: ( rule__BOMICoordination__Group_8__1__Impl )
+            // InternalBomi.g:5507:2: rule__BOMICoordination__Group_8__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__Group_8__1__Impl();
@@ -16941,21 +17108,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_8__1__Impl"
-    // InternalBomi.g:5470:1: rule__BOMICoordination__Group_8__1__Impl : ( ( rule__BOMICoordination__FitForPurposeAssignment_8_1 ) ) ;
+    // InternalBomi.g:5513:1: rule__BOMICoordination__Group_8__1__Impl : ( ( rule__BOMICoordination__FitForPurposeAssignment_8_1 ) ) ;
     public final void rule__BOMICoordination__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5474:1: ( ( ( rule__BOMICoordination__FitForPurposeAssignment_8_1 ) ) )
-            // InternalBomi.g:5475:1: ( ( rule__BOMICoordination__FitForPurposeAssignment_8_1 ) )
+            // InternalBomi.g:5517:1: ( ( ( rule__BOMICoordination__FitForPurposeAssignment_8_1 ) ) )
+            // InternalBomi.g:5518:1: ( ( rule__BOMICoordination__FitForPurposeAssignment_8_1 ) )
             {
-            // InternalBomi.g:5475:1: ( ( rule__BOMICoordination__FitForPurposeAssignment_8_1 ) )
-            // InternalBomi.g:5476:2: ( rule__BOMICoordination__FitForPurposeAssignment_8_1 )
+            // InternalBomi.g:5518:1: ( ( rule__BOMICoordination__FitForPurposeAssignment_8_1 ) )
+            // InternalBomi.g:5519:2: ( rule__BOMICoordination__FitForPurposeAssignment_8_1 )
             {
              before(grammarAccess.getBOMICoordinationAccess().getFitForPurposeAssignment_8_1()); 
-            // InternalBomi.g:5477:2: ( rule__BOMICoordination__FitForPurposeAssignment_8_1 )
-            // InternalBomi.g:5477:3: rule__BOMICoordination__FitForPurposeAssignment_8_1
+            // InternalBomi.g:5520:2: ( rule__BOMICoordination__FitForPurposeAssignment_8_1 )
+            // InternalBomi.g:5520:3: rule__BOMICoordination__FitForPurposeAssignment_8_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__FitForPurposeAssignment_8_1();
@@ -16988,14 +17155,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9__0"
-    // InternalBomi.g:5486:1: rule__BOMICoordination__Group_9__0 : rule__BOMICoordination__Group_9__0__Impl rule__BOMICoordination__Group_9__1 ;
+    // InternalBomi.g:5529:1: rule__BOMICoordination__Group_9__0 : rule__BOMICoordination__Group_9__0__Impl rule__BOMICoordination__Group_9__1 ;
     public final void rule__BOMICoordination__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5490:1: ( rule__BOMICoordination__Group_9__0__Impl rule__BOMICoordination__Group_9__1 )
-            // InternalBomi.g:5491:2: rule__BOMICoordination__Group_9__0__Impl rule__BOMICoordination__Group_9__1
+            // InternalBomi.g:5533:1: ( rule__BOMICoordination__Group_9__0__Impl rule__BOMICoordination__Group_9__1 )
+            // InternalBomi.g:5534:2: rule__BOMICoordination__Group_9__0__Impl rule__BOMICoordination__Group_9__1
             {
             pushFollow(FOLLOW_24);
             rule__BOMICoordination__Group_9__0__Impl();
@@ -17026,20 +17193,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9__0__Impl"
-    // InternalBomi.g:5498:1: rule__BOMICoordination__Group_9__0__Impl : ( 'boundaryObjects' ) ;
+    // InternalBomi.g:5541:1: rule__BOMICoordination__Group_9__0__Impl : ( 'boundaryObjects' ) ;
     public final void rule__BOMICoordination__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5502:1: ( ( 'boundaryObjects' ) )
-            // InternalBomi.g:5503:1: ( 'boundaryObjects' )
+            // InternalBomi.g:5545:1: ( ( 'boundaryObjects' ) )
+            // InternalBomi.g:5546:1: ( 'boundaryObjects' )
             {
-            // InternalBomi.g:5503:1: ( 'boundaryObjects' )
-            // InternalBomi.g:5504:2: 'boundaryObjects'
+            // InternalBomi.g:5546:1: ( 'boundaryObjects' )
+            // InternalBomi.g:5547:2: 'boundaryObjects'
             {
              before(grammarAccess.getBOMICoordinationAccess().getBoundaryObjectsKeyword_9_0()); 
-            match(input,33,FOLLOW_2); 
+            match(input,35,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getBoundaryObjectsKeyword_9_0()); 
 
             }
@@ -17063,14 +17230,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9__1"
-    // InternalBomi.g:5513:1: rule__BOMICoordination__Group_9__1 : rule__BOMICoordination__Group_9__1__Impl rule__BOMICoordination__Group_9__2 ;
+    // InternalBomi.g:5556:1: rule__BOMICoordination__Group_9__1 : rule__BOMICoordination__Group_9__1__Impl rule__BOMICoordination__Group_9__2 ;
     public final void rule__BOMICoordination__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5517:1: ( rule__BOMICoordination__Group_9__1__Impl rule__BOMICoordination__Group_9__2 )
-            // InternalBomi.g:5518:2: rule__BOMICoordination__Group_9__1__Impl rule__BOMICoordination__Group_9__2
+            // InternalBomi.g:5560:1: ( rule__BOMICoordination__Group_9__1__Impl rule__BOMICoordination__Group_9__2 )
+            // InternalBomi.g:5561:2: rule__BOMICoordination__Group_9__1__Impl rule__BOMICoordination__Group_9__2
             {
             pushFollow(FOLLOW_16);
             rule__BOMICoordination__Group_9__1__Impl();
@@ -17101,20 +17268,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9__1__Impl"
-    // InternalBomi.g:5525:1: rule__BOMICoordination__Group_9__1__Impl : ( '(' ) ;
+    // InternalBomi.g:5568:1: rule__BOMICoordination__Group_9__1__Impl : ( '(' ) ;
     public final void rule__BOMICoordination__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5529:1: ( ( '(' ) )
-            // InternalBomi.g:5530:1: ( '(' )
+            // InternalBomi.g:5572:1: ( ( '(' ) )
+            // InternalBomi.g:5573:1: ( '(' )
             {
-            // InternalBomi.g:5530:1: ( '(' )
-            // InternalBomi.g:5531:2: '('
+            // InternalBomi.g:5573:1: ( '(' )
+            // InternalBomi.g:5574:2: '('
             {
              before(grammarAccess.getBOMICoordinationAccess().getLeftParenthesisKeyword_9_1()); 
-            match(input,61,FOLLOW_2); 
+            match(input,63,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getLeftParenthesisKeyword_9_1()); 
 
             }
@@ -17138,14 +17305,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9__2"
-    // InternalBomi.g:5540:1: rule__BOMICoordination__Group_9__2 : rule__BOMICoordination__Group_9__2__Impl rule__BOMICoordination__Group_9__3 ;
+    // InternalBomi.g:5583:1: rule__BOMICoordination__Group_9__2 : rule__BOMICoordination__Group_9__2__Impl rule__BOMICoordination__Group_9__3 ;
     public final void rule__BOMICoordination__Group_9__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5544:1: ( rule__BOMICoordination__Group_9__2__Impl rule__BOMICoordination__Group_9__3 )
-            // InternalBomi.g:5545:2: rule__BOMICoordination__Group_9__2__Impl rule__BOMICoordination__Group_9__3
+            // InternalBomi.g:5587:1: ( rule__BOMICoordination__Group_9__2__Impl rule__BOMICoordination__Group_9__3 )
+            // InternalBomi.g:5588:2: rule__BOMICoordination__Group_9__2__Impl rule__BOMICoordination__Group_9__3
             {
             pushFollow(FOLLOW_25);
             rule__BOMICoordination__Group_9__2__Impl();
@@ -17176,21 +17343,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9__2__Impl"
-    // InternalBomi.g:5552:1: rule__BOMICoordination__Group_9__2__Impl : ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 ) ) ;
+    // InternalBomi.g:5595:1: rule__BOMICoordination__Group_9__2__Impl : ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 ) ) ;
     public final void rule__BOMICoordination__Group_9__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5556:1: ( ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 ) ) )
-            // InternalBomi.g:5557:1: ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 ) )
+            // InternalBomi.g:5599:1: ( ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 ) ) )
+            // InternalBomi.g:5600:1: ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 ) )
             {
-            // InternalBomi.g:5557:1: ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 ) )
-            // InternalBomi.g:5558:2: ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 )
+            // InternalBomi.g:5600:1: ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 ) )
+            // InternalBomi.g:5601:2: ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 )
             {
              before(grammarAccess.getBOMICoordinationAccess().getBoundaryObjectsAssignment_9_2()); 
-            // InternalBomi.g:5559:2: ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 )
-            // InternalBomi.g:5559:3: rule__BOMICoordination__BoundaryObjectsAssignment_9_2
+            // InternalBomi.g:5602:2: ( rule__BOMICoordination__BoundaryObjectsAssignment_9_2 )
+            // InternalBomi.g:5602:3: rule__BOMICoordination__BoundaryObjectsAssignment_9_2
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__BoundaryObjectsAssignment_9_2();
@@ -17223,14 +17390,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9__3"
-    // InternalBomi.g:5567:1: rule__BOMICoordination__Group_9__3 : rule__BOMICoordination__Group_9__3__Impl rule__BOMICoordination__Group_9__4 ;
+    // InternalBomi.g:5610:1: rule__BOMICoordination__Group_9__3 : rule__BOMICoordination__Group_9__3__Impl rule__BOMICoordination__Group_9__4 ;
     public final void rule__BOMICoordination__Group_9__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5571:1: ( rule__BOMICoordination__Group_9__3__Impl rule__BOMICoordination__Group_9__4 )
-            // InternalBomi.g:5572:2: rule__BOMICoordination__Group_9__3__Impl rule__BOMICoordination__Group_9__4
+            // InternalBomi.g:5614:1: ( rule__BOMICoordination__Group_9__3__Impl rule__BOMICoordination__Group_9__4 )
+            // InternalBomi.g:5615:2: rule__BOMICoordination__Group_9__3__Impl rule__BOMICoordination__Group_9__4
             {
             pushFollow(FOLLOW_25);
             rule__BOMICoordination__Group_9__3__Impl();
@@ -17261,33 +17428,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9__3__Impl"
-    // InternalBomi.g:5579:1: rule__BOMICoordination__Group_9__3__Impl : ( ( rule__BOMICoordination__Group_9_3__0 )* ) ;
+    // InternalBomi.g:5622:1: rule__BOMICoordination__Group_9__3__Impl : ( ( rule__BOMICoordination__Group_9_3__0 )* ) ;
     public final void rule__BOMICoordination__Group_9__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5583:1: ( ( ( rule__BOMICoordination__Group_9_3__0 )* ) )
-            // InternalBomi.g:5584:1: ( ( rule__BOMICoordination__Group_9_3__0 )* )
+            // InternalBomi.g:5626:1: ( ( ( rule__BOMICoordination__Group_9_3__0 )* ) )
+            // InternalBomi.g:5627:1: ( ( rule__BOMICoordination__Group_9_3__0 )* )
             {
-            // InternalBomi.g:5584:1: ( ( rule__BOMICoordination__Group_9_3__0 )* )
-            // InternalBomi.g:5585:2: ( rule__BOMICoordination__Group_9_3__0 )*
+            // InternalBomi.g:5627:1: ( ( rule__BOMICoordination__Group_9_3__0 )* )
+            // InternalBomi.g:5628:2: ( rule__BOMICoordination__Group_9_3__0 )*
             {
              before(grammarAccess.getBOMICoordinationAccess().getGroup_9_3()); 
-            // InternalBomi.g:5586:2: ( rule__BOMICoordination__Group_9_3__0 )*
-            loop55:
+            // InternalBomi.g:5629:2: ( rule__BOMICoordination__Group_9_3__0 )*
+            loop56:
             do {
-                int alt55=2;
-                int LA55_0 = input.LA(1);
+                int alt56=2;
+                int LA56_0 = input.LA(1);
 
-                if ( (LA55_0==36) ) {
-                    alt55=1;
+                if ( (LA56_0==38) ) {
+                    alt56=1;
                 }
 
 
-                switch (alt55) {
+                switch (alt56) {
             	case 1 :
-            	    // InternalBomi.g:5586:3: rule__BOMICoordination__Group_9_3__0
+            	    // InternalBomi.g:5629:3: rule__BOMICoordination__Group_9_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOMICoordination__Group_9_3__0();
@@ -17299,7 +17466,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop55;
+            	    break loop56;
                 }
             } while (true);
 
@@ -17326,14 +17493,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9__4"
-    // InternalBomi.g:5594:1: rule__BOMICoordination__Group_9__4 : rule__BOMICoordination__Group_9__4__Impl ;
+    // InternalBomi.g:5637:1: rule__BOMICoordination__Group_9__4 : rule__BOMICoordination__Group_9__4__Impl ;
     public final void rule__BOMICoordination__Group_9__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5598:1: ( rule__BOMICoordination__Group_9__4__Impl )
-            // InternalBomi.g:5599:2: rule__BOMICoordination__Group_9__4__Impl
+            // InternalBomi.g:5641:1: ( rule__BOMICoordination__Group_9__4__Impl )
+            // InternalBomi.g:5642:2: rule__BOMICoordination__Group_9__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__Group_9__4__Impl();
@@ -17359,20 +17526,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9__4__Impl"
-    // InternalBomi.g:5605:1: rule__BOMICoordination__Group_9__4__Impl : ( ')' ) ;
+    // InternalBomi.g:5648:1: rule__BOMICoordination__Group_9__4__Impl : ( ')' ) ;
     public final void rule__BOMICoordination__Group_9__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5609:1: ( ( ')' ) )
-            // InternalBomi.g:5610:1: ( ')' )
+            // InternalBomi.g:5652:1: ( ( ')' ) )
+            // InternalBomi.g:5653:1: ( ')' )
             {
-            // InternalBomi.g:5610:1: ( ')' )
-            // InternalBomi.g:5611:2: ')'
+            // InternalBomi.g:5653:1: ( ')' )
+            // InternalBomi.g:5654:2: ')'
             {
              before(grammarAccess.getBOMICoordinationAccess().getRightParenthesisKeyword_9_4()); 
-            match(input,62,FOLLOW_2); 
+            match(input,64,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getRightParenthesisKeyword_9_4()); 
 
             }
@@ -17396,14 +17563,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9_3__0"
-    // InternalBomi.g:5621:1: rule__BOMICoordination__Group_9_3__0 : rule__BOMICoordination__Group_9_3__0__Impl rule__BOMICoordination__Group_9_3__1 ;
+    // InternalBomi.g:5664:1: rule__BOMICoordination__Group_9_3__0 : rule__BOMICoordination__Group_9_3__0__Impl rule__BOMICoordination__Group_9_3__1 ;
     public final void rule__BOMICoordination__Group_9_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5625:1: ( rule__BOMICoordination__Group_9_3__0__Impl rule__BOMICoordination__Group_9_3__1 )
-            // InternalBomi.g:5626:2: rule__BOMICoordination__Group_9_3__0__Impl rule__BOMICoordination__Group_9_3__1
+            // InternalBomi.g:5668:1: ( rule__BOMICoordination__Group_9_3__0__Impl rule__BOMICoordination__Group_9_3__1 )
+            // InternalBomi.g:5669:2: rule__BOMICoordination__Group_9_3__0__Impl rule__BOMICoordination__Group_9_3__1
             {
             pushFollow(FOLLOW_16);
             rule__BOMICoordination__Group_9_3__0__Impl();
@@ -17434,20 +17601,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9_3__0__Impl"
-    // InternalBomi.g:5633:1: rule__BOMICoordination__Group_9_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:5676:1: rule__BOMICoordination__Group_9_3__0__Impl : ( ',' ) ;
     public final void rule__BOMICoordination__Group_9_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5637:1: ( ( ',' ) )
-            // InternalBomi.g:5638:1: ( ',' )
+            // InternalBomi.g:5680:1: ( ( ',' ) )
+            // InternalBomi.g:5681:1: ( ',' )
             {
-            // InternalBomi.g:5638:1: ( ',' )
-            // InternalBomi.g:5639:2: ','
+            // InternalBomi.g:5681:1: ( ',' )
+            // InternalBomi.g:5682:2: ','
             {
              before(grammarAccess.getBOMICoordinationAccess().getCommaKeyword_9_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getCommaKeyword_9_3_0()); 
 
             }
@@ -17471,14 +17638,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9_3__1"
-    // InternalBomi.g:5648:1: rule__BOMICoordination__Group_9_3__1 : rule__BOMICoordination__Group_9_3__1__Impl ;
+    // InternalBomi.g:5691:1: rule__BOMICoordination__Group_9_3__1 : rule__BOMICoordination__Group_9_3__1__Impl ;
     public final void rule__BOMICoordination__Group_9_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5652:1: ( rule__BOMICoordination__Group_9_3__1__Impl )
-            // InternalBomi.g:5653:2: rule__BOMICoordination__Group_9_3__1__Impl
+            // InternalBomi.g:5695:1: ( rule__BOMICoordination__Group_9_3__1__Impl )
+            // InternalBomi.g:5696:2: rule__BOMICoordination__Group_9_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__Group_9_3__1__Impl();
@@ -17504,21 +17671,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_9_3__1__Impl"
-    // InternalBomi.g:5659:1: rule__BOMICoordination__Group_9_3__1__Impl : ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 ) ) ;
+    // InternalBomi.g:5702:1: rule__BOMICoordination__Group_9_3__1__Impl : ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 ) ) ;
     public final void rule__BOMICoordination__Group_9_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5663:1: ( ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 ) ) )
-            // InternalBomi.g:5664:1: ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 ) )
+            // InternalBomi.g:5706:1: ( ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 ) ) )
+            // InternalBomi.g:5707:1: ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 ) )
             {
-            // InternalBomi.g:5664:1: ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 ) )
-            // InternalBomi.g:5665:2: ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 )
+            // InternalBomi.g:5707:1: ( ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 ) )
+            // InternalBomi.g:5708:2: ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 )
             {
              before(grammarAccess.getBOMICoordinationAccess().getBoundaryObjectsAssignment_9_3_1()); 
-            // InternalBomi.g:5666:2: ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 )
-            // InternalBomi.g:5666:3: rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1
+            // InternalBomi.g:5709:2: ( rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 )
+            // InternalBomi.g:5709:3: rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1();
@@ -17551,14 +17718,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10__0"
-    // InternalBomi.g:5675:1: rule__BOMICoordination__Group_10__0 : rule__BOMICoordination__Group_10__0__Impl rule__BOMICoordination__Group_10__1 ;
+    // InternalBomi.g:5718:1: rule__BOMICoordination__Group_10__0 : rule__BOMICoordination__Group_10__0__Impl rule__BOMICoordination__Group_10__1 ;
     public final void rule__BOMICoordination__Group_10__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5679:1: ( rule__BOMICoordination__Group_10__0__Impl rule__BOMICoordination__Group_10__1 )
-            // InternalBomi.g:5680:2: rule__BOMICoordination__Group_10__0__Impl rule__BOMICoordination__Group_10__1
+            // InternalBomi.g:5722:1: ( rule__BOMICoordination__Group_10__0__Impl rule__BOMICoordination__Group_10__1 )
+            // InternalBomi.g:5723:2: rule__BOMICoordination__Group_10__0__Impl rule__BOMICoordination__Group_10__1
             {
             pushFollow(FOLLOW_24);
             rule__BOMICoordination__Group_10__0__Impl();
@@ -17589,20 +17756,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10__0__Impl"
-    // InternalBomi.g:5687:1: rule__BOMICoordination__Group_10__0__Impl : ( 'methodologicalIslands' ) ;
+    // InternalBomi.g:5730:1: rule__BOMICoordination__Group_10__0__Impl : ( 'methodologicalIslands' ) ;
     public final void rule__BOMICoordination__Group_10__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5691:1: ( ( 'methodologicalIslands' ) )
-            // InternalBomi.g:5692:1: ( 'methodologicalIslands' )
+            // InternalBomi.g:5734:1: ( ( 'methodologicalIslands' ) )
+            // InternalBomi.g:5735:1: ( 'methodologicalIslands' )
             {
-            // InternalBomi.g:5692:1: ( 'methodologicalIslands' )
-            // InternalBomi.g:5693:2: 'methodologicalIslands'
+            // InternalBomi.g:5735:1: ( 'methodologicalIslands' )
+            // InternalBomi.g:5736:2: 'methodologicalIslands'
             {
              before(grammarAccess.getBOMICoordinationAccess().getMethodologicalIslandsKeyword_10_0()); 
-            match(input,37,FOLLOW_2); 
+            match(input,39,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getMethodologicalIslandsKeyword_10_0()); 
 
             }
@@ -17626,14 +17793,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10__1"
-    // InternalBomi.g:5702:1: rule__BOMICoordination__Group_10__1 : rule__BOMICoordination__Group_10__1__Impl rule__BOMICoordination__Group_10__2 ;
+    // InternalBomi.g:5745:1: rule__BOMICoordination__Group_10__1 : rule__BOMICoordination__Group_10__1__Impl rule__BOMICoordination__Group_10__2 ;
     public final void rule__BOMICoordination__Group_10__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5706:1: ( rule__BOMICoordination__Group_10__1__Impl rule__BOMICoordination__Group_10__2 )
-            // InternalBomi.g:5707:2: rule__BOMICoordination__Group_10__1__Impl rule__BOMICoordination__Group_10__2
+            // InternalBomi.g:5749:1: ( rule__BOMICoordination__Group_10__1__Impl rule__BOMICoordination__Group_10__2 )
+            // InternalBomi.g:5750:2: rule__BOMICoordination__Group_10__1__Impl rule__BOMICoordination__Group_10__2
             {
             pushFollow(FOLLOW_16);
             rule__BOMICoordination__Group_10__1__Impl();
@@ -17664,20 +17831,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10__1__Impl"
-    // InternalBomi.g:5714:1: rule__BOMICoordination__Group_10__1__Impl : ( '(' ) ;
+    // InternalBomi.g:5757:1: rule__BOMICoordination__Group_10__1__Impl : ( '(' ) ;
     public final void rule__BOMICoordination__Group_10__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5718:1: ( ( '(' ) )
-            // InternalBomi.g:5719:1: ( '(' )
+            // InternalBomi.g:5761:1: ( ( '(' ) )
+            // InternalBomi.g:5762:1: ( '(' )
             {
-            // InternalBomi.g:5719:1: ( '(' )
-            // InternalBomi.g:5720:2: '('
+            // InternalBomi.g:5762:1: ( '(' )
+            // InternalBomi.g:5763:2: '('
             {
              before(grammarAccess.getBOMICoordinationAccess().getLeftParenthesisKeyword_10_1()); 
-            match(input,61,FOLLOW_2); 
+            match(input,63,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getLeftParenthesisKeyword_10_1()); 
 
             }
@@ -17701,14 +17868,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10__2"
-    // InternalBomi.g:5729:1: rule__BOMICoordination__Group_10__2 : rule__BOMICoordination__Group_10__2__Impl rule__BOMICoordination__Group_10__3 ;
+    // InternalBomi.g:5772:1: rule__BOMICoordination__Group_10__2 : rule__BOMICoordination__Group_10__2__Impl rule__BOMICoordination__Group_10__3 ;
     public final void rule__BOMICoordination__Group_10__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5733:1: ( rule__BOMICoordination__Group_10__2__Impl rule__BOMICoordination__Group_10__3 )
-            // InternalBomi.g:5734:2: rule__BOMICoordination__Group_10__2__Impl rule__BOMICoordination__Group_10__3
+            // InternalBomi.g:5776:1: ( rule__BOMICoordination__Group_10__2__Impl rule__BOMICoordination__Group_10__3 )
+            // InternalBomi.g:5777:2: rule__BOMICoordination__Group_10__2__Impl rule__BOMICoordination__Group_10__3
             {
             pushFollow(FOLLOW_25);
             rule__BOMICoordination__Group_10__2__Impl();
@@ -17739,21 +17906,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10__2__Impl"
-    // InternalBomi.g:5741:1: rule__BOMICoordination__Group_10__2__Impl : ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 ) ) ;
+    // InternalBomi.g:5784:1: rule__BOMICoordination__Group_10__2__Impl : ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 ) ) ;
     public final void rule__BOMICoordination__Group_10__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5745:1: ( ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 ) ) )
-            // InternalBomi.g:5746:1: ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 ) )
+            // InternalBomi.g:5788:1: ( ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 ) ) )
+            // InternalBomi.g:5789:1: ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 ) )
             {
-            // InternalBomi.g:5746:1: ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 ) )
-            // InternalBomi.g:5747:2: ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 )
+            // InternalBomi.g:5789:1: ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 ) )
+            // InternalBomi.g:5790:2: ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 )
             {
              before(grammarAccess.getBOMICoordinationAccess().getMethodologicalIslandsAssignment_10_2()); 
-            // InternalBomi.g:5748:2: ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 )
-            // InternalBomi.g:5748:3: rule__BOMICoordination__MethodologicalIslandsAssignment_10_2
+            // InternalBomi.g:5791:2: ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 )
+            // InternalBomi.g:5791:3: rule__BOMICoordination__MethodologicalIslandsAssignment_10_2
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__MethodologicalIslandsAssignment_10_2();
@@ -17786,14 +17953,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10__3"
-    // InternalBomi.g:5756:1: rule__BOMICoordination__Group_10__3 : rule__BOMICoordination__Group_10__3__Impl rule__BOMICoordination__Group_10__4 ;
+    // InternalBomi.g:5799:1: rule__BOMICoordination__Group_10__3 : rule__BOMICoordination__Group_10__3__Impl rule__BOMICoordination__Group_10__4 ;
     public final void rule__BOMICoordination__Group_10__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5760:1: ( rule__BOMICoordination__Group_10__3__Impl rule__BOMICoordination__Group_10__4 )
-            // InternalBomi.g:5761:2: rule__BOMICoordination__Group_10__3__Impl rule__BOMICoordination__Group_10__4
+            // InternalBomi.g:5803:1: ( rule__BOMICoordination__Group_10__3__Impl rule__BOMICoordination__Group_10__4 )
+            // InternalBomi.g:5804:2: rule__BOMICoordination__Group_10__3__Impl rule__BOMICoordination__Group_10__4
             {
             pushFollow(FOLLOW_25);
             rule__BOMICoordination__Group_10__3__Impl();
@@ -17824,33 +17991,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10__3__Impl"
-    // InternalBomi.g:5768:1: rule__BOMICoordination__Group_10__3__Impl : ( ( rule__BOMICoordination__Group_10_3__0 )* ) ;
+    // InternalBomi.g:5811:1: rule__BOMICoordination__Group_10__3__Impl : ( ( rule__BOMICoordination__Group_10_3__0 )* ) ;
     public final void rule__BOMICoordination__Group_10__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5772:1: ( ( ( rule__BOMICoordination__Group_10_3__0 )* ) )
-            // InternalBomi.g:5773:1: ( ( rule__BOMICoordination__Group_10_3__0 )* )
+            // InternalBomi.g:5815:1: ( ( ( rule__BOMICoordination__Group_10_3__0 )* ) )
+            // InternalBomi.g:5816:1: ( ( rule__BOMICoordination__Group_10_3__0 )* )
             {
-            // InternalBomi.g:5773:1: ( ( rule__BOMICoordination__Group_10_3__0 )* )
-            // InternalBomi.g:5774:2: ( rule__BOMICoordination__Group_10_3__0 )*
+            // InternalBomi.g:5816:1: ( ( rule__BOMICoordination__Group_10_3__0 )* )
+            // InternalBomi.g:5817:2: ( rule__BOMICoordination__Group_10_3__0 )*
             {
              before(grammarAccess.getBOMICoordinationAccess().getGroup_10_3()); 
-            // InternalBomi.g:5775:2: ( rule__BOMICoordination__Group_10_3__0 )*
-            loop56:
+            // InternalBomi.g:5818:2: ( rule__BOMICoordination__Group_10_3__0 )*
+            loop57:
             do {
-                int alt56=2;
-                int LA56_0 = input.LA(1);
+                int alt57=2;
+                int LA57_0 = input.LA(1);
 
-                if ( (LA56_0==36) ) {
-                    alt56=1;
+                if ( (LA57_0==38) ) {
+                    alt57=1;
                 }
 
 
-                switch (alt56) {
+                switch (alt57) {
             	case 1 :
-            	    // InternalBomi.g:5775:3: rule__BOMICoordination__Group_10_3__0
+            	    // InternalBomi.g:5818:3: rule__BOMICoordination__Group_10_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOMICoordination__Group_10_3__0();
@@ -17862,7 +18029,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop56;
+            	    break loop57;
                 }
             } while (true);
 
@@ -17889,14 +18056,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10__4"
-    // InternalBomi.g:5783:1: rule__BOMICoordination__Group_10__4 : rule__BOMICoordination__Group_10__4__Impl ;
+    // InternalBomi.g:5826:1: rule__BOMICoordination__Group_10__4 : rule__BOMICoordination__Group_10__4__Impl ;
     public final void rule__BOMICoordination__Group_10__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5787:1: ( rule__BOMICoordination__Group_10__4__Impl )
-            // InternalBomi.g:5788:2: rule__BOMICoordination__Group_10__4__Impl
+            // InternalBomi.g:5830:1: ( rule__BOMICoordination__Group_10__4__Impl )
+            // InternalBomi.g:5831:2: rule__BOMICoordination__Group_10__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__Group_10__4__Impl();
@@ -17922,20 +18089,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10__4__Impl"
-    // InternalBomi.g:5794:1: rule__BOMICoordination__Group_10__4__Impl : ( ')' ) ;
+    // InternalBomi.g:5837:1: rule__BOMICoordination__Group_10__4__Impl : ( ')' ) ;
     public final void rule__BOMICoordination__Group_10__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5798:1: ( ( ')' ) )
-            // InternalBomi.g:5799:1: ( ')' )
+            // InternalBomi.g:5841:1: ( ( ')' ) )
+            // InternalBomi.g:5842:1: ( ')' )
             {
-            // InternalBomi.g:5799:1: ( ')' )
-            // InternalBomi.g:5800:2: ')'
+            // InternalBomi.g:5842:1: ( ')' )
+            // InternalBomi.g:5843:2: ')'
             {
              before(grammarAccess.getBOMICoordinationAccess().getRightParenthesisKeyword_10_4()); 
-            match(input,62,FOLLOW_2); 
+            match(input,64,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getRightParenthesisKeyword_10_4()); 
 
             }
@@ -17959,14 +18126,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10_3__0"
-    // InternalBomi.g:5810:1: rule__BOMICoordination__Group_10_3__0 : rule__BOMICoordination__Group_10_3__0__Impl rule__BOMICoordination__Group_10_3__1 ;
+    // InternalBomi.g:5853:1: rule__BOMICoordination__Group_10_3__0 : rule__BOMICoordination__Group_10_3__0__Impl rule__BOMICoordination__Group_10_3__1 ;
     public final void rule__BOMICoordination__Group_10_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5814:1: ( rule__BOMICoordination__Group_10_3__0__Impl rule__BOMICoordination__Group_10_3__1 )
-            // InternalBomi.g:5815:2: rule__BOMICoordination__Group_10_3__0__Impl rule__BOMICoordination__Group_10_3__1
+            // InternalBomi.g:5857:1: ( rule__BOMICoordination__Group_10_3__0__Impl rule__BOMICoordination__Group_10_3__1 )
+            // InternalBomi.g:5858:2: rule__BOMICoordination__Group_10_3__0__Impl rule__BOMICoordination__Group_10_3__1
             {
             pushFollow(FOLLOW_16);
             rule__BOMICoordination__Group_10_3__0__Impl();
@@ -17997,20 +18164,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10_3__0__Impl"
-    // InternalBomi.g:5822:1: rule__BOMICoordination__Group_10_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:5865:1: rule__BOMICoordination__Group_10_3__0__Impl : ( ',' ) ;
     public final void rule__BOMICoordination__Group_10_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5826:1: ( ( ',' ) )
-            // InternalBomi.g:5827:1: ( ',' )
+            // InternalBomi.g:5869:1: ( ( ',' ) )
+            // InternalBomi.g:5870:1: ( ',' )
             {
-            // InternalBomi.g:5827:1: ( ',' )
-            // InternalBomi.g:5828:2: ','
+            // InternalBomi.g:5870:1: ( ',' )
+            // InternalBomi.g:5871:2: ','
             {
              before(grammarAccess.getBOMICoordinationAccess().getCommaKeyword_10_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOMICoordinationAccess().getCommaKeyword_10_3_0()); 
 
             }
@@ -18034,14 +18201,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10_3__1"
-    // InternalBomi.g:5837:1: rule__BOMICoordination__Group_10_3__1 : rule__BOMICoordination__Group_10_3__1__Impl ;
+    // InternalBomi.g:5880:1: rule__BOMICoordination__Group_10_3__1 : rule__BOMICoordination__Group_10_3__1__Impl ;
     public final void rule__BOMICoordination__Group_10_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5841:1: ( rule__BOMICoordination__Group_10_3__1__Impl )
-            // InternalBomi.g:5842:2: rule__BOMICoordination__Group_10_3__1__Impl
+            // InternalBomi.g:5884:1: ( rule__BOMICoordination__Group_10_3__1__Impl )
+            // InternalBomi.g:5885:2: rule__BOMICoordination__Group_10_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__Group_10_3__1__Impl();
@@ -18067,21 +18234,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__Group_10_3__1__Impl"
-    // InternalBomi.g:5848:1: rule__BOMICoordination__Group_10_3__1__Impl : ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 ) ) ;
+    // InternalBomi.g:5891:1: rule__BOMICoordination__Group_10_3__1__Impl : ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 ) ) ;
     public final void rule__BOMICoordination__Group_10_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5852:1: ( ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 ) ) )
-            // InternalBomi.g:5853:1: ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 ) )
+            // InternalBomi.g:5895:1: ( ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 ) ) )
+            // InternalBomi.g:5896:1: ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 ) )
             {
-            // InternalBomi.g:5853:1: ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 ) )
-            // InternalBomi.g:5854:2: ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 )
+            // InternalBomi.g:5896:1: ( ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 ) )
+            // InternalBomi.g:5897:2: ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 )
             {
              before(grammarAccess.getBOMICoordinationAccess().getMethodologicalIslandsAssignment_10_3_1()); 
-            // InternalBomi.g:5855:2: ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 )
-            // InternalBomi.g:5855:3: rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1
+            // InternalBomi.g:5898:2: ( rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 )
+            // InternalBomi.g:5898:3: rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1
             {
             pushFollow(FOLLOW_2);
             rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1();
@@ -18114,14 +18281,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__0"
-    // InternalBomi.g:5864:1: rule__BORoleInteraction__Group__0 : rule__BORoleInteraction__Group__0__Impl rule__BORoleInteraction__Group__1 ;
+    // InternalBomi.g:5907:1: rule__BORoleInteraction__Group__0 : rule__BORoleInteraction__Group__0__Impl rule__BORoleInteraction__Group__1 ;
     public final void rule__BORoleInteraction__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5868:1: ( rule__BORoleInteraction__Group__0__Impl rule__BORoleInteraction__Group__1 )
-            // InternalBomi.g:5869:2: rule__BORoleInteraction__Group__0__Impl rule__BORoleInteraction__Group__1
+            // InternalBomi.g:5911:1: ( rule__BORoleInteraction__Group__0__Impl rule__BORoleInteraction__Group__1 )
+            // InternalBomi.g:5912:2: rule__BORoleInteraction__Group__0__Impl rule__BORoleInteraction__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__BORoleInteraction__Group__0__Impl();
@@ -18152,21 +18319,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__0__Impl"
-    // InternalBomi.g:5876:1: rule__BORoleInteraction__Group__0__Impl : ( () ) ;
+    // InternalBomi.g:5919:1: rule__BORoleInteraction__Group__0__Impl : ( () ) ;
     public final void rule__BORoleInteraction__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5880:1: ( ( () ) )
-            // InternalBomi.g:5881:1: ( () )
+            // InternalBomi.g:5923:1: ( ( () ) )
+            // InternalBomi.g:5924:1: ( () )
             {
-            // InternalBomi.g:5881:1: ( () )
-            // InternalBomi.g:5882:2: ()
+            // InternalBomi.g:5924:1: ( () )
+            // InternalBomi.g:5925:2: ()
             {
              before(grammarAccess.getBORoleInteractionAccess().getBORoleInteractionAction_0()); 
-            // InternalBomi.g:5883:2: ()
-            // InternalBomi.g:5883:3: 
+            // InternalBomi.g:5926:2: ()
+            // InternalBomi.g:5926:3: 
             {
             }
 
@@ -18189,14 +18356,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__1"
-    // InternalBomi.g:5891:1: rule__BORoleInteraction__Group__1 : rule__BORoleInteraction__Group__1__Impl rule__BORoleInteraction__Group__2 ;
+    // InternalBomi.g:5934:1: rule__BORoleInteraction__Group__1 : rule__BORoleInteraction__Group__1__Impl rule__BORoleInteraction__Group__2 ;
     public final void rule__BORoleInteraction__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5895:1: ( rule__BORoleInteraction__Group__1__Impl rule__BORoleInteraction__Group__2 )
-            // InternalBomi.g:5896:2: rule__BORoleInteraction__Group__1__Impl rule__BORoleInteraction__Group__2
+            // InternalBomi.g:5938:1: ( rule__BORoleInteraction__Group__1__Impl rule__BORoleInteraction__Group__2 )
+            // InternalBomi.g:5939:2: rule__BORoleInteraction__Group__1__Impl rule__BORoleInteraction__Group__2
             {
             pushFollow(FOLLOW_16);
             rule__BORoleInteraction__Group__1__Impl();
@@ -18227,20 +18394,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__1__Impl"
-    // InternalBomi.g:5903:1: rule__BORoleInteraction__Group__1__Impl : ( 'BORoleInteraction' ) ;
+    // InternalBomi.g:5946:1: rule__BORoleInteraction__Group__1__Impl : ( 'BORoleInteraction' ) ;
     public final void rule__BORoleInteraction__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5907:1: ( ( 'BORoleInteraction' ) )
-            // InternalBomi.g:5908:1: ( 'BORoleInteraction' )
+            // InternalBomi.g:5950:1: ( ( 'BORoleInteraction' ) )
+            // InternalBomi.g:5951:1: ( 'BORoleInteraction' )
             {
-            // InternalBomi.g:5908:1: ( 'BORoleInteraction' )
-            // InternalBomi.g:5909:2: 'BORoleInteraction'
+            // InternalBomi.g:5951:1: ( 'BORoleInteraction' )
+            // InternalBomi.g:5952:2: 'BORoleInteraction'
             {
              before(grammarAccess.getBORoleInteractionAccess().getBORoleInteractionKeyword_1()); 
-            match(input,74,FOLLOW_2); 
+            match(input,76,FOLLOW_2); 
              after(grammarAccess.getBORoleInteractionAccess().getBORoleInteractionKeyword_1()); 
 
             }
@@ -18264,14 +18431,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__2"
-    // InternalBomi.g:5918:1: rule__BORoleInteraction__Group__2 : rule__BORoleInteraction__Group__2__Impl rule__BORoleInteraction__Group__3 ;
+    // InternalBomi.g:5961:1: rule__BORoleInteraction__Group__2 : rule__BORoleInteraction__Group__2__Impl rule__BORoleInteraction__Group__3 ;
     public final void rule__BORoleInteraction__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5922:1: ( rule__BORoleInteraction__Group__2__Impl rule__BORoleInteraction__Group__3 )
-            // InternalBomi.g:5923:2: rule__BORoleInteraction__Group__2__Impl rule__BORoleInteraction__Group__3
+            // InternalBomi.g:5965:1: ( rule__BORoleInteraction__Group__2__Impl rule__BORoleInteraction__Group__3 )
+            // InternalBomi.g:5966:2: rule__BORoleInteraction__Group__2__Impl rule__BORoleInteraction__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__BORoleInteraction__Group__2__Impl();
@@ -18302,21 +18469,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__2__Impl"
-    // InternalBomi.g:5930:1: rule__BORoleInteraction__Group__2__Impl : ( ( rule__BORoleInteraction__NameAssignment_2 ) ) ;
+    // InternalBomi.g:5973:1: rule__BORoleInteraction__Group__2__Impl : ( ( rule__BORoleInteraction__NameAssignment_2 ) ) ;
     public final void rule__BORoleInteraction__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5934:1: ( ( ( rule__BORoleInteraction__NameAssignment_2 ) ) )
-            // InternalBomi.g:5935:1: ( ( rule__BORoleInteraction__NameAssignment_2 ) )
+            // InternalBomi.g:5977:1: ( ( ( rule__BORoleInteraction__NameAssignment_2 ) ) )
+            // InternalBomi.g:5978:1: ( ( rule__BORoleInteraction__NameAssignment_2 ) )
             {
-            // InternalBomi.g:5935:1: ( ( rule__BORoleInteraction__NameAssignment_2 ) )
-            // InternalBomi.g:5936:2: ( rule__BORoleInteraction__NameAssignment_2 )
+            // InternalBomi.g:5978:1: ( ( rule__BORoleInteraction__NameAssignment_2 ) )
+            // InternalBomi.g:5979:2: ( rule__BORoleInteraction__NameAssignment_2 )
             {
              before(grammarAccess.getBORoleInteractionAccess().getNameAssignment_2()); 
-            // InternalBomi.g:5937:2: ( rule__BORoleInteraction__NameAssignment_2 )
-            // InternalBomi.g:5937:3: rule__BORoleInteraction__NameAssignment_2
+            // InternalBomi.g:5980:2: ( rule__BORoleInteraction__NameAssignment_2 )
+            // InternalBomi.g:5980:3: rule__BORoleInteraction__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__BORoleInteraction__NameAssignment_2();
@@ -18349,14 +18516,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__3"
-    // InternalBomi.g:5945:1: rule__BORoleInteraction__Group__3 : rule__BORoleInteraction__Group__3__Impl rule__BORoleInteraction__Group__4 ;
+    // InternalBomi.g:5988:1: rule__BORoleInteraction__Group__3 : rule__BORoleInteraction__Group__3__Impl rule__BORoleInteraction__Group__4 ;
     public final void rule__BORoleInteraction__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5949:1: ( rule__BORoleInteraction__Group__3__Impl rule__BORoleInteraction__Group__4 )
-            // InternalBomi.g:5950:2: rule__BORoleInteraction__Group__3__Impl rule__BORoleInteraction__Group__4
+            // InternalBomi.g:5992:1: ( rule__BORoleInteraction__Group__3__Impl rule__BORoleInteraction__Group__4 )
+            // InternalBomi.g:5993:2: rule__BORoleInteraction__Group__3__Impl rule__BORoleInteraction__Group__4
             {
             pushFollow(FOLLOW_30);
             rule__BORoleInteraction__Group__3__Impl();
@@ -18387,20 +18554,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__3__Impl"
-    // InternalBomi.g:5957:1: rule__BORoleInteraction__Group__3__Impl : ( '{' ) ;
+    // InternalBomi.g:6000:1: rule__BORoleInteraction__Group__3__Impl : ( '{' ) ;
     public final void rule__BORoleInteraction__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5961:1: ( ( '{' ) )
-            // InternalBomi.g:5962:1: ( '{' )
+            // InternalBomi.g:6004:1: ( ( '{' ) )
+            // InternalBomi.g:6005:1: ( '{' )
             {
-            // InternalBomi.g:5962:1: ( '{' )
-            // InternalBomi.g:5963:2: '{'
+            // InternalBomi.g:6005:1: ( '{' )
+            // InternalBomi.g:6006:2: '{'
             {
              before(grammarAccess.getBORoleInteractionAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getBORoleInteractionAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -18424,14 +18591,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__4"
-    // InternalBomi.g:5972:1: rule__BORoleInteraction__Group__4 : rule__BORoleInteraction__Group__4__Impl rule__BORoleInteraction__Group__5 ;
+    // InternalBomi.g:6015:1: rule__BORoleInteraction__Group__4 : rule__BORoleInteraction__Group__4__Impl rule__BORoleInteraction__Group__5 ;
     public final void rule__BORoleInteraction__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5976:1: ( rule__BORoleInteraction__Group__4__Impl rule__BORoleInteraction__Group__5 )
-            // InternalBomi.g:5977:2: rule__BORoleInteraction__Group__4__Impl rule__BORoleInteraction__Group__5
+            // InternalBomi.g:6019:1: ( rule__BORoleInteraction__Group__4__Impl rule__BORoleInteraction__Group__5 )
+            // InternalBomi.g:6020:2: rule__BORoleInteraction__Group__4__Impl rule__BORoleInteraction__Group__5
             {
             pushFollow(FOLLOW_30);
             rule__BORoleInteraction__Group__4__Impl();
@@ -18462,29 +18629,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__4__Impl"
-    // InternalBomi.g:5984:1: rule__BORoleInteraction__Group__4__Impl : ( ( rule__BORoleInteraction__Group_4__0 )? ) ;
+    // InternalBomi.g:6027:1: rule__BORoleInteraction__Group__4__Impl : ( ( rule__BORoleInteraction__Group_4__0 )? ) ;
     public final void rule__BORoleInteraction__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:5988:1: ( ( ( rule__BORoleInteraction__Group_4__0 )? ) )
-            // InternalBomi.g:5989:1: ( ( rule__BORoleInteraction__Group_4__0 )? )
+            // InternalBomi.g:6031:1: ( ( ( rule__BORoleInteraction__Group_4__0 )? ) )
+            // InternalBomi.g:6032:1: ( ( rule__BORoleInteraction__Group_4__0 )? )
             {
-            // InternalBomi.g:5989:1: ( ( rule__BORoleInteraction__Group_4__0 )? )
-            // InternalBomi.g:5990:2: ( rule__BORoleInteraction__Group_4__0 )?
+            // InternalBomi.g:6032:1: ( ( rule__BORoleInteraction__Group_4__0 )? )
+            // InternalBomi.g:6033:2: ( rule__BORoleInteraction__Group_4__0 )?
             {
              before(grammarAccess.getBORoleInteractionAccess().getGroup_4()); 
-            // InternalBomi.g:5991:2: ( rule__BORoleInteraction__Group_4__0 )?
-            int alt57=2;
-            int LA57_0 = input.LA(1);
+            // InternalBomi.g:6034:2: ( rule__BORoleInteraction__Group_4__0 )?
+            int alt58=2;
+            int LA58_0 = input.LA(1);
 
-            if ( (LA57_0==43) ) {
-                alt57=1;
+            if ( (LA58_0==45) ) {
+                alt58=1;
             }
-            switch (alt57) {
+            switch (alt58) {
                 case 1 :
-                    // InternalBomi.g:5991:3: rule__BORoleInteraction__Group_4__0
+                    // InternalBomi.g:6034:3: rule__BORoleInteraction__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BORoleInteraction__Group_4__0();
@@ -18520,14 +18687,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__5"
-    // InternalBomi.g:5999:1: rule__BORoleInteraction__Group__5 : rule__BORoleInteraction__Group__5__Impl rule__BORoleInteraction__Group__6 ;
+    // InternalBomi.g:6042:1: rule__BORoleInteraction__Group__5 : rule__BORoleInteraction__Group__5__Impl rule__BORoleInteraction__Group__6 ;
     public final void rule__BORoleInteraction__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6003:1: ( rule__BORoleInteraction__Group__5__Impl rule__BORoleInteraction__Group__6 )
-            // InternalBomi.g:6004:2: rule__BORoleInteraction__Group__5__Impl rule__BORoleInteraction__Group__6
+            // InternalBomi.g:6046:1: ( rule__BORoleInteraction__Group__5__Impl rule__BORoleInteraction__Group__6 )
+            // InternalBomi.g:6047:2: rule__BORoleInteraction__Group__5__Impl rule__BORoleInteraction__Group__6
             {
             pushFollow(FOLLOW_30);
             rule__BORoleInteraction__Group__5__Impl();
@@ -18558,29 +18725,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__5__Impl"
-    // InternalBomi.g:6011:1: rule__BORoleInteraction__Group__5__Impl : ( ( rule__BORoleInteraction__Group_5__0 )? ) ;
+    // InternalBomi.g:6054:1: rule__BORoleInteraction__Group__5__Impl : ( ( rule__BORoleInteraction__Group_5__0 )? ) ;
     public final void rule__BORoleInteraction__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6015:1: ( ( ( rule__BORoleInteraction__Group_5__0 )? ) )
-            // InternalBomi.g:6016:1: ( ( rule__BORoleInteraction__Group_5__0 )? )
+            // InternalBomi.g:6058:1: ( ( ( rule__BORoleInteraction__Group_5__0 )? ) )
+            // InternalBomi.g:6059:1: ( ( rule__BORoleInteraction__Group_5__0 )? )
             {
-            // InternalBomi.g:6016:1: ( ( rule__BORoleInteraction__Group_5__0 )? )
-            // InternalBomi.g:6017:2: ( rule__BORoleInteraction__Group_5__0 )?
+            // InternalBomi.g:6059:1: ( ( rule__BORoleInteraction__Group_5__0 )? )
+            // InternalBomi.g:6060:2: ( rule__BORoleInteraction__Group_5__0 )?
             {
              before(grammarAccess.getBORoleInteractionAccess().getGroup_5()); 
-            // InternalBomi.g:6018:2: ( rule__BORoleInteraction__Group_5__0 )?
-            int alt58=2;
-            int LA58_0 = input.LA(1);
+            // InternalBomi.g:6061:2: ( rule__BORoleInteraction__Group_5__0 )?
+            int alt59=2;
+            int LA59_0 = input.LA(1);
 
-            if ( (LA58_0==70) ) {
-                alt58=1;
+            if ( (LA59_0==72) ) {
+                alt59=1;
             }
-            switch (alt58) {
+            switch (alt59) {
                 case 1 :
-                    // InternalBomi.g:6018:3: rule__BORoleInteraction__Group_5__0
+                    // InternalBomi.g:6061:3: rule__BORoleInteraction__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BORoleInteraction__Group_5__0();
@@ -18616,14 +18783,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__6"
-    // InternalBomi.g:6026:1: rule__BORoleInteraction__Group__6 : rule__BORoleInteraction__Group__6__Impl rule__BORoleInteraction__Group__7 ;
+    // InternalBomi.g:6069:1: rule__BORoleInteraction__Group__6 : rule__BORoleInteraction__Group__6__Impl rule__BORoleInteraction__Group__7 ;
     public final void rule__BORoleInteraction__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6030:1: ( rule__BORoleInteraction__Group__6__Impl rule__BORoleInteraction__Group__7 )
-            // InternalBomi.g:6031:2: rule__BORoleInteraction__Group__6__Impl rule__BORoleInteraction__Group__7
+            // InternalBomi.g:6073:1: ( rule__BORoleInteraction__Group__6__Impl rule__BORoleInteraction__Group__7 )
+            // InternalBomi.g:6074:2: rule__BORoleInteraction__Group__6__Impl rule__BORoleInteraction__Group__7
             {
             pushFollow(FOLLOW_30);
             rule__BORoleInteraction__Group__6__Impl();
@@ -18654,29 +18821,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__6__Impl"
-    // InternalBomi.g:6038:1: rule__BORoleInteraction__Group__6__Impl : ( ( rule__BORoleInteraction__Group_6__0 )? ) ;
+    // InternalBomi.g:6081:1: rule__BORoleInteraction__Group__6__Impl : ( ( rule__BORoleInteraction__Group_6__0 )? ) ;
     public final void rule__BORoleInteraction__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6042:1: ( ( ( rule__BORoleInteraction__Group_6__0 )? ) )
-            // InternalBomi.g:6043:1: ( ( rule__BORoleInteraction__Group_6__0 )? )
+            // InternalBomi.g:6085:1: ( ( ( rule__BORoleInteraction__Group_6__0 )? ) )
+            // InternalBomi.g:6086:1: ( ( rule__BORoleInteraction__Group_6__0 )? )
             {
-            // InternalBomi.g:6043:1: ( ( rule__BORoleInteraction__Group_6__0 )? )
-            // InternalBomi.g:6044:2: ( rule__BORoleInteraction__Group_6__0 )?
+            // InternalBomi.g:6086:1: ( ( rule__BORoleInteraction__Group_6__0 )? )
+            // InternalBomi.g:6087:2: ( rule__BORoleInteraction__Group_6__0 )?
             {
              before(grammarAccess.getBORoleInteractionAccess().getGroup_6()); 
-            // InternalBomi.g:6045:2: ( rule__BORoleInteraction__Group_6__0 )?
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            // InternalBomi.g:6088:2: ( rule__BORoleInteraction__Group_6__0 )?
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA59_0==71) ) {
-                alt59=1;
+            if ( (LA60_0==73) ) {
+                alt60=1;
             }
-            switch (alt59) {
+            switch (alt60) {
                 case 1 :
-                    // InternalBomi.g:6045:3: rule__BORoleInteraction__Group_6__0
+                    // InternalBomi.g:6088:3: rule__BORoleInteraction__Group_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BORoleInteraction__Group_6__0();
@@ -18712,14 +18879,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__7"
-    // InternalBomi.g:6053:1: rule__BORoleInteraction__Group__7 : rule__BORoleInteraction__Group__7__Impl rule__BORoleInteraction__Group__8 ;
+    // InternalBomi.g:6096:1: rule__BORoleInteraction__Group__7 : rule__BORoleInteraction__Group__7__Impl rule__BORoleInteraction__Group__8 ;
     public final void rule__BORoleInteraction__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6057:1: ( rule__BORoleInteraction__Group__7__Impl rule__BORoleInteraction__Group__8 )
-            // InternalBomi.g:6058:2: rule__BORoleInteraction__Group__7__Impl rule__BORoleInteraction__Group__8
+            // InternalBomi.g:6100:1: ( rule__BORoleInteraction__Group__7__Impl rule__BORoleInteraction__Group__8 )
+            // InternalBomi.g:6101:2: rule__BORoleInteraction__Group__7__Impl rule__BORoleInteraction__Group__8
             {
             pushFollow(FOLLOW_30);
             rule__BORoleInteraction__Group__7__Impl();
@@ -18750,29 +18917,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__7__Impl"
-    // InternalBomi.g:6065:1: rule__BORoleInteraction__Group__7__Impl : ( ( rule__BORoleInteraction__Group_7__0 )? ) ;
+    // InternalBomi.g:6108:1: rule__BORoleInteraction__Group__7__Impl : ( ( rule__BORoleInteraction__Group_7__0 )? ) ;
     public final void rule__BORoleInteraction__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6069:1: ( ( ( rule__BORoleInteraction__Group_7__0 )? ) )
-            // InternalBomi.g:6070:1: ( ( rule__BORoleInteraction__Group_7__0 )? )
+            // InternalBomi.g:6112:1: ( ( ( rule__BORoleInteraction__Group_7__0 )? ) )
+            // InternalBomi.g:6113:1: ( ( rule__BORoleInteraction__Group_7__0 )? )
             {
-            // InternalBomi.g:6070:1: ( ( rule__BORoleInteraction__Group_7__0 )? )
-            // InternalBomi.g:6071:2: ( rule__BORoleInteraction__Group_7__0 )?
+            // InternalBomi.g:6113:1: ( ( rule__BORoleInteraction__Group_7__0 )? )
+            // InternalBomi.g:6114:2: ( rule__BORoleInteraction__Group_7__0 )?
             {
              before(grammarAccess.getBORoleInteractionAccess().getGroup_7()); 
-            // InternalBomi.g:6072:2: ( rule__BORoleInteraction__Group_7__0 )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            // InternalBomi.g:6115:2: ( rule__BORoleInteraction__Group_7__0 )?
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( (LA60_0==72) ) {
-                alt60=1;
+            if ( (LA61_0==74) ) {
+                alt61=1;
             }
-            switch (alt60) {
+            switch (alt61) {
                 case 1 :
-                    // InternalBomi.g:6072:3: rule__BORoleInteraction__Group_7__0
+                    // InternalBomi.g:6115:3: rule__BORoleInteraction__Group_7__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BORoleInteraction__Group_7__0();
@@ -18808,14 +18975,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__8"
-    // InternalBomi.g:6080:1: rule__BORoleInteraction__Group__8 : rule__BORoleInteraction__Group__8__Impl rule__BORoleInteraction__Group__9 ;
+    // InternalBomi.g:6123:1: rule__BORoleInteraction__Group__8 : rule__BORoleInteraction__Group__8__Impl rule__BORoleInteraction__Group__9 ;
     public final void rule__BORoleInteraction__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6084:1: ( rule__BORoleInteraction__Group__8__Impl rule__BORoleInteraction__Group__9 )
-            // InternalBomi.g:6085:2: rule__BORoleInteraction__Group__8__Impl rule__BORoleInteraction__Group__9
+            // InternalBomi.g:6127:1: ( rule__BORoleInteraction__Group__8__Impl rule__BORoleInteraction__Group__9 )
+            // InternalBomi.g:6128:2: rule__BORoleInteraction__Group__8__Impl rule__BORoleInteraction__Group__9
             {
             pushFollow(FOLLOW_30);
             rule__BORoleInteraction__Group__8__Impl();
@@ -18846,29 +19013,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__8__Impl"
-    // InternalBomi.g:6092:1: rule__BORoleInteraction__Group__8__Impl : ( ( rule__BORoleInteraction__Group_8__0 )? ) ;
+    // InternalBomi.g:6135:1: rule__BORoleInteraction__Group__8__Impl : ( ( rule__BORoleInteraction__Group_8__0 )? ) ;
     public final void rule__BORoleInteraction__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6096:1: ( ( ( rule__BORoleInteraction__Group_8__0 )? ) )
-            // InternalBomi.g:6097:1: ( ( rule__BORoleInteraction__Group_8__0 )? )
+            // InternalBomi.g:6139:1: ( ( ( rule__BORoleInteraction__Group_8__0 )? ) )
+            // InternalBomi.g:6140:1: ( ( rule__BORoleInteraction__Group_8__0 )? )
             {
-            // InternalBomi.g:6097:1: ( ( rule__BORoleInteraction__Group_8__0 )? )
-            // InternalBomi.g:6098:2: ( rule__BORoleInteraction__Group_8__0 )?
+            // InternalBomi.g:6140:1: ( ( rule__BORoleInteraction__Group_8__0 )? )
+            // InternalBomi.g:6141:2: ( rule__BORoleInteraction__Group_8__0 )?
             {
              before(grammarAccess.getBORoleInteractionAccess().getGroup_8()); 
-            // InternalBomi.g:6099:2: ( rule__BORoleInteraction__Group_8__0 )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            // InternalBomi.g:6142:2: ( rule__BORoleInteraction__Group_8__0 )?
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( (LA61_0==73) ) {
-                alt61=1;
+            if ( (LA62_0==75) ) {
+                alt62=1;
             }
-            switch (alt61) {
+            switch (alt62) {
                 case 1 :
-                    // InternalBomi.g:6099:3: rule__BORoleInteraction__Group_8__0
+                    // InternalBomi.g:6142:3: rule__BORoleInteraction__Group_8__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BORoleInteraction__Group_8__0();
@@ -18904,14 +19071,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__9"
-    // InternalBomi.g:6107:1: rule__BORoleInteraction__Group__9 : rule__BORoleInteraction__Group__9__Impl rule__BORoleInteraction__Group__10 ;
+    // InternalBomi.g:6150:1: rule__BORoleInteraction__Group__9 : rule__BORoleInteraction__Group__9__Impl rule__BORoleInteraction__Group__10 ;
     public final void rule__BORoleInteraction__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6111:1: ( rule__BORoleInteraction__Group__9__Impl rule__BORoleInteraction__Group__10 )
-            // InternalBomi.g:6112:2: rule__BORoleInteraction__Group__9__Impl rule__BORoleInteraction__Group__10
+            // InternalBomi.g:6154:1: ( rule__BORoleInteraction__Group__9__Impl rule__BORoleInteraction__Group__10 )
+            // InternalBomi.g:6155:2: rule__BORoleInteraction__Group__9__Impl rule__BORoleInteraction__Group__10
             {
             pushFollow(FOLLOW_30);
             rule__BORoleInteraction__Group__9__Impl();
@@ -18942,29 +19109,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__9__Impl"
-    // InternalBomi.g:6119:1: rule__BORoleInteraction__Group__9__Impl : ( ( rule__BORoleInteraction__Group_9__0 )? ) ;
+    // InternalBomi.g:6162:1: rule__BORoleInteraction__Group__9__Impl : ( ( rule__BORoleInteraction__Group_9__0 )? ) ;
     public final void rule__BORoleInteraction__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6123:1: ( ( ( rule__BORoleInteraction__Group_9__0 )? ) )
-            // InternalBomi.g:6124:1: ( ( rule__BORoleInteraction__Group_9__0 )? )
+            // InternalBomi.g:6166:1: ( ( ( rule__BORoleInteraction__Group_9__0 )? ) )
+            // InternalBomi.g:6167:1: ( ( rule__BORoleInteraction__Group_9__0 )? )
             {
-            // InternalBomi.g:6124:1: ( ( rule__BORoleInteraction__Group_9__0 )? )
-            // InternalBomi.g:6125:2: ( rule__BORoleInteraction__Group_9__0 )?
+            // InternalBomi.g:6167:1: ( ( rule__BORoleInteraction__Group_9__0 )? )
+            // InternalBomi.g:6168:2: ( rule__BORoleInteraction__Group_9__0 )?
             {
              before(grammarAccess.getBORoleInteractionAccess().getGroup_9()); 
-            // InternalBomi.g:6126:2: ( rule__BORoleInteraction__Group_9__0 )?
-            int alt62=2;
-            int LA62_0 = input.LA(1);
+            // InternalBomi.g:6169:2: ( rule__BORoleInteraction__Group_9__0 )?
+            int alt63=2;
+            int LA63_0 = input.LA(1);
 
-            if ( (LA62_0==33) ) {
-                alt62=1;
+            if ( (LA63_0==77) ) {
+                alt63=1;
             }
-            switch (alt62) {
+            switch (alt63) {
                 case 1 :
-                    // InternalBomi.g:6126:3: rule__BORoleInteraction__Group_9__0
+                    // InternalBomi.g:6169:3: rule__BORoleInteraction__Group_9__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BORoleInteraction__Group_9__0();
@@ -19000,14 +19167,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__10"
-    // InternalBomi.g:6134:1: rule__BORoleInteraction__Group__10 : rule__BORoleInteraction__Group__10__Impl rule__BORoleInteraction__Group__11 ;
+    // InternalBomi.g:6177:1: rule__BORoleInteraction__Group__10 : rule__BORoleInteraction__Group__10__Impl rule__BORoleInteraction__Group__11 ;
     public final void rule__BORoleInteraction__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6138:1: ( rule__BORoleInteraction__Group__10__Impl rule__BORoleInteraction__Group__11 )
-            // InternalBomi.g:6139:2: rule__BORoleInteraction__Group__10__Impl rule__BORoleInteraction__Group__11
+            // InternalBomi.g:6181:1: ( rule__BORoleInteraction__Group__10__Impl rule__BORoleInteraction__Group__11 )
+            // InternalBomi.g:6182:2: rule__BORoleInteraction__Group__10__Impl rule__BORoleInteraction__Group__11
             {
             pushFollow(FOLLOW_30);
             rule__BORoleInteraction__Group__10__Impl();
@@ -19038,29 +19205,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__10__Impl"
-    // InternalBomi.g:6146:1: rule__BORoleInteraction__Group__10__Impl : ( ( rule__BORoleInteraction__Group_10__0 )? ) ;
+    // InternalBomi.g:6189:1: rule__BORoleInteraction__Group__10__Impl : ( ( rule__BORoleInteraction__Group_10__0 )? ) ;
     public final void rule__BORoleInteraction__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6150:1: ( ( ( rule__BORoleInteraction__Group_10__0 )? ) )
-            // InternalBomi.g:6151:1: ( ( rule__BORoleInteraction__Group_10__0 )? )
+            // InternalBomi.g:6193:1: ( ( ( rule__BORoleInteraction__Group_10__0 )? ) )
+            // InternalBomi.g:6194:1: ( ( rule__BORoleInteraction__Group_10__0 )? )
             {
-            // InternalBomi.g:6151:1: ( ( rule__BORoleInteraction__Group_10__0 )? )
-            // InternalBomi.g:6152:2: ( rule__BORoleInteraction__Group_10__0 )?
+            // InternalBomi.g:6194:1: ( ( rule__BORoleInteraction__Group_10__0 )? )
+            // InternalBomi.g:6195:2: ( rule__BORoleInteraction__Group_10__0 )?
             {
              before(grammarAccess.getBORoleInteractionAccess().getGroup_10()); 
-            // InternalBomi.g:6153:2: ( rule__BORoleInteraction__Group_10__0 )?
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            // InternalBomi.g:6196:2: ( rule__BORoleInteraction__Group_10__0 )?
+            int alt64=2;
+            int LA64_0 = input.LA(1);
 
-            if ( (LA63_0==39) ) {
-                alt63=1;
+            if ( (LA64_0==78) ) {
+                alt64=1;
             }
-            switch (alt63) {
+            switch (alt64) {
                 case 1 :
-                    // InternalBomi.g:6153:3: rule__BORoleInteraction__Group_10__0
+                    // InternalBomi.g:6196:3: rule__BORoleInteraction__Group_10__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BORoleInteraction__Group_10__0();
@@ -19096,17 +19263,22 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__11"
-    // InternalBomi.g:6161:1: rule__BORoleInteraction__Group__11 : rule__BORoleInteraction__Group__11__Impl ;
+    // InternalBomi.g:6204:1: rule__BORoleInteraction__Group__11 : rule__BORoleInteraction__Group__11__Impl rule__BORoleInteraction__Group__12 ;
     public final void rule__BORoleInteraction__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6165:1: ( rule__BORoleInteraction__Group__11__Impl )
-            // InternalBomi.g:6166:2: rule__BORoleInteraction__Group__11__Impl
+            // InternalBomi.g:6208:1: ( rule__BORoleInteraction__Group__11__Impl rule__BORoleInteraction__Group__12 )
+            // InternalBomi.g:6209:2: rule__BORoleInteraction__Group__11__Impl rule__BORoleInteraction__Group__12
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_30);
             rule__BORoleInteraction__Group__11__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group__12();
 
             state._fsp--;
 
@@ -19129,21 +19301,42 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group__11__Impl"
-    // InternalBomi.g:6172:1: rule__BORoleInteraction__Group__11__Impl : ( '}' ) ;
+    // InternalBomi.g:6216:1: rule__BORoleInteraction__Group__11__Impl : ( ( rule__BORoleInteraction__Group_11__0 )? ) ;
     public final void rule__BORoleInteraction__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6176:1: ( ( '}' ) )
-            // InternalBomi.g:6177:1: ( '}' )
+            // InternalBomi.g:6220:1: ( ( ( rule__BORoleInteraction__Group_11__0 )? ) )
+            // InternalBomi.g:6221:1: ( ( rule__BORoleInteraction__Group_11__0 )? )
             {
-            // InternalBomi.g:6177:1: ( '}' )
-            // InternalBomi.g:6178:2: '}'
+            // InternalBomi.g:6221:1: ( ( rule__BORoleInteraction__Group_11__0 )? )
+            // InternalBomi.g:6222:2: ( rule__BORoleInteraction__Group_11__0 )?
             {
-             before(grammarAccess.getBORoleInteractionAccess().getRightCurlyBracketKeyword_11()); 
-            match(input,35,FOLLOW_2); 
-             after(grammarAccess.getBORoleInteractionAccess().getRightCurlyBracketKeyword_11()); 
+             before(grammarAccess.getBORoleInteractionAccess().getGroup_11()); 
+            // InternalBomi.g:6223:2: ( rule__BORoleInteraction__Group_11__0 )?
+            int alt65=2;
+            int LA65_0 = input.LA(1);
+
+            if ( (LA65_0==79) ) {
+                alt65=1;
+            }
+            switch (alt65) {
+                case 1 :
+                    // InternalBomi.g:6223:3: rule__BORoleInteraction__Group_11__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__BORoleInteraction__Group_11__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getGroup_11()); 
 
             }
 
@@ -19165,15 +19358,469 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__BORoleInteraction__Group__11__Impl"
 
 
+    // $ANTLR start "rule__BORoleInteraction__Group__12"
+    // InternalBomi.g:6231:1: rule__BORoleInteraction__Group__12 : rule__BORoleInteraction__Group__12__Impl rule__BORoleInteraction__Group__13 ;
+    public final void rule__BORoleInteraction__Group__12() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6235:1: ( rule__BORoleInteraction__Group__12__Impl rule__BORoleInteraction__Group__13 )
+            // InternalBomi.g:6236:2: rule__BORoleInteraction__Group__12__Impl rule__BORoleInteraction__Group__13
+            {
+            pushFollow(FOLLOW_30);
+            rule__BORoleInteraction__Group__12__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group__13();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group__12"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group__12__Impl"
+    // InternalBomi.g:6243:1: rule__BORoleInteraction__Group__12__Impl : ( ( rule__BORoleInteraction__Group_12__0 )? ) ;
+    public final void rule__BORoleInteraction__Group__12__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6247:1: ( ( ( rule__BORoleInteraction__Group_12__0 )? ) )
+            // InternalBomi.g:6248:1: ( ( rule__BORoleInteraction__Group_12__0 )? )
+            {
+            // InternalBomi.g:6248:1: ( ( rule__BORoleInteraction__Group_12__0 )? )
+            // InternalBomi.g:6249:2: ( rule__BORoleInteraction__Group_12__0 )?
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getGroup_12()); 
+            // InternalBomi.g:6250:2: ( rule__BORoleInteraction__Group_12__0 )?
+            int alt66=2;
+            int LA66_0 = input.LA(1);
+
+            if ( (LA66_0==80) ) {
+                alt66=1;
+            }
+            switch (alt66) {
+                case 1 :
+                    // InternalBomi.g:6250:3: rule__BORoleInteraction__Group_12__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__BORoleInteraction__Group_12__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getGroup_12()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group__12__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group__13"
+    // InternalBomi.g:6258:1: rule__BORoleInteraction__Group__13 : rule__BORoleInteraction__Group__13__Impl rule__BORoleInteraction__Group__14 ;
+    public final void rule__BORoleInteraction__Group__13() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6262:1: ( rule__BORoleInteraction__Group__13__Impl rule__BORoleInteraction__Group__14 )
+            // InternalBomi.g:6263:2: rule__BORoleInteraction__Group__13__Impl rule__BORoleInteraction__Group__14
+            {
+            pushFollow(FOLLOW_30);
+            rule__BORoleInteraction__Group__13__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group__14();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group__13"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group__13__Impl"
+    // InternalBomi.g:6270:1: rule__BORoleInteraction__Group__13__Impl : ( ( rule__BORoleInteraction__Group_13__0 )? ) ;
+    public final void rule__BORoleInteraction__Group__13__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6274:1: ( ( ( rule__BORoleInteraction__Group_13__0 )? ) )
+            // InternalBomi.g:6275:1: ( ( rule__BORoleInteraction__Group_13__0 )? )
+            {
+            // InternalBomi.g:6275:1: ( ( rule__BORoleInteraction__Group_13__0 )? )
+            // InternalBomi.g:6276:2: ( rule__BORoleInteraction__Group_13__0 )?
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getGroup_13()); 
+            // InternalBomi.g:6277:2: ( rule__BORoleInteraction__Group_13__0 )?
+            int alt67=2;
+            int LA67_0 = input.LA(1);
+
+            if ( (LA67_0==81) ) {
+                alt67=1;
+            }
+            switch (alt67) {
+                case 1 :
+                    // InternalBomi.g:6277:3: rule__BORoleInteraction__Group_13__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__BORoleInteraction__Group_13__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getGroup_13()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group__13__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group__14"
+    // InternalBomi.g:6285:1: rule__BORoleInteraction__Group__14 : rule__BORoleInteraction__Group__14__Impl rule__BORoleInteraction__Group__15 ;
+    public final void rule__BORoleInteraction__Group__14() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6289:1: ( rule__BORoleInteraction__Group__14__Impl rule__BORoleInteraction__Group__15 )
+            // InternalBomi.g:6290:2: rule__BORoleInteraction__Group__14__Impl rule__BORoleInteraction__Group__15
+            {
+            pushFollow(FOLLOW_30);
+            rule__BORoleInteraction__Group__14__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group__15();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group__14"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group__14__Impl"
+    // InternalBomi.g:6297:1: rule__BORoleInteraction__Group__14__Impl : ( ( rule__BORoleInteraction__Group_14__0 )? ) ;
+    public final void rule__BORoleInteraction__Group__14__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6301:1: ( ( ( rule__BORoleInteraction__Group_14__0 )? ) )
+            // InternalBomi.g:6302:1: ( ( rule__BORoleInteraction__Group_14__0 )? )
+            {
+            // InternalBomi.g:6302:1: ( ( rule__BORoleInteraction__Group_14__0 )? )
+            // InternalBomi.g:6303:2: ( rule__BORoleInteraction__Group_14__0 )?
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getGroup_14()); 
+            // InternalBomi.g:6304:2: ( rule__BORoleInteraction__Group_14__0 )?
+            int alt68=2;
+            int LA68_0 = input.LA(1);
+
+            if ( (LA68_0==35) ) {
+                alt68=1;
+            }
+            switch (alt68) {
+                case 1 :
+                    // InternalBomi.g:6304:3: rule__BORoleInteraction__Group_14__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__BORoleInteraction__Group_14__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getGroup_14()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group__14__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group__15"
+    // InternalBomi.g:6312:1: rule__BORoleInteraction__Group__15 : rule__BORoleInteraction__Group__15__Impl rule__BORoleInteraction__Group__16 ;
+    public final void rule__BORoleInteraction__Group__15() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6316:1: ( rule__BORoleInteraction__Group__15__Impl rule__BORoleInteraction__Group__16 )
+            // InternalBomi.g:6317:2: rule__BORoleInteraction__Group__15__Impl rule__BORoleInteraction__Group__16
+            {
+            pushFollow(FOLLOW_30);
+            rule__BORoleInteraction__Group__15__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group__16();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group__15"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group__15__Impl"
+    // InternalBomi.g:6324:1: rule__BORoleInteraction__Group__15__Impl : ( ( rule__BORoleInteraction__Group_15__0 )? ) ;
+    public final void rule__BORoleInteraction__Group__15__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6328:1: ( ( ( rule__BORoleInteraction__Group_15__0 )? ) )
+            // InternalBomi.g:6329:1: ( ( rule__BORoleInteraction__Group_15__0 )? )
+            {
+            // InternalBomi.g:6329:1: ( ( rule__BORoleInteraction__Group_15__0 )? )
+            // InternalBomi.g:6330:2: ( rule__BORoleInteraction__Group_15__0 )?
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getGroup_15()); 
+            // InternalBomi.g:6331:2: ( rule__BORoleInteraction__Group_15__0 )?
+            int alt69=2;
+            int LA69_0 = input.LA(1);
+
+            if ( (LA69_0==41) ) {
+                alt69=1;
+            }
+            switch (alt69) {
+                case 1 :
+                    // InternalBomi.g:6331:3: rule__BORoleInteraction__Group_15__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__BORoleInteraction__Group_15__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getGroup_15()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group__15__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group__16"
+    // InternalBomi.g:6339:1: rule__BORoleInteraction__Group__16 : rule__BORoleInteraction__Group__16__Impl ;
+    public final void rule__BORoleInteraction__Group__16() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6343:1: ( rule__BORoleInteraction__Group__16__Impl )
+            // InternalBomi.g:6344:2: rule__BORoleInteraction__Group__16__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group__16__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group__16"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group__16__Impl"
+    // InternalBomi.g:6350:1: rule__BORoleInteraction__Group__16__Impl : ( '}' ) ;
+    public final void rule__BORoleInteraction__Group__16__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6354:1: ( ( '}' ) )
+            // InternalBomi.g:6355:1: ( '}' )
+            {
+            // InternalBomi.g:6355:1: ( '}' )
+            // InternalBomi.g:6356:2: '}'
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getRightCurlyBracketKeyword_16()); 
+            match(input,37,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getRightCurlyBracketKeyword_16()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group__16__Impl"
+
+
     // $ANTLR start "rule__BORoleInteraction__Group_4__0"
-    // InternalBomi.g:6188:1: rule__BORoleInteraction__Group_4__0 : rule__BORoleInteraction__Group_4__0__Impl rule__BORoleInteraction__Group_4__1 ;
+    // InternalBomi.g:6366:1: rule__BORoleInteraction__Group_4__0 : rule__BORoleInteraction__Group_4__0__Impl rule__BORoleInteraction__Group_4__1 ;
     public final void rule__BORoleInteraction__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6192:1: ( rule__BORoleInteraction__Group_4__0__Impl rule__BORoleInteraction__Group_4__1 )
-            // InternalBomi.g:6193:2: rule__BORoleInteraction__Group_4__0__Impl rule__BORoleInteraction__Group_4__1
+            // InternalBomi.g:6370:1: ( rule__BORoleInteraction__Group_4__0__Impl rule__BORoleInteraction__Group_4__1 )
+            // InternalBomi.g:6371:2: rule__BORoleInteraction__Group_4__0__Impl rule__BORoleInteraction__Group_4__1
             {
             pushFollow(FOLLOW_16);
             rule__BORoleInteraction__Group_4__0__Impl();
@@ -19204,20 +19851,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_4__0__Impl"
-    // InternalBomi.g:6200:1: rule__BORoleInteraction__Group_4__0__Impl : ( 'purpose' ) ;
+    // InternalBomi.g:6378:1: rule__BORoleInteraction__Group_4__0__Impl : ( 'purpose' ) ;
     public final void rule__BORoleInteraction__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6204:1: ( ( 'purpose' ) )
-            // InternalBomi.g:6205:1: ( 'purpose' )
+            // InternalBomi.g:6382:1: ( ( 'purpose' ) )
+            // InternalBomi.g:6383:1: ( 'purpose' )
             {
-            // InternalBomi.g:6205:1: ( 'purpose' )
-            // InternalBomi.g:6206:2: 'purpose'
+            // InternalBomi.g:6383:1: ( 'purpose' )
+            // InternalBomi.g:6384:2: 'purpose'
             {
              before(grammarAccess.getBORoleInteractionAccess().getPurposeKeyword_4_0()); 
-            match(input,43,FOLLOW_2); 
+            match(input,45,FOLLOW_2); 
              after(grammarAccess.getBORoleInteractionAccess().getPurposeKeyword_4_0()); 
 
             }
@@ -19241,14 +19888,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_4__1"
-    // InternalBomi.g:6215:1: rule__BORoleInteraction__Group_4__1 : rule__BORoleInteraction__Group_4__1__Impl ;
+    // InternalBomi.g:6393:1: rule__BORoleInteraction__Group_4__1 : rule__BORoleInteraction__Group_4__1__Impl ;
     public final void rule__BORoleInteraction__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6219:1: ( rule__BORoleInteraction__Group_4__1__Impl )
-            // InternalBomi.g:6220:2: rule__BORoleInteraction__Group_4__1__Impl
+            // InternalBomi.g:6397:1: ( rule__BORoleInteraction__Group_4__1__Impl )
+            // InternalBomi.g:6398:2: rule__BORoleInteraction__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BORoleInteraction__Group_4__1__Impl();
@@ -19274,21 +19921,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_4__1__Impl"
-    // InternalBomi.g:6226:1: rule__BORoleInteraction__Group_4__1__Impl : ( ( rule__BORoleInteraction__PurposeAssignment_4_1 ) ) ;
+    // InternalBomi.g:6404:1: rule__BORoleInteraction__Group_4__1__Impl : ( ( rule__BORoleInteraction__PurposeAssignment_4_1 ) ) ;
     public final void rule__BORoleInteraction__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6230:1: ( ( ( rule__BORoleInteraction__PurposeAssignment_4_1 ) ) )
-            // InternalBomi.g:6231:1: ( ( rule__BORoleInteraction__PurposeAssignment_4_1 ) )
+            // InternalBomi.g:6408:1: ( ( ( rule__BORoleInteraction__PurposeAssignment_4_1 ) ) )
+            // InternalBomi.g:6409:1: ( ( rule__BORoleInteraction__PurposeAssignment_4_1 ) )
             {
-            // InternalBomi.g:6231:1: ( ( rule__BORoleInteraction__PurposeAssignment_4_1 ) )
-            // InternalBomi.g:6232:2: ( rule__BORoleInteraction__PurposeAssignment_4_1 )
+            // InternalBomi.g:6409:1: ( ( rule__BORoleInteraction__PurposeAssignment_4_1 ) )
+            // InternalBomi.g:6410:2: ( rule__BORoleInteraction__PurposeAssignment_4_1 )
             {
              before(grammarAccess.getBORoleInteractionAccess().getPurposeAssignment_4_1()); 
-            // InternalBomi.g:6233:2: ( rule__BORoleInteraction__PurposeAssignment_4_1 )
-            // InternalBomi.g:6233:3: rule__BORoleInteraction__PurposeAssignment_4_1
+            // InternalBomi.g:6411:2: ( rule__BORoleInteraction__PurposeAssignment_4_1 )
+            // InternalBomi.g:6411:3: rule__BORoleInteraction__PurposeAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__BORoleInteraction__PurposeAssignment_4_1();
@@ -19321,14 +19968,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_5__0"
-    // InternalBomi.g:6242:1: rule__BORoleInteraction__Group_5__0 : rule__BORoleInteraction__Group_5__0__Impl rule__BORoleInteraction__Group_5__1 ;
+    // InternalBomi.g:6420:1: rule__BORoleInteraction__Group_5__0 : rule__BORoleInteraction__Group_5__0__Impl rule__BORoleInteraction__Group_5__1 ;
     public final void rule__BORoleInteraction__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6246:1: ( rule__BORoleInteraction__Group_5__0__Impl rule__BORoleInteraction__Group_5__1 )
-            // InternalBomi.g:6247:2: rule__BORoleInteraction__Group_5__0__Impl rule__BORoleInteraction__Group_5__1
+            // InternalBomi.g:6424:1: ( rule__BORoleInteraction__Group_5__0__Impl rule__BORoleInteraction__Group_5__1 )
+            // InternalBomi.g:6425:2: rule__BORoleInteraction__Group_5__0__Impl rule__BORoleInteraction__Group_5__1
             {
             pushFollow(FOLLOW_19);
             rule__BORoleInteraction__Group_5__0__Impl();
@@ -19359,20 +20006,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_5__0__Impl"
-    // InternalBomi.g:6254:1: rule__BORoleInteraction__Group_5__0__Impl : ( 'accessability' ) ;
+    // InternalBomi.g:6432:1: rule__BORoleInteraction__Group_5__0__Impl : ( 'accessability' ) ;
     public final void rule__BORoleInteraction__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6258:1: ( ( 'accessability' ) )
-            // InternalBomi.g:6259:1: ( 'accessability' )
+            // InternalBomi.g:6436:1: ( ( 'accessability' ) )
+            // InternalBomi.g:6437:1: ( 'accessability' )
             {
-            // InternalBomi.g:6259:1: ( 'accessability' )
-            // InternalBomi.g:6260:2: 'accessability'
+            // InternalBomi.g:6437:1: ( 'accessability' )
+            // InternalBomi.g:6438:2: 'accessability'
             {
              before(grammarAccess.getBORoleInteractionAccess().getAccessabilityKeyword_5_0()); 
-            match(input,70,FOLLOW_2); 
+            match(input,72,FOLLOW_2); 
              after(grammarAccess.getBORoleInteractionAccess().getAccessabilityKeyword_5_0()); 
 
             }
@@ -19396,14 +20043,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_5__1"
-    // InternalBomi.g:6269:1: rule__BORoleInteraction__Group_5__1 : rule__BORoleInteraction__Group_5__1__Impl ;
+    // InternalBomi.g:6447:1: rule__BORoleInteraction__Group_5__1 : rule__BORoleInteraction__Group_5__1__Impl ;
     public final void rule__BORoleInteraction__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6273:1: ( rule__BORoleInteraction__Group_5__1__Impl )
-            // InternalBomi.g:6274:2: rule__BORoleInteraction__Group_5__1__Impl
+            // InternalBomi.g:6451:1: ( rule__BORoleInteraction__Group_5__1__Impl )
+            // InternalBomi.g:6452:2: rule__BORoleInteraction__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BORoleInteraction__Group_5__1__Impl();
@@ -19429,21 +20076,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_5__1__Impl"
-    // InternalBomi.g:6280:1: rule__BORoleInteraction__Group_5__1__Impl : ( ( rule__BORoleInteraction__AccessabilityAssignment_5_1 ) ) ;
+    // InternalBomi.g:6458:1: rule__BORoleInteraction__Group_5__1__Impl : ( ( rule__BORoleInteraction__AccessabilityAssignment_5_1 ) ) ;
     public final void rule__BORoleInteraction__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6284:1: ( ( ( rule__BORoleInteraction__AccessabilityAssignment_5_1 ) ) )
-            // InternalBomi.g:6285:1: ( ( rule__BORoleInteraction__AccessabilityAssignment_5_1 ) )
+            // InternalBomi.g:6462:1: ( ( ( rule__BORoleInteraction__AccessabilityAssignment_5_1 ) ) )
+            // InternalBomi.g:6463:1: ( ( rule__BORoleInteraction__AccessabilityAssignment_5_1 ) )
             {
-            // InternalBomi.g:6285:1: ( ( rule__BORoleInteraction__AccessabilityAssignment_5_1 ) )
-            // InternalBomi.g:6286:2: ( rule__BORoleInteraction__AccessabilityAssignment_5_1 )
+            // InternalBomi.g:6463:1: ( ( rule__BORoleInteraction__AccessabilityAssignment_5_1 ) )
+            // InternalBomi.g:6464:2: ( rule__BORoleInteraction__AccessabilityAssignment_5_1 )
             {
              before(grammarAccess.getBORoleInteractionAccess().getAccessabilityAssignment_5_1()); 
-            // InternalBomi.g:6287:2: ( rule__BORoleInteraction__AccessabilityAssignment_5_1 )
-            // InternalBomi.g:6287:3: rule__BORoleInteraction__AccessabilityAssignment_5_1
+            // InternalBomi.g:6465:2: ( rule__BORoleInteraction__AccessabilityAssignment_5_1 )
+            // InternalBomi.g:6465:3: rule__BORoleInteraction__AccessabilityAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__BORoleInteraction__AccessabilityAssignment_5_1();
@@ -19476,14 +20123,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_6__0"
-    // InternalBomi.g:6296:1: rule__BORoleInteraction__Group_6__0 : rule__BORoleInteraction__Group_6__0__Impl rule__BORoleInteraction__Group_6__1 ;
+    // InternalBomi.g:6474:1: rule__BORoleInteraction__Group_6__0 : rule__BORoleInteraction__Group_6__0__Impl rule__BORoleInteraction__Group_6__1 ;
     public final void rule__BORoleInteraction__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6300:1: ( rule__BORoleInteraction__Group_6__0__Impl rule__BORoleInteraction__Group_6__1 )
-            // InternalBomi.g:6301:2: rule__BORoleInteraction__Group_6__0__Impl rule__BORoleInteraction__Group_6__1
+            // InternalBomi.g:6478:1: ( rule__BORoleInteraction__Group_6__0__Impl rule__BORoleInteraction__Group_6__1 )
+            // InternalBomi.g:6479:2: rule__BORoleInteraction__Group_6__0__Impl rule__BORoleInteraction__Group_6__1
             {
             pushFollow(FOLLOW_19);
             rule__BORoleInteraction__Group_6__0__Impl();
@@ -19514,20 +20161,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_6__0__Impl"
-    // InternalBomi.g:6308:1: rule__BORoleInteraction__Group_6__0__Impl : ( 'stability' ) ;
+    // InternalBomi.g:6486:1: rule__BORoleInteraction__Group_6__0__Impl : ( 'stability' ) ;
     public final void rule__BORoleInteraction__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6312:1: ( ( 'stability' ) )
-            // InternalBomi.g:6313:1: ( 'stability' )
+            // InternalBomi.g:6490:1: ( ( 'stability' ) )
+            // InternalBomi.g:6491:1: ( 'stability' )
             {
-            // InternalBomi.g:6313:1: ( 'stability' )
-            // InternalBomi.g:6314:2: 'stability'
+            // InternalBomi.g:6491:1: ( 'stability' )
+            // InternalBomi.g:6492:2: 'stability'
             {
              before(grammarAccess.getBORoleInteractionAccess().getStabilityKeyword_6_0()); 
-            match(input,71,FOLLOW_2); 
+            match(input,73,FOLLOW_2); 
              after(grammarAccess.getBORoleInteractionAccess().getStabilityKeyword_6_0()); 
 
             }
@@ -19551,14 +20198,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_6__1"
-    // InternalBomi.g:6323:1: rule__BORoleInteraction__Group_6__1 : rule__BORoleInteraction__Group_6__1__Impl ;
+    // InternalBomi.g:6501:1: rule__BORoleInteraction__Group_6__1 : rule__BORoleInteraction__Group_6__1__Impl ;
     public final void rule__BORoleInteraction__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6327:1: ( rule__BORoleInteraction__Group_6__1__Impl )
-            // InternalBomi.g:6328:2: rule__BORoleInteraction__Group_6__1__Impl
+            // InternalBomi.g:6505:1: ( rule__BORoleInteraction__Group_6__1__Impl )
+            // InternalBomi.g:6506:2: rule__BORoleInteraction__Group_6__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BORoleInteraction__Group_6__1__Impl();
@@ -19584,21 +20231,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_6__1__Impl"
-    // InternalBomi.g:6334:1: rule__BORoleInteraction__Group_6__1__Impl : ( ( rule__BORoleInteraction__StabilityAssignment_6_1 ) ) ;
+    // InternalBomi.g:6512:1: rule__BORoleInteraction__Group_6__1__Impl : ( ( rule__BORoleInteraction__StabilityAssignment_6_1 ) ) ;
     public final void rule__BORoleInteraction__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6338:1: ( ( ( rule__BORoleInteraction__StabilityAssignment_6_1 ) ) )
-            // InternalBomi.g:6339:1: ( ( rule__BORoleInteraction__StabilityAssignment_6_1 ) )
+            // InternalBomi.g:6516:1: ( ( ( rule__BORoleInteraction__StabilityAssignment_6_1 ) ) )
+            // InternalBomi.g:6517:1: ( ( rule__BORoleInteraction__StabilityAssignment_6_1 ) )
             {
-            // InternalBomi.g:6339:1: ( ( rule__BORoleInteraction__StabilityAssignment_6_1 ) )
-            // InternalBomi.g:6340:2: ( rule__BORoleInteraction__StabilityAssignment_6_1 )
+            // InternalBomi.g:6517:1: ( ( rule__BORoleInteraction__StabilityAssignment_6_1 ) )
+            // InternalBomi.g:6518:2: ( rule__BORoleInteraction__StabilityAssignment_6_1 )
             {
              before(grammarAccess.getBORoleInteractionAccess().getStabilityAssignment_6_1()); 
-            // InternalBomi.g:6341:2: ( rule__BORoleInteraction__StabilityAssignment_6_1 )
-            // InternalBomi.g:6341:3: rule__BORoleInteraction__StabilityAssignment_6_1
+            // InternalBomi.g:6519:2: ( rule__BORoleInteraction__StabilityAssignment_6_1 )
+            // InternalBomi.g:6519:3: rule__BORoleInteraction__StabilityAssignment_6_1
             {
             pushFollow(FOLLOW_2);
             rule__BORoleInteraction__StabilityAssignment_6_1();
@@ -19631,14 +20278,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_7__0"
-    // InternalBomi.g:6350:1: rule__BORoleInteraction__Group_7__0 : rule__BORoleInteraction__Group_7__0__Impl rule__BORoleInteraction__Group_7__1 ;
+    // InternalBomi.g:6528:1: rule__BORoleInteraction__Group_7__0 : rule__BORoleInteraction__Group_7__0__Impl rule__BORoleInteraction__Group_7__1 ;
     public final void rule__BORoleInteraction__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6354:1: ( rule__BORoleInteraction__Group_7__0__Impl rule__BORoleInteraction__Group_7__1 )
-            // InternalBomi.g:6355:2: rule__BORoleInteraction__Group_7__0__Impl rule__BORoleInteraction__Group_7__1
+            // InternalBomi.g:6532:1: ( rule__BORoleInteraction__Group_7__0__Impl rule__BORoleInteraction__Group_7__1 )
+            // InternalBomi.g:6533:2: rule__BORoleInteraction__Group_7__0__Impl rule__BORoleInteraction__Group_7__1
             {
             pushFollow(FOLLOW_19);
             rule__BORoleInteraction__Group_7__0__Impl();
@@ -19669,20 +20316,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_7__0__Impl"
-    // InternalBomi.g:6362:1: rule__BORoleInteraction__Group_7__0__Impl : ( 'criticality' ) ;
+    // InternalBomi.g:6540:1: rule__BORoleInteraction__Group_7__0__Impl : ( 'criticality' ) ;
     public final void rule__BORoleInteraction__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6366:1: ( ( 'criticality' ) )
-            // InternalBomi.g:6367:1: ( 'criticality' )
+            // InternalBomi.g:6544:1: ( ( 'criticality' ) )
+            // InternalBomi.g:6545:1: ( 'criticality' )
             {
-            // InternalBomi.g:6367:1: ( 'criticality' )
-            // InternalBomi.g:6368:2: 'criticality'
+            // InternalBomi.g:6545:1: ( 'criticality' )
+            // InternalBomi.g:6546:2: 'criticality'
             {
              before(grammarAccess.getBORoleInteractionAccess().getCriticalityKeyword_7_0()); 
-            match(input,72,FOLLOW_2); 
+            match(input,74,FOLLOW_2); 
              after(grammarAccess.getBORoleInteractionAccess().getCriticalityKeyword_7_0()); 
 
             }
@@ -19706,14 +20353,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_7__1"
-    // InternalBomi.g:6377:1: rule__BORoleInteraction__Group_7__1 : rule__BORoleInteraction__Group_7__1__Impl ;
+    // InternalBomi.g:6555:1: rule__BORoleInteraction__Group_7__1 : rule__BORoleInteraction__Group_7__1__Impl ;
     public final void rule__BORoleInteraction__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6381:1: ( rule__BORoleInteraction__Group_7__1__Impl )
-            // InternalBomi.g:6382:2: rule__BORoleInteraction__Group_7__1__Impl
+            // InternalBomi.g:6559:1: ( rule__BORoleInteraction__Group_7__1__Impl )
+            // InternalBomi.g:6560:2: rule__BORoleInteraction__Group_7__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BORoleInteraction__Group_7__1__Impl();
@@ -19739,21 +20386,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_7__1__Impl"
-    // InternalBomi.g:6388:1: rule__BORoleInteraction__Group_7__1__Impl : ( ( rule__BORoleInteraction__CriticalityAssignment_7_1 ) ) ;
+    // InternalBomi.g:6566:1: rule__BORoleInteraction__Group_7__1__Impl : ( ( rule__BORoleInteraction__CriticalityAssignment_7_1 ) ) ;
     public final void rule__BORoleInteraction__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6392:1: ( ( ( rule__BORoleInteraction__CriticalityAssignment_7_1 ) ) )
-            // InternalBomi.g:6393:1: ( ( rule__BORoleInteraction__CriticalityAssignment_7_1 ) )
+            // InternalBomi.g:6570:1: ( ( ( rule__BORoleInteraction__CriticalityAssignment_7_1 ) ) )
+            // InternalBomi.g:6571:1: ( ( rule__BORoleInteraction__CriticalityAssignment_7_1 ) )
             {
-            // InternalBomi.g:6393:1: ( ( rule__BORoleInteraction__CriticalityAssignment_7_1 ) )
-            // InternalBomi.g:6394:2: ( rule__BORoleInteraction__CriticalityAssignment_7_1 )
+            // InternalBomi.g:6571:1: ( ( rule__BORoleInteraction__CriticalityAssignment_7_1 ) )
+            // InternalBomi.g:6572:2: ( rule__BORoleInteraction__CriticalityAssignment_7_1 )
             {
              before(grammarAccess.getBORoleInteractionAccess().getCriticalityAssignment_7_1()); 
-            // InternalBomi.g:6395:2: ( rule__BORoleInteraction__CriticalityAssignment_7_1 )
-            // InternalBomi.g:6395:3: rule__BORoleInteraction__CriticalityAssignment_7_1
+            // InternalBomi.g:6573:2: ( rule__BORoleInteraction__CriticalityAssignment_7_1 )
+            // InternalBomi.g:6573:3: rule__BORoleInteraction__CriticalityAssignment_7_1
             {
             pushFollow(FOLLOW_2);
             rule__BORoleInteraction__CriticalityAssignment_7_1();
@@ -19786,14 +20433,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_8__0"
-    // InternalBomi.g:6404:1: rule__BORoleInteraction__Group_8__0 : rule__BORoleInteraction__Group_8__0__Impl rule__BORoleInteraction__Group_8__1 ;
+    // InternalBomi.g:6582:1: rule__BORoleInteraction__Group_8__0 : rule__BORoleInteraction__Group_8__0__Impl rule__BORoleInteraction__Group_8__1 ;
     public final void rule__BORoleInteraction__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6408:1: ( rule__BORoleInteraction__Group_8__0__Impl rule__BORoleInteraction__Group_8__1 )
-            // InternalBomi.g:6409:2: rule__BORoleInteraction__Group_8__0__Impl rule__BORoleInteraction__Group_8__1
+            // InternalBomi.g:6586:1: ( rule__BORoleInteraction__Group_8__0__Impl rule__BORoleInteraction__Group_8__1 )
+            // InternalBomi.g:6587:2: rule__BORoleInteraction__Group_8__0__Impl rule__BORoleInteraction__Group_8__1
             {
             pushFollow(FOLLOW_19);
             rule__BORoleInteraction__Group_8__0__Impl();
@@ -19824,20 +20471,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_8__0__Impl"
-    // InternalBomi.g:6416:1: rule__BORoleInteraction__Group_8__0__Impl : ( 'fitForPurpose' ) ;
+    // InternalBomi.g:6594:1: rule__BORoleInteraction__Group_8__0__Impl : ( 'fitForPurpose' ) ;
     public final void rule__BORoleInteraction__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6420:1: ( ( 'fitForPurpose' ) )
-            // InternalBomi.g:6421:1: ( 'fitForPurpose' )
+            // InternalBomi.g:6598:1: ( ( 'fitForPurpose' ) )
+            // InternalBomi.g:6599:1: ( 'fitForPurpose' )
             {
-            // InternalBomi.g:6421:1: ( 'fitForPurpose' )
-            // InternalBomi.g:6422:2: 'fitForPurpose'
+            // InternalBomi.g:6599:1: ( 'fitForPurpose' )
+            // InternalBomi.g:6600:2: 'fitForPurpose'
             {
              before(grammarAccess.getBORoleInteractionAccess().getFitForPurposeKeyword_8_0()); 
-            match(input,73,FOLLOW_2); 
+            match(input,75,FOLLOW_2); 
              after(grammarAccess.getBORoleInteractionAccess().getFitForPurposeKeyword_8_0()); 
 
             }
@@ -19861,14 +20508,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_8__1"
-    // InternalBomi.g:6431:1: rule__BORoleInteraction__Group_8__1 : rule__BORoleInteraction__Group_8__1__Impl ;
+    // InternalBomi.g:6609:1: rule__BORoleInteraction__Group_8__1 : rule__BORoleInteraction__Group_8__1__Impl ;
     public final void rule__BORoleInteraction__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6435:1: ( rule__BORoleInteraction__Group_8__1__Impl )
-            // InternalBomi.g:6436:2: rule__BORoleInteraction__Group_8__1__Impl
+            // InternalBomi.g:6613:1: ( rule__BORoleInteraction__Group_8__1__Impl )
+            // InternalBomi.g:6614:2: rule__BORoleInteraction__Group_8__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BORoleInteraction__Group_8__1__Impl();
@@ -19894,21 +20541,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_8__1__Impl"
-    // InternalBomi.g:6442:1: rule__BORoleInteraction__Group_8__1__Impl : ( ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 ) ) ;
+    // InternalBomi.g:6620:1: rule__BORoleInteraction__Group_8__1__Impl : ( ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 ) ) ;
     public final void rule__BORoleInteraction__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6446:1: ( ( ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 ) ) )
-            // InternalBomi.g:6447:1: ( ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 ) )
+            // InternalBomi.g:6624:1: ( ( ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 ) ) )
+            // InternalBomi.g:6625:1: ( ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 ) )
             {
-            // InternalBomi.g:6447:1: ( ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 ) )
-            // InternalBomi.g:6448:2: ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 )
+            // InternalBomi.g:6625:1: ( ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 ) )
+            // InternalBomi.g:6626:2: ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 )
             {
              before(grammarAccess.getBORoleInteractionAccess().getFitForPurposeAssignment_8_1()); 
-            // InternalBomi.g:6449:2: ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 )
-            // InternalBomi.g:6449:3: rule__BORoleInteraction__FitForPurposeAssignment_8_1
+            // InternalBomi.g:6627:2: ( rule__BORoleInteraction__FitForPurposeAssignment_8_1 )
+            // InternalBomi.g:6627:3: rule__BORoleInteraction__FitForPurposeAssignment_8_1
             {
             pushFollow(FOLLOW_2);
             rule__BORoleInteraction__FitForPurposeAssignment_8_1();
@@ -19941,16 +20588,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_9__0"
-    // InternalBomi.g:6458:1: rule__BORoleInteraction__Group_9__0 : rule__BORoleInteraction__Group_9__0__Impl rule__BORoleInteraction__Group_9__1 ;
+    // InternalBomi.g:6636:1: rule__BORoleInteraction__Group_9__0 : rule__BORoleInteraction__Group_9__0__Impl rule__BORoleInteraction__Group_9__1 ;
     public final void rule__BORoleInteraction__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6462:1: ( rule__BORoleInteraction__Group_9__0__Impl rule__BORoleInteraction__Group_9__1 )
-            // InternalBomi.g:6463:2: rule__BORoleInteraction__Group_9__0__Impl rule__BORoleInteraction__Group_9__1
+            // InternalBomi.g:6640:1: ( rule__BORoleInteraction__Group_9__0__Impl rule__BORoleInteraction__Group_9__1 )
+            // InternalBomi.g:6641:2: rule__BORoleInteraction__Group_9__0__Impl rule__BORoleInteraction__Group_9__1
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_31);
             rule__BORoleInteraction__Group_9__0__Impl();
 
             state._fsp--;
@@ -19979,21 +20626,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_9__0__Impl"
-    // InternalBomi.g:6470:1: rule__BORoleInteraction__Group_9__0__Impl : ( 'boundaryObjects' ) ;
+    // InternalBomi.g:6648:1: rule__BORoleInteraction__Group_9__0__Impl : ( 'responsible' ) ;
     public final void rule__BORoleInteraction__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6474:1: ( ( 'boundaryObjects' ) )
-            // InternalBomi.g:6475:1: ( 'boundaryObjects' )
+            // InternalBomi.g:6652:1: ( ( 'responsible' ) )
+            // InternalBomi.g:6653:1: ( 'responsible' )
             {
-            // InternalBomi.g:6475:1: ( 'boundaryObjects' )
-            // InternalBomi.g:6476:2: 'boundaryObjects'
+            // InternalBomi.g:6653:1: ( 'responsible' )
+            // InternalBomi.g:6654:2: 'responsible'
             {
-             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsKeyword_9_0()); 
-            match(input,33,FOLLOW_2); 
-             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsKeyword_9_0()); 
+             before(grammarAccess.getBORoleInteractionAccess().getResponsibleKeyword_9_0()); 
+            match(input,77,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getResponsibleKeyword_9_0()); 
 
             }
 
@@ -20016,22 +20663,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_9__1"
-    // InternalBomi.g:6485:1: rule__BORoleInteraction__Group_9__1 : rule__BORoleInteraction__Group_9__1__Impl rule__BORoleInteraction__Group_9__2 ;
+    // InternalBomi.g:6663:1: rule__BORoleInteraction__Group_9__1 : rule__BORoleInteraction__Group_9__1__Impl ;
     public final void rule__BORoleInteraction__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6489:1: ( rule__BORoleInteraction__Group_9__1__Impl rule__BORoleInteraction__Group_9__2 )
-            // InternalBomi.g:6490:2: rule__BORoleInteraction__Group_9__1__Impl rule__BORoleInteraction__Group_9__2
+            // InternalBomi.g:6667:1: ( rule__BORoleInteraction__Group_9__1__Impl )
+            // InternalBomi.g:6668:2: rule__BORoleInteraction__Group_9__1__Impl
             {
-            pushFollow(FOLLOW_16);
-            rule__BORoleInteraction__Group_9__1__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_9__2();
+            rule__BORoleInteraction__Group_9__1__Impl();
 
             state._fsp--;
 
@@ -20054,21 +20696,31 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_9__1__Impl"
-    // InternalBomi.g:6497:1: rule__BORoleInteraction__Group_9__1__Impl : ( '(' ) ;
+    // InternalBomi.g:6674:1: rule__BORoleInteraction__Group_9__1__Impl : ( ( rule__BORoleInteraction__ResponsibleAssignment_9_1 ) ) ;
     public final void rule__BORoleInteraction__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6501:1: ( ( '(' ) )
-            // InternalBomi.g:6502:1: ( '(' )
+            // InternalBomi.g:6678:1: ( ( ( rule__BORoleInteraction__ResponsibleAssignment_9_1 ) ) )
+            // InternalBomi.g:6679:1: ( ( rule__BORoleInteraction__ResponsibleAssignment_9_1 ) )
             {
-            // InternalBomi.g:6502:1: ( '(' )
-            // InternalBomi.g:6503:2: '('
+            // InternalBomi.g:6679:1: ( ( rule__BORoleInteraction__ResponsibleAssignment_9_1 ) )
+            // InternalBomi.g:6680:2: ( rule__BORoleInteraction__ResponsibleAssignment_9_1 )
             {
-             before(grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_9_1()); 
-            match(input,61,FOLLOW_2); 
-             after(grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_9_1()); 
+             before(grammarAccess.getBORoleInteractionAccess().getResponsibleAssignment_9_1()); 
+            // InternalBomi.g:6681:2: ( rule__BORoleInteraction__ResponsibleAssignment_9_1 )
+            // InternalBomi.g:6681:3: rule__BORoleInteraction__ResponsibleAssignment_9_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__ResponsibleAssignment_9_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getResponsibleAssignment_9_1()); 
 
             }
 
@@ -20090,430 +20742,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__BORoleInteraction__Group_9__1__Impl"
 
 
-    // $ANTLR start "rule__BORoleInteraction__Group_9__2"
-    // InternalBomi.g:6512:1: rule__BORoleInteraction__Group_9__2 : rule__BORoleInteraction__Group_9__2__Impl rule__BORoleInteraction__Group_9__3 ;
-    public final void rule__BORoleInteraction__Group_9__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBomi.g:6516:1: ( rule__BORoleInteraction__Group_9__2__Impl rule__BORoleInteraction__Group_9__3 )
-            // InternalBomi.g:6517:2: rule__BORoleInteraction__Group_9__2__Impl rule__BORoleInteraction__Group_9__3
-            {
-            pushFollow(FOLLOW_25);
-            rule__BORoleInteraction__Group_9__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_9__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BORoleInteraction__Group_9__2"
-
-
-    // $ANTLR start "rule__BORoleInteraction__Group_9__2__Impl"
-    // InternalBomi.g:6524:1: rule__BORoleInteraction__Group_9__2__Impl : ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_2 ) ) ;
-    public final void rule__BORoleInteraction__Group_9__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBomi.g:6528:1: ( ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_2 ) ) )
-            // InternalBomi.g:6529:1: ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_2 ) )
-            {
-            // InternalBomi.g:6529:1: ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_2 ) )
-            // InternalBomi.g:6530:2: ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_2 )
-            {
-             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsAssignment_9_2()); 
-            // InternalBomi.g:6531:2: ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_2 )
-            // InternalBomi.g:6531:3: rule__BORoleInteraction__BoundaryObjectsAssignment_9_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__BoundaryObjectsAssignment_9_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsAssignment_9_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BORoleInteraction__Group_9__2__Impl"
-
-
-    // $ANTLR start "rule__BORoleInteraction__Group_9__3"
-    // InternalBomi.g:6539:1: rule__BORoleInteraction__Group_9__3 : rule__BORoleInteraction__Group_9__3__Impl rule__BORoleInteraction__Group_9__4 ;
-    public final void rule__BORoleInteraction__Group_9__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBomi.g:6543:1: ( rule__BORoleInteraction__Group_9__3__Impl rule__BORoleInteraction__Group_9__4 )
-            // InternalBomi.g:6544:2: rule__BORoleInteraction__Group_9__3__Impl rule__BORoleInteraction__Group_9__4
-            {
-            pushFollow(FOLLOW_25);
-            rule__BORoleInteraction__Group_9__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_9__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BORoleInteraction__Group_9__3"
-
-
-    // $ANTLR start "rule__BORoleInteraction__Group_9__3__Impl"
-    // InternalBomi.g:6551:1: rule__BORoleInteraction__Group_9__3__Impl : ( ( rule__BORoleInteraction__Group_9_3__0 )* ) ;
-    public final void rule__BORoleInteraction__Group_9__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBomi.g:6555:1: ( ( ( rule__BORoleInteraction__Group_9_3__0 )* ) )
-            // InternalBomi.g:6556:1: ( ( rule__BORoleInteraction__Group_9_3__0 )* )
-            {
-            // InternalBomi.g:6556:1: ( ( rule__BORoleInteraction__Group_9_3__0 )* )
-            // InternalBomi.g:6557:2: ( rule__BORoleInteraction__Group_9_3__0 )*
-            {
-             before(grammarAccess.getBORoleInteractionAccess().getGroup_9_3()); 
-            // InternalBomi.g:6558:2: ( rule__BORoleInteraction__Group_9_3__0 )*
-            loop64:
-            do {
-                int alt64=2;
-                int LA64_0 = input.LA(1);
-
-                if ( (LA64_0==36) ) {
-                    alt64=1;
-                }
-
-
-                switch (alt64) {
-            	case 1 :
-            	    // InternalBomi.g:6558:3: rule__BORoleInteraction__Group_9_3__0
-            	    {
-            	    pushFollow(FOLLOW_7);
-            	    rule__BORoleInteraction__Group_9_3__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop64;
-                }
-            } while (true);
-
-             after(grammarAccess.getBORoleInteractionAccess().getGroup_9_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BORoleInteraction__Group_9__3__Impl"
-
-
-    // $ANTLR start "rule__BORoleInteraction__Group_9__4"
-    // InternalBomi.g:6566:1: rule__BORoleInteraction__Group_9__4 : rule__BORoleInteraction__Group_9__4__Impl ;
-    public final void rule__BORoleInteraction__Group_9__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBomi.g:6570:1: ( rule__BORoleInteraction__Group_9__4__Impl )
-            // InternalBomi.g:6571:2: rule__BORoleInteraction__Group_9__4__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_9__4__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BORoleInteraction__Group_9__4"
-
-
-    // $ANTLR start "rule__BORoleInteraction__Group_9__4__Impl"
-    // InternalBomi.g:6577:1: rule__BORoleInteraction__Group_9__4__Impl : ( ')' ) ;
-    public final void rule__BORoleInteraction__Group_9__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBomi.g:6581:1: ( ( ')' ) )
-            // InternalBomi.g:6582:1: ( ')' )
-            {
-            // InternalBomi.g:6582:1: ( ')' )
-            // InternalBomi.g:6583:2: ')'
-            {
-             before(grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_9_4()); 
-            match(input,62,FOLLOW_2); 
-             after(grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_9_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BORoleInteraction__Group_9__4__Impl"
-
-
-    // $ANTLR start "rule__BORoleInteraction__Group_9_3__0"
-    // InternalBomi.g:6593:1: rule__BORoleInteraction__Group_9_3__0 : rule__BORoleInteraction__Group_9_3__0__Impl rule__BORoleInteraction__Group_9_3__1 ;
-    public final void rule__BORoleInteraction__Group_9_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBomi.g:6597:1: ( rule__BORoleInteraction__Group_9_3__0__Impl rule__BORoleInteraction__Group_9_3__1 )
-            // InternalBomi.g:6598:2: rule__BORoleInteraction__Group_9_3__0__Impl rule__BORoleInteraction__Group_9_3__1
-            {
-            pushFollow(FOLLOW_16);
-            rule__BORoleInteraction__Group_9_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_9_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BORoleInteraction__Group_9_3__0"
-
-
-    // $ANTLR start "rule__BORoleInteraction__Group_9_3__0__Impl"
-    // InternalBomi.g:6605:1: rule__BORoleInteraction__Group_9_3__0__Impl : ( ',' ) ;
-    public final void rule__BORoleInteraction__Group_9_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBomi.g:6609:1: ( ( ',' ) )
-            // InternalBomi.g:6610:1: ( ',' )
-            {
-            // InternalBomi.g:6610:1: ( ',' )
-            // InternalBomi.g:6611:2: ','
-            {
-             before(grammarAccess.getBORoleInteractionAccess().getCommaKeyword_9_3_0()); 
-            match(input,36,FOLLOW_2); 
-             after(grammarAccess.getBORoleInteractionAccess().getCommaKeyword_9_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BORoleInteraction__Group_9_3__0__Impl"
-
-
-    // $ANTLR start "rule__BORoleInteraction__Group_9_3__1"
-    // InternalBomi.g:6620:1: rule__BORoleInteraction__Group_9_3__1 : rule__BORoleInteraction__Group_9_3__1__Impl ;
-    public final void rule__BORoleInteraction__Group_9_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBomi.g:6624:1: ( rule__BORoleInteraction__Group_9_3__1__Impl )
-            // InternalBomi.g:6625:2: rule__BORoleInteraction__Group_9_3__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_9_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BORoleInteraction__Group_9_3__1"
-
-
-    // $ANTLR start "rule__BORoleInteraction__Group_9_3__1__Impl"
-    // InternalBomi.g:6631:1: rule__BORoleInteraction__Group_9_3__1__Impl : ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1 ) ) ;
-    public final void rule__BORoleInteraction__Group_9_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBomi.g:6635:1: ( ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1 ) ) )
-            // InternalBomi.g:6636:1: ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1 ) )
-            {
-            // InternalBomi.g:6636:1: ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1 ) )
-            // InternalBomi.g:6637:2: ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1 )
-            {
-             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsAssignment_9_3_1()); 
-            // InternalBomi.g:6638:2: ( rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1 )
-            // InternalBomi.g:6638:3: rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsAssignment_9_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BORoleInteraction__Group_9_3__1__Impl"
-
-
     // $ANTLR start "rule__BORoleInteraction__Group_10__0"
-    // InternalBomi.g:6647:1: rule__BORoleInteraction__Group_10__0 : rule__BORoleInteraction__Group_10__0__Impl rule__BORoleInteraction__Group_10__1 ;
+    // InternalBomi.g:6690:1: rule__BORoleInteraction__Group_10__0 : rule__BORoleInteraction__Group_10__0__Impl rule__BORoleInteraction__Group_10__1 ;
     public final void rule__BORoleInteraction__Group_10__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6651:1: ( rule__BORoleInteraction__Group_10__0__Impl rule__BORoleInteraction__Group_10__1 )
-            // InternalBomi.g:6652:2: rule__BORoleInteraction__Group_10__0__Impl rule__BORoleInteraction__Group_10__1
+            // InternalBomi.g:6694:1: ( rule__BORoleInteraction__Group_10__0__Impl rule__BORoleInteraction__Group_10__1 )
+            // InternalBomi.g:6695:2: rule__BORoleInteraction__Group_10__0__Impl rule__BORoleInteraction__Group_10__1
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_31);
             rule__BORoleInteraction__Group_10__0__Impl();
 
             state._fsp--;
@@ -20542,21 +20781,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_10__0__Impl"
-    // InternalBomi.g:6659:1: rule__BORoleInteraction__Group_10__0__Impl : ( 'roles' ) ;
+    // InternalBomi.g:6702:1: rule__BORoleInteraction__Group_10__0__Impl : ( 'creates' ) ;
     public final void rule__BORoleInteraction__Group_10__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6663:1: ( ( 'roles' ) )
-            // InternalBomi.g:6664:1: ( 'roles' )
+            // InternalBomi.g:6706:1: ( ( 'creates' ) )
+            // InternalBomi.g:6707:1: ( 'creates' )
             {
-            // InternalBomi.g:6664:1: ( 'roles' )
-            // InternalBomi.g:6665:2: 'roles'
+            // InternalBomi.g:6707:1: ( 'creates' )
+            // InternalBomi.g:6708:2: 'creates'
             {
-             before(grammarAccess.getBORoleInteractionAccess().getRolesKeyword_10_0()); 
-            match(input,39,FOLLOW_2); 
-             after(grammarAccess.getBORoleInteractionAccess().getRolesKeyword_10_0()); 
+             before(grammarAccess.getBORoleInteractionAccess().getCreatesKeyword_10_0()); 
+            match(input,78,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getCreatesKeyword_10_0()); 
 
             }
 
@@ -20579,22 +20818,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_10__1"
-    // InternalBomi.g:6674:1: rule__BORoleInteraction__Group_10__1 : rule__BORoleInteraction__Group_10__1__Impl rule__BORoleInteraction__Group_10__2 ;
+    // InternalBomi.g:6717:1: rule__BORoleInteraction__Group_10__1 : rule__BORoleInteraction__Group_10__1__Impl ;
     public final void rule__BORoleInteraction__Group_10__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6678:1: ( rule__BORoleInteraction__Group_10__1__Impl rule__BORoleInteraction__Group_10__2 )
-            // InternalBomi.g:6679:2: rule__BORoleInteraction__Group_10__1__Impl rule__BORoleInteraction__Group_10__2
+            // InternalBomi.g:6721:1: ( rule__BORoleInteraction__Group_10__1__Impl )
+            // InternalBomi.g:6722:2: rule__BORoleInteraction__Group_10__1__Impl
             {
-            pushFollow(FOLLOW_16);
-            rule__BORoleInteraction__Group_10__1__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_10__2();
+            rule__BORoleInteraction__Group_10__1__Impl();
 
             state._fsp--;
 
@@ -20617,21 +20851,31 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__Group_10__1__Impl"
-    // InternalBomi.g:6686:1: rule__BORoleInteraction__Group_10__1__Impl : ( '(' ) ;
+    // InternalBomi.g:6728:1: rule__BORoleInteraction__Group_10__1__Impl : ( ( rule__BORoleInteraction__CreatesAssignment_10_1 ) ) ;
     public final void rule__BORoleInteraction__Group_10__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6690:1: ( ( '(' ) )
-            // InternalBomi.g:6691:1: ( '(' )
+            // InternalBomi.g:6732:1: ( ( ( rule__BORoleInteraction__CreatesAssignment_10_1 ) ) )
+            // InternalBomi.g:6733:1: ( ( rule__BORoleInteraction__CreatesAssignment_10_1 ) )
             {
-            // InternalBomi.g:6691:1: ( '(' )
-            // InternalBomi.g:6692:2: '('
+            // InternalBomi.g:6733:1: ( ( rule__BORoleInteraction__CreatesAssignment_10_1 ) )
+            // InternalBomi.g:6734:2: ( rule__BORoleInteraction__CreatesAssignment_10_1 )
             {
-             before(grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_10_1()); 
-            match(input,61,FOLLOW_2); 
-             after(grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_10_1()); 
+             before(grammarAccess.getBORoleInteractionAccess().getCreatesAssignment_10_1()); 
+            // InternalBomi.g:6735:2: ( rule__BORoleInteraction__CreatesAssignment_10_1 )
+            // InternalBomi.g:6735:3: rule__BORoleInteraction__CreatesAssignment_10_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__CreatesAssignment_10_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getCreatesAssignment_10_1()); 
 
             }
 
@@ -20653,23 +20897,638 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__BORoleInteraction__Group_10__1__Impl"
 
 
-    // $ANTLR start "rule__BORoleInteraction__Group_10__2"
-    // InternalBomi.g:6701:1: rule__BORoleInteraction__Group_10__2 : rule__BORoleInteraction__Group_10__2__Impl rule__BORoleInteraction__Group_10__3 ;
-    public final void rule__BORoleInteraction__Group_10__2() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__Group_11__0"
+    // InternalBomi.g:6744:1: rule__BORoleInteraction__Group_11__0 : rule__BORoleInteraction__Group_11__0__Impl rule__BORoleInteraction__Group_11__1 ;
+    public final void rule__BORoleInteraction__Group_11__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6705:1: ( rule__BORoleInteraction__Group_10__2__Impl rule__BORoleInteraction__Group_10__3 )
-            // InternalBomi.g:6706:2: rule__BORoleInteraction__Group_10__2__Impl rule__BORoleInteraction__Group_10__3
+            // InternalBomi.g:6748:1: ( rule__BORoleInteraction__Group_11__0__Impl rule__BORoleInteraction__Group_11__1 )
+            // InternalBomi.g:6749:2: rule__BORoleInteraction__Group_11__0__Impl rule__BORoleInteraction__Group_11__1
+            {
+            pushFollow(FOLLOW_31);
+            rule__BORoleInteraction__Group_11__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_11__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_11__0"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_11__0__Impl"
+    // InternalBomi.g:6756:1: rule__BORoleInteraction__Group_11__0__Impl : ( 'reads' ) ;
+    public final void rule__BORoleInteraction__Group_11__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6760:1: ( ( 'reads' ) )
+            // InternalBomi.g:6761:1: ( 'reads' )
+            {
+            // InternalBomi.g:6761:1: ( 'reads' )
+            // InternalBomi.g:6762:2: 'reads'
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getReadsKeyword_11_0()); 
+            match(input,79,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getReadsKeyword_11_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_11__0__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_11__1"
+    // InternalBomi.g:6771:1: rule__BORoleInteraction__Group_11__1 : rule__BORoleInteraction__Group_11__1__Impl ;
+    public final void rule__BORoleInteraction__Group_11__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6775:1: ( rule__BORoleInteraction__Group_11__1__Impl )
+            // InternalBomi.g:6776:2: rule__BORoleInteraction__Group_11__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_11__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_11__1"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_11__1__Impl"
+    // InternalBomi.g:6782:1: rule__BORoleInteraction__Group_11__1__Impl : ( ( rule__BORoleInteraction__ReadsAssignment_11_1 ) ) ;
+    public final void rule__BORoleInteraction__Group_11__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6786:1: ( ( ( rule__BORoleInteraction__ReadsAssignment_11_1 ) ) )
+            // InternalBomi.g:6787:1: ( ( rule__BORoleInteraction__ReadsAssignment_11_1 ) )
+            {
+            // InternalBomi.g:6787:1: ( ( rule__BORoleInteraction__ReadsAssignment_11_1 ) )
+            // InternalBomi.g:6788:2: ( rule__BORoleInteraction__ReadsAssignment_11_1 )
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getReadsAssignment_11_1()); 
+            // InternalBomi.g:6789:2: ( rule__BORoleInteraction__ReadsAssignment_11_1 )
+            // InternalBomi.g:6789:3: rule__BORoleInteraction__ReadsAssignment_11_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__ReadsAssignment_11_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getReadsAssignment_11_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_11__1__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_12__0"
+    // InternalBomi.g:6798:1: rule__BORoleInteraction__Group_12__0 : rule__BORoleInteraction__Group_12__0__Impl rule__BORoleInteraction__Group_12__1 ;
+    public final void rule__BORoleInteraction__Group_12__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6802:1: ( rule__BORoleInteraction__Group_12__0__Impl rule__BORoleInteraction__Group_12__1 )
+            // InternalBomi.g:6803:2: rule__BORoleInteraction__Group_12__0__Impl rule__BORoleInteraction__Group_12__1
+            {
+            pushFollow(FOLLOW_31);
+            rule__BORoleInteraction__Group_12__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_12__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_12__0"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_12__0__Impl"
+    // InternalBomi.g:6810:1: rule__BORoleInteraction__Group_12__0__Impl : ( 'updates' ) ;
+    public final void rule__BORoleInteraction__Group_12__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6814:1: ( ( 'updates' ) )
+            // InternalBomi.g:6815:1: ( 'updates' )
+            {
+            // InternalBomi.g:6815:1: ( 'updates' )
+            // InternalBomi.g:6816:2: 'updates'
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getUpdatesKeyword_12_0()); 
+            match(input,80,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getUpdatesKeyword_12_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_12__0__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_12__1"
+    // InternalBomi.g:6825:1: rule__BORoleInteraction__Group_12__1 : rule__BORoleInteraction__Group_12__1__Impl ;
+    public final void rule__BORoleInteraction__Group_12__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6829:1: ( rule__BORoleInteraction__Group_12__1__Impl )
+            // InternalBomi.g:6830:2: rule__BORoleInteraction__Group_12__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_12__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_12__1"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_12__1__Impl"
+    // InternalBomi.g:6836:1: rule__BORoleInteraction__Group_12__1__Impl : ( ( rule__BORoleInteraction__UpdatesAssignment_12_1 ) ) ;
+    public final void rule__BORoleInteraction__Group_12__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6840:1: ( ( ( rule__BORoleInteraction__UpdatesAssignment_12_1 ) ) )
+            // InternalBomi.g:6841:1: ( ( rule__BORoleInteraction__UpdatesAssignment_12_1 ) )
+            {
+            // InternalBomi.g:6841:1: ( ( rule__BORoleInteraction__UpdatesAssignment_12_1 ) )
+            // InternalBomi.g:6842:2: ( rule__BORoleInteraction__UpdatesAssignment_12_1 )
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getUpdatesAssignment_12_1()); 
+            // InternalBomi.g:6843:2: ( rule__BORoleInteraction__UpdatesAssignment_12_1 )
+            // InternalBomi.g:6843:3: rule__BORoleInteraction__UpdatesAssignment_12_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__UpdatesAssignment_12_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getUpdatesAssignment_12_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_12__1__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_13__0"
+    // InternalBomi.g:6852:1: rule__BORoleInteraction__Group_13__0 : rule__BORoleInteraction__Group_13__0__Impl rule__BORoleInteraction__Group_13__1 ;
+    public final void rule__BORoleInteraction__Group_13__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6856:1: ( rule__BORoleInteraction__Group_13__0__Impl rule__BORoleInteraction__Group_13__1 )
+            // InternalBomi.g:6857:2: rule__BORoleInteraction__Group_13__0__Impl rule__BORoleInteraction__Group_13__1
+            {
+            pushFollow(FOLLOW_31);
+            rule__BORoleInteraction__Group_13__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_13__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_13__0"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_13__0__Impl"
+    // InternalBomi.g:6864:1: rule__BORoleInteraction__Group_13__0__Impl : ( 'deletes' ) ;
+    public final void rule__BORoleInteraction__Group_13__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6868:1: ( ( 'deletes' ) )
+            // InternalBomi.g:6869:1: ( 'deletes' )
+            {
+            // InternalBomi.g:6869:1: ( 'deletes' )
+            // InternalBomi.g:6870:2: 'deletes'
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getDeletesKeyword_13_0()); 
+            match(input,81,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getDeletesKeyword_13_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_13__0__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_13__1"
+    // InternalBomi.g:6879:1: rule__BORoleInteraction__Group_13__1 : rule__BORoleInteraction__Group_13__1__Impl ;
+    public final void rule__BORoleInteraction__Group_13__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6883:1: ( rule__BORoleInteraction__Group_13__1__Impl )
+            // InternalBomi.g:6884:2: rule__BORoleInteraction__Group_13__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_13__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_13__1"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_13__1__Impl"
+    // InternalBomi.g:6890:1: rule__BORoleInteraction__Group_13__1__Impl : ( ( rule__BORoleInteraction__DeletesAssignment_13_1 ) ) ;
+    public final void rule__BORoleInteraction__Group_13__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6894:1: ( ( ( rule__BORoleInteraction__DeletesAssignment_13_1 ) ) )
+            // InternalBomi.g:6895:1: ( ( rule__BORoleInteraction__DeletesAssignment_13_1 ) )
+            {
+            // InternalBomi.g:6895:1: ( ( rule__BORoleInteraction__DeletesAssignment_13_1 ) )
+            // InternalBomi.g:6896:2: ( rule__BORoleInteraction__DeletesAssignment_13_1 )
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getDeletesAssignment_13_1()); 
+            // InternalBomi.g:6897:2: ( rule__BORoleInteraction__DeletesAssignment_13_1 )
+            // InternalBomi.g:6897:3: rule__BORoleInteraction__DeletesAssignment_13_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__DeletesAssignment_13_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getDeletesAssignment_13_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_13__1__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_14__0"
+    // InternalBomi.g:6906:1: rule__BORoleInteraction__Group_14__0 : rule__BORoleInteraction__Group_14__0__Impl rule__BORoleInteraction__Group_14__1 ;
+    public final void rule__BORoleInteraction__Group_14__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6910:1: ( rule__BORoleInteraction__Group_14__0__Impl rule__BORoleInteraction__Group_14__1 )
+            // InternalBomi.g:6911:2: rule__BORoleInteraction__Group_14__0__Impl rule__BORoleInteraction__Group_14__1
+            {
+            pushFollow(FOLLOW_24);
+            rule__BORoleInteraction__Group_14__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_14__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_14__0"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_14__0__Impl"
+    // InternalBomi.g:6918:1: rule__BORoleInteraction__Group_14__0__Impl : ( 'boundaryObjects' ) ;
+    public final void rule__BORoleInteraction__Group_14__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6922:1: ( ( 'boundaryObjects' ) )
+            // InternalBomi.g:6923:1: ( 'boundaryObjects' )
+            {
+            // InternalBomi.g:6923:1: ( 'boundaryObjects' )
+            // InternalBomi.g:6924:2: 'boundaryObjects'
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsKeyword_14_0()); 
+            match(input,35,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsKeyword_14_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_14__0__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_14__1"
+    // InternalBomi.g:6933:1: rule__BORoleInteraction__Group_14__1 : rule__BORoleInteraction__Group_14__1__Impl rule__BORoleInteraction__Group_14__2 ;
+    public final void rule__BORoleInteraction__Group_14__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6937:1: ( rule__BORoleInteraction__Group_14__1__Impl rule__BORoleInteraction__Group_14__2 )
+            // InternalBomi.g:6938:2: rule__BORoleInteraction__Group_14__1__Impl rule__BORoleInteraction__Group_14__2
+            {
+            pushFollow(FOLLOW_16);
+            rule__BORoleInteraction__Group_14__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_14__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_14__1"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_14__1__Impl"
+    // InternalBomi.g:6945:1: rule__BORoleInteraction__Group_14__1__Impl : ( '(' ) ;
+    public final void rule__BORoleInteraction__Group_14__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6949:1: ( ( '(' ) )
+            // InternalBomi.g:6950:1: ( '(' )
+            {
+            // InternalBomi.g:6950:1: ( '(' )
+            // InternalBomi.g:6951:2: '('
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_14_1()); 
+            match(input,63,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_14_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_14__1__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_14__2"
+    // InternalBomi.g:6960:1: rule__BORoleInteraction__Group_14__2 : rule__BORoleInteraction__Group_14__2__Impl rule__BORoleInteraction__Group_14__3 ;
+    public final void rule__BORoleInteraction__Group_14__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:6964:1: ( rule__BORoleInteraction__Group_14__2__Impl rule__BORoleInteraction__Group_14__3 )
+            // InternalBomi.g:6965:2: rule__BORoleInteraction__Group_14__2__Impl rule__BORoleInteraction__Group_14__3
             {
             pushFollow(FOLLOW_25);
-            rule__BORoleInteraction__Group_10__2__Impl();
+            rule__BORoleInteraction__Group_14__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_10__3();
+            rule__BORoleInteraction__Group_14__3();
 
             state._fsp--;
 
@@ -20688,35 +21547,35 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__Group_10__2"
+    // $ANTLR end "rule__BORoleInteraction__Group_14__2"
 
 
-    // $ANTLR start "rule__BORoleInteraction__Group_10__2__Impl"
-    // InternalBomi.g:6713:1: rule__BORoleInteraction__Group_10__2__Impl : ( ( rule__BORoleInteraction__RolesAssignment_10_2 ) ) ;
-    public final void rule__BORoleInteraction__Group_10__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__Group_14__2__Impl"
+    // InternalBomi.g:6972:1: rule__BORoleInteraction__Group_14__2__Impl : ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_2 ) ) ;
+    public final void rule__BORoleInteraction__Group_14__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6717:1: ( ( ( rule__BORoleInteraction__RolesAssignment_10_2 ) ) )
-            // InternalBomi.g:6718:1: ( ( rule__BORoleInteraction__RolesAssignment_10_2 ) )
+            // InternalBomi.g:6976:1: ( ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_2 ) ) )
+            // InternalBomi.g:6977:1: ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_2 ) )
             {
-            // InternalBomi.g:6718:1: ( ( rule__BORoleInteraction__RolesAssignment_10_2 ) )
-            // InternalBomi.g:6719:2: ( rule__BORoleInteraction__RolesAssignment_10_2 )
+            // InternalBomi.g:6977:1: ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_2 ) )
+            // InternalBomi.g:6978:2: ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_2 )
             {
-             before(grammarAccess.getBORoleInteractionAccess().getRolesAssignment_10_2()); 
-            // InternalBomi.g:6720:2: ( rule__BORoleInteraction__RolesAssignment_10_2 )
-            // InternalBomi.g:6720:3: rule__BORoleInteraction__RolesAssignment_10_2
+             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsAssignment_14_2()); 
+            // InternalBomi.g:6979:2: ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_2 )
+            // InternalBomi.g:6979:3: rule__BORoleInteraction__BoundaryObjectsAssignment_14_2
             {
             pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__RolesAssignment_10_2();
+            rule__BORoleInteraction__BoundaryObjectsAssignment_14_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getBORoleInteractionAccess().getRolesAssignment_10_2()); 
+             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsAssignment_14_2()); 
 
             }
 
@@ -20735,26 +21594,26 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__Group_10__2__Impl"
+    // $ANTLR end "rule__BORoleInteraction__Group_14__2__Impl"
 
 
-    // $ANTLR start "rule__BORoleInteraction__Group_10__3"
-    // InternalBomi.g:6728:1: rule__BORoleInteraction__Group_10__3 : rule__BORoleInteraction__Group_10__3__Impl rule__BORoleInteraction__Group_10__4 ;
-    public final void rule__BORoleInteraction__Group_10__3() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__Group_14__3"
+    // InternalBomi.g:6987:1: rule__BORoleInteraction__Group_14__3 : rule__BORoleInteraction__Group_14__3__Impl rule__BORoleInteraction__Group_14__4 ;
+    public final void rule__BORoleInteraction__Group_14__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6732:1: ( rule__BORoleInteraction__Group_10__3__Impl rule__BORoleInteraction__Group_10__4 )
-            // InternalBomi.g:6733:2: rule__BORoleInteraction__Group_10__3__Impl rule__BORoleInteraction__Group_10__4
+            // InternalBomi.g:6991:1: ( rule__BORoleInteraction__Group_14__3__Impl rule__BORoleInteraction__Group_14__4 )
+            // InternalBomi.g:6992:2: rule__BORoleInteraction__Group_14__3__Impl rule__BORoleInteraction__Group_14__4
             {
             pushFollow(FOLLOW_25);
-            rule__BORoleInteraction__Group_10__3__Impl();
+            rule__BORoleInteraction__Group_14__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_10__4();
+            rule__BORoleInteraction__Group_14__4();
 
             state._fsp--;
 
@@ -20773,40 +21632,40 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__Group_10__3"
+    // $ANTLR end "rule__BORoleInteraction__Group_14__3"
 
 
-    // $ANTLR start "rule__BORoleInteraction__Group_10__3__Impl"
-    // InternalBomi.g:6740:1: rule__BORoleInteraction__Group_10__3__Impl : ( ( rule__BORoleInteraction__Group_10_3__0 )* ) ;
-    public final void rule__BORoleInteraction__Group_10__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__Group_14__3__Impl"
+    // InternalBomi.g:6999:1: rule__BORoleInteraction__Group_14__3__Impl : ( ( rule__BORoleInteraction__Group_14_3__0 )* ) ;
+    public final void rule__BORoleInteraction__Group_14__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6744:1: ( ( ( rule__BORoleInteraction__Group_10_3__0 )* ) )
-            // InternalBomi.g:6745:1: ( ( rule__BORoleInteraction__Group_10_3__0 )* )
+            // InternalBomi.g:7003:1: ( ( ( rule__BORoleInteraction__Group_14_3__0 )* ) )
+            // InternalBomi.g:7004:1: ( ( rule__BORoleInteraction__Group_14_3__0 )* )
             {
-            // InternalBomi.g:6745:1: ( ( rule__BORoleInteraction__Group_10_3__0 )* )
-            // InternalBomi.g:6746:2: ( rule__BORoleInteraction__Group_10_3__0 )*
+            // InternalBomi.g:7004:1: ( ( rule__BORoleInteraction__Group_14_3__0 )* )
+            // InternalBomi.g:7005:2: ( rule__BORoleInteraction__Group_14_3__0 )*
             {
-             before(grammarAccess.getBORoleInteractionAccess().getGroup_10_3()); 
-            // InternalBomi.g:6747:2: ( rule__BORoleInteraction__Group_10_3__0 )*
-            loop65:
+             before(grammarAccess.getBORoleInteractionAccess().getGroup_14_3()); 
+            // InternalBomi.g:7006:2: ( rule__BORoleInteraction__Group_14_3__0 )*
+            loop70:
             do {
-                int alt65=2;
-                int LA65_0 = input.LA(1);
+                int alt70=2;
+                int LA70_0 = input.LA(1);
 
-                if ( (LA65_0==36) ) {
-                    alt65=1;
+                if ( (LA70_0==38) ) {
+                    alt70=1;
                 }
 
 
-                switch (alt65) {
+                switch (alt70) {
             	case 1 :
-            	    // InternalBomi.g:6747:3: rule__BORoleInteraction__Group_10_3__0
+            	    // InternalBomi.g:7006:3: rule__BORoleInteraction__Group_14_3__0
             	    {
             	    pushFollow(FOLLOW_7);
-            	    rule__BORoleInteraction__Group_10_3__0();
+            	    rule__BORoleInteraction__Group_14_3__0();
 
             	    state._fsp--;
 
@@ -20815,11 +21674,11 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop65;
+            	    break loop70;
                 }
             } while (true);
 
-             after(grammarAccess.getBORoleInteractionAccess().getGroup_10_3()); 
+             after(grammarAccess.getBORoleInteractionAccess().getGroup_14_3()); 
 
             }
 
@@ -20838,21 +21697,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__Group_10__3__Impl"
+    // $ANTLR end "rule__BORoleInteraction__Group_14__3__Impl"
 
 
-    // $ANTLR start "rule__BORoleInteraction__Group_10__4"
-    // InternalBomi.g:6755:1: rule__BORoleInteraction__Group_10__4 : rule__BORoleInteraction__Group_10__4__Impl ;
-    public final void rule__BORoleInteraction__Group_10__4() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__Group_14__4"
+    // InternalBomi.g:7014:1: rule__BORoleInteraction__Group_14__4 : rule__BORoleInteraction__Group_14__4__Impl ;
+    public final void rule__BORoleInteraction__Group_14__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6759:1: ( rule__BORoleInteraction__Group_10__4__Impl )
-            // InternalBomi.g:6760:2: rule__BORoleInteraction__Group_10__4__Impl
+            // InternalBomi.g:7018:1: ( rule__BORoleInteraction__Group_14__4__Impl )
+            // InternalBomi.g:7019:2: rule__BORoleInteraction__Group_14__4__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_10__4__Impl();
+            rule__BORoleInteraction__Group_14__4__Impl();
 
             state._fsp--;
 
@@ -20871,25 +21730,25 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__Group_10__4"
+    // $ANTLR end "rule__BORoleInteraction__Group_14__4"
 
 
-    // $ANTLR start "rule__BORoleInteraction__Group_10__4__Impl"
-    // InternalBomi.g:6766:1: rule__BORoleInteraction__Group_10__4__Impl : ( ')' ) ;
-    public final void rule__BORoleInteraction__Group_10__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__Group_14__4__Impl"
+    // InternalBomi.g:7025:1: rule__BORoleInteraction__Group_14__4__Impl : ( ')' ) ;
+    public final void rule__BORoleInteraction__Group_14__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6770:1: ( ( ')' ) )
-            // InternalBomi.g:6771:1: ( ')' )
+            // InternalBomi.g:7029:1: ( ( ')' ) )
+            // InternalBomi.g:7030:1: ( ')' )
             {
-            // InternalBomi.g:6771:1: ( ')' )
-            // InternalBomi.g:6772:2: ')'
+            // InternalBomi.g:7030:1: ( ')' )
+            // InternalBomi.g:7031:2: ')'
             {
-             before(grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_10_4()); 
-            match(input,62,FOLLOW_2); 
-             after(grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_10_4()); 
+             before(grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_14_4()); 
+            match(input,64,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_14_4()); 
 
             }
 
@@ -20908,26 +21767,26 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__Group_10__4__Impl"
+    // $ANTLR end "rule__BORoleInteraction__Group_14__4__Impl"
 
 
-    // $ANTLR start "rule__BORoleInteraction__Group_10_3__0"
-    // InternalBomi.g:6782:1: rule__BORoleInteraction__Group_10_3__0 : rule__BORoleInteraction__Group_10_3__0__Impl rule__BORoleInteraction__Group_10_3__1 ;
-    public final void rule__BORoleInteraction__Group_10_3__0() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__Group_14_3__0"
+    // InternalBomi.g:7041:1: rule__BORoleInteraction__Group_14_3__0 : rule__BORoleInteraction__Group_14_3__0__Impl rule__BORoleInteraction__Group_14_3__1 ;
+    public final void rule__BORoleInteraction__Group_14_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6786:1: ( rule__BORoleInteraction__Group_10_3__0__Impl rule__BORoleInteraction__Group_10_3__1 )
-            // InternalBomi.g:6787:2: rule__BORoleInteraction__Group_10_3__0__Impl rule__BORoleInteraction__Group_10_3__1
+            // InternalBomi.g:7045:1: ( rule__BORoleInteraction__Group_14_3__0__Impl rule__BORoleInteraction__Group_14_3__1 )
+            // InternalBomi.g:7046:2: rule__BORoleInteraction__Group_14_3__0__Impl rule__BORoleInteraction__Group_14_3__1
             {
             pushFollow(FOLLOW_16);
-            rule__BORoleInteraction__Group_10_3__0__Impl();
+            rule__BORoleInteraction__Group_14_3__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_10_3__1();
+            rule__BORoleInteraction__Group_14_3__1();
 
             state._fsp--;
 
@@ -20946,25 +21805,25 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__Group_10_3__0"
+    // $ANTLR end "rule__BORoleInteraction__Group_14_3__0"
 
 
-    // $ANTLR start "rule__BORoleInteraction__Group_10_3__0__Impl"
-    // InternalBomi.g:6794:1: rule__BORoleInteraction__Group_10_3__0__Impl : ( ',' ) ;
-    public final void rule__BORoleInteraction__Group_10_3__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__Group_14_3__0__Impl"
+    // InternalBomi.g:7053:1: rule__BORoleInteraction__Group_14_3__0__Impl : ( ',' ) ;
+    public final void rule__BORoleInteraction__Group_14_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6798:1: ( ( ',' ) )
-            // InternalBomi.g:6799:1: ( ',' )
+            // InternalBomi.g:7057:1: ( ( ',' ) )
+            // InternalBomi.g:7058:1: ( ',' )
             {
-            // InternalBomi.g:6799:1: ( ',' )
-            // InternalBomi.g:6800:2: ','
+            // InternalBomi.g:7058:1: ( ',' )
+            // InternalBomi.g:7059:2: ','
             {
-             before(grammarAccess.getBORoleInteractionAccess().getCommaKeyword_10_3_0()); 
-            match(input,36,FOLLOW_2); 
-             after(grammarAccess.getBORoleInteractionAccess().getCommaKeyword_10_3_0()); 
+             before(grammarAccess.getBORoleInteractionAccess().getCommaKeyword_14_3_0()); 
+            match(input,38,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getCommaKeyword_14_3_0()); 
 
             }
 
@@ -20983,21 +21842,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__Group_10_3__0__Impl"
+    // $ANTLR end "rule__BORoleInteraction__Group_14_3__0__Impl"
 
 
-    // $ANTLR start "rule__BORoleInteraction__Group_10_3__1"
-    // InternalBomi.g:6809:1: rule__BORoleInteraction__Group_10_3__1 : rule__BORoleInteraction__Group_10_3__1__Impl ;
-    public final void rule__BORoleInteraction__Group_10_3__1() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__Group_14_3__1"
+    // InternalBomi.g:7068:1: rule__BORoleInteraction__Group_14_3__1 : rule__BORoleInteraction__Group_14_3__1__Impl ;
+    public final void rule__BORoleInteraction__Group_14_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6813:1: ( rule__BORoleInteraction__Group_10_3__1__Impl )
-            // InternalBomi.g:6814:2: rule__BORoleInteraction__Group_10_3__1__Impl
+            // InternalBomi.g:7072:1: ( rule__BORoleInteraction__Group_14_3__1__Impl )
+            // InternalBomi.g:7073:2: rule__BORoleInteraction__Group_14_3__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__Group_10_3__1__Impl();
+            rule__BORoleInteraction__Group_14_3__1__Impl();
 
             state._fsp--;
 
@@ -21016,35 +21875,35 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__Group_10_3__1"
+    // $ANTLR end "rule__BORoleInteraction__Group_14_3__1"
 
 
-    // $ANTLR start "rule__BORoleInteraction__Group_10_3__1__Impl"
-    // InternalBomi.g:6820:1: rule__BORoleInteraction__Group_10_3__1__Impl : ( ( rule__BORoleInteraction__RolesAssignment_10_3_1 ) ) ;
-    public final void rule__BORoleInteraction__Group_10_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__Group_14_3__1__Impl"
+    // InternalBomi.g:7079:1: rule__BORoleInteraction__Group_14_3__1__Impl : ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1 ) ) ;
+    public final void rule__BORoleInteraction__Group_14_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6824:1: ( ( ( rule__BORoleInteraction__RolesAssignment_10_3_1 ) ) )
-            // InternalBomi.g:6825:1: ( ( rule__BORoleInteraction__RolesAssignment_10_3_1 ) )
+            // InternalBomi.g:7083:1: ( ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1 ) ) )
+            // InternalBomi.g:7084:1: ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1 ) )
             {
-            // InternalBomi.g:6825:1: ( ( rule__BORoleInteraction__RolesAssignment_10_3_1 ) )
-            // InternalBomi.g:6826:2: ( rule__BORoleInteraction__RolesAssignment_10_3_1 )
+            // InternalBomi.g:7084:1: ( ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1 ) )
+            // InternalBomi.g:7085:2: ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1 )
             {
-             before(grammarAccess.getBORoleInteractionAccess().getRolesAssignment_10_3_1()); 
-            // InternalBomi.g:6827:2: ( rule__BORoleInteraction__RolesAssignment_10_3_1 )
-            // InternalBomi.g:6827:3: rule__BORoleInteraction__RolesAssignment_10_3_1
+             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsAssignment_14_3_1()); 
+            // InternalBomi.g:7086:2: ( rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1 )
+            // InternalBomi.g:7086:3: rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1
             {
             pushFollow(FOLLOW_2);
-            rule__BORoleInteraction__RolesAssignment_10_3_1();
+            rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getBORoleInteractionAccess().getRolesAssignment_10_3_1()); 
+             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsAssignment_14_3_1()); 
 
             }
 
@@ -21063,18 +21922,581 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__Group_10_3__1__Impl"
+    // $ANTLR end "rule__BORoleInteraction__Group_14_3__1__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15__0"
+    // InternalBomi.g:7095:1: rule__BORoleInteraction__Group_15__0 : rule__BORoleInteraction__Group_15__0__Impl rule__BORoleInteraction__Group_15__1 ;
+    public final void rule__BORoleInteraction__Group_15__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7099:1: ( rule__BORoleInteraction__Group_15__0__Impl rule__BORoleInteraction__Group_15__1 )
+            // InternalBomi.g:7100:2: rule__BORoleInteraction__Group_15__0__Impl rule__BORoleInteraction__Group_15__1
+            {
+            pushFollow(FOLLOW_24);
+            rule__BORoleInteraction__Group_15__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_15__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15__0"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15__0__Impl"
+    // InternalBomi.g:7107:1: rule__BORoleInteraction__Group_15__0__Impl : ( 'roles' ) ;
+    public final void rule__BORoleInteraction__Group_15__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7111:1: ( ( 'roles' ) )
+            // InternalBomi.g:7112:1: ( 'roles' )
+            {
+            // InternalBomi.g:7112:1: ( 'roles' )
+            // InternalBomi.g:7113:2: 'roles'
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getRolesKeyword_15_0()); 
+            match(input,41,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getRolesKeyword_15_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15__0__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15__1"
+    // InternalBomi.g:7122:1: rule__BORoleInteraction__Group_15__1 : rule__BORoleInteraction__Group_15__1__Impl rule__BORoleInteraction__Group_15__2 ;
+    public final void rule__BORoleInteraction__Group_15__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7126:1: ( rule__BORoleInteraction__Group_15__1__Impl rule__BORoleInteraction__Group_15__2 )
+            // InternalBomi.g:7127:2: rule__BORoleInteraction__Group_15__1__Impl rule__BORoleInteraction__Group_15__2
+            {
+            pushFollow(FOLLOW_16);
+            rule__BORoleInteraction__Group_15__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_15__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15__1"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15__1__Impl"
+    // InternalBomi.g:7134:1: rule__BORoleInteraction__Group_15__1__Impl : ( '(' ) ;
+    public final void rule__BORoleInteraction__Group_15__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7138:1: ( ( '(' ) )
+            // InternalBomi.g:7139:1: ( '(' )
+            {
+            // InternalBomi.g:7139:1: ( '(' )
+            // InternalBomi.g:7140:2: '('
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_15_1()); 
+            match(input,63,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_15_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15__1__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15__2"
+    // InternalBomi.g:7149:1: rule__BORoleInteraction__Group_15__2 : rule__BORoleInteraction__Group_15__2__Impl rule__BORoleInteraction__Group_15__3 ;
+    public final void rule__BORoleInteraction__Group_15__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7153:1: ( rule__BORoleInteraction__Group_15__2__Impl rule__BORoleInteraction__Group_15__3 )
+            // InternalBomi.g:7154:2: rule__BORoleInteraction__Group_15__2__Impl rule__BORoleInteraction__Group_15__3
+            {
+            pushFollow(FOLLOW_25);
+            rule__BORoleInteraction__Group_15__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_15__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15__2"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15__2__Impl"
+    // InternalBomi.g:7161:1: rule__BORoleInteraction__Group_15__2__Impl : ( ( rule__BORoleInteraction__RolesAssignment_15_2 ) ) ;
+    public final void rule__BORoleInteraction__Group_15__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7165:1: ( ( ( rule__BORoleInteraction__RolesAssignment_15_2 ) ) )
+            // InternalBomi.g:7166:1: ( ( rule__BORoleInteraction__RolesAssignment_15_2 ) )
+            {
+            // InternalBomi.g:7166:1: ( ( rule__BORoleInteraction__RolesAssignment_15_2 ) )
+            // InternalBomi.g:7167:2: ( rule__BORoleInteraction__RolesAssignment_15_2 )
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getRolesAssignment_15_2()); 
+            // InternalBomi.g:7168:2: ( rule__BORoleInteraction__RolesAssignment_15_2 )
+            // InternalBomi.g:7168:3: rule__BORoleInteraction__RolesAssignment_15_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__RolesAssignment_15_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getRolesAssignment_15_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15__2__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15__3"
+    // InternalBomi.g:7176:1: rule__BORoleInteraction__Group_15__3 : rule__BORoleInteraction__Group_15__3__Impl rule__BORoleInteraction__Group_15__4 ;
+    public final void rule__BORoleInteraction__Group_15__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7180:1: ( rule__BORoleInteraction__Group_15__3__Impl rule__BORoleInteraction__Group_15__4 )
+            // InternalBomi.g:7181:2: rule__BORoleInteraction__Group_15__3__Impl rule__BORoleInteraction__Group_15__4
+            {
+            pushFollow(FOLLOW_25);
+            rule__BORoleInteraction__Group_15__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_15__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15__3"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15__3__Impl"
+    // InternalBomi.g:7188:1: rule__BORoleInteraction__Group_15__3__Impl : ( ( rule__BORoleInteraction__Group_15_3__0 )* ) ;
+    public final void rule__BORoleInteraction__Group_15__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7192:1: ( ( ( rule__BORoleInteraction__Group_15_3__0 )* ) )
+            // InternalBomi.g:7193:1: ( ( rule__BORoleInteraction__Group_15_3__0 )* )
+            {
+            // InternalBomi.g:7193:1: ( ( rule__BORoleInteraction__Group_15_3__0 )* )
+            // InternalBomi.g:7194:2: ( rule__BORoleInteraction__Group_15_3__0 )*
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getGroup_15_3()); 
+            // InternalBomi.g:7195:2: ( rule__BORoleInteraction__Group_15_3__0 )*
+            loop71:
+            do {
+                int alt71=2;
+                int LA71_0 = input.LA(1);
+
+                if ( (LA71_0==38) ) {
+                    alt71=1;
+                }
+
+
+                switch (alt71) {
+            	case 1 :
+            	    // InternalBomi.g:7195:3: rule__BORoleInteraction__Group_15_3__0
+            	    {
+            	    pushFollow(FOLLOW_7);
+            	    rule__BORoleInteraction__Group_15_3__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop71;
+                }
+            } while (true);
+
+             after(grammarAccess.getBORoleInteractionAccess().getGroup_15_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15__3__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15__4"
+    // InternalBomi.g:7203:1: rule__BORoleInteraction__Group_15__4 : rule__BORoleInteraction__Group_15__4__Impl ;
+    public final void rule__BORoleInteraction__Group_15__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7207:1: ( rule__BORoleInteraction__Group_15__4__Impl )
+            // InternalBomi.g:7208:2: rule__BORoleInteraction__Group_15__4__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_15__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15__4"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15__4__Impl"
+    // InternalBomi.g:7214:1: rule__BORoleInteraction__Group_15__4__Impl : ( ')' ) ;
+    public final void rule__BORoleInteraction__Group_15__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7218:1: ( ( ')' ) )
+            // InternalBomi.g:7219:1: ( ')' )
+            {
+            // InternalBomi.g:7219:1: ( ')' )
+            // InternalBomi.g:7220:2: ')'
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_15_4()); 
+            match(input,64,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_15_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15__4__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15_3__0"
+    // InternalBomi.g:7230:1: rule__BORoleInteraction__Group_15_3__0 : rule__BORoleInteraction__Group_15_3__0__Impl rule__BORoleInteraction__Group_15_3__1 ;
+    public final void rule__BORoleInteraction__Group_15_3__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7234:1: ( rule__BORoleInteraction__Group_15_3__0__Impl rule__BORoleInteraction__Group_15_3__1 )
+            // InternalBomi.g:7235:2: rule__BORoleInteraction__Group_15_3__0__Impl rule__BORoleInteraction__Group_15_3__1
+            {
+            pushFollow(FOLLOW_16);
+            rule__BORoleInteraction__Group_15_3__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_15_3__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15_3__0"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15_3__0__Impl"
+    // InternalBomi.g:7242:1: rule__BORoleInteraction__Group_15_3__0__Impl : ( ',' ) ;
+    public final void rule__BORoleInteraction__Group_15_3__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7246:1: ( ( ',' ) )
+            // InternalBomi.g:7247:1: ( ',' )
+            {
+            // InternalBomi.g:7247:1: ( ',' )
+            // InternalBomi.g:7248:2: ','
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getCommaKeyword_15_3_0()); 
+            match(input,38,FOLLOW_2); 
+             after(grammarAccess.getBORoleInteractionAccess().getCommaKeyword_15_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15_3__0__Impl"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15_3__1"
+    // InternalBomi.g:7257:1: rule__BORoleInteraction__Group_15_3__1 : rule__BORoleInteraction__Group_15_3__1__Impl ;
+    public final void rule__BORoleInteraction__Group_15_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7261:1: ( rule__BORoleInteraction__Group_15_3__1__Impl )
+            // InternalBomi.g:7262:2: rule__BORoleInteraction__Group_15_3__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__Group_15_3__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15_3__1"
+
+
+    // $ANTLR start "rule__BORoleInteraction__Group_15_3__1__Impl"
+    // InternalBomi.g:7268:1: rule__BORoleInteraction__Group_15_3__1__Impl : ( ( rule__BORoleInteraction__RolesAssignment_15_3_1 ) ) ;
+    public final void rule__BORoleInteraction__Group_15_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:7272:1: ( ( ( rule__BORoleInteraction__RolesAssignment_15_3_1 ) ) )
+            // InternalBomi.g:7273:1: ( ( rule__BORoleInteraction__RolesAssignment_15_3_1 ) )
+            {
+            // InternalBomi.g:7273:1: ( ( rule__BORoleInteraction__RolesAssignment_15_3_1 ) )
+            // InternalBomi.g:7274:2: ( rule__BORoleInteraction__RolesAssignment_15_3_1 )
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getRolesAssignment_15_3_1()); 
+            // InternalBomi.g:7275:2: ( rule__BORoleInteraction__RolesAssignment_15_3_1 )
+            // InternalBomi.g:7275:3: rule__BORoleInteraction__RolesAssignment_15_3_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__BORoleInteraction__RolesAssignment_15_3_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getRolesAssignment_15_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__Group_15_3__1__Impl"
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__0"
-    // InternalBomi.g:6836:1: rule__BOTeamGovernance__Group__0 : rule__BOTeamGovernance__Group__0__Impl rule__BOTeamGovernance__Group__1 ;
+    // InternalBomi.g:7284:1: rule__BOTeamGovernance__Group__0 : rule__BOTeamGovernance__Group__0__Impl rule__BOTeamGovernance__Group__1 ;
     public final void rule__BOTeamGovernance__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6840:1: ( rule__BOTeamGovernance__Group__0__Impl rule__BOTeamGovernance__Group__1 )
-            // InternalBomi.g:6841:2: rule__BOTeamGovernance__Group__0__Impl rule__BOTeamGovernance__Group__1
+            // InternalBomi.g:7288:1: ( rule__BOTeamGovernance__Group__0__Impl rule__BOTeamGovernance__Group__1 )
+            // InternalBomi.g:7289:2: rule__BOTeamGovernance__Group__0__Impl rule__BOTeamGovernance__Group__1
             {
             pushFollow(FOLLOW_15);
             rule__BOTeamGovernance__Group__0__Impl();
@@ -21105,21 +22527,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__0__Impl"
-    // InternalBomi.g:6848:1: rule__BOTeamGovernance__Group__0__Impl : ( () ) ;
+    // InternalBomi.g:7296:1: rule__BOTeamGovernance__Group__0__Impl : ( () ) ;
     public final void rule__BOTeamGovernance__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6852:1: ( ( () ) )
-            // InternalBomi.g:6853:1: ( () )
+            // InternalBomi.g:7300:1: ( ( () ) )
+            // InternalBomi.g:7301:1: ( () )
             {
-            // InternalBomi.g:6853:1: ( () )
-            // InternalBomi.g:6854:2: ()
+            // InternalBomi.g:7301:1: ( () )
+            // InternalBomi.g:7302:2: ()
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getBOTeamGovernanceAction_0()); 
-            // InternalBomi.g:6855:2: ()
-            // InternalBomi.g:6855:3: 
+            // InternalBomi.g:7303:2: ()
+            // InternalBomi.g:7303:3: 
             {
             }
 
@@ -21142,14 +22564,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__1"
-    // InternalBomi.g:6863:1: rule__BOTeamGovernance__Group__1 : rule__BOTeamGovernance__Group__1__Impl rule__BOTeamGovernance__Group__2 ;
+    // InternalBomi.g:7311:1: rule__BOTeamGovernance__Group__1 : rule__BOTeamGovernance__Group__1__Impl rule__BOTeamGovernance__Group__2 ;
     public final void rule__BOTeamGovernance__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6867:1: ( rule__BOTeamGovernance__Group__1__Impl rule__BOTeamGovernance__Group__2 )
-            // InternalBomi.g:6868:2: rule__BOTeamGovernance__Group__1__Impl rule__BOTeamGovernance__Group__2
+            // InternalBomi.g:7315:1: ( rule__BOTeamGovernance__Group__1__Impl rule__BOTeamGovernance__Group__2 )
+            // InternalBomi.g:7316:2: rule__BOTeamGovernance__Group__1__Impl rule__BOTeamGovernance__Group__2
             {
             pushFollow(FOLLOW_16);
             rule__BOTeamGovernance__Group__1__Impl();
@@ -21180,20 +22602,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__1__Impl"
-    // InternalBomi.g:6875:1: rule__BOTeamGovernance__Group__1__Impl : ( 'BOTeamGovernance' ) ;
+    // InternalBomi.g:7323:1: rule__BOTeamGovernance__Group__1__Impl : ( 'BOTeamGovernance' ) ;
     public final void rule__BOTeamGovernance__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6879:1: ( ( 'BOTeamGovernance' ) )
-            // InternalBomi.g:6880:1: ( 'BOTeamGovernance' )
+            // InternalBomi.g:7327:1: ( ( 'BOTeamGovernance' ) )
+            // InternalBomi.g:7328:1: ( 'BOTeamGovernance' )
             {
-            // InternalBomi.g:6880:1: ( 'BOTeamGovernance' )
-            // InternalBomi.g:6881:2: 'BOTeamGovernance'
+            // InternalBomi.g:7328:1: ( 'BOTeamGovernance' )
+            // InternalBomi.g:7329:2: 'BOTeamGovernance'
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getBOTeamGovernanceKeyword_1()); 
-            match(input,75,FOLLOW_2); 
+            match(input,82,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getBOTeamGovernanceKeyword_1()); 
 
             }
@@ -21217,14 +22639,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__2"
-    // InternalBomi.g:6890:1: rule__BOTeamGovernance__Group__2 : rule__BOTeamGovernance__Group__2__Impl rule__BOTeamGovernance__Group__3 ;
+    // InternalBomi.g:7338:1: rule__BOTeamGovernance__Group__2 : rule__BOTeamGovernance__Group__2__Impl rule__BOTeamGovernance__Group__3 ;
     public final void rule__BOTeamGovernance__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6894:1: ( rule__BOTeamGovernance__Group__2__Impl rule__BOTeamGovernance__Group__3 )
-            // InternalBomi.g:6895:2: rule__BOTeamGovernance__Group__2__Impl rule__BOTeamGovernance__Group__3
+            // InternalBomi.g:7342:1: ( rule__BOTeamGovernance__Group__2__Impl rule__BOTeamGovernance__Group__3 )
+            // InternalBomi.g:7343:2: rule__BOTeamGovernance__Group__2__Impl rule__BOTeamGovernance__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__BOTeamGovernance__Group__2__Impl();
@@ -21255,21 +22677,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__2__Impl"
-    // InternalBomi.g:6902:1: rule__BOTeamGovernance__Group__2__Impl : ( ( rule__BOTeamGovernance__NameAssignment_2 ) ) ;
+    // InternalBomi.g:7350:1: rule__BOTeamGovernance__Group__2__Impl : ( ( rule__BOTeamGovernance__NameAssignment_2 ) ) ;
     public final void rule__BOTeamGovernance__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6906:1: ( ( ( rule__BOTeamGovernance__NameAssignment_2 ) ) )
-            // InternalBomi.g:6907:1: ( ( rule__BOTeamGovernance__NameAssignment_2 ) )
+            // InternalBomi.g:7354:1: ( ( ( rule__BOTeamGovernance__NameAssignment_2 ) ) )
+            // InternalBomi.g:7355:1: ( ( rule__BOTeamGovernance__NameAssignment_2 ) )
             {
-            // InternalBomi.g:6907:1: ( ( rule__BOTeamGovernance__NameAssignment_2 ) )
-            // InternalBomi.g:6908:2: ( rule__BOTeamGovernance__NameAssignment_2 )
+            // InternalBomi.g:7355:1: ( ( rule__BOTeamGovernance__NameAssignment_2 ) )
+            // InternalBomi.g:7356:2: ( rule__BOTeamGovernance__NameAssignment_2 )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getNameAssignment_2()); 
-            // InternalBomi.g:6909:2: ( rule__BOTeamGovernance__NameAssignment_2 )
-            // InternalBomi.g:6909:3: rule__BOTeamGovernance__NameAssignment_2
+            // InternalBomi.g:7357:2: ( rule__BOTeamGovernance__NameAssignment_2 )
+            // InternalBomi.g:7357:3: rule__BOTeamGovernance__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__NameAssignment_2();
@@ -21302,16 +22724,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__3"
-    // InternalBomi.g:6917:1: rule__BOTeamGovernance__Group__3 : rule__BOTeamGovernance__Group__3__Impl rule__BOTeamGovernance__Group__4 ;
+    // InternalBomi.g:7365:1: rule__BOTeamGovernance__Group__3 : rule__BOTeamGovernance__Group__3__Impl rule__BOTeamGovernance__Group__4 ;
     public final void rule__BOTeamGovernance__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6921:1: ( rule__BOTeamGovernance__Group__3__Impl rule__BOTeamGovernance__Group__4 )
-            // InternalBomi.g:6922:2: rule__BOTeamGovernance__Group__3__Impl rule__BOTeamGovernance__Group__4
+            // InternalBomi.g:7369:1: ( rule__BOTeamGovernance__Group__3__Impl rule__BOTeamGovernance__Group__4 )
+            // InternalBomi.g:7370:2: rule__BOTeamGovernance__Group__3__Impl rule__BOTeamGovernance__Group__4
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__BOTeamGovernance__Group__3__Impl();
 
             state._fsp--;
@@ -21340,20 +22762,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__3__Impl"
-    // InternalBomi.g:6929:1: rule__BOTeamGovernance__Group__3__Impl : ( '{' ) ;
+    // InternalBomi.g:7377:1: rule__BOTeamGovernance__Group__3__Impl : ( '{' ) ;
     public final void rule__BOTeamGovernance__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6933:1: ( ( '{' ) )
-            // InternalBomi.g:6934:1: ( '{' )
+            // InternalBomi.g:7381:1: ( ( '{' ) )
+            // InternalBomi.g:7382:1: ( '{' )
             {
-            // InternalBomi.g:6934:1: ( '{' )
-            // InternalBomi.g:6935:2: '{'
+            // InternalBomi.g:7382:1: ( '{' )
+            // InternalBomi.g:7383:2: '{'
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,34,FOLLOW_2); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -21377,16 +22799,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__4"
-    // InternalBomi.g:6944:1: rule__BOTeamGovernance__Group__4 : rule__BOTeamGovernance__Group__4__Impl rule__BOTeamGovernance__Group__5 ;
+    // InternalBomi.g:7392:1: rule__BOTeamGovernance__Group__4 : rule__BOTeamGovernance__Group__4__Impl rule__BOTeamGovernance__Group__5 ;
     public final void rule__BOTeamGovernance__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6948:1: ( rule__BOTeamGovernance__Group__4__Impl rule__BOTeamGovernance__Group__5 )
-            // InternalBomi.g:6949:2: rule__BOTeamGovernance__Group__4__Impl rule__BOTeamGovernance__Group__5
+            // InternalBomi.g:7396:1: ( rule__BOTeamGovernance__Group__4__Impl rule__BOTeamGovernance__Group__5 )
+            // InternalBomi.g:7397:2: rule__BOTeamGovernance__Group__4__Impl rule__BOTeamGovernance__Group__5
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__BOTeamGovernance__Group__4__Impl();
 
             state._fsp--;
@@ -21415,29 +22837,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__4__Impl"
-    // InternalBomi.g:6956:1: rule__BOTeamGovernance__Group__4__Impl : ( ( rule__BOTeamGovernance__Group_4__0 )? ) ;
+    // InternalBomi.g:7404:1: rule__BOTeamGovernance__Group__4__Impl : ( ( rule__BOTeamGovernance__Group_4__0 )? ) ;
     public final void rule__BOTeamGovernance__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6960:1: ( ( ( rule__BOTeamGovernance__Group_4__0 )? ) )
-            // InternalBomi.g:6961:1: ( ( rule__BOTeamGovernance__Group_4__0 )? )
+            // InternalBomi.g:7408:1: ( ( ( rule__BOTeamGovernance__Group_4__0 )? ) )
+            // InternalBomi.g:7409:1: ( ( rule__BOTeamGovernance__Group_4__0 )? )
             {
-            // InternalBomi.g:6961:1: ( ( rule__BOTeamGovernance__Group_4__0 )? )
-            // InternalBomi.g:6962:2: ( rule__BOTeamGovernance__Group_4__0 )?
+            // InternalBomi.g:7409:1: ( ( rule__BOTeamGovernance__Group_4__0 )? )
+            // InternalBomi.g:7410:2: ( rule__BOTeamGovernance__Group_4__0 )?
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGroup_4()); 
-            // InternalBomi.g:6963:2: ( rule__BOTeamGovernance__Group_4__0 )?
-            int alt66=2;
-            int LA66_0 = input.LA(1);
+            // InternalBomi.g:7411:2: ( rule__BOTeamGovernance__Group_4__0 )?
+            int alt72=2;
+            int LA72_0 = input.LA(1);
 
-            if ( (LA66_0==43) ) {
-                alt66=1;
+            if ( (LA72_0==45) ) {
+                alt72=1;
             }
-            switch (alt66) {
+            switch (alt72) {
                 case 1 :
-                    // InternalBomi.g:6963:3: rule__BOTeamGovernance__Group_4__0
+                    // InternalBomi.g:7411:3: rule__BOTeamGovernance__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOTeamGovernance__Group_4__0();
@@ -21473,16 +22895,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__5"
-    // InternalBomi.g:6971:1: rule__BOTeamGovernance__Group__5 : rule__BOTeamGovernance__Group__5__Impl rule__BOTeamGovernance__Group__6 ;
+    // InternalBomi.g:7419:1: rule__BOTeamGovernance__Group__5 : rule__BOTeamGovernance__Group__5__Impl rule__BOTeamGovernance__Group__6 ;
     public final void rule__BOTeamGovernance__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6975:1: ( rule__BOTeamGovernance__Group__5__Impl rule__BOTeamGovernance__Group__6 )
-            // InternalBomi.g:6976:2: rule__BOTeamGovernance__Group__5__Impl rule__BOTeamGovernance__Group__6
+            // InternalBomi.g:7423:1: ( rule__BOTeamGovernance__Group__5__Impl rule__BOTeamGovernance__Group__6 )
+            // InternalBomi.g:7424:2: rule__BOTeamGovernance__Group__5__Impl rule__BOTeamGovernance__Group__6
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__BOTeamGovernance__Group__5__Impl();
 
             state._fsp--;
@@ -21511,29 +22933,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__5__Impl"
-    // InternalBomi.g:6983:1: rule__BOTeamGovernance__Group__5__Impl : ( ( rule__BOTeamGovernance__Group_5__0 )? ) ;
+    // InternalBomi.g:7431:1: rule__BOTeamGovernance__Group__5__Impl : ( ( rule__BOTeamGovernance__Group_5__0 )? ) ;
     public final void rule__BOTeamGovernance__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:6987:1: ( ( ( rule__BOTeamGovernance__Group_5__0 )? ) )
-            // InternalBomi.g:6988:1: ( ( rule__BOTeamGovernance__Group_5__0 )? )
+            // InternalBomi.g:7435:1: ( ( ( rule__BOTeamGovernance__Group_5__0 )? ) )
+            // InternalBomi.g:7436:1: ( ( rule__BOTeamGovernance__Group_5__0 )? )
             {
-            // InternalBomi.g:6988:1: ( ( rule__BOTeamGovernance__Group_5__0 )? )
-            // InternalBomi.g:6989:2: ( rule__BOTeamGovernance__Group_5__0 )?
+            // InternalBomi.g:7436:1: ( ( rule__BOTeamGovernance__Group_5__0 )? )
+            // InternalBomi.g:7437:2: ( rule__BOTeamGovernance__Group_5__0 )?
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGroup_5()); 
-            // InternalBomi.g:6990:2: ( rule__BOTeamGovernance__Group_5__0 )?
-            int alt67=2;
-            int LA67_0 = input.LA(1);
+            // InternalBomi.g:7438:2: ( rule__BOTeamGovernance__Group_5__0 )?
+            int alt73=2;
+            int LA73_0 = input.LA(1);
 
-            if ( (LA67_0==76) ) {
-                alt67=1;
+            if ( (LA73_0==83) ) {
+                alt73=1;
             }
-            switch (alt67) {
+            switch (alt73) {
                 case 1 :
-                    // InternalBomi.g:6990:3: rule__BOTeamGovernance__Group_5__0
+                    // InternalBomi.g:7438:3: rule__BOTeamGovernance__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOTeamGovernance__Group_5__0();
@@ -21569,16 +22991,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__6"
-    // InternalBomi.g:6998:1: rule__BOTeamGovernance__Group__6 : rule__BOTeamGovernance__Group__6__Impl rule__BOTeamGovernance__Group__7 ;
+    // InternalBomi.g:7446:1: rule__BOTeamGovernance__Group__6 : rule__BOTeamGovernance__Group__6__Impl rule__BOTeamGovernance__Group__7 ;
     public final void rule__BOTeamGovernance__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7002:1: ( rule__BOTeamGovernance__Group__6__Impl rule__BOTeamGovernance__Group__7 )
-            // InternalBomi.g:7003:2: rule__BOTeamGovernance__Group__6__Impl rule__BOTeamGovernance__Group__7
+            // InternalBomi.g:7450:1: ( rule__BOTeamGovernance__Group__6__Impl rule__BOTeamGovernance__Group__7 )
+            // InternalBomi.g:7451:2: rule__BOTeamGovernance__Group__6__Impl rule__BOTeamGovernance__Group__7
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__BOTeamGovernance__Group__6__Impl();
 
             state._fsp--;
@@ -21607,29 +23029,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__6__Impl"
-    // InternalBomi.g:7010:1: rule__BOTeamGovernance__Group__6__Impl : ( ( rule__BOTeamGovernance__Group_6__0 )? ) ;
+    // InternalBomi.g:7458:1: rule__BOTeamGovernance__Group__6__Impl : ( ( rule__BOTeamGovernance__Group_6__0 )? ) ;
     public final void rule__BOTeamGovernance__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7014:1: ( ( ( rule__BOTeamGovernance__Group_6__0 )? ) )
-            // InternalBomi.g:7015:1: ( ( rule__BOTeamGovernance__Group_6__0 )? )
+            // InternalBomi.g:7462:1: ( ( ( rule__BOTeamGovernance__Group_6__0 )? ) )
+            // InternalBomi.g:7463:1: ( ( rule__BOTeamGovernance__Group_6__0 )? )
             {
-            // InternalBomi.g:7015:1: ( ( rule__BOTeamGovernance__Group_6__0 )? )
-            // InternalBomi.g:7016:2: ( rule__BOTeamGovernance__Group_6__0 )?
+            // InternalBomi.g:7463:1: ( ( rule__BOTeamGovernance__Group_6__0 )? )
+            // InternalBomi.g:7464:2: ( rule__BOTeamGovernance__Group_6__0 )?
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGroup_6()); 
-            // InternalBomi.g:7017:2: ( rule__BOTeamGovernance__Group_6__0 )?
-            int alt68=2;
-            int LA68_0 = input.LA(1);
+            // InternalBomi.g:7465:2: ( rule__BOTeamGovernance__Group_6__0 )?
+            int alt74=2;
+            int LA74_0 = input.LA(1);
 
-            if ( (LA68_0==77) ) {
-                alt68=1;
+            if ( (LA74_0==84) ) {
+                alt74=1;
             }
-            switch (alt68) {
+            switch (alt74) {
                 case 1 :
-                    // InternalBomi.g:7017:3: rule__BOTeamGovernance__Group_6__0
+                    // InternalBomi.g:7465:3: rule__BOTeamGovernance__Group_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOTeamGovernance__Group_6__0();
@@ -21665,16 +23087,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__7"
-    // InternalBomi.g:7025:1: rule__BOTeamGovernance__Group__7 : rule__BOTeamGovernance__Group__7__Impl rule__BOTeamGovernance__Group__8 ;
+    // InternalBomi.g:7473:1: rule__BOTeamGovernance__Group__7 : rule__BOTeamGovernance__Group__7__Impl rule__BOTeamGovernance__Group__8 ;
     public final void rule__BOTeamGovernance__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7029:1: ( rule__BOTeamGovernance__Group__7__Impl rule__BOTeamGovernance__Group__8 )
-            // InternalBomi.g:7030:2: rule__BOTeamGovernance__Group__7__Impl rule__BOTeamGovernance__Group__8
+            // InternalBomi.g:7477:1: ( rule__BOTeamGovernance__Group__7__Impl rule__BOTeamGovernance__Group__8 )
+            // InternalBomi.g:7478:2: rule__BOTeamGovernance__Group__7__Impl rule__BOTeamGovernance__Group__8
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__BOTeamGovernance__Group__7__Impl();
 
             state._fsp--;
@@ -21703,29 +23125,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__7__Impl"
-    // InternalBomi.g:7037:1: rule__BOTeamGovernance__Group__7__Impl : ( ( rule__BOTeamGovernance__Group_7__0 )? ) ;
+    // InternalBomi.g:7485:1: rule__BOTeamGovernance__Group__7__Impl : ( ( rule__BOTeamGovernance__Group_7__0 )? ) ;
     public final void rule__BOTeamGovernance__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7041:1: ( ( ( rule__BOTeamGovernance__Group_7__0 )? ) )
-            // InternalBomi.g:7042:1: ( ( rule__BOTeamGovernance__Group_7__0 )? )
+            // InternalBomi.g:7489:1: ( ( ( rule__BOTeamGovernance__Group_7__0 )? ) )
+            // InternalBomi.g:7490:1: ( ( rule__BOTeamGovernance__Group_7__0 )? )
             {
-            // InternalBomi.g:7042:1: ( ( rule__BOTeamGovernance__Group_7__0 )? )
-            // InternalBomi.g:7043:2: ( rule__BOTeamGovernance__Group_7__0 )?
+            // InternalBomi.g:7490:1: ( ( rule__BOTeamGovernance__Group_7__0 )? )
+            // InternalBomi.g:7491:2: ( rule__BOTeamGovernance__Group_7__0 )?
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGroup_7()); 
-            // InternalBomi.g:7044:2: ( rule__BOTeamGovernance__Group_7__0 )?
-            int alt69=2;
-            int LA69_0 = input.LA(1);
+            // InternalBomi.g:7492:2: ( rule__BOTeamGovernance__Group_7__0 )?
+            int alt75=2;
+            int LA75_0 = input.LA(1);
 
-            if ( (LA69_0==38) ) {
-                alt69=1;
+            if ( (LA75_0==40) ) {
+                alt75=1;
             }
-            switch (alt69) {
+            switch (alt75) {
                 case 1 :
-                    // InternalBomi.g:7044:3: rule__BOTeamGovernance__Group_7__0
+                    // InternalBomi.g:7492:3: rule__BOTeamGovernance__Group_7__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOTeamGovernance__Group_7__0();
@@ -21761,16 +23183,16 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__8"
-    // InternalBomi.g:7052:1: rule__BOTeamGovernance__Group__8 : rule__BOTeamGovernance__Group__8__Impl rule__BOTeamGovernance__Group__9 ;
+    // InternalBomi.g:7500:1: rule__BOTeamGovernance__Group__8 : rule__BOTeamGovernance__Group__8__Impl rule__BOTeamGovernance__Group__9 ;
     public final void rule__BOTeamGovernance__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7056:1: ( rule__BOTeamGovernance__Group__8__Impl rule__BOTeamGovernance__Group__9 )
-            // InternalBomi.g:7057:2: rule__BOTeamGovernance__Group__8__Impl rule__BOTeamGovernance__Group__9
+            // InternalBomi.g:7504:1: ( rule__BOTeamGovernance__Group__8__Impl rule__BOTeamGovernance__Group__9 )
+            // InternalBomi.g:7505:2: rule__BOTeamGovernance__Group__8__Impl rule__BOTeamGovernance__Group__9
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__BOTeamGovernance__Group__8__Impl();
 
             state._fsp--;
@@ -21799,29 +23221,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__8__Impl"
-    // InternalBomi.g:7064:1: rule__BOTeamGovernance__Group__8__Impl : ( ( rule__BOTeamGovernance__Group_8__0 )? ) ;
+    // InternalBomi.g:7512:1: rule__BOTeamGovernance__Group__8__Impl : ( ( rule__BOTeamGovernance__Group_8__0 )? ) ;
     public final void rule__BOTeamGovernance__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7068:1: ( ( ( rule__BOTeamGovernance__Group_8__0 )? ) )
-            // InternalBomi.g:7069:1: ( ( rule__BOTeamGovernance__Group_8__0 )? )
+            // InternalBomi.g:7516:1: ( ( ( rule__BOTeamGovernance__Group_8__0 )? ) )
+            // InternalBomi.g:7517:1: ( ( rule__BOTeamGovernance__Group_8__0 )? )
             {
-            // InternalBomi.g:7069:1: ( ( rule__BOTeamGovernance__Group_8__0 )? )
-            // InternalBomi.g:7070:2: ( rule__BOTeamGovernance__Group_8__0 )?
+            // InternalBomi.g:7517:1: ( ( rule__BOTeamGovernance__Group_8__0 )? )
+            // InternalBomi.g:7518:2: ( rule__BOTeamGovernance__Group_8__0 )?
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGroup_8()); 
-            // InternalBomi.g:7071:2: ( rule__BOTeamGovernance__Group_8__0 )?
-            int alt70=2;
-            int LA70_0 = input.LA(1);
+            // InternalBomi.g:7519:2: ( rule__BOTeamGovernance__Group_8__0 )?
+            int alt76=2;
+            int LA76_0 = input.LA(1);
 
-            if ( (LA70_0==33) ) {
-                alt70=1;
+            if ( (LA76_0==35) ) {
+                alt76=1;
             }
-            switch (alt70) {
+            switch (alt76) {
                 case 1 :
-                    // InternalBomi.g:7071:3: rule__BOTeamGovernance__Group_8__0
+                    // InternalBomi.g:7519:3: rule__BOTeamGovernance__Group_8__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BOTeamGovernance__Group_8__0();
@@ -21857,14 +23279,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__9"
-    // InternalBomi.g:7079:1: rule__BOTeamGovernance__Group__9 : rule__BOTeamGovernance__Group__9__Impl ;
+    // InternalBomi.g:7527:1: rule__BOTeamGovernance__Group__9 : rule__BOTeamGovernance__Group__9__Impl ;
     public final void rule__BOTeamGovernance__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7083:1: ( rule__BOTeamGovernance__Group__9__Impl )
-            // InternalBomi.g:7084:2: rule__BOTeamGovernance__Group__9__Impl
+            // InternalBomi.g:7531:1: ( rule__BOTeamGovernance__Group__9__Impl )
+            // InternalBomi.g:7532:2: rule__BOTeamGovernance__Group__9__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__Group__9__Impl();
@@ -21890,20 +23312,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group__9__Impl"
-    // InternalBomi.g:7090:1: rule__BOTeamGovernance__Group__9__Impl : ( '}' ) ;
+    // InternalBomi.g:7538:1: rule__BOTeamGovernance__Group__9__Impl : ( '}' ) ;
     public final void rule__BOTeamGovernance__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7094:1: ( ( '}' ) )
-            // InternalBomi.g:7095:1: ( '}' )
+            // InternalBomi.g:7542:1: ( ( '}' ) )
+            // InternalBomi.g:7543:1: ( '}' )
             {
-            // InternalBomi.g:7095:1: ( '}' )
-            // InternalBomi.g:7096:2: '}'
+            // InternalBomi.g:7543:1: ( '}' )
+            // InternalBomi.g:7544:2: '}'
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getRightCurlyBracketKeyword_9()); 
-            match(input,35,FOLLOW_2); 
+            match(input,37,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getRightCurlyBracketKeyword_9()); 
 
             }
@@ -21927,14 +23349,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_4__0"
-    // InternalBomi.g:7106:1: rule__BOTeamGovernance__Group_4__0 : rule__BOTeamGovernance__Group_4__0__Impl rule__BOTeamGovernance__Group_4__1 ;
+    // InternalBomi.g:7554:1: rule__BOTeamGovernance__Group_4__0 : rule__BOTeamGovernance__Group_4__0__Impl rule__BOTeamGovernance__Group_4__1 ;
     public final void rule__BOTeamGovernance__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7110:1: ( rule__BOTeamGovernance__Group_4__0__Impl rule__BOTeamGovernance__Group_4__1 )
-            // InternalBomi.g:7111:2: rule__BOTeamGovernance__Group_4__0__Impl rule__BOTeamGovernance__Group_4__1
+            // InternalBomi.g:7558:1: ( rule__BOTeamGovernance__Group_4__0__Impl rule__BOTeamGovernance__Group_4__1 )
+            // InternalBomi.g:7559:2: rule__BOTeamGovernance__Group_4__0__Impl rule__BOTeamGovernance__Group_4__1
             {
             pushFollow(FOLLOW_16);
             rule__BOTeamGovernance__Group_4__0__Impl();
@@ -21965,20 +23387,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_4__0__Impl"
-    // InternalBomi.g:7118:1: rule__BOTeamGovernance__Group_4__0__Impl : ( 'purpose' ) ;
+    // InternalBomi.g:7566:1: rule__BOTeamGovernance__Group_4__0__Impl : ( 'purpose' ) ;
     public final void rule__BOTeamGovernance__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7122:1: ( ( 'purpose' ) )
-            // InternalBomi.g:7123:1: ( 'purpose' )
+            // InternalBomi.g:7570:1: ( ( 'purpose' ) )
+            // InternalBomi.g:7571:1: ( 'purpose' )
             {
-            // InternalBomi.g:7123:1: ( 'purpose' )
-            // InternalBomi.g:7124:2: 'purpose'
+            // InternalBomi.g:7571:1: ( 'purpose' )
+            // InternalBomi.g:7572:2: 'purpose'
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getPurposeKeyword_4_0()); 
-            match(input,43,FOLLOW_2); 
+            match(input,45,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getPurposeKeyword_4_0()); 
 
             }
@@ -22002,14 +23424,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_4__1"
-    // InternalBomi.g:7133:1: rule__BOTeamGovernance__Group_4__1 : rule__BOTeamGovernance__Group_4__1__Impl ;
+    // InternalBomi.g:7581:1: rule__BOTeamGovernance__Group_4__1 : rule__BOTeamGovernance__Group_4__1__Impl ;
     public final void rule__BOTeamGovernance__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7137:1: ( rule__BOTeamGovernance__Group_4__1__Impl )
-            // InternalBomi.g:7138:2: rule__BOTeamGovernance__Group_4__1__Impl
+            // InternalBomi.g:7585:1: ( rule__BOTeamGovernance__Group_4__1__Impl )
+            // InternalBomi.g:7586:2: rule__BOTeamGovernance__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__Group_4__1__Impl();
@@ -22035,21 +23457,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_4__1__Impl"
-    // InternalBomi.g:7144:1: rule__BOTeamGovernance__Group_4__1__Impl : ( ( rule__BOTeamGovernance__PurposeAssignment_4_1 ) ) ;
+    // InternalBomi.g:7592:1: rule__BOTeamGovernance__Group_4__1__Impl : ( ( rule__BOTeamGovernance__PurposeAssignment_4_1 ) ) ;
     public final void rule__BOTeamGovernance__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7148:1: ( ( ( rule__BOTeamGovernance__PurposeAssignment_4_1 ) ) )
-            // InternalBomi.g:7149:1: ( ( rule__BOTeamGovernance__PurposeAssignment_4_1 ) )
+            // InternalBomi.g:7596:1: ( ( ( rule__BOTeamGovernance__PurposeAssignment_4_1 ) ) )
+            // InternalBomi.g:7597:1: ( ( rule__BOTeamGovernance__PurposeAssignment_4_1 ) )
             {
-            // InternalBomi.g:7149:1: ( ( rule__BOTeamGovernance__PurposeAssignment_4_1 ) )
-            // InternalBomi.g:7150:2: ( rule__BOTeamGovernance__PurposeAssignment_4_1 )
+            // InternalBomi.g:7597:1: ( ( rule__BOTeamGovernance__PurposeAssignment_4_1 ) )
+            // InternalBomi.g:7598:2: ( rule__BOTeamGovernance__PurposeAssignment_4_1 )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getPurposeAssignment_4_1()); 
-            // InternalBomi.g:7151:2: ( rule__BOTeamGovernance__PurposeAssignment_4_1 )
-            // InternalBomi.g:7151:3: rule__BOTeamGovernance__PurposeAssignment_4_1
+            // InternalBomi.g:7599:2: ( rule__BOTeamGovernance__PurposeAssignment_4_1 )
+            // InternalBomi.g:7599:3: rule__BOTeamGovernance__PurposeAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__PurposeAssignment_4_1();
@@ -22082,14 +23504,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_5__0"
-    // InternalBomi.g:7160:1: rule__BOTeamGovernance__Group_5__0 : rule__BOTeamGovernance__Group_5__0__Impl rule__BOTeamGovernance__Group_5__1 ;
+    // InternalBomi.g:7608:1: rule__BOTeamGovernance__Group_5__0 : rule__BOTeamGovernance__Group_5__0__Impl rule__BOTeamGovernance__Group_5__1 ;
     public final void rule__BOTeamGovernance__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7164:1: ( rule__BOTeamGovernance__Group_5__0__Impl rule__BOTeamGovernance__Group_5__1 )
-            // InternalBomi.g:7165:2: rule__BOTeamGovernance__Group_5__0__Impl rule__BOTeamGovernance__Group_5__1
+            // InternalBomi.g:7612:1: ( rule__BOTeamGovernance__Group_5__0__Impl rule__BOTeamGovernance__Group_5__1 )
+            // InternalBomi.g:7613:2: rule__BOTeamGovernance__Group_5__0__Impl rule__BOTeamGovernance__Group_5__1
             {
             pushFollow(FOLLOW_16);
             rule__BOTeamGovernance__Group_5__0__Impl();
@@ -22120,20 +23542,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_5__0__Impl"
-    // InternalBomi.g:7172:1: rule__BOTeamGovernance__Group_5__0__Impl : ( 'coordinationMechanism' ) ;
+    // InternalBomi.g:7620:1: rule__BOTeamGovernance__Group_5__0__Impl : ( 'coordinationMechanism' ) ;
     public final void rule__BOTeamGovernance__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7176:1: ( ( 'coordinationMechanism' ) )
-            // InternalBomi.g:7177:1: ( 'coordinationMechanism' )
+            // InternalBomi.g:7624:1: ( ( 'coordinationMechanism' ) )
+            // InternalBomi.g:7625:1: ( 'coordinationMechanism' )
             {
-            // InternalBomi.g:7177:1: ( 'coordinationMechanism' )
-            // InternalBomi.g:7178:2: 'coordinationMechanism'
+            // InternalBomi.g:7625:1: ( 'coordinationMechanism' )
+            // InternalBomi.g:7626:2: 'coordinationMechanism'
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getCoordinationMechanismKeyword_5_0()); 
-            match(input,76,FOLLOW_2); 
+            match(input,83,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getCoordinationMechanismKeyword_5_0()); 
 
             }
@@ -22157,14 +23579,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_5__1"
-    // InternalBomi.g:7187:1: rule__BOTeamGovernance__Group_5__1 : rule__BOTeamGovernance__Group_5__1__Impl ;
+    // InternalBomi.g:7635:1: rule__BOTeamGovernance__Group_5__1 : rule__BOTeamGovernance__Group_5__1__Impl ;
     public final void rule__BOTeamGovernance__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7191:1: ( rule__BOTeamGovernance__Group_5__1__Impl )
-            // InternalBomi.g:7192:2: rule__BOTeamGovernance__Group_5__1__Impl
+            // InternalBomi.g:7639:1: ( rule__BOTeamGovernance__Group_5__1__Impl )
+            // InternalBomi.g:7640:2: rule__BOTeamGovernance__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__Group_5__1__Impl();
@@ -22190,21 +23612,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_5__1__Impl"
-    // InternalBomi.g:7198:1: rule__BOTeamGovernance__Group_5__1__Impl : ( ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 ) ) ;
+    // InternalBomi.g:7646:1: rule__BOTeamGovernance__Group_5__1__Impl : ( ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 ) ) ;
     public final void rule__BOTeamGovernance__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7202:1: ( ( ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 ) ) )
-            // InternalBomi.g:7203:1: ( ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 ) )
+            // InternalBomi.g:7650:1: ( ( ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 ) ) )
+            // InternalBomi.g:7651:1: ( ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 ) )
             {
-            // InternalBomi.g:7203:1: ( ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 ) )
-            // InternalBomi.g:7204:2: ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 )
+            // InternalBomi.g:7651:1: ( ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 ) )
+            // InternalBomi.g:7652:2: ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getCoordinationMechanismAssignment_5_1()); 
-            // InternalBomi.g:7205:2: ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 )
-            // InternalBomi.g:7205:3: rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1
+            // InternalBomi.g:7653:2: ( rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 )
+            // InternalBomi.g:7653:3: rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1();
@@ -22237,14 +23659,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_6__0"
-    // InternalBomi.g:7214:1: rule__BOTeamGovernance__Group_6__0 : rule__BOTeamGovernance__Group_6__0__Impl rule__BOTeamGovernance__Group_6__1 ;
+    // InternalBomi.g:7662:1: rule__BOTeamGovernance__Group_6__0 : rule__BOTeamGovernance__Group_6__0__Impl rule__BOTeamGovernance__Group_6__1 ;
     public final void rule__BOTeamGovernance__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7218:1: ( rule__BOTeamGovernance__Group_6__0__Impl rule__BOTeamGovernance__Group_6__1 )
-            // InternalBomi.g:7219:2: rule__BOTeamGovernance__Group_6__0__Impl rule__BOTeamGovernance__Group_6__1
+            // InternalBomi.g:7666:1: ( rule__BOTeamGovernance__Group_6__0__Impl rule__BOTeamGovernance__Group_6__1 )
+            // InternalBomi.g:7667:2: rule__BOTeamGovernance__Group_6__0__Impl rule__BOTeamGovernance__Group_6__1
             {
             pushFollow(FOLLOW_19);
             rule__BOTeamGovernance__Group_6__0__Impl();
@@ -22275,20 +23697,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_6__0__Impl"
-    // InternalBomi.g:7226:1: rule__BOTeamGovernance__Group_6__0__Impl : ( 'frequencyOfCoordination' ) ;
+    // InternalBomi.g:7674:1: rule__BOTeamGovernance__Group_6__0__Impl : ( 'frequencyOfCoordination' ) ;
     public final void rule__BOTeamGovernance__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7230:1: ( ( 'frequencyOfCoordination' ) )
-            // InternalBomi.g:7231:1: ( 'frequencyOfCoordination' )
+            // InternalBomi.g:7678:1: ( ( 'frequencyOfCoordination' ) )
+            // InternalBomi.g:7679:1: ( 'frequencyOfCoordination' )
             {
-            // InternalBomi.g:7231:1: ( 'frequencyOfCoordination' )
-            // InternalBomi.g:7232:2: 'frequencyOfCoordination'
+            // InternalBomi.g:7679:1: ( 'frequencyOfCoordination' )
+            // InternalBomi.g:7680:2: 'frequencyOfCoordination'
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getFrequencyOfCoordinationKeyword_6_0()); 
-            match(input,77,FOLLOW_2); 
+            match(input,84,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getFrequencyOfCoordinationKeyword_6_0()); 
 
             }
@@ -22312,14 +23734,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_6__1"
-    // InternalBomi.g:7241:1: rule__BOTeamGovernance__Group_6__1 : rule__BOTeamGovernance__Group_6__1__Impl ;
+    // InternalBomi.g:7689:1: rule__BOTeamGovernance__Group_6__1 : rule__BOTeamGovernance__Group_6__1__Impl ;
     public final void rule__BOTeamGovernance__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7245:1: ( rule__BOTeamGovernance__Group_6__1__Impl )
-            // InternalBomi.g:7246:2: rule__BOTeamGovernance__Group_6__1__Impl
+            // InternalBomi.g:7693:1: ( rule__BOTeamGovernance__Group_6__1__Impl )
+            // InternalBomi.g:7694:2: rule__BOTeamGovernance__Group_6__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__Group_6__1__Impl();
@@ -22345,21 +23767,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_6__1__Impl"
-    // InternalBomi.g:7252:1: rule__BOTeamGovernance__Group_6__1__Impl : ( ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 ) ) ;
+    // InternalBomi.g:7700:1: rule__BOTeamGovernance__Group_6__1__Impl : ( ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 ) ) ;
     public final void rule__BOTeamGovernance__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7256:1: ( ( ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 ) ) )
-            // InternalBomi.g:7257:1: ( ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 ) )
+            // InternalBomi.g:7704:1: ( ( ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 ) ) )
+            // InternalBomi.g:7705:1: ( ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 ) )
             {
-            // InternalBomi.g:7257:1: ( ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 ) )
-            // InternalBomi.g:7258:2: ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 )
+            // InternalBomi.g:7705:1: ( ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 ) )
+            // InternalBomi.g:7706:2: ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getFrequencyOfCoordinationAssignment_6_1()); 
-            // InternalBomi.g:7259:2: ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 )
-            // InternalBomi.g:7259:3: rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1
+            // InternalBomi.g:7707:2: ( rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 )
+            // InternalBomi.g:7707:3: rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1();
@@ -22392,14 +23814,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7__0"
-    // InternalBomi.g:7268:1: rule__BOTeamGovernance__Group_7__0 : rule__BOTeamGovernance__Group_7__0__Impl rule__BOTeamGovernance__Group_7__1 ;
+    // InternalBomi.g:7716:1: rule__BOTeamGovernance__Group_7__0 : rule__BOTeamGovernance__Group_7__0__Impl rule__BOTeamGovernance__Group_7__1 ;
     public final void rule__BOTeamGovernance__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7272:1: ( rule__BOTeamGovernance__Group_7__0__Impl rule__BOTeamGovernance__Group_7__1 )
-            // InternalBomi.g:7273:2: rule__BOTeamGovernance__Group_7__0__Impl rule__BOTeamGovernance__Group_7__1
+            // InternalBomi.g:7720:1: ( rule__BOTeamGovernance__Group_7__0__Impl rule__BOTeamGovernance__Group_7__1 )
+            // InternalBomi.g:7721:2: rule__BOTeamGovernance__Group_7__0__Impl rule__BOTeamGovernance__Group_7__1
             {
             pushFollow(FOLLOW_24);
             rule__BOTeamGovernance__Group_7__0__Impl();
@@ -22430,20 +23852,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7__0__Impl"
-    // InternalBomi.g:7280:1: rule__BOTeamGovernance__Group_7__0__Impl : ( 'governanceTeams' ) ;
+    // InternalBomi.g:7728:1: rule__BOTeamGovernance__Group_7__0__Impl : ( 'governanceTeams' ) ;
     public final void rule__BOTeamGovernance__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7284:1: ( ( 'governanceTeams' ) )
-            // InternalBomi.g:7285:1: ( 'governanceTeams' )
+            // InternalBomi.g:7732:1: ( ( 'governanceTeams' ) )
+            // InternalBomi.g:7733:1: ( 'governanceTeams' )
             {
-            // InternalBomi.g:7285:1: ( 'governanceTeams' )
-            // InternalBomi.g:7286:2: 'governanceTeams'
+            // InternalBomi.g:7733:1: ( 'governanceTeams' )
+            // InternalBomi.g:7734:2: 'governanceTeams'
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsKeyword_7_0()); 
-            match(input,38,FOLLOW_2); 
+            match(input,40,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsKeyword_7_0()); 
 
             }
@@ -22467,14 +23889,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7__1"
-    // InternalBomi.g:7295:1: rule__BOTeamGovernance__Group_7__1 : rule__BOTeamGovernance__Group_7__1__Impl rule__BOTeamGovernance__Group_7__2 ;
+    // InternalBomi.g:7743:1: rule__BOTeamGovernance__Group_7__1 : rule__BOTeamGovernance__Group_7__1__Impl rule__BOTeamGovernance__Group_7__2 ;
     public final void rule__BOTeamGovernance__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7299:1: ( rule__BOTeamGovernance__Group_7__1__Impl rule__BOTeamGovernance__Group_7__2 )
-            // InternalBomi.g:7300:2: rule__BOTeamGovernance__Group_7__1__Impl rule__BOTeamGovernance__Group_7__2
+            // InternalBomi.g:7747:1: ( rule__BOTeamGovernance__Group_7__1__Impl rule__BOTeamGovernance__Group_7__2 )
+            // InternalBomi.g:7748:2: rule__BOTeamGovernance__Group_7__1__Impl rule__BOTeamGovernance__Group_7__2
             {
             pushFollow(FOLLOW_16);
             rule__BOTeamGovernance__Group_7__1__Impl();
@@ -22505,20 +23927,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7__1__Impl"
-    // InternalBomi.g:7307:1: rule__BOTeamGovernance__Group_7__1__Impl : ( '(' ) ;
+    // InternalBomi.g:7755:1: rule__BOTeamGovernance__Group_7__1__Impl : ( '(' ) ;
     public final void rule__BOTeamGovernance__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7311:1: ( ( '(' ) )
-            // InternalBomi.g:7312:1: ( '(' )
+            // InternalBomi.g:7759:1: ( ( '(' ) )
+            // InternalBomi.g:7760:1: ( '(' )
             {
-            // InternalBomi.g:7312:1: ( '(' )
-            // InternalBomi.g:7313:2: '('
+            // InternalBomi.g:7760:1: ( '(' )
+            // InternalBomi.g:7761:2: '('
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getLeftParenthesisKeyword_7_1()); 
-            match(input,61,FOLLOW_2); 
+            match(input,63,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getLeftParenthesisKeyword_7_1()); 
 
             }
@@ -22542,14 +23964,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7__2"
-    // InternalBomi.g:7322:1: rule__BOTeamGovernance__Group_7__2 : rule__BOTeamGovernance__Group_7__2__Impl rule__BOTeamGovernance__Group_7__3 ;
+    // InternalBomi.g:7770:1: rule__BOTeamGovernance__Group_7__2 : rule__BOTeamGovernance__Group_7__2__Impl rule__BOTeamGovernance__Group_7__3 ;
     public final void rule__BOTeamGovernance__Group_7__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7326:1: ( rule__BOTeamGovernance__Group_7__2__Impl rule__BOTeamGovernance__Group_7__3 )
-            // InternalBomi.g:7327:2: rule__BOTeamGovernance__Group_7__2__Impl rule__BOTeamGovernance__Group_7__3
+            // InternalBomi.g:7774:1: ( rule__BOTeamGovernance__Group_7__2__Impl rule__BOTeamGovernance__Group_7__3 )
+            // InternalBomi.g:7775:2: rule__BOTeamGovernance__Group_7__2__Impl rule__BOTeamGovernance__Group_7__3
             {
             pushFollow(FOLLOW_25);
             rule__BOTeamGovernance__Group_7__2__Impl();
@@ -22580,21 +24002,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7__2__Impl"
-    // InternalBomi.g:7334:1: rule__BOTeamGovernance__Group_7__2__Impl : ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 ) ) ;
+    // InternalBomi.g:7782:1: rule__BOTeamGovernance__Group_7__2__Impl : ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 ) ) ;
     public final void rule__BOTeamGovernance__Group_7__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7338:1: ( ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 ) ) )
-            // InternalBomi.g:7339:1: ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 ) )
+            // InternalBomi.g:7786:1: ( ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 ) ) )
+            // InternalBomi.g:7787:1: ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 ) )
             {
-            // InternalBomi.g:7339:1: ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 ) )
-            // InternalBomi.g:7340:2: ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 )
+            // InternalBomi.g:7787:1: ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 ) )
+            // InternalBomi.g:7788:2: ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsAssignment_7_2()); 
-            // InternalBomi.g:7341:2: ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 )
-            // InternalBomi.g:7341:3: rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2
+            // InternalBomi.g:7789:2: ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 )
+            // InternalBomi.g:7789:3: rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2();
@@ -22627,14 +24049,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7__3"
-    // InternalBomi.g:7349:1: rule__BOTeamGovernance__Group_7__3 : rule__BOTeamGovernance__Group_7__3__Impl rule__BOTeamGovernance__Group_7__4 ;
+    // InternalBomi.g:7797:1: rule__BOTeamGovernance__Group_7__3 : rule__BOTeamGovernance__Group_7__3__Impl rule__BOTeamGovernance__Group_7__4 ;
     public final void rule__BOTeamGovernance__Group_7__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7353:1: ( rule__BOTeamGovernance__Group_7__3__Impl rule__BOTeamGovernance__Group_7__4 )
-            // InternalBomi.g:7354:2: rule__BOTeamGovernance__Group_7__3__Impl rule__BOTeamGovernance__Group_7__4
+            // InternalBomi.g:7801:1: ( rule__BOTeamGovernance__Group_7__3__Impl rule__BOTeamGovernance__Group_7__4 )
+            // InternalBomi.g:7802:2: rule__BOTeamGovernance__Group_7__3__Impl rule__BOTeamGovernance__Group_7__4
             {
             pushFollow(FOLLOW_25);
             rule__BOTeamGovernance__Group_7__3__Impl();
@@ -22665,33 +24087,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7__3__Impl"
-    // InternalBomi.g:7361:1: rule__BOTeamGovernance__Group_7__3__Impl : ( ( rule__BOTeamGovernance__Group_7_3__0 )* ) ;
+    // InternalBomi.g:7809:1: rule__BOTeamGovernance__Group_7__3__Impl : ( ( rule__BOTeamGovernance__Group_7_3__0 )* ) ;
     public final void rule__BOTeamGovernance__Group_7__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7365:1: ( ( ( rule__BOTeamGovernance__Group_7_3__0 )* ) )
-            // InternalBomi.g:7366:1: ( ( rule__BOTeamGovernance__Group_7_3__0 )* )
+            // InternalBomi.g:7813:1: ( ( ( rule__BOTeamGovernance__Group_7_3__0 )* ) )
+            // InternalBomi.g:7814:1: ( ( rule__BOTeamGovernance__Group_7_3__0 )* )
             {
-            // InternalBomi.g:7366:1: ( ( rule__BOTeamGovernance__Group_7_3__0 )* )
-            // InternalBomi.g:7367:2: ( rule__BOTeamGovernance__Group_7_3__0 )*
+            // InternalBomi.g:7814:1: ( ( rule__BOTeamGovernance__Group_7_3__0 )* )
+            // InternalBomi.g:7815:2: ( rule__BOTeamGovernance__Group_7_3__0 )*
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGroup_7_3()); 
-            // InternalBomi.g:7368:2: ( rule__BOTeamGovernance__Group_7_3__0 )*
-            loop71:
+            // InternalBomi.g:7816:2: ( rule__BOTeamGovernance__Group_7_3__0 )*
+            loop77:
             do {
-                int alt71=2;
-                int LA71_0 = input.LA(1);
+                int alt77=2;
+                int LA77_0 = input.LA(1);
 
-                if ( (LA71_0==36) ) {
-                    alt71=1;
+                if ( (LA77_0==38) ) {
+                    alt77=1;
                 }
 
 
-                switch (alt71) {
+                switch (alt77) {
             	case 1 :
-            	    // InternalBomi.g:7368:3: rule__BOTeamGovernance__Group_7_3__0
+            	    // InternalBomi.g:7816:3: rule__BOTeamGovernance__Group_7_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOTeamGovernance__Group_7_3__0();
@@ -22703,7 +24125,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop71;
+            	    break loop77;
                 }
             } while (true);
 
@@ -22730,14 +24152,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7__4"
-    // InternalBomi.g:7376:1: rule__BOTeamGovernance__Group_7__4 : rule__BOTeamGovernance__Group_7__4__Impl ;
+    // InternalBomi.g:7824:1: rule__BOTeamGovernance__Group_7__4 : rule__BOTeamGovernance__Group_7__4__Impl ;
     public final void rule__BOTeamGovernance__Group_7__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7380:1: ( rule__BOTeamGovernance__Group_7__4__Impl )
-            // InternalBomi.g:7381:2: rule__BOTeamGovernance__Group_7__4__Impl
+            // InternalBomi.g:7828:1: ( rule__BOTeamGovernance__Group_7__4__Impl )
+            // InternalBomi.g:7829:2: rule__BOTeamGovernance__Group_7__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__Group_7__4__Impl();
@@ -22763,20 +24185,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7__4__Impl"
-    // InternalBomi.g:7387:1: rule__BOTeamGovernance__Group_7__4__Impl : ( ')' ) ;
+    // InternalBomi.g:7835:1: rule__BOTeamGovernance__Group_7__4__Impl : ( ')' ) ;
     public final void rule__BOTeamGovernance__Group_7__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7391:1: ( ( ')' ) )
-            // InternalBomi.g:7392:1: ( ')' )
+            // InternalBomi.g:7839:1: ( ( ')' ) )
+            // InternalBomi.g:7840:1: ( ')' )
             {
-            // InternalBomi.g:7392:1: ( ')' )
-            // InternalBomi.g:7393:2: ')'
+            // InternalBomi.g:7840:1: ( ')' )
+            // InternalBomi.g:7841:2: ')'
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getRightParenthesisKeyword_7_4()); 
-            match(input,62,FOLLOW_2); 
+            match(input,64,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getRightParenthesisKeyword_7_4()); 
 
             }
@@ -22800,14 +24222,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7_3__0"
-    // InternalBomi.g:7403:1: rule__BOTeamGovernance__Group_7_3__0 : rule__BOTeamGovernance__Group_7_3__0__Impl rule__BOTeamGovernance__Group_7_3__1 ;
+    // InternalBomi.g:7851:1: rule__BOTeamGovernance__Group_7_3__0 : rule__BOTeamGovernance__Group_7_3__0__Impl rule__BOTeamGovernance__Group_7_3__1 ;
     public final void rule__BOTeamGovernance__Group_7_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7407:1: ( rule__BOTeamGovernance__Group_7_3__0__Impl rule__BOTeamGovernance__Group_7_3__1 )
-            // InternalBomi.g:7408:2: rule__BOTeamGovernance__Group_7_3__0__Impl rule__BOTeamGovernance__Group_7_3__1
+            // InternalBomi.g:7855:1: ( rule__BOTeamGovernance__Group_7_3__0__Impl rule__BOTeamGovernance__Group_7_3__1 )
+            // InternalBomi.g:7856:2: rule__BOTeamGovernance__Group_7_3__0__Impl rule__BOTeamGovernance__Group_7_3__1
             {
             pushFollow(FOLLOW_16);
             rule__BOTeamGovernance__Group_7_3__0__Impl();
@@ -22838,20 +24260,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7_3__0__Impl"
-    // InternalBomi.g:7415:1: rule__BOTeamGovernance__Group_7_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:7863:1: rule__BOTeamGovernance__Group_7_3__0__Impl : ( ',' ) ;
     public final void rule__BOTeamGovernance__Group_7_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7419:1: ( ( ',' ) )
-            // InternalBomi.g:7420:1: ( ',' )
+            // InternalBomi.g:7867:1: ( ( ',' ) )
+            // InternalBomi.g:7868:1: ( ',' )
             {
-            // InternalBomi.g:7420:1: ( ',' )
-            // InternalBomi.g:7421:2: ','
+            // InternalBomi.g:7868:1: ( ',' )
+            // InternalBomi.g:7869:2: ','
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getCommaKeyword_7_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getCommaKeyword_7_3_0()); 
 
             }
@@ -22875,14 +24297,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7_3__1"
-    // InternalBomi.g:7430:1: rule__BOTeamGovernance__Group_7_3__1 : rule__BOTeamGovernance__Group_7_3__1__Impl ;
+    // InternalBomi.g:7878:1: rule__BOTeamGovernance__Group_7_3__1 : rule__BOTeamGovernance__Group_7_3__1__Impl ;
     public final void rule__BOTeamGovernance__Group_7_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7434:1: ( rule__BOTeamGovernance__Group_7_3__1__Impl )
-            // InternalBomi.g:7435:2: rule__BOTeamGovernance__Group_7_3__1__Impl
+            // InternalBomi.g:7882:1: ( rule__BOTeamGovernance__Group_7_3__1__Impl )
+            // InternalBomi.g:7883:2: rule__BOTeamGovernance__Group_7_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__Group_7_3__1__Impl();
@@ -22908,21 +24330,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_7_3__1__Impl"
-    // InternalBomi.g:7441:1: rule__BOTeamGovernance__Group_7_3__1__Impl : ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 ) ) ;
+    // InternalBomi.g:7889:1: rule__BOTeamGovernance__Group_7_3__1__Impl : ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 ) ) ;
     public final void rule__BOTeamGovernance__Group_7_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7445:1: ( ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 ) ) )
-            // InternalBomi.g:7446:1: ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 ) )
+            // InternalBomi.g:7893:1: ( ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 ) ) )
+            // InternalBomi.g:7894:1: ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 ) )
             {
-            // InternalBomi.g:7446:1: ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 ) )
-            // InternalBomi.g:7447:2: ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 )
+            // InternalBomi.g:7894:1: ( ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 ) )
+            // InternalBomi.g:7895:2: ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsAssignment_7_3_1()); 
-            // InternalBomi.g:7448:2: ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 )
-            // InternalBomi.g:7448:3: rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1
+            // InternalBomi.g:7896:2: ( rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 )
+            // InternalBomi.g:7896:3: rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1();
@@ -22955,14 +24377,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8__0"
-    // InternalBomi.g:7457:1: rule__BOTeamGovernance__Group_8__0 : rule__BOTeamGovernance__Group_8__0__Impl rule__BOTeamGovernance__Group_8__1 ;
+    // InternalBomi.g:7905:1: rule__BOTeamGovernance__Group_8__0 : rule__BOTeamGovernance__Group_8__0__Impl rule__BOTeamGovernance__Group_8__1 ;
     public final void rule__BOTeamGovernance__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7461:1: ( rule__BOTeamGovernance__Group_8__0__Impl rule__BOTeamGovernance__Group_8__1 )
-            // InternalBomi.g:7462:2: rule__BOTeamGovernance__Group_8__0__Impl rule__BOTeamGovernance__Group_8__1
+            // InternalBomi.g:7909:1: ( rule__BOTeamGovernance__Group_8__0__Impl rule__BOTeamGovernance__Group_8__1 )
+            // InternalBomi.g:7910:2: rule__BOTeamGovernance__Group_8__0__Impl rule__BOTeamGovernance__Group_8__1
             {
             pushFollow(FOLLOW_24);
             rule__BOTeamGovernance__Group_8__0__Impl();
@@ -22993,20 +24415,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8__0__Impl"
-    // InternalBomi.g:7469:1: rule__BOTeamGovernance__Group_8__0__Impl : ( 'boundaryObjects' ) ;
+    // InternalBomi.g:7917:1: rule__BOTeamGovernance__Group_8__0__Impl : ( 'boundaryObjects' ) ;
     public final void rule__BOTeamGovernance__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7473:1: ( ( 'boundaryObjects' ) )
-            // InternalBomi.g:7474:1: ( 'boundaryObjects' )
+            // InternalBomi.g:7921:1: ( ( 'boundaryObjects' ) )
+            // InternalBomi.g:7922:1: ( 'boundaryObjects' )
             {
-            // InternalBomi.g:7474:1: ( 'boundaryObjects' )
-            // InternalBomi.g:7475:2: 'boundaryObjects'
+            // InternalBomi.g:7922:1: ( 'boundaryObjects' )
+            // InternalBomi.g:7923:2: 'boundaryObjects'
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsKeyword_8_0()); 
-            match(input,33,FOLLOW_2); 
+            match(input,35,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsKeyword_8_0()); 
 
             }
@@ -23030,14 +24452,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8__1"
-    // InternalBomi.g:7484:1: rule__BOTeamGovernance__Group_8__1 : rule__BOTeamGovernance__Group_8__1__Impl rule__BOTeamGovernance__Group_8__2 ;
+    // InternalBomi.g:7932:1: rule__BOTeamGovernance__Group_8__1 : rule__BOTeamGovernance__Group_8__1__Impl rule__BOTeamGovernance__Group_8__2 ;
     public final void rule__BOTeamGovernance__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7488:1: ( rule__BOTeamGovernance__Group_8__1__Impl rule__BOTeamGovernance__Group_8__2 )
-            // InternalBomi.g:7489:2: rule__BOTeamGovernance__Group_8__1__Impl rule__BOTeamGovernance__Group_8__2
+            // InternalBomi.g:7936:1: ( rule__BOTeamGovernance__Group_8__1__Impl rule__BOTeamGovernance__Group_8__2 )
+            // InternalBomi.g:7937:2: rule__BOTeamGovernance__Group_8__1__Impl rule__BOTeamGovernance__Group_8__2
             {
             pushFollow(FOLLOW_16);
             rule__BOTeamGovernance__Group_8__1__Impl();
@@ -23068,20 +24490,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8__1__Impl"
-    // InternalBomi.g:7496:1: rule__BOTeamGovernance__Group_8__1__Impl : ( '(' ) ;
+    // InternalBomi.g:7944:1: rule__BOTeamGovernance__Group_8__1__Impl : ( '(' ) ;
     public final void rule__BOTeamGovernance__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7500:1: ( ( '(' ) )
-            // InternalBomi.g:7501:1: ( '(' )
+            // InternalBomi.g:7948:1: ( ( '(' ) )
+            // InternalBomi.g:7949:1: ( '(' )
             {
-            // InternalBomi.g:7501:1: ( '(' )
-            // InternalBomi.g:7502:2: '('
+            // InternalBomi.g:7949:1: ( '(' )
+            // InternalBomi.g:7950:2: '('
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getLeftParenthesisKeyword_8_1()); 
-            match(input,61,FOLLOW_2); 
+            match(input,63,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getLeftParenthesisKeyword_8_1()); 
 
             }
@@ -23105,14 +24527,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8__2"
-    // InternalBomi.g:7511:1: rule__BOTeamGovernance__Group_8__2 : rule__BOTeamGovernance__Group_8__2__Impl rule__BOTeamGovernance__Group_8__3 ;
+    // InternalBomi.g:7959:1: rule__BOTeamGovernance__Group_8__2 : rule__BOTeamGovernance__Group_8__2__Impl rule__BOTeamGovernance__Group_8__3 ;
     public final void rule__BOTeamGovernance__Group_8__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7515:1: ( rule__BOTeamGovernance__Group_8__2__Impl rule__BOTeamGovernance__Group_8__3 )
-            // InternalBomi.g:7516:2: rule__BOTeamGovernance__Group_8__2__Impl rule__BOTeamGovernance__Group_8__3
+            // InternalBomi.g:7963:1: ( rule__BOTeamGovernance__Group_8__2__Impl rule__BOTeamGovernance__Group_8__3 )
+            // InternalBomi.g:7964:2: rule__BOTeamGovernance__Group_8__2__Impl rule__BOTeamGovernance__Group_8__3
             {
             pushFollow(FOLLOW_25);
             rule__BOTeamGovernance__Group_8__2__Impl();
@@ -23143,21 +24565,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8__2__Impl"
-    // InternalBomi.g:7523:1: rule__BOTeamGovernance__Group_8__2__Impl : ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 ) ) ;
+    // InternalBomi.g:7971:1: rule__BOTeamGovernance__Group_8__2__Impl : ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 ) ) ;
     public final void rule__BOTeamGovernance__Group_8__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7527:1: ( ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 ) ) )
-            // InternalBomi.g:7528:1: ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 ) )
+            // InternalBomi.g:7975:1: ( ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 ) ) )
+            // InternalBomi.g:7976:1: ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 ) )
             {
-            // InternalBomi.g:7528:1: ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 ) )
-            // InternalBomi.g:7529:2: ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 )
+            // InternalBomi.g:7976:1: ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 ) )
+            // InternalBomi.g:7977:2: ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsAssignment_8_2()); 
-            // InternalBomi.g:7530:2: ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 )
-            // InternalBomi.g:7530:3: rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2
+            // InternalBomi.g:7978:2: ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 )
+            // InternalBomi.g:7978:3: rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2();
@@ -23190,14 +24612,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8__3"
-    // InternalBomi.g:7538:1: rule__BOTeamGovernance__Group_8__3 : rule__BOTeamGovernance__Group_8__3__Impl rule__BOTeamGovernance__Group_8__4 ;
+    // InternalBomi.g:7986:1: rule__BOTeamGovernance__Group_8__3 : rule__BOTeamGovernance__Group_8__3__Impl rule__BOTeamGovernance__Group_8__4 ;
     public final void rule__BOTeamGovernance__Group_8__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7542:1: ( rule__BOTeamGovernance__Group_8__3__Impl rule__BOTeamGovernance__Group_8__4 )
-            // InternalBomi.g:7543:2: rule__BOTeamGovernance__Group_8__3__Impl rule__BOTeamGovernance__Group_8__4
+            // InternalBomi.g:7990:1: ( rule__BOTeamGovernance__Group_8__3__Impl rule__BOTeamGovernance__Group_8__4 )
+            // InternalBomi.g:7991:2: rule__BOTeamGovernance__Group_8__3__Impl rule__BOTeamGovernance__Group_8__4
             {
             pushFollow(FOLLOW_25);
             rule__BOTeamGovernance__Group_8__3__Impl();
@@ -23228,33 +24650,33 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8__3__Impl"
-    // InternalBomi.g:7550:1: rule__BOTeamGovernance__Group_8__3__Impl : ( ( rule__BOTeamGovernance__Group_8_3__0 )* ) ;
+    // InternalBomi.g:7998:1: rule__BOTeamGovernance__Group_8__3__Impl : ( ( rule__BOTeamGovernance__Group_8_3__0 )* ) ;
     public final void rule__BOTeamGovernance__Group_8__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7554:1: ( ( ( rule__BOTeamGovernance__Group_8_3__0 )* ) )
-            // InternalBomi.g:7555:1: ( ( rule__BOTeamGovernance__Group_8_3__0 )* )
+            // InternalBomi.g:8002:1: ( ( ( rule__BOTeamGovernance__Group_8_3__0 )* ) )
+            // InternalBomi.g:8003:1: ( ( rule__BOTeamGovernance__Group_8_3__0 )* )
             {
-            // InternalBomi.g:7555:1: ( ( rule__BOTeamGovernance__Group_8_3__0 )* )
-            // InternalBomi.g:7556:2: ( rule__BOTeamGovernance__Group_8_3__0 )*
+            // InternalBomi.g:8003:1: ( ( rule__BOTeamGovernance__Group_8_3__0 )* )
+            // InternalBomi.g:8004:2: ( rule__BOTeamGovernance__Group_8_3__0 )*
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGroup_8_3()); 
-            // InternalBomi.g:7557:2: ( rule__BOTeamGovernance__Group_8_3__0 )*
-            loop72:
+            // InternalBomi.g:8005:2: ( rule__BOTeamGovernance__Group_8_3__0 )*
+            loop78:
             do {
-                int alt72=2;
-                int LA72_0 = input.LA(1);
+                int alt78=2;
+                int LA78_0 = input.LA(1);
 
-                if ( (LA72_0==36) ) {
-                    alt72=1;
+                if ( (LA78_0==38) ) {
+                    alt78=1;
                 }
 
 
-                switch (alt72) {
+                switch (alt78) {
             	case 1 :
-            	    // InternalBomi.g:7557:3: rule__BOTeamGovernance__Group_8_3__0
+            	    // InternalBomi.g:8005:3: rule__BOTeamGovernance__Group_8_3__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__BOTeamGovernance__Group_8_3__0();
@@ -23266,7 +24688,7 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop72;
+            	    break loop78;
                 }
             } while (true);
 
@@ -23293,14 +24715,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8__4"
-    // InternalBomi.g:7565:1: rule__BOTeamGovernance__Group_8__4 : rule__BOTeamGovernance__Group_8__4__Impl ;
+    // InternalBomi.g:8013:1: rule__BOTeamGovernance__Group_8__4 : rule__BOTeamGovernance__Group_8__4__Impl ;
     public final void rule__BOTeamGovernance__Group_8__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7569:1: ( rule__BOTeamGovernance__Group_8__4__Impl )
-            // InternalBomi.g:7570:2: rule__BOTeamGovernance__Group_8__4__Impl
+            // InternalBomi.g:8017:1: ( rule__BOTeamGovernance__Group_8__4__Impl )
+            // InternalBomi.g:8018:2: rule__BOTeamGovernance__Group_8__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__Group_8__4__Impl();
@@ -23326,20 +24748,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8__4__Impl"
-    // InternalBomi.g:7576:1: rule__BOTeamGovernance__Group_8__4__Impl : ( ')' ) ;
+    // InternalBomi.g:8024:1: rule__BOTeamGovernance__Group_8__4__Impl : ( ')' ) ;
     public final void rule__BOTeamGovernance__Group_8__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7580:1: ( ( ')' ) )
-            // InternalBomi.g:7581:1: ( ')' )
+            // InternalBomi.g:8028:1: ( ( ')' ) )
+            // InternalBomi.g:8029:1: ( ')' )
             {
-            // InternalBomi.g:7581:1: ( ')' )
-            // InternalBomi.g:7582:2: ')'
+            // InternalBomi.g:8029:1: ( ')' )
+            // InternalBomi.g:8030:2: ')'
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getRightParenthesisKeyword_8_4()); 
-            match(input,62,FOLLOW_2); 
+            match(input,64,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getRightParenthesisKeyword_8_4()); 
 
             }
@@ -23363,14 +24785,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8_3__0"
-    // InternalBomi.g:7592:1: rule__BOTeamGovernance__Group_8_3__0 : rule__BOTeamGovernance__Group_8_3__0__Impl rule__BOTeamGovernance__Group_8_3__1 ;
+    // InternalBomi.g:8040:1: rule__BOTeamGovernance__Group_8_3__0 : rule__BOTeamGovernance__Group_8_3__0__Impl rule__BOTeamGovernance__Group_8_3__1 ;
     public final void rule__BOTeamGovernance__Group_8_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7596:1: ( rule__BOTeamGovernance__Group_8_3__0__Impl rule__BOTeamGovernance__Group_8_3__1 )
-            // InternalBomi.g:7597:2: rule__BOTeamGovernance__Group_8_3__0__Impl rule__BOTeamGovernance__Group_8_3__1
+            // InternalBomi.g:8044:1: ( rule__BOTeamGovernance__Group_8_3__0__Impl rule__BOTeamGovernance__Group_8_3__1 )
+            // InternalBomi.g:8045:2: rule__BOTeamGovernance__Group_8_3__0__Impl rule__BOTeamGovernance__Group_8_3__1
             {
             pushFollow(FOLLOW_16);
             rule__BOTeamGovernance__Group_8_3__0__Impl();
@@ -23401,20 +24823,20 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8_3__0__Impl"
-    // InternalBomi.g:7604:1: rule__BOTeamGovernance__Group_8_3__0__Impl : ( ',' ) ;
+    // InternalBomi.g:8052:1: rule__BOTeamGovernance__Group_8_3__0__Impl : ( ',' ) ;
     public final void rule__BOTeamGovernance__Group_8_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7608:1: ( ( ',' ) )
-            // InternalBomi.g:7609:1: ( ',' )
+            // InternalBomi.g:8056:1: ( ( ',' ) )
+            // InternalBomi.g:8057:1: ( ',' )
             {
-            // InternalBomi.g:7609:1: ( ',' )
-            // InternalBomi.g:7610:2: ','
+            // InternalBomi.g:8057:1: ( ',' )
+            // InternalBomi.g:8058:2: ','
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getCommaKeyword_8_3_0()); 
-            match(input,36,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getBOTeamGovernanceAccess().getCommaKeyword_8_3_0()); 
 
             }
@@ -23438,14 +24860,14 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8_3__1"
-    // InternalBomi.g:7619:1: rule__BOTeamGovernance__Group_8_3__1 : rule__BOTeamGovernance__Group_8_3__1__Impl ;
+    // InternalBomi.g:8067:1: rule__BOTeamGovernance__Group_8_3__1 : rule__BOTeamGovernance__Group_8_3__1__Impl ;
     public final void rule__BOTeamGovernance__Group_8_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7623:1: ( rule__BOTeamGovernance__Group_8_3__1__Impl )
-            // InternalBomi.g:7624:2: rule__BOTeamGovernance__Group_8_3__1__Impl
+            // InternalBomi.g:8071:1: ( rule__BOTeamGovernance__Group_8_3__1__Impl )
+            // InternalBomi.g:8072:2: rule__BOTeamGovernance__Group_8_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__Group_8_3__1__Impl();
@@ -23471,21 +24893,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__Group_8_3__1__Impl"
-    // InternalBomi.g:7630:1: rule__BOTeamGovernance__Group_8_3__1__Impl : ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 ) ) ;
+    // InternalBomi.g:8078:1: rule__BOTeamGovernance__Group_8_3__1__Impl : ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 ) ) ;
     public final void rule__BOTeamGovernance__Group_8_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7634:1: ( ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 ) ) )
-            // InternalBomi.g:7635:1: ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 ) )
+            // InternalBomi.g:8082:1: ( ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 ) ) )
+            // InternalBomi.g:8083:1: ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 ) )
             {
-            // InternalBomi.g:7635:1: ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 ) )
-            // InternalBomi.g:7636:2: ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 )
+            // InternalBomi.g:8083:1: ( ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 ) )
+            // InternalBomi.g:8084:2: ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsAssignment_8_3_1()); 
-            // InternalBomi.g:7637:2: ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 )
-            // InternalBomi.g:7637:3: rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1
+            // InternalBomi.g:8085:2: ( rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 )
+            // InternalBomi.g:8085:3: rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1
             {
             pushFollow(FOLLOW_2);
             rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1();
@@ -23518,17 +24940,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__BoundaryObjectsAssignment_1_2"
-    // InternalBomi.g:7646:1: rule__BOMIModel__BoundaryObjectsAssignment_1_2 : ( ruleBoundaryObject ) ;
+    // InternalBomi.g:8094:1: rule__BOMIModel__BoundaryObjectsAssignment_1_2 : ( ruleBoundaryObject ) ;
     public final void rule__BOMIModel__BoundaryObjectsAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7650:1: ( ( ruleBoundaryObject ) )
-            // InternalBomi.g:7651:2: ( ruleBoundaryObject )
+            // InternalBomi.g:8098:1: ( ( ruleBoundaryObject ) )
+            // InternalBomi.g:8099:2: ( ruleBoundaryObject )
             {
-            // InternalBomi.g:7651:2: ( ruleBoundaryObject )
-            // InternalBomi.g:7652:3: ruleBoundaryObject
+            // InternalBomi.g:8099:2: ( ruleBoundaryObject )
+            // InternalBomi.g:8100:3: ruleBoundaryObject
             {
              before(grammarAccess.getBOMIModelAccess().getBoundaryObjectsBoundaryObjectParserRuleCall_1_2_0()); 
             pushFollow(FOLLOW_2);
@@ -23559,17 +24981,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__BoundaryObjectsAssignment_1_3_1"
-    // InternalBomi.g:7661:1: rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 : ( ruleBoundaryObject ) ;
+    // InternalBomi.g:8109:1: rule__BOMIModel__BoundaryObjectsAssignment_1_3_1 : ( ruleBoundaryObject ) ;
     public final void rule__BOMIModel__BoundaryObjectsAssignment_1_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7665:1: ( ( ruleBoundaryObject ) )
-            // InternalBomi.g:7666:2: ( ruleBoundaryObject )
+            // InternalBomi.g:8113:1: ( ( ruleBoundaryObject ) )
+            // InternalBomi.g:8114:2: ( ruleBoundaryObject )
             {
-            // InternalBomi.g:7666:2: ( ruleBoundaryObject )
-            // InternalBomi.g:7667:3: ruleBoundaryObject
+            // InternalBomi.g:8114:2: ( ruleBoundaryObject )
+            // InternalBomi.g:8115:3: ruleBoundaryObject
             {
              before(grammarAccess.getBOMIModelAccess().getBoundaryObjectsBoundaryObjectParserRuleCall_1_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23600,17 +25022,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__MethodologicalIslandsAssignment_2_2"
-    // InternalBomi.g:7676:1: rule__BOMIModel__MethodologicalIslandsAssignment_2_2 : ( ruleMethodologicalIsland ) ;
+    // InternalBomi.g:8124:1: rule__BOMIModel__MethodologicalIslandsAssignment_2_2 : ( ruleMethodologicalIsland ) ;
     public final void rule__BOMIModel__MethodologicalIslandsAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7680:1: ( ( ruleMethodologicalIsland ) )
-            // InternalBomi.g:7681:2: ( ruleMethodologicalIsland )
+            // InternalBomi.g:8128:1: ( ( ruleMethodologicalIsland ) )
+            // InternalBomi.g:8129:2: ( ruleMethodologicalIsland )
             {
-            // InternalBomi.g:7681:2: ( ruleMethodologicalIsland )
-            // InternalBomi.g:7682:3: ruleMethodologicalIsland
+            // InternalBomi.g:8129:2: ( ruleMethodologicalIsland )
+            // InternalBomi.g:8130:3: ruleMethodologicalIsland
             {
              before(grammarAccess.getBOMIModelAccess().getMethodologicalIslandsMethodologicalIslandParserRuleCall_2_2_0()); 
             pushFollow(FOLLOW_2);
@@ -23641,17 +25063,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1"
-    // InternalBomi.g:7691:1: rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 : ( ruleMethodologicalIsland ) ;
+    // InternalBomi.g:8139:1: rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1 : ( ruleMethodologicalIsland ) ;
     public final void rule__BOMIModel__MethodologicalIslandsAssignment_2_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7695:1: ( ( ruleMethodologicalIsland ) )
-            // InternalBomi.g:7696:2: ( ruleMethodologicalIsland )
+            // InternalBomi.g:8143:1: ( ( ruleMethodologicalIsland ) )
+            // InternalBomi.g:8144:2: ( ruleMethodologicalIsland )
             {
-            // InternalBomi.g:7696:2: ( ruleMethodologicalIsland )
-            // InternalBomi.g:7697:3: ruleMethodologicalIsland
+            // InternalBomi.g:8144:2: ( ruleMethodologicalIsland )
+            // InternalBomi.g:8145:3: ruleMethodologicalIsland
             {
              before(grammarAccess.getBOMIModelAccess().getMethodologicalIslandsMethodologicalIslandParserRuleCall_2_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23682,17 +25104,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__GovernanceTeamsAssignment_3_2"
-    // InternalBomi.g:7706:1: rule__BOMIModel__GovernanceTeamsAssignment_3_2 : ( ruleGovernanceTeam ) ;
+    // InternalBomi.g:8154:1: rule__BOMIModel__GovernanceTeamsAssignment_3_2 : ( ruleGovernanceTeam ) ;
     public final void rule__BOMIModel__GovernanceTeamsAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7710:1: ( ( ruleGovernanceTeam ) )
-            // InternalBomi.g:7711:2: ( ruleGovernanceTeam )
+            // InternalBomi.g:8158:1: ( ( ruleGovernanceTeam ) )
+            // InternalBomi.g:8159:2: ( ruleGovernanceTeam )
             {
-            // InternalBomi.g:7711:2: ( ruleGovernanceTeam )
-            // InternalBomi.g:7712:3: ruleGovernanceTeam
+            // InternalBomi.g:8159:2: ( ruleGovernanceTeam )
+            // InternalBomi.g:8160:3: ruleGovernanceTeam
             {
              before(grammarAccess.getBOMIModelAccess().getGovernanceTeamsGovernanceTeamParserRuleCall_3_2_0()); 
             pushFollow(FOLLOW_2);
@@ -23723,17 +25145,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__GovernanceTeamsAssignment_3_3_1"
-    // InternalBomi.g:7721:1: rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 : ( ruleGovernanceTeam ) ;
+    // InternalBomi.g:8169:1: rule__BOMIModel__GovernanceTeamsAssignment_3_3_1 : ( ruleGovernanceTeam ) ;
     public final void rule__BOMIModel__GovernanceTeamsAssignment_3_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7725:1: ( ( ruleGovernanceTeam ) )
-            // InternalBomi.g:7726:2: ( ruleGovernanceTeam )
+            // InternalBomi.g:8173:1: ( ( ruleGovernanceTeam ) )
+            // InternalBomi.g:8174:2: ( ruleGovernanceTeam )
             {
-            // InternalBomi.g:7726:2: ( ruleGovernanceTeam )
-            // InternalBomi.g:7727:3: ruleGovernanceTeam
+            // InternalBomi.g:8174:2: ( ruleGovernanceTeam )
+            // InternalBomi.g:8175:3: ruleGovernanceTeam
             {
              before(grammarAccess.getBOMIModelAccess().getGovernanceTeamsGovernanceTeamParserRuleCall_3_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23764,17 +25186,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__RolesAssignment_4_2"
-    // InternalBomi.g:7736:1: rule__BOMIModel__RolesAssignment_4_2 : ( ruleRole ) ;
+    // InternalBomi.g:8184:1: rule__BOMIModel__RolesAssignment_4_2 : ( ruleRole ) ;
     public final void rule__BOMIModel__RolesAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7740:1: ( ( ruleRole ) )
-            // InternalBomi.g:7741:2: ( ruleRole )
+            // InternalBomi.g:8188:1: ( ( ruleRole ) )
+            // InternalBomi.g:8189:2: ( ruleRole )
             {
-            // InternalBomi.g:7741:2: ( ruleRole )
-            // InternalBomi.g:7742:3: ruleRole
+            // InternalBomi.g:8189:2: ( ruleRole )
+            // InternalBomi.g:8190:3: ruleRole
             {
              before(grammarAccess.getBOMIModelAccess().getRolesRoleParserRuleCall_4_2_0()); 
             pushFollow(FOLLOW_2);
@@ -23805,17 +25227,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__RolesAssignment_4_3_1"
-    // InternalBomi.g:7751:1: rule__BOMIModel__RolesAssignment_4_3_1 : ( ruleRole ) ;
+    // InternalBomi.g:8199:1: rule__BOMIModel__RolesAssignment_4_3_1 : ( ruleRole ) ;
     public final void rule__BOMIModel__RolesAssignment_4_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7755:1: ( ( ruleRole ) )
-            // InternalBomi.g:7756:2: ( ruleRole )
+            // InternalBomi.g:8203:1: ( ( ruleRole ) )
+            // InternalBomi.g:8204:2: ( ruleRole )
             {
-            // InternalBomi.g:7756:2: ( ruleRole )
-            // InternalBomi.g:7757:3: ruleRole
+            // InternalBomi.g:8204:2: ( ruleRole )
+            // InternalBomi.g:8205:3: ruleRole
             {
              before(grammarAccess.getBOMIModelAccess().getRolesRoleParserRuleCall_4_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23846,17 +25268,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__DriversAssignment_5_2"
-    // InternalBomi.g:7766:1: rule__BOMIModel__DriversAssignment_5_2 : ( ruleDriver ) ;
+    // InternalBomi.g:8214:1: rule__BOMIModel__DriversAssignment_5_2 : ( ruleDriver ) ;
     public final void rule__BOMIModel__DriversAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7770:1: ( ( ruleDriver ) )
-            // InternalBomi.g:7771:2: ( ruleDriver )
+            // InternalBomi.g:8218:1: ( ( ruleDriver ) )
+            // InternalBomi.g:8219:2: ( ruleDriver )
             {
-            // InternalBomi.g:7771:2: ( ruleDriver )
-            // InternalBomi.g:7772:3: ruleDriver
+            // InternalBomi.g:8219:2: ( ruleDriver )
+            // InternalBomi.g:8220:3: ruleDriver
             {
              before(grammarAccess.getBOMIModelAccess().getDriversDriverParserRuleCall_5_2_0()); 
             pushFollow(FOLLOW_2);
@@ -23887,17 +25309,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__DriversAssignment_5_3_1"
-    // InternalBomi.g:7781:1: rule__BOMIModel__DriversAssignment_5_3_1 : ( ruleDriver ) ;
+    // InternalBomi.g:8229:1: rule__BOMIModel__DriversAssignment_5_3_1 : ( ruleDriver ) ;
     public final void rule__BOMIModel__DriversAssignment_5_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7785:1: ( ( ruleDriver ) )
-            // InternalBomi.g:7786:2: ( ruleDriver )
+            // InternalBomi.g:8233:1: ( ( ruleDriver ) )
+            // InternalBomi.g:8234:2: ( ruleDriver )
             {
-            // InternalBomi.g:7786:2: ( ruleDriver )
-            // InternalBomi.g:7787:3: ruleDriver
+            // InternalBomi.g:8234:2: ( ruleDriver )
+            // InternalBomi.g:8235:3: ruleDriver
             {
              before(grammarAccess.getBOMIModelAccess().getDriversDriverParserRuleCall_5_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23928,17 +25350,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__BoMiCoordinationsAssignment_6_0"
-    // InternalBomi.g:7796:1: rule__BOMIModel__BoMiCoordinationsAssignment_6_0 : ( ruleBOMICoordination ) ;
+    // InternalBomi.g:8244:1: rule__BOMIModel__BoMiCoordinationsAssignment_6_0 : ( ruleBOMICoordination ) ;
     public final void rule__BOMIModel__BoMiCoordinationsAssignment_6_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7800:1: ( ( ruleBOMICoordination ) )
-            // InternalBomi.g:7801:2: ( ruleBOMICoordination )
+            // InternalBomi.g:8248:1: ( ( ruleBOMICoordination ) )
+            // InternalBomi.g:8249:2: ( ruleBOMICoordination )
             {
-            // InternalBomi.g:7801:2: ( ruleBOMICoordination )
-            // InternalBomi.g:7802:3: ruleBOMICoordination
+            // InternalBomi.g:8249:2: ( ruleBOMICoordination )
+            // InternalBomi.g:8250:3: ruleBOMICoordination
             {
              before(grammarAccess.getBOMIModelAccess().getBoMiCoordinationsBOMICoordinationParserRuleCall_6_0_0()); 
             pushFollow(FOLLOW_2);
@@ -23969,17 +25391,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1"
-    // InternalBomi.g:7811:1: rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 : ( ruleBOMICoordination ) ;
+    // InternalBomi.g:8259:1: rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1 : ( ruleBOMICoordination ) ;
     public final void rule__BOMIModel__BoMiCoordinationsAssignment_6_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7815:1: ( ( ruleBOMICoordination ) )
-            // InternalBomi.g:7816:2: ( ruleBOMICoordination )
+            // InternalBomi.g:8263:1: ( ( ruleBOMICoordination ) )
+            // InternalBomi.g:8264:2: ( ruleBOMICoordination )
             {
-            // InternalBomi.g:7816:2: ( ruleBOMICoordination )
-            // InternalBomi.g:7817:3: ruleBOMICoordination
+            // InternalBomi.g:8264:2: ( ruleBOMICoordination )
+            // InternalBomi.g:8265:3: ruleBOMICoordination
             {
              before(grammarAccess.getBOMIModelAccess().getBoMiCoordinationsBOMICoordinationParserRuleCall_6_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24010,17 +25432,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__BoRoleInteractionsAssignment_7_0"
-    // InternalBomi.g:7826:1: rule__BOMIModel__BoRoleInteractionsAssignment_7_0 : ( ruleBORoleInteraction ) ;
+    // InternalBomi.g:8274:1: rule__BOMIModel__BoRoleInteractionsAssignment_7_0 : ( ruleBORoleInteraction ) ;
     public final void rule__BOMIModel__BoRoleInteractionsAssignment_7_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7830:1: ( ( ruleBORoleInteraction ) )
-            // InternalBomi.g:7831:2: ( ruleBORoleInteraction )
+            // InternalBomi.g:8278:1: ( ( ruleBORoleInteraction ) )
+            // InternalBomi.g:8279:2: ( ruleBORoleInteraction )
             {
-            // InternalBomi.g:7831:2: ( ruleBORoleInteraction )
-            // InternalBomi.g:7832:3: ruleBORoleInteraction
+            // InternalBomi.g:8279:2: ( ruleBORoleInteraction )
+            // InternalBomi.g:8280:3: ruleBORoleInteraction
             {
              before(grammarAccess.getBOMIModelAccess().getBoRoleInteractionsBORoleInteractionParserRuleCall_7_0_0()); 
             pushFollow(FOLLOW_2);
@@ -24051,17 +25473,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1"
-    // InternalBomi.g:7841:1: rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 : ( ruleBORoleInteraction ) ;
+    // InternalBomi.g:8289:1: rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1 : ( ruleBORoleInteraction ) ;
     public final void rule__BOMIModel__BoRoleInteractionsAssignment_7_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7845:1: ( ( ruleBORoleInteraction ) )
-            // InternalBomi.g:7846:2: ( ruleBORoleInteraction )
+            // InternalBomi.g:8293:1: ( ( ruleBORoleInteraction ) )
+            // InternalBomi.g:8294:2: ( ruleBORoleInteraction )
             {
-            // InternalBomi.g:7846:2: ( ruleBORoleInteraction )
-            // InternalBomi.g:7847:3: ruleBORoleInteraction
+            // InternalBomi.g:8294:2: ( ruleBORoleInteraction )
+            // InternalBomi.g:8295:3: ruleBORoleInteraction
             {
              before(grammarAccess.getBOMIModelAccess().getBoRoleInteractionsBORoleInteractionParserRuleCall_7_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24092,17 +25514,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__BoTeamGovernancesAssignment_8_0"
-    // InternalBomi.g:7856:1: rule__BOMIModel__BoTeamGovernancesAssignment_8_0 : ( ruleBOTeamGovernance ) ;
+    // InternalBomi.g:8304:1: rule__BOMIModel__BoTeamGovernancesAssignment_8_0 : ( ruleBOTeamGovernance ) ;
     public final void rule__BOMIModel__BoTeamGovernancesAssignment_8_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7860:1: ( ( ruleBOTeamGovernance ) )
-            // InternalBomi.g:7861:2: ( ruleBOTeamGovernance )
+            // InternalBomi.g:8308:1: ( ( ruleBOTeamGovernance ) )
+            // InternalBomi.g:8309:2: ( ruleBOTeamGovernance )
             {
-            // InternalBomi.g:7861:2: ( ruleBOTeamGovernance )
-            // InternalBomi.g:7862:3: ruleBOTeamGovernance
+            // InternalBomi.g:8309:2: ( ruleBOTeamGovernance )
+            // InternalBomi.g:8310:3: ruleBOTeamGovernance
             {
              before(grammarAccess.getBOMIModelAccess().getBoTeamGovernancesBOTeamGovernanceParserRuleCall_8_0_0()); 
             pushFollow(FOLLOW_2);
@@ -24133,17 +25555,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1"
-    // InternalBomi.g:7871:1: rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 : ( ruleBOTeamGovernance ) ;
+    // InternalBomi.g:8319:1: rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1 : ( ruleBOTeamGovernance ) ;
     public final void rule__BOMIModel__BoTeamGovernancesAssignment_8_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7875:1: ( ( ruleBOTeamGovernance ) )
-            // InternalBomi.g:7876:2: ( ruleBOTeamGovernance )
+            // InternalBomi.g:8323:1: ( ( ruleBOTeamGovernance ) )
+            // InternalBomi.g:8324:2: ( ruleBOTeamGovernance )
             {
-            // InternalBomi.g:7876:2: ( ruleBOTeamGovernance )
-            // InternalBomi.g:7877:3: ruleBOTeamGovernance
+            // InternalBomi.g:8324:2: ( ruleBOTeamGovernance )
+            // InternalBomi.g:8325:3: ruleBOTeamGovernance
             {
              before(grammarAccess.getBOMIModelAccess().getBoTeamGovernancesBOTeamGovernanceParserRuleCall_8_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24174,17 +25596,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__NameAssignment_2"
-    // InternalBomi.g:7886:1: rule__BoundaryObject__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBomi.g:8334:1: rule__BoundaryObject__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__BoundaryObject__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7890:1: ( ( ruleEString ) )
-            // InternalBomi.g:7891:2: ( ruleEString )
+            // InternalBomi.g:8338:1: ( ( ruleEString ) )
+            // InternalBomi.g:8339:2: ( ruleEString )
             {
-            // InternalBomi.g:7891:2: ( ruleEString )
-            // InternalBomi.g:7892:3: ruleEString
+            // InternalBomi.g:8339:2: ( ruleEString )
+            // InternalBomi.g:8340:3: ruleEString
             {
              before(grammarAccess.getBoundaryObjectAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -24215,17 +25637,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__SuperTypeAssignment_4_1"
-    // InternalBomi.g:7901:1: rule__BoundaryObject__SuperTypeAssignment_4_1 : ( ruleBOSuperTypes ) ;
+    // InternalBomi.g:8349:1: rule__BoundaryObject__SuperTypeAssignment_4_1 : ( ruleBOSuperTypes ) ;
     public final void rule__BoundaryObject__SuperTypeAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7905:1: ( ( ruleBOSuperTypes ) )
-            // InternalBomi.g:7906:2: ( ruleBOSuperTypes )
+            // InternalBomi.g:8353:1: ( ( ruleBOSuperTypes ) )
+            // InternalBomi.g:8354:2: ( ruleBOSuperTypes )
             {
-            // InternalBomi.g:7906:2: ( ruleBOSuperTypes )
-            // InternalBomi.g:7907:3: ruleBOSuperTypes
+            // InternalBomi.g:8354:2: ( ruleBOSuperTypes )
+            // InternalBomi.g:8355:3: ruleBOSuperTypes
             {
              before(grammarAccess.getBoundaryObjectAccess().getSuperTypeBOSuperTypesEnumRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24256,17 +25678,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__PurposeAssignment_5_1"
-    // InternalBomi.g:7916:1: rule__BoundaryObject__PurposeAssignment_5_1 : ( ruleEString ) ;
+    // InternalBomi.g:8364:1: rule__BoundaryObject__PurposeAssignment_5_1 : ( ruleEString ) ;
     public final void rule__BoundaryObject__PurposeAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7920:1: ( ( ruleEString ) )
-            // InternalBomi.g:7921:2: ( ruleEString )
+            // InternalBomi.g:8368:1: ( ( ruleEString ) )
+            // InternalBomi.g:8369:2: ( ruleEString )
             {
-            // InternalBomi.g:7921:2: ( ruleEString )
-            // InternalBomi.g:7922:3: ruleEString
+            // InternalBomi.g:8369:2: ( ruleEString )
+            // InternalBomi.g:8370:3: ruleEString
             {
              before(grammarAccess.getBoundaryObjectAccess().getPurposeEStringParserRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24297,17 +25719,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__LevelOfDetailAssignment_6_1"
-    // InternalBomi.g:7931:1: rule__BoundaryObject__LevelOfDetailAssignment_6_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8379:1: rule__BoundaryObject__LevelOfDetailAssignment_6_1 : ( ruleHighLow ) ;
     public final void rule__BoundaryObject__LevelOfDetailAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7935:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:7936:2: ( ruleHighLow )
+            // InternalBomi.g:8383:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8384:2: ( ruleHighLow )
             {
-            // InternalBomi.g:7936:2: ( ruleHighLow )
-            // InternalBomi.g:7937:3: ruleHighLow
+            // InternalBomi.g:8384:2: ( ruleHighLow )
+            // InternalBomi.g:8385:3: ruleHighLow
             {
              before(grammarAccess.getBoundaryObjectAccess().getLevelOfDetailHighLowEnumRuleCall_6_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24338,17 +25760,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__FrequencyOfChangeAssignment_7_1"
-    // InternalBomi.g:7946:1: rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8394:1: rule__BoundaryObject__FrequencyOfChangeAssignment_7_1 : ( ruleHighLow ) ;
     public final void rule__BoundaryObject__FrequencyOfChangeAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7950:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:7951:2: ( ruleHighLow )
+            // InternalBomi.g:8398:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8399:2: ( ruleHighLow )
             {
-            // InternalBomi.g:7951:2: ( ruleHighLow )
-            // InternalBomi.g:7952:3: ruleHighLow
+            // InternalBomi.g:8399:2: ( ruleHighLow )
+            // InternalBomi.g:8400:3: ruleHighLow
             {
              before(grammarAccess.getBoundaryObjectAccess().getFrequencyOfChangeHighLowEnumRuleCall_7_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24379,17 +25801,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__ModularityAssignment_8_1"
-    // InternalBomi.g:7961:1: rule__BoundaryObject__ModularityAssignment_8_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8409:1: rule__BoundaryObject__ModularityAssignment_8_1 : ( ruleHighLow ) ;
     public final void rule__BoundaryObject__ModularityAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7965:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:7966:2: ( ruleHighLow )
+            // InternalBomi.g:8413:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8414:2: ( ruleHighLow )
             {
-            // InternalBomi.g:7966:2: ( ruleHighLow )
-            // InternalBomi.g:7967:3: ruleHighLow
+            // InternalBomi.g:8414:2: ( ruleHighLow )
+            // InternalBomi.g:8415:3: ruleHighLow
             {
              before(grammarAccess.getBoundaryObjectAccess().getModularityHighLowEnumRuleCall_8_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24420,17 +25842,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__MaintainabilityAssignment_9_1"
-    // InternalBomi.g:7976:1: rule__BoundaryObject__MaintainabilityAssignment_9_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8424:1: rule__BoundaryObject__MaintainabilityAssignment_9_1 : ( ruleHighLow ) ;
     public final void rule__BoundaryObject__MaintainabilityAssignment_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7980:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:7981:2: ( ruleHighLow )
+            // InternalBomi.g:8428:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8429:2: ( ruleHighLow )
             {
-            // InternalBomi.g:7981:2: ( ruleHighLow )
-            // InternalBomi.g:7982:3: ruleHighLow
+            // InternalBomi.g:8429:2: ( ruleHighLow )
+            // InternalBomi.g:8430:3: ruleHighLow
             {
              before(grammarAccess.getBoundaryObjectAccess().getMaintainabilityHighLowEnumRuleCall_9_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24461,17 +25883,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__PrescriptiveAssignment_10_1"
-    // InternalBomi.g:7991:1: rule__BoundaryObject__PrescriptiveAssignment_10_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8439:1: rule__BoundaryObject__PrescriptiveAssignment_10_1 : ( ruleHighLow ) ;
     public final void rule__BoundaryObject__PrescriptiveAssignment_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:7995:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:7996:2: ( ruleHighLow )
+            // InternalBomi.g:8443:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8444:2: ( ruleHighLow )
             {
-            // InternalBomi.g:7996:2: ( ruleHighLow )
-            // InternalBomi.g:7997:3: ruleHighLow
+            // InternalBomi.g:8444:2: ( ruleHighLow )
+            // InternalBomi.g:8445:3: ruleHighLow
             {
              before(grammarAccess.getBoundaryObjectAccess().getPrescriptiveHighLowEnumRuleCall_10_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24502,17 +25924,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__LifecycleStageAssignment_11_1"
-    // InternalBomi.g:8006:1: rule__BoundaryObject__LifecycleStageAssignment_11_1 : ( ruleLifecycleStage ) ;
+    // InternalBomi.g:8454:1: rule__BoundaryObject__LifecycleStageAssignment_11_1 : ( ruleLifecycleStage ) ;
     public final void rule__BoundaryObject__LifecycleStageAssignment_11_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8010:1: ( ( ruleLifecycleStage ) )
-            // InternalBomi.g:8011:2: ( ruleLifecycleStage )
+            // InternalBomi.g:8458:1: ( ( ruleLifecycleStage ) )
+            // InternalBomi.g:8459:2: ( ruleLifecycleStage )
             {
-            // InternalBomi.g:8011:2: ( ruleLifecycleStage )
-            // InternalBomi.g:8012:3: ruleLifecycleStage
+            // InternalBomi.g:8459:2: ( ruleLifecycleStage )
+            // InternalBomi.g:8460:3: ruleLifecycleStage
             {
              before(grammarAccess.getBoundaryObjectAccess().getLifecycleStageLifecycleStageEnumRuleCall_11_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24543,17 +25965,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__RepresentationFormatAssignment_12_1"
-    // InternalBomi.g:8021:1: rule__BoundaryObject__RepresentationFormatAssignment_12_1 : ( ruleEString ) ;
+    // InternalBomi.g:8469:1: rule__BoundaryObject__RepresentationFormatAssignment_12_1 : ( ruleEString ) ;
     public final void rule__BoundaryObject__RepresentationFormatAssignment_12_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8025:1: ( ( ruleEString ) )
-            // InternalBomi.g:8026:2: ( ruleEString )
+            // InternalBomi.g:8473:1: ( ( ruleEString ) )
+            // InternalBomi.g:8474:2: ( ruleEString )
             {
-            // InternalBomi.g:8026:2: ( ruleEString )
-            // InternalBomi.g:8027:3: ruleEString
+            // InternalBomi.g:8474:2: ( ruleEString )
+            // InternalBomi.g:8475:3: ruleEString
             {
              before(grammarAccess.getBoundaryObjectAccess().getRepresentationFormatEStringParserRuleCall_12_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24584,17 +26006,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__ToolingAssignment_13_1"
-    // InternalBomi.g:8036:1: rule__BoundaryObject__ToolingAssignment_13_1 : ( ruleEString ) ;
+    // InternalBomi.g:8484:1: rule__BoundaryObject__ToolingAssignment_13_1 : ( ruleEString ) ;
     public final void rule__BoundaryObject__ToolingAssignment_13_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8040:1: ( ( ruleEString ) )
-            // InternalBomi.g:8041:2: ( ruleEString )
+            // InternalBomi.g:8488:1: ( ( ruleEString ) )
+            // InternalBomi.g:8489:2: ( ruleEString )
             {
-            // InternalBomi.g:8041:2: ( ruleEString )
-            // InternalBomi.g:8042:3: ruleEString
+            // InternalBomi.g:8489:2: ( ruleEString )
+            // InternalBomi.g:8490:3: ruleEString
             {
              before(grammarAccess.getBoundaryObjectAccess().getToolingEStringParserRuleCall_13_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24625,17 +26047,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__VersioningAssignment_14_1"
-    // InternalBomi.g:8051:1: rule__BoundaryObject__VersioningAssignment_14_1 : ( ruleEString ) ;
+    // InternalBomi.g:8499:1: rule__BoundaryObject__VersioningAssignment_14_1 : ( ruleEString ) ;
     public final void rule__BoundaryObject__VersioningAssignment_14_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8055:1: ( ( ruleEString ) )
-            // InternalBomi.g:8056:2: ( ruleEString )
+            // InternalBomi.g:8503:1: ( ( ruleEString ) )
+            // InternalBomi.g:8504:2: ( ruleEString )
             {
-            // InternalBomi.g:8056:2: ( ruleEString )
-            // InternalBomi.g:8057:3: ruleEString
+            // InternalBomi.g:8504:2: ( ruleEString )
+            // InternalBomi.g:8505:3: ruleEString
             {
              before(grammarAccess.getBoundaryObjectAccess().getVersioningEStringParserRuleCall_14_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24666,17 +26088,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__UpToDateAssignment_15_1"
-    // InternalBomi.g:8066:1: rule__BoundaryObject__UpToDateAssignment_15_1 : ( ruleEString ) ;
+    // InternalBomi.g:8514:1: rule__BoundaryObject__UpToDateAssignment_15_1 : ( ruleEString ) ;
     public final void rule__BoundaryObject__UpToDateAssignment_15_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8070:1: ( ( ruleEString ) )
-            // InternalBomi.g:8071:2: ( ruleEString )
+            // InternalBomi.g:8518:1: ( ( ruleEString ) )
+            // InternalBomi.g:8519:2: ( ruleEString )
             {
-            // InternalBomi.g:8071:2: ( ruleEString )
-            // InternalBomi.g:8072:3: ruleEString
+            // InternalBomi.g:8519:2: ( ruleEString )
+            // InternalBomi.g:8520:3: ruleEString
             {
              before(grammarAccess.getBoundaryObjectAccess().getUpToDateEStringParserRuleCall_15_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24707,17 +26129,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__InternalConsistencyAssignment_16_1"
-    // InternalBomi.g:8081:1: rule__BoundaryObject__InternalConsistencyAssignment_16_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8529:1: rule__BoundaryObject__InternalConsistencyAssignment_16_1 : ( ruleHighLow ) ;
     public final void rule__BoundaryObject__InternalConsistencyAssignment_16_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8085:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8086:2: ( ruleHighLow )
+            // InternalBomi.g:8533:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8534:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8086:2: ( ruleHighLow )
-            // InternalBomi.g:8087:3: ruleHighLow
+            // InternalBomi.g:8534:2: ( ruleHighLow )
+            // InternalBomi.g:8535:3: ruleHighLow
             {
              before(grammarAccess.getBoundaryObjectAccess().getInternalConsistencyHighLowEnumRuleCall_16_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24748,17 +26170,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundaryObject__ExternalConsistencyAssignment_17_1"
-    // InternalBomi.g:8096:1: rule__BoundaryObject__ExternalConsistencyAssignment_17_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8544:1: rule__BoundaryObject__ExternalConsistencyAssignment_17_1 : ( ruleHighLow ) ;
     public final void rule__BoundaryObject__ExternalConsistencyAssignment_17_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8100:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8101:2: ( ruleHighLow )
+            // InternalBomi.g:8548:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8549:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8101:2: ( ruleHighLow )
-            // InternalBomi.g:8102:3: ruleHighLow
+            // InternalBomi.g:8549:2: ( ruleHighLow )
+            // InternalBomi.g:8550:3: ruleHighLow
             {
              before(grammarAccess.getBoundaryObjectAccess().getExternalConsistencyHighLowEnumRuleCall_17_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24789,17 +26211,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__NameAssignment_2"
-    // InternalBomi.g:8111:1: rule__MethodologicalIsland__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBomi.g:8559:1: rule__MethodologicalIsland__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__MethodologicalIsland__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8115:1: ( ( ruleEString ) )
-            // InternalBomi.g:8116:2: ( ruleEString )
+            // InternalBomi.g:8563:1: ( ( ruleEString ) )
+            // InternalBomi.g:8564:2: ( ruleEString )
             {
-            // InternalBomi.g:8116:2: ( ruleEString )
-            // InternalBomi.g:8117:3: ruleEString
+            // InternalBomi.g:8564:2: ( ruleEString )
+            // InternalBomi.g:8565:3: ruleEString
             {
              before(grammarAccess.getMethodologicalIslandAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -24830,17 +26252,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodologicalIsland__TypeAssignment_4_1"
-    // InternalBomi.g:8126:1: rule__MethodologicalIsland__TypeAssignment_4_1 : ( ruleMIType ) ;
+    // InternalBomi.g:8574:1: rule__MethodologicalIsland__TypeAssignment_4_1 : ( ruleMIType ) ;
     public final void rule__MethodologicalIsland__TypeAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8130:1: ( ( ruleMIType ) )
-            // InternalBomi.g:8131:2: ( ruleMIType )
+            // InternalBomi.g:8578:1: ( ( ruleMIType ) )
+            // InternalBomi.g:8579:2: ( ruleMIType )
             {
-            // InternalBomi.g:8131:2: ( ruleMIType )
-            // InternalBomi.g:8132:3: ruleMIType
+            // InternalBomi.g:8579:2: ( ruleMIType )
+            // InternalBomi.g:8580:3: ruleMIType
             {
              before(grammarAccess.getMethodologicalIslandAccess().getTypeMITypeEnumRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24871,17 +26293,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GovernanceTeam__NameAssignment_2"
-    // InternalBomi.g:8141:1: rule__GovernanceTeam__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBomi.g:8589:1: rule__GovernanceTeam__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__GovernanceTeam__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8145:1: ( ( ruleEString ) )
-            // InternalBomi.g:8146:2: ( ruleEString )
+            // InternalBomi.g:8593:1: ( ( ruleEString ) )
+            // InternalBomi.g:8594:2: ( ruleEString )
             {
-            // InternalBomi.g:8146:2: ( ruleEString )
-            // InternalBomi.g:8147:3: ruleEString
+            // InternalBomi.g:8594:2: ( ruleEString )
+            // InternalBomi.g:8595:3: ruleEString
             {
              before(grammarAccess.getGovernanceTeamAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -24912,17 +26334,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__NameAssignment_2"
-    // InternalBomi.g:8156:1: rule__Role__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBomi.g:8604:1: rule__Role__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Role__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8160:1: ( ( ruleEString ) )
-            // InternalBomi.g:8161:2: ( ruleEString )
+            // InternalBomi.g:8608:1: ( ( ruleEString ) )
+            // InternalBomi.g:8609:2: ( ruleEString )
             {
-            // InternalBomi.g:8161:2: ( ruleEString )
-            // InternalBomi.g:8162:3: ruleEString
+            // InternalBomi.g:8609:2: ( ruleEString )
+            // InternalBomi.g:8610:3: ruleEString
             {
              before(grammarAccess.getRoleAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -24953,21 +26375,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__PartOfGovernanceTeamsAssignment_4_2"
-    // InternalBomi.g:8171:1: rule__Role__PartOfGovernanceTeamsAssignment_4_2 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:8619:1: rule__Role__PartOfGovernanceTeamsAssignment_4_2 : ( ( ruleEString ) ) ;
     public final void rule__Role__PartOfGovernanceTeamsAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8175:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8176:2: ( ( ruleEString ) )
+            // InternalBomi.g:8623:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:8624:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8176:2: ( ( ruleEString ) )
-            // InternalBomi.g:8177:3: ( ruleEString )
+            // InternalBomi.g:8624:2: ( ( ruleEString ) )
+            // InternalBomi.g:8625:3: ( ruleEString )
             {
              before(grammarAccess.getRoleAccess().getPartOfGovernanceTeamsGovernanceTeamCrossReference_4_2_0()); 
-            // InternalBomi.g:8178:3: ( ruleEString )
-            // InternalBomi.g:8179:4: ruleEString
+            // InternalBomi.g:8626:3: ( ruleEString )
+            // InternalBomi.g:8627:4: ruleEString
             {
              before(grammarAccess.getRoleAccess().getPartOfGovernanceTeamsGovernanceTeamEStringParserRuleCall_4_2_0_1()); 
             pushFollow(FOLLOW_2);
@@ -25002,21 +26424,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__PartOfGovernanceTeamsAssignment_4_3_1"
-    // InternalBomi.g:8190:1: rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:8638:1: rule__Role__PartOfGovernanceTeamsAssignment_4_3_1 : ( ( ruleEString ) ) ;
     public final void rule__Role__PartOfGovernanceTeamsAssignment_4_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8194:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8195:2: ( ( ruleEString ) )
+            // InternalBomi.g:8642:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:8643:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8195:2: ( ( ruleEString ) )
-            // InternalBomi.g:8196:3: ( ruleEString )
+            // InternalBomi.g:8643:2: ( ( ruleEString ) )
+            // InternalBomi.g:8644:3: ( ruleEString )
             {
              before(grammarAccess.getRoleAccess().getPartOfGovernanceTeamsGovernanceTeamCrossReference_4_3_1_0()); 
-            // InternalBomi.g:8197:3: ( ruleEString )
-            // InternalBomi.g:8198:4: ruleEString
+            // InternalBomi.g:8645:3: ( ruleEString )
+            // InternalBomi.g:8646:4: ruleEString
             {
              before(grammarAccess.getRoleAccess().getPartOfGovernanceTeamsGovernanceTeamEStringParserRuleCall_4_3_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -25051,21 +26473,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__PartOfMIsAssignment_5_2"
-    // InternalBomi.g:8209:1: rule__Role__PartOfMIsAssignment_5_2 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:8657:1: rule__Role__PartOfMIsAssignment_5_2 : ( ( ruleEString ) ) ;
     public final void rule__Role__PartOfMIsAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8213:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8214:2: ( ( ruleEString ) )
+            // InternalBomi.g:8661:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:8662:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8214:2: ( ( ruleEString ) )
-            // InternalBomi.g:8215:3: ( ruleEString )
+            // InternalBomi.g:8662:2: ( ( ruleEString ) )
+            // InternalBomi.g:8663:3: ( ruleEString )
             {
              before(grammarAccess.getRoleAccess().getPartOfMIsMethodologicalIslandCrossReference_5_2_0()); 
-            // InternalBomi.g:8216:3: ( ruleEString )
-            // InternalBomi.g:8217:4: ruleEString
+            // InternalBomi.g:8664:3: ( ruleEString )
+            // InternalBomi.g:8665:4: ruleEString
             {
              before(grammarAccess.getRoleAccess().getPartOfMIsMethodologicalIslandEStringParserRuleCall_5_2_0_1()); 
             pushFollow(FOLLOW_2);
@@ -25100,21 +26522,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__PartOfMIsAssignment_5_3_1"
-    // InternalBomi.g:8228:1: rule__Role__PartOfMIsAssignment_5_3_1 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:8676:1: rule__Role__PartOfMIsAssignment_5_3_1 : ( ( ruleEString ) ) ;
     public final void rule__Role__PartOfMIsAssignment_5_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8232:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8233:2: ( ( ruleEString ) )
+            // InternalBomi.g:8680:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:8681:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8233:2: ( ( ruleEString ) )
-            // InternalBomi.g:8234:3: ( ruleEString )
+            // InternalBomi.g:8681:2: ( ( ruleEString ) )
+            // InternalBomi.g:8682:3: ( ruleEString )
             {
              before(grammarAccess.getRoleAccess().getPartOfMIsMethodologicalIslandCrossReference_5_3_1_0()); 
-            // InternalBomi.g:8235:3: ( ruleEString )
-            // InternalBomi.g:8236:4: ruleEString
+            // InternalBomi.g:8683:3: ( ruleEString )
+            // InternalBomi.g:8684:4: ruleEString
             {
              before(grammarAccess.getRoleAccess().getPartOfMIsMethodologicalIslandEStringParserRuleCall_5_3_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -25149,17 +26571,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__NameAssignment_2"
-    // InternalBomi.g:8247:1: rule__Driver__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBomi.g:8695:1: rule__Driver__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Driver__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8251:1: ( ( ruleEString ) )
-            // InternalBomi.g:8252:2: ( ruleEString )
+            // InternalBomi.g:8699:1: ( ( ruleEString ) )
+            // InternalBomi.g:8700:2: ( ruleEString )
             {
-            // InternalBomi.g:8252:2: ( ruleEString )
-            // InternalBomi.g:8253:3: ruleEString
+            // InternalBomi.g:8700:2: ( ruleEString )
+            // InternalBomi.g:8701:3: ruleEString
             {
              before(grammarAccess.getDriverAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -25190,17 +26612,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__DriverTypeAssignment_4_1"
-    // InternalBomi.g:8262:1: rule__Driver__DriverTypeAssignment_4_1 : ( ruleDriverTypes ) ;
+    // InternalBomi.g:8710:1: rule__Driver__DriverTypeAssignment_4_1 : ( ruleDriverTypes ) ;
     public final void rule__Driver__DriverTypeAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8266:1: ( ( ruleDriverTypes ) )
-            // InternalBomi.g:8267:2: ( ruleDriverTypes )
+            // InternalBomi.g:8714:1: ( ( ruleDriverTypes ) )
+            // InternalBomi.g:8715:2: ( ruleDriverTypes )
             {
-            // InternalBomi.g:8267:2: ( ruleDriverTypes )
-            // InternalBomi.g:8268:3: ruleDriverTypes
+            // InternalBomi.g:8715:2: ( ruleDriverTypes )
+            // InternalBomi.g:8716:3: ruleDriverTypes
             {
              before(grammarAccess.getDriverAccess().getDriverTypeDriverTypesEnumRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25231,17 +26653,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__DistanceTypeAssignment_5_1"
-    // InternalBomi.g:8277:1: rule__Driver__DistanceTypeAssignment_5_1 : ( ruleDistanceTypes ) ;
+    // InternalBomi.g:8725:1: rule__Driver__DistanceTypeAssignment_5_1 : ( ruleDistanceTypes ) ;
     public final void rule__Driver__DistanceTypeAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8281:1: ( ( ruleDistanceTypes ) )
-            // InternalBomi.g:8282:2: ( ruleDistanceTypes )
+            // InternalBomi.g:8729:1: ( ( ruleDistanceTypes ) )
+            // InternalBomi.g:8730:2: ( ruleDistanceTypes )
             {
-            // InternalBomi.g:8282:2: ( ruleDistanceTypes )
-            // InternalBomi.g:8283:3: ruleDistanceTypes
+            // InternalBomi.g:8730:2: ( ruleDistanceTypes )
+            // InternalBomi.g:8731:3: ruleDistanceTypes
             {
              before(grammarAccess.getDriverAccess().getDistanceTypeDistanceTypesEnumRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25272,17 +26694,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__DistanceSizeAssignment_6_1"
-    // InternalBomi.g:8292:1: rule__Driver__DistanceSizeAssignment_6_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8740:1: rule__Driver__DistanceSizeAssignment_6_1 : ( ruleHighLow ) ;
     public final void rule__Driver__DistanceSizeAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8296:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8297:2: ( ruleHighLow )
+            // InternalBomi.g:8744:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8745:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8297:2: ( ruleHighLow )
-            // InternalBomi.g:8298:3: ruleHighLow
+            // InternalBomi.g:8745:2: ( ruleHighLow )
+            // InternalBomi.g:8746:3: ruleHighLow
             {
              before(grammarAccess.getDriverAccess().getDistanceSizeHighLowEnumRuleCall_6_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25313,21 +26735,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__DrivesMIsAssignment_7_2"
-    // InternalBomi.g:8307:1: rule__Driver__DrivesMIsAssignment_7_2 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:8755:1: rule__Driver__DrivesMIsAssignment_7_2 : ( ( ruleEString ) ) ;
     public final void rule__Driver__DrivesMIsAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8311:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8312:2: ( ( ruleEString ) )
+            // InternalBomi.g:8759:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:8760:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8312:2: ( ( ruleEString ) )
-            // InternalBomi.g:8313:3: ( ruleEString )
+            // InternalBomi.g:8760:2: ( ( ruleEString ) )
+            // InternalBomi.g:8761:3: ( ruleEString )
             {
              before(grammarAccess.getDriverAccess().getDrivesMIsMethodologicalIslandCrossReference_7_2_0()); 
-            // InternalBomi.g:8314:3: ( ruleEString )
-            // InternalBomi.g:8315:4: ruleEString
+            // InternalBomi.g:8762:3: ( ruleEString )
+            // InternalBomi.g:8763:4: ruleEString
             {
              before(grammarAccess.getDriverAccess().getDrivesMIsMethodologicalIslandEStringParserRuleCall_7_2_0_1()); 
             pushFollow(FOLLOW_2);
@@ -25362,21 +26784,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Driver__DrivesMIsAssignment_7_3_1"
-    // InternalBomi.g:8326:1: rule__Driver__DrivesMIsAssignment_7_3_1 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:8774:1: rule__Driver__DrivesMIsAssignment_7_3_1 : ( ( ruleEString ) ) ;
     public final void rule__Driver__DrivesMIsAssignment_7_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8330:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8331:2: ( ( ruleEString ) )
+            // InternalBomi.g:8778:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:8779:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8331:2: ( ( ruleEString ) )
-            // InternalBomi.g:8332:3: ( ruleEString )
+            // InternalBomi.g:8779:2: ( ( ruleEString ) )
+            // InternalBomi.g:8780:3: ( ruleEString )
             {
              before(grammarAccess.getDriverAccess().getDrivesMIsMethodologicalIslandCrossReference_7_3_1_0()); 
-            // InternalBomi.g:8333:3: ( ruleEString )
-            // InternalBomi.g:8334:4: ruleEString
+            // InternalBomi.g:8781:3: ( ruleEString )
+            // InternalBomi.g:8782:4: ruleEString
             {
              before(grammarAccess.getDriverAccess().getDrivesMIsMethodologicalIslandEStringParserRuleCall_7_3_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -25411,17 +26833,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__NameAssignment_2"
-    // InternalBomi.g:8345:1: rule__BOMICoordination__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBomi.g:8793:1: rule__BOMICoordination__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__BOMICoordination__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8349:1: ( ( ruleEString ) )
-            // InternalBomi.g:8350:2: ( ruleEString )
+            // InternalBomi.g:8797:1: ( ( ruleEString ) )
+            // InternalBomi.g:8798:2: ( ruleEString )
             {
-            // InternalBomi.g:8350:2: ( ruleEString )
-            // InternalBomi.g:8351:3: ruleEString
+            // InternalBomi.g:8798:2: ( ruleEString )
+            // InternalBomi.g:8799:3: ruleEString
             {
              before(grammarAccess.getBOMICoordinationAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -25452,17 +26874,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__PurposeAssignment_4_1"
-    // InternalBomi.g:8360:1: rule__BOMICoordination__PurposeAssignment_4_1 : ( ruleEString ) ;
+    // InternalBomi.g:8808:1: rule__BOMICoordination__PurposeAssignment_4_1 : ( ruleEString ) ;
     public final void rule__BOMICoordination__PurposeAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8364:1: ( ( ruleEString ) )
-            // InternalBomi.g:8365:2: ( ruleEString )
+            // InternalBomi.g:8812:1: ( ( ruleEString ) )
+            // InternalBomi.g:8813:2: ( ruleEString )
             {
-            // InternalBomi.g:8365:2: ( ruleEString )
-            // InternalBomi.g:8366:3: ruleEString
+            // InternalBomi.g:8813:2: ( ruleEString )
+            // InternalBomi.g:8814:3: ruleEString
             {
              before(grammarAccess.getBOMICoordinationAccess().getPurposeEStringParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25493,17 +26915,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__AccessabilityAssignment_5_1"
-    // InternalBomi.g:8375:1: rule__BOMICoordination__AccessabilityAssignment_5_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8823:1: rule__BOMICoordination__AccessabilityAssignment_5_1 : ( ruleHighLow ) ;
     public final void rule__BOMICoordination__AccessabilityAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8379:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8380:2: ( ruleHighLow )
+            // InternalBomi.g:8827:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8828:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8380:2: ( ruleHighLow )
-            // InternalBomi.g:8381:3: ruleHighLow
+            // InternalBomi.g:8828:2: ( ruleHighLow )
+            // InternalBomi.g:8829:3: ruleHighLow
             {
              before(grammarAccess.getBOMICoordinationAccess().getAccessabilityHighLowEnumRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25534,17 +26956,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__StabilityAssignment_6_1"
-    // InternalBomi.g:8390:1: rule__BOMICoordination__StabilityAssignment_6_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8838:1: rule__BOMICoordination__StabilityAssignment_6_1 : ( ruleHighLow ) ;
     public final void rule__BOMICoordination__StabilityAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8394:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8395:2: ( ruleHighLow )
+            // InternalBomi.g:8842:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8843:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8395:2: ( ruleHighLow )
-            // InternalBomi.g:8396:3: ruleHighLow
+            // InternalBomi.g:8843:2: ( ruleHighLow )
+            // InternalBomi.g:8844:3: ruleHighLow
             {
              before(grammarAccess.getBOMICoordinationAccess().getStabilityHighLowEnumRuleCall_6_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25575,17 +26997,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__CriticalityAssignment_7_1"
-    // InternalBomi.g:8405:1: rule__BOMICoordination__CriticalityAssignment_7_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8853:1: rule__BOMICoordination__CriticalityAssignment_7_1 : ( ruleHighLow ) ;
     public final void rule__BOMICoordination__CriticalityAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8409:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8410:2: ( ruleHighLow )
+            // InternalBomi.g:8857:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8858:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8410:2: ( ruleHighLow )
-            // InternalBomi.g:8411:3: ruleHighLow
+            // InternalBomi.g:8858:2: ( ruleHighLow )
+            // InternalBomi.g:8859:3: ruleHighLow
             {
              before(grammarAccess.getBOMICoordinationAccess().getCriticalityHighLowEnumRuleCall_7_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25616,17 +27038,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__FitForPurposeAssignment_8_1"
-    // InternalBomi.g:8420:1: rule__BOMICoordination__FitForPurposeAssignment_8_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8868:1: rule__BOMICoordination__FitForPurposeAssignment_8_1 : ( ruleHighLow ) ;
     public final void rule__BOMICoordination__FitForPurposeAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8424:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8425:2: ( ruleHighLow )
+            // InternalBomi.g:8872:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8873:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8425:2: ( ruleHighLow )
-            // InternalBomi.g:8426:3: ruleHighLow
+            // InternalBomi.g:8873:2: ( ruleHighLow )
+            // InternalBomi.g:8874:3: ruleHighLow
             {
              before(grammarAccess.getBOMICoordinationAccess().getFitForPurposeHighLowEnumRuleCall_8_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25657,21 +27079,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__BoundaryObjectsAssignment_9_2"
-    // InternalBomi.g:8435:1: rule__BOMICoordination__BoundaryObjectsAssignment_9_2 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:8883:1: rule__BOMICoordination__BoundaryObjectsAssignment_9_2 : ( ( ruleEString ) ) ;
     public final void rule__BOMICoordination__BoundaryObjectsAssignment_9_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8439:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8440:2: ( ( ruleEString ) )
+            // InternalBomi.g:8887:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:8888:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8440:2: ( ( ruleEString ) )
-            // InternalBomi.g:8441:3: ( ruleEString )
+            // InternalBomi.g:8888:2: ( ( ruleEString ) )
+            // InternalBomi.g:8889:3: ( ruleEString )
             {
              before(grammarAccess.getBOMICoordinationAccess().getBoundaryObjectsBoundaryObjectCrossReference_9_2_0()); 
-            // InternalBomi.g:8442:3: ( ruleEString )
-            // InternalBomi.g:8443:4: ruleEString
+            // InternalBomi.g:8890:3: ( ruleEString )
+            // InternalBomi.g:8891:4: ruleEString
             {
              before(grammarAccess.getBOMICoordinationAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_9_2_0_1()); 
             pushFollow(FOLLOW_2);
@@ -25706,21 +27128,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1"
-    // InternalBomi.g:8454:1: rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:8902:1: rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1 : ( ( ruleEString ) ) ;
     public final void rule__BOMICoordination__BoundaryObjectsAssignment_9_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8458:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8459:2: ( ( ruleEString ) )
+            // InternalBomi.g:8906:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:8907:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8459:2: ( ( ruleEString ) )
-            // InternalBomi.g:8460:3: ( ruleEString )
+            // InternalBomi.g:8907:2: ( ( ruleEString ) )
+            // InternalBomi.g:8908:3: ( ruleEString )
             {
              before(grammarAccess.getBOMICoordinationAccess().getBoundaryObjectsBoundaryObjectCrossReference_9_3_1_0()); 
-            // InternalBomi.g:8461:3: ( ruleEString )
-            // InternalBomi.g:8462:4: ruleEString
+            // InternalBomi.g:8909:3: ( ruleEString )
+            // InternalBomi.g:8910:4: ruleEString
             {
              before(grammarAccess.getBOMICoordinationAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_9_3_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -25755,21 +27177,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__MethodologicalIslandsAssignment_10_2"
-    // InternalBomi.g:8473:1: rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:8921:1: rule__BOMICoordination__MethodologicalIslandsAssignment_10_2 : ( ( ruleEString ) ) ;
     public final void rule__BOMICoordination__MethodologicalIslandsAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8477:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8478:2: ( ( ruleEString ) )
+            // InternalBomi.g:8925:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:8926:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8478:2: ( ( ruleEString ) )
-            // InternalBomi.g:8479:3: ( ruleEString )
+            // InternalBomi.g:8926:2: ( ( ruleEString ) )
+            // InternalBomi.g:8927:3: ( ruleEString )
             {
              before(grammarAccess.getBOMICoordinationAccess().getMethodologicalIslandsMethodologicalIslandCrossReference_10_2_0()); 
-            // InternalBomi.g:8480:3: ( ruleEString )
-            // InternalBomi.g:8481:4: ruleEString
+            // InternalBomi.g:8928:3: ( ruleEString )
+            // InternalBomi.g:8929:4: ruleEString
             {
              before(grammarAccess.getBOMICoordinationAccess().getMethodologicalIslandsMethodologicalIslandEStringParserRuleCall_10_2_0_1()); 
             pushFollow(FOLLOW_2);
@@ -25804,21 +27226,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1"
-    // InternalBomi.g:8492:1: rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:8940:1: rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1 : ( ( ruleEString ) ) ;
     public final void rule__BOMICoordination__MethodologicalIslandsAssignment_10_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8496:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8497:2: ( ( ruleEString ) )
+            // InternalBomi.g:8944:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:8945:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8497:2: ( ( ruleEString ) )
-            // InternalBomi.g:8498:3: ( ruleEString )
+            // InternalBomi.g:8945:2: ( ( ruleEString ) )
+            // InternalBomi.g:8946:3: ( ruleEString )
             {
              before(grammarAccess.getBOMICoordinationAccess().getMethodologicalIslandsMethodologicalIslandCrossReference_10_3_1_0()); 
-            // InternalBomi.g:8499:3: ( ruleEString )
-            // InternalBomi.g:8500:4: ruleEString
+            // InternalBomi.g:8947:3: ( ruleEString )
+            // InternalBomi.g:8948:4: ruleEString
             {
              before(grammarAccess.getBOMICoordinationAccess().getMethodologicalIslandsMethodologicalIslandEStringParserRuleCall_10_3_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -25853,17 +27275,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__NameAssignment_2"
-    // InternalBomi.g:8511:1: rule__BORoleInteraction__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBomi.g:8959:1: rule__BORoleInteraction__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__BORoleInteraction__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8515:1: ( ( ruleEString ) )
-            // InternalBomi.g:8516:2: ( ruleEString )
+            // InternalBomi.g:8963:1: ( ( ruleEString ) )
+            // InternalBomi.g:8964:2: ( ruleEString )
             {
-            // InternalBomi.g:8516:2: ( ruleEString )
-            // InternalBomi.g:8517:3: ruleEString
+            // InternalBomi.g:8964:2: ( ruleEString )
+            // InternalBomi.g:8965:3: ruleEString
             {
              before(grammarAccess.getBORoleInteractionAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -25894,17 +27316,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__PurposeAssignment_4_1"
-    // InternalBomi.g:8526:1: rule__BORoleInteraction__PurposeAssignment_4_1 : ( ruleEString ) ;
+    // InternalBomi.g:8974:1: rule__BORoleInteraction__PurposeAssignment_4_1 : ( ruleEString ) ;
     public final void rule__BORoleInteraction__PurposeAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8530:1: ( ( ruleEString ) )
-            // InternalBomi.g:8531:2: ( ruleEString )
+            // InternalBomi.g:8978:1: ( ( ruleEString ) )
+            // InternalBomi.g:8979:2: ( ruleEString )
             {
-            // InternalBomi.g:8531:2: ( ruleEString )
-            // InternalBomi.g:8532:3: ruleEString
+            // InternalBomi.g:8979:2: ( ruleEString )
+            // InternalBomi.g:8980:3: ruleEString
             {
              before(grammarAccess.getBORoleInteractionAccess().getPurposeEStringParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25935,17 +27357,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__AccessabilityAssignment_5_1"
-    // InternalBomi.g:8541:1: rule__BORoleInteraction__AccessabilityAssignment_5_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:8989:1: rule__BORoleInteraction__AccessabilityAssignment_5_1 : ( ruleHighLow ) ;
     public final void rule__BORoleInteraction__AccessabilityAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8545:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8546:2: ( ruleHighLow )
+            // InternalBomi.g:8993:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:8994:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8546:2: ( ruleHighLow )
-            // InternalBomi.g:8547:3: ruleHighLow
+            // InternalBomi.g:8994:2: ( ruleHighLow )
+            // InternalBomi.g:8995:3: ruleHighLow
             {
              before(grammarAccess.getBORoleInteractionAccess().getAccessabilityHighLowEnumRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25976,17 +27398,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__StabilityAssignment_6_1"
-    // InternalBomi.g:8556:1: rule__BORoleInteraction__StabilityAssignment_6_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:9004:1: rule__BORoleInteraction__StabilityAssignment_6_1 : ( ruleHighLow ) ;
     public final void rule__BORoleInteraction__StabilityAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8560:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8561:2: ( ruleHighLow )
+            // InternalBomi.g:9008:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:9009:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8561:2: ( ruleHighLow )
-            // InternalBomi.g:8562:3: ruleHighLow
+            // InternalBomi.g:9009:2: ( ruleHighLow )
+            // InternalBomi.g:9010:3: ruleHighLow
             {
              before(grammarAccess.getBORoleInteractionAccess().getStabilityHighLowEnumRuleCall_6_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26017,17 +27439,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__CriticalityAssignment_7_1"
-    // InternalBomi.g:8571:1: rule__BORoleInteraction__CriticalityAssignment_7_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:9019:1: rule__BORoleInteraction__CriticalityAssignment_7_1 : ( ruleHighLow ) ;
     public final void rule__BORoleInteraction__CriticalityAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8575:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8576:2: ( ruleHighLow )
+            // InternalBomi.g:9023:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:9024:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8576:2: ( ruleHighLow )
-            // InternalBomi.g:8577:3: ruleHighLow
+            // InternalBomi.g:9024:2: ( ruleHighLow )
+            // InternalBomi.g:9025:3: ruleHighLow
             {
              before(grammarAccess.getBORoleInteractionAccess().getCriticalityHighLowEnumRuleCall_7_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26058,17 +27480,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BORoleInteraction__FitForPurposeAssignment_8_1"
-    // InternalBomi.g:8586:1: rule__BORoleInteraction__FitForPurposeAssignment_8_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:9034:1: rule__BORoleInteraction__FitForPurposeAssignment_8_1 : ( ruleHighLow ) ;
     public final void rule__BORoleInteraction__FitForPurposeAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8590:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8591:2: ( ruleHighLow )
+            // InternalBomi.g:9038:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:9039:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8591:2: ( ruleHighLow )
-            // InternalBomi.g:8592:3: ruleHighLow
+            // InternalBomi.g:9039:2: ( ruleHighLow )
+            // InternalBomi.g:9040:3: ruleHighLow
             {
              before(grammarAccess.getBORoleInteractionAccess().getFitForPurposeHighLowEnumRuleCall_8_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26098,34 +27520,26 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__BORoleInteraction__FitForPurposeAssignment_8_1"
 
 
-    // $ANTLR start "rule__BORoleInteraction__BoundaryObjectsAssignment_9_2"
-    // InternalBomi.g:8601:1: rule__BORoleInteraction__BoundaryObjectsAssignment_9_2 : ( ( ruleEString ) ) ;
-    public final void rule__BORoleInteraction__BoundaryObjectsAssignment_9_2() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__ResponsibleAssignment_9_1"
+    // InternalBomi.g:9049:1: rule__BORoleInteraction__ResponsibleAssignment_9_1 : ( ruleMyBoolean ) ;
+    public final void rule__BORoleInteraction__ResponsibleAssignment_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8605:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8606:2: ( ( ruleEString ) )
+            // InternalBomi.g:9053:1: ( ( ruleMyBoolean ) )
+            // InternalBomi.g:9054:2: ( ruleMyBoolean )
             {
-            // InternalBomi.g:8606:2: ( ( ruleEString ) )
-            // InternalBomi.g:8607:3: ( ruleEString )
+            // InternalBomi.g:9054:2: ( ruleMyBoolean )
+            // InternalBomi.g:9055:3: ruleMyBoolean
             {
-             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_9_2_0()); 
-            // InternalBomi.g:8608:3: ( ruleEString )
-            // InternalBomi.g:8609:4: ruleEString
-            {
-             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_9_2_0_1()); 
+             before(grammarAccess.getBORoleInteractionAccess().getResponsibleMyBooleanEnumRuleCall_9_1_0()); 
             pushFollow(FOLLOW_2);
-            ruleEString();
+            ruleMyBoolean();
 
             state._fsp--;
 
-             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_9_2_0_1()); 
-
-            }
-
-             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_9_2_0()); 
+             after(grammarAccess.getBORoleInteractionAccess().getResponsibleMyBooleanEnumRuleCall_9_1_0()); 
 
             }
 
@@ -26144,37 +27558,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__BoundaryObjectsAssignment_9_2"
+    // $ANTLR end "rule__BORoleInteraction__ResponsibleAssignment_9_1"
 
 
-    // $ANTLR start "rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1"
-    // InternalBomi.g:8620:1: rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1 : ( ( ruleEString ) ) ;
-    public final void rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__CreatesAssignment_10_1"
+    // InternalBomi.g:9064:1: rule__BORoleInteraction__CreatesAssignment_10_1 : ( ruleMyBoolean ) ;
+    public final void rule__BORoleInteraction__CreatesAssignment_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8624:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8625:2: ( ( ruleEString ) )
+            // InternalBomi.g:9068:1: ( ( ruleMyBoolean ) )
+            // InternalBomi.g:9069:2: ( ruleMyBoolean )
             {
-            // InternalBomi.g:8625:2: ( ( ruleEString ) )
-            // InternalBomi.g:8626:3: ( ruleEString )
+            // InternalBomi.g:9069:2: ( ruleMyBoolean )
+            // InternalBomi.g:9070:3: ruleMyBoolean
             {
-             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_9_3_1_0()); 
-            // InternalBomi.g:8627:3: ( ruleEString )
-            // InternalBomi.g:8628:4: ruleEString
-            {
-             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_9_3_1_0_1()); 
+             before(grammarAccess.getBORoleInteractionAccess().getCreatesMyBooleanEnumRuleCall_10_1_0()); 
             pushFollow(FOLLOW_2);
-            ruleEString();
+            ruleMyBoolean();
 
             state._fsp--;
 
-             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_9_3_1_0_1()); 
-
-            }
-
-             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_9_3_1_0()); 
+             after(grammarAccess.getBORoleInteractionAccess().getCreatesMyBooleanEnumRuleCall_10_1_0()); 
 
             }
 
@@ -26193,37 +27599,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__BoundaryObjectsAssignment_9_3_1"
+    // $ANTLR end "rule__BORoleInteraction__CreatesAssignment_10_1"
 
 
-    // $ANTLR start "rule__BORoleInteraction__RolesAssignment_10_2"
-    // InternalBomi.g:8639:1: rule__BORoleInteraction__RolesAssignment_10_2 : ( ( ruleEString ) ) ;
-    public final void rule__BORoleInteraction__RolesAssignment_10_2() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__ReadsAssignment_11_1"
+    // InternalBomi.g:9079:1: rule__BORoleInteraction__ReadsAssignment_11_1 : ( ruleMyBoolean ) ;
+    public final void rule__BORoleInteraction__ReadsAssignment_11_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8643:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8644:2: ( ( ruleEString ) )
+            // InternalBomi.g:9083:1: ( ( ruleMyBoolean ) )
+            // InternalBomi.g:9084:2: ( ruleMyBoolean )
             {
-            // InternalBomi.g:8644:2: ( ( ruleEString ) )
-            // InternalBomi.g:8645:3: ( ruleEString )
+            // InternalBomi.g:9084:2: ( ruleMyBoolean )
+            // InternalBomi.g:9085:3: ruleMyBoolean
             {
-             before(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_10_2_0()); 
-            // InternalBomi.g:8646:3: ( ruleEString )
-            // InternalBomi.g:8647:4: ruleEString
-            {
-             before(grammarAccess.getBORoleInteractionAccess().getRolesRoleEStringParserRuleCall_10_2_0_1()); 
+             before(grammarAccess.getBORoleInteractionAccess().getReadsMyBooleanEnumRuleCall_11_1_0()); 
             pushFollow(FOLLOW_2);
-            ruleEString();
+            ruleMyBoolean();
 
             state._fsp--;
 
-             after(grammarAccess.getBORoleInteractionAccess().getRolesRoleEStringParserRuleCall_10_2_0_1()); 
-
-            }
-
-             after(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_10_2_0()); 
+             after(grammarAccess.getBORoleInteractionAccess().getReadsMyBooleanEnumRuleCall_11_1_0()); 
 
             }
 
@@ -26242,37 +27640,29 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__RolesAssignment_10_2"
+    // $ANTLR end "rule__BORoleInteraction__ReadsAssignment_11_1"
 
 
-    // $ANTLR start "rule__BORoleInteraction__RolesAssignment_10_3_1"
-    // InternalBomi.g:8658:1: rule__BORoleInteraction__RolesAssignment_10_3_1 : ( ( ruleEString ) ) ;
-    public final void rule__BORoleInteraction__RolesAssignment_10_3_1() throws RecognitionException {
+    // $ANTLR start "rule__BORoleInteraction__UpdatesAssignment_12_1"
+    // InternalBomi.g:9094:1: rule__BORoleInteraction__UpdatesAssignment_12_1 : ( ruleMyBoolean ) ;
+    public final void rule__BORoleInteraction__UpdatesAssignment_12_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8662:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8663:2: ( ( ruleEString ) )
+            // InternalBomi.g:9098:1: ( ( ruleMyBoolean ) )
+            // InternalBomi.g:9099:2: ( ruleMyBoolean )
             {
-            // InternalBomi.g:8663:2: ( ( ruleEString ) )
-            // InternalBomi.g:8664:3: ( ruleEString )
+            // InternalBomi.g:9099:2: ( ruleMyBoolean )
+            // InternalBomi.g:9100:3: ruleMyBoolean
             {
-             before(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_10_3_1_0()); 
-            // InternalBomi.g:8665:3: ( ruleEString )
-            // InternalBomi.g:8666:4: ruleEString
-            {
-             before(grammarAccess.getBORoleInteractionAccess().getRolesRoleEStringParserRuleCall_10_3_1_0_1()); 
+             before(grammarAccess.getBORoleInteractionAccess().getUpdatesMyBooleanEnumRuleCall_12_1_0()); 
             pushFollow(FOLLOW_2);
-            ruleEString();
+            ruleMyBoolean();
 
             state._fsp--;
 
-             after(grammarAccess.getBORoleInteractionAccess().getRolesRoleEStringParserRuleCall_10_3_1_0_1()); 
-
-            }
-
-             after(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_10_3_1_0()); 
+             after(grammarAccess.getBORoleInteractionAccess().getUpdatesMyBooleanEnumRuleCall_12_1_0()); 
 
             }
 
@@ -26291,21 +27681,258 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BORoleInteraction__RolesAssignment_10_3_1"
+    // $ANTLR end "rule__BORoleInteraction__UpdatesAssignment_12_1"
+
+
+    // $ANTLR start "rule__BORoleInteraction__DeletesAssignment_13_1"
+    // InternalBomi.g:9109:1: rule__BORoleInteraction__DeletesAssignment_13_1 : ( ruleMyBoolean ) ;
+    public final void rule__BORoleInteraction__DeletesAssignment_13_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:9113:1: ( ( ruleMyBoolean ) )
+            // InternalBomi.g:9114:2: ( ruleMyBoolean )
+            {
+            // InternalBomi.g:9114:2: ( ruleMyBoolean )
+            // InternalBomi.g:9115:3: ruleMyBoolean
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getDeletesMyBooleanEnumRuleCall_13_1_0()); 
+            pushFollow(FOLLOW_2);
+            ruleMyBoolean();
+
+            state._fsp--;
+
+             after(grammarAccess.getBORoleInteractionAccess().getDeletesMyBooleanEnumRuleCall_13_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__DeletesAssignment_13_1"
+
+
+    // $ANTLR start "rule__BORoleInteraction__BoundaryObjectsAssignment_14_2"
+    // InternalBomi.g:9124:1: rule__BORoleInteraction__BoundaryObjectsAssignment_14_2 : ( ( ruleEString ) ) ;
+    public final void rule__BORoleInteraction__BoundaryObjectsAssignment_14_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:9128:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:9129:2: ( ( ruleEString ) )
+            {
+            // InternalBomi.g:9129:2: ( ( ruleEString ) )
+            // InternalBomi.g:9130:3: ( ruleEString )
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_14_2_0()); 
+            // InternalBomi.g:9131:3: ( ruleEString )
+            // InternalBomi.g:9132:4: ruleEString
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_2_0_1()); 
+            pushFollow(FOLLOW_2);
+            ruleEString();
+
+            state._fsp--;
+
+             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_2_0_1()); 
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_14_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__BoundaryObjectsAssignment_14_2"
+
+
+    // $ANTLR start "rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1"
+    // InternalBomi.g:9143:1: rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1 : ( ( ruleEString ) ) ;
+    public final void rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:9147:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:9148:2: ( ( ruleEString ) )
+            {
+            // InternalBomi.g:9148:2: ( ( ruleEString ) )
+            // InternalBomi.g:9149:3: ( ruleEString )
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0()); 
+            // InternalBomi.g:9150:3: ( ruleEString )
+            // InternalBomi.g:9151:4: ruleEString
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_3_1_0_1()); 
+            pushFollow(FOLLOW_2);
+            ruleEString();
+
+            state._fsp--;
+
+             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_3_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__BoundaryObjectsAssignment_14_3_1"
+
+
+    // $ANTLR start "rule__BORoleInteraction__RolesAssignment_15_2"
+    // InternalBomi.g:9162:1: rule__BORoleInteraction__RolesAssignment_15_2 : ( ( ruleEString ) ) ;
+    public final void rule__BORoleInteraction__RolesAssignment_15_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:9166:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:9167:2: ( ( ruleEString ) )
+            {
+            // InternalBomi.g:9167:2: ( ( ruleEString ) )
+            // InternalBomi.g:9168:3: ( ruleEString )
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_15_2_0()); 
+            // InternalBomi.g:9169:3: ( ruleEString )
+            // InternalBomi.g:9170:4: ruleEString
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getRolesRoleEStringParserRuleCall_15_2_0_1()); 
+            pushFollow(FOLLOW_2);
+            ruleEString();
+
+            state._fsp--;
+
+             after(grammarAccess.getBORoleInteractionAccess().getRolesRoleEStringParserRuleCall_15_2_0_1()); 
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_15_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__RolesAssignment_15_2"
+
+
+    // $ANTLR start "rule__BORoleInteraction__RolesAssignment_15_3_1"
+    // InternalBomi.g:9181:1: rule__BORoleInteraction__RolesAssignment_15_3_1 : ( ( ruleEString ) ) ;
+    public final void rule__BORoleInteraction__RolesAssignment_15_3_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBomi.g:9185:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:9186:2: ( ( ruleEString ) )
+            {
+            // InternalBomi.g:9186:2: ( ( ruleEString ) )
+            // InternalBomi.g:9187:3: ( ruleEString )
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_15_3_1_0()); 
+            // InternalBomi.g:9188:3: ( ruleEString )
+            // InternalBomi.g:9189:4: ruleEString
+            {
+             before(grammarAccess.getBORoleInteractionAccess().getRolesRoleEStringParserRuleCall_15_3_1_0_1()); 
+            pushFollow(FOLLOW_2);
+            ruleEString();
+
+            state._fsp--;
+
+             after(grammarAccess.getBORoleInteractionAccess().getRolesRoleEStringParserRuleCall_15_3_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_15_3_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__BORoleInteraction__RolesAssignment_15_3_1"
 
 
     // $ANTLR start "rule__BOTeamGovernance__NameAssignment_2"
-    // InternalBomi.g:8677:1: rule__BOTeamGovernance__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBomi.g:9200:1: rule__BOTeamGovernance__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__BOTeamGovernance__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8681:1: ( ( ruleEString ) )
-            // InternalBomi.g:8682:2: ( ruleEString )
+            // InternalBomi.g:9204:1: ( ( ruleEString ) )
+            // InternalBomi.g:9205:2: ( ruleEString )
             {
-            // InternalBomi.g:8682:2: ( ruleEString )
-            // InternalBomi.g:8683:3: ruleEString
+            // InternalBomi.g:9205:2: ( ruleEString )
+            // InternalBomi.g:9206:3: ruleEString
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26336,17 +27963,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__PurposeAssignment_4_1"
-    // InternalBomi.g:8692:1: rule__BOTeamGovernance__PurposeAssignment_4_1 : ( ruleEString ) ;
+    // InternalBomi.g:9215:1: rule__BOTeamGovernance__PurposeAssignment_4_1 : ( ruleEString ) ;
     public final void rule__BOTeamGovernance__PurposeAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8696:1: ( ( ruleEString ) )
-            // InternalBomi.g:8697:2: ( ruleEString )
+            // InternalBomi.g:9219:1: ( ( ruleEString ) )
+            // InternalBomi.g:9220:2: ( ruleEString )
             {
-            // InternalBomi.g:8697:2: ( ruleEString )
-            // InternalBomi.g:8698:3: ruleEString
+            // InternalBomi.g:9220:2: ( ruleEString )
+            // InternalBomi.g:9221:3: ruleEString
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getPurposeEStringParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26377,17 +28004,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1"
-    // InternalBomi.g:8707:1: rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 : ( ruleEString ) ;
+    // InternalBomi.g:9230:1: rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1 : ( ruleEString ) ;
     public final void rule__BOTeamGovernance__CoordinationMechanismAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8711:1: ( ( ruleEString ) )
-            // InternalBomi.g:8712:2: ( ruleEString )
+            // InternalBomi.g:9234:1: ( ( ruleEString ) )
+            // InternalBomi.g:9235:2: ( ruleEString )
             {
-            // InternalBomi.g:8712:2: ( ruleEString )
-            // InternalBomi.g:8713:3: ruleEString
+            // InternalBomi.g:9235:2: ( ruleEString )
+            // InternalBomi.g:9236:3: ruleEString
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getCoordinationMechanismEStringParserRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26418,17 +28045,17 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1"
-    // InternalBomi.g:8722:1: rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 : ( ruleHighLow ) ;
+    // InternalBomi.g:9245:1: rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1 : ( ruleHighLow ) ;
     public final void rule__BOTeamGovernance__FrequencyOfCoordinationAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8726:1: ( ( ruleHighLow ) )
-            // InternalBomi.g:8727:2: ( ruleHighLow )
+            // InternalBomi.g:9249:1: ( ( ruleHighLow ) )
+            // InternalBomi.g:9250:2: ( ruleHighLow )
             {
-            // InternalBomi.g:8727:2: ( ruleHighLow )
-            // InternalBomi.g:8728:3: ruleHighLow
+            // InternalBomi.g:9250:2: ( ruleHighLow )
+            // InternalBomi.g:9251:3: ruleHighLow
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getFrequencyOfCoordinationHighLowEnumRuleCall_6_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26459,21 +28086,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2"
-    // InternalBomi.g:8737:1: rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:9260:1: rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2 : ( ( ruleEString ) ) ;
     public final void rule__BOTeamGovernance__GovernanceTeamsAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8741:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8742:2: ( ( ruleEString ) )
+            // InternalBomi.g:9264:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:9265:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8742:2: ( ( ruleEString ) )
-            // InternalBomi.g:8743:3: ( ruleEString )
+            // InternalBomi.g:9265:2: ( ( ruleEString ) )
+            // InternalBomi.g:9266:3: ( ruleEString )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsGovernanceTeamCrossReference_7_2_0()); 
-            // InternalBomi.g:8744:3: ( ruleEString )
-            // InternalBomi.g:8745:4: ruleEString
+            // InternalBomi.g:9267:3: ( ruleEString )
+            // InternalBomi.g:9268:4: ruleEString
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsGovernanceTeamEStringParserRuleCall_7_2_0_1()); 
             pushFollow(FOLLOW_2);
@@ -26508,21 +28135,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1"
-    // InternalBomi.g:8756:1: rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:9279:1: rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1 : ( ( ruleEString ) ) ;
     public final void rule__BOTeamGovernance__GovernanceTeamsAssignment_7_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8760:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8761:2: ( ( ruleEString ) )
+            // InternalBomi.g:9283:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:9284:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8761:2: ( ( ruleEString ) )
-            // InternalBomi.g:8762:3: ( ruleEString )
+            // InternalBomi.g:9284:2: ( ( ruleEString ) )
+            // InternalBomi.g:9285:3: ( ruleEString )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsGovernanceTeamCrossReference_7_3_1_0()); 
-            // InternalBomi.g:8763:3: ( ruleEString )
-            // InternalBomi.g:8764:4: ruleEString
+            // InternalBomi.g:9286:3: ( ruleEString )
+            // InternalBomi.g:9287:4: ruleEString
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsGovernanceTeamEStringParserRuleCall_7_3_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -26557,21 +28184,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2"
-    // InternalBomi.g:8775:1: rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:9298:1: rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2 : ( ( ruleEString ) ) ;
     public final void rule__BOTeamGovernance__BoundaryObjectsAssignment_8_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8779:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8780:2: ( ( ruleEString ) )
+            // InternalBomi.g:9302:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:9303:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8780:2: ( ( ruleEString ) )
-            // InternalBomi.g:8781:3: ( ruleEString )
+            // InternalBomi.g:9303:2: ( ( ruleEString ) )
+            // InternalBomi.g:9304:3: ( ruleEString )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsBoundaryObjectCrossReference_8_2_0()); 
-            // InternalBomi.g:8782:3: ( ruleEString )
-            // InternalBomi.g:8783:4: ruleEString
+            // InternalBomi.g:9305:3: ( ruleEString )
+            // InternalBomi.g:9306:4: ruleEString
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_8_2_0_1()); 
             pushFollow(FOLLOW_2);
@@ -26606,21 +28233,21 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1"
-    // InternalBomi.g:8794:1: rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 : ( ( ruleEString ) ) ;
+    // InternalBomi.g:9317:1: rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1 : ( ( ruleEString ) ) ;
     public final void rule__BOTeamGovernance__BoundaryObjectsAssignment_8_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBomi.g:8798:1: ( ( ( ruleEString ) ) )
-            // InternalBomi.g:8799:2: ( ( ruleEString ) )
+            // InternalBomi.g:9321:1: ( ( ( ruleEString ) ) )
+            // InternalBomi.g:9322:2: ( ( ruleEString ) )
             {
-            // InternalBomi.g:8799:2: ( ( ruleEString ) )
-            // InternalBomi.g:8800:3: ( ruleEString )
+            // InternalBomi.g:9322:2: ( ( ruleEString ) )
+            // InternalBomi.g:9323:3: ( ruleEString )
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsBoundaryObjectCrossReference_8_3_1_0()); 
-            // InternalBomi.g:8801:3: ( ruleEString )
-            // InternalBomi.g:8802:4: ruleEString
+            // InternalBomi.g:9324:3: ( ruleEString )
+            // InternalBomi.g:9325:4: ruleEString
             {
              before(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsBoundaryObjectEStringParserRuleCall_8_3_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -26660,34 +28287,35 @@ public class InternalBomiParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x000001E200000000L,0x0000000000000C20L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000001800000000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000078800000000L,0x0000000000041080L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x00FFFC0800000000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x00000000003F8800L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x03FFF02000000000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000FE0800L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000007800L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000001C40800L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0200000800000000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x000000001E000800L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x9000000800000000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x4000001000000000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000800000000L,0x000000000000001EL});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000060010800L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x00000001C0000800L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000082A00000000L,0x00000000000003C0L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000088A00000000L,0x00000000000003C0L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000084A00000000L,0x0000000000003000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000007100800L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0800002000000000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000078000800L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x4000002000000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x8000000000000000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000004000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000002000000000L,0x0000000000000078L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000180040800L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000700000800L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x000020A800000000L,0x0000000000000F00L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000222800000000L,0x000000000003EF00L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000018800L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000212800000000L,0x0000000000180000L});
 
 }

@@ -11,6 +11,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import se.gu.cse.idxse.bomi.BORoleInteraction;
 import se.gu.cse.idxse.bomi.BomiPackage;
 
@@ -43,6 +45,11 @@ public class BORoleInteractionItemProvider extends UsageAssociationItemProvider 
 			super.getPropertyDescriptors(object);
 
 			addRolesPropertyDescriptor(object);
+			addResponsiblePropertyDescriptor(object);
+			addCreatesPropertyDescriptor(object);
+			addReadsPropertyDescriptor(object);
+			addUpdatesPropertyDescriptor(object);
+			addDeletesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -60,6 +67,86 @@ public class BORoleInteractionItemProvider extends UsageAssociationItemProvider 
 						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_roles_feature",
 								"_UI_BORoleInteraction_type"),
 						BomiPackage.Literals.BO_ROLE_INTERACTION__ROLES, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Responsible feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResponsiblePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BORoleInteraction_responsible_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_responsible_feature",
+								"_UI_BORoleInteraction_type"),
+						BomiPackage.Literals.BO_ROLE_INTERACTION__RESPONSIBLE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Creates feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCreatesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BORoleInteraction_creates_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_creates_feature",
+								"_UI_BORoleInteraction_type"),
+						BomiPackage.Literals.BO_ROLE_INTERACTION__CREATES, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reads feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReadsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BORoleInteraction_reads_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_reads_feature",
+								"_UI_BORoleInteraction_type"),
+						BomiPackage.Literals.BO_ROLE_INTERACTION__READS, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Updates feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUpdatesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BORoleInteraction_updates_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_updates_feature",
+								"_UI_BORoleInteraction_type"),
+						BomiPackage.Literals.BO_ROLE_INTERACTION__UPDATES, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Deletes feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDeletesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BORoleInteraction_deletes_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_deletes_feature",
+								"_UI_BORoleInteraction_type"),
+						BomiPackage.Literals.BO_ROLE_INTERACTION__DELETES, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -106,6 +193,16 @@ public class BORoleInteractionItemProvider extends UsageAssociationItemProvider 
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(BORoleInteraction.class)) {
+		case BomiPackage.BO_ROLE_INTERACTION__RESPONSIBLE:
+		case BomiPackage.BO_ROLE_INTERACTION__CREATES:
+		case BomiPackage.BO_ROLE_INTERACTION__READS:
+		case BomiPackage.BO_ROLE_INTERACTION__UPDATES:
+		case BomiPackage.BO_ROLE_INTERACTION__DELETES:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

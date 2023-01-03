@@ -52,6 +52,11 @@
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//DistanceTypes/Geographical"/>
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//DistanceTypes/Organizational"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bomi.ecore#//MyBoolean">
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//MyBoolean/NOT_SET"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//MyBoolean/True"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//MyBoolean/False"/>
+    </genEnums>
     <genClasses ecoreClass="bomi.ecore#//BoundaryObject">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BoundaryObject/superType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BoundaryObject/levelOfDetail"/>
@@ -76,6 +81,11 @@
     </genClasses>
     <genClasses ecoreClass="bomi.ecore#//BORoleInteraction">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bomi.ecore#//BORoleInteraction/roles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BORoleInteraction/responsible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BORoleInteraction/creates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BORoleInteraction/reads"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BORoleInteraction/updates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BORoleInteraction/deletes"/>
     </genClasses>
     <genClasses ecoreClass="bomi.ecore#//BOMIModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bomi.ecore#//BOMIModel/boRoleInteractions"/>

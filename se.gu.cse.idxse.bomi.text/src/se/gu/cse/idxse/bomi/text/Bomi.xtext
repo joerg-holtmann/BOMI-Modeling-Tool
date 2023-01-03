@@ -86,7 +86,7 @@ BOMICoordination returns BOMICoordination:
 		('accessability' accessability=HighLow)?
 		('stability' stability=HighLow)?
 		('criticality' criticality=HighLow)?
-		('fitForPurpose' fitForPurpose=HighLow)?
+		('fitForPurpose' fitForPurpose=HighLow)?		
 		('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
 		('methodologicalIslands' '(' methodologicalIslands+=[MethodologicalIsland|EString] ( "," methodologicalIslands+=[MethodologicalIsland|EString])* ')' )?
 	'}';
@@ -101,6 +101,11 @@ BORoleInteraction returns BORoleInteraction:
 		('stability' stability=HighLow)?
 		('criticality' criticality=HighLow)?
 		('fitForPurpose' fitForPurpose=HighLow)?
+		('responsible' responsible=MyBoolean)?
+		('creates' creates=MyBoolean)?
+		('reads' reads=MyBoolean)?
+		('updates' updates=MyBoolean)?
+		('deletes' deletes=MyBoolean)?
 		('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
 		('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
 	'}';
@@ -127,6 +132,9 @@ EString returns ecore::EString:
 
 enum HighLow returns HighLow:
 				NOT_SET = 'NOT_SET' | High = 'High' | Medium = 'Medium' | Low = 'Low';
+				
+enum MyBoolean returns MyBoolean:
+				NOT_SET = 'NOT_SET' | True = 'True' | False = 'False';				
 
 enum BOSuperTypes returns BOSuperTypes:
 				NOT_SET = 'NOT_SET' | Standard = 'Standard' | Technology = 'Technology' | Task = 'Task' | Planning = 'Planning' | Value = 'Value' | Product = 'Product' | Other = 'Other';
