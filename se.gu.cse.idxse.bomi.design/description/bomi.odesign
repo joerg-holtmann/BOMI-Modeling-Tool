@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="bomi" version="12.0.0.2017041100">
-  <ownedViewpoints name="BOMI Details" modelFileExtension="bomi">
+  <ownedViewpoints endUserDocumentation="This viewpoint provides the &quot;BOMI Detailed Diagram&quot;, which displays all BOMI details." name="BOMI Details" modelFileExtension="bomi">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="This kind of diagram displays all BOMI details, like the particular attributes of the elements." name="BOMI Detailed Diagram" domainClass="bomi::BOMIModel" enablePopupBars="true">
       <metamodel href="../../se.gu.cse.idxse.bomi/model/bomi.ecore#/"/>
       <validationSet>
@@ -423,8 +423,8 @@
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="se.gu.cse.idxse.bomi.design.Services"/>
   </ownedViewpoints>
-  <ownedViewpoints name="BOMI Overview" modelFileExtension="bomi">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="BOMI Overview Diagram" domainClass="bomi::BOMIModel" enablePopupBars="true">
+  <ownedViewpoints endUserDocumentation="This viewpoint provides the &quot;BOMI Overview Diagram&quot;, which neglects all attribute details of the BOMI elements." name="BOMI Overview" modelFileExtension="bomi">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="This kind of diagram displays all BOMI elements but neglects all their attribute details." name="BOMI Overview Diagram" domainClass="bomi::BOMIModel" enablePopupBars="true">
       <metamodel href="../../se.gu.cse.idxse.bomi/model/bomi.ecore#/"/>
       <defaultLayer name="Default">
         <edgeMappings name="role2MiPartOf" sourceMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetFinderExpression="feature:partOfMIs">
@@ -659,5 +659,160 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints endUserDocumentation="This viewpoint provides the &quot;Methodological Island (MI) Diagram&quot;, which focuses on MIs and drivers as well as their attributes." name="MI" modelFileExtension="bomi">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" endUserDocumentation="This kind of diagram focuses on MIs and drivers as well as their attributes." name="Methodological Island (MI) Diagram" domainClass="bomi::BOMIModel" enablePopupBars="true">
+      <metamodel href="../../se.gu.cse.idxse.bomi/model/bomi.ecore#/"/>
+      <validationSet/>
+      <defaultLayer name="Default">
+        <edgeMappings name="role2MiPartOf" sourceMapping="//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetFinderExpression="feature:partOfMIs">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="part of">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="driver2MiDrives" sourceMapping="//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Driver']" targetMapping="//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetFinderExpression="feature:drivesMIs">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="drives">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Role" semanticCandidatesExpression="feature:roles" domainClass="bomi::Role">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Role: ' + self.name" tooltipExpression="Role">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Methodological Island" semanticCandidatesExpression="feature:methodologicalIslands" domainClass="bomi::MethodologicalIsland" childrenPresentation="HorizontalStack">
+          <subContainerMappings name="Methodological Island Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::MethodologicalIsland" childrenPresentation="List">
+            <subNodeMappings name="Type" preconditionExpression="aql:self.type &lt;> bomi::MIType::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::MethodologicalIsland">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Type: ' + self.type" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Methodological Island: ' + self.name" tooltipExpression="Methodological Island (MI)">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Driver" semanticCandidatesExpression="feature:drivers" domainClass="bomi::Driver" childrenPresentation="HorizontalStack">
+          <subContainerMappings name="Driver Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::Driver" childrenPresentation="List">
+            <subNodeMappings name="Driver Type" preconditionExpression="aql:self.driverType &lt;> bomi::DriverTypes::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Driver Type: ' + self.driverType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="Distance Type" preconditionExpression="aql:self.distanceType &lt;> bomi::DistanceTypes::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Distance Type: ' + self.distanceType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="Distance Size" preconditionExpression="aql:self.distanceSize &lt;> bomi::HighLow::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Distance Size: ' + self.distanceSize" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Driver: ' + self.name" tooltipExpression="Driver">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Nodes" label="Nodes">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Create a new Role" name="Role" containerMappings="//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Role']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="bomi::Role" referenceName="roles">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'role'+self.eContainer().eContents(bomi::Role)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Create a new Boundary Object" name="createMiContainer" label="Methodological Island" containerMappings="//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="bomi::MethodologicalIsland" referenceName="methodologicalIslands">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'mi'+self.eContainer().eContents(bomi::MethodologicalIsland)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Create a new Boundary Object" name="createDriverContainer" label="Driver" containerMappings="//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Driver']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="bomi::Driver" referenceName="drivers">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'driver'+self.eContainer().eContents(bomi::Driver)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Edges">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" documentation="Create a new Link to the Role of a BO/Role Interaction" name="Role part of MI" edgeMappings="//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@edgeMappings[name='role2MiPartOf']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="partOfMIs" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" documentation="Create a new Link to the Role of a BO/Role Interaction" name="Driver drives MI" edgeMappings="//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@edgeMappings[name='driver2MiDrives']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="drivesMIs" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="se.gu.cse.idxse.bomi.design.Services"/>
   </ownedViewpoints>
 </description:Group>
