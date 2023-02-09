@@ -102,14 +102,14 @@ public class BomiSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *
 	 * Constraint:
 	 *     (
+	 *         (boRoleInteractions+=BORoleInteraction boRoleInteractions+=BORoleInteraction*)? 
 	 *         (boundaryObjects+=BoundaryObject boundaryObjects+=BoundaryObject*)? 
+	 *         (roles+=Role roles+=Role*)? 
+	 *         (boMiCoordinations+=BOMICoordination boMiCoordinations+=BOMICoordination*)? 
 	 *         (methodologicalIslands+=MethodologicalIsland methodologicalIslands+=MethodologicalIsland*)? 
 	 *         (governanceTeams+=GovernanceTeam governanceTeams+=GovernanceTeam*)? 
-	 *         (roles+=Role roles+=Role*)? 
-	 *         (drivers+=Driver drivers+=Driver*)? 
-	 *         (boMiCoordinations+=BOMICoordination boMiCoordinations+=BOMICoordination*)? 
-	 *         (boRoleInteractions+=BORoleInteraction boRoleInteractions+=BORoleInteraction*)? 
-	 *         (boTeamGovernances+=BOTeamGovernance boTeamGovernances+=BOTeamGovernance*)?
+	 *         (boTeamGovernances+=BOTeamGovernance boTeamGovernances+=BOTeamGovernance*)? 
+	 *         (drivers+=Driver drivers+=Driver*)?
 	 *     )
 	 * </pre>
 	 */
@@ -131,11 +131,11 @@ public class BomiSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         stability=HighLow? 
 	 *         criticality=HighLow? 
 	 *         fitForPurpose=HighLow? 
-	 *         responsible=MyBoolean? 
-	 *         creates=MyBoolean? 
-	 *         reads=MyBoolean? 
-	 *         updates=MyBoolean? 
-	 *         deletes=MyBoolean? 
+	 *         responsible=UnsettableBoolean? 
+	 *         creates=UnsettableBoolean? 
+	 *         reads=UnsettableBoolean? 
+	 *         updates=UnsettableBoolean? 
+	 *         deletes=UnsettableBoolean? 
 	 *         (boundaryObjects+=[BoundaryObject|EString] boundaryObjects+=[BoundaryObject|EString]*)? 
 	 *         (roles+=[Role|EString] roles+=[Role|EString]*)?
 	 *     )
@@ -157,8 +157,8 @@ public class BomiSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         purpose=EString? 
 	 *         coordinationMechanism=EString? 
 	 *         frequencyOfCoordination=HighLow? 
-	 *         (governanceTeams+=[GovernanceTeam|EString] governanceTeams+=[GovernanceTeam|EString]*)? 
-	 *         (boundaryObjects+=[BoundaryObject|EString] boundaryObjects+=[BoundaryObject|EString]*)?
+	 *         (boundaryObjects+=[BoundaryObject|EString] boundaryObjects+=[BoundaryObject|EString]*)? 
+	 *         (governanceTeams+=[GovernanceTeam|EString] governanceTeams+=[GovernanceTeam|EString]*)?
 	 *     )
 	 * </pre>
 	 */
@@ -175,8 +175,8 @@ public class BomiSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=EString 
-	 *         superType=BOSuperTypes? 
 	 *         purpose=EString? 
+	 *         superType=BOSuperTypes? 
 	 *         levelOfDetail=HighLow? 
 	 *         frequencyOfChange=HighLow? 
 	 *         modularity=HighLow? 
@@ -205,8 +205,12 @@ public class BomiSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=EString 
-	 *         driverType=DriverTypes? 
-	 *         distanceType=DistanceTypes? 
+	 *         driverTypeTechnology=UnsettableBoolean? 
+	 *         driverTypeProcess=UnsettableBoolean? 
+	 *         driverTypeOrganizational=UnsettableBoolean? 
+	 *         distanceTypeCultural=UnsettableBoolean? 
+	 *         distanceTypeGeographical=UnsettableBoolean? 
+	 *         distanceTypeOrganizational=UnsettableBoolean? 
 	 *         distanceSize=HighLow? 
 	 *         (drivesMIs+=[MethodologicalIsland|EString] drivesMIs+=[MethodologicalIsland|EString]*)?
 	 *     )

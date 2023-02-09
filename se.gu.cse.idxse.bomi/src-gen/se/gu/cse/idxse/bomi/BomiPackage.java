@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EReference;
  * </ul>
  * <!-- end-user-doc -->
  * <!-- begin-model-doc -->
- * external consistency to other BOs
+ * 
  * <!-- end-model-doc -->
  * @see se.gu.cse.idxse.bomi.BomiFactory
  * @model kind="package"
@@ -1037,22 +1037,58 @@ public interface BomiPackage extends EPackage {
 	int DRIVER__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Driver Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Driver Type Technology</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DRIVER__DRIVER_TYPE = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int DRIVER__DRIVER_TYPE_TECHNOLOGY = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Distance Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Driver Type Process</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DRIVER__DISTANCE_TYPE = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int DRIVER__DRIVER_TYPE_PROCESS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Driver Type Organizational</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRIVER__DRIVER_TYPE_ORGANIZATIONAL = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Distance Type Cultural</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRIVER__DISTANCE_TYPE_CULTURAL = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Distance Type Geographical</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRIVER__DISTANCE_TYPE_GEOGRAPHICAL = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Distance Type Organizational</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRIVER__DISTANCE_TYPE_ORGANIZATIONAL = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Distance Size</b></em>' attribute.
@@ -1061,7 +1097,7 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRIVER__DISTANCE_SIZE = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int DRIVER__DISTANCE_SIZE = NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Drives MIs</b></em>' reference list.
@@ -1070,7 +1106,7 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRIVER__DRIVES_MIS = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int DRIVER__DRIVES_MIS = NAMED_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Driver</em>' class.
@@ -1079,7 +1115,7 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRIVER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int DRIVER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Driver</em>' class.
@@ -1131,34 +1167,14 @@ public interface BomiPackage extends EPackage {
 	int MI_TYPE = 16;
 
 	/**
-	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.DriverTypes <em>Driver Types</em>}' enum.
+	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.UnsettableBoolean <em>Unsettable Boolean</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.gu.cse.idxse.bomi.DriverTypes
-	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getDriverTypes()
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getUnsettableBoolean()
 	 * @generated
 	 */
-	int DRIVER_TYPES = 17;
-
-	/**
-	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.DistanceTypes <em>Distance Types</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see se.gu.cse.idxse.bomi.DistanceTypes
-	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getDistanceTypes()
-	 * @generated
-	 */
-	int DISTANCE_TYPES = 18;
-
-	/**
-	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.MyBoolean <em>My Boolean</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see se.gu.cse.idxse.bomi.MyBoolean
-	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getMyBoolean()
-	 * @generated
-	 */
-	int MY_BOOLEAN = 19;
+	int UNSETTABLE_BOOLEAN = 17;
 
 	/**
 	 * Returns the meta object for class '{@link se.gu.cse.idxse.bomi.BoundaryObject <em>Boundary Object</em>}'.
@@ -1721,26 +1737,70 @@ public interface BomiPackage extends EPackage {
 	EClass getDriver();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDriverType <em>Driver Type</em>}'.
+	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeTechnology <em>Driver Type Technology</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Driver Type</em>'.
-	 * @see se.gu.cse.idxse.bomi.Driver#getDriverType()
+	 * @return the meta object for the attribute '<em>Driver Type Technology</em>'.
+	 * @see se.gu.cse.idxse.bomi.Driver#getDriverTypeTechnology()
 	 * @see #getDriver()
 	 * @generated
 	 */
-	EAttribute getDriver_DriverType();
+	EAttribute getDriver_DriverTypeTechnology();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDistanceType <em>Distance Type</em>}'.
+	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeProcess <em>Driver Type Process</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Distance Type</em>'.
-	 * @see se.gu.cse.idxse.bomi.Driver#getDistanceType()
+	 * @return the meta object for the attribute '<em>Driver Type Process</em>'.
+	 * @see se.gu.cse.idxse.bomi.Driver#getDriverTypeProcess()
 	 * @see #getDriver()
 	 * @generated
 	 */
-	EAttribute getDriver_DistanceType();
+	EAttribute getDriver_DriverTypeProcess();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeOrganizational <em>Driver Type Organizational</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Driver Type Organizational</em>'.
+	 * @see se.gu.cse.idxse.bomi.Driver#getDriverTypeOrganizational()
+	 * @see #getDriver()
+	 * @generated
+	 */
+	EAttribute getDriver_DriverTypeOrganizational();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDistanceTypeCultural <em>Distance Type Cultural</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Distance Type Cultural</em>'.
+	 * @see se.gu.cse.idxse.bomi.Driver#getDistanceTypeCultural()
+	 * @see #getDriver()
+	 * @generated
+	 */
+	EAttribute getDriver_DistanceTypeCultural();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDistanceTypeGeographical <em>Distance Type Geographical</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Distance Type Geographical</em>'.
+	 * @see se.gu.cse.idxse.bomi.Driver#getDistanceTypeGeographical()
+	 * @see #getDriver()
+	 * @generated
+	 */
+	EAttribute getDriver_DistanceTypeGeographical();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDistanceTypeOrganizational <em>Distance Type Organizational</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Distance Type Organizational</em>'.
+	 * @see se.gu.cse.idxse.bomi.Driver#getDistanceTypeOrganizational()
+	 * @see #getDriver()
+	 * @generated
+	 */
+	EAttribute getDriver_DistanceTypeOrganizational();
 
 	/**
 	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDistanceSize <em>Distance Size</em>}'.
@@ -1826,34 +1886,14 @@ public interface BomiPackage extends EPackage {
 	EEnum getMIType();
 
 	/**
-	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.DriverTypes <em>Driver Types</em>}'.
+	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.UnsettableBoolean <em>Unsettable Boolean</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Driver Types</em>'.
-	 * @see se.gu.cse.idxse.bomi.DriverTypes
+	 * @return the meta object for enum '<em>Unsettable Boolean</em>'.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
 	 * @generated
 	 */
-	EEnum getDriverTypes();
-
-	/**
-	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.DistanceTypes <em>Distance Types</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Distance Types</em>'.
-	 * @see se.gu.cse.idxse.bomi.DistanceTypes
-	 * @generated
-	 */
-	EEnum getDistanceTypes();
-
-	/**
-	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.MyBoolean <em>My Boolean</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>My Boolean</em>'.
-	 * @see se.gu.cse.idxse.bomi.MyBoolean
-	 * @generated
-	 */
-	EEnum getMyBoolean();
+	EEnum getUnsettableBoolean();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2280,8 +2320,7 @@ public interface BomiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION = eINSTANCE
-				.getBOTeamGovernance_FrequencyOfCoordination();
+		EAttribute BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION = eINSTANCE.getBOTeamGovernance_FrequencyOfCoordination();
 
 		/**
 		 * The meta object literal for the '<em><b>Governance Teams</b></em>' reference list feature.
@@ -2320,20 +2359,52 @@ public interface BomiPackage extends EPackage {
 		EClass DRIVER = eINSTANCE.getDriver();
 
 		/**
-		 * The meta object literal for the '<em><b>Driver Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Driver Type Technology</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DRIVER__DRIVER_TYPE = eINSTANCE.getDriver_DriverType();
+		EAttribute DRIVER__DRIVER_TYPE_TECHNOLOGY = eINSTANCE.getDriver_DriverTypeTechnology();
 
 		/**
-		 * The meta object literal for the '<em><b>Distance Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Driver Type Process</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DRIVER__DISTANCE_TYPE = eINSTANCE.getDriver_DistanceType();
+		EAttribute DRIVER__DRIVER_TYPE_PROCESS = eINSTANCE.getDriver_DriverTypeProcess();
+
+		/**
+		 * The meta object literal for the '<em><b>Driver Type Organizational</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DRIVER__DRIVER_TYPE_ORGANIZATIONAL = eINSTANCE.getDriver_DriverTypeOrganizational();
+
+		/**
+		 * The meta object literal for the '<em><b>Distance Type Cultural</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DRIVER__DISTANCE_TYPE_CULTURAL = eINSTANCE.getDriver_DistanceTypeCultural();
+
+		/**
+		 * The meta object literal for the '<em><b>Distance Type Geographical</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DRIVER__DISTANCE_TYPE_GEOGRAPHICAL = eINSTANCE.getDriver_DistanceTypeGeographical();
+
+		/**
+		 * The meta object literal for the '<em><b>Distance Type Organizational</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DRIVER__DISTANCE_TYPE_ORGANIZATIONAL = eINSTANCE.getDriver_DistanceTypeOrganizational();
 
 		/**
 		 * The meta object literal for the '<em><b>Distance Size</b></em>' attribute feature.
@@ -2410,34 +2481,14 @@ public interface BomiPackage extends EPackage {
 		EEnum MI_TYPE = eINSTANCE.getMIType();
 
 		/**
-		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.DriverTypes <em>Driver Types</em>}' enum.
+		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.UnsettableBoolean <em>Unsettable Boolean</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.gu.cse.idxse.bomi.DriverTypes
-		 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getDriverTypes()
+		 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+		 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getUnsettableBoolean()
 		 * @generated
 		 */
-		EEnum DRIVER_TYPES = eINSTANCE.getDriverTypes();
-
-		/**
-		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.DistanceTypes <em>Distance Types</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see se.gu.cse.idxse.bomi.DistanceTypes
-		 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getDistanceTypes()
-		 * @generated
-		 */
-		EEnum DISTANCE_TYPES = eINSTANCE.getDistanceTypes();
-
-		/**
-		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.MyBoolean <em>My Boolean</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see se.gu.cse.idxse.bomi.MyBoolean
-		 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getMyBoolean()
-		 * @generated
-		 */
-		EEnum MY_BOOLEAN = eINSTANCE.getMyBoolean();
+		EEnum UNSETTABLE_BOOLEAN = eINSTANCE.getUnsettableBoolean();
 
 	}
 

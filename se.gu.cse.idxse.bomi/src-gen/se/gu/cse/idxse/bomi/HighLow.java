@@ -107,7 +107,12 @@ public enum HighLow implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final HighLow[] VALUES_ARRAY = new HighLow[] { NOT_SET, HIGH, MEDIUM, LOW, };
+	private static final HighLow[] VALUES_ARRAY = new HighLow[] {
+			NOT_SET,
+			HIGH,
+			MEDIUM,
+			LOW,
+		};
 
 	/**
 	 * A public read-only list of all the '<em><b>High Low</b></em>' enumerators.
@@ -163,14 +168,10 @@ public enum HighLow implements Enumerator {
 	 */
 	public static HighLow get(int value) {
 		switch (value) {
-		case NOT_SET_VALUE:
-			return NOT_SET;
-		case HIGH_VALUE:
-			return HIGH;
-		case MEDIUM_VALUE:
-			return MEDIUM;
-		case LOW_VALUE:
-			return LOW;
+			case NOT_SET_VALUE: return NOT_SET;
+			case HIGH_VALUE: return HIGH;
+			case MEDIUM_VALUE: return MEDIUM;
+			case LOW_VALUE: return LOW;
 		}
 		return null;
 	}
@@ -214,7 +215,7 @@ public enum HighLow implements Enumerator {
 	 * @generated
 	 */
 	public int getValue() {
-		return value;
+	  return value;
 	}
 
 	/**
@@ -223,7 +224,7 @@ public enum HighLow implements Enumerator {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+	  return name;
 	}
 
 	/**
@@ -232,7 +233,7 @@ public enum HighLow implements Enumerator {
 	 * @generated
 	 */
 	public String getLiteral() {
-		return literal;
+	  return literal;
 	}
 
 	/**

@@ -191,8 +191,16 @@ public enum BOSuperTypes implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final BOSuperTypes[] VALUES_ARRAY = new BOSuperTypes[] { NOT_SET, STANDARD, TECHNOLOGY, TASK,
-			PLANNING, VALUE, PRODUCT, OTHER, };
+	private static final BOSuperTypes[] VALUES_ARRAY = new BOSuperTypes[] {
+			NOT_SET,
+			STANDARD,
+			TECHNOLOGY,
+			TASK,
+			PLANNING,
+			VALUE,
+			PRODUCT,
+			OTHER,
+		};
 
 	/**
 	 * A public read-only list of all the '<em><b>BO Super Types</b></em>' enumerators.
@@ -248,22 +256,14 @@ public enum BOSuperTypes implements Enumerator {
 	 */
 	public static BOSuperTypes get(int value) {
 		switch (value) {
-		case NOT_SET_VALUE:
-			return NOT_SET;
-		case STANDARD_VALUE:
-			return STANDARD;
-		case TECHNOLOGY_VALUE:
-			return TECHNOLOGY;
-		case TASK_VALUE:
-			return TASK;
-		case PLANNING_VALUE:
-			return PLANNING;
-		case VALUE_VALUE:
-			return VALUE;
-		case PRODUCT_VALUE:
-			return PRODUCT;
-		case OTHER_VALUE:
-			return OTHER;
+			case NOT_SET_VALUE: return NOT_SET;
+			case STANDARD_VALUE: return STANDARD;
+			case TECHNOLOGY_VALUE: return TECHNOLOGY;
+			case TASK_VALUE: return TASK;
+			case PLANNING_VALUE: return PLANNING;
+			case VALUE_VALUE: return VALUE;
+			case PRODUCT_VALUE: return PRODUCT;
+			case OTHER_VALUE: return OTHER;
 		}
 		return null;
 	}
@@ -307,7 +307,7 @@ public enum BOSuperTypes implements Enumerator {
 	 * @generated
 	 */
 	public int getValue() {
-		return value;
+	  return value;
 	}
 
 	/**
@@ -316,7 +316,7 @@ public enum BOSuperTypes implements Enumerator {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+	  return name;
 	}
 
 	/**
@@ -325,7 +325,7 @@ public enum BOSuperTypes implements Enumerator {
 	 * @generated
 	 */
 	public String getLiteral() {
-		return literal;
+	  return literal;
 	}
 
 	/**

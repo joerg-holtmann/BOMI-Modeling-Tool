@@ -6,25 +6,50 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 BOMIModel returns BOMIModel:
 	{BOMIModel}
+		('boRoleInteractions' '{' boRoleInteractions+=BORoleInteraction ( "," boRoleInteractions+=BORoleInteraction)* '}' )?
 		('boundaryObjects' '{' boundaryObjects+=BoundaryObject ( "," boundaryObjects+=BoundaryObject)* '}' )?
+		('roles' '{' roles+=Role ( "," roles+=Role)* '}' )?
+		('boMiCoordinations' '{' boMiCoordinations+=BOMICoordination ( "," boMiCoordinations+=BOMICoordination)* '}' )?
 		('methodologicalIslands' '{' methodologicalIslands+=MethodologicalIsland ( "," methodologicalIslands+=MethodologicalIsland)* '}' )?
 		('governanceTeams' '{' governanceTeams+=GovernanceTeam ( "," governanceTeams+=GovernanceTeam)* '}' )?
-		('roles' '{' roles+=Role ( "," roles+=Role)* '}' )?
+		('boTeamGovernances' '{' boTeamGovernances+=BOTeamGovernance ( "," boTeamGovernances+=BOTeamGovernance)* '}' )?
 		('drivers' '{' drivers+=Driver ( "," drivers+=Driver)* '}' )?
-		(boMiCoordinations+=BOMICoordination ( "," boMiCoordinations+=BOMICoordination)* )?
-		(boRoleInteractions+=BORoleInteraction ( "," boRoleInteractions+=BORoleInteraction)*  )?									
-		(boTeamGovernances+=BOTeamGovernance ( "," boTeamGovernances+=BOTeamGovernance)* )?		
 	;
 
 
+
+
+
+
+
+
+
+BORoleInteraction returns BORoleInteraction:
+	{BORoleInteraction}
+	'BORoleInteraction'
+	name=EString
+	'{'
+		('purpose' purpose=EString)?
+		('accessability' accessability=HighLow)?
+		('stability' stability=HighLow)?
+		('criticality' criticality=HighLow)?
+		('fitForPurpose' fitForPurpose=HighLow)?
+		('responsible' responsible=UnsettableBoolean)?
+		('creates' creates=UnsettableBoolean)?
+		('reads' reads=UnsettableBoolean)?
+		('updates' updates=UnsettableBoolean)?
+		('deletes' deletes=UnsettableBoolean)?
+		('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
+		('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
+	'}';
 
 BoundaryObject returns BoundaryObject:
 	{BoundaryObject}
 	'BoundaryObject'
 	name=EString
 	'{'
-		('superType' superType=BOSuperTypes)?
 		('purpose' purpose=EString)?
+		('superType' superType=BOSuperTypes)?
 		('levelOfDetail' levelOfDetail=HighLow)?
 		('frequencyOfChange' frequencyOfChange=HighLow)?
 		('modularity' modularity=HighLow)?
@@ -39,23 +64,6 @@ BoundaryObject returns BoundaryObject:
 		('externalConsistency' externalConsistency=HighLow)?
 	'}';
 
-
-MethodologicalIsland returns MethodologicalIsland:
-	{MethodologicalIsland}
-	'MethodologicalIsland'
-	name=EString
-	'{'
-		('type' type=MIType)?
-	'}';
-
-
-
-GovernanceTeam returns GovernanceTeam:
-	{GovernanceTeam}
-	'GovernanceTeam'
-	name=EString;
-	
-	
 Role returns Role:
 	{Role}
 	'Role'
@@ -63,19 +71,7 @@ Role returns Role:
 	'{'
 		('partOfGovernanceTeams' '(' partOfGovernanceTeams+=[GovernanceTeam|EString] ( "," partOfGovernanceTeams+=[GovernanceTeam|EString])* ')' )?
 		('partOfMIs' '(' partOfMIs+=[MethodologicalIsland|EString] ( "," partOfMIs+=[MethodologicalIsland|EString])* ')' )?
-	'}';	
-	
-Driver returns Driver:
-	{Driver}
-	'Driver'
-	name=EString
-	'{'
-		('driverType' driverType=DriverTypes)?
-		('distanceType' distanceType=DistanceTypes)?
-		('distanceSize' distanceSize=HighLow)?
-		('drivesMIs' '(' drivesMIs+=[MethodologicalIsland|EString] ( "," drivesMIs+=[MethodologicalIsland|EString])* ')' )?
-	'}';		
-	
+	'}';
 
 BOMICoordination returns BOMICoordination:
 	{BOMICoordination}
@@ -86,32 +82,23 @@ BOMICoordination returns BOMICoordination:
 		('accessability' accessability=HighLow)?
 		('stability' stability=HighLow)?
 		('criticality' criticality=HighLow)?
-		('fitForPurpose' fitForPurpose=HighLow)?		
+		('fitForPurpose' fitForPurpose=HighLow)?
 		('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
 		('methodologicalIslands' '(' methodologicalIslands+=[MethodologicalIsland|EString] ( "," methodologicalIslands+=[MethodologicalIsland|EString])* ')' )?
 	'}';
 
-BORoleInteraction returns BORoleInteraction:
-	{BORoleInteraction}
-	'BORoleInteraction'
+MethodologicalIsland returns MethodologicalIsland:
+	{MethodologicalIsland}
+	'MethodologicalIsland'
 	name=EString
 	'{'
-		('purpose' purpose=EString)?
-		('accessability' accessability=HighLow)?
-		('stability' stability=HighLow)?
-		('criticality' criticality=HighLow)?
-		('fitForPurpose' fitForPurpose=HighLow)?
-		('responsible' responsible=MyBoolean)?
-		('creates' creates=MyBoolean)?
-		('reads' reads=MyBoolean)?
-		('updates' updates=MyBoolean)?
-		('deletes' deletes=MyBoolean)?
-		('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
-		('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
+		('type' type=MIType)?
 	'}';
 
-
-
+GovernanceTeam returns GovernanceTeam:
+	{GovernanceTeam}
+	'GovernanceTeam'
+	name=EString;
 
 BOTeamGovernance returns BOTeamGovernance:
 	{BOTeamGovernance}
@@ -120,21 +107,34 @@ BOTeamGovernance returns BOTeamGovernance:
 	'{'
 		('purpose' purpose=EString)?
 		('coordinationMechanism' coordinationMechanism=EString)?
-		('frequencyOfCoordination' frequencyOfCoordination=HighLow)?		
-		('governanceTeams' '(' governanceTeams+=[GovernanceTeam|EString] ( "," governanceTeams+=[GovernanceTeam|EString])* ')' )?
+		('frequencyOfCoordination' frequencyOfCoordination=HighLow)?
 		('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
+		('governanceTeams' '(' governanceTeams+=[GovernanceTeam|EString] ( "," governanceTeams+=[GovernanceTeam|EString])* ')' )?
 	'}';
 
-
+Driver returns Driver:
+	{Driver}
+	'Driver'
+	name=EString
+	'{'
+		('driverTypeTechnology' driverTypeTechnology=UnsettableBoolean)?
+		('driverTypeProcess' driverTypeProcess=UnsettableBoolean)?
+		('driverTypeOrganizational' driverTypeOrganizational=UnsettableBoolean)?
+		('distanceTypeCultural' distanceTypeCultural=UnsettableBoolean)?
+		('distanceTypeGeographical' distanceTypeGeographical=UnsettableBoolean)?
+		('distanceTypeOrganizational' distanceTypeOrganizational=UnsettableBoolean)?
+		('distanceSize' distanceSize=HighLow)?
+		('drivesMIs' '(' drivesMIs+=[MethodologicalIsland|EString] ( "," drivesMIs+=[MethodologicalIsland|EString])* ')' )?
+	'}';
 
 EString returns ecore::EString:
 	STRING | ID;
 
 enum HighLow returns HighLow:
 				NOT_SET = 'NOT_SET' | High = 'High' | Medium = 'Medium' | Low = 'Low';
-				
-enum MyBoolean returns MyBoolean:
-				NOT_SET = 'NOT_SET' | True = 'True' | False = 'False';				
+
+enum UnsettableBoolean returns UnsettableBoolean:
+				NOT_SET = 'NOT_SET' | True = 'True' | False = 'False';
 
 enum BOSuperTypes returns BOSuperTypes:
 				NOT_SET = 'NOT_SET' | Standard = 'Standard' | Technology = 'Technology' | Task = 'Task' | Planning = 'Planning' | Value = 'Value' | Product = 'Product' | Other = 'Other';
@@ -144,9 +144,3 @@ enum LifecycleStage returns LifecycleStage:
 
 enum MIType returns MIType:
 				NOT_SET = 'NOT_SET' | Teams = 'Teams' | Silos = 'Silos' | Departments = 'Departments' | Organizations = 'Organizations';
-
-enum DriverTypes returns DriverTypes:
-				NOT_SET = 'NOT_SET' | Technology = 'Technology' | Process = 'Process' | Organizational = 'Organizational';
-
-enum DistanceTypes returns DistanceTypes:
-				NOT_SET = 'NOT_SET' | Cultural = 'Cultural' | Geographical = 'Geographical' | Organizational = 'Organizational';

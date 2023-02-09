@@ -73,9 +73,10 @@ public class GovernanceTeamItemProvider extends NamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((GovernanceTeam) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_GovernanceTeam_type")
-				: getString("_UI_GovernanceTeam_type") + " " + label;
+		String label = ((GovernanceTeam)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_GovernanceTeam_type") :
+			getString("_UI_GovernanceTeam_type") + " " + label;
 	}
 
 	/**

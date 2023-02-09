@@ -85,9 +85,9 @@ ruleBOMIModel returns [EObject current=null]
 			}
 		)
 		(
-			otherlv_1='boundaryObjects'
+			otherlv_1='boRoleInteractions'
 			{
-				newLeafNode(otherlv_1, grammarAccess.getBOMIModelAccess().getBoundaryObjectsKeyword_1_0());
+				newLeafNode(otherlv_1, grammarAccess.getBOMIModelAccess().getBoRoleInteractionsKeyword_1_0());
 			}
 			otherlv_2='{'
 			{
@@ -96,18 +96,18 @@ ruleBOMIModel returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getBOMIModelAccess().getBoundaryObjectsBoundaryObjectParserRuleCall_1_2_0());
+						newCompositeNode(grammarAccess.getBOMIModelAccess().getBoRoleInteractionsBORoleInteractionParserRuleCall_1_2_0());
 					}
-					lv_boundaryObjects_3_0=ruleBoundaryObject
+					lv_boRoleInteractions_3_0=ruleBORoleInteraction
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 						}
 						add(
 							$current,
-							"boundaryObjects",
-							lv_boundaryObjects_3_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.BoundaryObject");
+							"boRoleInteractions",
+							lv_boRoleInteractions_3_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.BORoleInteraction");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -120,18 +120,18 @@ ruleBOMIModel returns [EObject current=null]
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getBOMIModelAccess().getBoundaryObjectsBoundaryObjectParserRuleCall_1_3_1_0());
+							newCompositeNode(grammarAccess.getBOMIModelAccess().getBoRoleInteractionsBORoleInteractionParserRuleCall_1_3_1_0());
 						}
-						lv_boundaryObjects_5_0=ruleBoundaryObject
+						lv_boRoleInteractions_5_0=ruleBORoleInteraction
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 							}
 							add(
 								$current,
-								"boundaryObjects",
-								lv_boundaryObjects_5_0,
-								"se.gu.cse.idxse.bomi.text.Bomi.BoundaryObject");
+								"boRoleInteractions",
+								lv_boRoleInteractions_5_0,
+								"se.gu.cse.idxse.bomi.text.Bomi.BORoleInteraction");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -143,9 +143,9 @@ ruleBOMIModel returns [EObject current=null]
 			}
 		)?
 		(
-			otherlv_7='methodologicalIslands'
+			otherlv_7='boundaryObjects'
 			{
-				newLeafNode(otherlv_7, grammarAccess.getBOMIModelAccess().getMethodologicalIslandsKeyword_2_0());
+				newLeafNode(otherlv_7, grammarAccess.getBOMIModelAccess().getBoundaryObjectsKeyword_2_0());
 			}
 			otherlv_8='{'
 			{
@@ -154,18 +154,18 @@ ruleBOMIModel returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getBOMIModelAccess().getMethodologicalIslandsMethodologicalIslandParserRuleCall_2_2_0());
+						newCompositeNode(grammarAccess.getBOMIModelAccess().getBoundaryObjectsBoundaryObjectParserRuleCall_2_2_0());
 					}
-					lv_methodologicalIslands_9_0=ruleMethodologicalIsland
+					lv_boundaryObjects_9_0=ruleBoundaryObject
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 						}
 						add(
 							$current,
-							"methodologicalIslands",
-							lv_methodologicalIslands_9_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.MethodologicalIsland");
+							"boundaryObjects",
+							lv_boundaryObjects_9_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.BoundaryObject");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -178,18 +178,18 @@ ruleBOMIModel returns [EObject current=null]
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getBOMIModelAccess().getMethodologicalIslandsMethodologicalIslandParserRuleCall_2_3_1_0());
+							newCompositeNode(grammarAccess.getBOMIModelAccess().getBoundaryObjectsBoundaryObjectParserRuleCall_2_3_1_0());
 						}
-						lv_methodologicalIslands_11_0=ruleMethodologicalIsland
+						lv_boundaryObjects_11_0=ruleBoundaryObject
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 							}
 							add(
 								$current,
-								"methodologicalIslands",
-								lv_methodologicalIslands_11_0,
-								"se.gu.cse.idxse.bomi.text.Bomi.MethodologicalIsland");
+								"boundaryObjects",
+								lv_boundaryObjects_11_0,
+								"se.gu.cse.idxse.bomi.text.Bomi.BoundaryObject");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -201,9 +201,9 @@ ruleBOMIModel returns [EObject current=null]
 			}
 		)?
 		(
-			otherlv_13='governanceTeams'
+			otherlv_13='roles'
 			{
-				newLeafNode(otherlv_13, grammarAccess.getBOMIModelAccess().getGovernanceTeamsKeyword_3_0());
+				newLeafNode(otherlv_13, grammarAccess.getBOMIModelAccess().getRolesKeyword_3_0());
 			}
 			otherlv_14='{'
 			{
@@ -212,18 +212,18 @@ ruleBOMIModel returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getBOMIModelAccess().getGovernanceTeamsGovernanceTeamParserRuleCall_3_2_0());
+						newCompositeNode(grammarAccess.getBOMIModelAccess().getRolesRoleParserRuleCall_3_2_0());
 					}
-					lv_governanceTeams_15_0=ruleGovernanceTeam
+					lv_roles_15_0=ruleRole
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 						}
 						add(
 							$current,
-							"governanceTeams",
-							lv_governanceTeams_15_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.GovernanceTeam");
+							"roles",
+							lv_roles_15_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.Role");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -236,18 +236,18 @@ ruleBOMIModel returns [EObject current=null]
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getBOMIModelAccess().getGovernanceTeamsGovernanceTeamParserRuleCall_3_3_1_0());
+							newCompositeNode(grammarAccess.getBOMIModelAccess().getRolesRoleParserRuleCall_3_3_1_0());
 						}
-						lv_governanceTeams_17_0=ruleGovernanceTeam
+						lv_roles_17_0=ruleRole
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 							}
 							add(
 								$current,
-								"governanceTeams",
-								lv_governanceTeams_17_0,
-								"se.gu.cse.idxse.bomi.text.Bomi.GovernanceTeam");
+								"roles",
+								lv_roles_17_0,
+								"se.gu.cse.idxse.bomi.text.Bomi.Role");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -259,9 +259,9 @@ ruleBOMIModel returns [EObject current=null]
 			}
 		)?
 		(
-			otherlv_19='roles'
+			otherlv_19='boMiCoordinations'
 			{
-				newLeafNode(otherlv_19, grammarAccess.getBOMIModelAccess().getRolesKeyword_4_0());
+				newLeafNode(otherlv_19, grammarAccess.getBOMIModelAccess().getBoMiCoordinationsKeyword_4_0());
 			}
 			otherlv_20='{'
 			{
@@ -270,18 +270,18 @@ ruleBOMIModel returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getBOMIModelAccess().getRolesRoleParserRuleCall_4_2_0());
+						newCompositeNode(grammarAccess.getBOMIModelAccess().getBoMiCoordinationsBOMICoordinationParserRuleCall_4_2_0());
 					}
-					lv_roles_21_0=ruleRole
+					lv_boMiCoordinations_21_0=ruleBOMICoordination
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 						}
 						add(
 							$current,
-							"roles",
-							lv_roles_21_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.Role");
+							"boMiCoordinations",
+							lv_boMiCoordinations_21_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.BOMICoordination");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -294,18 +294,18 @@ ruleBOMIModel returns [EObject current=null]
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getBOMIModelAccess().getRolesRoleParserRuleCall_4_3_1_0());
+							newCompositeNode(grammarAccess.getBOMIModelAccess().getBoMiCoordinationsBOMICoordinationParserRuleCall_4_3_1_0());
 						}
-						lv_roles_23_0=ruleRole
+						lv_boMiCoordinations_23_0=ruleBOMICoordination
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 							}
 							add(
 								$current,
-								"roles",
-								lv_roles_23_0,
-								"se.gu.cse.idxse.bomi.text.Bomi.Role");
+								"boMiCoordinations",
+								lv_boMiCoordinations_23_0,
+								"se.gu.cse.idxse.bomi.text.Bomi.BOMICoordination");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -317,9 +317,9 @@ ruleBOMIModel returns [EObject current=null]
 			}
 		)?
 		(
-			otherlv_25='drivers'
+			otherlv_25='methodologicalIslands'
 			{
-				newLeafNode(otherlv_25, grammarAccess.getBOMIModelAccess().getDriversKeyword_5_0());
+				newLeafNode(otherlv_25, grammarAccess.getBOMIModelAccess().getMethodologicalIslandsKeyword_5_0());
 			}
 			otherlv_26='{'
 			{
@@ -328,18 +328,18 @@ ruleBOMIModel returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getBOMIModelAccess().getDriversDriverParserRuleCall_5_2_0());
+						newCompositeNode(grammarAccess.getBOMIModelAccess().getMethodologicalIslandsMethodologicalIslandParserRuleCall_5_2_0());
 					}
-					lv_drivers_27_0=ruleDriver
+					lv_methodologicalIslands_27_0=ruleMethodologicalIsland
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 						}
 						add(
 							$current,
-							"drivers",
-							lv_drivers_27_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.Driver");
+							"methodologicalIslands",
+							lv_methodologicalIslands_27_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.MethodologicalIsland");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -352,18 +352,18 @@ ruleBOMIModel returns [EObject current=null]
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getBOMIModelAccess().getDriversDriverParserRuleCall_5_3_1_0());
+							newCompositeNode(grammarAccess.getBOMIModelAccess().getMethodologicalIslandsMethodologicalIslandParserRuleCall_5_3_1_0());
 						}
-						lv_drivers_29_0=ruleDriver
+						lv_methodologicalIslands_29_0=ruleMethodologicalIsland
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 							}
 							add(
 								$current,
-								"drivers",
-								lv_drivers_29_0,
-								"se.gu.cse.idxse.bomi.text.Bomi.Driver");
+								"methodologicalIslands",
+								lv_methodologicalIslands_29_0,
+								"se.gu.cse.idxse.bomi.text.Bomi.MethodologicalIsland");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -375,104 +375,78 @@ ruleBOMIModel returns [EObject current=null]
 			}
 		)?
 		(
+			otherlv_31='governanceTeams'
+			{
+				newLeafNode(otherlv_31, grammarAccess.getBOMIModelAccess().getGovernanceTeamsKeyword_6_0());
+			}
+			otherlv_32='{'
+			{
+				newLeafNode(otherlv_32, grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_6_1());
+			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getBOMIModelAccess().getBoMiCoordinationsBOMICoordinationParserRuleCall_6_0_0());
+						newCompositeNode(grammarAccess.getBOMIModelAccess().getGovernanceTeamsGovernanceTeamParserRuleCall_6_2_0());
 					}
-					lv_boMiCoordinations_31_0=ruleBOMICoordination
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
-						}
-						add(
-							$current,
-							"boMiCoordinations",
-							lv_boMiCoordinations_31_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.BOMICoordination");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_32=','
-				{
-					newLeafNode(otherlv_32, grammarAccess.getBOMIModelAccess().getCommaKeyword_6_1_0());
-				}
-				(
-					(
-						{
-							newCompositeNode(grammarAccess.getBOMIModelAccess().getBoMiCoordinationsBOMICoordinationParserRuleCall_6_1_1_0());
-						}
-						lv_boMiCoordinations_33_0=ruleBOMICoordination
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
-							}
-							add(
-								$current,
-								"boMiCoordinations",
-								lv_boMiCoordinations_33_0,
-								"se.gu.cse.idxse.bomi.text.Bomi.BOMICoordination");
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-		)?
-		(
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBOMIModelAccess().getBoRoleInteractionsBORoleInteractionParserRuleCall_7_0_0());
-					}
-					lv_boRoleInteractions_34_0=ruleBORoleInteraction
+					lv_governanceTeams_33_0=ruleGovernanceTeam
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 						}
 						add(
 							$current,
-							"boRoleInteractions",
-							lv_boRoleInteractions_34_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.BORoleInteraction");
+							"governanceTeams",
+							lv_governanceTeams_33_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.GovernanceTeam");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_35=','
+				otherlv_34=','
 				{
-					newLeafNode(otherlv_35, grammarAccess.getBOMIModelAccess().getCommaKeyword_7_1_0());
+					newLeafNode(otherlv_34, grammarAccess.getBOMIModelAccess().getCommaKeyword_6_3_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getBOMIModelAccess().getBoRoleInteractionsBORoleInteractionParserRuleCall_7_1_1_0());
+							newCompositeNode(grammarAccess.getBOMIModelAccess().getGovernanceTeamsGovernanceTeamParserRuleCall_6_3_1_0());
 						}
-						lv_boRoleInteractions_36_0=ruleBORoleInteraction
+						lv_governanceTeams_35_0=ruleGovernanceTeam
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
 							}
 							add(
 								$current,
-								"boRoleInteractions",
-								lv_boRoleInteractions_36_0,
-								"se.gu.cse.idxse.bomi.text.Bomi.BORoleInteraction");
+								"governanceTeams",
+								lv_governanceTeams_35_0,
+								"se.gu.cse.idxse.bomi.text.Bomi.GovernanceTeam");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
+			otherlv_36='}'
+			{
+				newLeafNode(otherlv_36, grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_6_4());
+			}
 		)?
 		(
+			otherlv_37='boTeamGovernances'
+			{
+				newLeafNode(otherlv_37, grammarAccess.getBOMIModelAccess().getBoTeamGovernancesKeyword_7_0());
+			}
+			otherlv_38='{'
+			{
+				newLeafNode(otherlv_38, grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_7_1());
+			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getBOMIModelAccess().getBoTeamGovernancesBOTeamGovernanceParserRuleCall_8_0_0());
+						newCompositeNode(grammarAccess.getBOMIModelAccess().getBoTeamGovernancesBOTeamGovernanceParserRuleCall_7_2_0());
 					}
-					lv_boTeamGovernances_37_0=ruleBOTeamGovernance
+					lv_boTeamGovernances_39_0=ruleBOTeamGovernance
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
@@ -480,23 +454,23 @@ ruleBOMIModel returns [EObject current=null]
 						add(
 							$current,
 							"boTeamGovernances",
-							lv_boTeamGovernances_37_0,
+							lv_boTeamGovernances_39_0,
 							"se.gu.cse.idxse.bomi.text.Bomi.BOTeamGovernance");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_38=','
+				otherlv_40=','
 				{
-					newLeafNode(otherlv_38, grammarAccess.getBOMIModelAccess().getCommaKeyword_8_1_0());
+					newLeafNode(otherlv_40, grammarAccess.getBOMIModelAccess().getCommaKeyword_7_3_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getBOMIModelAccess().getBoTeamGovernancesBOTeamGovernanceParserRuleCall_8_1_1_0());
+							newCompositeNode(grammarAccess.getBOMIModelAccess().getBoTeamGovernancesBOTeamGovernanceParserRuleCall_7_3_1_0());
 						}
-						lv_boTeamGovernances_39_0=ruleBOTeamGovernance
+						lv_boTeamGovernances_41_0=ruleBOTeamGovernance
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
@@ -504,14 +478,487 @@ ruleBOMIModel returns [EObject current=null]
 							add(
 								$current,
 								"boTeamGovernances",
-								lv_boTeamGovernances_39_0,
+								lv_boTeamGovernances_41_0,
 								"se.gu.cse.idxse.bomi.text.Bomi.BOTeamGovernance");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
+			otherlv_42='}'
+			{
+				newLeafNode(otherlv_42, grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_7_4());
+			}
 		)?
+		(
+			otherlv_43='drivers'
+			{
+				newLeafNode(otherlv_43, grammarAccess.getBOMIModelAccess().getDriversKeyword_8_0());
+			}
+			otherlv_44='{'
+			{
+				newLeafNode(otherlv_44, grammarAccess.getBOMIModelAccess().getLeftCurlyBracketKeyword_8_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBOMIModelAccess().getDriversDriverParserRuleCall_8_2_0());
+					}
+					lv_drivers_45_0=ruleDriver
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
+						}
+						add(
+							$current,
+							"drivers",
+							lv_drivers_45_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.Driver");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				otherlv_46=','
+				{
+					newLeafNode(otherlv_46, grammarAccess.getBOMIModelAccess().getCommaKeyword_8_3_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getBOMIModelAccess().getDriversDriverParserRuleCall_8_3_1_0());
+						}
+						lv_drivers_47_0=ruleDriver
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getBOMIModelRule());
+							}
+							add(
+								$current,
+								"drivers",
+								lv_drivers_47_0,
+								"se.gu.cse.idxse.bomi.text.Bomi.Driver");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
+			otherlv_48='}'
+			{
+				newLeafNode(otherlv_48, grammarAccess.getBOMIModelAccess().getRightCurlyBracketKeyword_8_4());
+			}
+		)?
+	)
+;
+
+// Entry rule entryRuleBORoleInteraction
+entryRuleBORoleInteraction returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getBORoleInteractionRule()); }
+	iv_ruleBORoleInteraction=ruleBORoleInteraction
+	{ $current=$iv_ruleBORoleInteraction.current; }
+	EOF;
+
+// Rule BORoleInteraction
+ruleBORoleInteraction returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getBORoleInteractionAccess().getBORoleInteractionAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='BORoleInteraction'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getBORoleInteractionAccess().getBORoleInteractionKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getBORoleInteractionAccess().getNameEStringParserRuleCall_2_0());
+				}
+				lv_name_2_0=ruleEString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+					}
+					set(
+						$current,
+						"name",
+						lv_name_2_0,
+						"se.gu.cse.idxse.bomi.text.Bomi.EString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3='{'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getBORoleInteractionAccess().getLeftCurlyBracketKeyword_3());
+		}
+		(
+			otherlv_4='purpose'
+			{
+				newLeafNode(otherlv_4, grammarAccess.getBORoleInteractionAccess().getPurposeKeyword_4_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getPurposeEStringParserRuleCall_4_1_0());
+					}
+					lv_purpose_5_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+						}
+						set(
+							$current,
+							"purpose",
+							lv_purpose_5_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_6='accessability'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getBORoleInteractionAccess().getAccessabilityKeyword_5_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getAccessabilityHighLowEnumRuleCall_5_1_0());
+					}
+					lv_accessability_7_0=ruleHighLow
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+						}
+						set(
+							$current,
+							"accessability",
+							lv_accessability_7_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.HighLow");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_8='stability'
+			{
+				newLeafNode(otherlv_8, grammarAccess.getBORoleInteractionAccess().getStabilityKeyword_6_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getStabilityHighLowEnumRuleCall_6_1_0());
+					}
+					lv_stability_9_0=ruleHighLow
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+						}
+						set(
+							$current,
+							"stability",
+							lv_stability_9_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.HighLow");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_10='criticality'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getBORoleInteractionAccess().getCriticalityKeyword_7_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getCriticalityHighLowEnumRuleCall_7_1_0());
+					}
+					lv_criticality_11_0=ruleHighLow
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+						}
+						set(
+							$current,
+							"criticality",
+							lv_criticality_11_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.HighLow");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_12='fitForPurpose'
+			{
+				newLeafNode(otherlv_12, grammarAccess.getBORoleInteractionAccess().getFitForPurposeKeyword_8_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getFitForPurposeHighLowEnumRuleCall_8_1_0());
+					}
+					lv_fitForPurpose_13_0=ruleHighLow
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+						}
+						set(
+							$current,
+							"fitForPurpose",
+							lv_fitForPurpose_13_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.HighLow");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_14='responsible'
+			{
+				newLeafNode(otherlv_14, grammarAccess.getBORoleInteractionAccess().getResponsibleKeyword_9_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getResponsibleUnsettableBooleanEnumRuleCall_9_1_0());
+					}
+					lv_responsible_15_0=ruleUnsettableBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+						}
+						set(
+							$current,
+							"responsible",
+							lv_responsible_15_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_16='creates'
+			{
+				newLeafNode(otherlv_16, grammarAccess.getBORoleInteractionAccess().getCreatesKeyword_10_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getCreatesUnsettableBooleanEnumRuleCall_10_1_0());
+					}
+					lv_creates_17_0=ruleUnsettableBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+						}
+						set(
+							$current,
+							"creates",
+							lv_creates_17_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_18='reads'
+			{
+				newLeafNode(otherlv_18, grammarAccess.getBORoleInteractionAccess().getReadsKeyword_11_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getReadsUnsettableBooleanEnumRuleCall_11_1_0());
+					}
+					lv_reads_19_0=ruleUnsettableBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+						}
+						set(
+							$current,
+							"reads",
+							lv_reads_19_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_20='updates'
+			{
+				newLeafNode(otherlv_20, grammarAccess.getBORoleInteractionAccess().getUpdatesKeyword_12_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getUpdatesUnsettableBooleanEnumRuleCall_12_1_0());
+					}
+					lv_updates_21_0=ruleUnsettableBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+						}
+						set(
+							$current,
+							"updates",
+							lv_updates_21_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_22='deletes'
+			{
+				newLeafNode(otherlv_22, grammarAccess.getBORoleInteractionAccess().getDeletesKeyword_13_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getDeletesUnsettableBooleanEnumRuleCall_13_1_0());
+					}
+					lv_deletes_23_0=ruleUnsettableBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+						}
+						set(
+							$current,
+							"deletes",
+							lv_deletes_23_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_24='boundaryObjects'
+			{
+				newLeafNode(otherlv_24, grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsKeyword_14_0());
+			}
+			otherlv_25='('
+			{
+				newLeafNode(otherlv_25, grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_14_1());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getBORoleInteractionRule());
+						}
+					}
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_14_2_0());
+					}
+					ruleEString
+					{
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				otherlv_27=','
+				{
+					newLeafNode(otherlv_27, grammarAccess.getBORoleInteractionAccess().getCommaKeyword_14_3_0());
+				}
+				(
+					(
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getBORoleInteractionRule());
+							}
+						}
+						{
+							newCompositeNode(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0());
+						}
+						ruleEString
+						{
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
+			otherlv_29=')'
+			{
+				newLeafNode(otherlv_29, grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_14_4());
+			}
+		)?
+		(
+			otherlv_30='roles'
+			{
+				newLeafNode(otherlv_30, grammarAccess.getBORoleInteractionAccess().getRolesKeyword_15_0());
+			}
+			otherlv_31='('
+			{
+				newLeafNode(otherlv_31, grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_15_1());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getBORoleInteractionRule());
+						}
+					}
+					{
+						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_15_2_0());
+					}
+					ruleEString
+					{
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				otherlv_33=','
+				{
+					newLeafNode(otherlv_33, grammarAccess.getBORoleInteractionAccess().getCommaKeyword_15_3_0());
+				}
+				(
+					(
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getBORoleInteractionRule());
+							}
+						}
+						{
+							newCompositeNode(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_15_3_1_0());
+						}
+						ruleEString
+						{
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
+			otherlv_35=')'
+			{
+				newLeafNode(otherlv_35, grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_15_4());
+			}
+		)?
+		otherlv_36='}'
+		{
+			newLeafNode(otherlv_36, grammarAccess.getBORoleInteractionAccess().getRightCurlyBracketKeyword_16());
+		}
 	)
 ;
 
@@ -566,41 +1013,16 @@ ruleBoundaryObject returns [EObject current=null]
 			newLeafNode(otherlv_3, grammarAccess.getBoundaryObjectAccess().getLeftCurlyBracketKeyword_3());
 		}
 		(
-			otherlv_4='superType'
+			otherlv_4='purpose'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getBoundaryObjectAccess().getSuperTypeKeyword_4_0());
+				newLeafNode(otherlv_4, grammarAccess.getBoundaryObjectAccess().getPurposeKeyword_4_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getBoundaryObjectAccess().getSuperTypeBOSuperTypesEnumRuleCall_4_1_0());
+						newCompositeNode(grammarAccess.getBoundaryObjectAccess().getPurposeEStringParserRuleCall_4_1_0());
 					}
-					lv_superType_5_0=ruleBOSuperTypes
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBoundaryObjectRule());
-						}
-						set(
-							$current,
-							"superType",
-							lv_superType_5_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.BOSuperTypes");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_6='purpose'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getBoundaryObjectAccess().getPurposeKeyword_5_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBoundaryObjectAccess().getPurposeEStringParserRuleCall_5_1_0());
-					}
-					lv_purpose_7_0=ruleEString
+					lv_purpose_5_0=ruleEString
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBoundaryObjectRule());
@@ -608,8 +1030,33 @@ ruleBoundaryObject returns [EObject current=null]
 						set(
 							$current,
 							"purpose",
-							lv_purpose_7_0,
+							lv_purpose_5_0,
 							"se.gu.cse.idxse.bomi.text.Bomi.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_6='superType'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getBoundaryObjectAccess().getSuperTypeKeyword_5_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBoundaryObjectAccess().getSuperTypeBOSuperTypesEnumRuleCall_5_1_0());
+					}
+					lv_superType_7_0=ruleBOSuperTypes
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBoundaryObjectRule());
+						}
+						set(
+							$current,
+							"superType",
+							lv_superType_7_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.BOSuperTypes");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -922,137 +1369,6 @@ ruleBoundaryObject returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleMethodologicalIsland
-entryRuleMethodologicalIsland returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getMethodologicalIslandRule()); }
-	iv_ruleMethodologicalIsland=ruleMethodologicalIsland
-	{ $current=$iv_ruleMethodologicalIsland.current; }
-	EOF;
-
-// Rule MethodologicalIsland
-ruleMethodologicalIsland returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getMethodologicalIslandAccess().getMethodologicalIslandAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='MethodologicalIsland'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getMethodologicalIslandAccess().getMethodologicalIslandKeyword_1());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getMethodologicalIslandAccess().getNameEStringParserRuleCall_2_0());
-				}
-				lv_name_2_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMethodologicalIslandRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_2_0,
-						"se.gu.cse.idxse.bomi.text.Bomi.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_3='{'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getMethodologicalIslandAccess().getLeftCurlyBracketKeyword_3());
-		}
-		(
-			otherlv_4='type'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getMethodologicalIslandAccess().getTypeKeyword_4_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getMethodologicalIslandAccess().getTypeMITypeEnumRuleCall_4_1_0());
-					}
-					lv_type_5_0=ruleMIType
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getMethodologicalIslandRule());
-						}
-						set(
-							$current,
-							"type",
-							lv_type_5_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.MIType");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getMethodologicalIslandAccess().getRightCurlyBracketKeyword_5());
-		}
-	)
-;
-
-// Entry rule entryRuleGovernanceTeam
-entryRuleGovernanceTeam returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGovernanceTeamRule()); }
-	iv_ruleGovernanceTeam=ruleGovernanceTeam
-	{ $current=$iv_ruleGovernanceTeam.current; }
-	EOF;
-
-// Rule GovernanceTeam
-ruleGovernanceTeam returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getGovernanceTeamAccess().getGovernanceTeamAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='GovernanceTeam'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGovernanceTeamAccess().getGovernanceTeamKeyword_1());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGovernanceTeamAccess().getNameEStringParserRuleCall_2_0());
-				}
-				lv_name_2_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGovernanceTeamRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_2_0,
-						"se.gu.cse.idxse.bomi.text.Bomi.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-	)
-;
-
 // Entry rule entryRuleRole
 entryRuleRole returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getRoleRule()); }
@@ -1210,190 +1526,6 @@ ruleRole returns [EObject current=null]
 		otherlv_16='}'
 		{
 			newLeafNode(otherlv_16, grammarAccess.getRoleAccess().getRightCurlyBracketKeyword_6());
-		}
-	)
-;
-
-// Entry rule entryRuleDriver
-entryRuleDriver returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getDriverRule()); }
-	iv_ruleDriver=ruleDriver
-	{ $current=$iv_ruleDriver.current; }
-	EOF;
-
-// Rule Driver
-ruleDriver returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getDriverAccess().getDriverAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='Driver'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getDriverAccess().getDriverKeyword_1());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getDriverAccess().getNameEStringParserRuleCall_2_0());
-				}
-				lv_name_2_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDriverRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_2_0,
-						"se.gu.cse.idxse.bomi.text.Bomi.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_3='{'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getDriverAccess().getLeftCurlyBracketKeyword_3());
-		}
-		(
-			otherlv_4='driverType'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getDriverAccess().getDriverTypeKeyword_4_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getDriverAccess().getDriverTypeDriverTypesEnumRuleCall_4_1_0());
-					}
-					lv_driverType_5_0=ruleDriverTypes
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getDriverRule());
-						}
-						set(
-							$current,
-							"driverType",
-							lv_driverType_5_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.DriverTypes");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_6='distanceType'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getDriverAccess().getDistanceTypeKeyword_5_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getDriverAccess().getDistanceTypeDistanceTypesEnumRuleCall_5_1_0());
-					}
-					lv_distanceType_7_0=ruleDistanceTypes
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getDriverRule());
-						}
-						set(
-							$current,
-							"distanceType",
-							lv_distanceType_7_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.DistanceTypes");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_8='distanceSize'
-			{
-				newLeafNode(otherlv_8, grammarAccess.getDriverAccess().getDistanceSizeKeyword_6_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getDriverAccess().getDistanceSizeHighLowEnumRuleCall_6_1_0());
-					}
-					lv_distanceSize_9_0=ruleHighLow
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getDriverRule());
-						}
-						set(
-							$current,
-							"distanceSize",
-							lv_distanceSize_9_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.HighLow");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_10='drivesMIs'
-			{
-				newLeafNode(otherlv_10, grammarAccess.getDriverAccess().getDrivesMIsKeyword_7_0());
-			}
-			otherlv_11='('
-			{
-				newLeafNode(otherlv_11, grammarAccess.getDriverAccess().getLeftParenthesisKeyword_7_1());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getDriverRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getDriverAccess().getDrivesMIsMethodologicalIslandCrossReference_7_2_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_13=','
-				{
-					newLeafNode(otherlv_13, grammarAccess.getDriverAccess().getCommaKeyword_7_3_0());
-				}
-				(
-					(
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getDriverRule());
-							}
-						}
-						{
-							newCompositeNode(grammarAccess.getDriverAccess().getDrivesMIsMethodologicalIslandCrossReference_7_3_1_0());
-						}
-						ruleEString
-						{
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-			otherlv_15=')'
-			{
-				newLeafNode(otherlv_15, grammarAccess.getDriverAccess().getRightParenthesisKeyword_7_4());
-			}
-		)?
-		otherlv_16='}'
-		{
-			newLeafNode(otherlv_16, grammarAccess.getDriverAccess().getRightCurlyBracketKeyword_8());
 		}
 	)
 ;
@@ -1684,15 +1816,15 @@ ruleBOMICoordination returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleBORoleInteraction
-entryRuleBORoleInteraction returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getBORoleInteractionRule()); }
-	iv_ruleBORoleInteraction=ruleBORoleInteraction
-	{ $current=$iv_ruleBORoleInteraction.current; }
+// Entry rule entryRuleMethodologicalIsland
+entryRuleMethodologicalIsland returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMethodologicalIslandRule()); }
+	iv_ruleMethodologicalIsland=ruleMethodologicalIsland
+	{ $current=$iv_ruleMethodologicalIsland.current; }
 	EOF;
 
-// Rule BORoleInteraction
-ruleBORoleInteraction returns [EObject current=null]
+// Rule MethodologicalIsland
+ruleMethodologicalIsland returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1703,23 +1835,23 @@ ruleBORoleInteraction returns [EObject current=null]
 		(
 			{
 				$current = forceCreateModelElement(
-					grammarAccess.getBORoleInteractionAccess().getBORoleInteractionAction_0(),
+					grammarAccess.getMethodologicalIslandAccess().getMethodologicalIslandAction_0(),
 					$current);
 			}
 		)
-		otherlv_1='BORoleInteraction'
+		otherlv_1='MethodologicalIsland'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getBORoleInteractionAccess().getBORoleInteractionKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getMethodologicalIslandAccess().getMethodologicalIslandKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getBORoleInteractionAccess().getNameEStringParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getMethodologicalIslandAccess().getNameEStringParserRuleCall_2_0());
 				}
 				lv_name_2_0=ruleEString
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+						$current = createModelElementForParent(grammarAccess.getMethodologicalIslandRule());
 					}
 					set(
 						$current,
@@ -1732,366 +1864,86 @@ ruleBORoleInteraction returns [EObject current=null]
 		)
 		otherlv_3='{'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getBORoleInteractionAccess().getLeftCurlyBracketKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getMethodologicalIslandAccess().getLeftCurlyBracketKeyword_3());
 		}
 		(
-			otherlv_4='purpose'
+			otherlv_4='type'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getBORoleInteractionAccess().getPurposeKeyword_4_0());
+				newLeafNode(otherlv_4, grammarAccess.getMethodologicalIslandAccess().getTypeKeyword_4_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getPurposeEStringParserRuleCall_4_1_0());
+						newCompositeNode(grammarAccess.getMethodologicalIslandAccess().getTypeMITypeEnumRuleCall_4_1_0());
 					}
-					lv_purpose_5_0=ruleEString
+					lv_type_5_0=ruleMIType
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
+							$current = createModelElementForParent(grammarAccess.getMethodologicalIslandRule());
 						}
 						set(
 							$current,
-							"purpose",
-							lv_purpose_5_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.EString");
+							"type",
+							lv_type_5_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.MIType");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		(
-			otherlv_6='accessability'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getBORoleInteractionAccess().getAccessabilityKeyword_5_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getAccessabilityHighLowEnumRuleCall_5_1_0());
-					}
-					lv_accessability_7_0=ruleHighLow
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
-						}
-						set(
-							$current,
-							"accessability",
-							lv_accessability_7_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.HighLow");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_8='stability'
-			{
-				newLeafNode(otherlv_8, grammarAccess.getBORoleInteractionAccess().getStabilityKeyword_6_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getStabilityHighLowEnumRuleCall_6_1_0());
-					}
-					lv_stability_9_0=ruleHighLow
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
-						}
-						set(
-							$current,
-							"stability",
-							lv_stability_9_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.HighLow");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_10='criticality'
-			{
-				newLeafNode(otherlv_10, grammarAccess.getBORoleInteractionAccess().getCriticalityKeyword_7_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getCriticalityHighLowEnumRuleCall_7_1_0());
-					}
-					lv_criticality_11_0=ruleHighLow
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
-						}
-						set(
-							$current,
-							"criticality",
-							lv_criticality_11_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.HighLow");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_12='fitForPurpose'
-			{
-				newLeafNode(otherlv_12, grammarAccess.getBORoleInteractionAccess().getFitForPurposeKeyword_8_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getFitForPurposeHighLowEnumRuleCall_8_1_0());
-					}
-					lv_fitForPurpose_13_0=ruleHighLow
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
-						}
-						set(
-							$current,
-							"fitForPurpose",
-							lv_fitForPurpose_13_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.HighLow");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_14='responsible'
-			{
-				newLeafNode(otherlv_14, grammarAccess.getBORoleInteractionAccess().getResponsibleKeyword_9_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getResponsibleMyBooleanEnumRuleCall_9_1_0());
-					}
-					lv_responsible_15_0=ruleMyBoolean
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
-						}
-						set(
-							$current,
-							"responsible",
-							lv_responsible_15_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.MyBoolean");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_16='creates'
-			{
-				newLeafNode(otherlv_16, grammarAccess.getBORoleInteractionAccess().getCreatesKeyword_10_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getCreatesMyBooleanEnumRuleCall_10_1_0());
-					}
-					lv_creates_17_0=ruleMyBoolean
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
-						}
-						set(
-							$current,
-							"creates",
-							lv_creates_17_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.MyBoolean");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_18='reads'
-			{
-				newLeafNode(otherlv_18, grammarAccess.getBORoleInteractionAccess().getReadsKeyword_11_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getReadsMyBooleanEnumRuleCall_11_1_0());
-					}
-					lv_reads_19_0=ruleMyBoolean
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
-						}
-						set(
-							$current,
-							"reads",
-							lv_reads_19_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.MyBoolean");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_20='updates'
-			{
-				newLeafNode(otherlv_20, grammarAccess.getBORoleInteractionAccess().getUpdatesKeyword_12_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getUpdatesMyBooleanEnumRuleCall_12_1_0());
-					}
-					lv_updates_21_0=ruleMyBoolean
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
-						}
-						set(
-							$current,
-							"updates",
-							lv_updates_21_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.MyBoolean");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_22='deletes'
-			{
-				newLeafNode(otherlv_22, grammarAccess.getBORoleInteractionAccess().getDeletesKeyword_13_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getDeletesMyBooleanEnumRuleCall_13_1_0());
-					}
-					lv_deletes_23_0=ruleMyBoolean
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBORoleInteractionRule());
-						}
-						set(
-							$current,
-							"deletes",
-							lv_deletes_23_0,
-							"se.gu.cse.idxse.bomi.text.Bomi.MyBoolean");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_24='boundaryObjects'
-			{
-				newLeafNode(otherlv_24, grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsKeyword_14_0());
-			}
-			otherlv_25='('
-			{
-				newLeafNode(otherlv_25, grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_14_1());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getBORoleInteractionRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_14_2_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_27=','
-				{
-					newLeafNode(otherlv_27, grammarAccess.getBORoleInteractionAccess().getCommaKeyword_14_3_0());
-				}
-				(
-					(
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getBORoleInteractionRule());
-							}
-						}
-						{
-							newCompositeNode(grammarAccess.getBORoleInteractionAccess().getBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0());
-						}
-						ruleEString
-						{
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-			otherlv_29=')'
-			{
-				newLeafNode(otherlv_29, grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_14_4());
-			}
-		)?
-		(
-			otherlv_30='roles'
-			{
-				newLeafNode(otherlv_30, grammarAccess.getBORoleInteractionAccess().getRolesKeyword_15_0());
-			}
-			otherlv_31='('
-			{
-				newLeafNode(otherlv_31, grammarAccess.getBORoleInteractionAccess().getLeftParenthesisKeyword_15_1());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getBORoleInteractionRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_15_2_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_33=','
-				{
-					newLeafNode(otherlv_33, grammarAccess.getBORoleInteractionAccess().getCommaKeyword_15_3_0());
-				}
-				(
-					(
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getBORoleInteractionRule());
-							}
-						}
-						{
-							newCompositeNode(grammarAccess.getBORoleInteractionAccess().getRolesRoleCrossReference_15_3_1_0());
-						}
-						ruleEString
-						{
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-			otherlv_35=')'
-			{
-				newLeafNode(otherlv_35, grammarAccess.getBORoleInteractionAccess().getRightParenthesisKeyword_15_4());
-			}
-		)?
-		otherlv_36='}'
+		otherlv_6='}'
 		{
-			newLeafNode(otherlv_36, grammarAccess.getBORoleInteractionAccess().getRightCurlyBracketKeyword_16());
+			newLeafNode(otherlv_6, grammarAccess.getMethodologicalIslandAccess().getRightCurlyBracketKeyword_5());
 		}
+	)
+;
+
+// Entry rule entryRuleGovernanceTeam
+entryRuleGovernanceTeam returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGovernanceTeamRule()); }
+	iv_ruleGovernanceTeam=ruleGovernanceTeam
+	{ $current=$iv_ruleGovernanceTeam.current; }
+	EOF;
+
+// Rule GovernanceTeam
+ruleGovernanceTeam returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getGovernanceTeamAccess().getGovernanceTeamAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='GovernanceTeam'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGovernanceTeamAccess().getGovernanceTeamKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGovernanceTeamAccess().getNameEStringParserRuleCall_2_0());
+				}
+				lv_name_2_0=ruleEString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGovernanceTeamRule());
+					}
+					set(
+						$current,
+						"name",
+						lv_name_2_0,
+						"se.gu.cse.idxse.bomi.text.Bomi.EString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 
@@ -2221,9 +2073,9 @@ ruleBOTeamGovernance returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_10='governanceTeams'
+			otherlv_10='boundaryObjects'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsKeyword_7_0());
+				newLeafNode(otherlv_10, grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsKeyword_7_0());
 			}
 			otherlv_11='('
 			{
@@ -2237,7 +2089,7 @@ ruleBOTeamGovernance returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsGovernanceTeamCrossReference_7_2_0());
+						newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsBoundaryObjectCrossReference_7_2_0());
 					}
 					ruleEString
 					{
@@ -2258,7 +2110,7 @@ ruleBOTeamGovernance returns [EObject current=null]
 							}
 						}
 						{
-							newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsGovernanceTeamCrossReference_7_3_1_0());
+							newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsBoundaryObjectCrossReference_7_3_1_0());
 						}
 						ruleEString
 						{
@@ -2273,9 +2125,9 @@ ruleBOTeamGovernance returns [EObject current=null]
 			}
 		)?
 		(
-			otherlv_16='boundaryObjects'
+			otherlv_16='governanceTeams'
 			{
-				newLeafNode(otherlv_16, grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsKeyword_8_0());
+				newLeafNode(otherlv_16, grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsKeyword_8_0());
 			}
 			otherlv_17='('
 			{
@@ -2289,7 +2141,7 @@ ruleBOTeamGovernance returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsBoundaryObjectCrossReference_8_2_0());
+						newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsGovernanceTeamCrossReference_8_2_0());
 					}
 					ruleEString
 					{
@@ -2310,7 +2162,7 @@ ruleBOTeamGovernance returns [EObject current=null]
 							}
 						}
 						{
-							newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getBoundaryObjectsBoundaryObjectCrossReference_8_3_1_0());
+							newCompositeNode(grammarAccess.getBOTeamGovernanceAccess().getGovernanceTeamsGovernanceTeamCrossReference_8_3_1_0());
 						}
 						ruleEString
 						{
@@ -2327,6 +2179,290 @@ ruleBOTeamGovernance returns [EObject current=null]
 		otherlv_22='}'
 		{
 			newLeafNode(otherlv_22, grammarAccess.getBOTeamGovernanceAccess().getRightCurlyBracketKeyword_9());
+		}
+	)
+;
+
+// Entry rule entryRuleDriver
+entryRuleDriver returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDriverRule()); }
+	iv_ruleDriver=ruleDriver
+	{ $current=$iv_ruleDriver.current; }
+	EOF;
+
+// Rule Driver
+ruleDriver returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getDriverAccess().getDriverAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='Driver'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDriverAccess().getDriverKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getDriverAccess().getNameEStringParserRuleCall_2_0());
+				}
+				lv_name_2_0=ruleEString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDriverRule());
+					}
+					set(
+						$current,
+						"name",
+						lv_name_2_0,
+						"se.gu.cse.idxse.bomi.text.Bomi.EString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3='{'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getDriverAccess().getLeftCurlyBracketKeyword_3());
+		}
+		(
+			otherlv_4='driverTypeTechnology'
+			{
+				newLeafNode(otherlv_4, grammarAccess.getDriverAccess().getDriverTypeTechnologyKeyword_4_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDriverAccess().getDriverTypeTechnologyUnsettableBooleanEnumRuleCall_4_1_0());
+					}
+					lv_driverTypeTechnology_5_0=ruleUnsettableBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDriverRule());
+						}
+						set(
+							$current,
+							"driverTypeTechnology",
+							lv_driverTypeTechnology_5_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_6='driverTypeProcess'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getDriverAccess().getDriverTypeProcessKeyword_5_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDriverAccess().getDriverTypeProcessUnsettableBooleanEnumRuleCall_5_1_0());
+					}
+					lv_driverTypeProcess_7_0=ruleUnsettableBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDriverRule());
+						}
+						set(
+							$current,
+							"driverTypeProcess",
+							lv_driverTypeProcess_7_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_8='driverTypeOrganizational'
+			{
+				newLeafNode(otherlv_8, grammarAccess.getDriverAccess().getDriverTypeOrganizationalKeyword_6_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDriverAccess().getDriverTypeOrganizationalUnsettableBooleanEnumRuleCall_6_1_0());
+					}
+					lv_driverTypeOrganizational_9_0=ruleUnsettableBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDriverRule());
+						}
+						set(
+							$current,
+							"driverTypeOrganizational",
+							lv_driverTypeOrganizational_9_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_10='distanceTypeCultural'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getDriverAccess().getDistanceTypeCulturalKeyword_7_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDriverAccess().getDistanceTypeCulturalUnsettableBooleanEnumRuleCall_7_1_0());
+					}
+					lv_distanceTypeCultural_11_0=ruleUnsettableBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDriverRule());
+						}
+						set(
+							$current,
+							"distanceTypeCultural",
+							lv_distanceTypeCultural_11_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_12='distanceTypeGeographical'
+			{
+				newLeafNode(otherlv_12, grammarAccess.getDriverAccess().getDistanceTypeGeographicalKeyword_8_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDriverAccess().getDistanceTypeGeographicalUnsettableBooleanEnumRuleCall_8_1_0());
+					}
+					lv_distanceTypeGeographical_13_0=ruleUnsettableBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDriverRule());
+						}
+						set(
+							$current,
+							"distanceTypeGeographical",
+							lv_distanceTypeGeographical_13_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_14='distanceTypeOrganizational'
+			{
+				newLeafNode(otherlv_14, grammarAccess.getDriverAccess().getDistanceTypeOrganizationalKeyword_9_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDriverAccess().getDistanceTypeOrganizationalUnsettableBooleanEnumRuleCall_9_1_0());
+					}
+					lv_distanceTypeOrganizational_15_0=ruleUnsettableBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDriverRule());
+						}
+						set(
+							$current,
+							"distanceTypeOrganizational",
+							lv_distanceTypeOrganizational_15_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_16='distanceSize'
+			{
+				newLeafNode(otherlv_16, grammarAccess.getDriverAccess().getDistanceSizeKeyword_10_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDriverAccess().getDistanceSizeHighLowEnumRuleCall_10_1_0());
+					}
+					lv_distanceSize_17_0=ruleHighLow
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDriverRule());
+						}
+						set(
+							$current,
+							"distanceSize",
+							lv_distanceSize_17_0,
+							"se.gu.cse.idxse.bomi.text.Bomi.HighLow");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_18='drivesMIs'
+			{
+				newLeafNode(otherlv_18, grammarAccess.getDriverAccess().getDrivesMIsKeyword_11_0());
+			}
+			otherlv_19='('
+			{
+				newLeafNode(otherlv_19, grammarAccess.getDriverAccess().getLeftParenthesisKeyword_11_1());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDriverRule());
+						}
+					}
+					{
+						newCompositeNode(grammarAccess.getDriverAccess().getDrivesMIsMethodologicalIslandCrossReference_11_2_0());
+					}
+					ruleEString
+					{
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				otherlv_21=','
+				{
+					newLeafNode(otherlv_21, grammarAccess.getDriverAccess().getCommaKeyword_11_3_0());
+				}
+				(
+					(
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getDriverRule());
+							}
+						}
+						{
+							newCompositeNode(grammarAccess.getDriverAccess().getDrivesMIsMethodologicalIslandCrossReference_11_3_1_0());
+						}
+						ruleEString
+						{
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
+			otherlv_23=')'
+			{
+				newLeafNode(otherlv_23, grammarAccess.getDriverAccess().getRightParenthesisKeyword_11_4());
+			}
+		)?
+		otherlv_24='}'
+		{
+			newLeafNode(otherlv_24, grammarAccess.getDriverAccess().getRightCurlyBracketKeyword_12());
 		}
 	)
 ;
@@ -2408,8 +2544,8 @@ ruleHighLow returns [Enumerator current=null]
 	)
 ;
 
-// Rule MyBoolean
-ruleMyBoolean returns [Enumerator current=null]
+// Rule UnsettableBoolean
+ruleUnsettableBoolean returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -2420,24 +2556,24 @@ ruleMyBoolean returns [Enumerator current=null]
 		(
 			enumLiteral_0='NOT_SET'
 			{
-				$current = grammarAccess.getMyBooleanAccess().getNOT_SETEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getMyBooleanAccess().getNOT_SETEnumLiteralDeclaration_0());
+				$current = grammarAccess.getUnsettableBooleanAccess().getNOT_SETEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getUnsettableBooleanAccess().getNOT_SETEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
 			enumLiteral_1='True'
 			{
-				$current = grammarAccess.getMyBooleanAccess().getTrueEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getMyBooleanAccess().getTrueEnumLiteralDeclaration_1());
+				$current = grammarAccess.getUnsettableBooleanAccess().getTrueEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getUnsettableBooleanAccess().getTrueEnumLiteralDeclaration_1());
 			}
 		)
 		    |
 		(
 			enumLiteral_2='False'
 			{
-				$current = grammarAccess.getMyBooleanAccess().getFalseEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_2, grammarAccess.getMyBooleanAccess().getFalseEnumLiteralDeclaration_2());
+				$current = grammarAccess.getUnsettableBooleanAccess().getFalseEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getUnsettableBooleanAccess().getFalseEnumLiteralDeclaration_2());
 			}
 		)
 	)
@@ -2615,92 +2751,6 @@ ruleMIType returns [Enumerator current=null]
 			{
 				$current = grammarAccess.getMITypeAccess().getOrganizationsEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_4, grammarAccess.getMITypeAccess().getOrganizationsEnumLiteralDeclaration_4());
-			}
-		)
-	)
-;
-
-// Rule DriverTypes
-ruleDriverTypes returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			enumLiteral_0='NOT_SET'
-			{
-				$current = grammarAccess.getDriverTypesAccess().getNOT_SETEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getDriverTypesAccess().getNOT_SETEnumLiteralDeclaration_0());
-			}
-		)
-		    |
-		(
-			enumLiteral_1='Technology'
-			{
-				$current = grammarAccess.getDriverTypesAccess().getTechnologyEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getDriverTypesAccess().getTechnologyEnumLiteralDeclaration_1());
-			}
-		)
-		    |
-		(
-			enumLiteral_2='Process'
-			{
-				$current = grammarAccess.getDriverTypesAccess().getProcessEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_2, grammarAccess.getDriverTypesAccess().getProcessEnumLiteralDeclaration_2());
-			}
-		)
-		    |
-		(
-			enumLiteral_3='Organizational'
-			{
-				$current = grammarAccess.getDriverTypesAccess().getOrganizationalEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_3, grammarAccess.getDriverTypesAccess().getOrganizationalEnumLiteralDeclaration_3());
-			}
-		)
-	)
-;
-
-// Rule DistanceTypes
-ruleDistanceTypes returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			enumLiteral_0='NOT_SET'
-			{
-				$current = grammarAccess.getDistanceTypesAccess().getNOT_SETEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getDistanceTypesAccess().getNOT_SETEnumLiteralDeclaration_0());
-			}
-		)
-		    |
-		(
-			enumLiteral_1='Cultural'
-			{
-				$current = grammarAccess.getDistanceTypesAccess().getCulturalEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getDistanceTypesAccess().getCulturalEnumLiteralDeclaration_1());
-			}
-		)
-		    |
-		(
-			enumLiteral_2='Geographical'
-			{
-				$current = grammarAccess.getDistanceTypesAccess().getGeographicalEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_2, grammarAccess.getDistanceTypesAccess().getGeographicalEnumLiteralDeclaration_2());
-			}
-		)
-		    |
-		(
-			enumLiteral_3='Organizational'
-			{
-				$current = grammarAccess.getDistanceTypesAccess().getOrganizationalEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_3, grammarAccess.getDistanceTypesAccess().getOrganizationalEnumLiteralDeclaration_3());
 			}
 		)
 	)

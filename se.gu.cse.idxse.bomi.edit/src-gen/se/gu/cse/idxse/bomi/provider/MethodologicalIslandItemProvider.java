@@ -56,13 +56,19 @@ public class MethodologicalIslandItemProvider extends NamedElementItemProvider {
 	 * @generated
 	 */
 	protected void addTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_MethodologicalIsland_type_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_MethodologicalIsland_type_feature",
-								"_UI_MethodologicalIsland_type"),
-						BomiPackage.Literals.METHODOLOGICAL_ISLAND__TYPE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MethodologicalIsland_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MethodologicalIsland_type_feature", "_UI_MethodologicalIsland_type"),
+				 BomiPackage.Literals.METHODOLOGICAL_ISLAND__TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -94,9 +100,10 @@ public class MethodologicalIslandItemProvider extends NamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MethodologicalIsland) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_MethodologicalIsland_type")
-				: getString("_UI_MethodologicalIsland_type") + " " + label;
+		String label = ((MethodologicalIsland)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MethodologicalIsland_type") :
+			getString("_UI_MethodologicalIsland_type") + " " + label;
 	}
 
 	/**
@@ -111,9 +118,9 @@ public class MethodologicalIslandItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MethodologicalIsland.class)) {
-		case BomiPackage.METHODOLOGICAL_ISLAND__TYPE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+			case BomiPackage.METHODOLOGICAL_ISLAND__TYPE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}

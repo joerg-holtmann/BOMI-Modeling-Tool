@@ -68,13 +68,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addSuperTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BoundaryObject_superType_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_superType_feature",
-								"_UI_BoundaryObject_type"),
-						BomiPackage.Literals.BOUNDARY_OBJECT__SUPER_TYPE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_superType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_superType_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__SUPER_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -84,13 +90,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addLevelOfDetailPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BoundaryObject_levelOfDetail_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_levelOfDetail_feature",
-								"_UI_BoundaryObject_type"),
-						BomiPackage.Literals.BOUNDARY_OBJECT__LEVEL_OF_DETAIL, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_levelOfDetail_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_levelOfDetail_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__LEVEL_OF_DETAIL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -100,13 +112,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addFrequencyOfChangePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BoundaryObject_frequencyOfChange_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_frequencyOfChange_feature",
-								"_UI_BoundaryObject_type"),
-						BomiPackage.Literals.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_frequencyOfChange_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_frequencyOfChange_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -116,13 +134,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addModularityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BoundaryObject_modularity_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_modularity_feature",
-								"_UI_BoundaryObject_type"),
-						BomiPackage.Literals.BOUNDARY_OBJECT__MODULARITY, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_modularity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_modularity_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__MODULARITY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -132,13 +156,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addMaintainabilityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BoundaryObject_maintainability_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_maintainability_feature",
-								"_UI_BoundaryObject_type"),
-						BomiPackage.Literals.BOUNDARY_OBJECT__MAINTAINABILITY, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_maintainability_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_maintainability_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__MAINTAINABILITY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -148,13 +178,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addPrescriptivePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BoundaryObject_prescriptive_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_prescriptive_feature",
-								"_UI_BoundaryObject_type"),
-						BomiPackage.Literals.BOUNDARY_OBJECT__PRESCRIPTIVE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_prescriptive_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_prescriptive_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__PRESCRIPTIVE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -164,13 +200,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addLifecycleStagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BoundaryObject_lifecycleStage_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_lifecycleStage_feature",
-								"_UI_BoundaryObject_type"),
-						BomiPackage.Literals.BOUNDARY_OBJECT__LIFECYCLE_STAGE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_lifecycleStage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_lifecycleStage_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__LIFECYCLE_STAGE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -180,13 +222,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addRepresentationFormatPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_BoundaryObject_representationFormat_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_representationFormat_feature",
-						"_UI_BoundaryObject_type"),
-				BomiPackage.Literals.BOUNDARY_OBJECT__REPRESENTATION_FORMAT, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_representationFormat_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_representationFormat_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__REPRESENTATION_FORMAT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -196,13 +244,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addToolingPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BoundaryObject_tooling_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_tooling_feature",
-								"_UI_BoundaryObject_type"),
-						BomiPackage.Literals.BOUNDARY_OBJECT__TOOLING, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_tooling_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_tooling_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__TOOLING,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -212,13 +266,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addVersioningPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BoundaryObject_versioning_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_versioning_feature",
-								"_UI_BoundaryObject_type"),
-						BomiPackage.Literals.BOUNDARY_OBJECT__VERSIONING, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_versioning_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_versioning_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__VERSIONING,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -228,13 +288,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addUpToDatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BoundaryObject_upToDate_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_upToDate_feature",
-								"_UI_BoundaryObject_type"),
-						BomiPackage.Literals.BOUNDARY_OBJECT__UP_TO_DATE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_upToDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_upToDate_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__UP_TO_DATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -244,13 +310,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addInternalConsistencyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_BoundaryObject_internalConsistency_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_internalConsistency_feature",
-						"_UI_BoundaryObject_type"),
-				BomiPackage.Literals.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_internalConsistency_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_internalConsistency_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -260,13 +332,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addExternalConsistencyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_BoundaryObject_externalConsistency_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_externalConsistency_feature",
-						"_UI_BoundaryObject_type"),
-				BomiPackage.Literals.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoundaryObject_externalConsistency_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_externalConsistency_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -298,9 +376,10 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((BoundaryObject) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_BoundaryObject_type")
-				: getString("_UI_BoundaryObject_type") + " " + label;
+		String label = ((BoundaryObject)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_BoundaryObject_type") :
+			getString("_UI_BoundaryObject_type") + " " + label;
 	}
 
 	/**
@@ -315,21 +394,21 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BoundaryObject.class)) {
-		case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
-		case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
-		case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
-		case BomiPackage.BOUNDARY_OBJECT__MODULARITY:
-		case BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY:
-		case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
-		case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
-		case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
-		case BomiPackage.BOUNDARY_OBJECT__TOOLING:
-		case BomiPackage.BOUNDARY_OBJECT__VERSIONING:
-		case BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE:
-		case BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY:
-		case BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
+			case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
+			case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
+			case BomiPackage.BOUNDARY_OBJECT__MODULARITY:
+			case BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY:
+			case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
+			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
+			case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
+			case BomiPackage.BOUNDARY_OBJECT__TOOLING:
+			case BomiPackage.BOUNDARY_OBJECT__VERSIONING:
+			case BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE:
+			case BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY:
+			case BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}

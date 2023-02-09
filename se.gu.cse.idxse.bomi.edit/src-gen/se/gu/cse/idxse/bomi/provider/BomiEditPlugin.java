@@ -36,7 +36,9 @@ public final class BomiEditPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	public BomiEditPlugin() {
-		super(new ResourceLocator[] {});
+		super
+		  (new ResourceLocator [] {
+		   });
 	}
 
 	/**

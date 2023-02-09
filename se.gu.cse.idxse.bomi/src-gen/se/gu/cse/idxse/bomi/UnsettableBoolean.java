@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Driver Types</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Unsettable Boolean</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see se.gu.cse.idxse.bomi.BomiPackage#getDriverTypes()
+ * @see se.gu.cse.idxse.bomi.BomiPackage#getUnsettableBoolean()
  * @model
  * @generated
  */
-public enum DriverTypes implements Enumerator {
+public enum UnsettableBoolean implements Enumerator {
 	/**
 	 * The '<em><b>NOT SET</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -27,35 +27,26 @@ public enum DriverTypes implements Enumerator {
 	 * @ordered
 	 */
 	NOT_SET(0, "NOT_SET", "NOT_SET"),
-	/**
-	 * The '<em><b>Technology</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #TECHNOLOGY_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TECHNOLOGY(1, "Technology", "Technology"),
 
 	/**
-	 * The '<em><b>Process</b></em>' literal object.
+	 * The '<em><b>True</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PROCESS_VALUE
+	 * @see #TRUE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PROCESS(2, "Process", "Process"),
+	TRUE(1, "True", "True"),
 
 	/**
-	 * The '<em><b>Organizational</b></em>' literal object.
+	 * The '<em><b>False</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ORGANIZATIONAL_VALUE
+	 * @see #FALSE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ORGANIZATIONAL(3, "Organizational", "Organizational");
+	FALSE(2, "False", "False");
 
 	/**
 	 * The '<em><b>NOT SET</b></em>' literal value.
@@ -69,66 +60,59 @@ public enum DriverTypes implements Enumerator {
 	public static final int NOT_SET_VALUE = 0;
 
 	/**
-	 * The '<em><b>Technology</b></em>' literal value.
+	 * The '<em><b>True</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #TECHNOLOGY
-	 * @model name="Technology"
+	 * @see #TRUE
+	 * @model name="True"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TECHNOLOGY_VALUE = 1;
+	public static final int TRUE_VALUE = 1;
 
 	/**
-	 * The '<em><b>Process</b></em>' literal value.
+	 * The '<em><b>False</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PROCESS
-	 * @model name="Process"
+	 * @see #FALSE
+	 * @model name="False"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROCESS_VALUE = 2;
+	public static final int FALSE_VALUE = 2;
 
 	/**
-	 * The '<em><b>Organizational</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ORGANIZATIONAL
-	 * @model name="Organizational"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ORGANIZATIONAL_VALUE = 3;
-
-	/**
-	 * An array of all the '<em><b>Driver Types</b></em>' enumerators.
+	 * An array of all the '<em><b>Unsettable Boolean</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final DriverTypes[] VALUES_ARRAY = new DriverTypes[] { NOT_SET, TECHNOLOGY, PROCESS,
-			ORGANIZATIONAL, };
+	private static final UnsettableBoolean[] VALUES_ARRAY =
+		new UnsettableBoolean[] {
+			NOT_SET,
+			TRUE,
+			FALSE,
+		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Driver Types</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Unsettable Boolean</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<DriverTypes> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<UnsettableBoolean> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Driver Types</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Unsettable Boolean</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static DriverTypes get(String literal) {
+	public static UnsettableBoolean get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			DriverTypes result = VALUES_ARRAY[i];
+			UnsettableBoolean result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -137,16 +121,16 @@ public enum DriverTypes implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Driver Types</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Unsettable Boolean</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static DriverTypes getByName(String name) {
+	public static UnsettableBoolean getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			DriverTypes result = VALUES_ARRAY[i];
+			UnsettableBoolean result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -155,23 +139,18 @@ public enum DriverTypes implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Driver Types</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Unsettable Boolean</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static DriverTypes get(int value) {
+	public static UnsettableBoolean get(int value) {
 		switch (value) {
-		case NOT_SET_VALUE:
-			return NOT_SET;
-		case TECHNOLOGY_VALUE:
-			return TECHNOLOGY;
-		case PROCESS_VALUE:
-			return PROCESS;
-		case ORGANIZATIONAL_VALUE:
-			return ORGANIZATIONAL;
+			case NOT_SET_VALUE: return NOT_SET;
+			case TRUE_VALUE: return TRUE;
+			case FALSE_VALUE: return FALSE;
 		}
 		return null;
 	}
@@ -203,7 +182,7 @@ public enum DriverTypes implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private DriverTypes(int value, String name, String literal) {
+	private UnsettableBoolean(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -215,7 +194,7 @@ public enum DriverTypes implements Enumerator {
 	 * @generated
 	 */
 	public int getValue() {
-		return value;
+	  return value;
 	}
 
 	/**
@@ -224,7 +203,7 @@ public enum DriverTypes implements Enumerator {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+	  return name;
 	}
 
 	/**
@@ -233,7 +212,7 @@ public enum DriverTypes implements Enumerator {
 	 * @generated
 	 */
 	public String getLiteral() {
-		return literal;
+	  return literal;
 	}
 
 	/**
@@ -246,5 +225,5 @@ public enum DriverTypes implements Enumerator {
 	public String toString() {
 		return literal;
 	}
-
-} //DriverTypes
+	
+} //UnsettableBoolean

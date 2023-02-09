@@ -82,8 +82,7 @@ public abstract class PurposedElementImpl extends NamedElementImpl implements Pu
 		String oldPurpose = purpose;
 		purpose = newPurpose;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.PURPOSED_ELEMENT__PURPOSE, oldPurpose,
-					purpose));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.PURPOSED_ELEMENT__PURPOSE, oldPurpose, purpose));
 	}
 
 	/**
@@ -94,8 +93,8 @@ public abstract class PurposedElementImpl extends NamedElementImpl implements Pu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BomiPackage.PURPOSED_ELEMENT__PURPOSE:
-			return getPurpose();
+			case BomiPackage.PURPOSED_ELEMENT__PURPOSE:
+				return getPurpose();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,9 +107,9 @@ public abstract class PurposedElementImpl extends NamedElementImpl implements Pu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BomiPackage.PURPOSED_ELEMENT__PURPOSE:
-			setPurpose((String) newValue);
-			return;
+			case BomiPackage.PURPOSED_ELEMENT__PURPOSE:
+				setPurpose((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -123,9 +122,9 @@ public abstract class PurposedElementImpl extends NamedElementImpl implements Pu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BomiPackage.PURPOSED_ELEMENT__PURPOSE:
-			setPurpose(PURPOSE_EDEFAULT);
-			return;
+			case BomiPackage.PURPOSED_ELEMENT__PURPOSE:
+				setPurpose(PURPOSE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -138,8 +137,8 @@ public abstract class PurposedElementImpl extends NamedElementImpl implements Pu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BomiPackage.PURPOSED_ELEMENT__PURPOSE:
-			return PURPOSE_EDEFAULT == null ? purpose != null : !PURPOSE_EDEFAULT.equals(purpose);
+			case BomiPackage.PURPOSED_ELEMENT__PURPOSE:
+				return PURPOSE_EDEFAULT == null ? purpose != null : !PURPOSE_EDEFAULT.equals(purpose);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -151,8 +150,7 @@ public abstract class PurposedElementImpl extends NamedElementImpl implements Pu
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (purpose: ");

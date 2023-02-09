@@ -276,9 +276,6 @@ public interface BoundaryObject extends PurposedElement {
 	 * Returns the value of the '<em><b>Up To Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Up To Date</em>' attribute.
 	 * @see #setUpToDate(String)
 	 * @see se.gu.cse.idxse.bomi.BomiPackage#getBoundaryObject_UpToDate()

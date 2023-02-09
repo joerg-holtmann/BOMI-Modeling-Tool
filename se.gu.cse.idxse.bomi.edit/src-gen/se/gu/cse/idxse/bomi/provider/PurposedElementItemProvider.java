@@ -56,24 +56,19 @@ public class PurposedElementItemProvider extends NamedElementItemProvider {
 	 * @generated
 	 */
 	protected void addPurposePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_PurposedElement_purpose_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PurposedElement_purpose_feature",
-								"_UI_PurposedElement_type"),
-						BomiPackage.Literals.PURPOSED_ELEMENT__PURPOSE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This returns PurposedElement.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/PurposedElement"));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PurposedElement_purpose_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PurposedElement_purpose_feature", "_UI_PurposedElement_type"),
+				 BomiPackage.Literals.PURPOSED_ELEMENT__PURPOSE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -94,9 +89,10 @@ public class PurposedElementItemProvider extends NamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PurposedElement) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_PurposedElement_type")
-				: getString("_UI_PurposedElement_type") + " " + label;
+		String label = ((PurposedElement)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PurposedElement_type") :
+			getString("_UI_PurposedElement_type") + " " + label;
 	}
 
 	/**
@@ -111,9 +107,9 @@ public class PurposedElementItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PurposedElement.class)) {
-		case BomiPackage.PURPOSED_ELEMENT__PURPOSE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+			case BomiPackage.PURPOSED_ELEMENT__PURPOSE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}

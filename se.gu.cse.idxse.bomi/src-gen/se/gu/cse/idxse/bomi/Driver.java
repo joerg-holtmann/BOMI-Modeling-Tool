@@ -13,8 +13,12 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDriverType <em>Driver Type</em>}</li>
- *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDistanceType <em>Distance Type</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeTechnology <em>Driver Type Technology</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeProcess <em>Driver Type Process</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeOrganizational <em>Driver Type Organizational</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDistanceTypeCultural <em>Distance Type Cultural</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDistanceTypeGeographical <em>Distance Type Geographical</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDistanceTypeOrganizational <em>Distance Type Organizational</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDistanceSize <em>Distance Size</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDrivesMIs <em>Drives MIs</em>}</li>
  * </ul>
@@ -25,54 +29,154 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Driver extends NamedElement {
 	/**
-	 * Returns the value of the '<em><b>Driver Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.DriverTypes}.
+	 * Returns the value of the '<em><b>Driver Type Technology</b></em>' attribute.
+	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.UnsettableBoolean}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Driver Type</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.DriverTypes
-	 * @see #setDriverType(DriverTypes)
-	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DriverType()
+	 * @return the value of the '<em>Driver Type Technology</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #setDriverTypeTechnology(UnsettableBoolean)
+	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DriverTypeTechnology()
 	 * @model
 	 * @generated
 	 */
-	DriverTypes getDriverType();
+	UnsettableBoolean getDriverTypeTechnology();
 
 	/**
-	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.Driver#getDriverType <em>Driver Type</em>}' attribute.
+	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeTechnology <em>Driver Type Technology</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Driver Type</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.DriverTypes
-	 * @see #getDriverType()
+	 * @param value the new value of the '<em>Driver Type Technology</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #getDriverTypeTechnology()
 	 * @generated
 	 */
-	void setDriverType(DriverTypes value);
+	void setDriverTypeTechnology(UnsettableBoolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Distance Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.DistanceTypes}.
+	 * Returns the value of the '<em><b>Driver Type Process</b></em>' attribute.
+	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.UnsettableBoolean}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Distance Type</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.DistanceTypes
-	 * @see #setDistanceType(DistanceTypes)
-	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DistanceType()
+	 * @return the value of the '<em>Driver Type Process</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #setDriverTypeProcess(UnsettableBoolean)
+	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DriverTypeProcess()
 	 * @model
 	 * @generated
 	 */
-	DistanceTypes getDistanceType();
+	UnsettableBoolean getDriverTypeProcess();
 
 	/**
-	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.Driver#getDistanceType <em>Distance Type</em>}' attribute.
+	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeProcess <em>Driver Type Process</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Distance Type</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.DistanceTypes
-	 * @see #getDistanceType()
+	 * @param value the new value of the '<em>Driver Type Process</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #getDriverTypeProcess()
 	 * @generated
 	 */
-	void setDistanceType(DistanceTypes value);
+	void setDriverTypeProcess(UnsettableBoolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Driver Type Organizational</b></em>' attribute.
+	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.UnsettableBoolean}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Driver Type Organizational</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #setDriverTypeOrganizational(UnsettableBoolean)
+	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DriverTypeOrganizational()
+	 * @model
+	 * @generated
+	 */
+	UnsettableBoolean getDriverTypeOrganizational();
+
+	/**
+	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeOrganizational <em>Driver Type Organizational</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Driver Type Organizational</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #getDriverTypeOrganizational()
+	 * @generated
+	 */
+	void setDriverTypeOrganizational(UnsettableBoolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Distance Type Cultural</b></em>' attribute.
+	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.UnsettableBoolean}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Distance Type Cultural</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #setDistanceTypeCultural(UnsettableBoolean)
+	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DistanceTypeCultural()
+	 * @model
+	 * @generated
+	 */
+	UnsettableBoolean getDistanceTypeCultural();
+
+	/**
+	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.Driver#getDistanceTypeCultural <em>Distance Type Cultural</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Distance Type Cultural</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #getDistanceTypeCultural()
+	 * @generated
+	 */
+	void setDistanceTypeCultural(UnsettableBoolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Distance Type Geographical</b></em>' attribute.
+	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.UnsettableBoolean}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Distance Type Geographical</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #setDistanceTypeGeographical(UnsettableBoolean)
+	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DistanceTypeGeographical()
+	 * @model
+	 * @generated
+	 */
+	UnsettableBoolean getDistanceTypeGeographical();
+
+	/**
+	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.Driver#getDistanceTypeGeographical <em>Distance Type Geographical</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Distance Type Geographical</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #getDistanceTypeGeographical()
+	 * @generated
+	 */
+	void setDistanceTypeGeographical(UnsettableBoolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Distance Type Organizational</b></em>' attribute.
+	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.UnsettableBoolean}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Distance Type Organizational</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #setDistanceTypeOrganizational(UnsettableBoolean)
+	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DistanceTypeOrganizational()
+	 * @model
+	 * @generated
+	 */
+	UnsettableBoolean getDistanceTypeOrganizational();
+
+	/**
+	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.Driver#getDistanceTypeOrganizational <em>Distance Type Organizational</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Distance Type Organizational</em>' attribute.
+	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
+	 * @see #getDistanceTypeOrganizational()
+	 * @generated
+	 */
+	void setDistanceTypeOrganizational(UnsettableBoolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Distance Size</b></em>' attribute.

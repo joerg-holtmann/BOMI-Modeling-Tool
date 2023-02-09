@@ -31,316 +31,675 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cBOMIModelAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cBoundaryObjectsKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cBoRoleInteractionsKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Assignment cBoundaryObjectsAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cBoundaryObjectsBoundaryObjectParserRuleCall_1_2_0 = (RuleCall)cBoundaryObjectsAssignment_1_2.eContents().get(0);
+		private final Assignment cBoRoleInteractionsAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cBoRoleInteractionsBORoleInteractionParserRuleCall_1_2_0 = (RuleCall)cBoRoleInteractionsAssignment_1_2.eContents().get(0);
 		private final Group cGroup_1_3 = (Group)cGroup_1.eContents().get(3);
 		private final Keyword cCommaKeyword_1_3_0 = (Keyword)cGroup_1_3.eContents().get(0);
-		private final Assignment cBoundaryObjectsAssignment_1_3_1 = (Assignment)cGroup_1_3.eContents().get(1);
-		private final RuleCall cBoundaryObjectsBoundaryObjectParserRuleCall_1_3_1_0 = (RuleCall)cBoundaryObjectsAssignment_1_3_1.eContents().get(0);
+		private final Assignment cBoRoleInteractionsAssignment_1_3_1 = (Assignment)cGroup_1_3.eContents().get(1);
+		private final RuleCall cBoRoleInteractionsBORoleInteractionParserRuleCall_1_3_1_0 = (RuleCall)cBoRoleInteractionsAssignment_1_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_1_4 = (Keyword)cGroup_1.eContents().get(4);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cMethodologicalIslandsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cBoundaryObjectsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Assignment cMethodologicalIslandsAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cMethodologicalIslandsMethodologicalIslandParserRuleCall_2_2_0 = (RuleCall)cMethodologicalIslandsAssignment_2_2.eContents().get(0);
+		private final Assignment cBoundaryObjectsAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final RuleCall cBoundaryObjectsBoundaryObjectParserRuleCall_2_2_0 = (RuleCall)cBoundaryObjectsAssignment_2_2.eContents().get(0);
 		private final Group cGroup_2_3 = (Group)cGroup_2.eContents().get(3);
 		private final Keyword cCommaKeyword_2_3_0 = (Keyword)cGroup_2_3.eContents().get(0);
-		private final Assignment cMethodologicalIslandsAssignment_2_3_1 = (Assignment)cGroup_2_3.eContents().get(1);
-		private final RuleCall cMethodologicalIslandsMethodologicalIslandParserRuleCall_2_3_1_0 = (RuleCall)cMethodologicalIslandsAssignment_2_3_1.eContents().get(0);
+		private final Assignment cBoundaryObjectsAssignment_2_3_1 = (Assignment)cGroup_2_3.eContents().get(1);
+		private final RuleCall cBoundaryObjectsBoundaryObjectParserRuleCall_2_3_1_0 = (RuleCall)cBoundaryObjectsAssignment_2_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_2_4 = (Keyword)cGroup_2.eContents().get(4);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cGovernanceTeamsKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cRolesKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
-		private final Assignment cGovernanceTeamsAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
-		private final RuleCall cGovernanceTeamsGovernanceTeamParserRuleCall_3_2_0 = (RuleCall)cGovernanceTeamsAssignment_3_2.eContents().get(0);
+		private final Assignment cRolesAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cRolesRoleParserRuleCall_3_2_0 = (RuleCall)cRolesAssignment_3_2.eContents().get(0);
 		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
 		private final Keyword cCommaKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
-		private final Assignment cGovernanceTeamsAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
-		private final RuleCall cGovernanceTeamsGovernanceTeamParserRuleCall_3_3_1_0 = (RuleCall)cGovernanceTeamsAssignment_3_3_1.eContents().get(0);
+		private final Assignment cRolesAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
+		private final RuleCall cRolesRoleParserRuleCall_3_3_1_0 = (RuleCall)cRolesAssignment_3_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cRolesKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cBoMiCoordinationsKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Assignment cRolesAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cRolesRoleParserRuleCall_4_2_0 = (RuleCall)cRolesAssignment_4_2.eContents().get(0);
+		private final Assignment cBoMiCoordinationsAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cBoMiCoordinationsBOMICoordinationParserRuleCall_4_2_0 = (RuleCall)cBoMiCoordinationsAssignment_4_2.eContents().get(0);
 		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
 		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
-		private final Assignment cRolesAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
-		private final RuleCall cRolesRoleParserRuleCall_4_3_1_0 = (RuleCall)cRolesAssignment_4_3_1.eContents().get(0);
+		private final Assignment cBoMiCoordinationsAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
+		private final RuleCall cBoMiCoordinationsBOMICoordinationParserRuleCall_4_3_1_0 = (RuleCall)cBoMiCoordinationsAssignment_4_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cDriversKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cMethodologicalIslandsKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
-		private final Assignment cDriversAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
-		private final RuleCall cDriversDriverParserRuleCall_5_2_0 = (RuleCall)cDriversAssignment_5_2.eContents().get(0);
+		private final Assignment cMethodologicalIslandsAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final RuleCall cMethodologicalIslandsMethodologicalIslandParserRuleCall_5_2_0 = (RuleCall)cMethodologicalIslandsAssignment_5_2.eContents().get(0);
 		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
 		private final Keyword cCommaKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
-		private final Assignment cDriversAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
-		private final RuleCall cDriversDriverParserRuleCall_5_3_1_0 = (RuleCall)cDriversAssignment_5_3_1.eContents().get(0);
+		private final Assignment cMethodologicalIslandsAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
+		private final RuleCall cMethodologicalIslandsMethodologicalIslandParserRuleCall_5_3_1_0 = (RuleCall)cMethodologicalIslandsAssignment_5_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Assignment cBoMiCoordinationsAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
-		private final RuleCall cBoMiCoordinationsBOMICoordinationParserRuleCall_6_0_0 = (RuleCall)cBoMiCoordinationsAssignment_6_0.eContents().get(0);
-		private final Group cGroup_6_1 = (Group)cGroup_6.eContents().get(1);
-		private final Keyword cCommaKeyword_6_1_0 = (Keyword)cGroup_6_1.eContents().get(0);
-		private final Assignment cBoMiCoordinationsAssignment_6_1_1 = (Assignment)cGroup_6_1.eContents().get(1);
-		private final RuleCall cBoMiCoordinationsBOMICoordinationParserRuleCall_6_1_1_0 = (RuleCall)cBoMiCoordinationsAssignment_6_1_1.eContents().get(0);
+		private final Keyword cGovernanceTeamsKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cGovernanceTeamsAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cGovernanceTeamsGovernanceTeamParserRuleCall_6_2_0 = (RuleCall)cGovernanceTeamsAssignment_6_2.eContents().get(0);
+		private final Group cGroup_6_3 = (Group)cGroup_6.eContents().get(3);
+		private final Keyword cCommaKeyword_6_3_0 = (Keyword)cGroup_6_3.eContents().get(0);
+		private final Assignment cGovernanceTeamsAssignment_6_3_1 = (Assignment)cGroup_6_3.eContents().get(1);
+		private final RuleCall cGovernanceTeamsGovernanceTeamParserRuleCall_6_3_1_0 = (RuleCall)cGovernanceTeamsAssignment_6_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Assignment cBoRoleInteractionsAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
-		private final RuleCall cBoRoleInteractionsBORoleInteractionParserRuleCall_7_0_0 = (RuleCall)cBoRoleInteractionsAssignment_7_0.eContents().get(0);
-		private final Group cGroup_7_1 = (Group)cGroup_7.eContents().get(1);
-		private final Keyword cCommaKeyword_7_1_0 = (Keyword)cGroup_7_1.eContents().get(0);
-		private final Assignment cBoRoleInteractionsAssignment_7_1_1 = (Assignment)cGroup_7_1.eContents().get(1);
-		private final RuleCall cBoRoleInteractionsBORoleInteractionParserRuleCall_7_1_1_0 = (RuleCall)cBoRoleInteractionsAssignment_7_1_1.eContents().get(0);
+		private final Keyword cBoTeamGovernancesKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
+		private final Assignment cBoTeamGovernancesAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
+		private final RuleCall cBoTeamGovernancesBOTeamGovernanceParserRuleCall_7_2_0 = (RuleCall)cBoTeamGovernancesAssignment_7_2.eContents().get(0);
+		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
+		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
+		private final Assignment cBoTeamGovernancesAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
+		private final RuleCall cBoTeamGovernancesBOTeamGovernanceParserRuleCall_7_3_1_0 = (RuleCall)cBoTeamGovernancesAssignment_7_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Assignment cBoTeamGovernancesAssignment_8_0 = (Assignment)cGroup_8.eContents().get(0);
-		private final RuleCall cBoTeamGovernancesBOTeamGovernanceParserRuleCall_8_0_0 = (RuleCall)cBoTeamGovernancesAssignment_8_0.eContents().get(0);
-		private final Group cGroup_8_1 = (Group)cGroup_8.eContents().get(1);
-		private final Keyword cCommaKeyword_8_1_0 = (Keyword)cGroup_8_1.eContents().get(0);
-		private final Assignment cBoTeamGovernancesAssignment_8_1_1 = (Assignment)cGroup_8_1.eContents().get(1);
-		private final RuleCall cBoTeamGovernancesBOTeamGovernanceParserRuleCall_8_1_1_0 = (RuleCall)cBoTeamGovernancesAssignment_8_1_1.eContents().get(0);
+		private final Keyword cDriversKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_8_1 = (Keyword)cGroup_8.eContents().get(1);
+		private final Assignment cDriversAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
+		private final RuleCall cDriversDriverParserRuleCall_8_2_0 = (RuleCall)cDriversAssignment_8_2.eContents().get(0);
+		private final Group cGroup_8_3 = (Group)cGroup_8.eContents().get(3);
+		private final Keyword cCommaKeyword_8_3_0 = (Keyword)cGroup_8_3.eContents().get(0);
+		private final Assignment cDriversAssignment_8_3_1 = (Assignment)cGroup_8_3.eContents().get(1);
+		private final RuleCall cDriversDriverParserRuleCall_8_3_1_0 = (RuleCall)cDriversAssignment_8_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8_4 = (Keyword)cGroup_8.eContents().get(4);
 		
 		//BOMIModel returns BOMIModel:
 		//    {BOMIModel}
+		//        ('boRoleInteractions' '{' boRoleInteractions+=BORoleInteraction ( "," boRoleInteractions+=BORoleInteraction)* '}' )?
 		//        ('boundaryObjects' '{' boundaryObjects+=BoundaryObject ( "," boundaryObjects+=BoundaryObject)* '}' )?
+		//        ('roles' '{' roles+=Role ( "," roles+=Role)* '}' )?
+		//        ('boMiCoordinations' '{' boMiCoordinations+=BOMICoordination ( "," boMiCoordinations+=BOMICoordination)* '}' )?
 		//        ('methodologicalIslands' '{' methodologicalIslands+=MethodologicalIsland ( "," methodologicalIslands+=MethodologicalIsland)* '}' )?
 		//        ('governanceTeams' '{' governanceTeams+=GovernanceTeam ( "," governanceTeams+=GovernanceTeam)* '}' )?
-		//        ('roles' '{' roles+=Role ( "," roles+=Role)* '}' )?
+		//        ('boTeamGovernances' '{' boTeamGovernances+=BOTeamGovernance ( "," boTeamGovernances+=BOTeamGovernance)* '}' )?
 		//        ('drivers' '{' drivers+=Driver ( "," drivers+=Driver)* '}' )?
-		//        (boMiCoordinations+=BOMICoordination ( "," boMiCoordinations+=BOMICoordination)* )?
-		//        (boRoleInteractions+=BORoleInteraction ( "," boRoleInteractions+=BORoleInteraction)*  )?
-		//        (boTeamGovernances+=BOTeamGovernance ( "," boTeamGovernances+=BOTeamGovernance)* )?
 		//    ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{BOMIModel}
+		//    ('boRoleInteractions' '{' boRoleInteractions+=BORoleInteraction ( "," boRoleInteractions+=BORoleInteraction)* '}' )?
 		//    ('boundaryObjects' '{' boundaryObjects+=BoundaryObject ( "," boundaryObjects+=BoundaryObject)* '}' )?
+		//    ('roles' '{' roles+=Role ( "," roles+=Role)* '}' )?
+		//    ('boMiCoordinations' '{' boMiCoordinations+=BOMICoordination ( "," boMiCoordinations+=BOMICoordination)* '}' )?
 		//    ('methodologicalIslands' '{' methodologicalIslands+=MethodologicalIsland ( "," methodologicalIslands+=MethodologicalIsland)* '}' )?
 		//    ('governanceTeams' '{' governanceTeams+=GovernanceTeam ( "," governanceTeams+=GovernanceTeam)* '}' )?
-		//    ('roles' '{' roles+=Role ( "," roles+=Role)* '}' )?
+		//    ('boTeamGovernances' '{' boTeamGovernances+=BOTeamGovernance ( "," boTeamGovernances+=BOTeamGovernance)* '}' )?
 		//    ('drivers' '{' drivers+=Driver ( "," drivers+=Driver)* '}' )?
-		//    (boMiCoordinations+=BOMICoordination ( "," boMiCoordinations+=BOMICoordination)* )?
-		//    (boRoleInteractions+=BORoleInteraction ( "," boRoleInteractions+=BORoleInteraction)*  )?
-		//    (boTeamGovernances+=BOTeamGovernance ( "," boTeamGovernances+=BOTeamGovernance)* )?
 		public Group getGroup() { return cGroup; }
 		
 		//{BOMIModel}
 		public Action getBOMIModelAction_0() { return cBOMIModelAction_0; }
 		
-		//('boundaryObjects' '{' boundaryObjects+=BoundaryObject ( "," boundaryObjects+=BoundaryObject)* '}' )?
+		//('boRoleInteractions' '{' boRoleInteractions+=BORoleInteraction ( "," boRoleInteractions+=BORoleInteraction)* '}' )?
 		public Group getGroup_1() { return cGroup_1; }
 		
-		//'boundaryObjects'
-		public Keyword getBoundaryObjectsKeyword_1_0() { return cBoundaryObjectsKeyword_1_0; }
+		//'boRoleInteractions'
+		public Keyword getBoRoleInteractionsKeyword_1_0() { return cBoRoleInteractionsKeyword_1_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
 		
-		//boundaryObjects+=BoundaryObject
-		public Assignment getBoundaryObjectsAssignment_1_2() { return cBoundaryObjectsAssignment_1_2; }
+		//boRoleInteractions+=BORoleInteraction
+		public Assignment getBoRoleInteractionsAssignment_1_2() { return cBoRoleInteractionsAssignment_1_2; }
 		
-		//BoundaryObject
-		public RuleCall getBoundaryObjectsBoundaryObjectParserRuleCall_1_2_0() { return cBoundaryObjectsBoundaryObjectParserRuleCall_1_2_0; }
+		//BORoleInteraction
+		public RuleCall getBoRoleInteractionsBORoleInteractionParserRuleCall_1_2_0() { return cBoRoleInteractionsBORoleInteractionParserRuleCall_1_2_0; }
 		
-		//( "," boundaryObjects+=BoundaryObject)*
+		//( "," boRoleInteractions+=BORoleInteraction)*
 		public Group getGroup_1_3() { return cGroup_1_3; }
 		
 		//","
 		public Keyword getCommaKeyword_1_3_0() { return cCommaKeyword_1_3_0; }
 		
-		//boundaryObjects+=BoundaryObject
-		public Assignment getBoundaryObjectsAssignment_1_3_1() { return cBoundaryObjectsAssignment_1_3_1; }
+		//boRoleInteractions+=BORoleInteraction
+		public Assignment getBoRoleInteractionsAssignment_1_3_1() { return cBoRoleInteractionsAssignment_1_3_1; }
 		
-		//BoundaryObject
-		public RuleCall getBoundaryObjectsBoundaryObjectParserRuleCall_1_3_1_0() { return cBoundaryObjectsBoundaryObjectParserRuleCall_1_3_1_0; }
+		//BORoleInteraction
+		public RuleCall getBoRoleInteractionsBORoleInteractionParserRuleCall_1_3_1_0() { return cBoRoleInteractionsBORoleInteractionParserRuleCall_1_3_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_1_4() { return cRightCurlyBracketKeyword_1_4; }
 		
-		//('methodologicalIslands' '{' methodologicalIslands+=MethodologicalIsland ( "," methodologicalIslands+=MethodologicalIsland)* '}' )?
+		//('boundaryObjects' '{' boundaryObjects+=BoundaryObject ( "," boundaryObjects+=BoundaryObject)* '}' )?
 		public Group getGroup_2() { return cGroup_2; }
 		
-		//'methodologicalIslands'
-		public Keyword getMethodologicalIslandsKeyword_2_0() { return cMethodologicalIslandsKeyword_2_0; }
+		//'boundaryObjects'
+		public Keyword getBoundaryObjectsKeyword_2_0() { return cBoundaryObjectsKeyword_2_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2_1() { return cLeftCurlyBracketKeyword_2_1; }
 		
-		//methodologicalIslands+=MethodologicalIsland
-		public Assignment getMethodologicalIslandsAssignment_2_2() { return cMethodologicalIslandsAssignment_2_2; }
+		//boundaryObjects+=BoundaryObject
+		public Assignment getBoundaryObjectsAssignment_2_2() { return cBoundaryObjectsAssignment_2_2; }
 		
-		//MethodologicalIsland
-		public RuleCall getMethodologicalIslandsMethodologicalIslandParserRuleCall_2_2_0() { return cMethodologicalIslandsMethodologicalIslandParserRuleCall_2_2_0; }
+		//BoundaryObject
+		public RuleCall getBoundaryObjectsBoundaryObjectParserRuleCall_2_2_0() { return cBoundaryObjectsBoundaryObjectParserRuleCall_2_2_0; }
 		
-		//( "," methodologicalIslands+=MethodologicalIsland)*
+		//( "," boundaryObjects+=BoundaryObject)*
 		public Group getGroup_2_3() { return cGroup_2_3; }
 		
 		//","
 		public Keyword getCommaKeyword_2_3_0() { return cCommaKeyword_2_3_0; }
 		
-		//methodologicalIslands+=MethodologicalIsland
-		public Assignment getMethodologicalIslandsAssignment_2_3_1() { return cMethodologicalIslandsAssignment_2_3_1; }
+		//boundaryObjects+=BoundaryObject
+		public Assignment getBoundaryObjectsAssignment_2_3_1() { return cBoundaryObjectsAssignment_2_3_1; }
 		
-		//MethodologicalIsland
-		public RuleCall getMethodologicalIslandsMethodologicalIslandParserRuleCall_2_3_1_0() { return cMethodologicalIslandsMethodologicalIslandParserRuleCall_2_3_1_0; }
+		//BoundaryObject
+		public RuleCall getBoundaryObjectsBoundaryObjectParserRuleCall_2_3_1_0() { return cBoundaryObjectsBoundaryObjectParserRuleCall_2_3_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_2_4() { return cRightCurlyBracketKeyword_2_4; }
 		
-		//('governanceTeams' '{' governanceTeams+=GovernanceTeam ( "," governanceTeams+=GovernanceTeam)* '}' )?
+		//('roles' '{' roles+=Role ( "," roles+=Role)* '}' )?
 		public Group getGroup_3() { return cGroup_3; }
 		
-		//'governanceTeams'
-		public Keyword getGovernanceTeamsKeyword_3_0() { return cGovernanceTeamsKeyword_3_0; }
+		//'roles'
+		public Keyword getRolesKeyword_3_0() { return cRolesKeyword_3_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
 		
-		//governanceTeams+=GovernanceTeam
-		public Assignment getGovernanceTeamsAssignment_3_2() { return cGovernanceTeamsAssignment_3_2; }
+		//roles+=Role
+		public Assignment getRolesAssignment_3_2() { return cRolesAssignment_3_2; }
 		
-		//GovernanceTeam
-		public RuleCall getGovernanceTeamsGovernanceTeamParserRuleCall_3_2_0() { return cGovernanceTeamsGovernanceTeamParserRuleCall_3_2_0; }
+		//Role
+		public RuleCall getRolesRoleParserRuleCall_3_2_0() { return cRolesRoleParserRuleCall_3_2_0; }
 		
-		//( "," governanceTeams+=GovernanceTeam)*
+		//( "," roles+=Role)*
 		public Group getGroup_3_3() { return cGroup_3_3; }
 		
 		//","
 		public Keyword getCommaKeyword_3_3_0() { return cCommaKeyword_3_3_0; }
 		
-		//governanceTeams+=GovernanceTeam
-		public Assignment getGovernanceTeamsAssignment_3_3_1() { return cGovernanceTeamsAssignment_3_3_1; }
+		//roles+=Role
+		public Assignment getRolesAssignment_3_3_1() { return cRolesAssignment_3_3_1; }
 		
-		//GovernanceTeam
-		public RuleCall getGovernanceTeamsGovernanceTeamParserRuleCall_3_3_1_0() { return cGovernanceTeamsGovernanceTeamParserRuleCall_3_3_1_0; }
+		//Role
+		public RuleCall getRolesRoleParserRuleCall_3_3_1_0() { return cRolesRoleParserRuleCall_3_3_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
 		
-		//('roles' '{' roles+=Role ( "," roles+=Role)* '}' )?
+		//('boMiCoordinations' '{' boMiCoordinations+=BOMICoordination ( "," boMiCoordinations+=BOMICoordination)* '}' )?
 		public Group getGroup_4() { return cGroup_4; }
 		
-		//'roles'
-		public Keyword getRolesKeyword_4_0() { return cRolesKeyword_4_0; }
+		//'boMiCoordinations'
+		public Keyword getBoMiCoordinationsKeyword_4_0() { return cBoMiCoordinationsKeyword_4_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
 		
-		//roles+=Role
-		public Assignment getRolesAssignment_4_2() { return cRolesAssignment_4_2; }
+		//boMiCoordinations+=BOMICoordination
+		public Assignment getBoMiCoordinationsAssignment_4_2() { return cBoMiCoordinationsAssignment_4_2; }
 		
-		//Role
-		public RuleCall getRolesRoleParserRuleCall_4_2_0() { return cRolesRoleParserRuleCall_4_2_0; }
+		//BOMICoordination
+		public RuleCall getBoMiCoordinationsBOMICoordinationParserRuleCall_4_2_0() { return cBoMiCoordinationsBOMICoordinationParserRuleCall_4_2_0; }
 		
-		//( "," roles+=Role)*
+		//( "," boMiCoordinations+=BOMICoordination)*
 		public Group getGroup_4_3() { return cGroup_4_3; }
 		
 		//","
 		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
 		
-		//roles+=Role
-		public Assignment getRolesAssignment_4_3_1() { return cRolesAssignment_4_3_1; }
+		//boMiCoordinations+=BOMICoordination
+		public Assignment getBoMiCoordinationsAssignment_4_3_1() { return cBoMiCoordinationsAssignment_4_3_1; }
 		
-		//Role
-		public RuleCall getRolesRoleParserRuleCall_4_3_1_0() { return cRolesRoleParserRuleCall_4_3_1_0; }
+		//BOMICoordination
+		public RuleCall getBoMiCoordinationsBOMICoordinationParserRuleCall_4_3_1_0() { return cBoMiCoordinationsBOMICoordinationParserRuleCall_4_3_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4_4() { return cRightCurlyBracketKeyword_4_4; }
 		
-		//('drivers' '{' drivers+=Driver ( "," drivers+=Driver)* '}' )?
+		//('methodologicalIslands' '{' methodologicalIslands+=MethodologicalIsland ( "," methodologicalIslands+=MethodologicalIsland)* '}' )?
 		public Group getGroup_5() { return cGroup_5; }
 		
-		//'drivers'
-		public Keyword getDriversKeyword_5_0() { return cDriversKeyword_5_0; }
+		//'methodologicalIslands'
+		public Keyword getMethodologicalIslandsKeyword_5_0() { return cMethodologicalIslandsKeyword_5_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_5_1() { return cLeftCurlyBracketKeyword_5_1; }
 		
-		//drivers+=Driver
-		public Assignment getDriversAssignment_5_2() { return cDriversAssignment_5_2; }
+		//methodologicalIslands+=MethodologicalIsland
+		public Assignment getMethodologicalIslandsAssignment_5_2() { return cMethodologicalIslandsAssignment_5_2; }
 		
-		//Driver
-		public RuleCall getDriversDriverParserRuleCall_5_2_0() { return cDriversDriverParserRuleCall_5_2_0; }
+		//MethodologicalIsland
+		public RuleCall getMethodologicalIslandsMethodologicalIslandParserRuleCall_5_2_0() { return cMethodologicalIslandsMethodologicalIslandParserRuleCall_5_2_0; }
 		
-		//( "," drivers+=Driver)*
+		//( "," methodologicalIslands+=MethodologicalIsland)*
 		public Group getGroup_5_3() { return cGroup_5_3; }
 		
 		//","
 		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
 		
-		//drivers+=Driver
-		public Assignment getDriversAssignment_5_3_1() { return cDriversAssignment_5_3_1; }
+		//methodologicalIslands+=MethodologicalIsland
+		public Assignment getMethodologicalIslandsAssignment_5_3_1() { return cMethodologicalIslandsAssignment_5_3_1; }
 		
-		//Driver
-		public RuleCall getDriversDriverParserRuleCall_5_3_1_0() { return cDriversDriverParserRuleCall_5_3_1_0; }
+		//MethodologicalIsland
+		public RuleCall getMethodologicalIslandsMethodologicalIslandParserRuleCall_5_3_1_0() { return cMethodologicalIslandsMethodologicalIslandParserRuleCall_5_3_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
 		
-		//(boMiCoordinations+=BOMICoordination ( "," boMiCoordinations+=BOMICoordination)* )?
+		//('governanceTeams' '{' governanceTeams+=GovernanceTeam ( "," governanceTeams+=GovernanceTeam)* '}' )?
 		public Group getGroup_6() { return cGroup_6; }
 		
-		//boMiCoordinations+=BOMICoordination
-		public Assignment getBoMiCoordinationsAssignment_6_0() { return cBoMiCoordinationsAssignment_6_0; }
+		//'governanceTeams'
+		public Keyword getGovernanceTeamsKeyword_6_0() { return cGovernanceTeamsKeyword_6_0; }
 		
-		//BOMICoordination
-		public RuleCall getBoMiCoordinationsBOMICoordinationParserRuleCall_6_0_0() { return cBoMiCoordinationsBOMICoordinationParserRuleCall_6_0_0; }
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
 		
-		//( "," boMiCoordinations+=BOMICoordination)*
-		public Group getGroup_6_1() { return cGroup_6_1; }
+		//governanceTeams+=GovernanceTeam
+		public Assignment getGovernanceTeamsAssignment_6_2() { return cGovernanceTeamsAssignment_6_2; }
+		
+		//GovernanceTeam
+		public RuleCall getGovernanceTeamsGovernanceTeamParserRuleCall_6_2_0() { return cGovernanceTeamsGovernanceTeamParserRuleCall_6_2_0; }
+		
+		//( "," governanceTeams+=GovernanceTeam)*
+		public Group getGroup_6_3() { return cGroup_6_3; }
 		
 		//","
-		public Keyword getCommaKeyword_6_1_0() { return cCommaKeyword_6_1_0; }
+		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
 		
-		//boMiCoordinations+=BOMICoordination
-		public Assignment getBoMiCoordinationsAssignment_6_1_1() { return cBoMiCoordinationsAssignment_6_1_1; }
+		//governanceTeams+=GovernanceTeam
+		public Assignment getGovernanceTeamsAssignment_6_3_1() { return cGovernanceTeamsAssignment_6_3_1; }
 		
-		//BOMICoordination
-		public RuleCall getBoMiCoordinationsBOMICoordinationParserRuleCall_6_1_1_0() { return cBoMiCoordinationsBOMICoordinationParserRuleCall_6_1_1_0; }
+		//GovernanceTeam
+		public RuleCall getGovernanceTeamsGovernanceTeamParserRuleCall_6_3_1_0() { return cGovernanceTeamsGovernanceTeamParserRuleCall_6_3_1_0; }
 		
-		//(boRoleInteractions+=BORoleInteraction ( "," boRoleInteractions+=BORoleInteraction)*  )?
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
+		
+		//('boTeamGovernances' '{' boTeamGovernances+=BOTeamGovernance ( "," boTeamGovernances+=BOTeamGovernance)* '}' )?
 		public Group getGroup_7() { return cGroup_7; }
 		
-		//boRoleInteractions+=BORoleInteraction
-		public Assignment getBoRoleInteractionsAssignment_7_0() { return cBoRoleInteractionsAssignment_7_0; }
+		//'boTeamGovernances'
+		public Keyword getBoTeamGovernancesKeyword_7_0() { return cBoTeamGovernancesKeyword_7_0; }
 		
-		//BORoleInteraction
-		public RuleCall getBoRoleInteractionsBORoleInteractionParserRuleCall_7_0_0() { return cBoRoleInteractionsBORoleInteractionParserRuleCall_7_0_0; }
-		
-		//( "," boRoleInteractions+=BORoleInteraction)*
-		public Group getGroup_7_1() { return cGroup_7_1; }
-		
-		//","
-		public Keyword getCommaKeyword_7_1_0() { return cCommaKeyword_7_1_0; }
-		
-		//boRoleInteractions+=BORoleInteraction
-		public Assignment getBoRoleInteractionsAssignment_7_1_1() { return cBoRoleInteractionsAssignment_7_1_1; }
-		
-		//BORoleInteraction
-		public RuleCall getBoRoleInteractionsBORoleInteractionParserRuleCall_7_1_1_0() { return cBoRoleInteractionsBORoleInteractionParserRuleCall_7_1_1_0; }
-		
-		//(boTeamGovernances+=BOTeamGovernance ( "," boTeamGovernances+=BOTeamGovernance)* )?
-		public Group getGroup_8() { return cGroup_8; }
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
 		
 		//boTeamGovernances+=BOTeamGovernance
-		public Assignment getBoTeamGovernancesAssignment_8_0() { return cBoTeamGovernancesAssignment_8_0; }
+		public Assignment getBoTeamGovernancesAssignment_7_2() { return cBoTeamGovernancesAssignment_7_2; }
 		
 		//BOTeamGovernance
-		public RuleCall getBoTeamGovernancesBOTeamGovernanceParserRuleCall_8_0_0() { return cBoTeamGovernancesBOTeamGovernanceParserRuleCall_8_0_0; }
+		public RuleCall getBoTeamGovernancesBOTeamGovernanceParserRuleCall_7_2_0() { return cBoTeamGovernancesBOTeamGovernanceParserRuleCall_7_2_0; }
 		
 		//( "," boTeamGovernances+=BOTeamGovernance)*
-		public Group getGroup_8_1() { return cGroup_8_1; }
+		public Group getGroup_7_3() { return cGroup_7_3; }
 		
 		//","
-		public Keyword getCommaKeyword_8_1_0() { return cCommaKeyword_8_1_0; }
+		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
 		
 		//boTeamGovernances+=BOTeamGovernance
-		public Assignment getBoTeamGovernancesAssignment_8_1_1() { return cBoTeamGovernancesAssignment_8_1_1; }
+		public Assignment getBoTeamGovernancesAssignment_7_3_1() { return cBoTeamGovernancesAssignment_7_3_1; }
 		
 		//BOTeamGovernance
-		public RuleCall getBoTeamGovernancesBOTeamGovernanceParserRuleCall_8_1_1_0() { return cBoTeamGovernancesBOTeamGovernanceParserRuleCall_8_1_1_0; }
+		public RuleCall getBoTeamGovernancesBOTeamGovernanceParserRuleCall_7_3_1_0() { return cBoTeamGovernancesBOTeamGovernanceParserRuleCall_7_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
+		
+		//('drivers' '{' drivers+=Driver ( "," drivers+=Driver)* '}' )?
+		public Group getGroup_8() { return cGroup_8; }
+		
+		//'drivers'
+		public Keyword getDriversKeyword_8_0() { return cDriversKeyword_8_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_8_1() { return cLeftCurlyBracketKeyword_8_1; }
+		
+		//drivers+=Driver
+		public Assignment getDriversAssignment_8_2() { return cDriversAssignment_8_2; }
+		
+		//Driver
+		public RuleCall getDriversDriverParserRuleCall_8_2_0() { return cDriversDriverParserRuleCall_8_2_0; }
+		
+		//( "," drivers+=Driver)*
+		public Group getGroup_8_3() { return cGroup_8_3; }
+		
+		//","
+		public Keyword getCommaKeyword_8_3_0() { return cCommaKeyword_8_3_0; }
+		
+		//drivers+=Driver
+		public Assignment getDriversAssignment_8_3_1() { return cDriversAssignment_8_3_1; }
+		
+		//Driver
+		public RuleCall getDriversDriverParserRuleCall_8_3_1_0() { return cDriversDriverParserRuleCall_8_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_8_4() { return cRightCurlyBracketKeyword_8_4; }
+	}
+	public class BORoleInteractionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.BORoleInteraction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cBORoleInteractionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cBORoleInteractionKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cPurposeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cPurposeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cPurposeEStringParserRuleCall_4_1_0 = (RuleCall)cPurposeAssignment_4_1.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cAccessabilityKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cAccessabilityAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cAccessabilityHighLowEnumRuleCall_5_1_0 = (RuleCall)cAccessabilityAssignment_5_1.eContents().get(0);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cStabilityKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cStabilityAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cStabilityHighLowEnumRuleCall_6_1_0 = (RuleCall)cStabilityAssignment_6_1.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cCriticalityKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cCriticalityAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cCriticalityHighLowEnumRuleCall_7_1_0 = (RuleCall)cCriticalityAssignment_7_1.eContents().get(0);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cFitForPurposeKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Assignment cFitForPurposeAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cFitForPurposeHighLowEnumRuleCall_8_1_0 = (RuleCall)cFitForPurposeAssignment_8_1.eContents().get(0);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cResponsibleKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cResponsibleAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cResponsibleUnsettableBooleanEnumRuleCall_9_1_0 = (RuleCall)cResponsibleAssignment_9_1.eContents().get(0);
+		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
+		private final Keyword cCreatesKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cCreatesAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cCreatesUnsettableBooleanEnumRuleCall_10_1_0 = (RuleCall)cCreatesAssignment_10_1.eContents().get(0);
+		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
+		private final Keyword cReadsKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Assignment cReadsAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
+		private final RuleCall cReadsUnsettableBooleanEnumRuleCall_11_1_0 = (RuleCall)cReadsAssignment_11_1.eContents().get(0);
+		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
+		private final Keyword cUpdatesKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
+		private final Assignment cUpdatesAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
+		private final RuleCall cUpdatesUnsettableBooleanEnumRuleCall_12_1_0 = (RuleCall)cUpdatesAssignment_12_1.eContents().get(0);
+		private final Group cGroup_13 = (Group)cGroup.eContents().get(13);
+		private final Keyword cDeletesKeyword_13_0 = (Keyword)cGroup_13.eContents().get(0);
+		private final Assignment cDeletesAssignment_13_1 = (Assignment)cGroup_13.eContents().get(1);
+		private final RuleCall cDeletesUnsettableBooleanEnumRuleCall_13_1_0 = (RuleCall)cDeletesAssignment_13_1.eContents().get(0);
+		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
+		private final Keyword cBoundaryObjectsKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_14_1 = (Keyword)cGroup_14.eContents().get(1);
+		private final Assignment cBoundaryObjectsAssignment_14_2 = (Assignment)cGroup_14.eContents().get(2);
+		private final CrossReference cBoundaryObjectsBoundaryObjectCrossReference_14_2_0 = (CrossReference)cBoundaryObjectsAssignment_14_2.eContents().get(0);
+		private final RuleCall cBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_2_0_1 = (RuleCall)cBoundaryObjectsBoundaryObjectCrossReference_14_2_0.eContents().get(1);
+		private final Group cGroup_14_3 = (Group)cGroup_14.eContents().get(3);
+		private final Keyword cCommaKeyword_14_3_0 = (Keyword)cGroup_14_3.eContents().get(0);
+		private final Assignment cBoundaryObjectsAssignment_14_3_1 = (Assignment)cGroup_14_3.eContents().get(1);
+		private final CrossReference cBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0 = (CrossReference)cBoundaryObjectsAssignment_14_3_1.eContents().get(0);
+		private final RuleCall cBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_3_1_0_1 = (RuleCall)cBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_14_4 = (Keyword)cGroup_14.eContents().get(4);
+		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
+		private final Keyword cRolesKeyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_15_1 = (Keyword)cGroup_15.eContents().get(1);
+		private final Assignment cRolesAssignment_15_2 = (Assignment)cGroup_15.eContents().get(2);
+		private final CrossReference cRolesRoleCrossReference_15_2_0 = (CrossReference)cRolesAssignment_15_2.eContents().get(0);
+		private final RuleCall cRolesRoleEStringParserRuleCall_15_2_0_1 = (RuleCall)cRolesRoleCrossReference_15_2_0.eContents().get(1);
+		private final Group cGroup_15_3 = (Group)cGroup_15.eContents().get(3);
+		private final Keyword cCommaKeyword_15_3_0 = (Keyword)cGroup_15_3.eContents().get(0);
+		private final Assignment cRolesAssignment_15_3_1 = (Assignment)cGroup_15_3.eContents().get(1);
+		private final CrossReference cRolesRoleCrossReference_15_3_1_0 = (CrossReference)cRolesAssignment_15_3_1.eContents().get(0);
+		private final RuleCall cRolesRoleEStringParserRuleCall_15_3_1_0_1 = (RuleCall)cRolesRoleCrossReference_15_3_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_15_4 = (Keyword)cGroup_15.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
+		
+		//BORoleInteraction returns BORoleInteraction:
+		//    {BORoleInteraction}
+		//    'BORoleInteraction'
+		//    name=EString
+		//    '{'
+		//        ('purpose' purpose=EString)?
+		//        ('accessability' accessability=HighLow)?
+		//        ('stability' stability=HighLow)?
+		//        ('criticality' criticality=HighLow)?
+		//        ('fitForPurpose' fitForPurpose=HighLow)?
+		//        ('responsible' responsible=UnsettableBoolean)?
+		//        ('creates' creates=UnsettableBoolean)?
+		//        ('reads' reads=UnsettableBoolean)?
+		//        ('updates' updates=UnsettableBoolean)?
+		//        ('deletes' deletes=UnsettableBoolean)?
+		//        ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
+		//        ('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{BORoleInteraction}
+		//'BORoleInteraction'
+		//name=EString
+		//'{'
+		//    ('purpose' purpose=EString)?
+		//    ('accessability' accessability=HighLow)?
+		//    ('stability' stability=HighLow)?
+		//    ('criticality' criticality=HighLow)?
+		//    ('fitForPurpose' fitForPurpose=HighLow)?
+		//    ('responsible' responsible=UnsettableBoolean)?
+		//    ('creates' creates=UnsettableBoolean)?
+		//    ('reads' reads=UnsettableBoolean)?
+		//    ('updates' updates=UnsettableBoolean)?
+		//    ('deletes' deletes=UnsettableBoolean)?
+		//    ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
+		//    ('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//{BORoleInteraction}
+		public Action getBORoleInteractionAction_0() { return cBORoleInteractionAction_0; }
+		
+		//'BORoleInteraction'
+		public Keyword getBORoleInteractionKeyword_1() { return cBORoleInteractionKeyword_1; }
+		
+		//name=EString
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//EString
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		
+		//('purpose' purpose=EString)?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'purpose'
+		public Keyword getPurposeKeyword_4_0() { return cPurposeKeyword_4_0; }
+		
+		//purpose=EString
+		public Assignment getPurposeAssignment_4_1() { return cPurposeAssignment_4_1; }
+		
+		//EString
+		public RuleCall getPurposeEStringParserRuleCall_4_1_0() { return cPurposeEStringParserRuleCall_4_1_0; }
+		
+		//('accessability' accessability=HighLow)?
+		public Group getGroup_5() { return cGroup_5; }
+		
+		//'accessability'
+		public Keyword getAccessabilityKeyword_5_0() { return cAccessabilityKeyword_5_0; }
+		
+		//accessability=HighLow
+		public Assignment getAccessabilityAssignment_5_1() { return cAccessabilityAssignment_5_1; }
+		
+		//HighLow
+		public RuleCall getAccessabilityHighLowEnumRuleCall_5_1_0() { return cAccessabilityHighLowEnumRuleCall_5_1_0; }
+		
+		//('stability' stability=HighLow)?
+		public Group getGroup_6() { return cGroup_6; }
+		
+		//'stability'
+		public Keyword getStabilityKeyword_6_0() { return cStabilityKeyword_6_0; }
+		
+		//stability=HighLow
+		public Assignment getStabilityAssignment_6_1() { return cStabilityAssignment_6_1; }
+		
+		//HighLow
+		public RuleCall getStabilityHighLowEnumRuleCall_6_1_0() { return cStabilityHighLowEnumRuleCall_6_1_0; }
+		
+		//('criticality' criticality=HighLow)?
+		public Group getGroup_7() { return cGroup_7; }
+		
+		//'criticality'
+		public Keyword getCriticalityKeyword_7_0() { return cCriticalityKeyword_7_0; }
+		
+		//criticality=HighLow
+		public Assignment getCriticalityAssignment_7_1() { return cCriticalityAssignment_7_1; }
+		
+		//HighLow
+		public RuleCall getCriticalityHighLowEnumRuleCall_7_1_0() { return cCriticalityHighLowEnumRuleCall_7_1_0; }
+		
+		//('fitForPurpose' fitForPurpose=HighLow)?
+		public Group getGroup_8() { return cGroup_8; }
+		
+		//'fitForPurpose'
+		public Keyword getFitForPurposeKeyword_8_0() { return cFitForPurposeKeyword_8_0; }
+		
+		//fitForPurpose=HighLow
+		public Assignment getFitForPurposeAssignment_8_1() { return cFitForPurposeAssignment_8_1; }
+		
+		//HighLow
+		public RuleCall getFitForPurposeHighLowEnumRuleCall_8_1_0() { return cFitForPurposeHighLowEnumRuleCall_8_1_0; }
+		
+		//('responsible' responsible=UnsettableBoolean)?
+		public Group getGroup_9() { return cGroup_9; }
+		
+		//'responsible'
+		public Keyword getResponsibleKeyword_9_0() { return cResponsibleKeyword_9_0; }
+		
+		//responsible=UnsettableBoolean
+		public Assignment getResponsibleAssignment_9_1() { return cResponsibleAssignment_9_1; }
+		
+		//UnsettableBoolean
+		public RuleCall getResponsibleUnsettableBooleanEnumRuleCall_9_1_0() { return cResponsibleUnsettableBooleanEnumRuleCall_9_1_0; }
+		
+		//('creates' creates=UnsettableBoolean)?
+		public Group getGroup_10() { return cGroup_10; }
+		
+		//'creates'
+		public Keyword getCreatesKeyword_10_0() { return cCreatesKeyword_10_0; }
+		
+		//creates=UnsettableBoolean
+		public Assignment getCreatesAssignment_10_1() { return cCreatesAssignment_10_1; }
+		
+		//UnsettableBoolean
+		public RuleCall getCreatesUnsettableBooleanEnumRuleCall_10_1_0() { return cCreatesUnsettableBooleanEnumRuleCall_10_1_0; }
+		
+		//('reads' reads=UnsettableBoolean)?
+		public Group getGroup_11() { return cGroup_11; }
+		
+		//'reads'
+		public Keyword getReadsKeyword_11_0() { return cReadsKeyword_11_0; }
+		
+		//reads=UnsettableBoolean
+		public Assignment getReadsAssignment_11_1() { return cReadsAssignment_11_1; }
+		
+		//UnsettableBoolean
+		public RuleCall getReadsUnsettableBooleanEnumRuleCall_11_1_0() { return cReadsUnsettableBooleanEnumRuleCall_11_1_0; }
+		
+		//('updates' updates=UnsettableBoolean)?
+		public Group getGroup_12() { return cGroup_12; }
+		
+		//'updates'
+		public Keyword getUpdatesKeyword_12_0() { return cUpdatesKeyword_12_0; }
+		
+		//updates=UnsettableBoolean
+		public Assignment getUpdatesAssignment_12_1() { return cUpdatesAssignment_12_1; }
+		
+		//UnsettableBoolean
+		public RuleCall getUpdatesUnsettableBooleanEnumRuleCall_12_1_0() { return cUpdatesUnsettableBooleanEnumRuleCall_12_1_0; }
+		
+		//('deletes' deletes=UnsettableBoolean)?
+		public Group getGroup_13() { return cGroup_13; }
+		
+		//'deletes'
+		public Keyword getDeletesKeyword_13_0() { return cDeletesKeyword_13_0; }
+		
+		//deletes=UnsettableBoolean
+		public Assignment getDeletesAssignment_13_1() { return cDeletesAssignment_13_1; }
+		
+		//UnsettableBoolean
+		public RuleCall getDeletesUnsettableBooleanEnumRuleCall_13_1_0() { return cDeletesUnsettableBooleanEnumRuleCall_13_1_0; }
+		
+		//('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
+		public Group getGroup_14() { return cGroup_14; }
+		
+		//'boundaryObjects'
+		public Keyword getBoundaryObjectsKeyword_14_0() { return cBoundaryObjectsKeyword_14_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_14_1() { return cLeftParenthesisKeyword_14_1; }
+		
+		//boundaryObjects+=[BoundaryObject|EString]
+		public Assignment getBoundaryObjectsAssignment_14_2() { return cBoundaryObjectsAssignment_14_2; }
+		
+		//[BoundaryObject|EString]
+		public CrossReference getBoundaryObjectsBoundaryObjectCrossReference_14_2_0() { return cBoundaryObjectsBoundaryObjectCrossReference_14_2_0; }
+		
+		//EString
+		public RuleCall getBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_2_0_1() { return cBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_2_0_1; }
+		
+		//( "," boundaryObjects+=[BoundaryObject|EString])*
+		public Group getGroup_14_3() { return cGroup_14_3; }
+		
+		//","
+		public Keyword getCommaKeyword_14_3_0() { return cCommaKeyword_14_3_0; }
+		
+		//boundaryObjects+=[BoundaryObject|EString]
+		public Assignment getBoundaryObjectsAssignment_14_3_1() { return cBoundaryObjectsAssignment_14_3_1; }
+		
+		//[BoundaryObject|EString]
+		public CrossReference getBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0() { return cBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0; }
+		
+		//EString
+		public RuleCall getBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_3_1_0_1() { return cBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_3_1_0_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_14_4() { return cRightParenthesisKeyword_14_4; }
+		
+		//('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
+		public Group getGroup_15() { return cGroup_15; }
+		
+		//'roles'
+		public Keyword getRolesKeyword_15_0() { return cRolesKeyword_15_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_15_1() { return cLeftParenthesisKeyword_15_1; }
+		
+		//roles+=[Role|EString]
+		public Assignment getRolesAssignment_15_2() { return cRolesAssignment_15_2; }
+		
+		//[Role|EString]
+		public CrossReference getRolesRoleCrossReference_15_2_0() { return cRolesRoleCrossReference_15_2_0; }
+		
+		//EString
+		public RuleCall getRolesRoleEStringParserRuleCall_15_2_0_1() { return cRolesRoleEStringParserRuleCall_15_2_0_1; }
+		
+		//( "," roles+=[Role|EString])*
+		public Group getGroup_15_3() { return cGroup_15_3; }
+		
+		//","
+		public Keyword getCommaKeyword_15_3_0() { return cCommaKeyword_15_3_0; }
+		
+		//roles+=[Role|EString]
+		public Assignment getRolesAssignment_15_3_1() { return cRolesAssignment_15_3_1; }
+		
+		//[Role|EString]
+		public CrossReference getRolesRoleCrossReference_15_3_1_0() { return cRolesRoleCrossReference_15_3_1_0; }
+		
+		//EString
+		public RuleCall getRolesRoleEStringParserRuleCall_15_3_1_0_1() { return cRolesRoleEStringParserRuleCall_15_3_1_0_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_15_4() { return cRightParenthesisKeyword_15_4; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_16() { return cRightCurlyBracketKeyword_16; }
 	}
 	public class BoundaryObjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.BoundaryObject");
@@ -351,13 +710,13 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cSuperTypeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cSuperTypeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cSuperTypeBOSuperTypesEnumRuleCall_4_1_0 = (RuleCall)cSuperTypeAssignment_4_1.eContents().get(0);
+		private final Keyword cPurposeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cPurposeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cPurposeEStringParserRuleCall_4_1_0 = (RuleCall)cPurposeAssignment_4_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cPurposeKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cPurposeAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cPurposeEStringParserRuleCall_5_1_0 = (RuleCall)cPurposeAssignment_5_1.eContents().get(0);
+		private final Keyword cSuperTypeKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cSuperTypeAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cSuperTypeBOSuperTypesEnumRuleCall_5_1_0 = (RuleCall)cSuperTypeAssignment_5_1.eContents().get(0);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cLevelOfDetailKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Assignment cLevelOfDetailAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
@@ -413,8 +772,8 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//    'BoundaryObject'
 		//    name=EString
 		//    '{'
-		//        ('superType' superType=BOSuperTypes)?
 		//        ('purpose' purpose=EString)?
+		//        ('superType' superType=BOSuperTypes)?
 		//        ('levelOfDetail' levelOfDetail=HighLow)?
 		//        ('frequencyOfChange' frequencyOfChange=HighLow)?
 		//        ('modularity' modularity=HighLow)?
@@ -434,8 +793,8 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//'BoundaryObject'
 		//name=EString
 		//'{'
-		//    ('superType' superType=BOSuperTypes)?
 		//    ('purpose' purpose=EString)?
+		//    ('superType' superType=BOSuperTypes)?
 		//    ('levelOfDetail' levelOfDetail=HighLow)?
 		//    ('frequencyOfChange' frequencyOfChange=HighLow)?
 		//    ('modularity' modularity=HighLow)?
@@ -466,29 +825,29 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
-		//('superType' superType=BOSuperTypes)?
+		//('purpose' purpose=EString)?
 		public Group getGroup_4() { return cGroup_4; }
 		
-		//'superType'
-		public Keyword getSuperTypeKeyword_4_0() { return cSuperTypeKeyword_4_0; }
-		
-		//superType=BOSuperTypes
-		public Assignment getSuperTypeAssignment_4_1() { return cSuperTypeAssignment_4_1; }
-		
-		//BOSuperTypes
-		public RuleCall getSuperTypeBOSuperTypesEnumRuleCall_4_1_0() { return cSuperTypeBOSuperTypesEnumRuleCall_4_1_0; }
-		
-		//('purpose' purpose=EString)?
-		public Group getGroup_5() { return cGroup_5; }
-		
 		//'purpose'
-		public Keyword getPurposeKeyword_5_0() { return cPurposeKeyword_5_0; }
+		public Keyword getPurposeKeyword_4_0() { return cPurposeKeyword_4_0; }
 		
 		//purpose=EString
-		public Assignment getPurposeAssignment_5_1() { return cPurposeAssignment_5_1; }
+		public Assignment getPurposeAssignment_4_1() { return cPurposeAssignment_4_1; }
 		
 		//EString
-		public RuleCall getPurposeEStringParserRuleCall_5_1_0() { return cPurposeEStringParserRuleCall_5_1_0; }
+		public RuleCall getPurposeEStringParserRuleCall_4_1_0() { return cPurposeEStringParserRuleCall_4_1_0; }
+		
+		//('superType' superType=BOSuperTypes)?
+		public Group getGroup_5() { return cGroup_5; }
+		
+		//'superType'
+		public Keyword getSuperTypeKeyword_5_0() { return cSuperTypeKeyword_5_0; }
+		
+		//superType=BOSuperTypes
+		public Assignment getSuperTypeAssignment_5_1() { return cSuperTypeAssignment_5_1; }
+		
+		//BOSuperTypes
+		public RuleCall getSuperTypeBOSuperTypesEnumRuleCall_5_1_0() { return cSuperTypeBOSuperTypesEnumRuleCall_5_1_0; }
 		
 		//('levelOfDetail' levelOfDetail=HighLow)?
 		public Group getGroup_6() { return cGroup_6; }
@@ -637,98 +996,6 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_18() { return cRightCurlyBracketKeyword_18; }
 	}
-	public class MethodologicalIslandElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.MethodologicalIsland");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cMethodologicalIslandAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cMethodologicalIslandKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cTypeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cTypeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cTypeMITypeEnumRuleCall_4_1_0 = (RuleCall)cTypeAssignment_4_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		
-		//MethodologicalIsland returns MethodologicalIsland:
-		//    {MethodologicalIsland}
-		//    'MethodologicalIsland'
-		//    name=EString
-		//    '{'
-		//        ('type' type=MIType)?
-		//    '}';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{MethodologicalIsland}
-		//'MethodologicalIsland'
-		//name=EString
-		//'{'
-		//    ('type' type=MIType)?
-		//'}'
-		public Group getGroup() { return cGroup; }
-		
-		//{MethodologicalIsland}
-		public Action getMethodologicalIslandAction_0() { return cMethodologicalIslandAction_0; }
-		
-		//'MethodologicalIsland'
-		public Keyword getMethodologicalIslandKeyword_1() { return cMethodologicalIslandKeyword_1; }
-		
-		//name=EString
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//EString
-		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
-		
-		//('type' type=MIType)?
-		public Group getGroup_4() { return cGroup_4; }
-		
-		//'type'
-		public Keyword getTypeKeyword_4_0() { return cTypeKeyword_4_0; }
-		
-		//type=MIType
-		public Assignment getTypeAssignment_4_1() { return cTypeAssignment_4_1; }
-		
-		//MIType
-		public RuleCall getTypeMITypeEnumRuleCall_4_1_0() { return cTypeMITypeEnumRuleCall_4_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
-	}
-	public class GovernanceTeamElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.GovernanceTeam");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cGovernanceTeamAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cGovernanceTeamKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		
-		//GovernanceTeam returns GovernanceTeam:
-		//    {GovernanceTeam}
-		//    'GovernanceTeam'
-		//    name=EString;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{GovernanceTeam}
-		//'GovernanceTeam'
-		//name=EString
-		public Group getGroup() { return cGroup; }
-		
-		//{GovernanceTeam}
-		public Action getGovernanceTeamAction_0() { return cGovernanceTeamAction_0; }
-		
-		//'GovernanceTeam'
-		public Keyword getGovernanceTeamKeyword_1() { return cGovernanceTeamKeyword_1; }
-		
-		//name=EString
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//EString
-		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
-	}
 	public class RoleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.Role");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -871,153 +1138,6 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
-	}
-	public class DriverElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.Driver");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cDriverAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cDriverKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cDriverTypeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cDriverTypeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cDriverTypeDriverTypesEnumRuleCall_4_1_0 = (RuleCall)cDriverTypeAssignment_4_1.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cDistanceTypeKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cDistanceTypeAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cDistanceTypeDistanceTypesEnumRuleCall_5_1_0 = (RuleCall)cDistanceTypeAssignment_5_1.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cDistanceSizeKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cDistanceSizeAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cDistanceSizeHighLowEnumRuleCall_6_1_0 = (RuleCall)cDistanceSizeAssignment_6_1.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cDrivesMIsKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
-		private final Assignment cDrivesMIsAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
-		private final CrossReference cDrivesMIsMethodologicalIslandCrossReference_7_2_0 = (CrossReference)cDrivesMIsAssignment_7_2.eContents().get(0);
-		private final RuleCall cDrivesMIsMethodologicalIslandEStringParserRuleCall_7_2_0_1 = (RuleCall)cDrivesMIsMethodologicalIslandCrossReference_7_2_0.eContents().get(1);
-		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
-		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
-		private final Assignment cDrivesMIsAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
-		private final CrossReference cDrivesMIsMethodologicalIslandCrossReference_7_3_1_0 = (CrossReference)cDrivesMIsAssignment_7_3_1.eContents().get(0);
-		private final RuleCall cDrivesMIsMethodologicalIslandEStringParserRuleCall_7_3_1_0_1 = (RuleCall)cDrivesMIsMethodologicalIslandCrossReference_7_3_1_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		
-		//Driver returns Driver:
-		//    {Driver}
-		//    'Driver'
-		//    name=EString
-		//    '{'
-		//        ('driverType' driverType=DriverTypes)?
-		//        ('distanceType' distanceType=DistanceTypes)?
-		//        ('distanceSize' distanceSize=HighLow)?
-		//        ('drivesMIs' '(' drivesMIs+=[MethodologicalIsland|EString] ( "," drivesMIs+=[MethodologicalIsland|EString])* ')' )?
-		//    '}';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{Driver}
-		//'Driver'
-		//name=EString
-		//'{'
-		//    ('driverType' driverType=DriverTypes)?
-		//    ('distanceType' distanceType=DistanceTypes)?
-		//    ('distanceSize' distanceSize=HighLow)?
-		//    ('drivesMIs' '(' drivesMIs+=[MethodologicalIsland|EString] ( "," drivesMIs+=[MethodologicalIsland|EString])* ')' )?
-		//'}'
-		public Group getGroup() { return cGroup; }
-		
-		//{Driver}
-		public Action getDriverAction_0() { return cDriverAction_0; }
-		
-		//'Driver'
-		public Keyword getDriverKeyword_1() { return cDriverKeyword_1; }
-		
-		//name=EString
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//EString
-		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
-		
-		//('driverType' driverType=DriverTypes)?
-		public Group getGroup_4() { return cGroup_4; }
-		
-		//'driverType'
-		public Keyword getDriverTypeKeyword_4_0() { return cDriverTypeKeyword_4_0; }
-		
-		//driverType=DriverTypes
-		public Assignment getDriverTypeAssignment_4_1() { return cDriverTypeAssignment_4_1; }
-		
-		//DriverTypes
-		public RuleCall getDriverTypeDriverTypesEnumRuleCall_4_1_0() { return cDriverTypeDriverTypesEnumRuleCall_4_1_0; }
-		
-		//('distanceType' distanceType=DistanceTypes)?
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//'distanceType'
-		public Keyword getDistanceTypeKeyword_5_0() { return cDistanceTypeKeyword_5_0; }
-		
-		//distanceType=DistanceTypes
-		public Assignment getDistanceTypeAssignment_5_1() { return cDistanceTypeAssignment_5_1; }
-		
-		//DistanceTypes
-		public RuleCall getDistanceTypeDistanceTypesEnumRuleCall_5_1_0() { return cDistanceTypeDistanceTypesEnumRuleCall_5_1_0; }
-		
-		//('distanceSize' distanceSize=HighLow)?
-		public Group getGroup_6() { return cGroup_6; }
-		
-		//'distanceSize'
-		public Keyword getDistanceSizeKeyword_6_0() { return cDistanceSizeKeyword_6_0; }
-		
-		//distanceSize=HighLow
-		public Assignment getDistanceSizeAssignment_6_1() { return cDistanceSizeAssignment_6_1; }
-		
-		//HighLow
-		public RuleCall getDistanceSizeHighLowEnumRuleCall_6_1_0() { return cDistanceSizeHighLowEnumRuleCall_6_1_0; }
-		
-		//('drivesMIs' '(' drivesMIs+=[MethodologicalIsland|EString] ( "," drivesMIs+=[MethodologicalIsland|EString])* ')' )?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//'drivesMIs'
-		public Keyword getDrivesMIsKeyword_7_0() { return cDrivesMIsKeyword_7_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_7_1() { return cLeftParenthesisKeyword_7_1; }
-		
-		//drivesMIs+=[MethodologicalIsland|EString]
-		public Assignment getDrivesMIsAssignment_7_2() { return cDrivesMIsAssignment_7_2; }
-		
-		//[MethodologicalIsland|EString]
-		public CrossReference getDrivesMIsMethodologicalIslandCrossReference_7_2_0() { return cDrivesMIsMethodologicalIslandCrossReference_7_2_0; }
-		
-		//EString
-		public RuleCall getDrivesMIsMethodologicalIslandEStringParserRuleCall_7_2_0_1() { return cDrivesMIsMethodologicalIslandEStringParserRuleCall_7_2_0_1; }
-		
-		//( "," drivesMIs+=[MethodologicalIsland|EString])*
-		public Group getGroup_7_3() { return cGroup_7_3; }
-		
-		//","
-		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
-		
-		//drivesMIs+=[MethodologicalIsland|EString]
-		public Assignment getDrivesMIsAssignment_7_3_1() { return cDrivesMIsAssignment_7_3_1; }
-		
-		//[MethodologicalIsland|EString]
-		public CrossReference getDrivesMIsMethodologicalIslandCrossReference_7_3_1_0() { return cDrivesMIsMethodologicalIslandCrossReference_7_3_1_0; }
-		
-		//EString
-		public RuleCall getDrivesMIsMethodologicalIslandEStringParserRuleCall_7_3_1_0_1() { return cDrivesMIsMethodologicalIslandEStringParserRuleCall_7_3_1_0_1; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_7_4() { return cRightParenthesisKeyword_7_4; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 	public class BOMICoordinationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.BOMICoordination");
@@ -1252,124 +1372,42 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 	}
-	public class BORoleInteractionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.BORoleInteraction");
+	public class MethodologicalIslandElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.MethodologicalIsland");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cBORoleInteractionAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cBORoleInteractionKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Action cMethodologicalIslandAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cMethodologicalIslandKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cPurposeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cPurposeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cPurposeEStringParserRuleCall_4_1_0 = (RuleCall)cPurposeAssignment_4_1.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cAccessabilityKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cAccessabilityAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cAccessabilityHighLowEnumRuleCall_5_1_0 = (RuleCall)cAccessabilityAssignment_5_1.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cStabilityKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cStabilityAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cStabilityHighLowEnumRuleCall_6_1_0 = (RuleCall)cStabilityAssignment_6_1.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cCriticalityKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cCriticalityAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cCriticalityHighLowEnumRuleCall_7_1_0 = (RuleCall)cCriticalityAssignment_7_1.eContents().get(0);
-		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cFitForPurposeKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Assignment cFitForPurposeAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final RuleCall cFitForPurposeHighLowEnumRuleCall_8_1_0 = (RuleCall)cFitForPurposeAssignment_8_1.eContents().get(0);
-		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cResponsibleKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Assignment cResponsibleAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
-		private final RuleCall cResponsibleMyBooleanEnumRuleCall_9_1_0 = (RuleCall)cResponsibleAssignment_9_1.eContents().get(0);
-		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cCreatesKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Assignment cCreatesAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
-		private final RuleCall cCreatesMyBooleanEnumRuleCall_10_1_0 = (RuleCall)cCreatesAssignment_10_1.eContents().get(0);
-		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cReadsKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Assignment cReadsAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cReadsMyBooleanEnumRuleCall_11_1_0 = (RuleCall)cReadsAssignment_11_1.eContents().get(0);
-		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
-		private final Keyword cUpdatesKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
-		private final Assignment cUpdatesAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
-		private final RuleCall cUpdatesMyBooleanEnumRuleCall_12_1_0 = (RuleCall)cUpdatesAssignment_12_1.eContents().get(0);
-		private final Group cGroup_13 = (Group)cGroup.eContents().get(13);
-		private final Keyword cDeletesKeyword_13_0 = (Keyword)cGroup_13.eContents().get(0);
-		private final Assignment cDeletesAssignment_13_1 = (Assignment)cGroup_13.eContents().get(1);
-		private final RuleCall cDeletesMyBooleanEnumRuleCall_13_1_0 = (RuleCall)cDeletesAssignment_13_1.eContents().get(0);
-		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
-		private final Keyword cBoundaryObjectsKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_14_1 = (Keyword)cGroup_14.eContents().get(1);
-		private final Assignment cBoundaryObjectsAssignment_14_2 = (Assignment)cGroup_14.eContents().get(2);
-		private final CrossReference cBoundaryObjectsBoundaryObjectCrossReference_14_2_0 = (CrossReference)cBoundaryObjectsAssignment_14_2.eContents().get(0);
-		private final RuleCall cBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_2_0_1 = (RuleCall)cBoundaryObjectsBoundaryObjectCrossReference_14_2_0.eContents().get(1);
-		private final Group cGroup_14_3 = (Group)cGroup_14.eContents().get(3);
-		private final Keyword cCommaKeyword_14_3_0 = (Keyword)cGroup_14_3.eContents().get(0);
-		private final Assignment cBoundaryObjectsAssignment_14_3_1 = (Assignment)cGroup_14_3.eContents().get(1);
-		private final CrossReference cBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0 = (CrossReference)cBoundaryObjectsAssignment_14_3_1.eContents().get(0);
-		private final RuleCall cBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_3_1_0_1 = (RuleCall)cBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_14_4 = (Keyword)cGroup_14.eContents().get(4);
-		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
-		private final Keyword cRolesKeyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_15_1 = (Keyword)cGroup_15.eContents().get(1);
-		private final Assignment cRolesAssignment_15_2 = (Assignment)cGroup_15.eContents().get(2);
-		private final CrossReference cRolesRoleCrossReference_15_2_0 = (CrossReference)cRolesAssignment_15_2.eContents().get(0);
-		private final RuleCall cRolesRoleEStringParserRuleCall_15_2_0_1 = (RuleCall)cRolesRoleCrossReference_15_2_0.eContents().get(1);
-		private final Group cGroup_15_3 = (Group)cGroup_15.eContents().get(3);
-		private final Keyword cCommaKeyword_15_3_0 = (Keyword)cGroup_15_3.eContents().get(0);
-		private final Assignment cRolesAssignment_15_3_1 = (Assignment)cGroup_15_3.eContents().get(1);
-		private final CrossReference cRolesRoleCrossReference_15_3_1_0 = (CrossReference)cRolesAssignment_15_3_1.eContents().get(0);
-		private final RuleCall cRolesRoleEStringParserRuleCall_15_3_1_0_1 = (RuleCall)cRolesRoleCrossReference_15_3_1_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_15_4 = (Keyword)cGroup_15.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
+		private final Keyword cTypeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cTypeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cTypeMITypeEnumRuleCall_4_1_0 = (RuleCall)cTypeAssignment_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//BORoleInteraction returns BORoleInteraction:
-		//    {BORoleInteraction}
-		//    'BORoleInteraction'
+		//MethodologicalIsland returns MethodologicalIsland:
+		//    {MethodologicalIsland}
+		//    'MethodologicalIsland'
 		//    name=EString
 		//    '{'
-		//        ('purpose' purpose=EString)?
-		//        ('accessability' accessability=HighLow)?
-		//        ('stability' stability=HighLow)?
-		//        ('criticality' criticality=HighLow)?
-		//        ('fitForPurpose' fitForPurpose=HighLow)?
-		//        ('responsible' responsible=MyBoolean)?
-		//        ('creates' creates=MyBoolean)?
-		//        ('reads' reads=MyBoolean)?
-		//        ('updates' updates=MyBoolean)?
-		//        ('deletes' deletes=MyBoolean)?
-		//        ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
-		//        ('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
+		//        ('type' type=MIType)?
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{BORoleInteraction}
-		//'BORoleInteraction'
+		//{MethodologicalIsland}
+		//'MethodologicalIsland'
 		//name=EString
 		//'{'
-		//    ('purpose' purpose=EString)?
-		//    ('accessability' accessability=HighLow)?
-		//    ('stability' stability=HighLow)?
-		//    ('criticality' criticality=HighLow)?
-		//    ('fitForPurpose' fitForPurpose=HighLow)?
-		//    ('responsible' responsible=MyBoolean)?
-		//    ('creates' creates=MyBoolean)?
-		//    ('reads' reads=MyBoolean)?
-		//    ('updates' updates=MyBoolean)?
-		//    ('deletes' deletes=MyBoolean)?
-		//    ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
-		//    ('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
+		//    ('type' type=MIType)?
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
-		//{BORoleInteraction}
-		public Action getBORoleInteractionAction_0() { return cBORoleInteractionAction_0; }
+		//{MethodologicalIsland}
+		public Action getMethodologicalIslandAction_0() { return cMethodologicalIslandAction_0; }
 		
-		//'BORoleInteraction'
-		public Keyword getBORoleInteractionKeyword_1() { return cBORoleInteractionKeyword_1; }
+		//'MethodologicalIsland'
+		public Keyword getMethodologicalIslandKeyword_1() { return cMethodologicalIslandKeyword_1; }
 		
 		//name=EString
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
@@ -1380,200 +1418,51 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
-		//('purpose' purpose=EString)?
+		//('type' type=MIType)?
 		public Group getGroup_4() { return cGroup_4; }
 		
-		//'purpose'
-		public Keyword getPurposeKeyword_4_0() { return cPurposeKeyword_4_0; }
+		//'type'
+		public Keyword getTypeKeyword_4_0() { return cTypeKeyword_4_0; }
 		
-		//purpose=EString
-		public Assignment getPurposeAssignment_4_1() { return cPurposeAssignment_4_1; }
+		//type=MIType
+		public Assignment getTypeAssignment_4_1() { return cTypeAssignment_4_1; }
 		
-		//EString
-		public RuleCall getPurposeEStringParserRuleCall_4_1_0() { return cPurposeEStringParserRuleCall_4_1_0; }
-		
-		//('accessability' accessability=HighLow)?
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//'accessability'
-		public Keyword getAccessabilityKeyword_5_0() { return cAccessabilityKeyword_5_0; }
-		
-		//accessability=HighLow
-		public Assignment getAccessabilityAssignment_5_1() { return cAccessabilityAssignment_5_1; }
-		
-		//HighLow
-		public RuleCall getAccessabilityHighLowEnumRuleCall_5_1_0() { return cAccessabilityHighLowEnumRuleCall_5_1_0; }
-		
-		//('stability' stability=HighLow)?
-		public Group getGroup_6() { return cGroup_6; }
-		
-		//'stability'
-		public Keyword getStabilityKeyword_6_0() { return cStabilityKeyword_6_0; }
-		
-		//stability=HighLow
-		public Assignment getStabilityAssignment_6_1() { return cStabilityAssignment_6_1; }
-		
-		//HighLow
-		public RuleCall getStabilityHighLowEnumRuleCall_6_1_0() { return cStabilityHighLowEnumRuleCall_6_1_0; }
-		
-		//('criticality' criticality=HighLow)?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//'criticality'
-		public Keyword getCriticalityKeyword_7_0() { return cCriticalityKeyword_7_0; }
-		
-		//criticality=HighLow
-		public Assignment getCriticalityAssignment_7_1() { return cCriticalityAssignment_7_1; }
-		
-		//HighLow
-		public RuleCall getCriticalityHighLowEnumRuleCall_7_1_0() { return cCriticalityHighLowEnumRuleCall_7_1_0; }
-		
-		//('fitForPurpose' fitForPurpose=HighLow)?
-		public Group getGroup_8() { return cGroup_8; }
-		
-		//'fitForPurpose'
-		public Keyword getFitForPurposeKeyword_8_0() { return cFitForPurposeKeyword_8_0; }
-		
-		//fitForPurpose=HighLow
-		public Assignment getFitForPurposeAssignment_8_1() { return cFitForPurposeAssignment_8_1; }
-		
-		//HighLow
-		public RuleCall getFitForPurposeHighLowEnumRuleCall_8_1_0() { return cFitForPurposeHighLowEnumRuleCall_8_1_0; }
-		
-		//('responsible' responsible=MyBoolean)?
-		public Group getGroup_9() { return cGroup_9; }
-		
-		//'responsible'
-		public Keyword getResponsibleKeyword_9_0() { return cResponsibleKeyword_9_0; }
-		
-		//responsible=MyBoolean
-		public Assignment getResponsibleAssignment_9_1() { return cResponsibleAssignment_9_1; }
-		
-		//MyBoolean
-		public RuleCall getResponsibleMyBooleanEnumRuleCall_9_1_0() { return cResponsibleMyBooleanEnumRuleCall_9_1_0; }
-		
-		//('creates' creates=MyBoolean)?
-		public Group getGroup_10() { return cGroup_10; }
-		
-		//'creates'
-		public Keyword getCreatesKeyword_10_0() { return cCreatesKeyword_10_0; }
-		
-		//creates=MyBoolean
-		public Assignment getCreatesAssignment_10_1() { return cCreatesAssignment_10_1; }
-		
-		//MyBoolean
-		public RuleCall getCreatesMyBooleanEnumRuleCall_10_1_0() { return cCreatesMyBooleanEnumRuleCall_10_1_0; }
-		
-		//('reads' reads=MyBoolean)?
-		public Group getGroup_11() { return cGroup_11; }
-		
-		//'reads'
-		public Keyword getReadsKeyword_11_0() { return cReadsKeyword_11_0; }
-		
-		//reads=MyBoolean
-		public Assignment getReadsAssignment_11_1() { return cReadsAssignment_11_1; }
-		
-		//MyBoolean
-		public RuleCall getReadsMyBooleanEnumRuleCall_11_1_0() { return cReadsMyBooleanEnumRuleCall_11_1_0; }
-		
-		//('updates' updates=MyBoolean)?
-		public Group getGroup_12() { return cGroup_12; }
-		
-		//'updates'
-		public Keyword getUpdatesKeyword_12_0() { return cUpdatesKeyword_12_0; }
-		
-		//updates=MyBoolean
-		public Assignment getUpdatesAssignment_12_1() { return cUpdatesAssignment_12_1; }
-		
-		//MyBoolean
-		public RuleCall getUpdatesMyBooleanEnumRuleCall_12_1_0() { return cUpdatesMyBooleanEnumRuleCall_12_1_0; }
-		
-		//('deletes' deletes=MyBoolean)?
-		public Group getGroup_13() { return cGroup_13; }
-		
-		//'deletes'
-		public Keyword getDeletesKeyword_13_0() { return cDeletesKeyword_13_0; }
-		
-		//deletes=MyBoolean
-		public Assignment getDeletesAssignment_13_1() { return cDeletesAssignment_13_1; }
-		
-		//MyBoolean
-		public RuleCall getDeletesMyBooleanEnumRuleCall_13_1_0() { return cDeletesMyBooleanEnumRuleCall_13_1_0; }
-		
-		//('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
-		public Group getGroup_14() { return cGroup_14; }
-		
-		//'boundaryObjects'
-		public Keyword getBoundaryObjectsKeyword_14_0() { return cBoundaryObjectsKeyword_14_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_14_1() { return cLeftParenthesisKeyword_14_1; }
-		
-		//boundaryObjects+=[BoundaryObject|EString]
-		public Assignment getBoundaryObjectsAssignment_14_2() { return cBoundaryObjectsAssignment_14_2; }
-		
-		//[BoundaryObject|EString]
-		public CrossReference getBoundaryObjectsBoundaryObjectCrossReference_14_2_0() { return cBoundaryObjectsBoundaryObjectCrossReference_14_2_0; }
-		
-		//EString
-		public RuleCall getBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_2_0_1() { return cBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_2_0_1; }
-		
-		//( "," boundaryObjects+=[BoundaryObject|EString])*
-		public Group getGroup_14_3() { return cGroup_14_3; }
-		
-		//","
-		public Keyword getCommaKeyword_14_3_0() { return cCommaKeyword_14_3_0; }
-		
-		//boundaryObjects+=[BoundaryObject|EString]
-		public Assignment getBoundaryObjectsAssignment_14_3_1() { return cBoundaryObjectsAssignment_14_3_1; }
-		
-		//[BoundaryObject|EString]
-		public CrossReference getBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0() { return cBoundaryObjectsBoundaryObjectCrossReference_14_3_1_0; }
-		
-		//EString
-		public RuleCall getBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_3_1_0_1() { return cBoundaryObjectsBoundaryObjectEStringParserRuleCall_14_3_1_0_1; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_14_4() { return cRightParenthesisKeyword_14_4; }
-		
-		//('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
-		public Group getGroup_15() { return cGroup_15; }
-		
-		//'roles'
-		public Keyword getRolesKeyword_15_0() { return cRolesKeyword_15_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_15_1() { return cLeftParenthesisKeyword_15_1; }
-		
-		//roles+=[Role|EString]
-		public Assignment getRolesAssignment_15_2() { return cRolesAssignment_15_2; }
-		
-		//[Role|EString]
-		public CrossReference getRolesRoleCrossReference_15_2_0() { return cRolesRoleCrossReference_15_2_0; }
-		
-		//EString
-		public RuleCall getRolesRoleEStringParserRuleCall_15_2_0_1() { return cRolesRoleEStringParserRuleCall_15_2_0_1; }
-		
-		//( "," roles+=[Role|EString])*
-		public Group getGroup_15_3() { return cGroup_15_3; }
-		
-		//","
-		public Keyword getCommaKeyword_15_3_0() { return cCommaKeyword_15_3_0; }
-		
-		//roles+=[Role|EString]
-		public Assignment getRolesAssignment_15_3_1() { return cRolesAssignment_15_3_1; }
-		
-		//[Role|EString]
-		public CrossReference getRolesRoleCrossReference_15_3_1_0() { return cRolesRoleCrossReference_15_3_1_0; }
-		
-		//EString
-		public RuleCall getRolesRoleEStringParserRuleCall_15_3_1_0_1() { return cRolesRoleEStringParserRuleCall_15_3_1_0_1; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_15_4() { return cRightParenthesisKeyword_15_4; }
+		//MIType
+		public RuleCall getTypeMITypeEnumRuleCall_4_1_0() { return cTypeMITypeEnumRuleCall_4_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_16() { return cRightCurlyBracketKeyword_16; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+	public class GovernanceTeamElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.GovernanceTeam");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cGovernanceTeamAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cGovernanceTeamKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		
+		//GovernanceTeam returns GovernanceTeam:
+		//    {GovernanceTeam}
+		//    'GovernanceTeam'
+		//    name=EString;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{GovernanceTeam}
+		//'GovernanceTeam'
+		//name=EString
+		public Group getGroup() { return cGroup; }
+		
+		//{GovernanceTeam}
+		public Action getGovernanceTeamAction_0() { return cGovernanceTeamAction_0; }
+		
+		//'GovernanceTeam'
+		public Keyword getGovernanceTeamKeyword_1() { return cGovernanceTeamKeyword_1; }
+		
+		//name=EString
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//EString
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 	}
 	public class BOTeamGovernanceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.BOTeamGovernance");
@@ -1596,28 +1485,28 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final Assignment cFrequencyOfCoordinationAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
 		private final RuleCall cFrequencyOfCoordinationHighLowEnumRuleCall_6_1_0 = (RuleCall)cFrequencyOfCoordinationAssignment_6_1.eContents().get(0);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cGovernanceTeamsKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Keyword cBoundaryObjectsKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
-		private final Assignment cGovernanceTeamsAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
-		private final CrossReference cGovernanceTeamsGovernanceTeamCrossReference_7_2_0 = (CrossReference)cGovernanceTeamsAssignment_7_2.eContents().get(0);
-		private final RuleCall cGovernanceTeamsGovernanceTeamEStringParserRuleCall_7_2_0_1 = (RuleCall)cGovernanceTeamsGovernanceTeamCrossReference_7_2_0.eContents().get(1);
+		private final Assignment cBoundaryObjectsAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
+		private final CrossReference cBoundaryObjectsBoundaryObjectCrossReference_7_2_0 = (CrossReference)cBoundaryObjectsAssignment_7_2.eContents().get(0);
+		private final RuleCall cBoundaryObjectsBoundaryObjectEStringParserRuleCall_7_2_0_1 = (RuleCall)cBoundaryObjectsBoundaryObjectCrossReference_7_2_0.eContents().get(1);
 		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
 		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
-		private final Assignment cGovernanceTeamsAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
-		private final CrossReference cGovernanceTeamsGovernanceTeamCrossReference_7_3_1_0 = (CrossReference)cGovernanceTeamsAssignment_7_3_1.eContents().get(0);
-		private final RuleCall cGovernanceTeamsGovernanceTeamEStringParserRuleCall_7_3_1_0_1 = (RuleCall)cGovernanceTeamsGovernanceTeamCrossReference_7_3_1_0.eContents().get(1);
+		private final Assignment cBoundaryObjectsAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
+		private final CrossReference cBoundaryObjectsBoundaryObjectCrossReference_7_3_1_0 = (CrossReference)cBoundaryObjectsAssignment_7_3_1.eContents().get(0);
+		private final RuleCall cBoundaryObjectsBoundaryObjectEStringParserRuleCall_7_3_1_0_1 = (RuleCall)cBoundaryObjectsBoundaryObjectCrossReference_7_3_1_0.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cBoundaryObjectsKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Keyword cGovernanceTeamsKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_8_1 = (Keyword)cGroup_8.eContents().get(1);
-		private final Assignment cBoundaryObjectsAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
-		private final CrossReference cBoundaryObjectsBoundaryObjectCrossReference_8_2_0 = (CrossReference)cBoundaryObjectsAssignment_8_2.eContents().get(0);
-		private final RuleCall cBoundaryObjectsBoundaryObjectEStringParserRuleCall_8_2_0_1 = (RuleCall)cBoundaryObjectsBoundaryObjectCrossReference_8_2_0.eContents().get(1);
+		private final Assignment cGovernanceTeamsAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
+		private final CrossReference cGovernanceTeamsGovernanceTeamCrossReference_8_2_0 = (CrossReference)cGovernanceTeamsAssignment_8_2.eContents().get(0);
+		private final RuleCall cGovernanceTeamsGovernanceTeamEStringParserRuleCall_8_2_0_1 = (RuleCall)cGovernanceTeamsGovernanceTeamCrossReference_8_2_0.eContents().get(1);
 		private final Group cGroup_8_3 = (Group)cGroup_8.eContents().get(3);
 		private final Keyword cCommaKeyword_8_3_0 = (Keyword)cGroup_8_3.eContents().get(0);
-		private final Assignment cBoundaryObjectsAssignment_8_3_1 = (Assignment)cGroup_8_3.eContents().get(1);
-		private final CrossReference cBoundaryObjectsBoundaryObjectCrossReference_8_3_1_0 = (CrossReference)cBoundaryObjectsAssignment_8_3_1.eContents().get(0);
-		private final RuleCall cBoundaryObjectsBoundaryObjectEStringParserRuleCall_8_3_1_0_1 = (RuleCall)cBoundaryObjectsBoundaryObjectCrossReference_8_3_1_0.eContents().get(1);
+		private final Assignment cGovernanceTeamsAssignment_8_3_1 = (Assignment)cGroup_8_3.eContents().get(1);
+		private final CrossReference cGovernanceTeamsGovernanceTeamCrossReference_8_3_1_0 = (CrossReference)cGovernanceTeamsAssignment_8_3_1.eContents().get(0);
+		private final RuleCall cGovernanceTeamsGovernanceTeamEStringParserRuleCall_8_3_1_0_1 = (RuleCall)cGovernanceTeamsGovernanceTeamCrossReference_8_3_1_0.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_8_4 = (Keyword)cGroup_8.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
@@ -1629,8 +1518,8 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//        ('purpose' purpose=EString)?
 		//        ('coordinationMechanism' coordinationMechanism=EString)?
 		//        ('frequencyOfCoordination' frequencyOfCoordination=HighLow)?
-		//        ('governanceTeams' '(' governanceTeams+=[GovernanceTeam|EString] ( "," governanceTeams+=[GovernanceTeam|EString])* ')' )?
 		//        ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
+		//        ('governanceTeams' '(' governanceTeams+=[GovernanceTeam|EString] ( "," governanceTeams+=[GovernanceTeam|EString])* ')' )?
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -1641,8 +1530,8 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//    ('purpose' purpose=EString)?
 		//    ('coordinationMechanism' coordinationMechanism=EString)?
 		//    ('frequencyOfCoordination' frequencyOfCoordination=HighLow)?
-		//    ('governanceTeams' '(' governanceTeams+=[GovernanceTeam|EString] ( "," governanceTeams+=[GovernanceTeam|EString])* ')' )?
 		//    ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
+		//    ('governanceTeams' '(' governanceTeams+=[GovernanceTeam|EString] ( "," governanceTeams+=[GovernanceTeam|EString])* ')' )?
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -1697,80 +1586,299 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//HighLow
 		public RuleCall getFrequencyOfCoordinationHighLowEnumRuleCall_6_1_0() { return cFrequencyOfCoordinationHighLowEnumRuleCall_6_1_0; }
 		
-		//('governanceTeams' '(' governanceTeams+=[GovernanceTeam|EString] ( "," governanceTeams+=[GovernanceTeam|EString])* ')' )?
+		//('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
 		public Group getGroup_7() { return cGroup_7; }
 		
-		//'governanceTeams'
-		public Keyword getGovernanceTeamsKeyword_7_0() { return cGovernanceTeamsKeyword_7_0; }
+		//'boundaryObjects'
+		public Keyword getBoundaryObjectsKeyword_7_0() { return cBoundaryObjectsKeyword_7_0; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_7_1() { return cLeftParenthesisKeyword_7_1; }
 		
-		//governanceTeams+=[GovernanceTeam|EString]
-		public Assignment getGovernanceTeamsAssignment_7_2() { return cGovernanceTeamsAssignment_7_2; }
+		//boundaryObjects+=[BoundaryObject|EString]
+		public Assignment getBoundaryObjectsAssignment_7_2() { return cBoundaryObjectsAssignment_7_2; }
 		
-		//[GovernanceTeam|EString]
-		public CrossReference getGovernanceTeamsGovernanceTeamCrossReference_7_2_0() { return cGovernanceTeamsGovernanceTeamCrossReference_7_2_0; }
+		//[BoundaryObject|EString]
+		public CrossReference getBoundaryObjectsBoundaryObjectCrossReference_7_2_0() { return cBoundaryObjectsBoundaryObjectCrossReference_7_2_0; }
 		
 		//EString
-		public RuleCall getGovernanceTeamsGovernanceTeamEStringParserRuleCall_7_2_0_1() { return cGovernanceTeamsGovernanceTeamEStringParserRuleCall_7_2_0_1; }
+		public RuleCall getBoundaryObjectsBoundaryObjectEStringParserRuleCall_7_2_0_1() { return cBoundaryObjectsBoundaryObjectEStringParserRuleCall_7_2_0_1; }
 		
-		//( "," governanceTeams+=[GovernanceTeam|EString])*
+		//( "," boundaryObjects+=[BoundaryObject|EString])*
 		public Group getGroup_7_3() { return cGroup_7_3; }
 		
 		//","
 		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
 		
-		//governanceTeams+=[GovernanceTeam|EString]
-		public Assignment getGovernanceTeamsAssignment_7_3_1() { return cGovernanceTeamsAssignment_7_3_1; }
+		//boundaryObjects+=[BoundaryObject|EString]
+		public Assignment getBoundaryObjectsAssignment_7_3_1() { return cBoundaryObjectsAssignment_7_3_1; }
 		
-		//[GovernanceTeam|EString]
-		public CrossReference getGovernanceTeamsGovernanceTeamCrossReference_7_3_1_0() { return cGovernanceTeamsGovernanceTeamCrossReference_7_3_1_0; }
+		//[BoundaryObject|EString]
+		public CrossReference getBoundaryObjectsBoundaryObjectCrossReference_7_3_1_0() { return cBoundaryObjectsBoundaryObjectCrossReference_7_3_1_0; }
 		
 		//EString
-		public RuleCall getGovernanceTeamsGovernanceTeamEStringParserRuleCall_7_3_1_0_1() { return cGovernanceTeamsGovernanceTeamEStringParserRuleCall_7_3_1_0_1; }
+		public RuleCall getBoundaryObjectsBoundaryObjectEStringParserRuleCall_7_3_1_0_1() { return cBoundaryObjectsBoundaryObjectEStringParserRuleCall_7_3_1_0_1; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_7_4() { return cRightParenthesisKeyword_7_4; }
 		
-		//('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
+		//('governanceTeams' '(' governanceTeams+=[GovernanceTeam|EString] ( "," governanceTeams+=[GovernanceTeam|EString])* ')' )?
 		public Group getGroup_8() { return cGroup_8; }
 		
-		//'boundaryObjects'
-		public Keyword getBoundaryObjectsKeyword_8_0() { return cBoundaryObjectsKeyword_8_0; }
+		//'governanceTeams'
+		public Keyword getGovernanceTeamsKeyword_8_0() { return cGovernanceTeamsKeyword_8_0; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_8_1() { return cLeftParenthesisKeyword_8_1; }
 		
-		//boundaryObjects+=[BoundaryObject|EString]
-		public Assignment getBoundaryObjectsAssignment_8_2() { return cBoundaryObjectsAssignment_8_2; }
+		//governanceTeams+=[GovernanceTeam|EString]
+		public Assignment getGovernanceTeamsAssignment_8_2() { return cGovernanceTeamsAssignment_8_2; }
 		
-		//[BoundaryObject|EString]
-		public CrossReference getBoundaryObjectsBoundaryObjectCrossReference_8_2_0() { return cBoundaryObjectsBoundaryObjectCrossReference_8_2_0; }
+		//[GovernanceTeam|EString]
+		public CrossReference getGovernanceTeamsGovernanceTeamCrossReference_8_2_0() { return cGovernanceTeamsGovernanceTeamCrossReference_8_2_0; }
 		
 		//EString
-		public RuleCall getBoundaryObjectsBoundaryObjectEStringParserRuleCall_8_2_0_1() { return cBoundaryObjectsBoundaryObjectEStringParserRuleCall_8_2_0_1; }
+		public RuleCall getGovernanceTeamsGovernanceTeamEStringParserRuleCall_8_2_0_1() { return cGovernanceTeamsGovernanceTeamEStringParserRuleCall_8_2_0_1; }
 		
-		//( "," boundaryObjects+=[BoundaryObject|EString])*
+		//( "," governanceTeams+=[GovernanceTeam|EString])*
 		public Group getGroup_8_3() { return cGroup_8_3; }
 		
 		//","
 		public Keyword getCommaKeyword_8_3_0() { return cCommaKeyword_8_3_0; }
 		
-		//boundaryObjects+=[BoundaryObject|EString]
-		public Assignment getBoundaryObjectsAssignment_8_3_1() { return cBoundaryObjectsAssignment_8_3_1; }
+		//governanceTeams+=[GovernanceTeam|EString]
+		public Assignment getGovernanceTeamsAssignment_8_3_1() { return cGovernanceTeamsAssignment_8_3_1; }
 		
-		//[BoundaryObject|EString]
-		public CrossReference getBoundaryObjectsBoundaryObjectCrossReference_8_3_1_0() { return cBoundaryObjectsBoundaryObjectCrossReference_8_3_1_0; }
+		//[GovernanceTeam|EString]
+		public CrossReference getGovernanceTeamsGovernanceTeamCrossReference_8_3_1_0() { return cGovernanceTeamsGovernanceTeamCrossReference_8_3_1_0; }
 		
 		//EString
-		public RuleCall getBoundaryObjectsBoundaryObjectEStringParserRuleCall_8_3_1_0_1() { return cBoundaryObjectsBoundaryObjectEStringParserRuleCall_8_3_1_0_1; }
+		public RuleCall getGovernanceTeamsGovernanceTeamEStringParserRuleCall_8_3_1_0_1() { return cGovernanceTeamsGovernanceTeamEStringParserRuleCall_8_3_1_0_1; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_8_4() { return cRightParenthesisKeyword_8_4; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+	}
+	public class DriverElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.Driver");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cDriverAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cDriverKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cDriverTypeTechnologyKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cDriverTypeTechnologyAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cDriverTypeTechnologyUnsettableBooleanEnumRuleCall_4_1_0 = (RuleCall)cDriverTypeTechnologyAssignment_4_1.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cDriverTypeProcessKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cDriverTypeProcessAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cDriverTypeProcessUnsettableBooleanEnumRuleCall_5_1_0 = (RuleCall)cDriverTypeProcessAssignment_5_1.eContents().get(0);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cDriverTypeOrganizationalKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cDriverTypeOrganizationalAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cDriverTypeOrganizationalUnsettableBooleanEnumRuleCall_6_1_0 = (RuleCall)cDriverTypeOrganizationalAssignment_6_1.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cDistanceTypeCulturalKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cDistanceTypeCulturalAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cDistanceTypeCulturalUnsettableBooleanEnumRuleCall_7_1_0 = (RuleCall)cDistanceTypeCulturalAssignment_7_1.eContents().get(0);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cDistanceTypeGeographicalKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Assignment cDistanceTypeGeographicalAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cDistanceTypeGeographicalUnsettableBooleanEnumRuleCall_8_1_0 = (RuleCall)cDistanceTypeGeographicalAssignment_8_1.eContents().get(0);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cDistanceTypeOrganizationalKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cDistanceTypeOrganizationalAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cDistanceTypeOrganizationalUnsettableBooleanEnumRuleCall_9_1_0 = (RuleCall)cDistanceTypeOrganizationalAssignment_9_1.eContents().get(0);
+		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
+		private final Keyword cDistanceSizeKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cDistanceSizeAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cDistanceSizeHighLowEnumRuleCall_10_1_0 = (RuleCall)cDistanceSizeAssignment_10_1.eContents().get(0);
+		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
+		private final Keyword cDrivesMIsKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
+		private final Assignment cDrivesMIsAssignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
+		private final CrossReference cDrivesMIsMethodologicalIslandCrossReference_11_2_0 = (CrossReference)cDrivesMIsAssignment_11_2.eContents().get(0);
+		private final RuleCall cDrivesMIsMethodologicalIslandEStringParserRuleCall_11_2_0_1 = (RuleCall)cDrivesMIsMethodologicalIslandCrossReference_11_2_0.eContents().get(1);
+		private final Group cGroup_11_3 = (Group)cGroup_11.eContents().get(3);
+		private final Keyword cCommaKeyword_11_3_0 = (Keyword)cGroup_11_3.eContents().get(0);
+		private final Assignment cDrivesMIsAssignment_11_3_1 = (Assignment)cGroup_11_3.eContents().get(1);
+		private final CrossReference cDrivesMIsMethodologicalIslandCrossReference_11_3_1_0 = (CrossReference)cDrivesMIsAssignment_11_3_1.eContents().get(0);
+		private final RuleCall cDrivesMIsMethodologicalIslandEStringParserRuleCall_11_3_1_0_1 = (RuleCall)cDrivesMIsMethodologicalIslandCrossReference_11_3_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_11_4 = (Keyword)cGroup_11.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		
+		//Driver returns Driver:
+		//    {Driver}
+		//    'Driver'
+		//    name=EString
+		//    '{'
+		//        ('driverTypeTechnology' driverTypeTechnology=UnsettableBoolean)?
+		//        ('driverTypeProcess' driverTypeProcess=UnsettableBoolean)?
+		//        ('driverTypeOrganizational' driverTypeOrganizational=UnsettableBoolean)?
+		//        ('distanceTypeCultural' distanceTypeCultural=UnsettableBoolean)?
+		//        ('distanceTypeGeographical' distanceTypeGeographical=UnsettableBoolean)?
+		//        ('distanceTypeOrganizational' distanceTypeOrganizational=UnsettableBoolean)?
+		//        ('distanceSize' distanceSize=HighLow)?
+		//        ('drivesMIs' '(' drivesMIs+=[MethodologicalIsland|EString] ( "," drivesMIs+=[MethodologicalIsland|EString])* ')' )?
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{Driver}
+		//'Driver'
+		//name=EString
+		//'{'
+		//    ('driverTypeTechnology' driverTypeTechnology=UnsettableBoolean)?
+		//    ('driverTypeProcess' driverTypeProcess=UnsettableBoolean)?
+		//    ('driverTypeOrganizational' driverTypeOrganizational=UnsettableBoolean)?
+		//    ('distanceTypeCultural' distanceTypeCultural=UnsettableBoolean)?
+		//    ('distanceTypeGeographical' distanceTypeGeographical=UnsettableBoolean)?
+		//    ('distanceTypeOrganizational' distanceTypeOrganizational=UnsettableBoolean)?
+		//    ('distanceSize' distanceSize=HighLow)?
+		//    ('drivesMIs' '(' drivesMIs+=[MethodologicalIsland|EString] ( "," drivesMIs+=[MethodologicalIsland|EString])* ')' )?
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//{Driver}
+		public Action getDriverAction_0() { return cDriverAction_0; }
+		
+		//'Driver'
+		public Keyword getDriverKeyword_1() { return cDriverKeyword_1; }
+		
+		//name=EString
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//EString
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		
+		//('driverTypeTechnology' driverTypeTechnology=UnsettableBoolean)?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'driverTypeTechnology'
+		public Keyword getDriverTypeTechnologyKeyword_4_0() { return cDriverTypeTechnologyKeyword_4_0; }
+		
+		//driverTypeTechnology=UnsettableBoolean
+		public Assignment getDriverTypeTechnologyAssignment_4_1() { return cDriverTypeTechnologyAssignment_4_1; }
+		
+		//UnsettableBoolean
+		public RuleCall getDriverTypeTechnologyUnsettableBooleanEnumRuleCall_4_1_0() { return cDriverTypeTechnologyUnsettableBooleanEnumRuleCall_4_1_0; }
+		
+		//('driverTypeProcess' driverTypeProcess=UnsettableBoolean)?
+		public Group getGroup_5() { return cGroup_5; }
+		
+		//'driverTypeProcess'
+		public Keyword getDriverTypeProcessKeyword_5_0() { return cDriverTypeProcessKeyword_5_0; }
+		
+		//driverTypeProcess=UnsettableBoolean
+		public Assignment getDriverTypeProcessAssignment_5_1() { return cDriverTypeProcessAssignment_5_1; }
+		
+		//UnsettableBoolean
+		public RuleCall getDriverTypeProcessUnsettableBooleanEnumRuleCall_5_1_0() { return cDriverTypeProcessUnsettableBooleanEnumRuleCall_5_1_0; }
+		
+		//('driverTypeOrganizational' driverTypeOrganizational=UnsettableBoolean)?
+		public Group getGroup_6() { return cGroup_6; }
+		
+		//'driverTypeOrganizational'
+		public Keyword getDriverTypeOrganizationalKeyword_6_0() { return cDriverTypeOrganizationalKeyword_6_0; }
+		
+		//driverTypeOrganizational=UnsettableBoolean
+		public Assignment getDriverTypeOrganizationalAssignment_6_1() { return cDriverTypeOrganizationalAssignment_6_1; }
+		
+		//UnsettableBoolean
+		public RuleCall getDriverTypeOrganizationalUnsettableBooleanEnumRuleCall_6_1_0() { return cDriverTypeOrganizationalUnsettableBooleanEnumRuleCall_6_1_0; }
+		
+		//('distanceTypeCultural' distanceTypeCultural=UnsettableBoolean)?
+		public Group getGroup_7() { return cGroup_7; }
+		
+		//'distanceTypeCultural'
+		public Keyword getDistanceTypeCulturalKeyword_7_0() { return cDistanceTypeCulturalKeyword_7_0; }
+		
+		//distanceTypeCultural=UnsettableBoolean
+		public Assignment getDistanceTypeCulturalAssignment_7_1() { return cDistanceTypeCulturalAssignment_7_1; }
+		
+		//UnsettableBoolean
+		public RuleCall getDistanceTypeCulturalUnsettableBooleanEnumRuleCall_7_1_0() { return cDistanceTypeCulturalUnsettableBooleanEnumRuleCall_7_1_0; }
+		
+		//('distanceTypeGeographical' distanceTypeGeographical=UnsettableBoolean)?
+		public Group getGroup_8() { return cGroup_8; }
+		
+		//'distanceTypeGeographical'
+		public Keyword getDistanceTypeGeographicalKeyword_8_0() { return cDistanceTypeGeographicalKeyword_8_0; }
+		
+		//distanceTypeGeographical=UnsettableBoolean
+		public Assignment getDistanceTypeGeographicalAssignment_8_1() { return cDistanceTypeGeographicalAssignment_8_1; }
+		
+		//UnsettableBoolean
+		public RuleCall getDistanceTypeGeographicalUnsettableBooleanEnumRuleCall_8_1_0() { return cDistanceTypeGeographicalUnsettableBooleanEnumRuleCall_8_1_0; }
+		
+		//('distanceTypeOrganizational' distanceTypeOrganizational=UnsettableBoolean)?
+		public Group getGroup_9() { return cGroup_9; }
+		
+		//'distanceTypeOrganizational'
+		public Keyword getDistanceTypeOrganizationalKeyword_9_0() { return cDistanceTypeOrganizationalKeyword_9_0; }
+		
+		//distanceTypeOrganizational=UnsettableBoolean
+		public Assignment getDistanceTypeOrganizationalAssignment_9_1() { return cDistanceTypeOrganizationalAssignment_9_1; }
+		
+		//UnsettableBoolean
+		public RuleCall getDistanceTypeOrganizationalUnsettableBooleanEnumRuleCall_9_1_0() { return cDistanceTypeOrganizationalUnsettableBooleanEnumRuleCall_9_1_0; }
+		
+		//('distanceSize' distanceSize=HighLow)?
+		public Group getGroup_10() { return cGroup_10; }
+		
+		//'distanceSize'
+		public Keyword getDistanceSizeKeyword_10_0() { return cDistanceSizeKeyword_10_0; }
+		
+		//distanceSize=HighLow
+		public Assignment getDistanceSizeAssignment_10_1() { return cDistanceSizeAssignment_10_1; }
+		
+		//HighLow
+		public RuleCall getDistanceSizeHighLowEnumRuleCall_10_1_0() { return cDistanceSizeHighLowEnumRuleCall_10_1_0; }
+		
+		//('drivesMIs' '(' drivesMIs+=[MethodologicalIsland|EString] ( "," drivesMIs+=[MethodologicalIsland|EString])* ')' )?
+		public Group getGroup_11() { return cGroup_11; }
+		
+		//'drivesMIs'
+		public Keyword getDrivesMIsKeyword_11_0() { return cDrivesMIsKeyword_11_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_11_1() { return cLeftParenthesisKeyword_11_1; }
+		
+		//drivesMIs+=[MethodologicalIsland|EString]
+		public Assignment getDrivesMIsAssignment_11_2() { return cDrivesMIsAssignment_11_2; }
+		
+		//[MethodologicalIsland|EString]
+		public CrossReference getDrivesMIsMethodologicalIslandCrossReference_11_2_0() { return cDrivesMIsMethodologicalIslandCrossReference_11_2_0; }
+		
+		//EString
+		public RuleCall getDrivesMIsMethodologicalIslandEStringParserRuleCall_11_2_0_1() { return cDrivesMIsMethodologicalIslandEStringParserRuleCall_11_2_0_1; }
+		
+		//( "," drivesMIs+=[MethodologicalIsland|EString])*
+		public Group getGroup_11_3() { return cGroup_11_3; }
+		
+		//","
+		public Keyword getCommaKeyword_11_3_0() { return cCommaKeyword_11_3_0; }
+		
+		//drivesMIs+=[MethodologicalIsland|EString]
+		public Assignment getDrivesMIsAssignment_11_3_1() { return cDrivesMIsAssignment_11_3_1; }
+		
+		//[MethodologicalIsland|EString]
+		public CrossReference getDrivesMIsMethodologicalIslandCrossReference_11_3_1_0() { return cDrivesMIsMethodologicalIslandCrossReference_11_3_1_0; }
+		
+		//EString
+		public RuleCall getDrivesMIsMethodologicalIslandEStringParserRuleCall_11_3_1_0_1() { return cDrivesMIsMethodologicalIslandEStringParserRuleCall_11_3_1_0_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_11_4() { return cRightParenthesisKeyword_11_4; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 	public class EStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.EString");
@@ -1835,8 +1943,8 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//'Low'
 		public Keyword getLowLowKeyword_3_0() { return cLowLowKeyword_3_0; }
 	}
-	public class MyBooleanElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.MyBoolean");
+	public class UnsettableBooleanElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.UnsettableBoolean");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cNOT_SETEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cNOT_SETNOT_SETKeyword_0_0 = (Keyword)cNOT_SETEnumLiteralDeclaration_0.eContents().get(0);
@@ -1845,7 +1953,7 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final EnumLiteralDeclaration cFalseEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cFalseFalseKeyword_2_0 = (Keyword)cFalseEnumLiteralDeclaration_2.eContents().get(0);
 		
-		//enum MyBoolean returns MyBoolean:
+		//enum UnsettableBoolean returns UnsettableBoolean:
 		//                NOT_SET = 'NOT_SET' | True = 'True' | False = 'False';
 		public EnumRule getRule() { return rule; }
 		
@@ -2047,110 +2155,22 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//'Organizations'
 		public Keyword getOrganizationsOrganizationsKeyword_4_0() { return cOrganizationsOrganizationsKeyword_4_0; }
 	}
-	public class DriverTypesElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.DriverTypes");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cNOT_SETEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cNOT_SETNOT_SETKeyword_0_0 = (Keyword)cNOT_SETEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cTechnologyEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cTechnologyTechnologyKeyword_1_0 = (Keyword)cTechnologyEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cProcessEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cProcessProcessKeyword_2_0 = (Keyword)cProcessEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cOrganizationalEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cOrganizationalOrganizationalKeyword_3_0 = (Keyword)cOrganizationalEnumLiteralDeclaration_3.eContents().get(0);
-		
-		//enum DriverTypes returns DriverTypes:
-		//                NOT_SET = 'NOT_SET' | Technology = 'Technology' | Process = 'Process' | Organizational = 'Organizational';
-		public EnumRule getRule() { return rule; }
-		
-		//NOT_SET = 'NOT_SET' | Technology = 'Technology' | Process = 'Process' | Organizational = 'Organizational'
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//NOT_SET = 'NOT_SET'
-		public EnumLiteralDeclaration getNOT_SETEnumLiteralDeclaration_0() { return cNOT_SETEnumLiteralDeclaration_0; }
-		
-		//'NOT_SET'
-		public Keyword getNOT_SETNOT_SETKeyword_0_0() { return cNOT_SETNOT_SETKeyword_0_0; }
-		
-		//Technology = 'Technology'
-		public EnumLiteralDeclaration getTechnologyEnumLiteralDeclaration_1() { return cTechnologyEnumLiteralDeclaration_1; }
-		
-		//'Technology'
-		public Keyword getTechnologyTechnologyKeyword_1_0() { return cTechnologyTechnologyKeyword_1_0; }
-		
-		//Process = 'Process'
-		public EnumLiteralDeclaration getProcessEnumLiteralDeclaration_2() { return cProcessEnumLiteralDeclaration_2; }
-		
-		//'Process'
-		public Keyword getProcessProcessKeyword_2_0() { return cProcessProcessKeyword_2_0; }
-		
-		//Organizational = 'Organizational'
-		public EnumLiteralDeclaration getOrganizationalEnumLiteralDeclaration_3() { return cOrganizationalEnumLiteralDeclaration_3; }
-		
-		//'Organizational'
-		public Keyword getOrganizationalOrganizationalKeyword_3_0() { return cOrganizationalOrganizationalKeyword_3_0; }
-	}
-	public class DistanceTypesElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "se.gu.cse.idxse.bomi.text.Bomi.DistanceTypes");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cNOT_SETEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cNOT_SETNOT_SETKeyword_0_0 = (Keyword)cNOT_SETEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cCulturalEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cCulturalCulturalKeyword_1_0 = (Keyword)cCulturalEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cGeographicalEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cGeographicalGeographicalKeyword_2_0 = (Keyword)cGeographicalEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cOrganizationalEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cOrganizationalOrganizationalKeyword_3_0 = (Keyword)cOrganizationalEnumLiteralDeclaration_3.eContents().get(0);
-		
-		//enum DistanceTypes returns DistanceTypes:
-		//                NOT_SET = 'NOT_SET' | Cultural = 'Cultural' | Geographical = 'Geographical' | Organizational = 'Organizational';
-		public EnumRule getRule() { return rule; }
-		
-		//NOT_SET = 'NOT_SET' | Cultural = 'Cultural' | Geographical = 'Geographical' | Organizational = 'Organizational'
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//NOT_SET = 'NOT_SET'
-		public EnumLiteralDeclaration getNOT_SETEnumLiteralDeclaration_0() { return cNOT_SETEnumLiteralDeclaration_0; }
-		
-		//'NOT_SET'
-		public Keyword getNOT_SETNOT_SETKeyword_0_0() { return cNOT_SETNOT_SETKeyword_0_0; }
-		
-		//Cultural = 'Cultural'
-		public EnumLiteralDeclaration getCulturalEnumLiteralDeclaration_1() { return cCulturalEnumLiteralDeclaration_1; }
-		
-		//'Cultural'
-		public Keyword getCulturalCulturalKeyword_1_0() { return cCulturalCulturalKeyword_1_0; }
-		
-		//Geographical = 'Geographical'
-		public EnumLiteralDeclaration getGeographicalEnumLiteralDeclaration_2() { return cGeographicalEnumLiteralDeclaration_2; }
-		
-		//'Geographical'
-		public Keyword getGeographicalGeographicalKeyword_2_0() { return cGeographicalGeographicalKeyword_2_0; }
-		
-		//Organizational = 'Organizational'
-		public EnumLiteralDeclaration getOrganizationalEnumLiteralDeclaration_3() { return cOrganizationalEnumLiteralDeclaration_3; }
-		
-		//'Organizational'
-		public Keyword getOrganizationalOrganizationalKeyword_3_0() { return cOrganizationalOrganizationalKeyword_3_0; }
-	}
 	
 	private final BOMIModelElements pBOMIModel;
+	private final BORoleInteractionElements pBORoleInteraction;
 	private final BoundaryObjectElements pBoundaryObject;
+	private final RoleElements pRole;
+	private final BOMICoordinationElements pBOMICoordination;
 	private final MethodologicalIslandElements pMethodologicalIsland;
 	private final GovernanceTeamElements pGovernanceTeam;
-	private final RoleElements pRole;
-	private final DriverElements pDriver;
-	private final BOMICoordinationElements pBOMICoordination;
-	private final BORoleInteractionElements pBORoleInteraction;
 	private final BOTeamGovernanceElements pBOTeamGovernance;
+	private final DriverElements pDriver;
 	private final EStringElements pEString;
 	private final HighLowElements eHighLow;
-	private final MyBooleanElements eMyBoolean;
+	private final UnsettableBooleanElements eUnsettableBoolean;
 	private final BOSuperTypesElements eBOSuperTypes;
 	private final LifecycleStageElements eLifecycleStage;
 	private final MITypeElements eMIType;
-	private final DriverTypesElements eDriverTypes;
-	private final DistanceTypesElements eDistanceTypes;
 	
 	private final Grammar grammar;
 	
@@ -2162,22 +2182,20 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pBOMIModel = new BOMIModelElements();
+		this.pBORoleInteraction = new BORoleInteractionElements();
 		this.pBoundaryObject = new BoundaryObjectElements();
+		this.pRole = new RoleElements();
+		this.pBOMICoordination = new BOMICoordinationElements();
 		this.pMethodologicalIsland = new MethodologicalIslandElements();
 		this.pGovernanceTeam = new GovernanceTeamElements();
-		this.pRole = new RoleElements();
-		this.pDriver = new DriverElements();
-		this.pBOMICoordination = new BOMICoordinationElements();
-		this.pBORoleInteraction = new BORoleInteractionElements();
 		this.pBOTeamGovernance = new BOTeamGovernanceElements();
+		this.pDriver = new DriverElements();
 		this.pEString = new EStringElements();
 		this.eHighLow = new HighLowElements();
-		this.eMyBoolean = new MyBooleanElements();
+		this.eUnsettableBoolean = new UnsettableBooleanElements();
 		this.eBOSuperTypes = new BOSuperTypesElements();
 		this.eLifecycleStage = new LifecycleStageElements();
 		this.eMIType = new MITypeElements();
-		this.eDriverTypes = new DriverTypesElements();
-		this.eDistanceTypes = new DistanceTypesElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -2209,14 +2227,14 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	
 	//BOMIModel returns BOMIModel:
 	//    {BOMIModel}
+	//        ('boRoleInteractions' '{' boRoleInteractions+=BORoleInteraction ( "," boRoleInteractions+=BORoleInteraction)* '}' )?
 	//        ('boundaryObjects' '{' boundaryObjects+=BoundaryObject ( "," boundaryObjects+=BoundaryObject)* '}' )?
+	//        ('roles' '{' roles+=Role ( "," roles+=Role)* '}' )?
+	//        ('boMiCoordinations' '{' boMiCoordinations+=BOMICoordination ( "," boMiCoordinations+=BOMICoordination)* '}' )?
 	//        ('methodologicalIslands' '{' methodologicalIslands+=MethodologicalIsland ( "," methodologicalIslands+=MethodologicalIsland)* '}' )?
 	//        ('governanceTeams' '{' governanceTeams+=GovernanceTeam ( "," governanceTeams+=GovernanceTeam)* '}' )?
-	//        ('roles' '{' roles+=Role ( "," roles+=Role)* '}' )?
+	//        ('boTeamGovernances' '{' boTeamGovernances+=BOTeamGovernance ( "," boTeamGovernances+=BOTeamGovernance)* '}' )?
 	//        ('drivers' '{' drivers+=Driver ( "," drivers+=Driver)* '}' )?
-	//        (boMiCoordinations+=BOMICoordination ( "," boMiCoordinations+=BOMICoordination)* )?
-	//        (boRoleInteractions+=BORoleInteraction ( "," boRoleInteractions+=BORoleInteraction)*  )?
-	//        (boTeamGovernances+=BOTeamGovernance ( "," boTeamGovernances+=BOTeamGovernance)* )?
 	//    ;
 	public BOMIModelElements getBOMIModelAccess() {
 		return pBOMIModel;
@@ -2226,13 +2244,39 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		return getBOMIModelAccess().getRule();
 	}
 	
+	//BORoleInteraction returns BORoleInteraction:
+	//    {BORoleInteraction}
+	//    'BORoleInteraction'
+	//    name=EString
+	//    '{'
+	//        ('purpose' purpose=EString)?
+	//        ('accessability' accessability=HighLow)?
+	//        ('stability' stability=HighLow)?
+	//        ('criticality' criticality=HighLow)?
+	//        ('fitForPurpose' fitForPurpose=HighLow)?
+	//        ('responsible' responsible=UnsettableBoolean)?
+	//        ('creates' creates=UnsettableBoolean)?
+	//        ('reads' reads=UnsettableBoolean)?
+	//        ('updates' updates=UnsettableBoolean)?
+	//        ('deletes' deletes=UnsettableBoolean)?
+	//        ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
+	//        ('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
+	//    '}';
+	public BORoleInteractionElements getBORoleInteractionAccess() {
+		return pBORoleInteraction;
+	}
+	
+	public ParserRule getBORoleInteractionRule() {
+		return getBORoleInteractionAccess().getRule();
+	}
+	
 	//BoundaryObject returns BoundaryObject:
 	//    {BoundaryObject}
 	//    'BoundaryObject'
 	//    name=EString
 	//    '{'
-	//        ('superType' superType=BOSuperTypes)?
 	//        ('purpose' purpose=EString)?
+	//        ('superType' superType=BOSuperTypes)?
 	//        ('levelOfDetail' levelOfDetail=HighLow)?
 	//        ('frequencyOfChange' frequencyOfChange=HighLow)?
 	//        ('modularity' modularity=HighLow)?
@@ -2252,6 +2296,43 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	
 	public ParserRule getBoundaryObjectRule() {
 		return getBoundaryObjectAccess().getRule();
+	}
+	
+	//Role returns Role:
+	//    {Role}
+	//    'Role'
+	//    name=EString
+	//    '{'
+	//        ('partOfGovernanceTeams' '(' partOfGovernanceTeams+=[GovernanceTeam|EString] ( "," partOfGovernanceTeams+=[GovernanceTeam|EString])* ')' )?
+	//        ('partOfMIs' '(' partOfMIs+=[MethodologicalIsland|EString] ( "," partOfMIs+=[MethodologicalIsland|EString])* ')' )?
+	//    '}';
+	public RoleElements getRoleAccess() {
+		return pRole;
+	}
+	
+	public ParserRule getRoleRule() {
+		return getRoleAccess().getRule();
+	}
+	
+	//BOMICoordination returns BOMICoordination:
+	//    {BOMICoordination}
+	//    'BOMICoordination'
+	//    name=EString
+	//    '{'
+	//        ('purpose' purpose=EString)?
+	//        ('accessability' accessability=HighLow)?
+	//        ('stability' stability=HighLow)?
+	//        ('criticality' criticality=HighLow)?
+	//        ('fitForPurpose' fitForPurpose=HighLow)?
+	//        ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
+	//        ('methodologicalIslands' '(' methodologicalIslands+=[MethodologicalIsland|EString] ( "," methodologicalIslands+=[MethodologicalIsland|EString])* ')' )?
+	//    '}';
+	public BOMICoordinationElements getBOMICoordinationAccess() {
+		return pBOMICoordination;
+	}
+	
+	public ParserRule getBOMICoordinationRule() {
+		return getBOMICoordinationAccess().getRule();
 	}
 	
 	//MethodologicalIsland returns MethodologicalIsland:
@@ -2281,20 +2362,23 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		return getGovernanceTeamAccess().getRule();
 	}
 	
-	//Role returns Role:
-	//    {Role}
-	//    'Role'
+	//BOTeamGovernance returns BOTeamGovernance:
+	//    {BOTeamGovernance}
+	//    'BOTeamGovernance'
 	//    name=EString
 	//    '{'
-	//        ('partOfGovernanceTeams' '(' partOfGovernanceTeams+=[GovernanceTeam|EString] ( "," partOfGovernanceTeams+=[GovernanceTeam|EString])* ')' )?
-	//        ('partOfMIs' '(' partOfMIs+=[MethodologicalIsland|EString] ( "," partOfMIs+=[MethodologicalIsland|EString])* ')' )?
+	//        ('purpose' purpose=EString)?
+	//        ('coordinationMechanism' coordinationMechanism=EString)?
+	//        ('frequencyOfCoordination' frequencyOfCoordination=HighLow)?
+	//        ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
+	//        ('governanceTeams' '(' governanceTeams+=[GovernanceTeam|EString] ( "," governanceTeams+=[GovernanceTeam|EString])* ')' )?
 	//    '}';
-	public RoleElements getRoleAccess() {
-		return pRole;
+	public BOTeamGovernanceElements getBOTeamGovernanceAccess() {
+		return pBOTeamGovernance;
 	}
 	
-	public ParserRule getRoleRule() {
-		return getRoleAccess().getRule();
+	public ParserRule getBOTeamGovernanceRule() {
+		return getBOTeamGovernanceAccess().getRule();
 	}
 	
 	//Driver returns Driver:
@@ -2302,8 +2386,12 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	//    'Driver'
 	//    name=EString
 	//    '{'
-	//        ('driverType' driverType=DriverTypes)?
-	//        ('distanceType' distanceType=DistanceTypes)?
+	//        ('driverTypeTechnology' driverTypeTechnology=UnsettableBoolean)?
+	//        ('driverTypeProcess' driverTypeProcess=UnsettableBoolean)?
+	//        ('driverTypeOrganizational' driverTypeOrganizational=UnsettableBoolean)?
+	//        ('distanceTypeCultural' distanceTypeCultural=UnsettableBoolean)?
+	//        ('distanceTypeGeographical' distanceTypeGeographical=UnsettableBoolean)?
+	//        ('distanceTypeOrganizational' distanceTypeOrganizational=UnsettableBoolean)?
 	//        ('distanceSize' distanceSize=HighLow)?
 	//        ('drivesMIs' '(' drivesMIs+=[MethodologicalIsland|EString] ( "," drivesMIs+=[MethodologicalIsland|EString])* ')' )?
 	//    '}';
@@ -2313,72 +2401,6 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	
 	public ParserRule getDriverRule() {
 		return getDriverAccess().getRule();
-	}
-	
-	//BOMICoordination returns BOMICoordination:
-	//    {BOMICoordination}
-	//    'BOMICoordination'
-	//    name=EString
-	//    '{'
-	//        ('purpose' purpose=EString)?
-	//        ('accessability' accessability=HighLow)?
-	//        ('stability' stability=HighLow)?
-	//        ('criticality' criticality=HighLow)?
-	//        ('fitForPurpose' fitForPurpose=HighLow)?
-	//        ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
-	//        ('methodologicalIslands' '(' methodologicalIslands+=[MethodologicalIsland|EString] ( "," methodologicalIslands+=[MethodologicalIsland|EString])* ')' )?
-	//    '}';
-	public BOMICoordinationElements getBOMICoordinationAccess() {
-		return pBOMICoordination;
-	}
-	
-	public ParserRule getBOMICoordinationRule() {
-		return getBOMICoordinationAccess().getRule();
-	}
-	
-	//BORoleInteraction returns BORoleInteraction:
-	//    {BORoleInteraction}
-	//    'BORoleInteraction'
-	//    name=EString
-	//    '{'
-	//        ('purpose' purpose=EString)?
-	//        ('accessability' accessability=HighLow)?
-	//        ('stability' stability=HighLow)?
-	//        ('criticality' criticality=HighLow)?
-	//        ('fitForPurpose' fitForPurpose=HighLow)?
-	//        ('responsible' responsible=MyBoolean)?
-	//        ('creates' creates=MyBoolean)?
-	//        ('reads' reads=MyBoolean)?
-	//        ('updates' updates=MyBoolean)?
-	//        ('deletes' deletes=MyBoolean)?
-	//        ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
-	//        ('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
-	//    '}';
-	public BORoleInteractionElements getBORoleInteractionAccess() {
-		return pBORoleInteraction;
-	}
-	
-	public ParserRule getBORoleInteractionRule() {
-		return getBORoleInteractionAccess().getRule();
-	}
-	
-	//BOTeamGovernance returns BOTeamGovernance:
-	//    {BOTeamGovernance}
-	//    'BOTeamGovernance'
-	//    name=EString
-	//    '{'
-	//        ('purpose' purpose=EString)?
-	//        ('coordinationMechanism' coordinationMechanism=EString)?
-	//        ('frequencyOfCoordination' frequencyOfCoordination=HighLow)?
-	//        ('governanceTeams' '(' governanceTeams+=[GovernanceTeam|EString] ( "," governanceTeams+=[GovernanceTeam|EString])* ')' )?
-	//        ('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
-	//    '}';
-	public BOTeamGovernanceElements getBOTeamGovernanceAccess() {
-		return pBOTeamGovernance;
-	}
-	
-	public ParserRule getBOTeamGovernanceRule() {
-		return getBOTeamGovernanceAccess().getRule();
 	}
 	
 	//EString returns ecore::EString:
@@ -2401,14 +2423,14 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		return getHighLowAccess().getRule();
 	}
 	
-	//enum MyBoolean returns MyBoolean:
+	//enum UnsettableBoolean returns UnsettableBoolean:
 	//                NOT_SET = 'NOT_SET' | True = 'True' | False = 'False';
-	public MyBooleanElements getMyBooleanAccess() {
-		return eMyBoolean;
+	public UnsettableBooleanElements getUnsettableBooleanAccess() {
+		return eUnsettableBoolean;
 	}
 	
-	public EnumRule getMyBooleanRule() {
-		return getMyBooleanAccess().getRule();
+	public EnumRule getUnsettableBooleanRule() {
+		return getUnsettableBooleanAccess().getRule();
 	}
 	
 	//enum BOSuperTypes returns BOSuperTypes:
@@ -2439,26 +2461,6 @@ public class BomiGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	
 	public EnumRule getMITypeRule() {
 		return getMITypeAccess().getRule();
-	}
-	
-	//enum DriverTypes returns DriverTypes:
-	//                NOT_SET = 'NOT_SET' | Technology = 'Technology' | Process = 'Process' | Organizational = 'Organizational';
-	public DriverTypesElements getDriverTypesAccess() {
-		return eDriverTypes;
-	}
-	
-	public EnumRule getDriverTypesRule() {
-		return getDriverTypesAccess().getRule();
-	}
-	
-	//enum DistanceTypes returns DistanceTypes:
-	//                NOT_SET = 'NOT_SET' | Cultural = 'Cultural' | Geographical = 'Geographical' | Organizational = 'Organizational';
-	public DistanceTypesElements getDistanceTypesAccess() {
-		return eDistanceTypes;
-	}
-	
-	public EnumRule getDistanceTypesRule() {
-		return getDistanceTypesAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

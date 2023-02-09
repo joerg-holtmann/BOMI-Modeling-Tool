@@ -134,7 +134,13 @@ public enum MIType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final MIType[] VALUES_ARRAY = new MIType[] { NOT_SET, TEAMS, SILOS, DEPARTMENTS, ORGANIZATIONS, };
+	private static final MIType[] VALUES_ARRAY = new MIType[] {
+			NOT_SET,
+			TEAMS,
+			SILOS,
+			DEPARTMENTS,
+			ORGANIZATIONS,
+		};
 
 	/**
 	 * A public read-only list of all the '<em><b>MI Type</b></em>' enumerators.
@@ -190,16 +196,11 @@ public enum MIType implements Enumerator {
 	 */
 	public static MIType get(int value) {
 		switch (value) {
-		case NOT_SET_VALUE:
-			return NOT_SET;
-		case TEAMS_VALUE:
-			return TEAMS;
-		case SILOS_VALUE:
-			return SILOS;
-		case DEPARTMENTS_VALUE:
-			return DEPARTMENTS;
-		case ORGANIZATIONS_VALUE:
-			return ORGANIZATIONS;
+			case NOT_SET_VALUE: return NOT_SET;
+			case TEAMS_VALUE: return TEAMS;
+			case SILOS_VALUE: return SILOS;
+			case DEPARTMENTS_VALUE: return DEPARTMENTS;
+			case ORGANIZATIONS_VALUE: return ORGANIZATIONS;
 		}
 		return null;
 	}
@@ -243,7 +244,7 @@ public enum MIType implements Enumerator {
 	 * @generated
 	 */
 	public int getValue() {
-		return value;
+	  return value;
 	}
 
 	/**
@@ -252,7 +253,7 @@ public enum MIType implements Enumerator {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+	  return name;
 	}
 
 	/**
@@ -261,7 +262,7 @@ public enum MIType implements Enumerator {
 	 * @generated
 	 */
 	public String getLiteral() {
-		return literal;
+	  return literal;
 	}
 
 	/**

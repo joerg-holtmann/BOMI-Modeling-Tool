@@ -54,12 +54,19 @@ public class BOMICoordinationItemProvider extends UsageAssociationItemProvider {
 	 * @generated
 	 */
 	protected void addMethodologicalIslandsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_BOMICoordination_methodologicalIslands_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_BOMICoordination_methodologicalIslands_feature",
-						"_UI_BOMICoordination_type"),
-				BomiPackage.Literals.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS, true, false, true, null, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BOMICoordination_methodologicalIslands_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BOMICoordination_methodologicalIslands_feature", "_UI_BOMICoordination_type"),
+				 BomiPackage.Literals.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -91,9 +98,10 @@ public class BOMICoordinationItemProvider extends UsageAssociationItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((BOMICoordination) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_BOMICoordination_type")
-				: getString("_UI_BOMICoordination_type") + " " + label;
+		String label = ((BOMICoordination)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_BOMICoordination_type") :
+			getString("_UI_BOMICoordination_type") + " " + label;
 	}
 
 	/**

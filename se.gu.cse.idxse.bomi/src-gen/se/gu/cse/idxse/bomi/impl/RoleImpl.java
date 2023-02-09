@@ -75,8 +75,7 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	 */
 	public EList<GovernanceTeam> getPartOfGovernanceTeams() {
 		if (partOfGovernanceTeams == null) {
-			partOfGovernanceTeams = new EObjectResolvingEList<GovernanceTeam>(GovernanceTeam.class, this,
-					BomiPackage.ROLE__PART_OF_GOVERNANCE_TEAMS);
+			partOfGovernanceTeams = new EObjectResolvingEList<GovernanceTeam>(GovernanceTeam.class, this, BomiPackage.ROLE__PART_OF_GOVERNANCE_TEAMS);
 		}
 		return partOfGovernanceTeams;
 	}
@@ -88,8 +87,7 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	 */
 	public EList<MethodologicalIsland> getPartOfMIs() {
 		if (partOfMIs == null) {
-			partOfMIs = new EObjectResolvingEList<MethodologicalIsland>(MethodologicalIsland.class, this,
-					BomiPackage.ROLE__PART_OF_MIS);
+			partOfMIs = new EObjectResolvingEList<MethodologicalIsland>(MethodologicalIsland.class, this, BomiPackage.ROLE__PART_OF_MIS);
 		}
 		return partOfMIs;
 	}
@@ -102,10 +100,10 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BomiPackage.ROLE__PART_OF_GOVERNANCE_TEAMS:
-			return getPartOfGovernanceTeams();
-		case BomiPackage.ROLE__PART_OF_MIS:
-			return getPartOfMIs();
+			case BomiPackage.ROLE__PART_OF_GOVERNANCE_TEAMS:
+				return getPartOfGovernanceTeams();
+			case BomiPackage.ROLE__PART_OF_MIS:
+				return getPartOfMIs();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -119,14 +117,14 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BomiPackage.ROLE__PART_OF_GOVERNANCE_TEAMS:
-			getPartOfGovernanceTeams().clear();
-			getPartOfGovernanceTeams().addAll((Collection<? extends GovernanceTeam>) newValue);
-			return;
-		case BomiPackage.ROLE__PART_OF_MIS:
-			getPartOfMIs().clear();
-			getPartOfMIs().addAll((Collection<? extends MethodologicalIsland>) newValue);
-			return;
+			case BomiPackage.ROLE__PART_OF_GOVERNANCE_TEAMS:
+				getPartOfGovernanceTeams().clear();
+				getPartOfGovernanceTeams().addAll((Collection<? extends GovernanceTeam>)newValue);
+				return;
+			case BomiPackage.ROLE__PART_OF_MIS:
+				getPartOfMIs().clear();
+				getPartOfMIs().addAll((Collection<? extends MethodologicalIsland>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -139,12 +137,12 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BomiPackage.ROLE__PART_OF_GOVERNANCE_TEAMS:
-			getPartOfGovernanceTeams().clear();
-			return;
-		case BomiPackage.ROLE__PART_OF_MIS:
-			getPartOfMIs().clear();
-			return;
+			case BomiPackage.ROLE__PART_OF_GOVERNANCE_TEAMS:
+				getPartOfGovernanceTeams().clear();
+				return;
+			case BomiPackage.ROLE__PART_OF_MIS:
+				getPartOfMIs().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -157,10 +155,10 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BomiPackage.ROLE__PART_OF_GOVERNANCE_TEAMS:
-			return partOfGovernanceTeams != null && !partOfGovernanceTeams.isEmpty();
-		case BomiPackage.ROLE__PART_OF_MIS:
-			return partOfMIs != null && !partOfMIs.isEmpty();
+			case BomiPackage.ROLE__PART_OF_GOVERNANCE_TEAMS:
+				return partOfGovernanceTeams != null && !partOfGovernanceTeams.isEmpty();
+			case BomiPackage.ROLE__PART_OF_MIS:
+				return partOfMIs != null && !partOfMIs.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

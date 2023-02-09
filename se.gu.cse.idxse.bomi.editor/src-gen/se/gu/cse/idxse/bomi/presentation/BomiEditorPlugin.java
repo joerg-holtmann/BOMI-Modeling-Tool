@@ -38,7 +38,9 @@ public final class BomiEditorPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	public BomiEditorPlugin() {
-		super(new ResourceLocator[] {});
+		super
+			(new ResourceLocator [] {
+			});
 	}
 
 	/**
@@ -79,7 +81,7 @@ public final class BomiEditorPlugin extends EMFPlugin {
 		 */
 		public Implementation() {
 			super();
-
+	
 			// Remember the static instance.
 			//
 			plugin = this;

@@ -28,11 +28,12 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 */
 	public static BomiFactory init() {
 		try {
-			BomiFactory theBomiFactory = (BomiFactory) EPackage.Registry.INSTANCE.getEFactory(BomiPackage.eNS_URI);
+			BomiFactory theBomiFactory = (BomiFactory)EPackage.Registry.INSTANCE.getEFactory(BomiPackage.eNS_URI);
 			if (theBomiFactory != null) {
 				return theBomiFactory;
 			}
-		} catch (Exception exception) {
+		}
+		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new BomiFactoryImpl();
@@ -56,26 +57,17 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case BomiPackage.BOUNDARY_OBJECT:
-			return createBoundaryObject();
-		case BomiPackage.ROLE:
-			return createRole();
-		case BomiPackage.BO_ROLE_INTERACTION:
-			return createBORoleInteraction();
-		case BomiPackage.BOMI_MODEL:
-			return createBOMIModel();
-		case BomiPackage.METHODOLOGICAL_ISLAND:
-			return createMethodologicalIsland();
-		case BomiPackage.BOMI_COORDINATION:
-			return createBOMICoordination();
-		case BomiPackage.GOVERNANCE_TEAM:
-			return createGovernanceTeam();
-		case BomiPackage.BO_TEAM_GOVERNANCE:
-			return createBOTeamGovernance();
-		case BomiPackage.DRIVER:
-			return createDriver();
-		default:
-			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+			case BomiPackage.BOUNDARY_OBJECT: return createBoundaryObject();
+			case BomiPackage.ROLE: return createRole();
+			case BomiPackage.BO_ROLE_INTERACTION: return createBORoleInteraction();
+			case BomiPackage.BOMI_MODEL: return createBOMIModel();
+			case BomiPackage.METHODOLOGICAL_ISLAND: return createMethodologicalIsland();
+			case BomiPackage.BOMI_COORDINATION: return createBOMICoordination();
+			case BomiPackage.GOVERNANCE_TEAM: return createGovernanceTeam();
+			case BomiPackage.BO_TEAM_GOVERNANCE: return createBOTeamGovernance();
+			case BomiPackage.DRIVER: return createDriver();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -87,22 +79,18 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case BomiPackage.BO_SUPER_TYPES:
-			return createBOSuperTypesFromString(eDataType, initialValue);
-		case BomiPackage.LIFECYCLE_STAGE:
-			return createLifecycleStageFromString(eDataType, initialValue);
-		case BomiPackage.HIGH_LOW:
-			return createHighLowFromString(eDataType, initialValue);
-		case BomiPackage.MI_TYPE:
-			return createMITypeFromString(eDataType, initialValue);
-		case BomiPackage.DRIVER_TYPES:
-			return createDriverTypesFromString(eDataType, initialValue);
-		case BomiPackage.DISTANCE_TYPES:
-			return createDistanceTypesFromString(eDataType, initialValue);
-		case BomiPackage.MY_BOOLEAN:
-			return createMyBooleanFromString(eDataType, initialValue);
-		default:
-			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+			case BomiPackage.BO_SUPER_TYPES:
+				return createBOSuperTypesFromString(eDataType, initialValue);
+			case BomiPackage.LIFECYCLE_STAGE:
+				return createLifecycleStageFromString(eDataType, initialValue);
+			case BomiPackage.HIGH_LOW:
+				return createHighLowFromString(eDataType, initialValue);
+			case BomiPackage.MI_TYPE:
+				return createMITypeFromString(eDataType, initialValue);
+			case BomiPackage.UNSETTABLE_BOOLEAN:
+				return createUnsettableBooleanFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -114,22 +102,18 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case BomiPackage.BO_SUPER_TYPES:
-			return convertBOSuperTypesToString(eDataType, instanceValue);
-		case BomiPackage.LIFECYCLE_STAGE:
-			return convertLifecycleStageToString(eDataType, instanceValue);
-		case BomiPackage.HIGH_LOW:
-			return convertHighLowToString(eDataType, instanceValue);
-		case BomiPackage.MI_TYPE:
-			return convertMITypeToString(eDataType, instanceValue);
-		case BomiPackage.DRIVER_TYPES:
-			return convertDriverTypesToString(eDataType, instanceValue);
-		case BomiPackage.DISTANCE_TYPES:
-			return convertDistanceTypesToString(eDataType, instanceValue);
-		case BomiPackage.MY_BOOLEAN:
-			return convertMyBooleanToString(eDataType, instanceValue);
-		default:
-			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+			case BomiPackage.BO_SUPER_TYPES:
+				return convertBOSuperTypesToString(eDataType, instanceValue);
+			case BomiPackage.LIFECYCLE_STAGE:
+				return convertLifecycleStageToString(eDataType, instanceValue);
+			case BomiPackage.HIGH_LOW:
+				return convertHighLowToString(eDataType, instanceValue);
+			case BomiPackage.MI_TYPE:
+				return convertMITypeToString(eDataType, instanceValue);
+			case BomiPackage.UNSETTABLE_BOOLEAN:
+				return convertUnsettableBooleanToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -230,9 +214,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 */
 	public BOSuperTypes createBOSuperTypesFromString(EDataType eDataType, String initialValue) {
 		BOSuperTypes result = BOSuperTypes.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
@@ -252,9 +234,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 */
 	public LifecycleStage createLifecycleStageFromString(EDataType eDataType, String initialValue) {
 		LifecycleStage result = LifecycleStage.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
@@ -274,9 +254,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 */
 	public HighLow createHighLowFromString(EDataType eDataType, String initialValue) {
 		HighLow result = HighLow.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
@@ -296,9 +274,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 */
 	public MIType createMITypeFromString(EDataType eDataType, String initialValue) {
 		MIType result = MIType.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
@@ -316,11 +292,9 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DriverTypes createDriverTypesFromString(EDataType eDataType, String initialValue) {
-		DriverTypes result = DriverTypes.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+	public UnsettableBoolean createUnsettableBooleanFromString(EDataType eDataType, String initialValue) {
+		UnsettableBoolean result = UnsettableBoolean.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
@@ -329,51 +303,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertDriverTypesToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DistanceTypes createDistanceTypesFromString(EDataType eDataType, String initialValue) {
-		DistanceTypes result = DistanceTypes.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertDistanceTypesToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MyBoolean createMyBooleanFromString(EDataType eDataType, String initialValue) {
-		MyBoolean result = MyBoolean.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertMyBooleanToString(EDataType eDataType, Object instanceValue) {
+	public String convertUnsettableBooleanToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -383,7 +313,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * @generated
 	 */
 	public BomiPackage getBomiPackage() {
-		return (BomiPackage) getEPackage();
+		return (BomiPackage)getEPackage();
 	}
 
 	/**

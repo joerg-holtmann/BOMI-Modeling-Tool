@@ -60,8 +60,7 @@ public abstract class AssociationImpl extends PurposedElementImpl implements Ass
 	 */
 	public EList<BoundaryObject> getBoundaryObjects() {
 		if (boundaryObjects == null) {
-			boundaryObjects = new EObjectResolvingEList<BoundaryObject>(BoundaryObject.class, this,
-					BomiPackage.ASSOCIATION__BOUNDARY_OBJECTS);
+			boundaryObjects = new EObjectResolvingEList<BoundaryObject>(BoundaryObject.class, this, BomiPackage.ASSOCIATION__BOUNDARY_OBJECTS);
 		}
 		return boundaryObjects;
 	}
@@ -74,8 +73,8 @@ public abstract class AssociationImpl extends PurposedElementImpl implements Ass
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BomiPackage.ASSOCIATION__BOUNDARY_OBJECTS:
-			return getBoundaryObjects();
+			case BomiPackage.ASSOCIATION__BOUNDARY_OBJECTS:
+				return getBoundaryObjects();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -89,10 +88,10 @@ public abstract class AssociationImpl extends PurposedElementImpl implements Ass
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BomiPackage.ASSOCIATION__BOUNDARY_OBJECTS:
-			getBoundaryObjects().clear();
-			getBoundaryObjects().addAll((Collection<? extends BoundaryObject>) newValue);
-			return;
+			case BomiPackage.ASSOCIATION__BOUNDARY_OBJECTS:
+				getBoundaryObjects().clear();
+				getBoundaryObjects().addAll((Collection<? extends BoundaryObject>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -105,9 +104,9 @@ public abstract class AssociationImpl extends PurposedElementImpl implements Ass
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BomiPackage.ASSOCIATION__BOUNDARY_OBJECTS:
-			getBoundaryObjects().clear();
-			return;
+			case BomiPackage.ASSOCIATION__BOUNDARY_OBJECTS:
+				getBoundaryObjects().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -120,8 +119,8 @@ public abstract class AssociationImpl extends PurposedElementImpl implements Ass
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BomiPackage.ASSOCIATION__BOUNDARY_OBJECTS:
-			return boundaryObjects != null && !boundaryObjects.isEmpty();
+			case BomiPackage.ASSOCIATION__BOUNDARY_OBJECTS:
+				return boundaryObjects != null && !boundaryObjects.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

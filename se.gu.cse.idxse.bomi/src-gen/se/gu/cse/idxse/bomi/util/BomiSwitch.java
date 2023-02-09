@@ -66,145 +66,108 @@ public class BomiSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case BomiPackage.BOUNDARY_OBJECT: {
-			BoundaryObject boundaryObject = (BoundaryObject) theEObject;
-			T result = caseBoundaryObject(boundaryObject);
-			if (result == null)
-				result = casePurposedElement(boundaryObject);
-			if (result == null)
-				result = caseNamedElement(boundaryObject);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.ROLE: {
-			Role role = (Role) theEObject;
-			T result = caseRole(role);
-			if (result == null)
-				result = caseNamedElement(role);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.NAMED_ELEMENT: {
-			NamedElement namedElement = (NamedElement) theEObject;
-			T result = caseNamedElement(namedElement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.BO_ROLE_INTERACTION: {
-			BORoleInteraction boRoleInteraction = (BORoleInteraction) theEObject;
-			T result = caseBORoleInteraction(boRoleInteraction);
-			if (result == null)
-				result = caseUsageAssociation(boRoleInteraction);
-			if (result == null)
-				result = caseAssociation(boRoleInteraction);
-			if (result == null)
-				result = casePurposedElement(boRoleInteraction);
-			if (result == null)
-				result = caseNamedElement(boRoleInteraction);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.BOMI_MODEL: {
-			BOMIModel bomiModel = (BOMIModel) theEObject;
-			T result = caseBOMIModel(bomiModel);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.METHODOLOGICAL_ISLAND: {
-			MethodologicalIsland methodologicalIsland = (MethodologicalIsland) theEObject;
-			T result = caseMethodologicalIsland(methodologicalIsland);
-			if (result == null)
-				result = caseNamedElement(methodologicalIsland);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.USAGE_ASSOCIATION: {
-			UsageAssociation usageAssociation = (UsageAssociation) theEObject;
-			T result = caseUsageAssociation(usageAssociation);
-			if (result == null)
-				result = caseAssociation(usageAssociation);
-			if (result == null)
-				result = casePurposedElement(usageAssociation);
-			if (result == null)
-				result = caseNamedElement(usageAssociation);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.BOMI_COORDINATION: {
-			BOMICoordination bomiCoordination = (BOMICoordination) theEObject;
-			T result = caseBOMICoordination(bomiCoordination);
-			if (result == null)
-				result = caseUsageAssociation(bomiCoordination);
-			if (result == null)
-				result = caseAssociation(bomiCoordination);
-			if (result == null)
-				result = casePurposedElement(bomiCoordination);
-			if (result == null)
-				result = caseNamedElement(bomiCoordination);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.GOVERNANCE_TEAM: {
-			GovernanceTeam governanceTeam = (GovernanceTeam) theEObject;
-			T result = caseGovernanceTeam(governanceTeam);
-			if (result == null)
-				result = caseNamedElement(governanceTeam);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.BO_TEAM_GOVERNANCE: {
-			BOTeamGovernance boTeamGovernance = (BOTeamGovernance) theEObject;
-			T result = caseBOTeamGovernance(boTeamGovernance);
-			if (result == null)
-				result = caseAssociation(boTeamGovernance);
-			if (result == null)
-				result = casePurposedElement(boTeamGovernance);
-			if (result == null)
-				result = caseNamedElement(boTeamGovernance);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.ASSOCIATION: {
-			Association association = (Association) theEObject;
-			T result = caseAssociation(association);
-			if (result == null)
-				result = casePurposedElement(association);
-			if (result == null)
-				result = caseNamedElement(association);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.DRIVER: {
-			Driver driver = (Driver) theEObject;
-			T result = caseDriver(driver);
-			if (result == null)
-				result = caseNamedElement(driver);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BomiPackage.PURPOSED_ELEMENT: {
-			PurposedElement purposedElement = (PurposedElement) theEObject;
-			T result = casePurposedElement(purposedElement);
-			if (result == null)
-				result = caseNamedElement(purposedElement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		default:
-			return defaultCase(theEObject);
+			case BomiPackage.BOUNDARY_OBJECT: {
+				BoundaryObject boundaryObject = (BoundaryObject)theEObject;
+				T result = caseBoundaryObject(boundaryObject);
+				if (result == null) result = casePurposedElement(boundaryObject);
+				if (result == null) result = caseNamedElement(boundaryObject);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.ROLE: {
+				Role role = (Role)theEObject;
+				T result = caseRole(role);
+				if (result == null) result = caseNamedElement(role);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.NAMED_ELEMENT: {
+				NamedElement namedElement = (NamedElement)theEObject;
+				T result = caseNamedElement(namedElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.BO_ROLE_INTERACTION: {
+				BORoleInteraction boRoleInteraction = (BORoleInteraction)theEObject;
+				T result = caseBORoleInteraction(boRoleInteraction);
+				if (result == null) result = caseUsageAssociation(boRoleInteraction);
+				if (result == null) result = caseAssociation(boRoleInteraction);
+				if (result == null) result = casePurposedElement(boRoleInteraction);
+				if (result == null) result = caseNamedElement(boRoleInteraction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.BOMI_MODEL: {
+				BOMIModel bomiModel = (BOMIModel)theEObject;
+				T result = caseBOMIModel(bomiModel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.METHODOLOGICAL_ISLAND: {
+				MethodologicalIsland methodologicalIsland = (MethodologicalIsland)theEObject;
+				T result = caseMethodologicalIsland(methodologicalIsland);
+				if (result == null) result = caseNamedElement(methodologicalIsland);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.USAGE_ASSOCIATION: {
+				UsageAssociation usageAssociation = (UsageAssociation)theEObject;
+				T result = caseUsageAssociation(usageAssociation);
+				if (result == null) result = caseAssociation(usageAssociation);
+				if (result == null) result = casePurposedElement(usageAssociation);
+				if (result == null) result = caseNamedElement(usageAssociation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.BOMI_COORDINATION: {
+				BOMICoordination bomiCoordination = (BOMICoordination)theEObject;
+				T result = caseBOMICoordination(bomiCoordination);
+				if (result == null) result = caseUsageAssociation(bomiCoordination);
+				if (result == null) result = caseAssociation(bomiCoordination);
+				if (result == null) result = casePurposedElement(bomiCoordination);
+				if (result == null) result = caseNamedElement(bomiCoordination);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.GOVERNANCE_TEAM: {
+				GovernanceTeam governanceTeam = (GovernanceTeam)theEObject;
+				T result = caseGovernanceTeam(governanceTeam);
+				if (result == null) result = caseNamedElement(governanceTeam);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.BO_TEAM_GOVERNANCE: {
+				BOTeamGovernance boTeamGovernance = (BOTeamGovernance)theEObject;
+				T result = caseBOTeamGovernance(boTeamGovernance);
+				if (result == null) result = caseAssociation(boTeamGovernance);
+				if (result == null) result = casePurposedElement(boTeamGovernance);
+				if (result == null) result = caseNamedElement(boTeamGovernance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.ASSOCIATION: {
+				Association association = (Association)theEObject;
+				T result = caseAssociation(association);
+				if (result == null) result = casePurposedElement(association);
+				if (result == null) result = caseNamedElement(association);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.DRIVER: {
+				Driver driver = (Driver)theEObject;
+				T result = caseDriver(driver);
+				if (result == null) result = caseNamedElement(driver);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BomiPackage.PURPOSED_ELEMENT: {
+				PurposedElement purposedElement = (PurposedElement)theEObject;
+				T result = casePurposedElement(purposedElement);
+				if (result == null) result = caseNamedElement(purposedElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			default: return defaultCase(theEObject);
 		}
 	}
 

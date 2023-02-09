@@ -61,12 +61,19 @@ public class BORoleInteractionItemProvider extends UsageAssociationItemProvider 
 	 * @generated
 	 */
 	protected void addRolesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BORoleInteraction_roles_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_roles_feature",
-								"_UI_BORoleInteraction_type"),
-						BomiPackage.Literals.BO_ROLE_INTERACTION__ROLES, true, false, true, null, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BORoleInteraction_roles_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_roles_feature", "_UI_BORoleInteraction_type"),
+				 BomiPackage.Literals.BO_ROLE_INTERACTION__ROLES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -76,13 +83,19 @@ public class BORoleInteractionItemProvider extends UsageAssociationItemProvider 
 	 * @generated
 	 */
 	protected void addResponsiblePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BORoleInteraction_responsible_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_responsible_feature",
-								"_UI_BORoleInteraction_type"),
-						BomiPackage.Literals.BO_ROLE_INTERACTION__RESPONSIBLE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BORoleInteraction_responsible_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_responsible_feature", "_UI_BORoleInteraction_type"),
+				 BomiPackage.Literals.BO_ROLE_INTERACTION__RESPONSIBLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -92,13 +105,19 @@ public class BORoleInteractionItemProvider extends UsageAssociationItemProvider 
 	 * @generated
 	 */
 	protected void addCreatesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BORoleInteraction_creates_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_creates_feature",
-								"_UI_BORoleInteraction_type"),
-						BomiPackage.Literals.BO_ROLE_INTERACTION__CREATES, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BORoleInteraction_creates_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_creates_feature", "_UI_BORoleInteraction_type"),
+				 BomiPackage.Literals.BO_ROLE_INTERACTION__CREATES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -108,13 +127,19 @@ public class BORoleInteractionItemProvider extends UsageAssociationItemProvider 
 	 * @generated
 	 */
 	protected void addReadsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BORoleInteraction_reads_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_reads_feature",
-								"_UI_BORoleInteraction_type"),
-						BomiPackage.Literals.BO_ROLE_INTERACTION__READS, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BORoleInteraction_reads_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_reads_feature", "_UI_BORoleInteraction_type"),
+				 BomiPackage.Literals.BO_ROLE_INTERACTION__READS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -124,13 +149,19 @@ public class BORoleInteractionItemProvider extends UsageAssociationItemProvider 
 	 * @generated
 	 */
 	protected void addUpdatesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BORoleInteraction_updates_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_updates_feature",
-								"_UI_BORoleInteraction_type"),
-						BomiPackage.Literals.BO_ROLE_INTERACTION__UPDATES, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BORoleInteraction_updates_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_updates_feature", "_UI_BORoleInteraction_type"),
+				 BomiPackage.Literals.BO_ROLE_INTERACTION__UPDATES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -140,13 +171,19 @@ public class BORoleInteractionItemProvider extends UsageAssociationItemProvider 
 	 * @generated
 	 */
 	protected void addDeletesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BORoleInteraction_deletes_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_deletes_feature",
-								"_UI_BORoleInteraction_type"),
-						BomiPackage.Literals.BO_ROLE_INTERACTION__DELETES, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BORoleInteraction_deletes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BORoleInteraction_deletes_feature", "_UI_BORoleInteraction_type"),
+				 BomiPackage.Literals.BO_ROLE_INTERACTION__DELETES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -178,9 +215,10 @@ public class BORoleInteractionItemProvider extends UsageAssociationItemProvider 
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((BORoleInteraction) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_BORoleInteraction_type")
-				: getString("_UI_BORoleInteraction_type") + " " + label;
+		String label = ((BORoleInteraction)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_BORoleInteraction_type") :
+			getString("_UI_BORoleInteraction_type") + " " + label;
 	}
 
 	/**
@@ -195,13 +233,13 @@ public class BORoleInteractionItemProvider extends UsageAssociationItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BORoleInteraction.class)) {
-		case BomiPackage.BO_ROLE_INTERACTION__RESPONSIBLE:
-		case BomiPackage.BO_ROLE_INTERACTION__CREATES:
-		case BomiPackage.BO_ROLE_INTERACTION__READS:
-		case BomiPackage.BO_ROLE_INTERACTION__UPDATES:
-		case BomiPackage.BO_ROLE_INTERACTION__DELETES:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+			case BomiPackage.BO_ROLE_INTERACTION__RESPONSIBLE:
+			case BomiPackage.BO_ROLE_INTERACTION__CREATES:
+			case BomiPackage.BO_ROLE_INTERACTION__READS:
+			case BomiPackage.BO_ROLE_INTERACTION__UPDATES:
+			case BomiPackage.BO_ROLE_INTERACTION__DELETES:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}

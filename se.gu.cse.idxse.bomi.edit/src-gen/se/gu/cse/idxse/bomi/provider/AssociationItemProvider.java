@@ -53,23 +53,19 @@ public class AssociationItemProvider extends PurposedElementItemProvider {
 	 * @generated
 	 */
 	protected void addBoundaryObjectsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Association_boundaryObjects_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Association_boundaryObjects_feature",
-								"_UI_Association_type"),
-						BomiPackage.Literals.ASSOCIATION__BOUNDARY_OBJECTS, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This returns Association.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Association"));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Association_boundaryObjects_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Association_boundaryObjects_feature", "_UI_Association_type"),
+				 BomiPackage.Literals.ASSOCIATION__BOUNDARY_OBJECTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -90,9 +86,10 @@ public class AssociationItemProvider extends PurposedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Association) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Association_type")
-				: getString("_UI_Association_type") + " " + label;
+		String label = ((Association)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Association_type") :
+			getString("_UI_Association_type") + " " + label;
 	}
 
 	/**

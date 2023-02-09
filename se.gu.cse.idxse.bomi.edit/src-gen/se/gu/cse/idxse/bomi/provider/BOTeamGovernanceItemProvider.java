@@ -58,13 +58,19 @@ public class BOTeamGovernanceItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	protected void addCoordinationMechanismPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_BOTeamGovernance_coordinationMechanism_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_BOTeamGovernance_coordinationMechanism_feature",
-						"_UI_BOTeamGovernance_type"),
-				BomiPackage.Literals.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BOTeamGovernance_coordinationMechanism_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BOTeamGovernance_coordinationMechanism_feature", "_UI_BOTeamGovernance_type"),
+				 BomiPackage.Literals.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -74,13 +80,19 @@ public class BOTeamGovernanceItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	protected void addFrequencyOfCoordinationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BOTeamGovernance_frequencyOfCoordination_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_BOTeamGovernance_frequencyOfCoordination_feature", "_UI_BOTeamGovernance_type"),
-						BomiPackage.Literals.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BOTeamGovernance_frequencyOfCoordination_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BOTeamGovernance_frequencyOfCoordination_feature", "_UI_BOTeamGovernance_type"),
+				 BomiPackage.Literals.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -90,13 +102,19 @@ public class BOTeamGovernanceItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	protected void addGovernanceTeamsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BOTeamGovernance_governanceTeams_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BOTeamGovernance_governanceTeams_feature",
-								"_UI_BOTeamGovernance_type"),
-						BomiPackage.Literals.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS, true, false, true, null, null,
-						null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BOTeamGovernance_governanceTeams_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BOTeamGovernance_governanceTeams_feature", "_UI_BOTeamGovernance_type"),
+				 BomiPackage.Literals.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -128,9 +146,10 @@ public class BOTeamGovernanceItemProvider extends AssociationItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((BOTeamGovernance) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_BOTeamGovernance_type")
-				: getString("_UI_BOTeamGovernance_type") + " " + label;
+		String label = ((BOTeamGovernance)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_BOTeamGovernance_type") :
+			getString("_UI_BOTeamGovernance_type") + " " + label;
 	}
 
 	/**
@@ -145,10 +164,10 @@ public class BOTeamGovernanceItemProvider extends AssociationItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BOTeamGovernance.class)) {
-		case BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM:
-		case BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+			case BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM:
+			case BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}

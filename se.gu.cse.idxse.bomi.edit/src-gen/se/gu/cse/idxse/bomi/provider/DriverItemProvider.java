@@ -44,8 +44,12 @@ public class DriverItemProvider extends NamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDriverTypePropertyDescriptor(object);
-			addDistanceTypePropertyDescriptor(object);
+			addDriverTypeTechnologyPropertyDescriptor(object);
+			addDriverTypeProcessPropertyDescriptor(object);
+			addDriverTypeOrganizationalPropertyDescriptor(object);
+			addDistanceTypeCulturalPropertyDescriptor(object);
+			addDistanceTypeGeographicalPropertyDescriptor(object);
+			addDistanceTypeOrganizationalPropertyDescriptor(object);
 			addDistanceSizePropertyDescriptor(object);
 			addDrivesMIsPropertyDescriptor(object);
 		}
@@ -53,35 +57,135 @@ public class DriverItemProvider extends NamedElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Driver Type feature.
+	 * This adds a property descriptor for the Driver Type Technology feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDriverTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Driver_driverType_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Driver_driverType_feature",
-								"_UI_Driver_type"),
-						BomiPackage.Literals.DRIVER__DRIVER_TYPE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	protected void addDriverTypeTechnologyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Driver_driverTypeTechnology_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_driverTypeTechnology_feature", "_UI_Driver_type"),
+				 BomiPackage.Literals.DRIVER__DRIVER_TYPE_TECHNOLOGY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Distance Type feature.
+	 * This adds a property descriptor for the Driver Type Process feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDistanceTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Driver_distanceType_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Driver_distanceType_feature",
-								"_UI_Driver_type"),
-						BomiPackage.Literals.DRIVER__DISTANCE_TYPE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	protected void addDriverTypeProcessPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Driver_driverTypeProcess_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_driverTypeProcess_feature", "_UI_Driver_type"),
+				 BomiPackage.Literals.DRIVER__DRIVER_TYPE_PROCESS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Driver Type Organizational feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDriverTypeOrganizationalPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Driver_driverTypeOrganizational_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_driverTypeOrganizational_feature", "_UI_Driver_type"),
+				 BomiPackage.Literals.DRIVER__DRIVER_TYPE_ORGANIZATIONAL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Distance Type Cultural feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDistanceTypeCulturalPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Driver_distanceTypeCultural_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_distanceTypeCultural_feature", "_UI_Driver_type"),
+				 BomiPackage.Literals.DRIVER__DISTANCE_TYPE_CULTURAL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Distance Type Geographical feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDistanceTypeGeographicalPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Driver_distanceTypeGeographical_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_distanceTypeGeographical_feature", "_UI_Driver_type"),
+				 BomiPackage.Literals.DRIVER__DISTANCE_TYPE_GEOGRAPHICAL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Distance Type Organizational feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDistanceTypeOrganizationalPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Driver_distanceTypeOrganizational_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_distanceTypeOrganizational_feature", "_UI_Driver_type"),
+				 BomiPackage.Literals.DRIVER__DISTANCE_TYPE_ORGANIZATIONAL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -91,13 +195,19 @@ public class DriverItemProvider extends NamedElementItemProvider {
 	 * @generated
 	 */
 	protected void addDistanceSizePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Driver_distanceSize_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Driver_distanceSize_feature",
-								"_UI_Driver_type"),
-						BomiPackage.Literals.DRIVER__DISTANCE_SIZE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Driver_distanceSize_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_distanceSize_feature", "_UI_Driver_type"),
+				 BomiPackage.Literals.DRIVER__DISTANCE_SIZE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -107,12 +217,19 @@ public class DriverItemProvider extends NamedElementItemProvider {
 	 * @generated
 	 */
 	protected void addDrivesMIsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Driver_drivesMIs_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Driver_drivesMIs_feature",
-								"_UI_Driver_type"),
-						BomiPackage.Literals.DRIVER__DRIVES_MIS, true, false, true, null, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Driver_drivesMIs_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_drivesMIs_feature", "_UI_Driver_type"),
+				 BomiPackage.Literals.DRIVER__DRIVES_MIS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -144,9 +261,10 @@ public class DriverItemProvider extends NamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Driver) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Driver_type")
-				: getString("_UI_Driver_type") + " " + label;
+		String label = ((Driver)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Driver_type") :
+			getString("_UI_Driver_type") + " " + label;
 	}
 
 	/**
@@ -161,11 +279,15 @@ public class DriverItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Driver.class)) {
-		case BomiPackage.DRIVER__DRIVER_TYPE:
-		case BomiPackage.DRIVER__DISTANCE_TYPE:
-		case BomiPackage.DRIVER__DISTANCE_SIZE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+			case BomiPackage.DRIVER__DRIVER_TYPE_TECHNOLOGY:
+			case BomiPackage.DRIVER__DRIVER_TYPE_PROCESS:
+			case BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL:
+			case BomiPackage.DRIVER__DISTANCE_TYPE_CULTURAL:
+			case BomiPackage.DRIVER__DISTANCE_TYPE_GEOGRAPHICAL:
+			case BomiPackage.DRIVER__DISTANCE_TYPE_ORGANIZATIONAL:
+			case BomiPackage.DRIVER__DISTANCE_SIZE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}

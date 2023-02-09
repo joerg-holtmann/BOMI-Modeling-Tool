@@ -139,16 +139,16 @@ public class BOMIModelItemProvider extends ItemProviderAdapter implements IEditi
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BOMIModel.class)) {
-		case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
-		case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
-		case BomiPackage.BOMI_MODEL__ROLES:
-		case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
-		case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
-		case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
-		case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
-		case BomiPackage.BOMI_MODEL__DRIVERS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
+			case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
+			case BomiPackage.BOMI_MODEL__ROLES:
+			case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
+			case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
+			case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
+			case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
+			case BomiPackage.BOMI_MODEL__DRIVERS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -164,29 +164,45 @@ public class BOMIModelItemProvider extends ItemProviderAdapter implements IEditi
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(BomiPackage.Literals.BOMI_MODEL__BO_ROLE_INTERACTIONS,
-				BomiFactory.eINSTANCE.createBORoleInteraction()));
+		newChildDescriptors.add
+			(createChildParameter
+				(BomiPackage.Literals.BOMI_MODEL__BO_ROLE_INTERACTIONS,
+				 BomiFactory.eINSTANCE.createBORoleInteraction()));
 
-		newChildDescriptors.add(createChildParameter(BomiPackage.Literals.BOMI_MODEL__BOUNDARY_OBJECTS,
-				BomiFactory.eINSTANCE.createBoundaryObject()));
+		newChildDescriptors.add
+			(createChildParameter
+				(BomiPackage.Literals.BOMI_MODEL__BOUNDARY_OBJECTS,
+				 BomiFactory.eINSTANCE.createBoundaryObject()));
 
-		newChildDescriptors
-				.add(createChildParameter(BomiPackage.Literals.BOMI_MODEL__ROLES, BomiFactory.eINSTANCE.createRole()));
+		newChildDescriptors.add
+			(createChildParameter
+				(BomiPackage.Literals.BOMI_MODEL__ROLES,
+				 BomiFactory.eINSTANCE.createRole()));
 
-		newChildDescriptors.add(createChildParameter(BomiPackage.Literals.BOMI_MODEL__BO_MI_COORDINATIONS,
-				BomiFactory.eINSTANCE.createBOMICoordination()));
+		newChildDescriptors.add
+			(createChildParameter
+				(BomiPackage.Literals.BOMI_MODEL__BO_MI_COORDINATIONS,
+				 BomiFactory.eINSTANCE.createBOMICoordination()));
 
-		newChildDescriptors.add(createChildParameter(BomiPackage.Literals.BOMI_MODEL__METHODOLOGICAL_ISLANDS,
-				BomiFactory.eINSTANCE.createMethodologicalIsland()));
+		newChildDescriptors.add
+			(createChildParameter
+				(BomiPackage.Literals.BOMI_MODEL__METHODOLOGICAL_ISLANDS,
+				 BomiFactory.eINSTANCE.createMethodologicalIsland()));
 
-		newChildDescriptors.add(createChildParameter(BomiPackage.Literals.BOMI_MODEL__GOVERNANCE_TEAMS,
-				BomiFactory.eINSTANCE.createGovernanceTeam()));
+		newChildDescriptors.add
+			(createChildParameter
+				(BomiPackage.Literals.BOMI_MODEL__GOVERNANCE_TEAMS,
+				 BomiFactory.eINSTANCE.createGovernanceTeam()));
 
-		newChildDescriptors.add(createChildParameter(BomiPackage.Literals.BOMI_MODEL__BO_TEAM_GOVERNANCES,
-				BomiFactory.eINSTANCE.createBOTeamGovernance()));
+		newChildDescriptors.add
+			(createChildParameter
+				(BomiPackage.Literals.BOMI_MODEL__BO_TEAM_GOVERNANCES,
+				 BomiFactory.eINSTANCE.createBOTeamGovernance()));
 
-		newChildDescriptors.add(
-				createChildParameter(BomiPackage.Literals.BOMI_MODEL__DRIVERS, BomiFactory.eINSTANCE.createDriver()));
+		newChildDescriptors.add
+			(createChildParameter
+				(BomiPackage.Literals.BOMI_MODEL__DRIVERS,
+				 BomiFactory.eINSTANCE.createDriver()));
 	}
 
 	/**

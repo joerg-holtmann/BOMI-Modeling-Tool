@@ -154,8 +154,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 */
 	public EList<BORoleInteraction> getBoRoleInteractions() {
 		if (boRoleInteractions == null) {
-			boRoleInteractions = new EObjectContainmentEList<BORoleInteraction>(BORoleInteraction.class, this,
-					BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS);
+			boRoleInteractions = new EObjectContainmentEList<BORoleInteraction>(BORoleInteraction.class, this, BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS);
 		}
 		return boRoleInteractions;
 	}
@@ -167,8 +166,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 */
 	public EList<BoundaryObject> getBoundaryObjects() {
 		if (boundaryObjects == null) {
-			boundaryObjects = new EObjectContainmentEList<BoundaryObject>(BoundaryObject.class, this,
-					BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS);
+			boundaryObjects = new EObjectContainmentEList<BoundaryObject>(BoundaryObject.class, this, BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS);
 		}
 		return boundaryObjects;
 	}
@@ -192,8 +190,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 */
 	public EList<BOMICoordination> getBoMiCoordinations() {
 		if (boMiCoordinations == null) {
-			boMiCoordinations = new EObjectContainmentEList<BOMICoordination>(BOMICoordination.class, this,
-					BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS);
+			boMiCoordinations = new EObjectContainmentEList<BOMICoordination>(BOMICoordination.class, this, BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS);
 		}
 		return boMiCoordinations;
 	}
@@ -205,8 +202,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 */
 	public EList<MethodologicalIsland> getMethodologicalIslands() {
 		if (methodologicalIslands == null) {
-			methodologicalIslands = new EObjectContainmentEList<MethodologicalIsland>(MethodologicalIsland.class, this,
-					BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS);
+			methodologicalIslands = new EObjectContainmentEList<MethodologicalIsland>(MethodologicalIsland.class, this, BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS);
 		}
 		return methodologicalIslands;
 	}
@@ -218,8 +214,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 */
 	public EList<GovernanceTeam> getGovernanceTeams() {
 		if (governanceTeams == null) {
-			governanceTeams = new EObjectContainmentEList<GovernanceTeam>(GovernanceTeam.class, this,
-					BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS);
+			governanceTeams = new EObjectContainmentEList<GovernanceTeam>(GovernanceTeam.class, this, BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS);
 		}
 		return governanceTeams;
 	}
@@ -231,8 +226,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 */
 	public EList<BOTeamGovernance> getBoTeamGovernances() {
 		if (boTeamGovernances == null) {
-			boTeamGovernances = new EObjectContainmentEList<BOTeamGovernance>(BOTeamGovernance.class, this,
-					BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES);
+			boTeamGovernances = new EObjectContainmentEList<BOTeamGovernance>(BOTeamGovernance.class, this, BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES);
 		}
 		return boTeamGovernances;
 	}
@@ -257,22 +251,22 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
-			return ((InternalEList<?>) getBoRoleInteractions()).basicRemove(otherEnd, msgs);
-		case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
-			return ((InternalEList<?>) getBoundaryObjects()).basicRemove(otherEnd, msgs);
-		case BomiPackage.BOMI_MODEL__ROLES:
-			return ((InternalEList<?>) getRoles()).basicRemove(otherEnd, msgs);
-		case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
-			return ((InternalEList<?>) getBoMiCoordinations()).basicRemove(otherEnd, msgs);
-		case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
-			return ((InternalEList<?>) getMethodologicalIslands()).basicRemove(otherEnd, msgs);
-		case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
-			return ((InternalEList<?>) getGovernanceTeams()).basicRemove(otherEnd, msgs);
-		case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
-			return ((InternalEList<?>) getBoTeamGovernances()).basicRemove(otherEnd, msgs);
-		case BomiPackage.BOMI_MODEL__DRIVERS:
-			return ((InternalEList<?>) getDrivers()).basicRemove(otherEnd, msgs);
+			case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
+				return ((InternalEList<?>)getBoRoleInteractions()).basicRemove(otherEnd, msgs);
+			case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
+				return ((InternalEList<?>)getBoundaryObjects()).basicRemove(otherEnd, msgs);
+			case BomiPackage.BOMI_MODEL__ROLES:
+				return ((InternalEList<?>)getRoles()).basicRemove(otherEnd, msgs);
+			case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
+				return ((InternalEList<?>)getBoMiCoordinations()).basicRemove(otherEnd, msgs);
+			case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
+				return ((InternalEList<?>)getMethodologicalIslands()).basicRemove(otherEnd, msgs);
+			case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
+				return ((InternalEList<?>)getGovernanceTeams()).basicRemove(otherEnd, msgs);
+			case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
+				return ((InternalEList<?>)getBoTeamGovernances()).basicRemove(otherEnd, msgs);
+			case BomiPackage.BOMI_MODEL__DRIVERS:
+				return ((InternalEList<?>)getDrivers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -285,22 +279,22 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
-			return getBoRoleInteractions();
-		case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
-			return getBoundaryObjects();
-		case BomiPackage.BOMI_MODEL__ROLES:
-			return getRoles();
-		case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
-			return getBoMiCoordinations();
-		case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
-			return getMethodologicalIslands();
-		case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
-			return getGovernanceTeams();
-		case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
-			return getBoTeamGovernances();
-		case BomiPackage.BOMI_MODEL__DRIVERS:
-			return getDrivers();
+			case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
+				return getBoRoleInteractions();
+			case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
+				return getBoundaryObjects();
+			case BomiPackage.BOMI_MODEL__ROLES:
+				return getRoles();
+			case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
+				return getBoMiCoordinations();
+			case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
+				return getMethodologicalIslands();
+			case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
+				return getGovernanceTeams();
+			case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
+				return getBoTeamGovernances();
+			case BomiPackage.BOMI_MODEL__DRIVERS:
+				return getDrivers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -314,38 +308,38 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
-			getBoRoleInteractions().clear();
-			getBoRoleInteractions().addAll((Collection<? extends BORoleInteraction>) newValue);
-			return;
-		case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
-			getBoundaryObjects().clear();
-			getBoundaryObjects().addAll((Collection<? extends BoundaryObject>) newValue);
-			return;
-		case BomiPackage.BOMI_MODEL__ROLES:
-			getRoles().clear();
-			getRoles().addAll((Collection<? extends Role>) newValue);
-			return;
-		case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
-			getBoMiCoordinations().clear();
-			getBoMiCoordinations().addAll((Collection<? extends BOMICoordination>) newValue);
-			return;
-		case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
-			getMethodologicalIslands().clear();
-			getMethodologicalIslands().addAll((Collection<? extends MethodologicalIsland>) newValue);
-			return;
-		case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
-			getGovernanceTeams().clear();
-			getGovernanceTeams().addAll((Collection<? extends GovernanceTeam>) newValue);
-			return;
-		case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
-			getBoTeamGovernances().clear();
-			getBoTeamGovernances().addAll((Collection<? extends BOTeamGovernance>) newValue);
-			return;
-		case BomiPackage.BOMI_MODEL__DRIVERS:
-			getDrivers().clear();
-			getDrivers().addAll((Collection<? extends Driver>) newValue);
-			return;
+			case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
+				getBoRoleInteractions().clear();
+				getBoRoleInteractions().addAll((Collection<? extends BORoleInteraction>)newValue);
+				return;
+			case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
+				getBoundaryObjects().clear();
+				getBoundaryObjects().addAll((Collection<? extends BoundaryObject>)newValue);
+				return;
+			case BomiPackage.BOMI_MODEL__ROLES:
+				getRoles().clear();
+				getRoles().addAll((Collection<? extends Role>)newValue);
+				return;
+			case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
+				getBoMiCoordinations().clear();
+				getBoMiCoordinations().addAll((Collection<? extends BOMICoordination>)newValue);
+				return;
+			case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
+				getMethodologicalIslands().clear();
+				getMethodologicalIslands().addAll((Collection<? extends MethodologicalIsland>)newValue);
+				return;
+			case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
+				getGovernanceTeams().clear();
+				getGovernanceTeams().addAll((Collection<? extends GovernanceTeam>)newValue);
+				return;
+			case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
+				getBoTeamGovernances().clear();
+				getBoTeamGovernances().addAll((Collection<? extends BOTeamGovernance>)newValue);
+				return;
+			case BomiPackage.BOMI_MODEL__DRIVERS:
+				getDrivers().clear();
+				getDrivers().addAll((Collection<? extends Driver>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -358,30 +352,30 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
-			getBoRoleInteractions().clear();
-			return;
-		case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
-			getBoundaryObjects().clear();
-			return;
-		case BomiPackage.BOMI_MODEL__ROLES:
-			getRoles().clear();
-			return;
-		case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
-			getBoMiCoordinations().clear();
-			return;
-		case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
-			getMethodologicalIslands().clear();
-			return;
-		case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
-			getGovernanceTeams().clear();
-			return;
-		case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
-			getBoTeamGovernances().clear();
-			return;
-		case BomiPackage.BOMI_MODEL__DRIVERS:
-			getDrivers().clear();
-			return;
+			case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
+				getBoRoleInteractions().clear();
+				return;
+			case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
+				getBoundaryObjects().clear();
+				return;
+			case BomiPackage.BOMI_MODEL__ROLES:
+				getRoles().clear();
+				return;
+			case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
+				getBoMiCoordinations().clear();
+				return;
+			case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
+				getMethodologicalIslands().clear();
+				return;
+			case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
+				getGovernanceTeams().clear();
+				return;
+			case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
+				getBoTeamGovernances().clear();
+				return;
+			case BomiPackage.BOMI_MODEL__DRIVERS:
+				getDrivers().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -394,22 +388,22 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
-			return boRoleInteractions != null && !boRoleInteractions.isEmpty();
-		case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
-			return boundaryObjects != null && !boundaryObjects.isEmpty();
-		case BomiPackage.BOMI_MODEL__ROLES:
-			return roles != null && !roles.isEmpty();
-		case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
-			return boMiCoordinations != null && !boMiCoordinations.isEmpty();
-		case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
-			return methodologicalIslands != null && !methodologicalIslands.isEmpty();
-		case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
-			return governanceTeams != null && !governanceTeams.isEmpty();
-		case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
-			return boTeamGovernances != null && !boTeamGovernances.isEmpty();
-		case BomiPackage.BOMI_MODEL__DRIVERS:
-			return drivers != null && !drivers.isEmpty();
+			case BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS:
+				return boRoleInteractions != null && !boRoleInteractions.isEmpty();
+			case BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS:
+				return boundaryObjects != null && !boundaryObjects.isEmpty();
+			case BomiPackage.BOMI_MODEL__ROLES:
+				return roles != null && !roles.isEmpty();
+			case BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS:
+				return boMiCoordinations != null && !boMiCoordinations.isEmpty();
+			case BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS:
+				return methodologicalIslands != null && !methodologicalIslands.isEmpty();
+			case BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS:
+				return governanceTeams != null && !governanceTeams.isEmpty();
+			case BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES:
+				return boTeamGovernances != null && !boTeamGovernances.isEmpty();
+			case BomiPackage.BOMI_MODEL__DRIVERS:
+				return drivers != null && !drivers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

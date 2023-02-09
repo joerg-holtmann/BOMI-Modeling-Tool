@@ -329,7 +329,7 @@ public class BomiItemProviderAdapterFactory extends BomiAdapterFactory
 	public Object adapt(Object object, Object type) {
 		if (isFactoryForType(type)) {
 			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
+			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
 				return adapter;
 			}
 		}
@@ -378,24 +378,15 @@ public class BomiItemProviderAdapterFactory extends BomiAdapterFactory
 	 * @generated
 	 */
 	public void dispose() {
-		if (boundaryObjectItemProvider != null)
-			boundaryObjectItemProvider.dispose();
-		if (roleItemProvider != null)
-			roleItemProvider.dispose();
-		if (boRoleInteractionItemProvider != null)
-			boRoleInteractionItemProvider.dispose();
-		if (bomiModelItemProvider != null)
-			bomiModelItemProvider.dispose();
-		if (methodologicalIslandItemProvider != null)
-			methodologicalIslandItemProvider.dispose();
-		if (bomiCoordinationItemProvider != null)
-			bomiCoordinationItemProvider.dispose();
-		if (governanceTeamItemProvider != null)
-			governanceTeamItemProvider.dispose();
-		if (boTeamGovernanceItemProvider != null)
-			boTeamGovernanceItemProvider.dispose();
-		if (driverItemProvider != null)
-			driverItemProvider.dispose();
+		if (boundaryObjectItemProvider != null) boundaryObjectItemProvider.dispose();
+		if (roleItemProvider != null) roleItemProvider.dispose();
+		if (boRoleInteractionItemProvider != null) boRoleInteractionItemProvider.dispose();
+		if (bomiModelItemProvider != null) bomiModelItemProvider.dispose();
+		if (methodologicalIslandItemProvider != null) methodologicalIslandItemProvider.dispose();
+		if (bomiCoordinationItemProvider != null) bomiCoordinationItemProvider.dispose();
+		if (governanceTeamItemProvider != null) governanceTeamItemProvider.dispose();
+		if (boTeamGovernanceItemProvider != null) boTeamGovernanceItemProvider.dispose();
+		if (driverItemProvider != null) driverItemProvider.dispose();
 	}
 
 }

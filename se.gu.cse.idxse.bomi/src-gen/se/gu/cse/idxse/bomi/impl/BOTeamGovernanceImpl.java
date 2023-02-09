@@ -118,9 +118,7 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 		String oldCoordinationMechanism = coordinationMechanism;
 		coordinationMechanism = newCoordinationMechanism;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM, oldCoordinationMechanism,
-					coordinationMechanism));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM, oldCoordinationMechanism, coordinationMechanism));
 	}
 
 	/**
@@ -139,12 +137,9 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	 */
 	public void setFrequencyOfCoordination(HighLow newFrequencyOfCoordination) {
 		HighLow oldFrequencyOfCoordination = frequencyOfCoordination;
-		frequencyOfCoordination = newFrequencyOfCoordination == null ? FREQUENCY_OF_COORDINATION_EDEFAULT
-				: newFrequencyOfCoordination;
+		frequencyOfCoordination = newFrequencyOfCoordination == null ? FREQUENCY_OF_COORDINATION_EDEFAULT : newFrequencyOfCoordination;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION, oldFrequencyOfCoordination,
-					frequencyOfCoordination));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION, oldFrequencyOfCoordination, frequencyOfCoordination));
 	}
 
 	/**
@@ -154,8 +149,7 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	 */
 	public EList<GovernanceTeam> getGovernanceTeams() {
 		if (governanceTeams == null) {
-			governanceTeams = new EObjectResolvingEList<GovernanceTeam>(GovernanceTeam.class, this,
-					BomiPackage.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS);
+			governanceTeams = new EObjectResolvingEList<GovernanceTeam>(GovernanceTeam.class, this, BomiPackage.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS);
 		}
 		return governanceTeams;
 	}
@@ -168,12 +162,12 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM:
-			return getCoordinationMechanism();
-		case BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION:
-			return getFrequencyOfCoordination();
-		case BomiPackage.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS:
-			return getGovernanceTeams();
+			case BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM:
+				return getCoordinationMechanism();
+			case BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION:
+				return getFrequencyOfCoordination();
+			case BomiPackage.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS:
+				return getGovernanceTeams();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -187,16 +181,16 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM:
-			setCoordinationMechanism((String) newValue);
-			return;
-		case BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION:
-			setFrequencyOfCoordination((HighLow) newValue);
-			return;
-		case BomiPackage.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS:
-			getGovernanceTeams().clear();
-			getGovernanceTeams().addAll((Collection<? extends GovernanceTeam>) newValue);
-			return;
+			case BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM:
+				setCoordinationMechanism((String)newValue);
+				return;
+			case BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION:
+				setFrequencyOfCoordination((HighLow)newValue);
+				return;
+			case BomiPackage.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS:
+				getGovernanceTeams().clear();
+				getGovernanceTeams().addAll((Collection<? extends GovernanceTeam>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -209,15 +203,15 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM:
-			setCoordinationMechanism(COORDINATION_MECHANISM_EDEFAULT);
-			return;
-		case BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION:
-			setFrequencyOfCoordination(FREQUENCY_OF_COORDINATION_EDEFAULT);
-			return;
-		case BomiPackage.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS:
-			getGovernanceTeams().clear();
-			return;
+			case BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM:
+				setCoordinationMechanism(COORDINATION_MECHANISM_EDEFAULT);
+				return;
+			case BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION:
+				setFrequencyOfCoordination(FREQUENCY_OF_COORDINATION_EDEFAULT);
+				return;
+			case BomiPackage.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS:
+				getGovernanceTeams().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -230,13 +224,12 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM:
-			return COORDINATION_MECHANISM_EDEFAULT == null ? coordinationMechanism != null
-					: !COORDINATION_MECHANISM_EDEFAULT.equals(coordinationMechanism);
-		case BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION:
-			return frequencyOfCoordination != FREQUENCY_OF_COORDINATION_EDEFAULT;
-		case BomiPackage.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS:
-			return governanceTeams != null && !governanceTeams.isEmpty();
+			case BomiPackage.BO_TEAM_GOVERNANCE__COORDINATION_MECHANISM:
+				return COORDINATION_MECHANISM_EDEFAULT == null ? coordinationMechanism != null : !COORDINATION_MECHANISM_EDEFAULT.equals(coordinationMechanism);
+			case BomiPackage.BO_TEAM_GOVERNANCE__FREQUENCY_OF_COORDINATION:
+				return frequencyOfCoordination != FREQUENCY_OF_COORDINATION_EDEFAULT;
+			case BomiPackage.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS:
+				return governanceTeams != null && !governanceTeams.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -248,8 +241,7 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (coordinationMechanism: ");

@@ -38,17 +38,10 @@
     <eLiterals name="Departments" value="3"/>
     <eLiterals name="Organizations" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="DriverTypes">
+  <eClassifiers xsi:type="ecore:EEnum" name="UnsettableBoolean">
     <eLiterals name="NOT_SET"/>
-    <eLiterals name="Technology" value="1"/>
-    <eLiterals name="Process" value="2"/>
-    <eLiterals name="Organizational" value="3"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="DistanceTypes">
-    <eLiterals name="NOT_SET"/>
-    <eLiterals name="Cultural" value="1"/>
-    <eLiterals name="Geographical" value="2"/>
-    <eLiterals name="Organizational" value="3"/>
+    <eLiterals name="True" value="1"/>
+    <eLiterals name="False" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BoundaryObject" eSuperTypes="#//PurposedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="superType" eType="#//BOSuperTypes"/>
@@ -77,11 +70,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="BORoleInteraction" eSuperTypes="#//UsageAssociation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
         eType="#//Role"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responsible" eType="#//MyBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creates" eType="#//MyBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reads" eType="#//MyBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updates" eType="#//MyBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deletes" eType="#//MyBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responsible" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creates" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reads" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updates" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deletes" eType="#//UnsettableBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BOMIModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="boRoleInteractions" upperBound="-1"
@@ -128,18 +121,20 @@
         eType="#//BoundaryObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Driver" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverType" eType="#//DriverTypes"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceType" eType="#//DistanceTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypeTechnology" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypeProcess" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypeOrganizational"
+        eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceTypeCultural" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceTypeGeographical"
+        eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceTypeOrganizational"
+        eType="#//UnsettableBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceSize" eType="#//HighLow"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="drivesMIs" upperBound="-1"
         eType="#//MethodologicalIsland"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PurposedElement" abstract="true" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="MyBoolean">
-    <eLiterals name="NOT_SET"/>
-    <eLiterals name="True" value="1"/>
-    <eLiterals name="False" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

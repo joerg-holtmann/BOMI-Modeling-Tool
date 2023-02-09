@@ -83,8 +83,7 @@ public class MethodologicalIslandImpl extends NamedElementImpl implements Method
 		MIType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.METHODOLOGICAL_ISLAND__TYPE, oldType,
-					type));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.METHODOLOGICAL_ISLAND__TYPE, oldType, type));
 	}
 
 	/**
@@ -95,8 +94,8 @@ public class MethodologicalIslandImpl extends NamedElementImpl implements Method
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BomiPackage.METHODOLOGICAL_ISLAND__TYPE:
-			return getType();
+			case BomiPackage.METHODOLOGICAL_ISLAND__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,9 +108,9 @@ public class MethodologicalIslandImpl extends NamedElementImpl implements Method
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BomiPackage.METHODOLOGICAL_ISLAND__TYPE:
-			setType((MIType) newValue);
-			return;
+			case BomiPackage.METHODOLOGICAL_ISLAND__TYPE:
+				setType((MIType)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -124,9 +123,9 @@ public class MethodologicalIslandImpl extends NamedElementImpl implements Method
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BomiPackage.METHODOLOGICAL_ISLAND__TYPE:
-			setType(TYPE_EDEFAULT);
-			return;
+			case BomiPackage.METHODOLOGICAL_ISLAND__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -139,8 +138,8 @@ public class MethodologicalIslandImpl extends NamedElementImpl implements Method
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BomiPackage.METHODOLOGICAL_ISLAND__TYPE:
-			return type != TYPE_EDEFAULT;
+			case BomiPackage.METHODOLOGICAL_ISLAND__TYPE:
+				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -152,8 +151,7 @@ public class MethodologicalIslandImpl extends NamedElementImpl implements Method
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (type: ");

@@ -128,8 +128,13 @@ public enum LifecycleStage implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final LifecycleStage[] VALUES_ARRAY = new LifecycleStage[] { NOT_SET, PLANNING, OPERATION, DEPRECATE,
-			RETIRE, };
+	private static final LifecycleStage[] VALUES_ARRAY = new LifecycleStage[] {
+			NOT_SET,
+			PLANNING,
+			OPERATION,
+			DEPRECATE,
+			RETIRE,
+		};
 
 	/**
 	 * A public read-only list of all the '<em><b>Lifecycle Stage</b></em>' enumerators.
@@ -185,16 +190,11 @@ public enum LifecycleStage implements Enumerator {
 	 */
 	public static LifecycleStage get(int value) {
 		switch (value) {
-		case NOT_SET_VALUE:
-			return NOT_SET;
-		case PLANNING_VALUE:
-			return PLANNING;
-		case OPERATION_VALUE:
-			return OPERATION;
-		case DEPRECATE_VALUE:
-			return DEPRECATE;
-		case RETIRE_VALUE:
-			return RETIRE;
+			case NOT_SET_VALUE: return NOT_SET;
+			case PLANNING_VALUE: return PLANNING;
+			case OPERATION_VALUE: return OPERATION;
+			case DEPRECATE_VALUE: return DEPRECATE;
+			case RETIRE_VALUE: return RETIRE;
 		}
 		return null;
 	}
@@ -238,7 +238,7 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 */
 	public int getValue() {
-		return value;
+	  return value;
 	}
 
 	/**
@@ -247,7 +247,7 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+	  return name;
 	}
 
 	/**
@@ -256,7 +256,7 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 */
 	public String getLiteral() {
-		return literal;
+	  return literal;
 	}
 
 	/**

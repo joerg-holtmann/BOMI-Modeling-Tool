@@ -143,8 +143,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 		HighLow oldAccessability = accessability;
 		accessability = newAccessability == null ? ACCESSABILITY_EDEFAULT : newAccessability;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY,
-					oldAccessability, accessability));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY, oldAccessability, accessability));
 	}
 
 	/**
@@ -165,8 +164,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 		HighLow oldStability = stability;
 		stability = newStability == null ? STABILITY_EDEFAULT : newStability;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.USAGE_ASSOCIATION__STABILITY,
-					oldStability, stability));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.USAGE_ASSOCIATION__STABILITY, oldStability, stability));
 	}
 
 	/**
@@ -187,8 +185,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 		HighLow oldCriticality = criticality;
 		criticality = newCriticality == null ? CRITICALITY_EDEFAULT : newCriticality;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.USAGE_ASSOCIATION__CRITICALITY,
-					oldCriticality, criticality));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.USAGE_ASSOCIATION__CRITICALITY, oldCriticality, criticality));
 	}
 
 	/**
@@ -209,8 +206,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 		HighLow oldFitForPurpose = fitForPurpose;
 		fitForPurpose = newFitForPurpose == null ? FIT_FOR_PURPOSE_EDEFAULT : newFitForPurpose;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE,
-					oldFitForPurpose, fitForPurpose));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE, oldFitForPurpose, fitForPurpose));
 	}
 
 	/**
@@ -221,14 +217,14 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY:
-			return getAccessability();
-		case BomiPackage.USAGE_ASSOCIATION__STABILITY:
-			return getStability();
-		case BomiPackage.USAGE_ASSOCIATION__CRITICALITY:
-			return getCriticality();
-		case BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE:
-			return getFitForPurpose();
+			case BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY:
+				return getAccessability();
+			case BomiPackage.USAGE_ASSOCIATION__STABILITY:
+				return getStability();
+			case BomiPackage.USAGE_ASSOCIATION__CRITICALITY:
+				return getCriticality();
+			case BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE:
+				return getFitForPurpose();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -242,18 +238,18 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY:
-			setAccessability((HighLow) newValue);
-			return;
-		case BomiPackage.USAGE_ASSOCIATION__STABILITY:
-			setStability((HighLow) newValue);
-			return;
-		case BomiPackage.USAGE_ASSOCIATION__CRITICALITY:
-			setCriticality((HighLow) newValue);
-			return;
-		case BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE:
-			setFitForPurpose((HighLow) newValue);
-			return;
+			case BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY:
+				setAccessability((HighLow)newValue);
+				return;
+			case BomiPackage.USAGE_ASSOCIATION__STABILITY:
+				setStability((HighLow)newValue);
+				return;
+			case BomiPackage.USAGE_ASSOCIATION__CRITICALITY:
+				setCriticality((HighLow)newValue);
+				return;
+			case BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE:
+				setFitForPurpose((HighLow)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -266,18 +262,18 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY:
-			setAccessability(ACCESSABILITY_EDEFAULT);
-			return;
-		case BomiPackage.USAGE_ASSOCIATION__STABILITY:
-			setStability(STABILITY_EDEFAULT);
-			return;
-		case BomiPackage.USAGE_ASSOCIATION__CRITICALITY:
-			setCriticality(CRITICALITY_EDEFAULT);
-			return;
-		case BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE:
-			setFitForPurpose(FIT_FOR_PURPOSE_EDEFAULT);
-			return;
+			case BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY:
+				setAccessability(ACCESSABILITY_EDEFAULT);
+				return;
+			case BomiPackage.USAGE_ASSOCIATION__STABILITY:
+				setStability(STABILITY_EDEFAULT);
+				return;
+			case BomiPackage.USAGE_ASSOCIATION__CRITICALITY:
+				setCriticality(CRITICALITY_EDEFAULT);
+				return;
+			case BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE:
+				setFitForPurpose(FIT_FOR_PURPOSE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -290,14 +286,14 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY:
-			return accessability != ACCESSABILITY_EDEFAULT;
-		case BomiPackage.USAGE_ASSOCIATION__STABILITY:
-			return stability != STABILITY_EDEFAULT;
-		case BomiPackage.USAGE_ASSOCIATION__CRITICALITY:
-			return criticality != CRITICALITY_EDEFAULT;
-		case BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE:
-			return fitForPurpose != FIT_FOR_PURPOSE_EDEFAULT;
+			case BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY:
+				return accessability != ACCESSABILITY_EDEFAULT;
+			case BomiPackage.USAGE_ASSOCIATION__STABILITY:
+				return stability != STABILITY_EDEFAULT;
+			case BomiPackage.USAGE_ASSOCIATION__CRITICALITY:
+				return criticality != CRITICALITY_EDEFAULT;
+			case BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE:
+				return fitForPurpose != FIT_FOR_PURPOSE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -309,8 +305,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (accessability: ");

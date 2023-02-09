@@ -54,7 +54,7 @@ public class BomiAdapterFactory extends AdapterFactoryImpl {
 			return true;
 		}
 		if (object instanceof EObject) {
-			return ((EObject) object).eClass().getEPackage() == modelPackage;
+			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
 	}
@@ -66,76 +66,63 @@ public class BomiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	protected BomiSwitch<Adapter> modelSwitch = new BomiSwitch<Adapter>() {
-		@Override
-		public Adapter caseBoundaryObject(BoundaryObject object) {
-			return createBoundaryObjectAdapter();
-		}
-
-		@Override
-		public Adapter caseRole(Role object) {
-			return createRoleAdapter();
-		}
-
-		@Override
-		public Adapter caseNamedElement(NamedElement object) {
-			return createNamedElementAdapter();
-		}
-
-		@Override
-		public Adapter caseBORoleInteraction(BORoleInteraction object) {
-			return createBORoleInteractionAdapter();
-		}
-
-		@Override
-		public Adapter caseBOMIModel(BOMIModel object) {
-			return createBOMIModelAdapter();
-		}
-
-		@Override
-		public Adapter caseMethodologicalIsland(MethodologicalIsland object) {
-			return createMethodologicalIslandAdapter();
-		}
-
-		@Override
-		public Adapter caseUsageAssociation(UsageAssociation object) {
-			return createUsageAssociationAdapter();
-		}
-
-		@Override
-		public Adapter caseBOMICoordination(BOMICoordination object) {
-			return createBOMICoordinationAdapter();
-		}
-
-		@Override
-		public Adapter caseGovernanceTeam(GovernanceTeam object) {
-			return createGovernanceTeamAdapter();
-		}
-
-		@Override
-		public Adapter caseBOTeamGovernance(BOTeamGovernance object) {
-			return createBOTeamGovernanceAdapter();
-		}
-
-		@Override
-		public Adapter caseAssociation(Association object) {
-			return createAssociationAdapter();
-		}
-
-		@Override
-		public Adapter caseDriver(Driver object) {
-			return createDriverAdapter();
-		}
-
-		@Override
-		public Adapter casePurposedElement(PurposedElement object) {
-			return createPurposedElementAdapter();
-		}
-
-		@Override
-		public Adapter defaultCase(EObject object) {
-			return createEObjectAdapter();
-		}
-	};
+			@Override
+			public Adapter caseBoundaryObject(BoundaryObject object) {
+				return createBoundaryObjectAdapter();
+			}
+			@Override
+			public Adapter caseRole(Role object) {
+				return createRoleAdapter();
+			}
+			@Override
+			public Adapter caseNamedElement(NamedElement object) {
+				return createNamedElementAdapter();
+			}
+			@Override
+			public Adapter caseBORoleInteraction(BORoleInteraction object) {
+				return createBORoleInteractionAdapter();
+			}
+			@Override
+			public Adapter caseBOMIModel(BOMIModel object) {
+				return createBOMIModelAdapter();
+			}
+			@Override
+			public Adapter caseMethodologicalIsland(MethodologicalIsland object) {
+				return createMethodologicalIslandAdapter();
+			}
+			@Override
+			public Adapter caseUsageAssociation(UsageAssociation object) {
+				return createUsageAssociationAdapter();
+			}
+			@Override
+			public Adapter caseBOMICoordination(BOMICoordination object) {
+				return createBOMICoordinationAdapter();
+			}
+			@Override
+			public Adapter caseGovernanceTeam(GovernanceTeam object) {
+				return createGovernanceTeamAdapter();
+			}
+			@Override
+			public Adapter caseBOTeamGovernance(BOTeamGovernance object) {
+				return createBOTeamGovernanceAdapter();
+			}
+			@Override
+			public Adapter caseAssociation(Association object) {
+				return createAssociationAdapter();
+			}
+			@Override
+			public Adapter caseDriver(Driver object) {
+				return createDriverAdapter();
+			}
+			@Override
+			public Adapter casePurposedElement(PurposedElement object) {
+				return createPurposedElementAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
+				return createEObjectAdapter();
+			}
+		};
 
 	/**
 	 * Creates an adapter for the <code>target</code>.
@@ -147,7 +134,7 @@ public class BomiAdapterFactory extends AdapterFactoryImpl {
 	 */
 	@Override
 	public Adapter createAdapter(Notifier target) {
-		return modelSwitch.doSwitch((EObject) target);
+		return modelSwitch.doSwitch((EObject)target);
 	}
 
 	/**

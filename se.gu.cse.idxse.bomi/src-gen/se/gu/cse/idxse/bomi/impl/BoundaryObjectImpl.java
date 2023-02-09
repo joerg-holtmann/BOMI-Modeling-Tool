@@ -337,8 +337,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		BOSuperTypes oldSuperType = superType;
 		superType = newSuperType == null ? SUPER_TYPE_EDEFAULT : newSuperType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE, oldSuperType,
-					superType));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE, oldSuperType, superType));
 	}
 
 	/**
@@ -359,8 +358,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		HighLow oldLevelOfDetail = levelOfDetail;
 		levelOfDetail = newLevelOfDetail == null ? LEVEL_OF_DETAIL_EDEFAULT : newLevelOfDetail;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL,
-					oldLevelOfDetail, levelOfDetail));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL, oldLevelOfDetail, levelOfDetail));
 	}
 
 	/**
@@ -381,8 +379,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		HighLow oldFrequencyOfChange = frequencyOfChange;
 		frequencyOfChange = newFrequencyOfChange == null ? FREQUENCY_OF_CHANGE_EDEFAULT : newFrequencyOfChange;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE,
-					oldFrequencyOfChange, frequencyOfChange));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE, oldFrequencyOfChange, frequencyOfChange));
 	}
 
 	/**
@@ -403,8 +400,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		HighLow oldModularity = modularity;
 		modularity = newModularity == null ? MODULARITY_EDEFAULT : newModularity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__MODULARITY,
-					oldModularity, modularity));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__MODULARITY, oldModularity, modularity));
 	}
 
 	/**
@@ -425,8 +421,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		HighLow oldMaintainability = maintainability;
 		maintainability = newMaintainability == null ? MAINTAINABILITY_EDEFAULT : newMaintainability;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY,
-					oldMaintainability, maintainability));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY, oldMaintainability, maintainability));
 	}
 
 	/**
@@ -447,8 +442,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		HighLow oldPrescriptive = prescriptive;
 		prescriptive = newPrescriptive == null ? PRESCRIPTIVE_EDEFAULT : newPrescriptive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE,
-					oldPrescriptive, prescriptive));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE, oldPrescriptive, prescriptive));
 	}
 
 	/**
@@ -469,8 +463,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		LifecycleStage oldLifecycleStage = lifecycleStage;
 		lifecycleStage = newLifecycleStage == null ? LIFECYCLE_STAGE_EDEFAULT : newLifecycleStage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE,
-					oldLifecycleStage, lifecycleStage));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE, oldLifecycleStage, lifecycleStage));
 	}
 
 	/**
@@ -491,8 +484,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		String oldRepresentationFormat = representationFormat;
 		representationFormat = newRepresentationFormat;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT,
-					oldRepresentationFormat, representationFormat));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT, oldRepresentationFormat, representationFormat));
 	}
 
 	/**
@@ -513,8 +505,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		String oldTooling = tooling;
 		tooling = newTooling;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__TOOLING, oldTooling,
-					tooling));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__TOOLING, oldTooling, tooling));
 	}
 
 	/**
@@ -535,8 +526,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		String oldVersioning = versioning;
 		versioning = newVersioning;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__VERSIONING,
-					oldVersioning, versioning));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__VERSIONING, oldVersioning, versioning));
 	}
 
 	/**
@@ -557,8 +547,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		String oldUpToDate = upToDate;
 		upToDate = newUpToDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE, oldUpToDate,
-					upToDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE, oldUpToDate, upToDate));
 	}
 
 	/**
@@ -579,8 +568,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		HighLow oldInternalConsistency = internalConsistency;
 		internalConsistency = newInternalConsistency == null ? INTERNAL_CONSISTENCY_EDEFAULT : newInternalConsistency;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY,
-					oldInternalConsistency, internalConsistency));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY, oldInternalConsistency, internalConsistency));
 	}
 
 	/**
@@ -601,8 +589,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		HighLow oldExternalConsistency = externalConsistency;
 		externalConsistency = newExternalConsistency == null ? EXTERNAL_CONSISTENCY_EDEFAULT : newExternalConsistency;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY,
-					oldExternalConsistency, externalConsistency));
+			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY, oldExternalConsistency, externalConsistency));
 	}
 
 	/**
@@ -613,32 +600,32 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
-			return getSuperType();
-		case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
-			return getLevelOfDetail();
-		case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
-			return getFrequencyOfChange();
-		case BomiPackage.BOUNDARY_OBJECT__MODULARITY:
-			return getModularity();
-		case BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY:
-			return getMaintainability();
-		case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
-			return getPrescriptive();
-		case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
-			return getLifecycleStage();
-		case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
-			return getRepresentationFormat();
-		case BomiPackage.BOUNDARY_OBJECT__TOOLING:
-			return getTooling();
-		case BomiPackage.BOUNDARY_OBJECT__VERSIONING:
-			return getVersioning();
-		case BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE:
-			return getUpToDate();
-		case BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY:
-			return getInternalConsistency();
-		case BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY:
-			return getExternalConsistency();
+			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
+				return getSuperType();
+			case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
+				return getLevelOfDetail();
+			case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
+				return getFrequencyOfChange();
+			case BomiPackage.BOUNDARY_OBJECT__MODULARITY:
+				return getModularity();
+			case BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY:
+				return getMaintainability();
+			case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
+				return getPrescriptive();
+			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
+				return getLifecycleStage();
+			case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
+				return getRepresentationFormat();
+			case BomiPackage.BOUNDARY_OBJECT__TOOLING:
+				return getTooling();
+			case BomiPackage.BOUNDARY_OBJECT__VERSIONING:
+				return getVersioning();
+			case BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE:
+				return getUpToDate();
+			case BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY:
+				return getInternalConsistency();
+			case BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY:
+				return getExternalConsistency();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -651,45 +638,45 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
-			setSuperType((BOSuperTypes) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
-			setLevelOfDetail((HighLow) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
-			setFrequencyOfChange((HighLow) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__MODULARITY:
-			setModularity((HighLow) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY:
-			setMaintainability((HighLow) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
-			setPrescriptive((HighLow) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
-			setLifecycleStage((LifecycleStage) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
-			setRepresentationFormat((String) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__TOOLING:
-			setTooling((String) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__VERSIONING:
-			setVersioning((String) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE:
-			setUpToDate((String) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY:
-			setInternalConsistency((HighLow) newValue);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY:
-			setExternalConsistency((HighLow) newValue);
-			return;
+			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
+				setSuperType((BOSuperTypes)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
+				setLevelOfDetail((HighLow)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
+				setFrequencyOfChange((HighLow)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__MODULARITY:
+				setModularity((HighLow)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY:
+				setMaintainability((HighLow)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
+				setPrescriptive((HighLow)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
+				setLifecycleStage((LifecycleStage)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
+				setRepresentationFormat((String)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__TOOLING:
+				setTooling((String)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__VERSIONING:
+				setVersioning((String)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE:
+				setUpToDate((String)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY:
+				setInternalConsistency((HighLow)newValue);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY:
+				setExternalConsistency((HighLow)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -702,45 +689,45 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
-			setSuperType(SUPER_TYPE_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
-			setLevelOfDetail(LEVEL_OF_DETAIL_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
-			setFrequencyOfChange(FREQUENCY_OF_CHANGE_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__MODULARITY:
-			setModularity(MODULARITY_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY:
-			setMaintainability(MAINTAINABILITY_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
-			setPrescriptive(PRESCRIPTIVE_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
-			setLifecycleStage(LIFECYCLE_STAGE_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
-			setRepresentationFormat(REPRESENTATION_FORMAT_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__TOOLING:
-			setTooling(TOOLING_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__VERSIONING:
-			setVersioning(VERSIONING_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE:
-			setUpToDate(UP_TO_DATE_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY:
-			setInternalConsistency(INTERNAL_CONSISTENCY_EDEFAULT);
-			return;
-		case BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY:
-			setExternalConsistency(EXTERNAL_CONSISTENCY_EDEFAULT);
-			return;
+			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
+				setSuperType(SUPER_TYPE_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
+				setLevelOfDetail(LEVEL_OF_DETAIL_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
+				setFrequencyOfChange(FREQUENCY_OF_CHANGE_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__MODULARITY:
+				setModularity(MODULARITY_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY:
+				setMaintainability(MAINTAINABILITY_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
+				setPrescriptive(PRESCRIPTIVE_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
+				setLifecycleStage(LIFECYCLE_STAGE_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
+				setRepresentationFormat(REPRESENTATION_FORMAT_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__TOOLING:
+				setTooling(TOOLING_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__VERSIONING:
+				setVersioning(VERSIONING_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE:
+				setUpToDate(UP_TO_DATE_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY:
+				setInternalConsistency(INTERNAL_CONSISTENCY_EDEFAULT);
+				return;
+			case BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY:
+				setExternalConsistency(EXTERNAL_CONSISTENCY_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -753,33 +740,32 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
-			return superType != SUPER_TYPE_EDEFAULT;
-		case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
-			return levelOfDetail != LEVEL_OF_DETAIL_EDEFAULT;
-		case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
-			return frequencyOfChange != FREQUENCY_OF_CHANGE_EDEFAULT;
-		case BomiPackage.BOUNDARY_OBJECT__MODULARITY:
-			return modularity != MODULARITY_EDEFAULT;
-		case BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY:
-			return maintainability != MAINTAINABILITY_EDEFAULT;
-		case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
-			return prescriptive != PRESCRIPTIVE_EDEFAULT;
-		case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
-			return lifecycleStage != LIFECYCLE_STAGE_EDEFAULT;
-		case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
-			return REPRESENTATION_FORMAT_EDEFAULT == null ? representationFormat != null
-					: !REPRESENTATION_FORMAT_EDEFAULT.equals(representationFormat);
-		case BomiPackage.BOUNDARY_OBJECT__TOOLING:
-			return TOOLING_EDEFAULT == null ? tooling != null : !TOOLING_EDEFAULT.equals(tooling);
-		case BomiPackage.BOUNDARY_OBJECT__VERSIONING:
-			return VERSIONING_EDEFAULT == null ? versioning != null : !VERSIONING_EDEFAULT.equals(versioning);
-		case BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE:
-			return UP_TO_DATE_EDEFAULT == null ? upToDate != null : !UP_TO_DATE_EDEFAULT.equals(upToDate);
-		case BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY:
-			return internalConsistency != INTERNAL_CONSISTENCY_EDEFAULT;
-		case BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY:
-			return externalConsistency != EXTERNAL_CONSISTENCY_EDEFAULT;
+			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
+				return superType != SUPER_TYPE_EDEFAULT;
+			case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
+				return levelOfDetail != LEVEL_OF_DETAIL_EDEFAULT;
+			case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
+				return frequencyOfChange != FREQUENCY_OF_CHANGE_EDEFAULT;
+			case BomiPackage.BOUNDARY_OBJECT__MODULARITY:
+				return modularity != MODULARITY_EDEFAULT;
+			case BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY:
+				return maintainability != MAINTAINABILITY_EDEFAULT;
+			case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
+				return prescriptive != PRESCRIPTIVE_EDEFAULT;
+			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
+				return lifecycleStage != LIFECYCLE_STAGE_EDEFAULT;
+			case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
+				return REPRESENTATION_FORMAT_EDEFAULT == null ? representationFormat != null : !REPRESENTATION_FORMAT_EDEFAULT.equals(representationFormat);
+			case BomiPackage.BOUNDARY_OBJECT__TOOLING:
+				return TOOLING_EDEFAULT == null ? tooling != null : !TOOLING_EDEFAULT.equals(tooling);
+			case BomiPackage.BOUNDARY_OBJECT__VERSIONING:
+				return VERSIONING_EDEFAULT == null ? versioning != null : !VERSIONING_EDEFAULT.equals(versioning);
+			case BomiPackage.BOUNDARY_OBJECT__UP_TO_DATE:
+				return UP_TO_DATE_EDEFAULT == null ? upToDate != null : !UP_TO_DATE_EDEFAULT.equals(upToDate);
+			case BomiPackage.BOUNDARY_OBJECT__INTERNAL_CONSISTENCY:
+				return internalConsistency != INTERNAL_CONSISTENCY_EDEFAULT;
+			case BomiPackage.BOUNDARY_OBJECT__EXTERNAL_CONSISTENCY:
+				return externalConsistency != EXTERNAL_CONSISTENCY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -791,8 +777,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (superType: ");

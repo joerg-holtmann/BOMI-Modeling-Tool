@@ -68,17 +68,17 @@ public class BomiActionBarContributor extends EditingDomainActionBarContributor 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IAction showPropertiesViewAction = new Action(
-			BomiEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
-		@Override
-		public void run() {
-			try {
-				getPage().showView("org.eclipse.ui.views.PropertySheet");
-			} catch (PartInitException exception) {
-				BomiEditorPlugin.INSTANCE.log(exception);
+	protected IAction showPropertiesViewAction = new Action(BomiEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+			@Override
+			public void run() {
+				try {
+					getPage().showView("org.eclipse.ui.views.PropertySheet");
+				}
+				catch (PartInitException exception) {
+					BomiEditorPlugin.INSTANCE.log(exception);
+				}
 			}
-		}
-	};
+		};
 
 	/**
 	 * This action refreshes the viewer of the current editor if the editor
@@ -87,23 +87,22 @@ public class BomiActionBarContributor extends EditingDomainActionBarContributor 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IAction refreshViewerAction = new Action(
-			BomiEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
-		@Override
-		public boolean isEnabled() {
-			return activeEditorPart instanceof IViewerProvider;
-		}
+	protected IAction refreshViewerAction = new Action(BomiEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+			@Override
+			public boolean isEnabled() {
+				return activeEditorPart instanceof IViewerProvider;
+			}
 
-		@Override
-		public void run() {
-			if (activeEditorPart instanceof IViewerProvider) {
-				Viewer viewer = ((IViewerProvider) activeEditorPart).getViewer();
-				if (viewer != null) {
-					viewer.refresh();
+			@Override
+			public void run() {
+				if (activeEditorPart instanceof IViewerProvider) {
+					Viewer viewer = ((IViewerProvider)activeEditorPart).getViewer();
+					if (viewer != null) {
+						viewer.refresh();
+					}
 				}
 			}
-		}
-	};
+		};
 
 	/**
 	 * This will contain one {@link org.eclipse.emf.edit.ui.action.CreateChildAction} corresponding to each descriptor
@@ -176,8 +175,7 @@ public class BomiActionBarContributor extends EditingDomainActionBarContributor 
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(BomiEditorPlugin.INSTANCE.getString("_UI_BomiEditor_menu"),
-				"se.gu.cse.idxse.bomiMenuID");
+		IMenuManager submenuManager = new MenuManager(BomiEditorPlugin.INSTANCE.getString("_UI_BomiEditor_menu"), "se.gu.cse.idxse.bomiMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
@@ -196,11 +194,12 @@ public class BomiActionBarContributor extends EditingDomainActionBarContributor 
 
 		// Force an update because Eclipse hides empty menus now.
 		//
-		submenuManager.addMenuListener(new IMenuListener() {
-			public void menuAboutToShow(IMenuManager menuManager) {
-				menuManager.updateAll(true);
-			}
-		});
+		submenuManager.addMenuListener
+			(new IMenuListener() {
+				 public void menuAboutToShow(IMenuManager menuManager) {
+					 menuManager.updateAll(true);
+				 }
+			 });
 
 		addGlobalActions(submenuManager);
 	}
@@ -223,7 +222,8 @@ public class BomiActionBarContributor extends EditingDomainActionBarContributor 
 		}
 		if (part == null) {
 			selectionProvider = null;
-		} else {
+		}
+		else {
 			selectionProvider = part.getSite().getSelectionProvider();
 			selectionProvider.addSelectionChangedListener(this);
 
@@ -259,10 +259,10 @@ public class BomiActionBarContributor extends EditingDomainActionBarContributor 
 		Collection<?> newSiblingDescriptors = null;
 
 		ISelection selection = event.getSelection();
-		if (selection instanceof IStructuredSelection && ((IStructuredSelection) selection).size() == 1) {
-			Object object = ((IStructuredSelection) selection).getFirstElement();
+		if (selection instanceof IStructuredSelection && ((IStructuredSelection)selection).size() == 1) {
+			Object object = ((IStructuredSelection)selection).getFirstElement();
 
-			EditingDomain domain = ((IEditingDomainProvider) activeEditorPart).getEditingDomain();
+			EditingDomain domain = ((IEditingDomainProvider)activeEditorPart).getEditingDomain();
 
 			newChildDescriptors = domain.getNewChildDescriptors(object, null);
 			newSiblingDescriptors = domain.getNewChildDescriptors(null, object);
@@ -332,7 +332,8 @@ public class BomiActionBarContributor extends EditingDomainActionBarContributor 
 			for (IAction action : actions) {
 				if (contributionID != null) {
 					manager.insertBefore(contributionID, action);
-				} else {
+				}
+				else {
 					manager.add(action);
 				}
 			}
@@ -354,13 +355,13 @@ public class BomiActionBarContributor extends EditingDomainActionBarContributor 
 				//
 				IContributionItem contributionItem = items[i];
 				while (contributionItem instanceof SubContributionItem) {
-					contributionItem = ((SubContributionItem) contributionItem).getInnerItem();
+					contributionItem = ((SubContributionItem)contributionItem).getInnerItem();
 				}
 
 				// Delete the ActionContributionItems with matching action.
 				//
 				if (contributionItem instanceof ActionContributionItem) {
-					IAction action = ((ActionContributionItem) contributionItem).getAction();
+					IAction action = ((ActionContributionItem)contributionItem).getAction();
 					if (actions.contains(action)) {
 						manager.remove(contributionItem);
 					}
@@ -400,7 +401,7 @@ public class BomiActionBarContributor extends EditingDomainActionBarContributor 
 		menuManager.insertAfter("additions-end", new Separator("ui-actions"));
 		menuManager.insertAfter("ui-actions", showPropertiesViewAction);
 
-		refreshViewerAction.setEnabled(refreshViewerAction.isEnabled());
+		refreshViewerAction.setEnabled(refreshViewerAction.isEnabled());		
 		menuManager.insertAfter("ui-actions", refreshViewerAction);
 
 		super.addGlobalActions(menuManager);

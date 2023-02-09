@@ -59,13 +59,19 @@ public class UsageAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	protected void addAccessabilityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_UsageAssociation_accessability_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_UsageAssociation_accessability_feature",
-								"_UI_UsageAssociation_type"),
-						BomiPackage.Literals.USAGE_ASSOCIATION__ACCESSABILITY, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UsageAssociation_accessability_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UsageAssociation_accessability_feature", "_UI_UsageAssociation_type"),
+				 BomiPackage.Literals.USAGE_ASSOCIATION__ACCESSABILITY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -75,13 +81,19 @@ public class UsageAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	protected void addStabilityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_UsageAssociation_stability_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_UsageAssociation_stability_feature",
-								"_UI_UsageAssociation_type"),
-						BomiPackage.Literals.USAGE_ASSOCIATION__STABILITY, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UsageAssociation_stability_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UsageAssociation_stability_feature", "_UI_UsageAssociation_type"),
+				 BomiPackage.Literals.USAGE_ASSOCIATION__STABILITY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -91,13 +103,19 @@ public class UsageAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	protected void addCriticalityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_UsageAssociation_criticality_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_UsageAssociation_criticality_feature",
-								"_UI_UsageAssociation_type"),
-						BomiPackage.Literals.USAGE_ASSOCIATION__CRITICALITY, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UsageAssociation_criticality_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UsageAssociation_criticality_feature", "_UI_UsageAssociation_type"),
+				 BomiPackage.Literals.USAGE_ASSOCIATION__CRITICALITY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -107,24 +125,19 @@ public class UsageAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	protected void addFitForPurposePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_UsageAssociation_fitForPurpose_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_UsageAssociation_fitForPurpose_feature",
-								"_UI_UsageAssociation_type"),
-						BomiPackage.Literals.USAGE_ASSOCIATION__FIT_FOR_PURPOSE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This returns UsageAssociation.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/UsageAssociation"));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UsageAssociation_fitForPurpose_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UsageAssociation_fitForPurpose_feature", "_UI_UsageAssociation_type"),
+				 BomiPackage.Literals.USAGE_ASSOCIATION__FIT_FOR_PURPOSE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -145,9 +158,10 @@ public class UsageAssociationItemProvider extends AssociationItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((UsageAssociation) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_UsageAssociation_type")
-				: getString("_UI_UsageAssociation_type") + " " + label;
+		String label = ((UsageAssociation)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_UsageAssociation_type") :
+			getString("_UI_UsageAssociation_type") + " " + label;
 	}
 
 	/**
@@ -162,12 +176,12 @@ public class UsageAssociationItemProvider extends AssociationItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UsageAssociation.class)) {
-		case BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY:
-		case BomiPackage.USAGE_ASSOCIATION__STABILITY:
-		case BomiPackage.USAGE_ASSOCIATION__CRITICALITY:
-		case BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+			case BomiPackage.USAGE_ASSOCIATION__ACCESSABILITY:
+			case BomiPackage.USAGE_ASSOCIATION__STABILITY:
+			case BomiPackage.USAGE_ASSOCIATION__CRITICALITY:
+			case BomiPackage.USAGE_ASSOCIATION__FIT_FOR_PURPOSE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}

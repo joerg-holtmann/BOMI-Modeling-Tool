@@ -60,8 +60,7 @@ public class BOMICoordinationImpl extends UsageAssociationImpl implements BOMICo
 	 */
 	public EList<MethodologicalIsland> getMethodologicalIslands() {
 		if (methodologicalIslands == null) {
-			methodologicalIslands = new EObjectResolvingEList<MethodologicalIsland>(MethodologicalIsland.class, this,
-					BomiPackage.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS);
+			methodologicalIslands = new EObjectResolvingEList<MethodologicalIsland>(MethodologicalIsland.class, this, BomiPackage.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS);
 		}
 		return methodologicalIslands;
 	}
@@ -74,8 +73,8 @@ public class BOMICoordinationImpl extends UsageAssociationImpl implements BOMICo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BomiPackage.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS:
-			return getMethodologicalIslands();
+			case BomiPackage.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS:
+				return getMethodologicalIslands();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -89,10 +88,10 @@ public class BOMICoordinationImpl extends UsageAssociationImpl implements BOMICo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BomiPackage.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS:
-			getMethodologicalIslands().clear();
-			getMethodologicalIslands().addAll((Collection<? extends MethodologicalIsland>) newValue);
-			return;
+			case BomiPackage.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS:
+				getMethodologicalIslands().clear();
+				getMethodologicalIslands().addAll((Collection<? extends MethodologicalIsland>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -105,9 +104,9 @@ public class BOMICoordinationImpl extends UsageAssociationImpl implements BOMICo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BomiPackage.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS:
-			getMethodologicalIslands().clear();
-			return;
+			case BomiPackage.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS:
+				getMethodologicalIslands().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -120,8 +119,8 @@ public class BOMICoordinationImpl extends UsageAssociationImpl implements BOMICo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BomiPackage.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS:
-			return methodologicalIslands != null && !methodologicalIslands.isEmpty();
+			case BomiPackage.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS:
+				return methodologicalIslands != null && !methodologicalIslands.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -55,12 +55,19 @@ public class RoleItemProvider extends NamedElementItemProvider {
 	 * @generated
 	 */
 	protected void addPartOfGovernanceTeamsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Role_partOfGovernanceTeams_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Role_partOfGovernanceTeams_feature",
-								"_UI_Role_type"),
-						BomiPackage.Literals.ROLE__PART_OF_GOVERNANCE_TEAMS, true, false, true, null, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Role_partOfGovernanceTeams_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Role_partOfGovernanceTeams_feature", "_UI_Role_type"),
+				 BomiPackage.Literals.ROLE__PART_OF_GOVERNANCE_TEAMS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -70,11 +77,19 @@ public class RoleItemProvider extends NamedElementItemProvider {
 	 * @generated
 	 */
 	protected void addPartOfMIsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Role_partOfMIs_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Role_partOfMIs_feature", "_UI_Role_type"),
-						BomiPackage.Literals.ROLE__PART_OF_MIS, true, false, true, null, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Role_partOfMIs_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Role_partOfMIs_feature", "_UI_Role_type"),
+				 BomiPackage.Literals.ROLE__PART_OF_MIS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -106,9 +121,10 @@ public class RoleItemProvider extends NamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Role) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Role_type")
-				: getString("_UI_Role_type") + " " + label;
+		String label = ((Role)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Role_type") :
+			getString("_UI_Role_type") + " " + label;
 	}
 
 	/**

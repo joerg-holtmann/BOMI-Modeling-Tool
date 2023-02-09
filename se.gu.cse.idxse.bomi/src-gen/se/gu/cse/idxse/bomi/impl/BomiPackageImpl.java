@@ -19,18 +19,16 @@ import se.gu.cse.idxse.bomi.BOTeamGovernance;
 import se.gu.cse.idxse.bomi.BomiFactory;
 import se.gu.cse.idxse.bomi.BomiPackage;
 import se.gu.cse.idxse.bomi.BoundaryObject;
-import se.gu.cse.idxse.bomi.DistanceTypes;
 import se.gu.cse.idxse.bomi.Driver;
-import se.gu.cse.idxse.bomi.DriverTypes;
 import se.gu.cse.idxse.bomi.GovernanceTeam;
 import se.gu.cse.idxse.bomi.HighLow;
 import se.gu.cse.idxse.bomi.LifecycleStage;
 import se.gu.cse.idxse.bomi.MIType;
 import se.gu.cse.idxse.bomi.MethodologicalIsland;
-import se.gu.cse.idxse.bomi.MyBoolean;
 import se.gu.cse.idxse.bomi.NamedElement;
 import se.gu.cse.idxse.bomi.PurposedElement;
 import se.gu.cse.idxse.bomi.Role;
+import se.gu.cse.idxse.bomi.UnsettableBoolean;
 import se.gu.cse.idxse.bomi.UsageAssociation;
 
 /**
@@ -164,21 +162,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum driverTypesEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum distanceTypesEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum myBooleanEEnum = null;
+	private EEnum unsettableBooleanEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -219,14 +203,11 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public static BomiPackage init() {
-		if (isInited)
-			return (BomiPackage) EPackage.Registry.INSTANCE.getEPackage(BomiPackage.eNS_URI);
+		if (isInited) return (BomiPackage)EPackage.Registry.INSTANCE.getEPackage(BomiPackage.eNS_URI);
 
 		// Obtain or create and register package
 		Object registeredBomiPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		BomiPackageImpl theBomiPackage = registeredBomiPackage instanceof BomiPackageImpl
-				? (BomiPackageImpl) registeredBomiPackage
-				: new BomiPackageImpl();
+		BomiPackageImpl theBomiPackage = registeredBomiPackage instanceof BomiPackageImpl ? (BomiPackageImpl)registeredBomiPackage : new BomiPackageImpl();
 
 		isInited = true;
 
@@ -259,7 +240,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_SuperType() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -268,7 +249,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_LevelOfDetail() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -277,7 +258,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_FrequencyOfChange() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -286,7 +267,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_Modularity() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -295,7 +276,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_Maintainability() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -304,7 +285,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_Prescriptive() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -313,7 +294,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_LifecycleStage() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -322,7 +303,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_RepresentationFormat() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -331,7 +312,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_Tooling() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -340,7 +321,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_Versioning() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(9);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -349,7 +330,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_UpToDate() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(10);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -358,7 +339,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_InternalConsistency() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(11);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -367,7 +348,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBoundaryObject_ExternalConsistency() {
-		return (EAttribute) boundaryObjectEClass.getEStructuralFeatures().get(12);
+		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -385,7 +366,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getRole_PartOfGovernanceTeams() {
-		return (EReference) roleEClass.getEStructuralFeatures().get(0);
+		return (EReference)roleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -394,7 +375,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getRole_PartOfMIs() {
-		return (EReference) roleEClass.getEStructuralFeatures().get(1);
+		return (EReference)roleEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -412,7 +393,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getNamedElement_Name() {
-		return (EAttribute) namedElementEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -430,7 +411,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getBORoleInteraction_Roles() {
-		return (EReference) boRoleInteractionEClass.getEStructuralFeatures().get(0);
+		return (EReference)boRoleInteractionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -439,7 +420,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBORoleInteraction_Responsible() {
-		return (EAttribute) boRoleInteractionEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)boRoleInteractionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -448,7 +429,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBORoleInteraction_Creates() {
-		return (EAttribute) boRoleInteractionEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)boRoleInteractionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -457,7 +438,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBORoleInteraction_Reads() {
-		return (EAttribute) boRoleInteractionEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)boRoleInteractionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -466,7 +447,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBORoleInteraction_Updates() {
-		return (EAttribute) boRoleInteractionEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)boRoleInteractionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -475,7 +456,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBORoleInteraction_Deletes() {
-		return (EAttribute) boRoleInteractionEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)boRoleInteractionEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -493,7 +474,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getBOMIModel_BoRoleInteractions() {
-		return (EReference) bomiModelEClass.getEStructuralFeatures().get(0);
+		return (EReference)bomiModelEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -502,7 +483,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getBOMIModel_BoundaryObjects() {
-		return (EReference) bomiModelEClass.getEStructuralFeatures().get(1);
+		return (EReference)bomiModelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -511,7 +492,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getBOMIModel_Roles() {
-		return (EReference) bomiModelEClass.getEStructuralFeatures().get(2);
+		return (EReference)bomiModelEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -520,7 +501,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getBOMIModel_BoMiCoordinations() {
-		return (EReference) bomiModelEClass.getEStructuralFeatures().get(3);
+		return (EReference)bomiModelEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -529,7 +510,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getBOMIModel_MethodologicalIslands() {
-		return (EReference) bomiModelEClass.getEStructuralFeatures().get(4);
+		return (EReference)bomiModelEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -538,7 +519,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getBOMIModel_GovernanceTeams() {
-		return (EReference) bomiModelEClass.getEStructuralFeatures().get(5);
+		return (EReference)bomiModelEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -547,7 +528,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getBOMIModel_BoTeamGovernances() {
-		return (EReference) bomiModelEClass.getEStructuralFeatures().get(6);
+		return (EReference)bomiModelEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -556,7 +537,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getBOMIModel_Drivers() {
-		return (EReference) bomiModelEClass.getEStructuralFeatures().get(7);
+		return (EReference)bomiModelEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -574,7 +555,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getMethodologicalIsland_Type() {
-		return (EAttribute) methodologicalIslandEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)methodologicalIslandEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -592,7 +573,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getUsageAssociation_Accessability() {
-		return (EAttribute) usageAssociationEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)usageAssociationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -601,7 +582,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getUsageAssociation_Stability() {
-		return (EAttribute) usageAssociationEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)usageAssociationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -610,7 +591,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getUsageAssociation_Criticality() {
-		return (EAttribute) usageAssociationEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)usageAssociationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -619,7 +600,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getUsageAssociation_FitForPurpose() {
-		return (EAttribute) usageAssociationEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)usageAssociationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -637,7 +618,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getBOMICoordination_MethodologicalIslands() {
-		return (EReference) bomiCoordinationEClass.getEStructuralFeatures().get(0);
+		return (EReference)bomiCoordinationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -664,7 +645,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBOTeamGovernance_CoordinationMechanism() {
-		return (EAttribute) boTeamGovernanceEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)boTeamGovernanceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -673,7 +654,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getBOTeamGovernance_FrequencyOfCoordination() {
-		return (EAttribute) boTeamGovernanceEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)boTeamGovernanceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -682,7 +663,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getBOTeamGovernance_GovernanceTeams() {
-		return (EReference) boTeamGovernanceEClass.getEStructuralFeatures().get(2);
+		return (EReference)boTeamGovernanceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -700,7 +681,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getAssociation_BoundaryObjects() {
-		return (EReference) associationEClass.getEStructuralFeatures().get(0);
+		return (EReference)associationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -717,8 +698,8 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDriver_DriverType() {
-		return (EAttribute) driverEClass.getEStructuralFeatures().get(0);
+	public EAttribute getDriver_DriverTypeTechnology() {
+		return (EAttribute)driverEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -726,8 +707,44 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDriver_DistanceType() {
-		return (EAttribute) driverEClass.getEStructuralFeatures().get(1);
+	public EAttribute getDriver_DriverTypeProcess() {
+		return (EAttribute)driverEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDriver_DriverTypeOrganizational() {
+		return (EAttribute)driverEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDriver_DistanceTypeCultural() {
+		return (EAttribute)driverEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDriver_DistanceTypeGeographical() {
+		return (EAttribute)driverEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDriver_DistanceTypeOrganizational() {
+		return (EAttribute)driverEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -736,7 +753,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getDriver_DistanceSize() {
-		return (EAttribute) driverEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)driverEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -745,7 +762,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EReference getDriver_DrivesMIs() {
-		return (EReference) driverEClass.getEStructuralFeatures().get(3);
+		return (EReference)driverEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -763,7 +780,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getPurposedElement_Purpose() {
-		return (EAttribute) purposedElementEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)purposedElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -807,26 +824,8 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getDriverTypes() {
-		return driverTypesEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getDistanceTypes() {
-		return distanceTypesEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getMyBoolean() {
-		return myBooleanEEnum;
+	public EEnum getUnsettableBoolean() {
+		return unsettableBooleanEEnum;
 	}
 
 	/**
@@ -835,7 +834,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public BomiFactory getBomiFactory() {
-		return (BomiFactory) getEFactoryInstance();
+		return (BomiFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -853,8 +852,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public void createPackageContents() {
-		if (isCreated)
-			return;
+		if (isCreated) return;
 		isCreated = true;
 
 		// Create classes and their features
@@ -921,8 +919,12 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		createEReference(associationEClass, ASSOCIATION__BOUNDARY_OBJECTS);
 
 		driverEClass = createEClass(DRIVER);
-		createEAttribute(driverEClass, DRIVER__DRIVER_TYPE);
-		createEAttribute(driverEClass, DRIVER__DISTANCE_TYPE);
+		createEAttribute(driverEClass, DRIVER__DRIVER_TYPE_TECHNOLOGY);
+		createEAttribute(driverEClass, DRIVER__DRIVER_TYPE_PROCESS);
+		createEAttribute(driverEClass, DRIVER__DRIVER_TYPE_ORGANIZATIONAL);
+		createEAttribute(driverEClass, DRIVER__DISTANCE_TYPE_CULTURAL);
+		createEAttribute(driverEClass, DRIVER__DISTANCE_TYPE_GEOGRAPHICAL);
+		createEAttribute(driverEClass, DRIVER__DISTANCE_TYPE_ORGANIZATIONAL);
 		createEAttribute(driverEClass, DRIVER__DISTANCE_SIZE);
 		createEReference(driverEClass, DRIVER__DRIVES_MIS);
 
@@ -934,9 +936,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		lifecycleStageEEnum = createEEnum(LIFECYCLE_STAGE);
 		highLowEEnum = createEEnum(HIGH_LOW);
 		miTypeEEnum = createEEnum(MI_TYPE);
-		driverTypesEEnum = createEEnum(DRIVER_TYPES);
-		distanceTypesEEnum = createEEnum(DISTANCE_TYPES);
-		myBooleanEEnum = createEEnum(MY_BOOLEAN);
+		unsettableBooleanEEnum = createEEnum(UNSETTABLE_BOOLEAN);
 	}
 
 	/**
@@ -954,8 +954,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public void initializePackageContents() {
-		if (isInitialized)
-			return;
+		if (isInitialized) return;
 		isInitialized = true;
 
 		// Initialize package
@@ -981,171 +980,80 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		purposedElementEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(boundaryObjectEClass, BoundaryObject.class, "BoundaryObject", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBoundaryObject_SuperType(), this.getBOSuperTypes(), "superType", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_LevelOfDetail(), this.getHighLow(), "levelOfDetail", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_FrequencyOfChange(), this.getHighLow(), "frequencyOfChange", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_Modularity(), this.getHighLow(), "modularity", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_Maintainability(), this.getHighLow(), "maintainability", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_Prescriptive(), this.getHighLow(), "prescriptive", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_LifecycleStage(), this.getLifecycleStage(), "lifecycleStage", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_RepresentationFormat(), ecorePackage.getEString(), "representationFormat",
-				null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_Tooling(), ecorePackage.getEString(), "tooling", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_Versioning(), ecorePackage.getEString(), "versioning", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_UpToDate(), ecorePackage.getEString(), "upToDate", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_InternalConsistency(), this.getHighLow(), "internalConsistency", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_ExternalConsistency(), this.getHighLow(), "externalConsistency", null, 0, 1,
-				BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEClass(boundaryObjectEClass, BoundaryObject.class, "BoundaryObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBoundaryObject_SuperType(), this.getBOSuperTypes(), "superType", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_LevelOfDetail(), this.getHighLow(), "levelOfDetail", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_FrequencyOfChange(), this.getHighLow(), "frequencyOfChange", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_Modularity(), this.getHighLow(), "modularity", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_Maintainability(), this.getHighLow(), "maintainability", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_Prescriptive(), this.getHighLow(), "prescriptive", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_LifecycleStage(), this.getLifecycleStage(), "lifecycleStage", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_RepresentationFormat(), ecorePackage.getEString(), "representationFormat", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_Tooling(), ecorePackage.getEString(), "tooling", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_Versioning(), ecorePackage.getEString(), "versioning", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_UpToDate(), ecorePackage.getEString(), "upToDate", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_InternalConsistency(), this.getHighLow(), "internalConsistency", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_ExternalConsistency(), this.getHighLow(), "externalConsistency", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRole_PartOfGovernanceTeams(), this.getGovernanceTeam(), null, "partOfGovernanceTeams", null,
-				0, -1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRole_PartOfMIs(), this.getMethodologicalIsland(), null, "partOfMIs", null, 0, -1, Role.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRole_PartOfGovernanceTeams(), this.getGovernanceTeam(), null, "partOfGovernanceTeams", null, 0, -1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRole_PartOfMIs(), this.getMethodologicalIsland(), null, "partOfMIs", null, 0, -1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(boRoleInteractionEClass, BORoleInteraction.class, "BORoleInteraction", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBORoleInteraction_Roles(), this.getRole(), null, "roles", null, 0, -1,
-				BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBORoleInteraction_Responsible(), this.getMyBoolean(), "responsible", null, 0, 1,
-				BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBORoleInteraction_Creates(), this.getMyBoolean(), "creates", null, 0, 1,
-				BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBORoleInteraction_Reads(), this.getMyBoolean(), "reads", null, 0, 1, BORoleInteraction.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBORoleInteraction_Updates(), this.getMyBoolean(), "updates", null, 0, 1,
-				BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBORoleInteraction_Deletes(), this.getMyBoolean(), "deletes", null, 0, 1,
-				BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEClass(boRoleInteractionEClass, BORoleInteraction.class, "BORoleInteraction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBORoleInteraction_Roles(), this.getRole(), null, "roles", null, 0, -1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBORoleInteraction_Responsible(), this.getUnsettableBoolean(), "responsible", null, 0, 1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBORoleInteraction_Creates(), this.getUnsettableBoolean(), "creates", null, 0, 1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBORoleInteraction_Reads(), this.getUnsettableBoolean(), "reads", null, 0, 1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBORoleInteraction_Updates(), this.getUnsettableBoolean(), "updates", null, 0, 1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBORoleInteraction_Deletes(), this.getUnsettableBoolean(), "deletes", null, 0, 1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(bomiModelEClass, BOMIModel.class, "BOMIModel", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBOMIModel_BoRoleInteractions(), this.getBORoleInteraction(), null, "boRoleInteractions", null,
-				0, -1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBOMIModel_BoundaryObjects(), this.getBoundaryObject(), null, "boundaryObjects", null, 0, -1,
-				BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBOMIModel_Roles(), this.getRole(), null, "roles", null, 0, -1, BOMIModel.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getBOMIModel_BoMiCoordinations(), this.getBOMICoordination(), null, "boMiCoordinations", null, 0,
-				-1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBOMIModel_MethodologicalIslands(), this.getMethodologicalIsland(), null,
-				"methodologicalIslands", null, 0, -1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBOMIModel_GovernanceTeams(), this.getGovernanceTeam(), null, "governanceTeams", null, 0, -1,
-				BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBOMIModel_BoTeamGovernances(), this.getBOTeamGovernance(), null, "boTeamGovernances", null, 0,
-				-1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBOMIModel_Drivers(), this.getDriver(), null, "drivers", null, 0, -1, BOMIModel.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(bomiModelEClass, BOMIModel.class, "BOMIModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBOMIModel_BoRoleInteractions(), this.getBORoleInteraction(), null, "boRoleInteractions", null, 0, -1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBOMIModel_BoundaryObjects(), this.getBoundaryObject(), null, "boundaryObjects", null, 0, -1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBOMIModel_Roles(), this.getRole(), null, "roles", null, 0, -1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBOMIModel_BoMiCoordinations(), this.getBOMICoordination(), null, "boMiCoordinations", null, 0, -1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBOMIModel_MethodologicalIslands(), this.getMethodologicalIsland(), null, "methodologicalIslands", null, 0, -1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBOMIModel_GovernanceTeams(), this.getGovernanceTeam(), null, "governanceTeams", null, 0, -1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBOMIModel_BoTeamGovernances(), this.getBOTeamGovernance(), null, "boTeamGovernances", null, 0, -1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBOMIModel_Drivers(), this.getDriver(), null, "drivers", null, 0, -1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(methodologicalIslandEClass, MethodologicalIsland.class, "MethodologicalIsland", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMethodologicalIsland_Type(), this.getMIType(), "type", null, 0, 1, MethodologicalIsland.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(methodologicalIslandEClass, MethodologicalIsland.class, "MethodologicalIsland", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMethodologicalIsland_Type(), this.getMIType(), "type", null, 0, 1, MethodologicalIsland.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(usageAssociationEClass, UsageAssociation.class, "UsageAssociation", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getUsageAssociation_Accessability(), this.getHighLow(), "accessability", null, 0, 1,
-				UsageAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsageAssociation_Stability(), this.getHighLow(), "stability", null, 0, 1,
-				UsageAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsageAssociation_Criticality(), this.getHighLow(), "criticality", null, 0, 1,
-				UsageAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsageAssociation_FitForPurpose(), this.getHighLow(), "fitForPurpose", null, 0, 1,
-				UsageAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEClass(usageAssociationEClass, UsageAssociation.class, "UsageAssociation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUsageAssociation_Accessability(), this.getHighLow(), "accessability", null, 0, 1, UsageAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsageAssociation_Stability(), this.getHighLow(), "stability", null, 0, 1, UsageAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsageAssociation_Criticality(), this.getHighLow(), "criticality", null, 0, 1, UsageAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsageAssociation_FitForPurpose(), this.getHighLow(), "fitForPurpose", null, 0, 1, UsageAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(bomiCoordinationEClass, BOMICoordination.class, "BOMICoordination", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBOMICoordination_MethodologicalIslands(), this.getMethodologicalIsland(), null,
-				"methodologicalIslands", null, 0, -1, BOMICoordination.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(bomiCoordinationEClass, BOMICoordination.class, "BOMICoordination", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBOMICoordination_MethodologicalIslands(), this.getMethodologicalIsland(), null, "methodologicalIslands", null, 0, -1, BOMICoordination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(governanceTeamEClass, GovernanceTeam.class, "GovernanceTeam", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
+		initEClass(governanceTeamEClass, GovernanceTeam.class, "GovernanceTeam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(boTeamGovernanceEClass, BOTeamGovernance.class, "BOTeamGovernance", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBOTeamGovernance_CoordinationMechanism(), ecorePackage.getEString(), "coordinationMechanism",
-				null, 0, 1, BOTeamGovernance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBOTeamGovernance_FrequencyOfCoordination(), this.getHighLow(), "frequencyOfCoordination",
-				null, 0, 1, BOTeamGovernance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBOTeamGovernance_GovernanceTeams(), this.getGovernanceTeam(), null, "governanceTeams", null,
-				0, -1, BOTeamGovernance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(boTeamGovernanceEClass, BOTeamGovernance.class, "BOTeamGovernance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBOTeamGovernance_CoordinationMechanism(), ecorePackage.getEString(), "coordinationMechanism", null, 0, 1, BOTeamGovernance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBOTeamGovernance_FrequencyOfCoordination(), this.getHighLow(), "frequencyOfCoordination", null, 0, 1, BOTeamGovernance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBOTeamGovernance_GovernanceTeams(), this.getGovernanceTeam(), null, "governanceTeams", null, 0, -1, BOTeamGovernance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(associationEClass, Association.class, "Association", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAssociation_BoundaryObjects(), this.getBoundaryObject(), null, "boundaryObjects", null, 0, -1,
-				Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(associationEClass, Association.class, "Association", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAssociation_BoundaryObjects(), this.getBoundaryObject(), null, "boundaryObjects", null, 0, -1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(driverEClass, Driver.class, "Driver", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDriver_DriverType(), this.getDriverTypes(), "driverType", null, 0, 1, Driver.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDriver_DistanceType(), this.getDistanceTypes(), "distanceType", null, 0, 1, Driver.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDriver_DistanceSize(), this.getHighLow(), "distanceSize", null, 0, 1, Driver.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDriver_DrivesMIs(), this.getMethodologicalIsland(), null, "drivesMIs", null, 0, -1,
-				Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDriver_DriverTypeTechnology(), this.getUnsettableBoolean(), "driverTypeTechnology", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDriver_DriverTypeProcess(), this.getUnsettableBoolean(), "driverTypeProcess", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDriver_DriverTypeOrganizational(), this.getUnsettableBoolean(), "driverTypeOrganizational", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDriver_DistanceTypeCultural(), this.getUnsettableBoolean(), "distanceTypeCultural", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDriver_DistanceTypeGeographical(), this.getUnsettableBoolean(), "distanceTypeGeographical", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDriver_DistanceTypeOrganizational(), this.getUnsettableBoolean(), "distanceTypeOrganizational", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDriver_DistanceSize(), this.getHighLow(), "distanceSize", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDriver_DrivesMIs(), this.getMethodologicalIsland(), null, "drivesMIs", null, 0, -1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(purposedElementEClass, PurposedElement.class, "PurposedElement", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPurposedElement_Purpose(), ecorePackage.getEString(), "purpose", null, 0, 1,
-				PurposedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEClass(purposedElementEClass, PurposedElement.class, "PurposedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPurposedElement_Purpose(), ecorePackage.getEString(), "purpose", null, 0, 1, PurposedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(boSuperTypesEEnum, BOSuperTypes.class, "BOSuperTypes");
@@ -1178,22 +1086,10 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		addEEnumLiteral(miTypeEEnum, MIType.DEPARTMENTS);
 		addEEnumLiteral(miTypeEEnum, MIType.ORGANIZATIONS);
 
-		initEEnum(driverTypesEEnum, DriverTypes.class, "DriverTypes");
-		addEEnumLiteral(driverTypesEEnum, DriverTypes.NOT_SET);
-		addEEnumLiteral(driverTypesEEnum, DriverTypes.TECHNOLOGY);
-		addEEnumLiteral(driverTypesEEnum, DriverTypes.PROCESS);
-		addEEnumLiteral(driverTypesEEnum, DriverTypes.ORGANIZATIONAL);
-
-		initEEnum(distanceTypesEEnum, DistanceTypes.class, "DistanceTypes");
-		addEEnumLiteral(distanceTypesEEnum, DistanceTypes.NOT_SET);
-		addEEnumLiteral(distanceTypesEEnum, DistanceTypes.CULTURAL);
-		addEEnumLiteral(distanceTypesEEnum, DistanceTypes.GEOGRAPHICAL);
-		addEEnumLiteral(distanceTypesEEnum, DistanceTypes.ORGANIZATIONAL);
-
-		initEEnum(myBooleanEEnum, MyBoolean.class, "MyBoolean");
-		addEEnumLiteral(myBooleanEEnum, MyBoolean.NOT_SET);
-		addEEnumLiteral(myBooleanEEnum, MyBoolean.TRUE);
-		addEEnumLiteral(myBooleanEEnum, MyBoolean.FALSE);
+		initEEnum(unsettableBooleanEEnum, UnsettableBoolean.class, "UnsettableBoolean");
+		addEEnumLiteral(unsettableBooleanEEnum, UnsettableBoolean.NOT_SET);
+		addEEnumLiteral(unsettableBooleanEEnum, UnsettableBoolean.TRUE);
+		addEEnumLiteral(unsettableBooleanEEnum, UnsettableBoolean.FALSE);
 
 		// Create resource
 		createResource(eNS_URI);
