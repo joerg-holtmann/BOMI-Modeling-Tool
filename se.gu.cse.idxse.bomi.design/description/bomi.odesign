@@ -16,10 +16,10 @@
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo((Deprecated/RetiredLifecycleStage)AndHighFrequencyChange)" level="WARNING" message="The boundary object has a later lifecycle but a high frequency of change." targetClass="bomi::BoundaryObject">
           <audits auditExpression="aql:not ((self.lifecycleStage = bomi::LifecycleStage::Deprecate or self.lifecycleStage = bomi::LifecycleStage::Retire) and self.frequencyOfChange = bomi::HighLow::High)"/>
         </ownedRules>
-        <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNoLowFitforpurpose" level="WARNING" message="The usage is not fit for purpose." targetClass="bomi::UsageAssociation">
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNoLowFitforpurpose" level="WARNING" message="The usage association is not fit for purpose." targetClass="bomi::UsageAssociation">
           <audits auditExpression="aql:self.fitForPurpose &lt;> bomi::HighLow::Low"/>
         </ownedRules>
-        <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNo(HighCriticalityAndLowStability)" level="WARNING" message="The usage has a high criticality but a low stability." targetClass="bomi::UsageAssociation">
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNo(HighCriticalityAndLowStability)" level="WARNING" message="The usage association has a high criticality but a low stability." targetClass="bomi::UsageAssociation">
           <audits auditExpression="aql:not (self.criticality = bomi::HighLow::High and self.stability = bomi::HighLow::Low)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(NoGovernanceTeam)" level="WARNING" message="The boundary object has no governance team." targetClass="bomi::BoundaryObject">
@@ -866,10 +866,10 @@
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo((Deprecated/RetiredLifecycleStage)AndHighFrequencyChange)" level="WARNING" message="The boundary object has a later lifecycle but a high frequency of change." targetClass="bomi::BoundaryObject">
           <audits auditExpression="aql:not ((self.lifecycleStage = bomi::LifecycleStage::Deprecate or self.lifecycleStage = bomi::LifecycleStage::Retire) and self.frequencyOfChange = bomi::HighLow::High)"/>
         </ownedRules>
-        <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNoLowFitforpurpose" level="WARNING" message="The usage is not fit for purpose." targetClass="bomi::UsageAssociation">
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNoLowFitforpurpose" level="WARNING" message="The usage association is not fit for purpose." targetClass="bomi::UsageAssociation">
           <audits auditExpression="aql:self.fitForPurpose &lt;> bomi::HighLow::Low"/>
         </ownedRules>
-        <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNo(HighCriticalityAndLowStability)" level="WARNING" message="The usage has a high criticality but a low stability." targetClass="bomi::UsageAssociation">
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNo(HighCriticalityAndLowStability)" level="WARNING" message="The usage association has a high criticality but a low stability." targetClass="bomi::UsageAssociation">
           <audits auditExpression="aql:not (self.criticality = bomi::HighLow::High and self.stability = bomi::HighLow::Low)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BOAtLeastOneResponsibleRole" level="WARNING" message="The boundary object has no responsible role." targetClass="bomi::BoundaryObject">
