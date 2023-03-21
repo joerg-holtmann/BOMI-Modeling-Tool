@@ -22,7 +22,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-se.gu.cse.idxse.bomi.text/src-gen/**
+/se.gu.cse.idxse.bomi.text/src-gen/**
 se.gu.cse.idxse.bomi.text.ide/src-gen/**
 se.gu.cse.idxse.bomi.text.ui/src-gen/**
 **/xtend-gen
