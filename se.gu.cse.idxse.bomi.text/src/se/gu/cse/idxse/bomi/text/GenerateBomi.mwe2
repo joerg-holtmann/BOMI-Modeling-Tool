@@ -7,7 +7,7 @@ var rootPath = ".."
 
 Workflow {
 	
-	component = XtextGenerator {
+	component = XtextGenerator {		
 		configuration = {
 			project = StandardProjectConfig {
 				baseName = "se.gu.cse.idxse.bomi.text"
@@ -50,6 +50,9 @@ Workflow {
 			junitSupport = {
 				junitVersion = "5"
 			}
+		}
+		cleaner = XtextDirectoryCleaner {
+			exclude = ".gitkeep"
 		}
 	}
 }
