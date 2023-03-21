@@ -24,4 +24,6 @@ hs_err_pid*
 
 
 /se.gu.cse.idxse.bomi.text/src-gen/*
+/se.gu.cse.idxse.bomi.text.ide/src-gen/*
+/se.gu.cse.idxse.bomi.text.ui/src-gen/*
 **/xtend-gen
