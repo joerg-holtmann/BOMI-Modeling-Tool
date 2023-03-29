@@ -1,4 +1,4 @@
-# BOMI-Views
+# BOMI Modeling Tools
 ## Setup the Development Workspace
 1. Get an <code>Eclipse Modeling Tools</code> for your operating system from <link>https://www.eclipse.org/downloads/packages/</link>
 1. Install all Sirius and Xtext Components via <code>Help</code> -> <code>Install New Software...</code>. In the corresponding wizard, select, e.g., <code>Latest Eclipse Simultaneous Release</code> in the topmost dropdown box. After loading has finished, type in <code>Sirius</code> and simply select and install all the resulting components. Do the same with typing <code>Xtext</code> and install the "Xtext Complete SDK". 
