@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bomi" nsURI="http://www.gu.se/bomi" nsPrefix="bomi">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="external consistency to other BOs"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EEnum" name="BOSuperTypes">
+    <eLiterals name="NOT_SET"/>
+    <eLiterals name="Standard" value="1" literal="Standard"/>
+    <eLiterals name="Technology" value="2"/>
+    <eLiterals name="Task" value="3"/>
+    <eLiterals name="Planning" value="4"/>
+    <eLiterals name="Value" value="5"/>
+    <eLiterals name="Product" value="6"/>
+    <eLiterals name="Other" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LifecycleStage">
+    <eLiterals name="NOT_SET"/>
+    <eLiterals name="Planning" value="1"/>
+    <eLiterals name="Operation" value="2"/>
+    <eLiterals name="Deprecate" value="3"/>
+    <eLiterals name="Retire" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="HighLow">
+    <eLiterals name="NOT_SET"/>
+    <eLiterals name="High" value="1"/>
+    <eLiterals name="Medium" value="2"/>
+    <eLiterals name="Low" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MIType">
+    <eLiterals name="NOT_SET"/>
+    <eLiterals name="Teams" value="1"/>
+    <eLiterals name="Silos" value="2">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Silos (Release Trains)"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="Departments" value="3"/>
+    <eLiterals name="Organizations" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="UnsettableBoolean">
+    <eLiterals name="NOT_SET"/>
+    <eLiterals name="True" value="1"/>
+    <eLiterals name="False" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundaryObject" eSuperTypes="#//PurposedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="superType" eType="#//BOSuperTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="levelOfDetail" eType="#//HighLow"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequencyOfChange" eType="#//HighLow"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modularity" eType="#//HighLow"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maintainability" eType="#//HighLow"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prescriptive" eType="#//HighLow"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lifecycleStage" eType="#//LifecycleStage"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="representationFormat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tooling" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="versioning" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="upToDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="internalConsistency" eType="#//HighLow"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalConsistency" eType="#//HighLow"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partOfGovernanceTeams"
+        upperBound="-1" eType="#//GovernanceTeam"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partOfMIs" upperBound="-1"
+        eType="#//MethodologicalIsland"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BORoleInteraction" eSuperTypes="#//UsageAssociation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
+        eType="#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responsible" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creates" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reads" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updates" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deletes" eType="#//UnsettableBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BOMIModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boRoleInteractions" upperBound="-1"
+        eType="#//BORoleInteraction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boundaryObjects" upperBound="-1"
+        eType="#//BoundaryObject" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
+        eType="#//Role" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boMiCoordinations" upperBound="-1"
+        eType="#//BOMICoordination" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodologicalIslands"
+        upperBound="-1" eType="#//MethodologicalIsland" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="governanceTeams" upperBound="-1"
+        eType="#//GovernanceTeam" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boTeamGovernances" upperBound="-1"
+        eType="#//BOTeamGovernance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drivers" upperBound="-1"
+        eType="#//Driver" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodologicalIsland" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//MIType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UsageAssociation" abstract="true" eSuperTypes="#//Association">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="accessability" eType="#//HighLow"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stability" eType="#//HighLow"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="criticality" eType="#//HighLow"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fitForPurpose" eType="#//HighLow"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BOMICoordination" eSuperTypes="#//UsageAssociation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodologicalIslands"
+        upperBound="-1" eType="#//MethodologicalIsland"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GovernanceTeam" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BOTeamGovernance" eSuperTypes="#//Association">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coordinationMechanism"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequencyOfCoordination"
+        eType="#//HighLow"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="governanceTeams" upperBound="-1"
+        eType="#//GovernanceTeam"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Association" abstract="true" eSuperTypes="#//PurposedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boundaryObjects" upperBound="-1"
+        eType="#//BoundaryObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Driver" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypeTechnology" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypeProcess" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypeOrganizational"
+        eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceTypeCultural" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceTypeGeographical"
+        eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceTypeOrganizational"
+        eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceSize" eType="#//HighLow"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drivesMIs" upperBound="-1"
+        eType="#//MethodologicalIsland"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PurposedElement" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
