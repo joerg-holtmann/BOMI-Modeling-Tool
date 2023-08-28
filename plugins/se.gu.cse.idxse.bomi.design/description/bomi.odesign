@@ -244,7 +244,7 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="Distance Types" preconditionExpression="aql:self.distanceTypes->size() > 0" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
+            <subNodeMappings name="Distance Types" preconditionExpression="aql:not self.distanceTypes->isEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
               <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Distance Types: ' + (if self.distanceTypes->includes(bomi::DistanceType::Cultural) then 'Cultural ' else '' endif) + (if self.distanceTypes->includes(bomi::DistanceType::Geographical) then 'Geographical ' else '' endif) + (if self.distanceTypes->includes(bomi::DistanceType::Organizational) then 'Organizational' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
@@ -758,8 +758,8 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="Distance Type" preconditionExpression="aql:self.distanceTypeCultural = bomi::UnsettableBoolean::True or self.distanceTypeGeographical = bomi::UnsettableBoolean::True or self.distanceTypeOrganizational = bomi::UnsettableBoolean::True" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
-              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Distance Type: ' + (if self.distanceTypeCultural = bomi::UnsettableBoolean::True then 'Cultural ' else '' endif) + (if self.distanceTypeGeographical = bomi::UnsettableBoolean::True then 'Geographical ' else '' endif) + (if self.distanceTypeOrganizational = bomi::UnsettableBoolean::True then 'Organizational' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Distance Types" preconditionExpression="aql:not self.distanceTypes->isEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Distance Types: ' + (if self.distanceTypes->includes(bomi::DistanceType::Cultural) then 'Cultural ' else '' endif) + (if self.distanceTypes->includes(bomi::DistanceType::Geographical) then 'Geographical ' else '' endif) + (if self.distanceTypes->includes(bomi::DistanceType::Organizational) then 'Organizational' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
