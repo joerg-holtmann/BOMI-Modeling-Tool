@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bomi="http://www.gu.se/bomi" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_-q7ZEKe3Ee2_pahSFK9j9Q" selectedViews="_N4vAAKe4Ee2_pahSFK9j9Q _r938oLwGEe2T5OoGyqWEpA _YaLeELwHEe2-v-bcPekdVw _jLTo4LwIEe2-v-bcPekdVw _hSAvgLwJEe2pU5peE6HnGg" version="15.0.0.202209061200">
+  <viewpoint:DAnalysis uid="_-q7ZEKe3Ee2_pahSFK9j9Q" selectedViews="_N4vAAKe4Ee2_pahSFK9j9Q _r938oLwGEe2T5OoGyqWEpA _YaLeELwHEe2-v-bcPekdVw _jLTo4LwIEe2-v-bcPekdVw _hSAvgLwJEe2pU5peE6HnGg" version="15.2.0.202303281325">
     <semanticResources>CompanyA_UserStories.bomi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_N4vAAKe4Ee2_pahSFK9j9Q">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vxYssKiNEe2qR8ezOHESAw" name="Company A User Story BOMI Detailed Diagram" repPath="#_vwps4KiNEe2qR8ezOHESAw" changeId="647d55b4-b266-40f2-86e2-f27cab933c9a">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vxYssKiNEe2qR8ezOHESAw" name="Company A User Story BOMI Detailed Diagram" repPath="#_vwps4KiNEe2qR8ezOHESAw" changeId="1693245141867">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']"/>
         <target xmi:type="bomi:BOMIModel" href="CompanyA_UserStories.bomi#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_r938oLwGEe2T5OoGyqWEpA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BO']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_xyxTcLwGEe2T5OoGyqWEpA" name="Company A User Story Boundary Object (BO) Diagram" repPath="#_xytpELwGEe2T5OoGyqWEpA" changeId="9258feb0-4e10-469d-b529-d1f57a00ff16">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_xyxTcLwGEe2T5OoGyqWEpA" name="Company A User Story Boundary Object (BO) Diagram" repPath="#_xytpELwGEe2T5OoGyqWEpA" changeId="1693245094269">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BO']/@ownedRepresentations[name='Boundary%20Object%20(BO)%20Diagram']"/>
         <target xmi:type="bomi:BOMIModel" href="CompanyA_UserStories.bomi#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_YaLeELwHEe2-v-bcPekdVw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Overview']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aEZkMLwHEe2-v-bcPekdVw" name="Company A User Story BOMI Overview Diagram" repPath="#_aES2gLwHEe2-v-bcPekdVw" changeId="a140c71b-4261-4370-afc7-4ce12947a82e">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aEZkMLwHEe2-v-bcPekdVw" name="Company A User Story BOMI Overview Diagram" repPath="#_aES2gLwHEe2-v-bcPekdVw" changeId="1693245094269">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']"/>
         <target xmi:type="bomi:BOMIModel" href="CompanyA_UserStories.bomi#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_jLTo4LwIEe2-v-bcPekdVw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='Governance']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_kfUOcLwIEe2-v-bcPekdVw" name="Company A User Story Governance Diagram" repPath="#_kfTAULwIEe2-v-bcPekdVw" changeId="8fe2ee51-9151-4758-aa27-c24c97c2eee2">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_kfUOcLwIEe2-v-bcPekdVw" name="Company A User Story Governance Diagram" repPath="#_kfTAULwIEe2-v-bcPekdVw" changeId="1693245094269">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']"/>
         <target xmi:type="bomi:BOMIModel" href="CompanyA_UserStories.bomi#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_hSAvgLwJEe2pU5peE6HnGg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='MI']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_idH3wLwJEe2pU5peE6HnGg" name="Company A User Story Methodological Island (MI) Diagram" repPath="#_idGCkLwJEe2pU5peE6HnGg" changeId="9d4e5aad-1295-463d-a801-500b89322363">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_idH3wLwJEe2pU5peE6HnGg" name="Company A User Story Methodological Island (MI) Diagram" repPath="#_idGCkLwJEe2pU5peE6HnGg" changeId="1693245094269">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']"/>
         <target xmi:type="bomi:BOMIModel" href="CompanyA_UserStories.bomi#/"/>
       </ownedRepresentationDescriptors>
@@ -163,7 +163,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_aUgQNqiUEe2V1tKSGZrIXA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_aUgQMaiUEe2V1tKSGZrIXA" fontColor="16777215" fontName="Segoe UI" fontHeight="12" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aUgQMqiUEe2V1tKSGZrIXA" x="1404" y="390"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aUgQMqiUEe2V1tKSGZrIXA" x="1422" y="390"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_wUU9gKiUEe2V1tKSGZrIXA" type="2002" element="_wUMaoKiUEe2V1tKSGZrIXA">
           <children xmi:type="notation:Node" xmi:id="_wUWLoKiUEe2V1tKSGZrIXA" type="5006"/>
@@ -259,33 +259,33 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_iuoucKiVEe2V1tKSGZrIXA" type="4001" element="_iujO4KiVEe2V1tKSGZrIXA" source="_aUgQMKiUEe2V1tKSGZrIXA" target="_BsuQ4KiOEe2qR8ezOHESAw">
           <children xmi:type="notation:Node" xmi:id="_iuoudKiVEe2V1tKSGZrIXA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iuoudaiVEe2V1tKSGZrIXA" x="-3" y="16"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iuoudaiVEe2V1tKSGZrIXA" x="6" y="16"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_iupVgKiVEe2V1tKSGZrIXA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iupVgaiVEe2V1tKSGZrIXA" x="19" y="4"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iupVgaiVEe2V1tKSGZrIXA" x="34" y="4"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_iupVgqiVEe2V1tKSGZrIXA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iupVg6iVEe2V1tKSGZrIXA" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iupVg6iVEe2V1tKSGZrIXA" x="3" y="-10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_iuoucaiVEe2V1tKSGZrIXA" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_iuoucqiVEe2V1tKSGZrIXA" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iuouc6iVEe2V1tKSGZrIXA" points="[-2, -9, 74, 10]$[-76, -9, 0, 10]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iuouc6iVEe2V1tKSGZrIXA" points="[-2, 0, 92, 24]$[-57, 0, 37, 24]$[-57, -24, 37, 0]$[-94, -24, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iupVhKiVEe2V1tKSGZrIXA" id="(0.004618937644341801,0.3375)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iupVhaiVEe2V1tKSGZrIXA" id="(1.0,0.7)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_jN8goKiVEe2V1tKSGZrIXA" type="4001" element="_jN0k0KiVEe2V1tKSGZrIXA" source="_aUgQMKiUEe2V1tKSGZrIXA" target="_DzdT4KiOEe2qR8ezOHESAw">
           <children xmi:type="notation:Node" xmi:id="_jN8gpKiVEe2V1tKSGZrIXA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jN8gpaiVEe2V1tKSGZrIXA" x="-3" y="16"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jN8gpaiVEe2V1tKSGZrIXA" x="6" y="16"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_jN9uwKiVEe2V1tKSGZrIXA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jN9uwaiVEe2V1tKSGZrIXA" x="23" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jN9uwaiVEe2V1tKSGZrIXA" x="39" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_jN9uwqiVEe2V1tKSGZrIXA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jN9uw6iVEe2V1tKSGZrIXA" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jN9uw6iVEe2V1tKSGZrIXA" x="2" y="-10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_jN8goaiVEe2V1tKSGZrIXA" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_jN8goqiVEe2V1tKSGZrIXA" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jN8go6iVEe2V1tKSGZrIXA" points="[0, 0, 89, -48]$[-89, 0, 0, -48]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jN8go6iVEe2V1tKSGZrIXA" points="[0, 0, 107, -33]$[-55, 0, 52, -33]$[-55, 27, 52, -6]$[-92, 27, 15, -6]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jN9uxKiVEe2V1tKSGZrIXA" id="(0.0,0.9)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jN9uxaiVEe2V1tKSGZrIXA" id="(0.9662921348314607,0.75)"/>
         </edges>
