@@ -43,6 +43,11 @@
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//UnsettableBoolean/True"/>
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//UnsettableBoolean/False"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bomi.ecore#//DistanceType">
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//DistanceType/Cultural"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//DistanceType/Geographical"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//DistanceType/Organizational"/>
+    </genEnums>
     <genClasses ecoreClass="bomi.ecore#//BoundaryObject">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BoundaryObject/superType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BoundaryObject/levelOfDetail"/>
@@ -108,9 +113,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//Driver/driverTypeTechnology"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//Driver/driverTypeProcess"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//Driver/driverTypeOrganizational"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//Driver/distanceTypeCultural"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//Driver/distanceTypeGeographical"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//Driver/distanceTypeOrganizational"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//Driver/distanceTypes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//Driver/distanceSize"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bomi.ecore#//Driver/drivesMIs"/>
     </genClasses>

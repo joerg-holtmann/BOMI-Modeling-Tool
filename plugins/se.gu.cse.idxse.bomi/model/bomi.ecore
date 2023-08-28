@@ -125,16 +125,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypeProcess" eType="#//UnsettableBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypeOrganizational"
         eType="#//UnsettableBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceTypeCultural" eType="#//UnsettableBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceTypeGeographical"
-        eType="#//UnsettableBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceTypeOrganizational"
-        eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceTypes" upperBound="-1"
+        eType="#//DistanceType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceSize" eType="#//HighLow"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="drivesMIs" upperBound="-1"
         eType="#//MethodologicalIsland"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PurposedElement" abstract="true" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DistanceType">
+    <eLiterals name="Cultural" value="1"/>
+    <eLiterals name="Geographical" value="2"/>
+    <eLiterals name="Organizational" value="3"/>
   </eClassifiers>
 </ecore:EPackage>

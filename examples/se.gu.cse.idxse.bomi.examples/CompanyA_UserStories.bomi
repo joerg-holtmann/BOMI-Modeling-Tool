@@ -74,6 +74,6 @@ drivers {
 	Driver "Development/Project Management" { 
 		driverTypeProcess True 
 		driverTypeOrganizational True 
-		drivesMIs ( "Product Management" , "Development Team" )
+		drivesMIs ( "Product Management" , "Development Team" ) 
 	}
 }

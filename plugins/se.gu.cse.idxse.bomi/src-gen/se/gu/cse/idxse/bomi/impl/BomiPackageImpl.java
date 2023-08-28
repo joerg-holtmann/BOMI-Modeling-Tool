@@ -19,6 +19,7 @@ import se.gu.cse.idxse.bomi.BOTeamGovernance;
 import se.gu.cse.idxse.bomi.BomiFactory;
 import se.gu.cse.idxse.bomi.BomiPackage;
 import se.gu.cse.idxse.bomi.BoundaryObject;
+import se.gu.cse.idxse.bomi.DistanceType;
 import se.gu.cse.idxse.bomi.Driver;
 import se.gu.cse.idxse.bomi.GovernanceTeam;
 import se.gu.cse.idxse.bomi.HighLow;
@@ -163,6 +164,13 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	private EEnum unsettableBooleanEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum distanceTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -725,16 +733,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDriver_DistanceTypeCultural() {
-		return (EAttribute)driverEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDriver_DistanceTypeGeographical() {
+	public EAttribute getDriver_DistanceSize() {
 		return (EAttribute)driverEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -743,26 +742,17 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDriver_DistanceTypeOrganizational() {
-		return (EAttribute)driverEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDriver_DistanceSize() {
-		return (EAttribute)driverEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDriver_DrivesMIs() {
-		return (EReference)driverEClass.getEStructuralFeatures().get(7);
+		return (EReference)driverEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDriver_DistanceTypes() {
+		return (EAttribute)driverEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -826,6 +816,15 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 */
 	public EEnum getUnsettableBoolean() {
 		return unsettableBooleanEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getDistanceType() {
+		return distanceTypeEEnum;
 	}
 
 	/**
@@ -922,9 +921,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		createEAttribute(driverEClass, DRIVER__DRIVER_TYPE_TECHNOLOGY);
 		createEAttribute(driverEClass, DRIVER__DRIVER_TYPE_PROCESS);
 		createEAttribute(driverEClass, DRIVER__DRIVER_TYPE_ORGANIZATIONAL);
-		createEAttribute(driverEClass, DRIVER__DISTANCE_TYPE_CULTURAL);
-		createEAttribute(driverEClass, DRIVER__DISTANCE_TYPE_GEOGRAPHICAL);
-		createEAttribute(driverEClass, DRIVER__DISTANCE_TYPE_ORGANIZATIONAL);
+		createEAttribute(driverEClass, DRIVER__DISTANCE_TYPES);
 		createEAttribute(driverEClass, DRIVER__DISTANCE_SIZE);
 		createEReference(driverEClass, DRIVER__DRIVES_MIS);
 
@@ -937,6 +934,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		highLowEEnum = createEEnum(HIGH_LOW);
 		miTypeEEnum = createEEnum(MI_TYPE);
 		unsettableBooleanEEnum = createEEnum(UNSETTABLE_BOOLEAN);
+		distanceTypeEEnum = createEEnum(DISTANCE_TYPE);
 	}
 
 	/**
@@ -1046,9 +1044,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		initEAttribute(getDriver_DriverTypeTechnology(), this.getUnsettableBoolean(), "driverTypeTechnology", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDriver_DriverTypeProcess(), this.getUnsettableBoolean(), "driverTypeProcess", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDriver_DriverTypeOrganizational(), this.getUnsettableBoolean(), "driverTypeOrganizational", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDriver_DistanceTypeCultural(), this.getUnsettableBoolean(), "distanceTypeCultural", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDriver_DistanceTypeGeographical(), this.getUnsettableBoolean(), "distanceTypeGeographical", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDriver_DistanceTypeOrganizational(), this.getUnsettableBoolean(), "distanceTypeOrganizational", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDriver_DistanceTypes(), this.getDistanceType(), "distanceTypes", null, 0, -1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDriver_DistanceSize(), this.getHighLow(), "distanceSize", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDriver_DrivesMIs(), this.getMethodologicalIsland(), null, "drivesMIs", null, 0, -1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1090,6 +1086,11 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		addEEnumLiteral(unsettableBooleanEEnum, UnsettableBoolean.NOT_SET);
 		addEEnumLiteral(unsettableBooleanEEnum, UnsettableBoolean.TRUE);
 		addEEnumLiteral(unsettableBooleanEEnum, UnsettableBoolean.FALSE);
+
+		initEEnum(distanceTypeEEnum, DistanceType.class, "DistanceType");
+		addEEnumLiteral(distanceTypeEEnum, DistanceType.CULTURAL);
+		addEEnumLiteral(distanceTypeEEnum, DistanceType.GEOGRAPHICAL);
+		addEEnumLiteral(distanceTypeEEnum, DistanceType.ORGANIZATIONAL);
 
 		// Create resource
 		createResource(eNS_URI);

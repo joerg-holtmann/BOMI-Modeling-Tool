@@ -47,9 +47,7 @@ public class DriverItemProvider extends NamedElementItemProvider {
 			addDriverTypeTechnologyPropertyDescriptor(object);
 			addDriverTypeProcessPropertyDescriptor(object);
 			addDriverTypeOrganizationalPropertyDescriptor(object);
-			addDistanceTypeCulturalPropertyDescriptor(object);
-			addDistanceTypeGeographicalPropertyDescriptor(object);
-			addDistanceTypeOrganizationalPropertyDescriptor(object);
+			addDistanceTypesPropertyDescriptor(object);
 			addDistanceSizePropertyDescriptor(object);
 			addDrivesMIsPropertyDescriptor(object);
 		}
@@ -123,72 +121,6 @@ public class DriverItemProvider extends NamedElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Distance Type Cultural feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDistanceTypeCulturalPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Driver_distanceTypeCultural_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_distanceTypeCultural_feature", "_UI_Driver_type"),
-				 BomiPackage.Literals.DRIVER__DISTANCE_TYPE_CULTURAL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Distance Type Geographical feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDistanceTypeGeographicalPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Driver_distanceTypeGeographical_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_distanceTypeGeographical_feature", "_UI_Driver_type"),
-				 BomiPackage.Literals.DRIVER__DISTANCE_TYPE_GEOGRAPHICAL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Distance Type Organizational feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDistanceTypeOrganizationalPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Driver_distanceTypeOrganizational_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_distanceTypeOrganizational_feature", "_UI_Driver_type"),
-				 BomiPackage.Literals.DRIVER__DISTANCE_TYPE_ORGANIZATIONAL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Distance Size feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -228,6 +160,28 @@ public class DriverItemProvider extends NamedElementItemProvider {
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Distance Types feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDistanceTypesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Driver_distanceTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_distanceTypes_feature", "_UI_Driver_type"),
+				 BomiPackage.Literals.DRIVER__DISTANCE_TYPES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -282,9 +236,7 @@ public class DriverItemProvider extends NamedElementItemProvider {
 			case BomiPackage.DRIVER__DRIVER_TYPE_TECHNOLOGY:
 			case BomiPackage.DRIVER__DRIVER_TYPE_PROCESS:
 			case BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL:
-			case BomiPackage.DRIVER__DISTANCE_TYPE_CULTURAL:
-			case BomiPackage.DRIVER__DISTANCE_TYPE_GEOGRAPHICAL:
-			case BomiPackage.DRIVER__DISTANCE_TYPE_ORGANIZATIONAL:
+			case BomiPackage.DRIVER__DISTANCE_TYPES:
 			case BomiPackage.DRIVER__DISTANCE_SIZE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

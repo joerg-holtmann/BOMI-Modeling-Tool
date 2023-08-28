@@ -12,9 +12,11 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import se.gu.cse.idxse.bomi.BomiPackage;
+import se.gu.cse.idxse.bomi.DistanceType;
 import se.gu.cse.idxse.bomi.Driver;
 import se.gu.cse.idxse.bomi.HighLow;
 import se.gu.cse.idxse.bomi.MethodologicalIsland;
@@ -31,9 +33,7 @@ import se.gu.cse.idxse.bomi.UnsettableBoolean;
  *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDriverTypeTechnology <em>Driver Type Technology</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDriverTypeProcess <em>Driver Type Process</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDriverTypeOrganizational <em>Driver Type Organizational</em>}</li>
- *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDistanceTypeCultural <em>Distance Type Cultural</em>}</li>
- *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDistanceTypeGeographical <em>Distance Type Geographical</em>}</li>
- *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDistanceTypeOrganizational <em>Distance Type Organizational</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDistanceTypes <em>Distance Types</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDistanceSize <em>Distance Size</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDrivesMIs <em>Drives MIs</em>}</li>
  * </ul>
@@ -102,64 +102,14 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	protected UnsettableBoolean driverTypeOrganizational = DRIVER_TYPE_ORGANIZATIONAL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDistanceTypeCultural() <em>Distance Type Cultural</em>}' attribute.
+	 * The cached value of the '{@link #getDistanceTypes() <em>Distance Types</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDistanceTypeCultural()
+	 * @see #getDistanceTypes()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final UnsettableBoolean DISTANCE_TYPE_CULTURAL_EDEFAULT = UnsettableBoolean.NOT_SET;
-
-	/**
-	 * The cached value of the '{@link #getDistanceTypeCultural() <em>Distance Type Cultural</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDistanceTypeCultural()
-	 * @generated
-	 * @ordered
-	 */
-	protected UnsettableBoolean distanceTypeCultural = DISTANCE_TYPE_CULTURAL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDistanceTypeGeographical() <em>Distance Type Geographical</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDistanceTypeGeographical()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final UnsettableBoolean DISTANCE_TYPE_GEOGRAPHICAL_EDEFAULT = UnsettableBoolean.NOT_SET;
-
-	/**
-	 * The cached value of the '{@link #getDistanceTypeGeographical() <em>Distance Type Geographical</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDistanceTypeGeographical()
-	 * @generated
-	 * @ordered
-	 */
-	protected UnsettableBoolean distanceTypeGeographical = DISTANCE_TYPE_GEOGRAPHICAL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDistanceTypeOrganizational() <em>Distance Type Organizational</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDistanceTypeOrganizational()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final UnsettableBoolean DISTANCE_TYPE_ORGANIZATIONAL_EDEFAULT = UnsettableBoolean.NOT_SET;
-
-	/**
-	 * The cached value of the '{@link #getDistanceTypeOrganizational() <em>Distance Type Organizational</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDistanceTypeOrganizational()
-	 * @generated
-	 * @ordered
-	 */
-	protected UnsettableBoolean distanceTypeOrganizational = DISTANCE_TYPE_ORGANIZATIONAL_EDEFAULT;
+	protected EList<DistanceType> distanceTypes;
 
 	/**
 	 * The default value of the '{@link #getDistanceSize() <em>Distance Size</em>}' attribute.
@@ -278,69 +228,6 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UnsettableBoolean getDistanceTypeCultural() {
-		return distanceTypeCultural;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDistanceTypeCultural(UnsettableBoolean newDistanceTypeCultural) {
-		UnsettableBoolean oldDistanceTypeCultural = distanceTypeCultural;
-		distanceTypeCultural = newDistanceTypeCultural == null ? DISTANCE_TYPE_CULTURAL_EDEFAULT : newDistanceTypeCultural;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.DRIVER__DISTANCE_TYPE_CULTURAL, oldDistanceTypeCultural, distanceTypeCultural));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UnsettableBoolean getDistanceTypeGeographical() {
-		return distanceTypeGeographical;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDistanceTypeGeographical(UnsettableBoolean newDistanceTypeGeographical) {
-		UnsettableBoolean oldDistanceTypeGeographical = distanceTypeGeographical;
-		distanceTypeGeographical = newDistanceTypeGeographical == null ? DISTANCE_TYPE_GEOGRAPHICAL_EDEFAULT : newDistanceTypeGeographical;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.DRIVER__DISTANCE_TYPE_GEOGRAPHICAL, oldDistanceTypeGeographical, distanceTypeGeographical));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UnsettableBoolean getDistanceTypeOrganizational() {
-		return distanceTypeOrganizational;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDistanceTypeOrganizational(UnsettableBoolean newDistanceTypeOrganizational) {
-		UnsettableBoolean oldDistanceTypeOrganizational = distanceTypeOrganizational;
-		distanceTypeOrganizational = newDistanceTypeOrganizational == null ? DISTANCE_TYPE_ORGANIZATIONAL_EDEFAULT : newDistanceTypeOrganizational;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.DRIVER__DISTANCE_TYPE_ORGANIZATIONAL, oldDistanceTypeOrganizational, distanceTypeOrganizational));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public HighLow getDistanceSize() {
 		return distanceSize;
 	}
@@ -374,6 +261,18 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<DistanceType> getDistanceTypes() {
+		if (distanceTypes == null) {
+			distanceTypes = new EDataTypeUniqueEList<DistanceType>(DistanceType.class, this, BomiPackage.DRIVER__DISTANCE_TYPES);
+		}
+		return distanceTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -383,12 +282,8 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 				return getDriverTypeProcess();
 			case BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL:
 				return getDriverTypeOrganizational();
-			case BomiPackage.DRIVER__DISTANCE_TYPE_CULTURAL:
-				return getDistanceTypeCultural();
-			case BomiPackage.DRIVER__DISTANCE_TYPE_GEOGRAPHICAL:
-				return getDistanceTypeGeographical();
-			case BomiPackage.DRIVER__DISTANCE_TYPE_ORGANIZATIONAL:
-				return getDistanceTypeOrganizational();
+			case BomiPackage.DRIVER__DISTANCE_TYPES:
+				return getDistanceTypes();
 			case BomiPackage.DRIVER__DISTANCE_SIZE:
 				return getDistanceSize();
 			case BomiPackage.DRIVER__DRIVES_MIS:
@@ -415,14 +310,9 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 			case BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL:
 				setDriverTypeOrganizational((UnsettableBoolean)newValue);
 				return;
-			case BomiPackage.DRIVER__DISTANCE_TYPE_CULTURAL:
-				setDistanceTypeCultural((UnsettableBoolean)newValue);
-				return;
-			case BomiPackage.DRIVER__DISTANCE_TYPE_GEOGRAPHICAL:
-				setDistanceTypeGeographical((UnsettableBoolean)newValue);
-				return;
-			case BomiPackage.DRIVER__DISTANCE_TYPE_ORGANIZATIONAL:
-				setDistanceTypeOrganizational((UnsettableBoolean)newValue);
+			case BomiPackage.DRIVER__DISTANCE_TYPES:
+				getDistanceTypes().clear();
+				getDistanceTypes().addAll((Collection<? extends DistanceType>)newValue);
 				return;
 			case BomiPackage.DRIVER__DISTANCE_SIZE:
 				setDistanceSize((HighLow)newValue);
@@ -452,14 +342,8 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 			case BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL:
 				setDriverTypeOrganizational(DRIVER_TYPE_ORGANIZATIONAL_EDEFAULT);
 				return;
-			case BomiPackage.DRIVER__DISTANCE_TYPE_CULTURAL:
-				setDistanceTypeCultural(DISTANCE_TYPE_CULTURAL_EDEFAULT);
-				return;
-			case BomiPackage.DRIVER__DISTANCE_TYPE_GEOGRAPHICAL:
-				setDistanceTypeGeographical(DISTANCE_TYPE_GEOGRAPHICAL_EDEFAULT);
-				return;
-			case BomiPackage.DRIVER__DISTANCE_TYPE_ORGANIZATIONAL:
-				setDistanceTypeOrganizational(DISTANCE_TYPE_ORGANIZATIONAL_EDEFAULT);
+			case BomiPackage.DRIVER__DISTANCE_TYPES:
+				getDistanceTypes().clear();
 				return;
 			case BomiPackage.DRIVER__DISTANCE_SIZE:
 				setDistanceSize(DISTANCE_SIZE_EDEFAULT);
@@ -485,12 +369,8 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 				return driverTypeProcess != DRIVER_TYPE_PROCESS_EDEFAULT;
 			case BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL:
 				return driverTypeOrganizational != DRIVER_TYPE_ORGANIZATIONAL_EDEFAULT;
-			case BomiPackage.DRIVER__DISTANCE_TYPE_CULTURAL:
-				return distanceTypeCultural != DISTANCE_TYPE_CULTURAL_EDEFAULT;
-			case BomiPackage.DRIVER__DISTANCE_TYPE_GEOGRAPHICAL:
-				return distanceTypeGeographical != DISTANCE_TYPE_GEOGRAPHICAL_EDEFAULT;
-			case BomiPackage.DRIVER__DISTANCE_TYPE_ORGANIZATIONAL:
-				return distanceTypeOrganizational != DISTANCE_TYPE_ORGANIZATIONAL_EDEFAULT;
+			case BomiPackage.DRIVER__DISTANCE_TYPES:
+				return distanceTypes != null && !distanceTypes.isEmpty();
 			case BomiPackage.DRIVER__DISTANCE_SIZE:
 				return distanceSize != DISTANCE_SIZE_EDEFAULT;
 			case BomiPackage.DRIVER__DRIVES_MIS:
@@ -515,12 +395,8 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 		result.append(driverTypeProcess);
 		result.append(", driverTypeOrganizational: ");
 		result.append(driverTypeOrganizational);
-		result.append(", distanceTypeCultural: ");
-		result.append(distanceTypeCultural);
-		result.append(", distanceTypeGeographical: ");
-		result.append(distanceTypeGeographical);
-		result.append(", distanceTypeOrganizational: ");
-		result.append(distanceTypeOrganizational);
+		result.append(", distanceTypes: ");
+		result.append(distanceTypes);
 		result.append(", distanceSize: ");
 		result.append(distanceSize);
 		result.append(')');
