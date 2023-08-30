@@ -4,7 +4,7 @@
     <semanticResources>CompanyA_UserStories.bomi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_N4vAAKe4Ee2_pahSFK9j9Q">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vxYssKiNEe2qR8ezOHESAw" name="Company A User Story BOMI Detailed Diagram" repPath="#_vwps4KiNEe2qR8ezOHESAw" changeId="1693245141867">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vxYssKiNEe2qR8ezOHESAw" name="Company A User Story BOMI Detailed Diagram" repPath="#_vwps4KiNEe2qR8ezOHESAw" changeId="1693419417785">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']"/>
         <target xmi:type="bomi:BOMIModel" href="CompanyA_UserStories.bomi#/"/>
       </ownedRepresentationDescriptors>
@@ -32,7 +32,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_hSAvgLwJEe2pU5peE6HnGg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='MI']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_idH3wLwJEe2pU5peE6HnGg" name="Company A User Story Methodological Island (MI) Diagram" repPath="#_idGCkLwJEe2pU5peE6HnGg" changeId="1693245094269">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_idH3wLwJEe2pU5peE6HnGg" name="Company A User Story Methodological Island (MI) Diagram" repPath="#_idGCkLwJEe2pU5peE6HnGg" changeId="1693419320325">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']"/>
         <target xmi:type="bomi:BOMIModel" href="CompanyA_UserStories.bomi#/"/>
       </ownedRepresentationDescriptors>
@@ -148,22 +148,22 @@
             <children xmi:type="notation:Node" xmi:id="_aUgQN6iUEe2V1tKSGZrIXA" type="3009" element="_aUdM5qiUEe2V1tKSGZrIXA">
               <children xmi:type="notation:Node" xmi:id="_aUg3QKiUEe2V1tKSGZrIXA" visible="false" type="5004"/>
               <children xmi:type="notation:Node" xmi:id="_aUg3QaiUEe2V1tKSGZrIXA" type="7003">
-                <children xmi:type="notation:Node" xmi:id="_b6joAKiUEe2V1tKSGZrIXA" type="3010" element="_b6hLxKiUEe2V1tKSGZrIXA">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_b6joAaiUEe2V1tKSGZrIXA" fontColor="7490599" fontName="Segoe UI" fontHeight="12"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_b6joAqiUEe2V1tKSGZrIXA"/>
+                <children xmi:type="notation:Node" xmi:id="_CJ5coEdhEe6gWceBKNkj0g" type="3010" element="_CJz9HUdhEe6gWceBKNkj0g">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_CJ5coUdhEe6gWceBKNkj0g" fontColor="7490599" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_CJ5cokdhEe6gWceBKNkj0g"/>
                 </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_aUg3QqiUEe2V1tKSGZrIXA"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_aUg3Q6iUEe2V1tKSGZrIXA"/>
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_aUg3RKiUEe2V1tKSGZrIXA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_aUgQOKiUEe2V1tKSGZrIXA" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aUgQOaiUEe2V1tKSGZrIXA" width="431"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aUgQOaiUEe2V1tKSGZrIXA" width="431" height="57"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_aUgQNaiUEe2V1tKSGZrIXA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_aUgQNqiUEe2V1tKSGZrIXA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_aUgQMaiUEe2V1tKSGZrIXA" fontColor="16777215" fontName="Segoe UI" fontHeight="12" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aUgQMqiUEe2V1tKSGZrIXA" x="1422" y="390"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aUgQMqiUEe2V1tKSGZrIXA" x="1410" y="396"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_wUU9gKiUEe2V1tKSGZrIXA" type="2002" element="_wUMaoKiUEe2V1tKSGZrIXA">
           <children xmi:type="notation:Node" xmi:id="_wUWLoKiUEe2V1tKSGZrIXA" type="5006"/>
@@ -257,38 +257,6 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gl6udqiVEe2V1tKSGZrIXA" id="(0.44919786096256686,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gl6ud6iVEe2V1tKSGZrIXA" id="(0.43595505617977526,1.0)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_iuoucKiVEe2V1tKSGZrIXA" type="4001" element="_iujO4KiVEe2V1tKSGZrIXA" source="_aUgQMKiUEe2V1tKSGZrIXA" target="_BsuQ4KiOEe2qR8ezOHESAw">
-          <children xmi:type="notation:Node" xmi:id="_iuoudKiVEe2V1tKSGZrIXA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iuoudaiVEe2V1tKSGZrIXA" x="6" y="16"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_iupVgKiVEe2V1tKSGZrIXA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iupVgaiVEe2V1tKSGZrIXA" x="34" y="4"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_iupVgqiVEe2V1tKSGZrIXA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iupVg6iVEe2V1tKSGZrIXA" x="3" y="-10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iuoucaiVEe2V1tKSGZrIXA" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_iuoucqiVEe2V1tKSGZrIXA" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iuouc6iVEe2V1tKSGZrIXA" points="[-2, 0, 92, 24]$[-57, 0, 37, 24]$[-57, -24, 37, 0]$[-94, -24, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iupVhKiVEe2V1tKSGZrIXA" id="(0.004618937644341801,0.3375)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iupVhaiVEe2V1tKSGZrIXA" id="(1.0,0.7)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_jN8goKiVEe2V1tKSGZrIXA" type="4001" element="_jN0k0KiVEe2V1tKSGZrIXA" source="_aUgQMKiUEe2V1tKSGZrIXA" target="_DzdT4KiOEe2qR8ezOHESAw">
-          <children xmi:type="notation:Node" xmi:id="_jN8gpKiVEe2V1tKSGZrIXA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jN8gpaiVEe2V1tKSGZrIXA" x="6" y="16"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_jN9uwKiVEe2V1tKSGZrIXA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jN9uwaiVEe2V1tKSGZrIXA" x="39" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_jN9uwqiVEe2V1tKSGZrIXA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jN9uw6iVEe2V1tKSGZrIXA" x="2" y="-10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_jN8goaiVEe2V1tKSGZrIXA" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_jN8goqiVEe2V1tKSGZrIXA" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jN8go6iVEe2V1tKSGZrIXA" points="[0, 0, 107, -33]$[-55, 0, 52, -33]$[-55, 27, 52, -6]$[-92, 27, 15, -6]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jN9uxKiVEe2V1tKSGZrIXA" id="(0.0,0.9)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jN9uxaiVEe2V1tKSGZrIXA" id="(0.9662921348314607,0.75)"/>
-        </edges>
         <edges xmi:type="notation:Edge" xmi:id="_wzCdUKiVEe2V1tKSGZrIXA" type="4001" element="_wy6hgKiVEe2V1tKSGZrIXA" source="_WugkcKiVEe2V1tKSGZrIXA" target="_-WO2MKiNEe2qR8ezOHESAw">
           <children xmi:type="notation:Node" xmi:id="_wzDEYKiVEe2V1tKSGZrIXA" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wzDEYaiVEe2V1tKSGZrIXA" x="48" y="-92"/>
@@ -352,6 +320,38 @@
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_f7ajc6iWEe2V1tKSGZrIXA" points="[0, 0, 480, 0]$[-480, 0, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_f7ajeqiWEe2V1tKSGZrIXA" id="(0.0,0.4883720930232558)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_f7aje6iWEe2V1tKSGZrIXA" id="(1.0,0.8563327032136105)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-SnpEEdgEe6gWceBKNkj0g" type="4001" element="_-ShidEdgEe6gWceBKNkj0g" source="_aUgQMKiUEe2V1tKSGZrIXA" target="_BsuQ4KiOEe2qR8ezOHESAw">
+          <children xmi:type="notation:Node" xmi:id="_-SoQIEdgEe6gWceBKNkj0g" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-SoQIUdgEe6gWceBKNkj0g" y="18"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-SpeQEdgEe6gWceBKNkj0g" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-SpeQUdgEe6gWceBKNkj0g" x="-11" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-SpeQkdgEe6gWceBKNkj0g" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-SpeQ0dgEe6gWceBKNkj0g" x="-3" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-SnpEUdgEe6gWceBKNkj0g" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-SnpEkdgEe6gWceBKNkj0g" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-SnpE0dgEe6gWceBKNkj0g" points="[-216, -20, 80, 9]$[-296, -20, 0, 9]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-SqsYEdgEe6gWceBKNkj0g" id="(0.5,0.41237113402061853)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-SqsYUdgEe6gWceBKNkj0g" id="(1.0,0.8125)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-SrTcEdgEe6gWceBKNkj0g" type="4001" element="_-SiJhEdgEe6gWceBKNkj0g" source="_aUgQMKiUEe2V1tKSGZrIXA" target="_DzdT4KiOEe2qR8ezOHESAw">
+          <children xmi:type="notation:Node" xmi:id="_-SrTdEdgEe6gWceBKNkj0g" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-SrTdUdgEe6gWceBKNkj0g" y="19"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-SrTdkdgEe6gWceBKNkj0g" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-SrTd0dgEe6gWceBKNkj0g" x="-9" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-SrTeEdgEe6gWceBKNkj0g" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-SrTeUdgEe6gWceBKNkj0g" x="-4" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-SrTcUdgEe6gWceBKNkj0g" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-SrTckdgEe6gWceBKNkj0g" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-SrTc0dgEe6gWceBKNkj0g" points="[-5, 1, 86, -3]$[-85, 1, 6, -3]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-SrTekdgEe6gWceBKNkj0g" id="(0.011547344110854504,0.7628865979381443)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-SrTe0dgEe6gWceBKNkj0g" id="(0.9865168539325843,0.3)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
@@ -451,7 +451,7 @@
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_BsjRwKiOEe2qR8ezOHESAw" name="Methodological Island: Product Management" tooltipText="Methodological Island (MI)" outgoingEdges="_FOXSAKiWEe2V1tKSGZrIXA" incomingEdges="_equNEKiVEe2V1tKSGZrIXA _iujO4KiVEe2V1tKSGZrIXA" childrenPresentation="HorizontalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_BsjRwKiOEe2qR8ezOHESAw" name="Methodological Island: Product Management" tooltipText="Methodological Island (MI)" outgoingEdges="_FOXSAKiWEe2V1tKSGZrIXA" incomingEdges="_equNEKiVEe2V1tKSGZrIXA _-ShidEdgEe6gWceBKNkj0g" childrenPresentation="HorizontalStack">
       <target xmi:type="bomi:MethodologicalIsland" href="CompanyA_UserStories.bomi#//@methodologicalIslands.0"/>
       <semanticElements xmi:type="bomi:MethodologicalIsland" href="CompanyA_UserStories.bomi#//@methodologicalIslands.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -480,7 +480,7 @@
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_DzUJ8KiOEe2qR8ezOHESAw" name="Methodological Island: Development Team" tooltipText="Methodological Island (MI)" outgoingEdges="_VZjuQKiWEe2V1tKSGZrIXA" incomingEdges="_gluhNKiVEe2V1tKSGZrIXA _jN0k0KiVEe2V1tKSGZrIXA" childrenPresentation="HorizontalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_DzUJ8KiOEe2qR8ezOHESAw" name="Methodological Island: Development Team" tooltipText="Methodological Island (MI)" outgoingEdges="_VZjuQKiWEe2V1tKSGZrIXA" incomingEdges="_gluhNKiVEe2V1tKSGZrIXA _-SiJhEdgEe6gWceBKNkj0g" childrenPresentation="HorizontalStack">
       <target xmi:type="bomi:MethodologicalIsland" href="CompanyA_UserStories.bomi#//@methodologicalIslands.1"/>
       <semanticElements xmi:type="bomi:MethodologicalIsland" href="CompanyA_UserStories.bomi#//@methodologicalIslands.1"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -509,7 +509,7 @@
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_aUUqAKiUEe2V1tKSGZrIXA" name="Driver: Development/Project Management" tooltipText="Driver" outgoingEdges="_iujO4KiVEe2V1tKSGZrIXA _jN0k0KiVEe2V1tKSGZrIXA" childrenPresentation="HorizontalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_aUUqAKiUEe2V1tKSGZrIXA" name="Driver: Development/Project Management" tooltipText="Driver" outgoingEdges="_-ShidEdgEe6gWceBKNkj0g _-SiJhEdgEe6gWceBKNkj0g" childrenPresentation="HorizontalStack">
       <target xmi:type="bomi:Driver" href="CompanyA_UserStories.bomi#//@drivers.0"/>
       <semanticElements xmi:type="bomi:Driver" href="CompanyA_UserStories.bomi#//@drivers.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -528,13 +528,13 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_b6hLxKiUEe2V1tKSGZrIXA" name="Driver Type: Process Organizational">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_CJz9HUdhEe6gWceBKNkj0g" name="Driver Types: Process Organizational">
           <target xmi:type="bomi:Driver" href="CompanyA_UserStories.bomi#//@drivers.0"/>
           <semanticElements xmi:type="bomi:Driver" href="CompanyA_UserStories.bomi#//@drivers.0"/>
-          <ownedStyle xmi:type="diagram:BundledImage" uid="_b6hy0KiUEe2V1tKSGZrIXA" labelSize="12" showIcon="false" labelColor="39,76,114" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']/@subNodeMappings[name='Driver%20Type']/@style"/>
+          <ownedStyle xmi:type="diagram:BundledImage" uid="_CJ1LMEdhEe6gWceBKNkj0g" labelSize="12" showIcon="false" labelColor="39,76,114" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']/@subNodeMappings[name='Driver%20Types']/@style"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']/@subNodeMappings[name='Driver%20Type']"/>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']/@subNodeMappings[name='Driver%20Types']"/>
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
@@ -607,22 +607,6 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='role2MiPartOf']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iujO4KiVEe2V1tKSGZrIXA" name="drives" sourceNode="_aUUqAKiUEe2V1tKSGZrIXA" targetNode="_BsjRwKiOEe2qR8ezOHESAw">
-      <target xmi:type="bomi:Driver" href="CompanyA_UserStories.bomi#//@drivers.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iujO4aiVEe2V1tKSGZrIXA" size="2" routingStyle="manhattan" strokeColor="0,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='driver2MiDrives']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iujO4qiVEe2V1tKSGZrIXA" labelSize="12" showIcon="false"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='driver2MiDrives']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jN0k0KiVEe2V1tKSGZrIXA" name="drives" sourceNode="_aUUqAKiUEe2V1tKSGZrIXA" targetNode="_DzUJ8KiOEe2qR8ezOHESAw">
-      <target xmi:type="bomi:Driver" href="CompanyA_UserStories.bomi#//@drivers.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_jN0k0aiVEe2V1tKSGZrIXA" size="2" routingStyle="manhattan" strokeColor="0,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='driver2MiDrives']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_jN0k0qiVEe2V1tKSGZrIXA" labelSize="12" showIcon="false"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='driver2MiDrives']"/>
-    </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_wy6hgKiVEe2V1tKSGZrIXA" name="Association: PO / User Story Interaction&#xA;Responsible Creates Updates &#xA;Accessability: High&#xA;Stability: Low&#xA;Criticality: High&#xA;Fit for purpose: High" sourceNode="_WuZPsKiVEe2V1tKSGZrIXA" targetNode="_-V1NkKiNEe2qR8ezOHESAw">
       <target xmi:type="bomi:BORoleInteraction" href="CompanyA_UserStories.bomi#//@boRoleInteractions.0"/>
       <semanticElements xmi:type="bomi:BORoleInteraction" href="CompanyA_UserStories.bomi#//@boRoleInteractions.0"/>
@@ -658,6 +642,22 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_f7Vq9qiWEe2V1tKSGZrIXA" labelSize="12" showIcon="false" labelColor="114,73,110"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='BO%2FRole%20Interaction']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-ShidEdgEe6gWceBKNkj0g" name="drives" sourceNode="_aUUqAKiUEe2V1tKSGZrIXA" targetNode="_BsjRwKiOEe2qR8ezOHESAw">
+      <target xmi:type="bomi:Driver" href="CompanyA_UserStories.bomi#//@drivers.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_-SiJgEdgEe6gWceBKNkj0g" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='driver2MiDrives']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_-SiJgUdgEe6gWceBKNkj0g" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='driver2MiDrives']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-SiJhEdgEe6gWceBKNkj0g" name="drives" sourceNode="_aUUqAKiUEe2V1tKSGZrIXA" targetNode="_DzUJ8KiOEe2qR8ezOHESAw">
+      <target xmi:type="bomi:Driver" href="CompanyA_UserStories.bomi#//@drivers.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_-SiJhUdgEe6gWceBKNkj0g" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='driver2MiDrives']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_-SiJhkdgEe6gWceBKNkj0g" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='driver2MiDrives']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_vw8AwKiNEe2qR8ezOHESAw"/>
@@ -1721,9 +1721,9 @@
             <children xmi:type="notation:Node" xmi:id="_ieTjg7wJEe2pU5peE6HnGg" type="3009" element="_ido1ILwJEe2pU5peE6HnGg">
               <children xmi:type="notation:Node" xmi:id="_ieUKkLwJEe2pU5peE6HnGg" visible="false" type="5004"/>
               <children xmi:type="notation:Node" xmi:id="_ieUKkbwJEe2pU5peE6HnGg" type="7003">
-                <children xmi:type="notation:Node" xmi:id="_ieUxoLwJEe2pU5peE6HnGg" type="3010" element="_idqDQLwJEe2pU5peE6HnGg">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_ieUxobwJEe2pU5peE6HnGg" fontColor="7490599" fontName="Segoe UI" fontHeight="12"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_ieUxorwJEe2pU5peE6HnGg"/>
+                <children xmi:type="notation:Node" xmi:id="_D9p5REdhEe6gWceBKNkj0g" type="3010" element="_D9mO40dhEe6gWceBKNkj0g">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_D9p5RUdhEe6gWceBKNkj0g" fontColor="7490599" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_D9p5RkdhEe6gWceBKNkj0g"/>
                 </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_ieUKkrwJEe2pU5peE6HnGg"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_ieUKk7wJEe2pU5peE6HnGg"/>
@@ -1909,13 +1909,13 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_idqDQLwJEe2pU5peE6HnGg" name="Driver Type: Process Organizational">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_D9mO40dhEe6gWceBKNkj0g" name="Driver Types: Process Organizational">
           <target xmi:type="bomi:Driver" href="CompanyA_UserStories.bomi#//@drivers.0"/>
           <semanticElements xmi:type="bomi:Driver" href="CompanyA_UserStories.bomi#//@drivers.0"/>
-          <ownedStyle xmi:type="diagram:BundledImage" uid="_idr4cLwJEe2pU5peE6HnGg" labelSize="12" showIcon="false" labelColor="39,76,114" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']/@subNodeMappings[name='Driver%20Type']/@style"/>
+          <ownedStyle xmi:type="diagram:BundledImage" uid="_D9m18EdhEe6gWceBKNkj0g" labelSize="12" showIcon="false" labelColor="39,76,114" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']/@subNodeMappings[name='Driver%20Types']/@style"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']/@subNodeMappings[name='Driver%20Type']"/>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='Driver%20Compartment']/@subNodeMappings[name='Driver%20Types']"/>
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>

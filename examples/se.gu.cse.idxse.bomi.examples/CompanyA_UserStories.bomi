@@ -72,8 +72,4 @@ boTeamGovernances {
 
 drivers { 
 	Driver "Development/Project Management" { 
-		driverTypeProcess True 
-		driverTypeOrganizational True 
-		drivesMIs ( "Product Management" , "Development Team" ) 
-	}
-}
+		driverTypes { Process , Organizational } drivesMIs ( "Product Management" , "Development Team" ) } }
