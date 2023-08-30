@@ -91,6 +91,8 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 				return createUnsettableBooleanFromString(eDataType, initialValue);
 			case BomiPackage.DISTANCE_TYPE:
 				return createDistanceTypeFromString(eDataType, initialValue);
+			case BomiPackage.DRIVER_TYPE:
+				return createDriverTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -116,6 +118,8 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 				return convertUnsettableBooleanToString(eDataType, instanceValue);
 			case BomiPackage.DISTANCE_TYPE:
 				return convertDistanceTypeToString(eDataType, instanceValue);
+			case BomiPackage.DRIVER_TYPE:
+				return convertDriverTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -328,6 +332,26 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * @generated
 	 */
 	public String convertDistanceTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DriverType createDriverTypeFromString(EDataType eDataType, String initialValue) {
+		DriverType result = DriverType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertDriverTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

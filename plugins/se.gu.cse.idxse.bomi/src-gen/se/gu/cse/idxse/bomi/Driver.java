@@ -13,9 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeTechnology <em>Driver Type Technology</em>}</li>
- *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeProcess <em>Driver Type Process</em>}</li>
- *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeOrganizational <em>Driver Type Organizational</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDriverTypes <em>Driver Types</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDistanceTypes <em>Distance Types</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDistanceSize <em>Distance Size</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.Driver#getDrivesMIs <em>Drives MIs</em>}</li>
@@ -27,79 +25,18 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Driver extends NamedElement {
 	/**
-	 * Returns the value of the '<em><b>Driver Type Technology</b></em>' attribute.
-	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.UnsettableBoolean}.
+	 * Returns the value of the '<em><b>Driver Types</b></em>' attribute list.
+	 * The list contents are of type {@link se.gu.cse.idxse.bomi.DriverType}.
+	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.DriverType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Driver Type Technology</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
-	 * @see #setDriverTypeTechnology(UnsettableBoolean)
-	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DriverTypeTechnology()
+	 * @return the value of the '<em>Driver Types</em>' attribute list.
+	 * @see se.gu.cse.idxse.bomi.DriverType
+	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DriverTypes()
 	 * @model
 	 * @generated
 	 */
-	UnsettableBoolean getDriverTypeTechnology();
-
-	/**
-	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeTechnology <em>Driver Type Technology</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Driver Type Technology</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
-	 * @see #getDriverTypeTechnology()
-	 * @generated
-	 */
-	void setDriverTypeTechnology(UnsettableBoolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Driver Type Process</b></em>' attribute.
-	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.UnsettableBoolean}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Driver Type Process</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
-	 * @see #setDriverTypeProcess(UnsettableBoolean)
-	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DriverTypeProcess()
-	 * @model
-	 * @generated
-	 */
-	UnsettableBoolean getDriverTypeProcess();
-
-	/**
-	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeProcess <em>Driver Type Process</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Driver Type Process</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
-	 * @see #getDriverTypeProcess()
-	 * @generated
-	 */
-	void setDriverTypeProcess(UnsettableBoolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Driver Type Organizational</b></em>' attribute.
-	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.UnsettableBoolean}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Driver Type Organizational</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
-	 * @see #setDriverTypeOrganizational(UnsettableBoolean)
-	 * @see se.gu.cse.idxse.bomi.BomiPackage#getDriver_DriverTypeOrganizational()
-	 * @model
-	 * @generated
-	 */
-	UnsettableBoolean getDriverTypeOrganizational();
-
-	/**
-	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeOrganizational <em>Driver Type Organizational</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Driver Type Organizational</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
-	 * @see #getDriverTypeOrganizational()
-	 * @generated
-	 */
-	void setDriverTypeOrganizational(UnsettableBoolean value);
+	EList<DriverType> getDriverTypes();
 
 	/**
 	 * Returns the value of the '<em><b>Distance Size</b></em>' attribute.

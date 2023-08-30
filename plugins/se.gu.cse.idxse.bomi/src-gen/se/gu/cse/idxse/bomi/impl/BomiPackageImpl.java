@@ -21,6 +21,7 @@ import se.gu.cse.idxse.bomi.BomiPackage;
 import se.gu.cse.idxse.bomi.BoundaryObject;
 import se.gu.cse.idxse.bomi.DistanceType;
 import se.gu.cse.idxse.bomi.Driver;
+import se.gu.cse.idxse.bomi.DriverType;
 import se.gu.cse.idxse.bomi.GovernanceTeam;
 import se.gu.cse.idxse.bomi.HighLow;
 import se.gu.cse.idxse.bomi.LifecycleStage;
@@ -171,6 +172,13 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	private EEnum distanceTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum driverTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -706,7 +714,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDriver_DriverTypeTechnology() {
+	public EAttribute getDriver_DriverTypes() {
 		return (EAttribute)driverEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -715,16 +723,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDriver_DriverTypeProcess() {
-		return (EAttribute)driverEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDriver_DriverTypeOrganizational() {
+	public EAttribute getDriver_DistanceSize() {
 		return (EAttribute)driverEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -733,17 +732,8 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDriver_DistanceSize() {
-		return (EAttribute)driverEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDriver_DrivesMIs() {
-		return (EReference)driverEClass.getEStructuralFeatures().get(5);
+		return (EReference)driverEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -752,7 +742,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	public EAttribute getDriver_DistanceTypes() {
-		return (EAttribute)driverEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)driverEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -825,6 +815,15 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 */
 	public EEnum getDistanceType() {
 		return distanceTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getDriverType() {
+		return driverTypeEEnum;
 	}
 
 	/**
@@ -918,9 +917,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		createEReference(associationEClass, ASSOCIATION__BOUNDARY_OBJECTS);
 
 		driverEClass = createEClass(DRIVER);
-		createEAttribute(driverEClass, DRIVER__DRIVER_TYPE_TECHNOLOGY);
-		createEAttribute(driverEClass, DRIVER__DRIVER_TYPE_PROCESS);
-		createEAttribute(driverEClass, DRIVER__DRIVER_TYPE_ORGANIZATIONAL);
+		createEAttribute(driverEClass, DRIVER__DRIVER_TYPES);
 		createEAttribute(driverEClass, DRIVER__DISTANCE_TYPES);
 		createEAttribute(driverEClass, DRIVER__DISTANCE_SIZE);
 		createEReference(driverEClass, DRIVER__DRIVES_MIS);
@@ -935,6 +932,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		miTypeEEnum = createEEnum(MI_TYPE);
 		unsettableBooleanEEnum = createEEnum(UNSETTABLE_BOOLEAN);
 		distanceTypeEEnum = createEEnum(DISTANCE_TYPE);
+		driverTypeEEnum = createEEnum(DRIVER_TYPE);
 	}
 
 	/**
@@ -1041,9 +1039,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		initEReference(getAssociation_BoundaryObjects(), this.getBoundaryObject(), null, "boundaryObjects", null, 0, -1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(driverEClass, Driver.class, "Driver", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDriver_DriverTypeTechnology(), this.getUnsettableBoolean(), "driverTypeTechnology", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDriver_DriverTypeProcess(), this.getUnsettableBoolean(), "driverTypeProcess", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDriver_DriverTypeOrganizational(), this.getUnsettableBoolean(), "driverTypeOrganizational", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDriver_DriverTypes(), this.getDriverType(), "driverTypes", null, 0, -1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDriver_DistanceTypes(), this.getDistanceType(), "distanceTypes", null, 0, -1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDriver_DistanceSize(), this.getHighLow(), "distanceSize", null, 0, 1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDriver_DrivesMIs(), this.getMethodologicalIsland(), null, "drivesMIs", null, 0, -1, Driver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1091,6 +1087,11 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		addEEnumLiteral(distanceTypeEEnum, DistanceType.CULTURAL);
 		addEEnumLiteral(distanceTypeEEnum, DistanceType.GEOGRAPHICAL);
 		addEEnumLiteral(distanceTypeEEnum, DistanceType.ORGANIZATIONAL);
+
+		initEEnum(driverTypeEEnum, DriverType.class, "DriverType");
+		addEEnumLiteral(driverTypeEEnum, DriverType.TECHNOLOGY);
+		addEEnumLiteral(driverTypeEEnum, DriverType.PROCESS);
+		addEEnumLiteral(driverTypeEEnum, DriverType.ORGANIZATIONAL);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -121,10 +121,8 @@
         eType="#//BoundaryObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Driver" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypeTechnology" eType="#//UnsettableBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypeProcess" eType="#//UnsettableBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypeOrganizational"
-        eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverTypes" upperBound="-1"
+        eType="#//DriverType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceTypes" upperBound="-1"
         eType="#//DistanceType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceSize" eType="#//HighLow"/>
@@ -138,5 +136,10 @@
     <eLiterals name="Cultural" value="1"/>
     <eLiterals name="Geographical" value="2"/>
     <eLiterals name="Organizational" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DriverType">
+    <eLiterals name="Technology"/>
+    <eLiterals name="Process" value="1"/>
+    <eLiterals name="Organizational" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

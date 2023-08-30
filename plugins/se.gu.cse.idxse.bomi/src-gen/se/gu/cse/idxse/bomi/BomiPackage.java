@@ -1037,31 +1037,13 @@ public interface BomiPackage extends EPackage {
 	int DRIVER__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Driver Type Technology</b></em>' attribute.
+	 * The feature id for the '<em><b>Driver Types</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DRIVER__DRIVER_TYPE_TECHNOLOGY = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Driver Type Process</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DRIVER__DRIVER_TYPE_PROCESS = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Driver Type Organizational</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DRIVER__DRIVER_TYPE_ORGANIZATIONAL = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int DRIVER__DRIVER_TYPES = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Distance Types</b></em>' attribute list.
@@ -1070,7 +1052,7 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRIVER__DISTANCE_TYPES = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int DRIVER__DISTANCE_TYPES = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Distance Size</b></em>' attribute.
@@ -1079,7 +1061,7 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRIVER__DISTANCE_SIZE = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int DRIVER__DISTANCE_SIZE = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Drives MIs</b></em>' reference list.
@@ -1088,7 +1070,7 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRIVER__DRIVES_MIS = NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int DRIVER__DRIVES_MIS = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Driver</em>' class.
@@ -1097,7 +1079,7 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRIVER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int DRIVER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Driver</em>' class.
@@ -1167,6 +1149,16 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 */
 	int DISTANCE_TYPE = 18;
+
+	/**
+	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.DriverType <em>Driver Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see se.gu.cse.idxse.bomi.DriverType
+	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getDriverType()
+	 * @generated
+	 */
+	int DRIVER_TYPE = 19;
 
 	/**
 	 * Returns the meta object for class '{@link se.gu.cse.idxse.bomi.BoundaryObject <em>Boundary Object</em>}'.
@@ -1729,37 +1721,15 @@ public interface BomiPackage extends EPackage {
 	EClass getDriver();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeTechnology <em>Driver Type Technology</em>}'.
+	 * Returns the meta object for the attribute list '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypes <em>Driver Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Driver Type Technology</em>'.
-	 * @see se.gu.cse.idxse.bomi.Driver#getDriverTypeTechnology()
+	 * @return the meta object for the attribute list '<em>Driver Types</em>'.
+	 * @see se.gu.cse.idxse.bomi.Driver#getDriverTypes()
 	 * @see #getDriver()
 	 * @generated
 	 */
-	EAttribute getDriver_DriverTypeTechnology();
-
-	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeProcess <em>Driver Type Process</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Driver Type Process</em>'.
-	 * @see se.gu.cse.idxse.bomi.Driver#getDriverTypeProcess()
-	 * @see #getDriver()
-	 * @generated
-	 */
-	EAttribute getDriver_DriverTypeProcess();
-
-	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDriverTypeOrganizational <em>Driver Type Organizational</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Driver Type Organizational</em>'.
-	 * @see se.gu.cse.idxse.bomi.Driver#getDriverTypeOrganizational()
-	 * @see #getDriver()
-	 * @generated
-	 */
-	EAttribute getDriver_DriverTypeOrganizational();
+	EAttribute getDriver_DriverTypes();
 
 	/**
 	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.Driver#getDistanceSize <em>Distance Size</em>}'.
@@ -1874,6 +1844,16 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getDistanceType();
+
+	/**
+	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.DriverType <em>Driver Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Driver Type</em>'.
+	 * @see se.gu.cse.idxse.bomi.DriverType
+	 * @generated
+	 */
+	EEnum getDriverType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2339,28 +2319,12 @@ public interface BomiPackage extends EPackage {
 		EClass DRIVER = eINSTANCE.getDriver();
 
 		/**
-		 * The meta object literal for the '<em><b>Driver Type Technology</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Driver Types</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DRIVER__DRIVER_TYPE_TECHNOLOGY = eINSTANCE.getDriver_DriverTypeTechnology();
-
-		/**
-		 * The meta object literal for the '<em><b>Driver Type Process</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DRIVER__DRIVER_TYPE_PROCESS = eINSTANCE.getDriver_DriverTypeProcess();
-
-		/**
-		 * The meta object literal for the '<em><b>Driver Type Organizational</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DRIVER__DRIVER_TYPE_ORGANIZATIONAL = eINSTANCE.getDriver_DriverTypeOrganizational();
+		EAttribute DRIVER__DRIVER_TYPES = eINSTANCE.getDriver_DriverTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Distance Size</b></em>' attribute feature.
@@ -2463,6 +2427,16 @@ public interface BomiPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum DISTANCE_TYPE = eINSTANCE.getDistanceType();
+
+		/**
+		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.DriverType <em>Driver Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see se.gu.cse.idxse.bomi.DriverType
+		 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getDriverType()
+		 * @generated
+		 */
+		EEnum DRIVER_TYPE = eINSTANCE.getDriverType();
 
 	}
 

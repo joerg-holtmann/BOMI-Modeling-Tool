@@ -237,14 +237,14 @@
         </containerMappings>
         <containerMappings name="Driver" semanticCandidatesExpression="feature:drivers" domainClass="bomi::Driver" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Driver Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::Driver" childrenPresentation="List">
-            <subNodeMappings name="Driver Type" preconditionExpression="aql:self.driverTypeTechnology = bomi::UnsettableBoolean::True or self.driverTypeProcess = bomi::UnsettableBoolean::True or self.driverTypeOrganizational = bomi::UnsettableBoolean::True" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
-              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Driver Type: ' + (if self.driverTypeTechnology = bomi::UnsettableBoolean::True then 'Technology ' else '' endif) + (if self.driverTypeProcess = bomi::UnsettableBoolean::True then 'Process ' else '' endif) + (if self.driverTypeOrganizational = bomi::UnsettableBoolean::True then 'Organizational' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Driver Types" preconditionExpression="aql:self.driverTypes->notEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Driver Types: ' + (if self.driverTypes->includes(bomi::DriverType::Technology) then 'Technology ' else '' endif) + (if self.driverTypes->includes(bomi::DriverType::Process) then 'Process ' else '' endif) + (if self.driverTypes->includes(bomi::DriverType::Organizational) then 'Organizational' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="Distance Types" preconditionExpression="aql:not self.distanceTypes->isEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
+            <subNodeMappings name="Distance Types" preconditionExpression="aql:self.distanceTypes->notEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
               <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Distance Types: ' + (if self.distanceTypes->includes(bomi::DistanceType::Cultural) then 'Cultural ' else '' endif) + (if self.distanceTypes->includes(bomi::DistanceType::Geographical) then 'Geographical ' else '' endif) + (if self.distanceTypes->includes(bomi::DistanceType::Organizational) then 'Organizational' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
@@ -751,14 +751,14 @@
         </containerMappings>
         <containerMappings name="Driver" semanticCandidatesExpression="feature:drivers" domainClass="bomi::Driver" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Driver Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::Driver" childrenPresentation="List">
-            <subNodeMappings name="Driver Type" preconditionExpression="aql:self.driverTypeTechnology = bomi::UnsettableBoolean::True or self.driverTypeProcess = bomi::UnsettableBoolean::True or self.driverTypeOrganizational = bomi::UnsettableBoolean::True" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
-              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Driver Type: ' + (if self.driverTypeTechnology = bomi::UnsettableBoolean::True then 'Technology ' else '' endif) + (if self.driverTypeProcess = bomi::UnsettableBoolean::True then 'Process ' else '' endif) + (if self.driverTypeOrganizational = bomi::UnsettableBoolean::True then 'Organizational' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Driver Types" preconditionExpression="aql:self.driverTypes->notEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Driver Types: ' + (if self.driverTypes->includes(bomi::DriverType::Technology) then 'Technology ' else '' endif) + (if self.driverTypes->includes(bomi::DriverType::Process) then 'Process ' else '' endif) + (if self.driverTypes->includes(bomi::DriverType::Organizational) then 'Organizational' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="Distance Types" preconditionExpression="aql:not self.distanceTypes->isEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
+            <subNodeMappings name="Distance Types" preconditionExpression="aql:self.distanceTypes->notEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::Driver">
               <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Distance Types: ' + (if self.distanceTypes->includes(bomi::DistanceType::Cultural) then 'Cultural ' else '' endif) + (if self.distanceTypes->includes(bomi::DistanceType::Geographical) then 'Geographical ' else '' endif) + (if self.distanceTypes->includes(bomi::DistanceType::Organizational) then 'Organizational' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>

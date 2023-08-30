@@ -44,9 +44,7 @@ public class DriverItemProvider extends NamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDriverTypeTechnologyPropertyDescriptor(object);
-			addDriverTypeProcessPropertyDescriptor(object);
-			addDriverTypeOrganizationalPropertyDescriptor(object);
+			addDriverTypesPropertyDescriptor(object);
 			addDistanceTypesPropertyDescriptor(object);
 			addDistanceSizePropertyDescriptor(object);
 			addDrivesMIsPropertyDescriptor(object);
@@ -55,63 +53,19 @@ public class DriverItemProvider extends NamedElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Driver Type Technology feature.
+	 * This adds a property descriptor for the Driver Types feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDriverTypeTechnologyPropertyDescriptor(Object object) {
+	protected void addDriverTypesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Driver_driverTypeTechnology_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_driverTypeTechnology_feature", "_UI_Driver_type"),
-				 BomiPackage.Literals.DRIVER__DRIVER_TYPE_TECHNOLOGY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Driver Type Process feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDriverTypeProcessPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Driver_driverTypeProcess_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_driverTypeProcess_feature", "_UI_Driver_type"),
-				 BomiPackage.Literals.DRIVER__DRIVER_TYPE_PROCESS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Driver Type Organizational feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDriverTypeOrganizationalPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Driver_driverTypeOrganizational_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_driverTypeOrganizational_feature", "_UI_Driver_type"),
-				 BomiPackage.Literals.DRIVER__DRIVER_TYPE_ORGANIZATIONAL,
+				 getString("_UI_Driver_driverTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_driverTypes_feature", "_UI_Driver_type"),
+				 BomiPackage.Literals.DRIVER__DRIVER_TYPES,
 				 true,
 				 false,
 				 false,
@@ -233,9 +187,7 @@ public class DriverItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Driver.class)) {
-			case BomiPackage.DRIVER__DRIVER_TYPE_TECHNOLOGY:
-			case BomiPackage.DRIVER__DRIVER_TYPE_PROCESS:
-			case BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL:
+			case BomiPackage.DRIVER__DRIVER_TYPES:
 			case BomiPackage.DRIVER__DISTANCE_TYPES:
 			case BomiPackage.DRIVER__DISTANCE_SIZE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

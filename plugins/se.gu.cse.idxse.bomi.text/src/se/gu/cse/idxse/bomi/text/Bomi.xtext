@@ -117,9 +117,7 @@ Driver returns Driver:
 	'Driver'
 	name=EString
 	'{'
-		('driverTypeTechnology' driverTypeTechnology=UnsettableBoolean)?
-		('driverTypeProcess' driverTypeProcess=UnsettableBoolean)?
-		('driverTypeOrganizational' driverTypeOrganizational=UnsettableBoolean)?
+		('driverTypes' '{' driverTypes+=DriverType ( "," driverTypes+=DriverType)* '}' )?
 		('distanceTypes' '{' distanceTypes+=DistanceType ( "," distanceTypes+=DistanceType)* '}' )?		
 		('distanceSize' distanceSize=HighLow)?
 		('drivesMIs' '(' drivesMIs+=[MethodologicalIsland|EString] ( "," drivesMIs+=[MethodologicalIsland|EString])* ')' )?
@@ -142,6 +140,9 @@ enum LifecycleStage returns LifecycleStage:
 
 enum MIType returns MIType:
 				NOT_SET = 'NOT_SET' | Teams = 'Teams' | Silos = 'Silos' | Departments = 'Departments' | Organizations = 'Organizations';
+				
+enum DriverType returns DriverType:
+				Technology = 'Technology' | Process = 'Process' | Organizational = 'Organizational';				
 
 enum DistanceType returns DistanceType:
 				Cultural = 'Cultural' | Geographical = 'Geographical' | Organizational = 'Organizational';

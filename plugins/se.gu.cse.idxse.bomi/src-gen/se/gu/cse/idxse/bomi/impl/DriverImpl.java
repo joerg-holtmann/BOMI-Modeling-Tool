@@ -18,9 +18,9 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import se.gu.cse.idxse.bomi.BomiPackage;
 import se.gu.cse.idxse.bomi.DistanceType;
 import se.gu.cse.idxse.bomi.Driver;
+import se.gu.cse.idxse.bomi.DriverType;
 import se.gu.cse.idxse.bomi.HighLow;
 import se.gu.cse.idxse.bomi.MethodologicalIsland;
-import se.gu.cse.idxse.bomi.UnsettableBoolean;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,9 +30,7 @@ import se.gu.cse.idxse.bomi.UnsettableBoolean;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDriverTypeTechnology <em>Driver Type Technology</em>}</li>
- *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDriverTypeProcess <em>Driver Type Process</em>}</li>
- *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDriverTypeOrganizational <em>Driver Type Organizational</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDriverTypes <em>Driver Types</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDistanceTypes <em>Distance Types</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDistanceSize <em>Distance Size</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.DriverImpl#getDrivesMIs <em>Drives MIs</em>}</li>
@@ -42,64 +40,14 @@ import se.gu.cse.idxse.bomi.UnsettableBoolean;
  */
 public class DriverImpl extends NamedElementImpl implements Driver {
 	/**
-	 * The default value of the '{@link #getDriverTypeTechnology() <em>Driver Type Technology</em>}' attribute.
+	 * The cached value of the '{@link #getDriverTypes() <em>Driver Types</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDriverTypeTechnology()
+	 * @see #getDriverTypes()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final UnsettableBoolean DRIVER_TYPE_TECHNOLOGY_EDEFAULT = UnsettableBoolean.NOT_SET;
-
-	/**
-	 * The cached value of the '{@link #getDriverTypeTechnology() <em>Driver Type Technology</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDriverTypeTechnology()
-	 * @generated
-	 * @ordered
-	 */
-	protected UnsettableBoolean driverTypeTechnology = DRIVER_TYPE_TECHNOLOGY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDriverTypeProcess() <em>Driver Type Process</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDriverTypeProcess()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final UnsettableBoolean DRIVER_TYPE_PROCESS_EDEFAULT = UnsettableBoolean.NOT_SET;
-
-	/**
-	 * The cached value of the '{@link #getDriverTypeProcess() <em>Driver Type Process</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDriverTypeProcess()
-	 * @generated
-	 * @ordered
-	 */
-	protected UnsettableBoolean driverTypeProcess = DRIVER_TYPE_PROCESS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDriverTypeOrganizational() <em>Driver Type Organizational</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDriverTypeOrganizational()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final UnsettableBoolean DRIVER_TYPE_ORGANIZATIONAL_EDEFAULT = UnsettableBoolean.NOT_SET;
-
-	/**
-	 * The cached value of the '{@link #getDriverTypeOrganizational() <em>Driver Type Organizational</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDriverTypeOrganizational()
-	 * @generated
-	 * @ordered
-	 */
-	protected UnsettableBoolean driverTypeOrganizational = DRIVER_TYPE_ORGANIZATIONAL_EDEFAULT;
+	protected EList<DriverType> driverTypes;
 
 	/**
 	 * The cached value of the '{@link #getDistanceTypes() <em>Distance Types</em>}' attribute list.
@@ -165,62 +113,11 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UnsettableBoolean getDriverTypeTechnology() {
-		return driverTypeTechnology;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDriverTypeTechnology(UnsettableBoolean newDriverTypeTechnology) {
-		UnsettableBoolean oldDriverTypeTechnology = driverTypeTechnology;
-		driverTypeTechnology = newDriverTypeTechnology == null ? DRIVER_TYPE_TECHNOLOGY_EDEFAULT : newDriverTypeTechnology;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.DRIVER__DRIVER_TYPE_TECHNOLOGY, oldDriverTypeTechnology, driverTypeTechnology));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UnsettableBoolean getDriverTypeProcess() {
-		return driverTypeProcess;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDriverTypeProcess(UnsettableBoolean newDriverTypeProcess) {
-		UnsettableBoolean oldDriverTypeProcess = driverTypeProcess;
-		driverTypeProcess = newDriverTypeProcess == null ? DRIVER_TYPE_PROCESS_EDEFAULT : newDriverTypeProcess;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.DRIVER__DRIVER_TYPE_PROCESS, oldDriverTypeProcess, driverTypeProcess));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UnsettableBoolean getDriverTypeOrganizational() {
-		return driverTypeOrganizational;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDriverTypeOrganizational(UnsettableBoolean newDriverTypeOrganizational) {
-		UnsettableBoolean oldDriverTypeOrganizational = driverTypeOrganizational;
-		driverTypeOrganizational = newDriverTypeOrganizational == null ? DRIVER_TYPE_ORGANIZATIONAL_EDEFAULT : newDriverTypeOrganizational;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL, oldDriverTypeOrganizational, driverTypeOrganizational));
+	public EList<DriverType> getDriverTypes() {
+		if (driverTypes == null) {
+			driverTypes = new EDataTypeUniqueEList<DriverType>(DriverType.class, this, BomiPackage.DRIVER__DRIVER_TYPES);
+		}
+		return driverTypes;
 	}
 
 	/**
@@ -276,12 +173,8 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BomiPackage.DRIVER__DRIVER_TYPE_TECHNOLOGY:
-				return getDriverTypeTechnology();
-			case BomiPackage.DRIVER__DRIVER_TYPE_PROCESS:
-				return getDriverTypeProcess();
-			case BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL:
-				return getDriverTypeOrganizational();
+			case BomiPackage.DRIVER__DRIVER_TYPES:
+				return getDriverTypes();
 			case BomiPackage.DRIVER__DISTANCE_TYPES:
 				return getDistanceTypes();
 			case BomiPackage.DRIVER__DISTANCE_SIZE:
@@ -301,14 +194,9 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BomiPackage.DRIVER__DRIVER_TYPE_TECHNOLOGY:
-				setDriverTypeTechnology((UnsettableBoolean)newValue);
-				return;
-			case BomiPackage.DRIVER__DRIVER_TYPE_PROCESS:
-				setDriverTypeProcess((UnsettableBoolean)newValue);
-				return;
-			case BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL:
-				setDriverTypeOrganizational((UnsettableBoolean)newValue);
+			case BomiPackage.DRIVER__DRIVER_TYPES:
+				getDriverTypes().clear();
+				getDriverTypes().addAll((Collection<? extends DriverType>)newValue);
 				return;
 			case BomiPackage.DRIVER__DISTANCE_TYPES:
 				getDistanceTypes().clear();
@@ -333,14 +221,8 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BomiPackage.DRIVER__DRIVER_TYPE_TECHNOLOGY:
-				setDriverTypeTechnology(DRIVER_TYPE_TECHNOLOGY_EDEFAULT);
-				return;
-			case BomiPackage.DRIVER__DRIVER_TYPE_PROCESS:
-				setDriverTypeProcess(DRIVER_TYPE_PROCESS_EDEFAULT);
-				return;
-			case BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL:
-				setDriverTypeOrganizational(DRIVER_TYPE_ORGANIZATIONAL_EDEFAULT);
+			case BomiPackage.DRIVER__DRIVER_TYPES:
+				getDriverTypes().clear();
 				return;
 			case BomiPackage.DRIVER__DISTANCE_TYPES:
 				getDistanceTypes().clear();
@@ -363,12 +245,8 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BomiPackage.DRIVER__DRIVER_TYPE_TECHNOLOGY:
-				return driverTypeTechnology != DRIVER_TYPE_TECHNOLOGY_EDEFAULT;
-			case BomiPackage.DRIVER__DRIVER_TYPE_PROCESS:
-				return driverTypeProcess != DRIVER_TYPE_PROCESS_EDEFAULT;
-			case BomiPackage.DRIVER__DRIVER_TYPE_ORGANIZATIONAL:
-				return driverTypeOrganizational != DRIVER_TYPE_ORGANIZATIONAL_EDEFAULT;
+			case BomiPackage.DRIVER__DRIVER_TYPES:
+				return driverTypes != null && !driverTypes.isEmpty();
 			case BomiPackage.DRIVER__DISTANCE_TYPES:
 				return distanceTypes != null && !distanceTypes.isEmpty();
 			case BomiPackage.DRIVER__DISTANCE_SIZE:
@@ -389,12 +267,8 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (driverTypeTechnology: ");
-		result.append(driverTypeTechnology);
-		result.append(", driverTypeProcess: ");
-		result.append(driverTypeProcess);
-		result.append(", driverTypeOrganizational: ");
-		result.append(driverTypeOrganizational);
+		result.append(" (driverTypes: ");
+		result.append(driverTypes);
 		result.append(", distanceTypes: ");
 		result.append(distanceTypes);
 		result.append(", distanceSize: ");
