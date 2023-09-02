@@ -38,11 +38,6 @@
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//MIType/Departments"/>
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//MIType/Organizations"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bomi.ecore#//UnsettableBoolean">
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//UnsettableBoolean/NOT_SET"/>
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//UnsettableBoolean/True"/>
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//UnsettableBoolean/False"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="bomi.ecore#//DistanceType">
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//DistanceType/Cultural"/>
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//DistanceType/Geographical"/>
@@ -52,6 +47,13 @@
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//DriverType/Technology"/>
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//DriverType/Process"/>
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//DriverType/Organizational"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bomi.ecore#//InteractionKind">
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//InteractionKind/IsResponsibleFor"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//InteractionKind/Creates"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//InteractionKind/Reads"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//InteractionKind/Updates"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//InteractionKind/Deletes"/>
     </genEnums>
     <genClasses ecoreClass="bomi.ecore#//BoundaryObject">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BoundaryObject/superType"/>
@@ -77,11 +79,7 @@
     </genClasses>
     <genClasses ecoreClass="bomi.ecore#//BORoleInteraction">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bomi.ecore#//BORoleInteraction/roles"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BORoleInteraction/responsible"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BORoleInteraction/creates"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BORoleInteraction/reads"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BORoleInteraction/updates"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BORoleInteraction/deletes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bomi.ecore#//BORoleInteraction/interactionKinds"/>
     </genClasses>
     <genClasses ecoreClass="bomi.ecore#//BOMIModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bomi.ecore#//BOMIModel/boRoleInteractions"/>

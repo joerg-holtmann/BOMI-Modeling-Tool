@@ -24,13 +24,13 @@ import se.gu.cse.idxse.bomi.Driver;
 import se.gu.cse.idxse.bomi.DriverType;
 import se.gu.cse.idxse.bomi.GovernanceTeam;
 import se.gu.cse.idxse.bomi.HighLow;
+import se.gu.cse.idxse.bomi.InteractionKind;
 import se.gu.cse.idxse.bomi.LifecycleStage;
 import se.gu.cse.idxse.bomi.MIType;
 import se.gu.cse.idxse.bomi.MethodologicalIsland;
 import se.gu.cse.idxse.bomi.NamedElement;
 import se.gu.cse.idxse.bomi.PurposedElement;
 import se.gu.cse.idxse.bomi.Role;
-import se.gu.cse.idxse.bomi.UnsettableBoolean;
 import se.gu.cse.idxse.bomi.UsageAssociation;
 
 /**
@@ -164,13 +164,6 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum unsettableBooleanEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EEnum distanceTypeEEnum = null;
 
 	/**
@@ -179,6 +172,13 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * @generated
 	 */
 	private EEnum driverTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum interactionKindEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -435,44 +435,8 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBORoleInteraction_Responsible() {
+	public EAttribute getBORoleInteraction_InteractionKinds() {
 		return (EAttribute)boRoleInteractionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBORoleInteraction_Creates() {
-		return (EAttribute)boRoleInteractionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBORoleInteraction_Reads() {
-		return (EAttribute)boRoleInteractionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBORoleInteraction_Updates() {
-		return (EAttribute)boRoleInteractionEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBORoleInteraction_Deletes() {
-		return (EAttribute)boRoleInteractionEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -804,15 +768,6 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getUnsettableBoolean() {
-		return unsettableBooleanEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getDistanceType() {
 		return distanceTypeEEnum;
 	}
@@ -824,6 +779,15 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 */
 	public EEnum getDriverType() {
 		return driverTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getInteractionKind() {
+		return interactionKindEEnum;
 	}
 
 	/**
@@ -878,11 +842,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 
 		boRoleInteractionEClass = createEClass(BO_ROLE_INTERACTION);
 		createEReference(boRoleInteractionEClass, BO_ROLE_INTERACTION__ROLES);
-		createEAttribute(boRoleInteractionEClass, BO_ROLE_INTERACTION__RESPONSIBLE);
-		createEAttribute(boRoleInteractionEClass, BO_ROLE_INTERACTION__CREATES);
-		createEAttribute(boRoleInteractionEClass, BO_ROLE_INTERACTION__READS);
-		createEAttribute(boRoleInteractionEClass, BO_ROLE_INTERACTION__UPDATES);
-		createEAttribute(boRoleInteractionEClass, BO_ROLE_INTERACTION__DELETES);
+		createEAttribute(boRoleInteractionEClass, BO_ROLE_INTERACTION__INTERACTION_KINDS);
 
 		bomiModelEClass = createEClass(BOMI_MODEL);
 		createEReference(bomiModelEClass, BOMI_MODEL__BO_ROLE_INTERACTIONS);
@@ -930,9 +890,9 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		lifecycleStageEEnum = createEEnum(LIFECYCLE_STAGE);
 		highLowEEnum = createEEnum(HIGH_LOW);
 		miTypeEEnum = createEEnum(MI_TYPE);
-		unsettableBooleanEEnum = createEEnum(UNSETTABLE_BOOLEAN);
 		distanceTypeEEnum = createEEnum(DISTANCE_TYPE);
 		driverTypeEEnum = createEEnum(DRIVER_TYPE);
+		interactionKindEEnum = createEEnum(INTERACTION_KIND);
 	}
 
 	/**
@@ -1000,11 +960,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 
 		initEClass(boRoleInteractionEClass, BORoleInteraction.class, "BORoleInteraction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBORoleInteraction_Roles(), this.getRole(), null, "roles", null, 0, -1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBORoleInteraction_Responsible(), this.getUnsettableBoolean(), "responsible", null, 0, 1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBORoleInteraction_Creates(), this.getUnsettableBoolean(), "creates", null, 0, 1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBORoleInteraction_Reads(), this.getUnsettableBoolean(), "reads", null, 0, 1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBORoleInteraction_Updates(), this.getUnsettableBoolean(), "updates", null, 0, 1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBORoleInteraction_Deletes(), this.getUnsettableBoolean(), "deletes", null, 0, 1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBORoleInteraction_InteractionKinds(), this.getInteractionKind(), "interactionKinds", null, 0, -1, BORoleInteraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bomiModelEClass, BOMIModel.class, "BOMIModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBOMIModel_BoRoleInteractions(), this.getBORoleInteraction(), null, "boRoleInteractions", null, 0, -1, BOMIModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1078,11 +1034,6 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		addEEnumLiteral(miTypeEEnum, MIType.DEPARTMENTS);
 		addEEnumLiteral(miTypeEEnum, MIType.ORGANIZATIONS);
 
-		initEEnum(unsettableBooleanEEnum, UnsettableBoolean.class, "UnsettableBoolean");
-		addEEnumLiteral(unsettableBooleanEEnum, UnsettableBoolean.NOT_SET);
-		addEEnumLiteral(unsettableBooleanEEnum, UnsettableBoolean.TRUE);
-		addEEnumLiteral(unsettableBooleanEEnum, UnsettableBoolean.FALSE);
-
 		initEEnum(distanceTypeEEnum, DistanceType.class, "DistanceType");
 		addEEnumLiteral(distanceTypeEEnum, DistanceType.CULTURAL);
 		addEEnumLiteral(distanceTypeEEnum, DistanceType.GEOGRAPHICAL);
@@ -1092,6 +1043,13 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		addEEnumLiteral(driverTypeEEnum, DriverType.TECHNOLOGY);
 		addEEnumLiteral(driverTypeEEnum, DriverType.PROCESS);
 		addEEnumLiteral(driverTypeEEnum, DriverType.ORGANIZATIONAL);
+
+		initEEnum(interactionKindEEnum, InteractionKind.class, "InteractionKind");
+		addEEnumLiteral(interactionKindEEnum, InteractionKind.IS_RESPONSIBLE_FOR);
+		addEEnumLiteral(interactionKindEEnum, InteractionKind.CREATES);
+		addEEnumLiteral(interactionKindEEnum, InteractionKind.READS);
+		addEEnumLiteral(interactionKindEEnum, InteractionKind.UPDATES);
+		addEEnumLiteral(interactionKindEEnum, InteractionKind.DELETES);
 
 		// Create resource
 		createResource(eNS_URI);

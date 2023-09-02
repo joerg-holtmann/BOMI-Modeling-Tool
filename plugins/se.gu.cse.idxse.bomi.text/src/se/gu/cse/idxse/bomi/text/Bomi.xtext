@@ -34,11 +34,7 @@ BORoleInteraction returns BORoleInteraction:
 		('stability' stability=HighLow)?
 		('criticality' criticality=HighLow)?
 		('fitForPurpose' fitForPurpose=HighLow)?
-		('responsible' responsible=UnsettableBoolean)?
-		('creates' creates=UnsettableBoolean)?
-		('reads' reads=UnsettableBoolean)?
-		('updates' updates=UnsettableBoolean)?
-		('deletes' deletes=UnsettableBoolean)?
+		('interactionKinds' '{' interactionKinds+=InteractionKind ( "," interactionKinds+=InteractionKind)* '}' )?
 		('boundaryObjects' '(' boundaryObjects+=[BoundaryObject|EString] ( "," boundaryObjects+=[BoundaryObject|EString])* ')' )?
 		('roles' '(' roles+=[Role|EString] ( "," roles+=[Role|EString])* ')' )?
 	'}';
@@ -129,8 +125,8 @@ EString returns ecore::EString:
 enum HighLow returns HighLow:
 				NOT_SET = 'NOT_SET' | High = 'High' | Medium = 'Medium' | Low = 'Low';
 
-enum UnsettableBoolean returns UnsettableBoolean:
-				NOT_SET = 'NOT_SET' | True = 'True' | False = 'False';
+enum InteractionKind returns InteractionKind:
+				IsResponsibleFor = 'IsResponsibleFor' | Creates = 'Creates' | Reads = 'Reads' | Updates = 'Updates' | Deletes = 'Deletes';
 
 enum BOSuperTypes returns BOSuperTypes:
 				NOT_SET = 'NOT_SET' | Standard = 'Standard' | Technology = 'Technology' | Task = 'Task' | Planning = 'Planning' | Value = 'Value' | Product = 'Product' | Other = 'Other';

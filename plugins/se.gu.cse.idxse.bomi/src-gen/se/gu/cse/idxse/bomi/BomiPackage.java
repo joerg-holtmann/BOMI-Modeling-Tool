@@ -590,49 +590,13 @@ public interface BomiPackage extends EPackage {
 	int BO_ROLE_INTERACTION__ROLES = USAGE_ASSOCIATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Responsible</b></em>' attribute.
+	 * The feature id for the '<em><b>Interaction Kinds</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BO_ROLE_INTERACTION__RESPONSIBLE = USAGE_ASSOCIATION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Creates</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BO_ROLE_INTERACTION__CREATES = USAGE_ASSOCIATION_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Reads</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BO_ROLE_INTERACTION__READS = USAGE_ASSOCIATION_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Updates</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BO_ROLE_INTERACTION__UPDATES = USAGE_ASSOCIATION_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Deletes</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BO_ROLE_INTERACTION__DELETES = USAGE_ASSOCIATION_FEATURE_COUNT + 5;
+	int BO_ROLE_INTERACTION__INTERACTION_KINDS = USAGE_ASSOCIATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>BO Role Interaction</em>' class.
@@ -641,7 +605,7 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BO_ROLE_INTERACTION_FEATURE_COUNT = USAGE_ASSOCIATION_FEATURE_COUNT + 6;
+	int BO_ROLE_INTERACTION_FEATURE_COUNT = USAGE_ASSOCIATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>BO Role Interaction</em>' class.
@@ -1131,16 +1095,6 @@ public interface BomiPackage extends EPackage {
 	int MI_TYPE = 16;
 
 	/**
-	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.UnsettableBoolean <em>Unsettable Boolean</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
-	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getUnsettableBoolean()
-	 * @generated
-	 */
-	int UNSETTABLE_BOOLEAN = 17;
-
-	/**
 	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.DistanceType <em>Distance Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1148,7 +1102,7 @@ public interface BomiPackage extends EPackage {
 	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getDistanceType()
 	 * @generated
 	 */
-	int DISTANCE_TYPE = 18;
+	int DISTANCE_TYPE = 17;
 
 	/**
 	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.DriverType <em>Driver Type</em>}' enum.
@@ -1158,7 +1112,17 @@ public interface BomiPackage extends EPackage {
 	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getDriverType()
 	 * @generated
 	 */
-	int DRIVER_TYPE = 19;
+	int DRIVER_TYPE = 18;
+
+	/**
+	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.InteractionKind <em>Interaction Kind</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see se.gu.cse.idxse.bomi.InteractionKind
+	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getInteractionKind()
+	 * @generated
+	 */
+	int INTERACTION_KIND = 19;
 
 	/**
 	 * Returns the meta object for class '{@link se.gu.cse.idxse.bomi.BoundaryObject <em>Boundary Object</em>}'.
@@ -1388,59 +1352,15 @@ public interface BomiPackage extends EPackage {
 	EReference getBORoleInteraction_Roles();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BORoleInteraction#getResponsible <em>Responsible</em>}'.
+	 * Returns the meta object for the attribute list '{@link se.gu.cse.idxse.bomi.BORoleInteraction#getInteractionKinds <em>Interaction Kinds</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Responsible</em>'.
-	 * @see se.gu.cse.idxse.bomi.BORoleInteraction#getResponsible()
+	 * @return the meta object for the attribute list '<em>Interaction Kinds</em>'.
+	 * @see se.gu.cse.idxse.bomi.BORoleInteraction#getInteractionKinds()
 	 * @see #getBORoleInteraction()
 	 * @generated
 	 */
-	EAttribute getBORoleInteraction_Responsible();
-
-	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BORoleInteraction#getCreates <em>Creates</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Creates</em>'.
-	 * @see se.gu.cse.idxse.bomi.BORoleInteraction#getCreates()
-	 * @see #getBORoleInteraction()
-	 * @generated
-	 */
-	EAttribute getBORoleInteraction_Creates();
-
-	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BORoleInteraction#getReads <em>Reads</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reads</em>'.
-	 * @see se.gu.cse.idxse.bomi.BORoleInteraction#getReads()
-	 * @see #getBORoleInteraction()
-	 * @generated
-	 */
-	EAttribute getBORoleInteraction_Reads();
-
-	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BORoleInteraction#getUpdates <em>Updates</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Updates</em>'.
-	 * @see se.gu.cse.idxse.bomi.BORoleInteraction#getUpdates()
-	 * @see #getBORoleInteraction()
-	 * @generated
-	 */
-	EAttribute getBORoleInteraction_Updates();
-
-	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BORoleInteraction#getDeletes <em>Deletes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Deletes</em>'.
-	 * @see se.gu.cse.idxse.bomi.BORoleInteraction#getDeletes()
-	 * @see #getBORoleInteraction()
-	 * @generated
-	 */
-	EAttribute getBORoleInteraction_Deletes();
+	EAttribute getBORoleInteraction_InteractionKinds();
 
 	/**
 	 * Returns the meta object for class '{@link se.gu.cse.idxse.bomi.BOMIModel <em>BOMI Model</em>}'.
@@ -1826,16 +1746,6 @@ public interface BomiPackage extends EPackage {
 	EEnum getMIType();
 
 	/**
-	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.UnsettableBoolean <em>Unsettable Boolean</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Unsettable Boolean</em>'.
-	 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
-	 * @generated
-	 */
-	EEnum getUnsettableBoolean();
-
-	/**
 	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.DistanceType <em>Distance Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1854,6 +1764,16 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getDriverType();
+
+	/**
+	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.InteractionKind <em>Interaction Kind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Interaction Kind</em>'.
+	 * @see se.gu.cse.idxse.bomi.InteractionKind
+	 * @generated
+	 */
+	EEnum getInteractionKind();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2055,44 +1975,12 @@ public interface BomiPackage extends EPackage {
 		EReference BO_ROLE_INTERACTION__ROLES = eINSTANCE.getBORoleInteraction_Roles();
 
 		/**
-		 * The meta object literal for the '<em><b>Responsible</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Interaction Kinds</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BO_ROLE_INTERACTION__RESPONSIBLE = eINSTANCE.getBORoleInteraction_Responsible();
-
-		/**
-		 * The meta object literal for the '<em><b>Creates</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BO_ROLE_INTERACTION__CREATES = eINSTANCE.getBORoleInteraction_Creates();
-
-		/**
-		 * The meta object literal for the '<em><b>Reads</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BO_ROLE_INTERACTION__READS = eINSTANCE.getBORoleInteraction_Reads();
-
-		/**
-		 * The meta object literal for the '<em><b>Updates</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BO_ROLE_INTERACTION__UPDATES = eINSTANCE.getBORoleInteraction_Updates();
-
-		/**
-		 * The meta object literal for the '<em><b>Deletes</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BO_ROLE_INTERACTION__DELETES = eINSTANCE.getBORoleInteraction_Deletes();
+		EAttribute BO_ROLE_INTERACTION__INTERACTION_KINDS = eINSTANCE.getBORoleInteraction_InteractionKinds();
 
 		/**
 		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.impl.BOMIModelImpl <em>BOMI Model</em>}' class.
@@ -2409,16 +2297,6 @@ public interface BomiPackage extends EPackage {
 		EEnum MI_TYPE = eINSTANCE.getMIType();
 
 		/**
-		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.UnsettableBoolean <em>Unsettable Boolean</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see se.gu.cse.idxse.bomi.UnsettableBoolean
-		 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getUnsettableBoolean()
-		 * @generated
-		 */
-		EEnum UNSETTABLE_BOOLEAN = eINSTANCE.getUnsettableBoolean();
-
-		/**
 		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.DistanceType <em>Distance Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2437,6 +2315,16 @@ public interface BomiPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum DRIVER_TYPE = eINSTANCE.getDriverType();
+
+		/**
+		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.InteractionKind <em>Interaction Kind</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see se.gu.cse.idxse.bomi.InteractionKind
+		 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getInteractionKind()
+		 * @generated
+		 */
+		EEnum INTERACTION_KIND = eINSTANCE.getInteractionKind();
 
 	}
 

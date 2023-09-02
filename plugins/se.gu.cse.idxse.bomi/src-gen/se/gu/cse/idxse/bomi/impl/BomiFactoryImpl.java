@@ -87,12 +87,12 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 				return createHighLowFromString(eDataType, initialValue);
 			case BomiPackage.MI_TYPE:
 				return createMITypeFromString(eDataType, initialValue);
-			case BomiPackage.UNSETTABLE_BOOLEAN:
-				return createUnsettableBooleanFromString(eDataType, initialValue);
 			case BomiPackage.DISTANCE_TYPE:
 				return createDistanceTypeFromString(eDataType, initialValue);
 			case BomiPackage.DRIVER_TYPE:
 				return createDriverTypeFromString(eDataType, initialValue);
+			case BomiPackage.INTERACTION_KIND:
+				return createInteractionKindFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -114,12 +114,12 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 				return convertHighLowToString(eDataType, instanceValue);
 			case BomiPackage.MI_TYPE:
 				return convertMITypeToString(eDataType, instanceValue);
-			case BomiPackage.UNSETTABLE_BOOLEAN:
-				return convertUnsettableBooleanToString(eDataType, instanceValue);
 			case BomiPackage.DISTANCE_TYPE:
 				return convertDistanceTypeToString(eDataType, instanceValue);
 			case BomiPackage.DRIVER_TYPE:
 				return convertDriverTypeToString(eDataType, instanceValue);
+			case BomiPackage.INTERACTION_KIND:
+				return convertInteractionKindToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -300,26 +300,6 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UnsettableBoolean createUnsettableBooleanFromString(EDataType eDataType, String initialValue) {
-		UnsettableBoolean result = UnsettableBoolean.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertUnsettableBooleanToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public DistanceType createDistanceTypeFromString(EDataType eDataType, String initialValue) {
 		DistanceType result = DistanceType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -352,6 +332,26 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * @generated
 	 */
 	public String convertDriverTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InteractionKind createInteractionKindFromString(EDataType eDataType, String initialValue) {
+		InteractionKind result = InteractionKind.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertInteractionKindToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

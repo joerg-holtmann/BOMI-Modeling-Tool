@@ -38,11 +38,6 @@
     <eLiterals name="Departments" value="3"/>
     <eLiterals name="Organizations" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="UnsettableBoolean">
-    <eLiterals name="NOT_SET"/>
-    <eLiterals name="True" value="1"/>
-    <eLiterals name="False" value="2"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BoundaryObject" eSuperTypes="#//PurposedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="superType" eType="#//BOSuperTypes"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="levelOfDetail" eType="#//HighLow"/>
@@ -70,11 +65,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="BORoleInteraction" eSuperTypes="#//UsageAssociation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
         eType="#//Role"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responsible" eType="#//UnsettableBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creates" eType="#//UnsettableBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reads" eType="#//UnsettableBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updates" eType="#//UnsettableBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deletes" eType="#//UnsettableBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interactionKinds" upperBound="-1"
+        eType="#//InteractionKind"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BOMIModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="boRoleInteractions" upperBound="-1"
@@ -141,5 +133,12 @@
     <eLiterals name="Technology"/>
     <eLiterals name="Process" value="1"/>
     <eLiterals name="Organizational" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="InteractionKind">
+    <eLiterals name="IsResponsibleFor"/>
+    <eLiterals name="Creates" value="1"/>
+    <eLiterals name="Reads" value="2"/>
+    <eLiterals name="Updates" value="3"/>
+    <eLiterals name="Deletes" value="4"/>
   </eClassifiers>
 </ecore:EPackage>
