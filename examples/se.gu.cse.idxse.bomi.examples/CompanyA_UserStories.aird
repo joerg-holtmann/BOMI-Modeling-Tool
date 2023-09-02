@@ -4,14 +4,14 @@
     <semanticResources>CompanyA_UserStories.bomi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_N4vAAKe4Ee2_pahSFK9j9Q">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vxYssKiNEe2qR8ezOHESAw" name="Company A User Story BOMI Detailed Diagram" repPath="#_vwps4KiNEe2qR8ezOHESAw" changeId="1693419417785">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vxYssKiNEe2qR8ezOHESAw" name="Company A User Story BOMI Detailed Diagram" repPath="#_vwps4KiNEe2qR8ezOHESAw" changeId="1693664858328">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']"/>
         <target xmi:type="bomi:BOMIModel" href="CompanyA_UserStories.bomi#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_r938oLwGEe2T5OoGyqWEpA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BO']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_xyxTcLwGEe2T5OoGyqWEpA" name="Company A User Story Boundary Object (BO) Diagram" repPath="#_xytpELwGEe2T5OoGyqWEpA" changeId="1693245094269">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_xyxTcLwGEe2T5OoGyqWEpA" name="Company A User Story Boundary Object (BO) Diagram" repPath="#_xytpELwGEe2T5OoGyqWEpA" changeId="1693664441820">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BO']/@ownedRepresentations[name='Boundary%20Object%20(BO)%20Diagram']"/>
         <target xmi:type="bomi:BOMIModel" href="CompanyA_UserStories.bomi#/"/>
       </ownedRepresentationDescriptors>
@@ -607,7 +607,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='role2MiPartOf']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_wy6hgKiVEe2V1tKSGZrIXA" name="Association: PO / User Story Interaction&#xA;Responsible Creates Updates &#xA;Accessability: High&#xA;Stability: Low&#xA;Criticality: High&#xA;Fit for purpose: High" sourceNode="_WuZPsKiVEe2V1tKSGZrIXA" targetNode="_-V1NkKiNEe2qR8ezOHESAw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_wy6hgKiVEe2V1tKSGZrIXA" name="Association: PO / User Story Interaction&#xA;IsResponsibleFor Creates Updates &#xA;Accessability: High&#xA;Stability: Low&#xA;Criticality: High&#xA;Fit for purpose: High" sourceNode="_WuZPsKiVEe2V1tKSGZrIXA" targetNode="_-V1NkKiNEe2qR8ezOHESAw">
       <target xmi:type="bomi:BORoleInteraction" href="CompanyA_UserStories.bomi#//@boRoleInteractions.0"/>
       <semanticElements xmi:type="bomi:BORoleInteraction" href="CompanyA_UserStories.bomi#//@boRoleInteractions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_wy6hgaiVEe2V1tKSGZrIXA" targetArrow="InputFillClosedArrow" size="4" routingStyle="manhattan" strokeColor="114,73,110">
@@ -895,7 +895,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BO']/@ownedRepresentations[name='Boundary%20Object%20(BO)%20Diagram']/@defaultLayer/@containerMappings[name='Role']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_xz1DYLwGEe2T5OoGyqWEpA" name="Association: PO / User Story Interaction&#xA;Responsible Creates Updates &#xA;Accessability: High&#xA;Stability: Low&#xA;Criticality: High&#xA;Fit for purpose: High" sourceNode="_xzxZALwGEe2T5OoGyqWEpA" targetNode="_xzGqoLwGEe2T5OoGyqWEpA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_xz1DYLwGEe2T5OoGyqWEpA" name="Association: PO / User Story Interaction&#xA;IsResponsibleFor Creates Updates &#xA;Accessability: High&#xA;Stability: Low&#xA;Criticality: High&#xA;Fit for purpose: High" sourceNode="_xzxZALwGEe2T5OoGyqWEpA" targetNode="_xzGqoLwGEe2T5OoGyqWEpA">
       <target xmi:type="bomi:BORoleInteraction" href="CompanyA_UserStories.bomi#//@boRoleInteractions.0"/>
       <semanticElements xmi:type="bomi:BORoleInteraction" href="CompanyA_UserStories.bomi#//@boRoleInteractions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_xz1qcLwGEe2T5OoGyqWEpA" targetArrow="InputFillClosedArrow" size="4" routingStyle="manhattan" strokeColor="114,73,110">

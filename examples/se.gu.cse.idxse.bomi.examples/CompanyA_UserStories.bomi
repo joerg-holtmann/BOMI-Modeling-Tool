@@ -4,9 +4,9 @@ boRoleInteractions {
 		stability Low 
 		criticality High 
 		fitForPurpose High 
-		responsible True 
-		creates True 
-		updates True 
+		interactionKinds {
+			IsResponsibleFor, Creates, Updates 
+		} 
 		boundaryObjects ( "User Story" ) 
 		roles ( "Product Owner" )
 	} , 
@@ -15,7 +15,10 @@ boRoleInteractions {
 		stability Low 
 		criticality High 
 		fitForPurpose High 
-		reads True boundaryObjects ( "User Story" ) roles ( Developer )
+		interactionKinds {
+			Reads
+		}  
+		boundaryObjects ( "User Story" ) roles ( Developer )
 	}
 } 
 
