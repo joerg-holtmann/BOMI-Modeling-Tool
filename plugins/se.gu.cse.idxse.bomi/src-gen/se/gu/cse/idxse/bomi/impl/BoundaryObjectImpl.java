@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import se.gu.cse.idxse.bomi.BOSuperTypes;
+import se.gu.cse.idxse.bomi.BOSuperType;
 import se.gu.cse.idxse.bomi.BomiPackage;
 import se.gu.cse.idxse.bomi.BoundaryObject;
 import se.gu.cse.idxse.bomi.HighLow;
@@ -48,7 +48,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BOSuperTypes SUPER_TYPE_EDEFAULT = BOSuperTypes.NOT_SET;
+	protected static final BOSuperType SUPER_TYPE_EDEFAULT = BOSuperType.NOT_SET;
 
 	/**
 	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' attribute.
@@ -58,7 +58,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * @generated
 	 * @ordered
 	 */
-	protected BOSuperTypes superType = SUPER_TYPE_EDEFAULT;
+	protected BOSuperType superType = SUPER_TYPE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getLevelOfDetail() <em>Level Of Detail</em>}' attribute.
@@ -324,7 +324,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BOSuperTypes getSuperType() {
+	public BOSuperType getSuperType() {
 		return superType;
 	}
 
@@ -333,8 +333,8 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSuperType(BOSuperTypes newSuperType) {
-		BOSuperTypes oldSuperType = superType;
+	public void setSuperType(BOSuperType newSuperType) {
+		BOSuperType oldSuperType = superType;
 		superType = newSuperType == null ? SUPER_TYPE_EDEFAULT : newSuperType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE, oldSuperType, superType));
@@ -639,7 +639,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
-				setSuperType((BOSuperTypes)newValue);
+				setSuperType((BOSuperType)newValue);
 				return;
 			case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
 				setLevelOfDetail((HighLow)newValue);

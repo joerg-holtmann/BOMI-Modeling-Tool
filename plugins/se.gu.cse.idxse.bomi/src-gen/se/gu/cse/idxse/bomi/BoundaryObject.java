@@ -33,28 +33,28 @@ package se.gu.cse.idxse.bomi;
 public interface BoundaryObject extends PurposedElement {
 	/**
 	 * Returns the value of the '<em><b>Super Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.BOSuperTypes}.
+	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.BOSuperType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Super Type</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.BOSuperTypes
-	 * @see #setSuperType(BOSuperTypes)
+	 * @see se.gu.cse.idxse.bomi.BOSuperType
+	 * @see #setSuperType(BOSuperType)
 	 * @see se.gu.cse.idxse.bomi.BomiPackage#getBoundaryObject_SuperType()
 	 * @model
 	 * @generated
 	 */
-	BOSuperTypes getSuperType();
+	BOSuperType getSuperType();
 
 	/**
 	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.BoundaryObject#getSuperType <em>Super Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Super Type</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.BOSuperTypes
+	 * @see se.gu.cse.idxse.bomi.BOSuperType
 	 * @see #getSuperType()
 	 * @generated
 	 */
-	void setSuperType(BOSuperTypes value);
+	void setSuperType(BOSuperType value);
 
 	/**
 	 * Returns the value of the '<em><b>Level Of Detail</b></em>' attribute.

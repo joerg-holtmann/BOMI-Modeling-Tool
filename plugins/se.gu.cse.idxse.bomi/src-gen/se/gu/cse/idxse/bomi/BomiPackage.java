@@ -1055,14 +1055,14 @@ public interface BomiPackage extends EPackage {
 	int DRIVER_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.BOSuperTypes <em>BO Super Types</em>}' enum.
+	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.BOSuperType <em>BO Super Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.gu.cse.idxse.bomi.BOSuperTypes
-	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getBOSuperTypes()
+	 * @see se.gu.cse.idxse.bomi.BOSuperType
+	 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getBOSuperType()
 	 * @generated
 	 */
-	int BO_SUPER_TYPES = 13;
+	int BO_SUPER_TYPE = 13;
 
 	/**
 	 * The meta object id for the '{@link se.gu.cse.idxse.bomi.LifecycleStage <em>Lifecycle Stage</em>}' enum.
@@ -1706,14 +1706,14 @@ public interface BomiPackage extends EPackage {
 	EAttribute getPurposedElement_Purpose();
 
 	/**
-	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.BOSuperTypes <em>BO Super Types</em>}'.
+	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.BOSuperType <em>BO Super Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>BO Super Types</em>'.
-	 * @see se.gu.cse.idxse.bomi.BOSuperTypes
+	 * @return the meta object for enum '<em>BO Super Type</em>'.
+	 * @see se.gu.cse.idxse.bomi.BOSuperType
 	 * @generated
 	 */
-	EEnum getBOSuperTypes();
+	EEnum getBOSuperType();
 
 	/**
 	 * Returns the meta object for enum '{@link se.gu.cse.idxse.bomi.LifecycleStage <em>Lifecycle Stage</em>}'.
@@ -2257,14 +2257,14 @@ public interface BomiPackage extends EPackage {
 		EAttribute PURPOSED_ELEMENT__PURPOSE = eINSTANCE.getPurposedElement_Purpose();
 
 		/**
-		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.BOSuperTypes <em>BO Super Types</em>}' enum.
+		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.BOSuperType <em>BO Super Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.gu.cse.idxse.bomi.BOSuperTypes
-		 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getBOSuperTypes()
+		 * @see se.gu.cse.idxse.bomi.BOSuperType
+		 * @see se.gu.cse.idxse.bomi.impl.BomiPackageImpl#getBOSuperType()
 		 * @generated
 		 */
-		EEnum BO_SUPER_TYPES = eINSTANCE.getBOSuperTypes();
+		EEnum BO_SUPER_TYPE = eINSTANCE.getBOSuperType();
 
 		/**
 		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.LifecycleStage <em>Lifecycle Stage</em>}' enum.

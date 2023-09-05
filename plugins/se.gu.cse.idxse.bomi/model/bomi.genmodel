@@ -8,15 +8,15 @@
   <foreignModel>bomi.ecore</foreignModel>
   <genPackages prefix="Bomi" basePackage="se.gu.cse.idxse" disposableProviderFactory="true"
       ecorePackage="bomi.ecore#/" documentation="">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bomi.ecore#//BOSuperTypes">
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperTypes/NOT_SET"/>
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperTypes/Standard"/>
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperTypes/Technology"/>
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperTypes/Task"/>
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperTypes/Planning"/>
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperTypes/Value"/>
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperTypes/Product"/>
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperTypes/Other"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bomi.ecore#//BOSuperType">
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperType/NOT_SET"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperType/Standard"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperType/Technology"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperType/Task"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperType/Planning"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperType/Value"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperType/Product"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//BOSuperType/Other"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="bomi.ecore#//LifecycleStage">
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//LifecycleStage/NOT_SET"/>

@@ -4,7 +4,7 @@
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation" value="external consistency to other BOs"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EEnum" name="BOSuperTypes">
+  <eClassifiers xsi:type="ecore:EEnum" name="BOSuperType">
     <eLiterals name="NOT_SET"/>
     <eLiterals name="Standard" value="1" literal="Standard"/>
     <eLiterals name="Technology" value="2"/>
@@ -39,7 +39,7 @@
     <eLiterals name="Organizations" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BoundaryObject" eSuperTypes="#//PurposedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="superType" eType="#//BOSuperTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="superType" eType="#//BOSuperType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="levelOfDetail" eType="#//HighLow"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequencyOfChange" eType="#//HighLow"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modularity" eType="#//HighLow"/>

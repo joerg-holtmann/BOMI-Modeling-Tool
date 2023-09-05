@@ -128,7 +128,7 @@ enum HighLow returns HighLow:
 enum InteractionKind returns InteractionKind:
 				IsResponsibleFor = 'IsResponsibleFor' | Creates = 'Creates' | Reads = 'Reads' | Updates = 'Updates' | Deletes = 'Deletes';
 
-enum BOSuperTypes returns BOSuperTypes:
+enum BOSuperTypes returns BOSuperType:
 				NOT_SET = 'NOT_SET' | Standard = 'Standard' | Technology = 'Technology' | Task = 'Task' | Planning = 'Planning' | Value = 'Value' | Product = 'Product' | Other = 'Other';
 
 enum LifecycleStage returns LifecycleStage:

@@ -79,8 +79,8 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case BomiPackage.BO_SUPER_TYPES:
-				return createBOSuperTypesFromString(eDataType, initialValue);
+			case BomiPackage.BO_SUPER_TYPE:
+				return createBOSuperTypeFromString(eDataType, initialValue);
 			case BomiPackage.LIFECYCLE_STAGE:
 				return createLifecycleStageFromString(eDataType, initialValue);
 			case BomiPackage.HIGH_LOW:
@@ -106,8 +106,8 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case BomiPackage.BO_SUPER_TYPES:
-				return convertBOSuperTypesToString(eDataType, instanceValue);
+			case BomiPackage.BO_SUPER_TYPE:
+				return convertBOSuperTypeToString(eDataType, instanceValue);
 			case BomiPackage.LIFECYCLE_STAGE:
 				return convertLifecycleStageToString(eDataType, instanceValue);
 			case BomiPackage.HIGH_LOW:
@@ -220,8 +220,8 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BOSuperTypes createBOSuperTypesFromString(EDataType eDataType, String initialValue) {
-		BOSuperTypes result = BOSuperTypes.get(initialValue);
+	public BOSuperType createBOSuperTypeFromString(EDataType eDataType, String initialValue) {
+		BOSuperType result = BOSuperType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -231,7 +231,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertBOSuperTypesToString(EDataType eDataType, Object instanceValue) {
+	public String convertBOSuperTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -14,7 +14,7 @@ import se.gu.cse.idxse.bomi.Association;
 import se.gu.cse.idxse.bomi.BOMICoordination;
 import se.gu.cse.idxse.bomi.BOMIModel;
 import se.gu.cse.idxse.bomi.BORoleInteraction;
-import se.gu.cse.idxse.bomi.BOSuperTypes;
+import se.gu.cse.idxse.bomi.BOSuperType;
 import se.gu.cse.idxse.bomi.BOTeamGovernance;
 import se.gu.cse.idxse.bomi.BomiFactory;
 import se.gu.cse.idxse.bomi.BomiPackage;
@@ -136,7 +136,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum boSuperTypesEEnum = null;
+	private EEnum boSuperTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -732,8 +732,8 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getBOSuperTypes() {
-		return boSuperTypesEEnum;
+	public EEnum getBOSuperType() {
+		return boSuperTypeEEnum;
 	}
 
 	/**
@@ -886,7 +886,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		createEAttribute(purposedElementEClass, PURPOSED_ELEMENT__PURPOSE);
 
 		// Create enums
-		boSuperTypesEEnum = createEEnum(BO_SUPER_TYPES);
+		boSuperTypeEEnum = createEEnum(BO_SUPER_TYPE);
 		lifecycleStageEEnum = createEEnum(LIFECYCLE_STAGE);
 		highLowEEnum = createEEnum(HIGH_LOW);
 		miTypeEEnum = createEEnum(MI_TYPE);
@@ -937,7 +937,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(boundaryObjectEClass, BoundaryObject.class, "BoundaryObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBoundaryObject_SuperType(), this.getBOSuperTypes(), "superType", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_SuperType(), this.getBOSuperType(), "superType", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundaryObject_LevelOfDetail(), this.getHighLow(), "levelOfDetail", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundaryObject_FrequencyOfChange(), this.getHighLow(), "frequencyOfChange", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundaryObject_Modularity(), this.getHighLow(), "modularity", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1004,15 +1004,15 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		initEAttribute(getPurposedElement_Purpose(), ecorePackage.getEString(), "purpose", null, 0, 1, PurposedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(boSuperTypesEEnum, BOSuperTypes.class, "BOSuperTypes");
-		addEEnumLiteral(boSuperTypesEEnum, BOSuperTypes.NOT_SET);
-		addEEnumLiteral(boSuperTypesEEnum, BOSuperTypes.STANDARD);
-		addEEnumLiteral(boSuperTypesEEnum, BOSuperTypes.TECHNOLOGY);
-		addEEnumLiteral(boSuperTypesEEnum, BOSuperTypes.TASK);
-		addEEnumLiteral(boSuperTypesEEnum, BOSuperTypes.PLANNING);
-		addEEnumLiteral(boSuperTypesEEnum, BOSuperTypes.VALUE);
-		addEEnumLiteral(boSuperTypesEEnum, BOSuperTypes.PRODUCT);
-		addEEnumLiteral(boSuperTypesEEnum, BOSuperTypes.OTHER);
+		initEEnum(boSuperTypeEEnum, BOSuperType.class, "BOSuperType");
+		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.NOT_SET);
+		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.STANDARD);
+		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.TECHNOLOGY);
+		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.TASK);
+		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.PLANNING);
+		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.VALUE);
+		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.PRODUCT);
+		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.OTHER);
 
 		initEEnum(lifecycleStageEEnum, LifecycleStage.class, "LifecycleStage");
 		addEEnumLiteral(lifecycleStageEEnum, LifecycleStage.NOT_SET);
