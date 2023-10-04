@@ -89,7 +89,7 @@
         </edgeMappings>
         <containerMappings name="Boundary Object" semanticCandidatesExpression="feature:boundaryObjects" domainClass="bomi::BoundaryObject" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Boundary Object Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject" childrenPresentation="List">
-            <subNodeMappings name="Super Type" preconditionExpression="aql:self.superType &lt;> bomi::BOSuperTypes::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
+            <subNodeMappings name="Super Type" preconditionExpression="aql:self.superType &lt;> bomi::BOSuperType::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
               <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Super Type: ' + self.superType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
@@ -890,7 +890,7 @@
         </edgeMappings>
         <containerMappings name="Boundary Object" semanticCandidatesExpression="feature:boundaryObjects" domainClass="bomi::BoundaryObject" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Boundary Object Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject" childrenPresentation="List">
-            <subNodeMappings name="Super Type" preconditionExpression="aql:self.superType &lt;> bomi::BOSuperTypes::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
+            <subNodeMappings name="Super Type" preconditionExpression="aql:self.superType &lt;> bomi::BOSuperType::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
               <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Super Type: ' + self.superType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
@@ -1116,7 +1116,7 @@
         </edgeMappings>
         <containerMappings name="Boundary Object" semanticCandidatesExpression="feature:boundaryObjects" domainClass="bomi::BoundaryObject" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Boundary Object Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject" childrenPresentation="List">
-            <subNodeMappings name="Super Type" preconditionExpression="aql:self.superType &lt;> bomi::BOSuperTypes::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
+            <subNodeMappings name="Super Type" preconditionExpression="aql:self.superType &lt;> bomi::BOSuperType::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
               <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Super Type: ' + self.superType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
