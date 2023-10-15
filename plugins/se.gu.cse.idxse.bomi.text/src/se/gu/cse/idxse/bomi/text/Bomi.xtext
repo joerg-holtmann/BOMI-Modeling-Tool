@@ -45,13 +45,13 @@ BoundaryObject returns BoundaryObject:
 	name=EString
 	'{'
 		('purpose' purpose=EString)?
-		('superType' superType=BOSuperTypes)?
+		('superTypes' '{' superTypes+=BOSuperType ( "," superTypes+=BOSuperType)* '}' )?
 		('levelOfDetail' levelOfDetail=HighLow)?
 		('frequencyOfChange' frequencyOfChange=HighLow)?
 		('modularity' modularity=HighLow)?
 		('maintainability' maintainability=HighLow)?
 		('prescriptive' prescriptive=HighLow)?
-		('lifecycleStage' lifecycleStage=LifecycleStage)?
+		('lifecycleStages' '{' lifecycleStages+=LifecycleStage ( "," lifecycleStages+=LifecycleStage)* '}' )?
 		('representationFormat' representationFormat=EString)?
 		('tooling' tooling=EString)?
 		('versioning' versioning=EString)?
@@ -89,6 +89,7 @@ MethodologicalIsland returns MethodologicalIsland:
 	name=EString
 	'{'
 		('type' type=MIType)?
+		('partOfMIs' '(' partOfMIs+=[MethodologicalIsland|EString] ( "," partOfMIs+=[MethodologicalIsland|EString])* ')' )?
 	'}';
 
 GovernanceTeam returns GovernanceTeam:
@@ -128,11 +129,11 @@ enum HighLow returns HighLow:
 enum InteractionKind returns InteractionKind:
 				IsResponsibleFor = 'IsResponsibleFor' | Creates = 'Creates' | Reads = 'Reads' | Updates = 'Updates' | Deletes = 'Deletes';
 
-enum BOSuperTypes returns BOSuperType:
-				NOT_SET = 'NOT_SET' | Standard = 'Standard' | Technology = 'Technology' | Task = 'Task' | Planning = 'Planning' | Value = 'Value' | Product = 'Product' | Other = 'Other';
+enum BOSuperType returns BOSuperType:
+				Standard = 'Standard' | Technology = 'Technology' | Task = 'Task' | Planning = 'Planning' | Value = 'Value' | Product = 'Product' | Other = 'Other';
 
 enum LifecycleStage returns LifecycleStage:
-				NOT_SET = 'NOT_SET' | Planning = 'Planning' | Operation = 'Operation' | Deprecate = 'Deprecate' | Retire = 'Retire';
+				Planning = 'Planning' | Operation = 'Operation' | Deprecate = 'Deprecate' | Retire = 'Retire';
 
 enum MIType returns MIType:
 				NOT_SET = 'NOT_SET' | Teams = 'Teams' | Silos = 'Silos' | Departments = 'Departments' | Organizations = 'Organizations';

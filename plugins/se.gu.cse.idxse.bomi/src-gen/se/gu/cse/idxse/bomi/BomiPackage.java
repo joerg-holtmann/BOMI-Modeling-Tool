@@ -172,13 +172,13 @@ public interface BomiPackage extends EPackage {
 	int BOUNDARY_OBJECT__PURPOSE = PURPOSED_ELEMENT__PURPOSE;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Super Types</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDARY_OBJECT__SUPER_TYPE = PURPOSED_ELEMENT_FEATURE_COUNT + 0;
+	int BOUNDARY_OBJECT__SUPER_TYPES = PURPOSED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Level Of Detail</b></em>' attribute.
@@ -226,13 +226,13 @@ public interface BomiPackage extends EPackage {
 	int BOUNDARY_OBJECT__PRESCRIPTIVE = PURPOSED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Lifecycle Stage</b></em>' attribute.
+	 * The feature id for the '<em><b>Lifecycle Stages</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDARY_OBJECT__LIFECYCLE_STAGE = PURPOSED_ELEMENT_FEATURE_COUNT + 6;
+	int BOUNDARY_OBJECT__LIFECYCLE_STAGES = PURPOSED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Representation Format</b></em>' attribute.
@@ -745,13 +745,22 @@ public interface BomiPackage extends EPackage {
 	int METHODOLOGICAL_ISLAND__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Part Of MIs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHODOLOGICAL_ISLAND__PART_OF_MIS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Methodological Island</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METHODOLOGICAL_ISLAND_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int METHODOLOGICAL_ISLAND_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Methodological Island</em>' class.
@@ -1135,15 +1144,15 @@ public interface BomiPackage extends EPackage {
 	EClass getBoundaryObject();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BoundaryObject#getSuperType <em>Super Type</em>}'.
+	 * Returns the meta object for the attribute list '{@link se.gu.cse.idxse.bomi.BoundaryObject#getSuperTypes <em>Super Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Super Type</em>'.
-	 * @see se.gu.cse.idxse.bomi.BoundaryObject#getSuperType()
+	 * @return the meta object for the attribute list '<em>Super Types</em>'.
+	 * @see se.gu.cse.idxse.bomi.BoundaryObject#getSuperTypes()
 	 * @see #getBoundaryObject()
 	 * @generated
 	 */
-	EAttribute getBoundaryObject_SuperType();
+	EAttribute getBoundaryObject_SuperTypes();
 
 	/**
 	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BoundaryObject#getLevelOfDetail <em>Level Of Detail</em>}'.
@@ -1201,15 +1210,15 @@ public interface BomiPackage extends EPackage {
 	EAttribute getBoundaryObject_Prescriptive();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BoundaryObject#getLifecycleStage <em>Lifecycle Stage</em>}'.
+	 * Returns the meta object for the attribute list '{@link se.gu.cse.idxse.bomi.BoundaryObject#getLifecycleStages <em>Lifecycle Stages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Lifecycle Stage</em>'.
-	 * @see se.gu.cse.idxse.bomi.BoundaryObject#getLifecycleStage()
+	 * @return the meta object for the attribute list '<em>Lifecycle Stages</em>'.
+	 * @see se.gu.cse.idxse.bomi.BoundaryObject#getLifecycleStages()
 	 * @see #getBoundaryObject()
 	 * @generated
 	 */
-	EAttribute getBoundaryObject_LifecycleStage();
+	EAttribute getBoundaryObject_LifecycleStages();
 
 	/**
 	 * Returns the meta object for the attribute '{@link se.gu.cse.idxse.bomi.BoundaryObject#getRepresentationFormat <em>Representation Format</em>}'.
@@ -1480,6 +1489,17 @@ public interface BomiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMethodologicalIsland_Type();
+
+	/**
+	 * Returns the meta object for the reference list '{@link se.gu.cse.idxse.bomi.MethodologicalIsland#getPartOfMIs <em>Part Of MIs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Part Of MIs</em>'.
+	 * @see se.gu.cse.idxse.bomi.MethodologicalIsland#getPartOfMIs()
+	 * @see #getMethodologicalIsland()
+	 * @generated
+	 */
+	EReference getMethodologicalIsland_PartOfMIs();
 
 	/**
 	 * Returns the meta object for class '{@link se.gu.cse.idxse.bomi.UsageAssociation <em>Usage Association</em>}'.
@@ -1809,12 +1829,12 @@ public interface BomiPackage extends EPackage {
 		EClass BOUNDARY_OBJECT = eINSTANCE.getBoundaryObject();
 
 		/**
-		 * The meta object literal for the '<em><b>Super Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Super Types</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOUNDARY_OBJECT__SUPER_TYPE = eINSTANCE.getBoundaryObject_SuperType();
+		EAttribute BOUNDARY_OBJECT__SUPER_TYPES = eINSTANCE.getBoundaryObject_SuperTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Level Of Detail</b></em>' attribute feature.
@@ -1857,12 +1877,12 @@ public interface BomiPackage extends EPackage {
 		EAttribute BOUNDARY_OBJECT__PRESCRIPTIVE = eINSTANCE.getBoundaryObject_Prescriptive();
 
 		/**
-		 * The meta object literal for the '<em><b>Lifecycle Stage</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Lifecycle Stages</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOUNDARY_OBJECT__LIFECYCLE_STAGE = eINSTANCE.getBoundaryObject_LifecycleStage();
+		EAttribute BOUNDARY_OBJECT__LIFECYCLE_STAGES = eINSTANCE.getBoundaryObject_LifecycleStages();
 
 		/**
 		 * The meta object literal for the '<em><b>Representation Format</b></em>' attribute feature.
@@ -2073,6 +2093,14 @@ public interface BomiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute METHODOLOGICAL_ISLAND__TYPE = eINSTANCE.getMethodologicalIsland_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Part Of MIs</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METHODOLOGICAL_ISLAND__PART_OF_MIS = eINSTANCE.getMethodologicalIsland_PartOfMIs();
 
 		/**
 		 * The meta object literal for the '{@link se.gu.cse.idxse.bomi.impl.UsageAssociationImpl <em>Usage Association</em>}' class.

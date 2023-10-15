@@ -19,15 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum LifecycleStage implements Enumerator {
 	/**
-	 * The '<em><b>NOT SET</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #NOT_SET_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	NOT_SET(0, "NOT_SET", "NOT_SET"),
-	/**
 	 * The '<em><b>Planning</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
@@ -35,7 +26,7 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PLANNING(1, "Planning", "Planning"),
+	PLANNING(0, "Planning", "Planning"),
 
 	/**
 	 * The '<em><b>Operation</b></em>' literal object.
@@ -45,7 +36,7 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	OPERATION(2, "Operation", "Operation"),
+	OPERATION(1, "Operation", "Operation"),
 
 	/**
 	 * The '<em><b>Deprecate</b></em>' literal object.
@@ -55,7 +46,7 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DEPRECATE(3, "Deprecate", "Deprecate"),
+	DEPRECATE(2, "Deprecate", "Deprecate"),
 
 	/**
 	 * The '<em><b>Retire</b></em>' literal object.
@@ -65,18 +56,7 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RETIRE(4, "Retire", "Retire");
-
-	/**
-	 * The '<em><b>NOT SET</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #NOT_SET
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int NOT_SET_VALUE = 0;
+	RETIRE(3, "Retire", "Retire");
 
 	/**
 	 * The '<em><b>Planning</b></em>' literal value.
@@ -87,7 +67,7 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PLANNING_VALUE = 1;
+	public static final int PLANNING_VALUE = 0;
 
 	/**
 	 * The '<em><b>Operation</b></em>' literal value.
@@ -98,7 +78,7 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int OPERATION_VALUE = 2;
+	public static final int OPERATION_VALUE = 1;
 
 	/**
 	 * The '<em><b>Deprecate</b></em>' literal value.
@@ -109,7 +89,7 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DEPRECATE_VALUE = 3;
+	public static final int DEPRECATE_VALUE = 2;
 
 	/**
 	 * The '<em><b>Retire</b></em>' literal value.
@@ -120,7 +100,7 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int RETIRE_VALUE = 4;
+	public static final int RETIRE_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>Lifecycle Stage</b></em>' enumerators.
@@ -129,7 +109,6 @@ public enum LifecycleStage implements Enumerator {
 	 * @generated
 	 */
 	private static final LifecycleStage[] VALUES_ARRAY = new LifecycleStage[] {
-			NOT_SET,
 			PLANNING,
 			OPERATION,
 			DEPRECATE,
@@ -190,7 +169,6 @@ public enum LifecycleStage implements Enumerator {
 	 */
 	public static LifecycleStage get(int value) {
 		switch (value) {
-			case NOT_SET_VALUE: return NOT_SET;
 			case PLANNING_VALUE: return PLANNING;
 			case OPERATION_VALUE: return OPERATION;
 			case DEPRECATE_VALUE: return DEPRECATE;

@@ -44,13 +44,13 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSuperTypePropertyDescriptor(object);
+			addSuperTypesPropertyDescriptor(object);
 			addLevelOfDetailPropertyDescriptor(object);
 			addFrequencyOfChangePropertyDescriptor(object);
 			addModularityPropertyDescriptor(object);
 			addMaintainabilityPropertyDescriptor(object);
 			addPrescriptivePropertyDescriptor(object);
-			addLifecycleStagePropertyDescriptor(object);
+			addLifecycleStagesPropertyDescriptor(object);
 			addRepresentationFormatPropertyDescriptor(object);
 			addToolingPropertyDescriptor(object);
 			addVersioningPropertyDescriptor(object);
@@ -62,19 +62,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Super Type feature.
+	 * This adds a property descriptor for the Super Types feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSuperTypePropertyDescriptor(Object object) {
+	protected void addSuperTypesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_BoundaryObject_superType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_superType_feature", "_UI_BoundaryObject_type"),
-				 BomiPackage.Literals.BOUNDARY_OBJECT__SUPER_TYPE,
+				 getString("_UI_BoundaryObject_superTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_superTypes_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__SUPER_TYPES,
 				 true,
 				 false,
 				 false,
@@ -194,19 +194,19 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Lifecycle Stage feature.
+	 * This adds a property descriptor for the Lifecycle Stages feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLifecycleStagePropertyDescriptor(Object object) {
+	protected void addLifecycleStagesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_BoundaryObject_lifecycleStage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_lifecycleStage_feature", "_UI_BoundaryObject_type"),
-				 BomiPackage.Literals.BOUNDARY_OBJECT__LIFECYCLE_STAGE,
+				 getString("_UI_BoundaryObject_lifecycleStages_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoundaryObject_lifecycleStages_feature", "_UI_BoundaryObject_type"),
+				 BomiPackage.Literals.BOUNDARY_OBJECT__LIFECYCLE_STAGES,
 				 true,
 				 false,
 				 false,
@@ -394,13 +394,13 @@ public class BoundaryObjectItemProvider extends PurposedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BoundaryObject.class)) {
-			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
+			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPES:
 			case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
 			case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
 			case BomiPackage.BOUNDARY_OBJECT__MODULARITY:
 			case BomiPackage.BOUNDARY_OBJECT__MAINTAINABILITY:
 			case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
-			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
+			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGES:
 			case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
 			case BomiPackage.BOUNDARY_OBJECT__TOOLING:
 			case BomiPackage.BOUNDARY_OBJECT__VERSIONING:

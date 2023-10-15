@@ -19,16 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum BOSuperType implements Enumerator {
 	/**
-	 * The '<em><b>NOT SET</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #NOT_SET_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	NOT_SET(0, "NOT_SET", "NOT_SET"),
-
-	/**
 	 * The '<em><b>Standard</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,7 +26,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STANDARD(1, "Standard", "Standard"),
+	STANDARD(0, "Standard", "Standard"),
 
 	/**
 	 * The '<em><b>Technology</b></em>' literal object.
@@ -46,7 +36,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TECHNOLOGY(2, "Technology", "Technology"),
+	TECHNOLOGY(1, "Technology", "Technology"),
 
 	/**
 	 * The '<em><b>Task</b></em>' literal object.
@@ -56,7 +46,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TASK(3, "Task", "Task"),
+	TASK(2, "Task", "Task"),
 
 	/**
 	 * The '<em><b>Planning</b></em>' literal object.
@@ -66,7 +56,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PLANNING(4, "Planning", "Planning"),
+	PLANNING(3, "Planning", "Planning"),
 
 	/**
 	 * The '<em><b>Value</b></em>' literal object.
@@ -76,7 +66,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	VALUE(5, "Value", "Value"),
+	VALUE(4, "Value", "Value"),
 
 	/**
 	 * The '<em><b>Product</b></em>' literal object.
@@ -86,7 +76,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PRODUCT(6, "Product", "Product"),
+	PRODUCT(5, "Product", "Product"),
 
 	/**
 	 * The '<em><b>Other</b></em>' literal object.
@@ -96,18 +86,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	OTHER(7, "Other", "Other");
-
-	/**
-	 * The '<em><b>NOT SET</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #NOT_SET
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int NOT_SET_VALUE = 0;
+	OTHER(6, "Other", "Other");
 
 	/**
 	 * The '<em><b>Standard</b></em>' literal value.
@@ -118,7 +97,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int STANDARD_VALUE = 1;
+	public static final int STANDARD_VALUE = 0;
 
 	/**
 	 * The '<em><b>Technology</b></em>' literal value.
@@ -129,7 +108,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TECHNOLOGY_VALUE = 2;
+	public static final int TECHNOLOGY_VALUE = 1;
 
 	/**
 	 * The '<em><b>Task</b></em>' literal value.
@@ -140,7 +119,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TASK_VALUE = 3;
+	public static final int TASK_VALUE = 2;
 
 	/**
 	 * The '<em><b>Planning</b></em>' literal value.
@@ -151,7 +130,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PLANNING_VALUE = 4;
+	public static final int PLANNING_VALUE = 3;
 
 	/**
 	 * The '<em><b>Value</b></em>' literal value.
@@ -162,7 +141,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int VALUE_VALUE = 5;
+	public static final int VALUE_VALUE = 4;
 
 	/**
 	 * The '<em><b>Product</b></em>' literal value.
@@ -173,7 +152,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PRODUCT_VALUE = 6;
+	public static final int PRODUCT_VALUE = 5;
 
 	/**
 	 * The '<em><b>Other</b></em>' literal value.
@@ -184,7 +163,7 @@ public enum BOSuperType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int OTHER_VALUE = 7;
+	public static final int OTHER_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>BO Super Type</b></em>' enumerators.
@@ -194,7 +173,6 @@ public enum BOSuperType implements Enumerator {
 	 */
 	private static final BOSuperType[] VALUES_ARRAY =
 		new BOSuperType[] {
-			NOT_SET,
 			STANDARD,
 			TECHNOLOGY,
 			TASK,
@@ -258,7 +236,6 @@ public enum BOSuperType implements Enumerator {
 	 */
 	public static BOSuperType get(int value) {
 		switch (value) {
-			case NOT_SET_VALUE: return NOT_SET;
 			case STANDARD_VALUE: return STANDARD;
 			case TECHNOLOGY_VALUE: return TECHNOLOGY;
 			case TASK_VALUE: return TASK;

@@ -255,7 +255,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBoundaryObject_SuperType() {
+	public EAttribute getBoundaryObject_SuperTypes() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -309,7 +309,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBoundaryObject_LifecycleStage() {
+	public EAttribute getBoundaryObject_LifecycleStages() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -536,6 +536,15 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 */
 	public EAttribute getMethodologicalIsland_Type() {
 		return (EAttribute)methodologicalIslandEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMethodologicalIsland_PartOfMIs() {
+		return (EReference)methodologicalIslandEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -819,13 +828,13 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 
 		// Create classes and their features
 		boundaryObjectEClass = createEClass(BOUNDARY_OBJECT);
-		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__SUPER_TYPE);
+		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__SUPER_TYPES);
 		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__LEVEL_OF_DETAIL);
 		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE);
 		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__MODULARITY);
 		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__MAINTAINABILITY);
 		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__PRESCRIPTIVE);
-		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__LIFECYCLE_STAGE);
+		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__LIFECYCLE_STAGES);
 		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__REPRESENTATION_FORMAT);
 		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__TOOLING);
 		createEAttribute(boundaryObjectEClass, BOUNDARY_OBJECT__VERSIONING);
@@ -856,6 +865,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 
 		methodologicalIslandEClass = createEClass(METHODOLOGICAL_ISLAND);
 		createEAttribute(methodologicalIslandEClass, METHODOLOGICAL_ISLAND__TYPE);
+		createEReference(methodologicalIslandEClass, METHODOLOGICAL_ISLAND__PART_OF_MIS);
 
 		usageAssociationEClass = createEClass(USAGE_ASSOCIATION);
 		createEAttribute(usageAssociationEClass, USAGE_ASSOCIATION__ACCESSABILITY);
@@ -937,13 +947,13 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(boundaryObjectEClass, BoundaryObject.class, "BoundaryObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBoundaryObject_SuperType(), this.getBOSuperType(), "superType", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_SuperTypes(), this.getBOSuperType(), "superTypes", null, 0, -1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundaryObject_LevelOfDetail(), this.getHighLow(), "levelOfDetail", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundaryObject_FrequencyOfChange(), this.getHighLow(), "frequencyOfChange", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundaryObject_Modularity(), this.getHighLow(), "modularity", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundaryObject_Maintainability(), this.getHighLow(), "maintainability", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundaryObject_Prescriptive(), this.getHighLow(), "prescriptive", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundaryObject_LifecycleStage(), this.getLifecycleStage(), "lifecycleStage", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBoundaryObject_LifecycleStages(), this.getLifecycleStage(), "lifecycleStages", null, 0, -1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundaryObject_RepresentationFormat(), ecorePackage.getEString(), "representationFormat", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundaryObject_Tooling(), ecorePackage.getEString(), "tooling", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundaryObject_Versioning(), ecorePackage.getEString(), "versioning", null, 0, 1, BoundaryObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -974,6 +984,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 
 		initEClass(methodologicalIslandEClass, MethodologicalIsland.class, "MethodologicalIsland", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMethodologicalIsland_Type(), this.getMIType(), "type", null, 0, 1, MethodologicalIsland.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodologicalIsland_PartOfMIs(), this.getMethodologicalIsland(), null, "partOfMIs", null, 0, -1, MethodologicalIsland.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(usageAssociationEClass, UsageAssociation.class, "UsageAssociation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUsageAssociation_Accessability(), this.getHighLow(), "accessability", null, 0, 1, UsageAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1005,7 +1016,6 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 
 		// Initialize enums and add enum literals
 		initEEnum(boSuperTypeEEnum, BOSuperType.class, "BOSuperType");
-		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.NOT_SET);
 		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.STANDARD);
 		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.TECHNOLOGY);
 		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.TASK);
@@ -1015,7 +1025,6 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		addEEnumLiteral(boSuperTypeEEnum, BOSuperType.OTHER);
 
 		initEEnum(lifecycleStageEEnum, LifecycleStage.class, "LifecycleStage");
-		addEEnumLiteral(lifecycleStageEEnum, LifecycleStage.NOT_SET);
 		addEEnumLiteral(lifecycleStageEEnum, LifecycleStage.PLANNING);
 		addEEnumLiteral(lifecycleStageEEnum, LifecycleStage.OPERATION);
 		addEEnumLiteral(lifecycleStageEEnum, LifecycleStage.DEPRECATE);

@@ -45,6 +45,7 @@ public class MethodologicalIslandItemProvider extends NamedElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
+			addPartOfMIsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -67,6 +68,28 @@ public class MethodologicalIslandItemProvider extends NamedElementItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Part Of MIs feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPartOfMIsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MethodologicalIsland_partOfMIs_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MethodologicalIsland_partOfMIs_feature", "_UI_MethodologicalIsland_type"),
+				 BomiPackage.Literals.METHODOLOGICAL_ISLAND__PART_OF_MIS,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

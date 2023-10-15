@@ -14,7 +14,7 @@
           <audits auditExpression="aql:not (self.levelOfDetail = bomi::HighLow::High and self.frequencyOfChange = bomi::HighLow::High)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo((Deprecated/RetiredLifecycleStage)AndHighFrequencyChange)" level="WARNING" message="The boundary object has a later lifecycle but a high frequency of change." targetClass="bomi::BoundaryObject">
-          <audits auditExpression="aql:not ((self.lifecycleStage = bomi::LifecycleStage::Deprecate or self.lifecycleStage = bomi::LifecycleStage::Retire) and self.frequencyOfChange = bomi::HighLow::High)"/>
+          <audits auditExpression="aql:not ((self.lifecycleStages->includes(bomi::LifecycleStage::Deprecate) or self.lifecycleStages->includes(bomi::LifecycleStage::Retire)) and self.frequencyOfChange = bomi::HighLow::High)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNoLowFitforpurpose" level="WARNING" message="The usage association is not fit for purpose." targetClass="bomi::UsageAssociation">
           <audits auditExpression="aql:self.fitForPurpose &lt;> bomi::HighLow::Low"/>
@@ -42,7 +42,7 @@
         <edgeMappings name="role2MiPartOf" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetFinderExpression="feature:partOfMIs">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="part of">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="partOfMIs">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -58,7 +58,7 @@
         <edgeMappings name="role2GtPartOf" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Governance%20Team']" targetFinderExpression="feature:partOfGovernanceTeams">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="part of">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="partOfGovTeams">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -66,7 +66,7 @@
         <edgeMappings name="BO/MI Coordination" semanticCandidatesExpression="feature:boMiCoordinations" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:methodologicalIslands" domainClass="bomi::BOMICoordination" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Association: ' + self.name + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if self.accessability = bomi::HighLow::NOT_SET then '' else '\nAccessability: ' + self.accessability endif) + (if self.stability = bomi::HighLow::NOT_SET then '' else '\nStability: ' + self.stability endif) + (if self.criticality = bomi::HighLow::NOT_SET then '' else '\nCriticality: ' + self.criticality endif) + (if self.fitForPurpose = bomi::HighLow::NOT_SET then '' else '\nFit for purpose: ' + self.fitForPurpose endif)">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BOMICoordination' + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if self.accessability = bomi::HighLow::NOT_SET then '' else '\nAccessability: ' + self.accessability endif) + (if self.stability = bomi::HighLow::NOT_SET then '' else '\nStability: ' + self.stability endif) + (if self.criticality = bomi::HighLow::NOT_SET then '' else '\nCriticality: ' + self.criticality endif) + (if self.fitForPurpose = bomi::HighLow::NOT_SET then '' else '\nFit for purpose: ' + self.fitForPurpose endif)">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             </centerLabelStyleDescription>
           </style>
@@ -74,7 +74,7 @@
         <edgeMappings name="BO/Role Interaction" semanticCandidatesExpression="feature:boRoleInteractions" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:roles" domainClass="bomi::BORoleInteraction" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Association: ' + self.name + (if (self.interactionKinds->notEmpty() then '\n' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::IsResponsibleFor) then 'IsResponsibleFor ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Creates) then 'Creates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Reads) then 'Reads ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Updates) then 'Updates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Deletes) then 'Deletes' else '' endif)  + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if self.accessability = bomi::HighLow::NOT_SET then '' else '\nAccessability: ' + self.accessability endif) + (if self.stability = bomi::HighLow::NOT_SET then '' else '\nStability: ' + self.stability endif) + (if self.criticality = bomi::HighLow::NOT_SET then '' else '\nCriticality: ' + self.criticality endif) + (if self.fitForPurpose = bomi::HighLow::NOT_SET then '' else '\nFit for purpose: ' + self.fitForPurpose endif)">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BORoleInteraction' + (if (self.interactionKinds->notEmpty() then '\n' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::IsResponsibleFor) then 'IsResponsibleFor ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Creates) then 'Creates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Reads) then 'Reads ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Updates) then 'Updates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Deletes) then 'Deletes' else '' endif)  + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if self.accessability = bomi::HighLow::NOT_SET then '' else '\nAccessability: ' + self.accessability endif) + (if self.stability = bomi::HighLow::NOT_SET then '' else '\nStability: ' + self.stability endif) + (if self.criticality = bomi::HighLow::NOT_SET then '' else '\nCriticality: ' + self.criticality endif) + (if self.fitForPurpose = bomi::HighLow::NOT_SET then '' else '\nFit for purpose: ' + self.fitForPurpose endif)">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             </centerLabelStyleDescription>
           </style>
@@ -82,15 +82,15 @@
         <edgeMappings name="BO/Team Governance" semanticCandidatesExpression="feature:boTeamGovernances" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Governance%20Team']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:governanceTeams" domainClass="bomi::BOTeamGovernance" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Association: ' + self.name + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if (self.coordinationMechanism = null or self.coordinationMechanism.trim() = '') then '' else '\nCoordination Mechanism: ' + self.coordinationMechanism endif) + (if self.frequencyOfCoordination = bomi::HighLow::NOT_SET then '' else '\nFrequency of Coordination: ' + self.frequencyOfCoordination endif)">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BOTeamGovernance' + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if (self.coordinationMechanism = null or self.coordinationMechanism.trim() = '') then '' else '\nCoordination Mechanism: ' + self.coordinationMechanism endif) + (if self.frequencyOfCoordination = bomi::HighLow::NOT_SET then '' else '\nFrequency of Coordination: ' + self.frequencyOfCoordination endif)">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Boundary Object" semanticCandidatesExpression="feature:boundaryObjects" domainClass="bomi::BoundaryObject" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Boundary Object Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject" childrenPresentation="List">
-            <subNodeMappings name="Super Type" preconditionExpression="aql:self.superType &lt;> bomi::BOSuperType::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
-              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Super Type: ' + self.superType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Super Types" preconditionExpression="aql:self.superTypes->notEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Super Types: ' + (if self.superTypes->includes(bomi::BOSuperType::Standard) then 'Standard ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Technology) then 'Technology ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Task) then 'Task ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Planning) then 'Planning ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Value) then 'Value ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Product) then 'Product ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Other) then 'Other' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -138,8 +138,8 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="Lifecycle Stage" preconditionExpression="aql:self.lifecycleStage &lt;> bomi::LifecycleStage::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
-              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Lifecycle Stage: ' + self.lifecycleStage" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Lifecycle Stages" preconditionExpression="aql:self.lifecycleStages->notEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Lifecycle Stages: ' + (if self.lifecycleStages->includes(bomi::LifecycleStage::Planning) then 'Planning ' else '' endif) + (if self.lifecycleStages->includes(bomi::LifecycleStage::Operation) then 'Operation ' else '' endif) + (if self.lifecycleStages->includes(bomi::LifecycleStage::Deprecate) then 'Deprecate ' else '' endif) + (if self.lifecycleStages->includes(bomi::LifecycleStage::Retire) then 'Retire' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -194,7 +194,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Boundary Object: ' + self.name" tooltipExpression="Boundary Object (BO)">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BoundaryObject'" tooltipExpression="Boundary Object (BO)">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -203,7 +203,7 @@
           </style>
         </containerMappings>
         <containerMappings name="Role" semanticCandidatesExpression="feature:roles" domainClass="bomi::Role">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Role: ' + self.name" tooltipExpression="Role">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :Role'" tooltipExpression="Role">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -227,7 +227,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Methodological Island: ' + self.name" tooltipExpression="Methodological Island (MI)">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :MethodologicalIsland' " tooltipExpression="Methodological Island (MI)">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -265,7 +265,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Driver: ' + self.name" tooltipExpression="Driver">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ': Driver'" tooltipExpression="Driver">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -274,7 +274,7 @@
           </style>
         </containerMappings>
         <containerMappings name="Governance Team" semanticCandidatesExpression="feature:governanceTeams" domainClass="bomi::GovernanceTeam">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Governance Team: ' + self.name" tooltipExpression="Governance Team">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :GovernanceTeam'" tooltipExpression="Governance Team">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -437,7 +437,7 @@
           <audits auditExpression="aql:not (self.levelOfDetail = bomi::HighLow::High and self.frequencyOfChange = bomi::HighLow::High)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo((Deprecated/RetiredLifecycleStage)AndHighFrequencyChange)" level="WARNING" message="The boundary object has a later lifecycle but a high frequency of change." targetClass="bomi::BoundaryObject">
-          <audits auditExpression="aql:not ((self.lifecycleStage = bomi::LifecycleStage::Deprecate or self.lifecycleStage = bomi::LifecycleStage::Retire) and self.frequencyOfChange = bomi::HighLow::High)"/>
+          <audits auditExpression="aql:not ((self.lifecycleStages->includes(bomi::LifecycleStage::Deprecate) or self.lifecycleStages->includes(bomi::LifecycleStage::Retire)) and self.frequencyOfChange = bomi::HighLow::High)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNoLowFitforpurpose" level="WARNING" message="The usage is not fit for purpose." targetClass="bomi::UsageAssociation">
           <audits auditExpression="aql:self.fitForPurpose &lt;> bomi::HighLow::Low"/>
@@ -449,10 +449,10 @@
           <audits auditExpression="aql:not self.eContainer().boTeamGovernances.boundaryObjects->excludes(self)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BOAtLeastOneResponsibleRole" level="WARNING" message="The boundary object has no responsible role." targetClass="bomi::BoundaryObject">
-          <audits auditExpression="aql:self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self) and i.responsible = bomi::MyBoolean::True)->size() > 0"/>
+          <audits auditExpression="aql:self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self) and i.interactionKinds->includes(bomi::InteractionKind::IsResponsibleFor))->notEmpty()"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BOAtLeastOneUpdatingRole" level="WARNING" message="The boundary object has no updating role." targetClass="bomi::BoundaryObject">
-          <audits auditExpression="aql:self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self) and i.updates = bomi::MyBoolean::True)->size() > 0"/>
+          <audits auditExpression="aql:self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self) and i.interactionKinds->includes(bomi::InteractionKind::Updates))->notEmpty()"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONoGoverningRoleInteractions" level="WARNING" message="For the governing roles of this boundary object, there should be an interaction between the roles and the boundary object." targetClass="bomi::BoundaryObject">
           <audits auditExpression="aql:let referencingBOTeamGovernances = self.eContainer().boTeamGovernances->select(g | g.boundaryObjects->includes(self)) let referencingRoleInteractions = self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self)) referencingRoleInteractions.roles->select(r | r.partOfGovernanceTeams->intersection(referencingBOTeamGovernances.governanceTeams) &lt;> null)->size() > 0"/>
@@ -465,7 +465,7 @@
         <edgeMappings name="role2MiPartOf" sourceMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetFinderExpression="feature:partOfMIs">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="part of">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="partOfMIs">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -481,7 +481,7 @@
         <edgeMappings name="role2GtPartOf" sourceMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Governance%20Team']" targetFinderExpression="feature:partOfGovernanceTeams">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="part of">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="partOfGovTeams">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -489,7 +489,7 @@
         <edgeMappings name="BO/MI Coordination" semanticCandidatesExpression="feature:boMiCoordinations" sourceMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:methodologicalIslands" domainClass="bomi::BOMICoordination" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Association: ' + self.name">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BOMICoordination'">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             </centerLabelStyleDescription>
           </style>
@@ -497,7 +497,7 @@
         <edgeMappings name="BO/Role Interaction" semanticCandidatesExpression="feature:boRoleInteractions" sourceMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:roles" domainClass="bomi::BORoleInteraction" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Association: ' + self.name">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BORoleInteraction'">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             </centerLabelStyleDescription>
           </style>
@@ -505,13 +505,13 @@
         <edgeMappings name="BO/Team Governance" semanticCandidatesExpression="feature:boTeamGovernances" sourceMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Governance%20Team']" targetMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:governanceTeams" domainClass="bomi::BOTeamGovernance" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Association: ' + self.name">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BOTeamGovernance'">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Boundary Object" semanticCandidatesExpression="feature:boundaryObjects" domainClass="bomi::BoundaryObject">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Boundary Object: ' + self.name" tooltipExpression="Boundary Object (BO)">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BoundaryObject'" tooltipExpression="Boundary Object (BO)">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -520,7 +520,7 @@
           </style>
         </containerMappings>
         <containerMappings name="Role" semanticCandidatesExpression="feature:roles" domainClass="bomi::Role">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Role: ' + self.name" tooltipExpression="Role">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :Role'" tooltipExpression="Role">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -529,7 +529,7 @@
           </style>
         </containerMappings>
         <containerMappings name="Methodological Island" semanticCandidatesExpression="feature:methodologicalIslands" domainClass="bomi::MethodologicalIsland">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Methodological Island: ' + self.name" tooltipExpression="Methodological Island (MI)">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :MethodologicalIsland' " tooltipExpression="Methodological Island (MI)">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -538,7 +538,7 @@
           </style>
         </containerMappings>
         <containerMappings name="Driver" semanticCandidatesExpression="feature:drivers" domainClass="bomi::Driver">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Driver: ' + self.name" tooltipExpression="Driver">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ': Driver'" tooltipExpression="Driver">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -547,7 +547,7 @@
           </style>
         </containerMappings>
         <containerMappings name="Governance Team" semanticCandidatesExpression="feature:governanceTeams" domainClass="bomi::GovernanceTeam">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Governance Team: ' + self.name" tooltipExpression="Governance Team">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :GovernanceTeam'" tooltipExpression="Governance Team">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -703,7 +703,7 @@
         <edgeMappings name="role2MiPartOf" sourceMapping="//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='MI']/@ownedRepresentations[name='Methodological%20Island%20(MI)%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetFinderExpression="feature:partOfMIs">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="part of">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="partOfMIs">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -717,7 +717,7 @@
           </style>
         </edgeMappings>
         <containerMappings name="Role" semanticCandidatesExpression="feature:roles" domainClass="bomi::Role">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Role: ' + self.name" tooltipExpression="Role">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :Role'" tooltipExpression="Role">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -741,7 +741,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Methodological Island: ' + self.name" tooltipExpression="Methodological Island (MI)">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :MethodologicalIsland' " tooltipExpression="Methodological Island (MI)">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -779,7 +779,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Driver: ' + self.name" tooltipExpression="Driver">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ': Driver'" tooltipExpression="Driver">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -864,7 +864,7 @@
           <audits auditExpression="aql:not (self.levelOfDetail = bomi::HighLow::High and self.frequencyOfChange = bomi::HighLow::High)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo((Deprecated/RetiredLifecycleStage)AndHighFrequencyChange)" level="WARNING" message="The boundary object has a later lifecycle but a high frequency of change." targetClass="bomi::BoundaryObject">
-          <audits auditExpression="aql:not ((self.lifecycleStage = bomi::LifecycleStage::Deprecate or self.lifecycleStage = bomi::LifecycleStage::Retire) and self.frequencyOfChange = bomi::HighLow::High)"/>
+          <audits auditExpression="aql:not ((self.lifecycleStages->includes(bomi::LifecycleStage::Deprecate) or self.lifecycleStages->includes(bomi::LifecycleStage::Retire)) and self.frequencyOfChange = bomi::HighLow::High)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="UsageNoLowFitforpurpose" level="WARNING" message="The usage association is not fit for purpose." targetClass="bomi::UsageAssociation">
           <audits auditExpression="aql:self.fitForPurpose &lt;> bomi::HighLow::Low"/>
@@ -883,15 +883,15 @@
         <edgeMappings name="BO/Role Interaction" semanticCandidatesExpression="feature:boRoleInteractions" sourceMapping="//@ownedViewpoints[name='BO']/@ownedRepresentations[name='Boundary%20Object%20(BO)%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BO']/@ownedRepresentations[name='Boundary%20Object%20(BO)%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:roles" domainClass="bomi::BORoleInteraction" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Association: ' + self.name + (if (self.interactionKinds->notEmpty() then '\n' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::IsResponsibleFor) then 'IsResponsibleFor ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Creates) then 'Creates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Reads) then 'Reads ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Updates) then 'Updates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Deletes) then 'Deletes' else '' endif)  + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if self.accessability = bomi::HighLow::NOT_SET then '' else '\nAccessability: ' + self.accessability endif) + (if self.stability = bomi::HighLow::NOT_SET then '' else '\nStability: ' + self.stability endif) + (if self.criticality = bomi::HighLow::NOT_SET then '' else '\nCriticality: ' + self.criticality endif) + (if self.fitForPurpose = bomi::HighLow::NOT_SET then '' else '\nFit for purpose: ' + self.fitForPurpose endif)">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BORoleInteraction' + (if (self.interactionKinds->notEmpty() then '\n' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::IsResponsibleFor) then 'IsResponsibleFor ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Creates) then 'Creates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Reads) then 'Reads ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Updates) then 'Updates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Deletes) then 'Deletes' else '' endif)  + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if self.accessability = bomi::HighLow::NOT_SET then '' else '\nAccessability: ' + self.accessability endif) + (if self.stability = bomi::HighLow::NOT_SET then '' else '\nStability: ' + self.stability endif) + (if self.criticality = bomi::HighLow::NOT_SET then '' else '\nCriticality: ' + self.criticality endif) + (if self.fitForPurpose = bomi::HighLow::NOT_SET then '' else '\nFit for purpose: ' + self.fitForPurpose endif)">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Boundary Object" semanticCandidatesExpression="feature:boundaryObjects" domainClass="bomi::BoundaryObject" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Boundary Object Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject" childrenPresentation="List">
-            <subNodeMappings name="Super Type" preconditionExpression="aql:self.superType &lt;> bomi::BOSuperType::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
-              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Super Type: ' + self.superType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Super Types" preconditionExpression="aql:self.superTypes->notEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Super Types: ' + (if self.superTypes->includes(bomi::BOSuperType::Standard) then 'Standard ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Technology) then 'Technology ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Task) then 'Task ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Planning) then 'Planning ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Value) then 'Value ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Product) then 'Product ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Other) then 'Other' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -939,8 +939,8 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="Lifecycle Stage" preconditionExpression="aql:self.lifecycleStage &lt;> bomi::LifecycleStage::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
-              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Lifecycle Stage: ' + self.lifecycleStage" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Lifecycle Stages" preconditionExpression="aql:self.lifecycleStages->notEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Lifecycle Stages: ' + (if self.lifecycleStages->includes(bomi::LifecycleStage::Planning) then 'Planning ' else '' endif) + (if self.lifecycleStages->includes(bomi::LifecycleStage::Operation) then 'Operation ' else '' endif) + (if self.lifecycleStages->includes(bomi::LifecycleStage::Deprecate) then 'Deprecate ' else '' endif) + (if self.lifecycleStages->includes(bomi::LifecycleStage::Retire) then 'Retire' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -995,7 +995,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Boundary Object: ' + self.name" tooltipExpression="Boundary Object (BO)">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BoundaryObject'" tooltipExpression="Boundary Object (BO)">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -1004,7 +1004,7 @@
           </style>
         </containerMappings>
         <containerMappings name="Role" semanticCandidatesExpression="feature:roles" domainClass="bomi::Role">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Role: ' + self.name" tooltipExpression="Role">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :Role'" tooltipExpression="Role">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -1071,16 +1071,16 @@
           <audits auditExpression="aql:not (self.levelOfDetail = bomi::HighLow::High and self.frequencyOfChange = bomi::HighLow::High)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo((Deprecated/RetiredLifecycleStage)AndHighFrequencyChange)" level="WARNING" message="The boundary object has a later lifecycle but a high frequency of change." targetClass="bomi::BoundaryObject">
-          <audits auditExpression="aql:not ((self.lifecycleStage = bomi::LifecycleStage::Deprecate or self.lifecycleStage = bomi::LifecycleStage::Retire) and self.frequencyOfChange = bomi::HighLow::High)"/>
+          <audits auditExpression="aql:not ((self.lifecycleStages->includes(bomi::LifecycleStage::Deprecate) or self.lifecycleStages->includes(bomi::LifecycleStage::Retire)) and self.frequencyOfChange = bomi::HighLow::High)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(NoGovernanceTeam)" level="WARNING" message="The boundary object has no governance team." targetClass="bomi::BoundaryObject">
           <audits auditExpression="aql:not self.eContainer().boTeamGovernances.boundaryObjects->excludes(self)"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BOAtLeastOneResponsibleRole" level="WARNING" message="The boundary object has no responsible role." targetClass="bomi::BoundaryObject">
-          <audits auditExpression="aql:self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self) and i.responsible = bomi::MyBoolean::True)->size() > 0"/>
+          <audits auditExpression="aql:self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self) and i.interactionKinds->includes(bomi::InteractionKind::IsResponsibleFor))->notEmpty()"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BOAtLeastOneUpdatingRole" level="WARNING" message="The boundary object has no updating role." targetClass="bomi::BoundaryObject">
-          <audits auditExpression="aql:self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self) and i.updates = bomi::MyBoolean::True)->size() > 0"/>
+          <audits auditExpression="aql:self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self) and i.interactionKinds->includes(bomi::InteractionKind::Updates))->notEmpty()"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONoGoverningRoleInteractions" level="WARNING" message="For the governing roles of this boundary object, there should be an interaction between the roles and the boundary object." targetClass="bomi::BoundaryObject">
           <audits auditExpression="aql:let referencingBOTeamGovernances = self.eContainer().boTeamGovernances->select(g | g.boundaryObjects->includes(self)) let referencingRoleInteractions = self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self)) referencingRoleInteractions.roles->select(r | r.partOfGovernanceTeams->intersection(referencingBOTeamGovernances.governanceTeams) &lt;> null)->size() > 0"/>
@@ -1093,7 +1093,7 @@
         <edgeMappings name="role2GtPartOf" sourceMapping="//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']/@defaultLayer/@containerMappings[name='Governance%20Team']" targetFinderExpression="feature:partOfGovernanceTeams">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="part of">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="partOfGovTeams">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -1101,23 +1101,23 @@
         <edgeMappings name="BO/Role Interaction" semanticCandidatesExpression="feature:boRoleInteractions" sourceMapping="//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:roles" domainClass="bomi::BORoleInteraction" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Association: ' + self.name + (if (self.interactionKinds->notEmpty() then '\n' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::IsResponsibleFor then 'IsResponsibleFor ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Creates  then 'Creates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Reads  then 'Reads ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Updates then 'Updates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Deletes then 'Deletes' else '' endif) + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if self.accessability = bomi::HighLow::NOT_SET then '' else '\nAccessability: ' + self.accessability endif) + (if self.stability = bomi::HighLow::NOT_SET then '' else '\nStability: ' + self.stability endif) + (if self.criticality = bomi::HighLow::NOT_SET then '' else '\nCriticality: ' + self.criticality endif) + (if self.fitForPurpose = bomi::HighLow::NOT_SET then '' else '\nFit for purpose: ' + self.fitForPurpose endif)">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BORoleInteraction' +  (if (self.interactionKinds->notEmpty() then '\n' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::IsResponsibleFor) then 'IsResponsibleFor ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Creates) then 'Creates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Reads) then 'Reads ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Updates) then 'Updates ' else '' endif) + (if self.interactionKinds->includes(bomi::InteractionKind::Deletes) then 'Deletes' else '' endif)  + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if self.accessability = bomi::HighLow::NOT_SET then '' else '\nAccessability: ' + self.accessability endif) + (if self.stability = bomi::HighLow::NOT_SET then '' else '\nStability: ' + self.stability endif) + (if self.criticality = bomi::HighLow::NOT_SET then '' else '\nCriticality: ' + self.criticality endif) + (if self.fitForPurpose = bomi::HighLow::NOT_SET then '' else '\nFit for purpose: ' + self.fitForPurpose endif)">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="BO/Team Governance" semanticCandidatesExpression="feature:boTeamGovernances" sourceMapping="//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']/@defaultLayer/@containerMappings[name='Governance%20Team']" targetMapping="//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']/@defaultLayer/@containerMappings[name='Boundary%20Object']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:governanceTeams" domainClass="bomi::BOTeamGovernance" useDomainElement="true">
+        <edgeMappings name="BO/Team Governance" semanticCandidatesExpression="feature:boTeamGovernances" sourceMapping="//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']/@defaultLayer/@containerMappings[name='Governance%20Team']" targetFinderExpression="feature:boundaryObjects" sourceFinderExpression="feature:governanceTeams" domainClass="bomi::BOTeamGovernance" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Association: ' + self.name + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if (self.coordinationMechanism = null or self.coordinationMechanism.trim() = '') then '' else '\nCoordination Mechanism: ' + self.coordinationMechanism endif) + (if self.frequencyOfCoordination = bomi::HighLow::NOT_SET then '' else '\nFrequency of Coordination: ' + self.frequencyOfCoordination endif)">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BOTeamGovernance' + (if (self.purpose = null or self.purpose.trim() = '') then '' else '\nPurpose: ' + self.purpose endif) + (if (self.coordinationMechanism = null or self.coordinationMechanism.trim() = '') then '' else '\nCoordination Mechanism: ' + self.coordinationMechanism endif) + (if self.frequencyOfCoordination = bomi::HighLow::NOT_SET then '' else '\nFrequency of Coordination: ' + self.frequencyOfCoordination endif)">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Boundary Object" semanticCandidatesExpression="feature:boundaryObjects" domainClass="bomi::BoundaryObject" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Boundary Object Compartment" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject" childrenPresentation="List">
-            <subNodeMappings name="Super Type" preconditionExpression="aql:self.superType &lt;> bomi::BOSuperType::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
-              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Super Type: ' + self.superType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Super Types" preconditionExpression="aql:self.superTypes->notEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Super Types: ' + (if self.superTypes->includes(bomi::BOSuperType::Standard) then 'Standard ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Technology) then 'Technology ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Task) then 'Task ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Planning) then 'Planning ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Value) then 'Value ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Product) then 'Product ' else '' endif) + (if self.superTypes->includes(bomi::BOSuperType::Other) then 'Other' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1165,8 +1165,8 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="Lifecycle Stage" preconditionExpression="aql:self.lifecycleStage &lt;> bomi::LifecycleStage::NOT_SET" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
-              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Lifecycle Stage: ' + self.lifecycleStage" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Lifecycle Stages" preconditionExpression="aql:self.lifecycleStages->notEmpty()" semanticCandidatesExpression="var:self" domainClass="bomi::BoundaryObject">
+              <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:'Lifecycle Stages: ' + (if self.lifecycleStages->includes(bomi::LifecycleStage::Planning) then 'Planning ' else '' endif) + (if self.lifecycleStages->includes(bomi::LifecycleStage::Operation) then 'Operation ' else '' endif) + (if self.lifecycleStages->includes(bomi::LifecycleStage::Deprecate) then 'Deprecate ' else '' endif) + (if self.lifecycleStages->includes(bomi::LifecycleStage::Retire) then 'Retire' else '' endif)" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1221,7 +1221,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Boundary Object: ' + self.name" tooltipExpression="Boundary Object (BO)">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :BoundaryObject'" tooltipExpression="Boundary Object (BO)">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -1230,7 +1230,7 @@
           </style>
         </containerMappings>
         <containerMappings name="Role" semanticCandidatesExpression="feature:roles" domainClass="bomi::Role">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Role: ' + self.name" tooltipExpression="Role">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :Role'" tooltipExpression="Role">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -1239,7 +1239,7 @@
           </style>
         </containerMappings>
         <containerMappings name="Governance Team" semanticCandidatesExpression="feature:governanceTeams" domainClass="bomi::GovernanceTeam">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Governance Team: ' + self.name" tooltipExpression="Governance Team">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :GovernanceTeam'" tooltipExpression="Governance Team">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>

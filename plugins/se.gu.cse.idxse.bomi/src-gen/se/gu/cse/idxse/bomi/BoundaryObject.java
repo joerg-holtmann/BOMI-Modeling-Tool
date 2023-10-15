@@ -2,6 +2,8 @@
  */
 package se.gu.cse.idxse.bomi;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Boundary Object</b></em>'.
@@ -11,13 +13,13 @@ package se.gu.cse.idxse.bomi;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getSuperTypes <em>Super Types</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getLevelOfDetail <em>Level Of Detail</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getFrequencyOfChange <em>Frequency Of Change</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getModularity <em>Modularity</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getMaintainability <em>Maintainability</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getPrescriptive <em>Prescriptive</em>}</li>
- *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getLifecycleStage <em>Lifecycle Stage</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getLifecycleStages <em>Lifecycle Stages</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getRepresentationFormat <em>Representation Format</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getTooling <em>Tooling</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.BoundaryObject#getVersioning <em>Versioning</em>}</li>
@@ -32,29 +34,18 @@ package se.gu.cse.idxse.bomi;
  */
 public interface BoundaryObject extends PurposedElement {
 	/**
-	 * Returns the value of the '<em><b>Super Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Super Types</b></em>' attribute list.
+	 * The list contents are of type {@link se.gu.cse.idxse.bomi.BOSuperType}.
 	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.BOSuperType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Super Type</em>' attribute.
+	 * @return the value of the '<em>Super Types</em>' attribute list.
 	 * @see se.gu.cse.idxse.bomi.BOSuperType
-	 * @see #setSuperType(BOSuperType)
-	 * @see se.gu.cse.idxse.bomi.BomiPackage#getBoundaryObject_SuperType()
+	 * @see se.gu.cse.idxse.bomi.BomiPackage#getBoundaryObject_SuperTypes()
 	 * @model
 	 * @generated
 	 */
-	BOSuperType getSuperType();
-
-	/**
-	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.BoundaryObject#getSuperType <em>Super Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Super Type</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.BOSuperType
-	 * @see #getSuperType()
-	 * @generated
-	 */
-	void setSuperType(BOSuperType value);
+	EList<BOSuperType> getSuperTypes();
 
 	/**
 	 * Returns the value of the '<em><b>Level Of Detail</b></em>' attribute.
@@ -182,29 +173,18 @@ public interface BoundaryObject extends PurposedElement {
 	void setPrescriptive(HighLow value);
 
 	/**
-	 * Returns the value of the '<em><b>Lifecycle Stage</b></em>' attribute.
+	 * Returns the value of the '<em><b>Lifecycle Stages</b></em>' attribute list.
+	 * The list contents are of type {@link se.gu.cse.idxse.bomi.LifecycleStage}.
 	 * The literals are from the enumeration {@link se.gu.cse.idxse.bomi.LifecycleStage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lifecycle Stage</em>' attribute.
+	 * @return the value of the '<em>Lifecycle Stages</em>' attribute list.
 	 * @see se.gu.cse.idxse.bomi.LifecycleStage
-	 * @see #setLifecycleStage(LifecycleStage)
-	 * @see se.gu.cse.idxse.bomi.BomiPackage#getBoundaryObject_LifecycleStage()
+	 * @see se.gu.cse.idxse.bomi.BomiPackage#getBoundaryObject_LifecycleStages()
 	 * @model
 	 * @generated
 	 */
-	LifecycleStage getLifecycleStage();
-
-	/**
-	 * Sets the value of the '{@link se.gu.cse.idxse.bomi.BoundaryObject#getLifecycleStage <em>Lifecycle Stage</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lifecycle Stage</em>' attribute.
-	 * @see se.gu.cse.idxse.bomi.LifecycleStage
-	 * @see #getLifecycleStage()
-	 * @generated
-	 */
-	void setLifecycleStage(LifecycleStage value);
+	EList<LifecycleStage> getLifecycleStages();
 
 	/**
 	 * Returns the value of the '<em><b>Representation Format</b></em>' attribute.

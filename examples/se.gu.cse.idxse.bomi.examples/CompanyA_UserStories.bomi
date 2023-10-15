@@ -24,12 +24,14 @@ boRoleInteractions {
 
 boundaryObjects { 
 	BoundaryObject "User Story" { 
-		superType Planning 
-		levelOfDetail Low 
+		superTypes {
+			Planning 
+		} levelOfDetail Low 
 		frequencyOfChange High 
 		modularity Medium 
-		lifecycleStage Planning 
-		representationFormat "\"As a user...\" (text in JIRA)" 
+		lifecycleStages { 
+			Planning 
+		} representationFormat "\"As a user...\" (text in JIRA)" 
 		versioning None 
 		upToDate "High (during planning stage, low afterward)" 
 		externalConsistency Low
@@ -47,10 +49,10 @@ roles {
 } 
 
 boMiCoordinations { 
-	BOMICoordination "Product Management / User Story Coordination" { 
+	BOMICoordination "PM / User Story Coordination" { 
 		boundaryObjects ( "User Story" ) methodologicalIslands ( "Product Management" )
 	} , 
-	BOMICoordination "Development Team / User Story Coordination" { 
+	BOMICoordination "Dev. Team / User Story Coordination" { 
 		boundaryObjects ( "User Story" ) 
 		methodologicalIslands ( "Development Team" )
 	}
@@ -69,10 +71,16 @@ boTeamGovernances {
 	BOTeamGovernance governs { 
 		coordinationMechanism "JIRA, Meetings" 
 		frequencyOfCoordination Medium 
-		boundaryObjects ( "User Story" ) governanceTeams ( "Scrum Governance" )
+		boundaryObjects ( "User Story" ) 
+		governanceTeams ( "Scrum Governance" )
 	}
 } 
 
 drivers { 
 	Driver "Development/Project Management" { 
-		driverTypes { Process , Organizational } drivesMIs ( "Product Management" , "Development Team" ) } }
+		driverTypes { 
+			Process , Organizational 
+		} 
+		drivesMIs ( "Product Management" , "Development Team" ) 
+	} 
+}

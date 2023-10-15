@@ -5,21 +5,19 @@
     <details key="documentation" value="external consistency to other BOs"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EEnum" name="BOSuperType">
-    <eLiterals name="NOT_SET"/>
-    <eLiterals name="Standard" value="1" literal="Standard"/>
-    <eLiterals name="Technology" value="2"/>
-    <eLiterals name="Task" value="3"/>
-    <eLiterals name="Planning" value="4"/>
-    <eLiterals name="Value" value="5"/>
-    <eLiterals name="Product" value="6"/>
-    <eLiterals name="Other" value="7"/>
+    <eLiterals name="Standard" literal="Standard"/>
+    <eLiterals name="Technology" value="1"/>
+    <eLiterals name="Task" value="2"/>
+    <eLiterals name="Planning" value="3"/>
+    <eLiterals name="Value" value="4"/>
+    <eLiterals name="Product" value="5"/>
+    <eLiterals name="Other" value="6"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LifecycleStage">
-    <eLiterals name="NOT_SET"/>
-    <eLiterals name="Planning" value="1"/>
-    <eLiterals name="Operation" value="2"/>
-    <eLiterals name="Deprecate" value="3"/>
-    <eLiterals name="Retire" value="4"/>
+    <eLiterals name="Planning"/>
+    <eLiterals name="Operation" value="1"/>
+    <eLiterals name="Deprecate" value="2"/>
+    <eLiterals name="Retire" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="HighLow">
     <eLiterals name="NOT_SET"/>
@@ -39,13 +37,15 @@
     <eLiterals name="Organizations" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BoundaryObject" eSuperTypes="#//PurposedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="superType" eType="#//BOSuperType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="superTypes" upperBound="-1"
+        eType="#//BOSuperType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="levelOfDetail" eType="#//HighLow"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequencyOfChange" eType="#//HighLow"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modularity" eType="#//HighLow"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maintainability" eType="#//HighLow"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="prescriptive" eType="#//HighLow"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lifecycleStage" eType="#//LifecycleStage"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lifecycleStages" upperBound="-1"
+        eType="#//LifecycleStage"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="representationFormat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tooling" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="versioning" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -88,6 +88,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MethodologicalIsland" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//MIType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partOfMIs" upperBound="-1"
+        eType="#//MethodologicalIsland"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UsageAssociation" abstract="true" eSuperTypes="#//Association">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="accessability" eType="#//HighLow"/>

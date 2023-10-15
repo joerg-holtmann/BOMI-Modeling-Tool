@@ -2,12 +2,15 @@
  */
 package se.gu.cse.idxse.bomi.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import se.gu.cse.idxse.bomi.BOSuperType;
 import se.gu.cse.idxse.bomi.BomiPackage;
 import se.gu.cse.idxse.bomi.BoundaryObject;
@@ -22,13 +25,13 @@ import se.gu.cse.idxse.bomi.LifecycleStage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getSuperTypes <em>Super Types</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getLevelOfDetail <em>Level Of Detail</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getFrequencyOfChange <em>Frequency Of Change</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getModularity <em>Modularity</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getMaintainability <em>Maintainability</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getPrescriptive <em>Prescriptive</em>}</li>
- *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getLifecycleStage <em>Lifecycle Stage</em>}</li>
+ *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getLifecycleStages <em>Lifecycle Stages</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getRepresentationFormat <em>Representation Format</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getTooling <em>Tooling</em>}</li>
  *   <li>{@link se.gu.cse.idxse.bomi.impl.BoundaryObjectImpl#getVersioning <em>Versioning</em>}</li>
@@ -41,24 +44,14 @@ import se.gu.cse.idxse.bomi.LifecycleStage;
  */
 public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryObject {
 	/**
-	 * The default value of the '{@link #getSuperType() <em>Super Type</em>}' attribute.
+	 * The cached value of the '{@link #getSuperTypes() <em>Super Types</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSuperType()
+	 * @see #getSuperTypes()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BOSuperType SUPER_TYPE_EDEFAULT = BOSuperType.NOT_SET;
-
-	/**
-	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSuperType()
-	 * @generated
-	 * @ordered
-	 */
-	protected BOSuperType superType = SUPER_TYPE_EDEFAULT;
+	protected EList<BOSuperType> superTypes;
 
 	/**
 	 * The default value of the '{@link #getLevelOfDetail() <em>Level Of Detail</em>}' attribute.
@@ -161,24 +154,14 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	protected HighLow prescriptive = PRESCRIPTIVE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLifecycleStage() <em>Lifecycle Stage</em>}' attribute.
+	 * The cached value of the '{@link #getLifecycleStages() <em>Lifecycle Stages</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLifecycleStage()
+	 * @see #getLifecycleStages()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final LifecycleStage LIFECYCLE_STAGE_EDEFAULT = LifecycleStage.NOT_SET;
-
-	/**
-	 * The cached value of the '{@link #getLifecycleStage() <em>Lifecycle Stage</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLifecycleStage()
-	 * @generated
-	 * @ordered
-	 */
-	protected LifecycleStage lifecycleStage = LIFECYCLE_STAGE_EDEFAULT;
+	protected EList<LifecycleStage> lifecycleStages;
 
 	/**
 	 * The default value of the '{@link #getRepresentationFormat() <em>Representation Format</em>}' attribute.
@@ -324,20 +307,11 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BOSuperType getSuperType() {
-		return superType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSuperType(BOSuperType newSuperType) {
-		BOSuperType oldSuperType = superType;
-		superType = newSuperType == null ? SUPER_TYPE_EDEFAULT : newSuperType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE, oldSuperType, superType));
+	public EList<BOSuperType> getSuperTypes() {
+		if (superTypes == null) {
+			superTypes = new EDataTypeUniqueEList<BOSuperType>(BOSuperType.class, this, BomiPackage.BOUNDARY_OBJECT__SUPER_TYPES);
+		}
+		return superTypes;
 	}
 
 	/**
@@ -450,20 +424,11 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LifecycleStage getLifecycleStage() {
-		return lifecycleStage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLifecycleStage(LifecycleStage newLifecycleStage) {
-		LifecycleStage oldLifecycleStage = lifecycleStage;
-		lifecycleStage = newLifecycleStage == null ? LIFECYCLE_STAGE_EDEFAULT : newLifecycleStage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE, oldLifecycleStage, lifecycleStage));
+	public EList<LifecycleStage> getLifecycleStages() {
+		if (lifecycleStages == null) {
+			lifecycleStages = new EDataTypeUniqueEList<LifecycleStage>(LifecycleStage.class, this, BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGES);
+		}
+		return lifecycleStages;
 	}
 
 	/**
@@ -600,8 +565,8 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
-				return getSuperType();
+			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPES:
+				return getSuperTypes();
 			case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
 				return getLevelOfDetail();
 			case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
@@ -612,8 +577,8 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 				return getMaintainability();
 			case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
 				return getPrescriptive();
-			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
-				return getLifecycleStage();
+			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGES:
+				return getLifecycleStages();
 			case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
 				return getRepresentationFormat();
 			case BomiPackage.BOUNDARY_OBJECT__TOOLING:
@@ -635,11 +600,13 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
-				setSuperType((BOSuperType)newValue);
+			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPES:
+				getSuperTypes().clear();
+				getSuperTypes().addAll((Collection<? extends BOSuperType>)newValue);
 				return;
 			case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
 				setLevelOfDetail((HighLow)newValue);
@@ -656,8 +623,9 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 			case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
 				setPrescriptive((HighLow)newValue);
 				return;
-			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
-				setLifecycleStage((LifecycleStage)newValue);
+			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGES:
+				getLifecycleStages().clear();
+				getLifecycleStages().addAll((Collection<? extends LifecycleStage>)newValue);
 				return;
 			case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
 				setRepresentationFormat((String)newValue);
@@ -689,8 +657,8 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
-				setSuperType(SUPER_TYPE_EDEFAULT);
+			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPES:
+				getSuperTypes().clear();
 				return;
 			case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
 				setLevelOfDetail(LEVEL_OF_DETAIL_EDEFAULT);
@@ -707,8 +675,8 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 			case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
 				setPrescriptive(PRESCRIPTIVE_EDEFAULT);
 				return;
-			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
-				setLifecycleStage(LIFECYCLE_STAGE_EDEFAULT);
+			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGES:
+				getLifecycleStages().clear();
 				return;
 			case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
 				setRepresentationFormat(REPRESENTATION_FORMAT_EDEFAULT);
@@ -740,8 +708,8 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPE:
-				return superType != SUPER_TYPE_EDEFAULT;
+			case BomiPackage.BOUNDARY_OBJECT__SUPER_TYPES:
+				return superTypes != null && !superTypes.isEmpty();
 			case BomiPackage.BOUNDARY_OBJECT__LEVEL_OF_DETAIL:
 				return levelOfDetail != LEVEL_OF_DETAIL_EDEFAULT;
 			case BomiPackage.BOUNDARY_OBJECT__FREQUENCY_OF_CHANGE:
@@ -752,8 +720,8 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 				return maintainability != MAINTAINABILITY_EDEFAULT;
 			case BomiPackage.BOUNDARY_OBJECT__PRESCRIPTIVE:
 				return prescriptive != PRESCRIPTIVE_EDEFAULT;
-			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGE:
-				return lifecycleStage != LIFECYCLE_STAGE_EDEFAULT;
+			case BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGES:
+				return lifecycleStages != null && !lifecycleStages.isEmpty();
 			case BomiPackage.BOUNDARY_OBJECT__REPRESENTATION_FORMAT:
 				return REPRESENTATION_FORMAT_EDEFAULT == null ? representationFormat != null : !REPRESENTATION_FORMAT_EDEFAULT.equals(representationFormat);
 			case BomiPackage.BOUNDARY_OBJECT__TOOLING:
@@ -780,8 +748,8 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (superType: ");
-		result.append(superType);
+		result.append(" (superTypes: ");
+		result.append(superTypes);
 		result.append(", levelOfDetail: ");
 		result.append(levelOfDetail);
 		result.append(", frequencyOfChange: ");
@@ -792,8 +760,8 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 		result.append(maintainability);
 		result.append(", prescriptive: ");
 		result.append(prescriptive);
-		result.append(", lifecycleStage: ");
-		result.append(lifecycleStage);
+		result.append(", lifecycleStages: ");
+		result.append(lifecycleStages);
 		result.append(", representationFormat: ");
 		result.append(representationFormat);
 		result.append(", tooling: ");
