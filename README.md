@@ -9,7 +9,7 @@
 
 ## Setup the Runtime Workspace
 1. Right-click one of the projects in the development workspace and select <code>Run</code> -> <code>Run As</code> -> <code>Eclipse Application</code>. This launches the Eclipse runtime with an empty runtime workspace. 
-1. For a better representation, switch the dark theme to a bright one via <code>Window</code> -> <code>Preferences</code> -> <code>General</code> -> <code>Appearance</code>. Under <code>Theme</code>, switch to <code>Classic</code> or <code>Light</code>.
+1. If a dark theme is applied: For a better representation, switch the dark theme to a bright one via <code>Window</code> -> <code>Preferences</code> -> <code>General</code> -> <code>Appearance</code>. Under <code>Theme</code>, switch to <code>Classic</code> or <code>Light</code>.
 
 ### Import an Existing BOMI Model Example
 1. From the folder <code>examples</code> in this repository, import the project.
