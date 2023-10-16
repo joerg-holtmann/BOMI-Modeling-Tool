@@ -43,7 +43,7 @@ roles {
 		partOfMIs ( "Development Team" )
 	} , 
 	Role "Product Owner" { 
-		partOfGovernanceTeams ( "Scrum Governance" ) 
+		partOfGovernanceTeams ( "Forum of Product Owners" ) 
 		partOfMIs ( "Product Management" )
 	}
 } 
@@ -64,7 +64,7 @@ methodologicalIslands {
 } 
 
 governanceTeams { 
-	GovernanceTeam "Scrum Governance"
+	GovernanceTeam "Forum of Product Owners"
 } 
 
 boTeamGovernances { 
@@ -72,7 +72,7 @@ boTeamGovernances {
 		coordinationMechanism "JIRA, Meetings" 
 		frequencyOfCoordination Medium 
 		boundaryObjects ( "User Story" ) 
-		governanceTeams ( "Scrum Governance" )
+		governanceTeams ( "Forum of Product Owners" )
 	}
 } 
 
