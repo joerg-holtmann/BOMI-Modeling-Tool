@@ -38,19 +38,17 @@ public enum MIType implements Enumerator {
 	TEAMS(1, "Teams", "Teams"),
 
 	/**
-	 * The '<em><b>Silos</b></em>' literal object.
+	 * The '<em><b>Silos Release Trains</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Silos (Release Trains)
 	 * <!-- end-model-doc -->
-	 * @see #SILOS_VALUE
+	 * @see #SILOS_RELEASE_TRAINS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SILOS(2, "Silos", "Silos"),
-
-	/**
+	SILOS_RELEASE_TRAINS(2, "Silos_ReleaseTrains", "Silos_ReleaseTrains"), /**
 	 * The '<em><b>Departments</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,18 +91,18 @@ public enum MIType implements Enumerator {
 	public static final int TEAMS_VALUE = 1;
 
 	/**
-	 * The '<em><b>Silos</b></em>' literal value.
+	 * The '<em><b>Silos Release Trains</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Silos (Release Trains)
 	 * <!-- end-model-doc -->
-	 * @see #SILOS
-	 * @model name="Silos"
+	 * @see #SILOS_RELEASE_TRAINS
+	 * @model name="Silos_ReleaseTrains"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SILOS_VALUE = 2;
+	public static final int SILOS_RELEASE_TRAINS_VALUE = 2;
 
 	/**
 	 * The '<em><b>Departments</b></em>' literal value.
@@ -137,7 +135,7 @@ public enum MIType implements Enumerator {
 	private static final MIType[] VALUES_ARRAY = new MIType[] {
 			NOT_SET,
 			TEAMS,
-			SILOS,
+			SILOS_RELEASE_TRAINS,
 			DEPARTMENTS,
 			ORGANIZATIONS,
 		};
@@ -198,7 +196,7 @@ public enum MIType implements Enumerator {
 		switch (value) {
 			case NOT_SET_VALUE: return NOT_SET;
 			case TEAMS_VALUE: return TEAMS;
-			case SILOS_VALUE: return SILOS;
+			case SILOS_RELEASE_TRAINS_VALUE: return SILOS_RELEASE_TRAINS;
 			case DEPARTMENTS_VALUE: return DEPARTMENTS;
 			case ORGANIZATIONS_VALUE: return ORGANIZATIONS;
 		}

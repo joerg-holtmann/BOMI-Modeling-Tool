@@ -5,7 +5,7 @@
     <semanticResources>bomi.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_2Zo-AOf5Eeyxpprg7lu1qA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_2ds-oOf5Eeyxpprg7lu1qA" name="bomi" repPath="#_2ch58Of5Eeyxpprg7lu1qA" changeId="1697383576475">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_2ds-oOf5Eeyxpprg7lu1qA" name="bomi" repPath="#_2ch58Of5Eeyxpprg7lu1qA" changeId="1697474356775">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="bomi.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -128,7 +128,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_hyAWMuf6Eeyxpprg7lu1qA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_hx_IEef6Eeyxpprg7lu1qA" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hx_IEuf6Eeyxpprg7lu1qA" x="1384" y="624" width="114" height="117"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hx_IEuf6Eeyxpprg7lu1qA" x="1350" y="624" width="148" height="117"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_7RC8YOf6Eeyxpprg7lu1qA" type="2003" element="_7QuMQOf6Eeyxpprg7lu1qA">
           <children xmi:type="notation:Node" xmi:id="_7RDjcuf6Eeyxpprg7lu1qA" type="5007"/>
@@ -1049,9 +1049,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_keaSEOf6Eeyxpprg7lu1qA" name="Silos" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="bomi.ecore#//MIType/Silos"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="bomi.ecore#//MIType/Silos"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_keaSEOf6Eeyxpprg7lu1qA" name="Silos_ReleaseTrains" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="bomi.ecore#//MIType/Silos_ReleaseTrains"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="bomi.ecore#//MIType/Silos_ReleaseTrains"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_keaSEef6Eeyxpprg7lu1qA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>

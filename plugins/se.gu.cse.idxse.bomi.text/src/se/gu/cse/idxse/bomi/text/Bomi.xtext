@@ -136,7 +136,7 @@ enum LifecycleStage returns LifecycleStage:
 				Planning = 'Planning' | Operation = 'Operation' | Deprecate = 'Deprecate' | Retire = 'Retire';
 
 enum MIType returns MIType:
-				NOT_SET = 'NOT_SET' | Teams = 'Teams' | Silos = 'Silos' | Departments = 'Departments' | Organizations = 'Organizations';
+				NOT_SET = 'NOT_SET' | Teams = 'Teams' | Silos_ReleaseTrains = 'Silos_ReleaseTrains' | Departments = 'Departments' | Organizations = 'Organizations';
 				
 enum DriverType returns DriverType:
 				Technology = 'Technology' | Process = 'Process' | Organizational = 'Organizational';				

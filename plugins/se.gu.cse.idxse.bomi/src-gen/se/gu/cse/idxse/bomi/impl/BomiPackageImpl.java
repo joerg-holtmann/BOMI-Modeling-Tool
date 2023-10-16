@@ -1039,7 +1039,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 		initEEnum(miTypeEEnum, MIType.class, "MIType");
 		addEEnumLiteral(miTypeEEnum, MIType.NOT_SET);
 		addEEnumLiteral(miTypeEEnum, MIType.TEAMS);
-		addEEnumLiteral(miTypeEEnum, MIType.SILOS);
+		addEEnumLiteral(miTypeEEnum, MIType.SILOS_RELEASE_TRAINS);
 		addEEnumLiteral(miTypeEEnum, MIType.DEPARTMENTS);
 		addEEnumLiteral(miTypeEEnum, MIType.ORGANIZATIONS);
 

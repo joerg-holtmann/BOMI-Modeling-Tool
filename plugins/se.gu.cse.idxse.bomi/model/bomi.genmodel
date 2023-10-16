@@ -32,7 +32,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="bomi.ecore#//MIType">
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//MIType/NOT_SET"/>
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//MIType/Teams"/>
-      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//MIType/Silos"/>
+      <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//MIType/Silos_ReleaseTrains"/>
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//MIType/Departments"/>
       <genEnumLiterals ecoreEnumLiteral="bomi.ecore#//MIType/Organizations"/>
     </genEnums>
