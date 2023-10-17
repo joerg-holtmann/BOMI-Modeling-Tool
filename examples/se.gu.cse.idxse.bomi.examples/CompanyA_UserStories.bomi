@@ -10,7 +10,7 @@ boRoleInteractions {
 		boundaryObjects ( "User Story" ) 
 		roles ( "Product Owner" )
 	} , 
-	BORoleInteraction "Developer / User Story Interaction" { 
+	BORoleInteraction "Dev. / User Story Interaction" { 
 		accessability High 
 		stability Low 
 		criticality High 

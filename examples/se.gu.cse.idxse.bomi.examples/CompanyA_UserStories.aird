@@ -4,7 +4,7 @@
     <semanticResources>CompanyA_UserStories.bomi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_N4vAAKe4Ee2_pahSFK9j9Q">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vxYssKiNEe2qR8ezOHESAw" name="Company A User Story BOMI Detailed Diagram" repPath="#_vwps4KiNEe2qR8ezOHESAw" changeId="1697475937543">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vxYssKiNEe2qR8ezOHESAw" name="Company A User Story BOMI Detailed Diagram" repPath="#_vwps4KiNEe2qR8ezOHESAw" changeId="1697559390214">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']"/>
         <target xmi:type="bomi:BOMIModel" href="CompanyA_UserStories.bomi#/"/>
       </ownedRepresentationDescriptors>
@@ -25,7 +25,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_jLTo4LwIEe2-v-bcPekdVw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='Governance']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_kfUOcLwIEe2-v-bcPekdVw" name="Company A User Story Governance Diagram" repPath="#_kfTAULwIEe2-v-bcPekdVw" changeId="1697385636908">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_kfUOcLwIEe2-v-bcPekdVw" name="Company A User Story Governance Diagram" repPath="#_kfTAULwIEe2-v-bcPekdVw" changeId="1697559630822">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']"/>
         <target xmi:type="bomi:BOMIModel" href="CompanyA_UserStories.bomi#/"/>
       </ownedRepresentationDescriptors>
@@ -377,7 +377,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']/@subContainerMappings[name='Methodological%20Island%20Compartment']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']/@subContainerMappings[name='Methodological%20Island%20Compartment']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tcChwqiUEe2V1tKSGZrIXA" name="Invalid feature as name">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tcChwqiUEe2V1tKSGZrIXA" name="Type: Teams">
           <target xmi:type="bomi:MethodologicalIsland" href="CompanyA_UserStories.bomi#//@methodologicalIslands.0"/>
           <semanticElements xmi:type="bomi:MethodologicalIsland" href="CompanyA_UserStories.bomi#//@methodologicalIslands.0"/>
           <ownedStyle xmi:type="diagram:BundledImage" uid="_tcChw6iUEe2V1tKSGZrIXA" labelSize="12" showIcon="false" labelColor="77,137,20" labelAlignment="LEFT" labelPosition="node">
@@ -406,7 +406,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']/@subContainerMappings[name='Methodological%20Island%20Compartment']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']/@subContainerMappings[name='Methodological%20Island%20Compartment']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tvjToaiUEe2V1tKSGZrIXA" name="Invalid feature as name">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_tvjToaiUEe2V1tKSGZrIXA" name="Type: Teams">
           <target xmi:type="bomi:MethodologicalIsland" href="CompanyA_UserStories.bomi#//@methodologicalIslands.1"/>
           <semanticElements xmi:type="bomi:MethodologicalIsland" href="CompanyA_UserStories.bomi#//@methodologicalIslands.1"/>
           <ownedStyle xmi:type="diagram:BundledImage" uid="_tvjToqiUEe2V1tKSGZrIXA" labelSize="12" showIcon="false" labelColor="77,137,20" labelAlignment="LEFT" labelPosition="node">
@@ -638,7 +638,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@edgeMappings[name='BO%2FRole%20Interaction']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3XV7cGtvEe6VifFWYuY9nw" name="Developer / User Story Interaction :BORoleInteraction&#xA;Reads &#xA;Accessability: High&#xA;Stability: Low&#xA;Criticality: High&#xA;Fit for purpose: High" sourceNode="_wUMaoKiUEe2V1tKSGZrIXA" targetNode="_3W-vEGtvEe6VifFWYuY9nw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3XV7cGtvEe6VifFWYuY9nw" name="Dev. / User Story Interaction :BORoleInteraction&#xA;Reads &#xA;Accessability: High&#xA;Stability: Low&#xA;Criticality: High&#xA;Fit for purpose: High" sourceNode="_wUMaoKiUEe2V1tKSGZrIXA" targetNode="_3W-vEGtvEe6VifFWYuY9nw">
       <target xmi:type="bomi:BORoleInteraction" href="CompanyA_UserStories.bomi#//@boRoleInteractions.1"/>
       <semanticElements xmi:type="bomi:BORoleInteraction" href="CompanyA_UserStories.bomi#//@boRoleInteractions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3XV7cWtvEe6VifFWYuY9nw" targetArrow="InputFillClosedArrow" size="4" routingStyle="manhattan" strokeColor="114,73,110">
@@ -1383,7 +1383,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_kgG4orwIEe2-v-bcPekdVw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_kgFDcbwIEe2-v-bcPekdVw" fontColor="16777215" fontName="Segoe UI" fontHeight="12" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgFDcrwIEe2-v-bcPekdVw" x="894" y="426" width="177" height="48"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgFDcrwIEe2-v-bcPekdVw" x="714" y="426" width="177" height="48"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_kgHfsLwIEe2-v-bcPekdVw" type="2002" element="_kfxhcLwIEe2-v-bcPekdVw">
           <children xmi:type="notation:Node" xmi:id="_kgIGwLwIEe2-v-bcPekdVw" type="5006"/>
@@ -1392,7 +1392,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_kgIGw7wIEe2-v-bcPekdVw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_kgHfsbwIEe2-v-bcPekdVw" fontColor="16777215" fontName="Segoe UI" fontHeight="12" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgHfsrwIEe2-v-bcPekdVw" x="840" y="204" width="241" height="45"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgHfsrwIEe2-v-bcPekdVw" x="696" y="204" width="205" height="45"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_kgIGxLwIEe2-v-bcPekdVw" type="2002" element="_kfyvkbwIEe2-v-bcPekdVw">
           <children xmi:type="notation:Node" xmi:id="_kgIt0LwIEe2-v-bcPekdVw" type="5006"/>
@@ -1401,71 +1401,71 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_kgIt07wIEe2-v-bcPekdVw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_kgIGxbwIEe2-v-bcPekdVw" fontColor="16777215" fontName="Segoe UI" fontHeight="12" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgIGxrwIEe2-v-bcPekdVw" x="708" y="48" width="375" height="51"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgIGxrwIEe2-v-bcPekdVw" x="474" y="42" width="429" height="45"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_kfVckrwIEe2-v-bcPekdVw"/>
         <edges xmi:type="notation:Edge" xmi:id="_kgPbgLwIEe2-v-bcPekdVw" type="4001" element="_kfz9sLwIEe2-v-bcPekdVw" source="_kgHfsLwIEe2-v-bcPekdVw" target="_kgIGxLwIEe2-v-bcPekdVw">
           <children xmi:type="notation:Node" xmi:id="_kgQCkLwIEe2-v-bcPekdVw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgQCkbwIEe2-v-bcPekdVw" x="-10" y="-83"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgQCkbwIEe2-v-bcPekdVw" x="-13" y="-83"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_kgQpoLwIEe2-v-bcPekdVw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgQpobwIEe2-v-bcPekdVw" x="24"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgQpobwIEe2-v-bcPekdVw" x="23"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_kgRQsLwIEe2-v-bcPekdVw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgRQsbwIEe2-v-bcPekdVw" x="9" y="-6"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgRQsbwIEe2-v-bcPekdVw" x="4" y="-6"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_kgPbgbwIEe2-v-bcPekdVw" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_kgPbgrwIEe2-v-bcPekdVw" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kgPbg7wIEe2-v-bcPekdVw" points="[64, -34, 115, 122]$[64, -141, 115, 15]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgSe0LwIEe2-v-bcPekdVw" id="(0.4121338912133891,0.7906976744186046)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgSe0bwIEe2-v-bcPekdVw" id="(0.47989276139410186,0.6938775510204082)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kgPbg7wIEe2-v-bcPekdVw" points="[64, -34, 115, 128]$[64, -153, 115, 9]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgSe0LwIEe2-v-bcPekdVw" id="(0.3078817733990148,0.7906976744186046)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgSe0bwIEe2-v-bcPekdVw" id="(0.5456674473067916,0.7906976744186046)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_kgSe0rwIEe2-v-bcPekdVw" type="4001" element="_kf1y4LwIEe2-v-bcPekdVw" source="_kgHfsLwIEe2-v-bcPekdVw" target="_kgAyALwIEe2-v-bcPekdVw">
           <children xmi:type="notation:Node" xmi:id="_kgTF4LwIEe2-v-bcPekdVw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTF4bwIEe2-v-bcPekdVw" x="14" y="-93"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTF4bwIEe2-v-bcPekdVw" x="-52" y="-93"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_kgTF4rwIEe2-v-bcPekdVw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTF47wIEe2-v-bcPekdVw" x="159" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTF47wIEe2-v-bcPekdVw" x="7" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_kgTs8LwIEe2-v-bcPekdVw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTs8bwIEe2-v-bcPekdVw" x="-54" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTs8bwIEe2-v-bcPekdVw" x="-82" y="-10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_kgSe07wIEe2-v-bcPekdVw" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_kgSe1LwIEe2-v-bcPekdVw" fontColor="7227762" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kgSe1bwIEe2-v-bcPekdVw" points="[-99, 33, 498, -79]$[-560, 33, 37, -79]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgTs8rwIEe2-v-bcPekdVw" id="(0.41422594142259406,0.0)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kgSe1bwIEe2-v-bcPekdVw" points="[-63, 33, 354, -79]$[-380, 33, 37, -79]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgTs8rwIEe2-v-bcPekdVw" id="(0.31034482758620685,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgTs87wIEe2-v-bcPekdVw" id="(0.8882175226586103,0.4068767908309456)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_kgTs9LwIEe2-v-bcPekdVw" type="4001" element="_kf9usLwIEe2-v-bcPekdVw" source="_kgFDcLwIEe2-v-bcPekdVw" target="_kgAyALwIEe2-v-bcPekdVw">
           <children xmi:type="notation:Node" xmi:id="_kgTs-LwIEe2-v-bcPekdVw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTs-bwIEe2-v-bcPekdVw" x="13" y="-90" width="493" height="164"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTs-bwIEe2-v-bcPekdVw" x="-47" y="-90" width="493" height="164"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_kgTs-rwIEe2-v-bcPekdVw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTs-7wIEe2-v-bcPekdVw" x="187" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTs-7wIEe2-v-bcPekdVw" x="34" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_kgTs_LwIEe2-v-bcPekdVw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTs_bwIEe2-v-bcPekdVw" x="12" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgTs_bwIEe2-v-bcPekdVw" x="-15" y="-10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_kgTs9bwIEe2-v-bcPekdVw" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_kgTs9rwIEe2-v-bcPekdVw" fontColor="7227762" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kgTs97wIEe2-v-bcPekdVw" points="[-77, 16, 596, -81]$[-592, 16, 81, -81]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kgTs97wIEe2-v-bcPekdVw" points="[-77, 36, 416, -61]$[-412, 36, 81, -61]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgUUALwIEe2-v-bcPekdVw" id="(0.44,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgUUAbwIEe2-v-bcPekdVw" id="(0.7552870090634441,1.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_kgU7ELwIEe2-v-bcPekdVw" type="4001" element="_kf-VwrwIEe2-v-bcPekdVw" source="_kgIGxLwIEe2-v-bcPekdVw" target="_kgAyALwIEe2-v-bcPekdVw">
           <children xmi:type="notation:Node" xmi:id="_kgU7FLwIEe2-v-bcPekdVw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgU7FbwIEe2-v-bcPekdVw" x="32" y="-42"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgU7FbwIEe2-v-bcPekdVw" x="-82" y="-47"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_kgU7FrwIEe2-v-bcPekdVw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgU7F7wIEe2-v-bcPekdVw" x="162" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgU7F7wIEe2-v-bcPekdVw" x="10" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_kgU7GLwIEe2-v-bcPekdVw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgU7GbwIEe2-v-bcPekdVw" x="56"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgU7GbwIEe2-v-bcPekdVw" x="28"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_kgU7EbwIEe2-v-bcPekdVw" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_kgU7ErwIEe2-v-bcPekdVw" fontColor="230880" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kgU7E7wIEe2-v-bcPekdVw" points="[-180, 25, 537, -105]$[-715, 25, 2, -105]$[-715, 126, 2, -4]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgViILwIEe2-v-bcPekdVw" id="(0.48257372654155495,0.0)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kgU7E7wIEe2-v-bcPekdVw" points="[0, -1, 303, -99]$[-301, -1, 2, -99]$[-301, 94, 2, -4]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgViILwIEe2-v-bcPekdVw" id="(0.0,0.8837209302325582)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kgViIbwIEe2-v-bcPekdVw" id="(0.3716012084592145,0.013651877133105804)"/>
         </edges>
       </data>
@@ -1590,7 +1590,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']/@defaultLayer/@containerMappings[name='Role']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_kfyvkbwIEe2-v-bcPekdVw" name="Scrum Governance :GovernanceTeam" tooltipText="Governance Team" outgoingEdges="_kf-VwrwIEe2-v-bcPekdVw" incomingEdges="_kfz9sLwIEe2-v-bcPekdVw">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_kfyvkbwIEe2-v-bcPekdVw" name="Forum of Product Owners :GovernanceTeam" tooltipText="Governance Team" outgoingEdges="_kf-VwrwIEe2-v-bcPekdVw" incomingEdges="_kfz9sLwIEe2-v-bcPekdVw">
       <target xmi:type="bomi:GovernanceTeam" href="CompanyA_UserStories.bomi#//@governanceTeams.0"/>
       <semanticElements xmi:type="bomi:GovernanceTeam" href="CompanyA_UserStories.bomi#//@governanceTeams.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1619,7 +1619,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']/@defaultLayer/@edgeMappings[name='BO%2FRole%20Interaction']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_kf9usLwIEe2-v-bcPekdVw" name="Developer / User Story Interaction :BORoleInteraction&#xA;Reads &#xA;Accessability: High&#xA;Stability: Low&#xA;Criticality: High&#xA;Fit for purpose: High" sourceNode="_kfvsQLwIEe2-v-bcPekdVw" targetNode="_kfWDoLwIEe2-v-bcPekdVw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_kf9usLwIEe2-v-bcPekdVw" name="Dev. / User Story Interaction :BORoleInteraction&#xA;Reads &#xA;Accessability: High&#xA;Stability: Low&#xA;Criticality: High&#xA;Fit for purpose: High" sourceNode="_kfvsQLwIEe2-v-bcPekdVw" targetNode="_kfWDoLwIEe2-v-bcPekdVw">
       <target xmi:type="bomi:BORoleInteraction" href="CompanyA_UserStories.bomi#//@boRoleInteractions.1"/>
       <semanticElements xmi:type="bomi:BORoleInteraction" href="CompanyA_UserStories.bomi#//@boRoleInteractions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_kf9usbwIEe2-v-bcPekdVw" targetArrow="InputFillClosedArrow" size="4" routingStyle="manhattan" strokeColor="114,73,110">
@@ -1628,7 +1628,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/se.gu.cse.idxse.bomi.design/description/bomi.odesign#//@ownedViewpoints[name='Governance']/@ownedRepresentations[name='Governance%20Diagram']/@defaultLayer/@edgeMappings[name='BO%2FRole%20Interaction']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_kf-VwrwIEe2-v-bcPekdVw" name="Association: governs&#xA;Coordination Mechanism: JIRA, Meetings&#xA;Frequency of Coordination: Medium" sourceNode="_kfyvkbwIEe2-v-bcPekdVw" targetNode="_kfWDoLwIEe2-v-bcPekdVw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_kf-VwrwIEe2-v-bcPekdVw" name="governs :BOTeamGovernance&#xA;Coordination Mechanism: JIRA, Meetings&#xA;Frequency of Coordination: Medium" sourceNode="_kfyvkbwIEe2-v-bcPekdVw" targetNode="_kfWDoLwIEe2-v-bcPekdVw">
       <target xmi:type="bomi:BOTeamGovernance" href="CompanyA_UserStories.bomi#//@boTeamGovernances.0"/>
       <semanticElements xmi:type="bomi:BOTeamGovernance" href="CompanyA_UserStories.bomi#//@boTeamGovernances.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_kf-Vw7wIEe2-v-bcPekdVw" targetArrow="InputFillClosedArrow" size="4" routingStyle="manhattan" strokeColor="224,133,3">
