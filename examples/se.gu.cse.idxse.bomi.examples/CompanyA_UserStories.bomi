@@ -26,12 +26,14 @@ boundaryObjects {
 	BoundaryObject "User Story" { 
 		superTypes {
 			Planning 
-		} levelOfDetail Low 
+		} 
+		levelOfDetail Low 		
 		frequencyOfChange High 
 		modularity Medium 
 		lifecycleStages { 
 			Planning 
-		} representationFormat "\"As a user...\" (text in JIRA)" 
+		} 
+		representationFormat "\"As a user...\" (text in JIRA)" 
 		versioning None 
 		upToDate "High (during planning stage, low afterward)" 
 		externalConsistency Low
@@ -50,7 +52,8 @@ roles {
 
 boMiCoordinations { 
 	BOMICoordination "PM / User Story Coordination" { 
-		boundaryObjects ( "User Story" ) methodologicalIslands ( "Product Management" )
+		boundaryObjects ( "User Story" ) 
+		methodologicalIslands ( "Product Management" )
 	} , 
 	BOMICoordination "Dev. Team / User Story Coordination" { 
 		boundaryObjects ( "User Story" ) 
