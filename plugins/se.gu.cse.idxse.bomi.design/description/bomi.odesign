@@ -35,7 +35,7 @@
           <audits auditExpression="aql:let referencingBOTeamGovernances = self.eContainer().boTeamGovernances->select(g | g.boundaryObjects->includes(self)) let referencingRoleInteractions = self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self)) referencingRoleInteractions.roles->select(r | r.partOfGovernanceTeams->intersection(referencingBOTeamGovernances.governanceTeams) &lt;> null)->size() > 0"/>
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(HighFrequencyOfChangeAndLowFrequencyOfCoordination)" level="WARNING" message="The boundary object has a high frequency of change but it's team governance a low frequency of coordination." targetClass="bomi::BoundaryObject">
-          <audits auditExpression="aql:self.frequencyOfChange &lt;> bomi::HighLow::High or self.eContainer().boTeamGovernances->select(g | g.frequencyOfCoordination = bomi::HighLow::Low and g.boundaryObjects->includes(self))->size()=0"/>
+          <audits auditExpression="aql:self.frequencyOfChange &lt;> bomi::HighLow::High or self.eContainer().boTeamGovernances->select(g | g.frequencyOfCoordination = bomi::HighLow::Low and g.boundaryObjects->includes(self))->isEmpty()"/>
         </ownedRules>
       </validationSet>
       <defaultLayer name="Default">
@@ -265,7 +265,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ': Driver'" tooltipExpression="Driver">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :Driver'" tooltipExpression="Driver">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -538,7 +538,7 @@
           </style>
         </containerMappings>
         <containerMappings name="Driver" semanticCandidatesExpression="feature:drivers" domainClass="bomi::Driver">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ': Driver'" tooltipExpression="Driver">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :Driver'" tooltipExpression="Driver">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -779,7 +779,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ': Driver'" tooltipExpression="Driver">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' :Driver'" tooltipExpression="Driver">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
