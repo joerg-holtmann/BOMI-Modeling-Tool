@@ -40,6 +40,12 @@
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(LowFrequencyOfChangeAndHighFrequencyOfCoordination)" level="WARNING" message="The boundary object has a low frequency of change, but it's team governance has a low frequency of coordination." targetClass="bomi::BoundaryObject">
           <audits auditExpression="aql:self.frequencyOfChange &lt;> bomi::HighLow::Low or self.eContainer().boTeamGovernances->select(g | g.frequencyOfCoordination = bomi::HighLow::High and g.boundaryObjects->includes(self))->isEmpty()"/>
         </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(HighFrequencyOfChangeAndHighStability)" level="WARNING" message="The boundary object has a high frequency of change, but one of it's usage associations has a high stability." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:self.frequencyOfChange &lt;> bomi::HighLow::High or not (self.eContainer().boMiCoordinations->exists(c | c.stability = bomi::HighLow::High and c.boundaryObjects->includes(self)) or self.eContainer().boRoleInteractions->exists(i | i.stability = bomi::HighLow::High and i.boundaryObjects->includes(self)))"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(HighFrequencyOfChangeAndHighStability)" level="WARNING" message="The boundary object has a low frequency of change, but one of it's usage associations has a low stability." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:self.frequencyOfChange &lt;> bomi::HighLow::Low or not (self.eContainer().boMiCoordinations->exists(c | c.stability = bomi::HighLow::Low and c.boundaryObjects->includes(self)) or self.eContainer().boRoleInteractions->exists(i | i.stability = bomi::HighLow::Low and i.boundaryObjects->includes(self)))"/>
+        </ownedRules>
       </validationSet>
       <defaultLayer name="Default">
         <edgeMappings name="role2MiPartOf" sourceMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Details']/@ownedRepresentations[name='BOMI%20Detailed%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetFinderExpression="feature:partOfMIs">
@@ -466,6 +472,12 @@
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(LowFrequencyOfChangeAndHighFrequencyOfCoordination)" level="WARNING" message="The boundary object has a low frequency of change, but it's team governance has a low frequency of coordination." targetClass="bomi::BoundaryObject">
           <audits auditExpression="aql:self.frequencyOfChange &lt;> bomi::HighLow::Low or self.eContainer().boTeamGovernances->select(g | g.frequencyOfCoordination = bomi::HighLow::High and g.boundaryObjects->includes(self))->isEmpty()"/>
         </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(HighFrequencyOfChangeAndHighStability)" level="WARNING" message="The boundary object has a high frequency of change, but one of it's usage associations has a high stability." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:self.frequencyOfChange &lt;> bomi::HighLow::High or not (self.eContainer().boMiCoordinations->exists(c | c.stability = bomi::HighLow::High and c.boundaryObjects->includes(self)) or self.eContainer().boRoleInteractions->exists(i | i.stability = bomi::HighLow::High and i.boundaryObjects->includes(self)))"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(HighFrequencyOfChangeAndHighStability)" level="WARNING" message="The boundary object has a low frequency of change, but one of it's usage associations has a low stability." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:self.frequencyOfChange &lt;> bomi::HighLow::Low or not (self.eContainer().boMiCoordinations->exists(c | c.stability = bomi::HighLow::Low and c.boundaryObjects->includes(self)) or self.eContainer().boRoleInteractions->exists(i | i.stability = bomi::HighLow::Low and i.boundaryObjects->includes(self)))"/>
+        </ownedRules>
       </validationSet>
       <defaultLayer name="Default">
         <edgeMappings name="role2MiPartOf" sourceMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='BOMI%20Overview']/@ownedRepresentations[name='BOMI%20Overview%20Diagram']/@defaultLayer/@containerMappings[name='Methodological%20Island']" targetFinderExpression="feature:partOfMIs">
@@ -883,6 +895,12 @@
         </ownedRules>
         <ownedRules xsi:type="validation:SemanticValidationRule" name="BOAtLeastOneUpdatingRole" level="WARNING" message="The boundary object has no updating role." targetClass="bomi::BoundaryObject">
           <audits auditExpression="aql:self.eContainer().boRoleInteractions->select(i | i.boundaryObjects->includes(self) and i.interactionKinds->includes(bomi::InteractionKind::IsResponsibleFor))->notEmpty()"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(HighFrequencyOfChangeAndHighStability)" level="WARNING" message="The boundary object has a high frequency of change, but one of it's role interactions has a high stability." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:self.frequencyOfChange &lt;> bomi::HighLow::High or not self.eContainer().boRoleInteractions->exists(i | i.stability = bomi::HighLow::High and i.boundaryObjects->includes(self))"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="BONo(HighFrequencyOfChangeAndHighStability)" level="WARNING" message="The boundary object has a low frequency of change, but one of it's role interactions has a low stability." targetClass="bomi::BoundaryObject">
+          <audits auditExpression="aql:self.frequencyOfChange &lt;> bomi::HighLow::Low or not self.eContainer().boRoleInteractions->exists(i | i.stability = bomi::HighLow::Low and i.boundaryObjects->includes(self))"/>
         </ownedRules>
       </validationSet>
       <defaultLayer name="Default">
