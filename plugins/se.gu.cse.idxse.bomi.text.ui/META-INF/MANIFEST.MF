@@ -18,7 +18,7 @@ Require-Bundle: se.gu.cse.idxse.bomi.text,
  org.eclipse.compare,
  org.eclipse.xtext.builder
 Import-Package: org.apache.log4j
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: se.gu.cse.idxse.bomi.text.ui.contentassist,
  se.gu.cse.idxse.bomi.text.ui.quickfix,
  se.gu.cse.idxse.bomi.text.ui.internal

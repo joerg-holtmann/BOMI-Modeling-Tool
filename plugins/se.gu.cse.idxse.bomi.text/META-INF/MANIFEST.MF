@@ -13,7 +13,7 @@ Require-Bundle: se.gu.cse.idxse.bomi,
  org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
  org.eclipse.xtext.util,
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: se.gu.cse.idxse.bomi.text.scoping,
  se.gu.cse.idxse.bomi.text.formatting2,
  se.gu.cse.idxse.bomi.text.parser.antlr.internal,
