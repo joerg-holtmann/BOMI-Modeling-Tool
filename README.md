@@ -12,7 +12,7 @@
 1. If a dark theme is applied: For a better representation, switch the dark theme to a bright one via <code>Window</code> -> <code>Preferences</code> -> <code>General</code> -> <code>Appearance</code>. Under <code>Theme</code>, switch to <code>Classic</code> or <code>Light</code>.
 
 ### Import an Existing BOMI Model Example
-1. From the folder <code>examples</code> in this repository, import the project.
+1. From the folder <code>examples</code> in this repository, import the project <code>se.gu.cse.idxse.bomi.examples</code>.
 1. Open the file <code>CompanyA_UserStories.aird</code> by double-clicking it. Under <code>Representations</code>, you can find diagrams for all BOMI view types that you can now explore. The actual BOMI model is persisted in the file <code>CompanyA_UserStories.bomi</code>.
 
 
