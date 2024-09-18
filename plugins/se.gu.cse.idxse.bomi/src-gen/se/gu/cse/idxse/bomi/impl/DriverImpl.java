@@ -113,6 +113,7 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DriverType> getDriverTypes() {
 		if (driverTypes == null) {
 			driverTypes = new EDataTypeUniqueEList<DriverType>(DriverType.class, this, BomiPackage.DRIVER__DRIVER_TYPES);
@@ -125,6 +126,7 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getDistanceSize() {
 		return distanceSize;
 	}
@@ -134,6 +136,7 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDistanceSize(HighLow newDistanceSize) {
 		HighLow oldDistanceSize = distanceSize;
 		distanceSize = newDistanceSize == null ? DISTANCE_SIZE_EDEFAULT : newDistanceSize;
@@ -146,6 +149,7 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MethodologicalIsland> getDrivesMIs() {
 		if (drivesMIs == null) {
 			drivesMIs = new EObjectResolvingEList<MethodologicalIsland>(MethodologicalIsland.class, this, BomiPackage.DRIVER__DRIVES_MIS);
@@ -158,6 +162,7 @@ public class DriverImpl extends NamedElementImpl implements Driver {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DistanceType> getDistanceTypes() {
 		if (distanceTypes == null) {
 			distanceTypes = new EDataTypeUniqueEList<DistanceType>(DistanceType.class, this, BomiPackage.DRIVER__DISTANCE_TYPES);

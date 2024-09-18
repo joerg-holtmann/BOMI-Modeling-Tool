@@ -130,6 +130,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getAccessability() {
 		return accessability;
 	}
@@ -139,6 +140,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAccessability(HighLow newAccessability) {
 		HighLow oldAccessability = accessability;
 		accessability = newAccessability == null ? ACCESSABILITY_EDEFAULT : newAccessability;
@@ -151,6 +153,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getStability() {
 		return stability;
 	}
@@ -160,6 +163,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStability(HighLow newStability) {
 		HighLow oldStability = stability;
 		stability = newStability == null ? STABILITY_EDEFAULT : newStability;
@@ -172,6 +176,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getCriticality() {
 		return criticality;
 	}
@@ -181,6 +186,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCriticality(HighLow newCriticality) {
 		HighLow oldCriticality = criticality;
 		criticality = newCriticality == null ? CRITICALITY_EDEFAULT : newCriticality;
@@ -193,6 +199,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getFitForPurpose() {
 		return fitForPurpose;
 	}
@@ -202,6 +209,7 @@ public abstract class UsageAssociationImpl extends AssociationImpl implements Us
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFitForPurpose(HighLow newFitForPurpose) {
 		HighLow oldFitForPurpose = fitForPurpose;
 		fitForPurpose = newFitForPurpose == null ? FIT_FOR_PURPOSE_EDEFAULT : newFitForPurpose;

@@ -246,6 +246,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBoundaryObject() {
 		return boundaryObjectEClass;
 	}
@@ -255,6 +256,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_SuperTypes() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(0);
 	}
@@ -264,6 +266,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_LevelOfDetail() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(1);
 	}
@@ -273,6 +276,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_FrequencyOfChange() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(2);
 	}
@@ -282,6 +286,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_Modularity() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(3);
 	}
@@ -291,6 +296,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_Maintainability() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(4);
 	}
@@ -300,6 +306,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_Prescriptive() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(5);
 	}
@@ -309,6 +316,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_LifecycleStages() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(6);
 	}
@@ -318,6 +326,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_RepresentationFormat() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(7);
 	}
@@ -327,6 +336,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_Tooling() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(8);
 	}
@@ -336,6 +346,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_Versioning() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(9);
 	}
@@ -345,6 +356,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_UpToDate() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(10);
 	}
@@ -354,6 +366,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_InternalConsistency() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(11);
 	}
@@ -363,6 +376,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoundaryObject_ExternalConsistency() {
 		return (EAttribute)boundaryObjectEClass.getEStructuralFeatures().get(12);
 	}
@@ -372,6 +386,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRole() {
 		return roleEClass;
 	}
@@ -381,6 +396,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRole_PartOfGovernanceTeams() {
 		return (EReference)roleEClass.getEStructuralFeatures().get(0);
 	}
@@ -390,6 +406,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRole_PartOfMIs() {
 		return (EReference)roleEClass.getEStructuralFeatures().get(1);
 	}
@@ -399,6 +416,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNamedElement() {
 		return namedElementEClass;
 	}
@@ -408,6 +426,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNamedElement_Name() {
 		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -417,6 +436,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBORoleInteraction() {
 		return boRoleInteractionEClass;
 	}
@@ -426,6 +446,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBORoleInteraction_Roles() {
 		return (EReference)boRoleInteractionEClass.getEStructuralFeatures().get(0);
 	}
@@ -435,6 +456,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBORoleInteraction_InteractionKinds() {
 		return (EAttribute)boRoleInteractionEClass.getEStructuralFeatures().get(1);
 	}
@@ -444,6 +466,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBOMIModel() {
 		return bomiModelEClass;
 	}
@@ -453,6 +476,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBOMIModel_BoRoleInteractions() {
 		return (EReference)bomiModelEClass.getEStructuralFeatures().get(0);
 	}
@@ -462,6 +486,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBOMIModel_BoundaryObjects() {
 		return (EReference)bomiModelEClass.getEStructuralFeatures().get(1);
 	}
@@ -471,6 +496,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBOMIModel_Roles() {
 		return (EReference)bomiModelEClass.getEStructuralFeatures().get(2);
 	}
@@ -480,6 +506,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBOMIModel_BoMiCoordinations() {
 		return (EReference)bomiModelEClass.getEStructuralFeatures().get(3);
 	}
@@ -489,6 +516,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBOMIModel_MethodologicalIslands() {
 		return (EReference)bomiModelEClass.getEStructuralFeatures().get(4);
 	}
@@ -498,6 +526,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBOMIModel_GovernanceTeams() {
 		return (EReference)bomiModelEClass.getEStructuralFeatures().get(5);
 	}
@@ -507,6 +536,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBOMIModel_BoTeamGovernances() {
 		return (EReference)bomiModelEClass.getEStructuralFeatures().get(6);
 	}
@@ -516,6 +546,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBOMIModel_Drivers() {
 		return (EReference)bomiModelEClass.getEStructuralFeatures().get(7);
 	}
@@ -525,6 +556,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMethodologicalIsland() {
 		return methodologicalIslandEClass;
 	}
@@ -534,6 +566,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMethodologicalIsland_Type() {
 		return (EAttribute)methodologicalIslandEClass.getEStructuralFeatures().get(0);
 	}
@@ -543,6 +576,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodologicalIsland_PartOfMIs() {
 		return (EReference)methodologicalIslandEClass.getEStructuralFeatures().get(1);
 	}
@@ -552,6 +586,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUsageAssociation() {
 		return usageAssociationEClass;
 	}
@@ -561,6 +596,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUsageAssociation_Accessability() {
 		return (EAttribute)usageAssociationEClass.getEStructuralFeatures().get(0);
 	}
@@ -570,6 +606,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUsageAssociation_Stability() {
 		return (EAttribute)usageAssociationEClass.getEStructuralFeatures().get(1);
 	}
@@ -579,6 +616,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUsageAssociation_Criticality() {
 		return (EAttribute)usageAssociationEClass.getEStructuralFeatures().get(2);
 	}
@@ -588,6 +626,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUsageAssociation_FitForPurpose() {
 		return (EAttribute)usageAssociationEClass.getEStructuralFeatures().get(3);
 	}
@@ -597,6 +636,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBOMICoordination() {
 		return bomiCoordinationEClass;
 	}
@@ -606,6 +646,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBOMICoordination_MethodologicalIslands() {
 		return (EReference)bomiCoordinationEClass.getEStructuralFeatures().get(0);
 	}
@@ -615,6 +656,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGovernanceTeam() {
 		return governanceTeamEClass;
 	}
@@ -624,6 +666,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBOTeamGovernance() {
 		return boTeamGovernanceEClass;
 	}
@@ -633,6 +676,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBOTeamGovernance_CoordinationMechanism() {
 		return (EAttribute)boTeamGovernanceEClass.getEStructuralFeatures().get(0);
 	}
@@ -642,6 +686,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBOTeamGovernance_FrequencyOfCoordination() {
 		return (EAttribute)boTeamGovernanceEClass.getEStructuralFeatures().get(1);
 	}
@@ -651,6 +696,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBOTeamGovernance_GovernanceTeams() {
 		return (EReference)boTeamGovernanceEClass.getEStructuralFeatures().get(2);
 	}
@@ -660,6 +706,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssociation() {
 		return associationEClass;
 	}
@@ -669,6 +716,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssociation_BoundaryObjects() {
 		return (EReference)associationEClass.getEStructuralFeatures().get(0);
 	}
@@ -678,6 +726,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDriver() {
 		return driverEClass;
 	}
@@ -687,6 +736,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDriver_DriverTypes() {
 		return (EAttribute)driverEClass.getEStructuralFeatures().get(0);
 	}
@@ -696,6 +746,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDriver_DistanceSize() {
 		return (EAttribute)driverEClass.getEStructuralFeatures().get(2);
 	}
@@ -705,6 +756,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDriver_DrivesMIs() {
 		return (EReference)driverEClass.getEStructuralFeatures().get(3);
 	}
@@ -714,6 +766,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDriver_DistanceTypes() {
 		return (EAttribute)driverEClass.getEStructuralFeatures().get(1);
 	}
@@ -723,6 +776,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPurposedElement() {
 		return purposedElementEClass;
 	}
@@ -732,6 +786,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPurposedElement_Purpose() {
 		return (EAttribute)purposedElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -741,6 +796,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getBOSuperType() {
 		return boSuperTypeEEnum;
 	}
@@ -750,6 +806,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getLifecycleStage() {
 		return lifecycleStageEEnum;
 	}
@@ -759,6 +816,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getHighLow() {
 		return highLowEEnum;
 	}
@@ -768,6 +826,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getMIType() {
 		return miTypeEEnum;
 	}
@@ -777,6 +836,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getDistanceType() {
 		return distanceTypeEEnum;
 	}
@@ -786,6 +846,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getDriverType() {
 		return driverTypeEEnum;
 	}
@@ -795,6 +856,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getInteractionKind() {
 		return interactionKindEEnum;
 	}
@@ -804,6 +866,7 @@ public class BomiPackageImpl extends EPackageImpl implements BomiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BomiFactory getBomiFactory() {
 		return (BomiFactory)getEFactoryInstance();
 	}

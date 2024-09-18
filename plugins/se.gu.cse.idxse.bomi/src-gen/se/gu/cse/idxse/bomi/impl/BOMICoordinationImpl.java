@@ -58,6 +58,7 @@ public class BOMICoordinationImpl extends UsageAssociationImpl implements BOMICo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MethodologicalIsland> getMethodologicalIslands() {
 		if (methodologicalIslands == null) {
 			methodologicalIslands = new EObjectResolvingEList<MethodologicalIsland>(MethodologicalIsland.class, this, BomiPackage.BOMI_COORDINATION__METHODOLOGICAL_ISLANDS);

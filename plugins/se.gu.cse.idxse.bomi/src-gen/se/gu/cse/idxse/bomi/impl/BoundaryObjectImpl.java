@@ -307,6 +307,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BOSuperType> getSuperTypes() {
 		if (superTypes == null) {
 			superTypes = new EDataTypeUniqueEList<BOSuperType>(BOSuperType.class, this, BomiPackage.BOUNDARY_OBJECT__SUPER_TYPES);
@@ -319,6 +320,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getLevelOfDetail() {
 		return levelOfDetail;
 	}
@@ -328,6 +330,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLevelOfDetail(HighLow newLevelOfDetail) {
 		HighLow oldLevelOfDetail = levelOfDetail;
 		levelOfDetail = newLevelOfDetail == null ? LEVEL_OF_DETAIL_EDEFAULT : newLevelOfDetail;
@@ -340,6 +343,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getFrequencyOfChange() {
 		return frequencyOfChange;
 	}
@@ -349,6 +353,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFrequencyOfChange(HighLow newFrequencyOfChange) {
 		HighLow oldFrequencyOfChange = frequencyOfChange;
 		frequencyOfChange = newFrequencyOfChange == null ? FREQUENCY_OF_CHANGE_EDEFAULT : newFrequencyOfChange;
@@ -361,6 +366,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getModularity() {
 		return modularity;
 	}
@@ -370,6 +376,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModularity(HighLow newModularity) {
 		HighLow oldModularity = modularity;
 		modularity = newModularity == null ? MODULARITY_EDEFAULT : newModularity;
@@ -382,6 +389,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getMaintainability() {
 		return maintainability;
 	}
@@ -391,6 +399,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaintainability(HighLow newMaintainability) {
 		HighLow oldMaintainability = maintainability;
 		maintainability = newMaintainability == null ? MAINTAINABILITY_EDEFAULT : newMaintainability;
@@ -403,6 +412,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getPrescriptive() {
 		return prescriptive;
 	}
@@ -412,6 +422,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrescriptive(HighLow newPrescriptive) {
 		HighLow oldPrescriptive = prescriptive;
 		prescriptive = newPrescriptive == null ? PRESCRIPTIVE_EDEFAULT : newPrescriptive;
@@ -424,6 +435,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<LifecycleStage> getLifecycleStages() {
 		if (lifecycleStages == null) {
 			lifecycleStages = new EDataTypeUniqueEList<LifecycleStage>(LifecycleStage.class, this, BomiPackage.BOUNDARY_OBJECT__LIFECYCLE_STAGES);
@@ -436,6 +448,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRepresentationFormat() {
 		return representationFormat;
 	}
@@ -445,6 +458,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRepresentationFormat(String newRepresentationFormat) {
 		String oldRepresentationFormat = representationFormat;
 		representationFormat = newRepresentationFormat;
@@ -457,6 +471,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTooling() {
 		return tooling;
 	}
@@ -466,6 +481,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTooling(String newTooling) {
 		String oldTooling = tooling;
 		tooling = newTooling;
@@ -478,6 +494,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getVersioning() {
 		return versioning;
 	}
@@ -487,6 +504,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersioning(String newVersioning) {
 		String oldVersioning = versioning;
 		versioning = newVersioning;
@@ -499,6 +517,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUpToDate() {
 		return upToDate;
 	}
@@ -508,6 +527,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpToDate(String newUpToDate) {
 		String oldUpToDate = upToDate;
 		upToDate = newUpToDate;
@@ -520,6 +540,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getInternalConsistency() {
 		return internalConsistency;
 	}
@@ -529,6 +550,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInternalConsistency(HighLow newInternalConsistency) {
 		HighLow oldInternalConsistency = internalConsistency;
 		internalConsistency = newInternalConsistency == null ? INTERNAL_CONSISTENCY_EDEFAULT : newInternalConsistency;
@@ -541,6 +563,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getExternalConsistency() {
 		return externalConsistency;
 	}
@@ -550,6 +573,7 @@ public class BoundaryObjectImpl extends PurposedElementImpl implements BoundaryO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExternalConsistency(HighLow newExternalConsistency) {
 		HighLow oldExternalConsistency = externalConsistency;
 		externalConsistency = newExternalConsistency == null ? EXTERNAL_CONSISTENCY_EDEFAULT : newExternalConsistency;

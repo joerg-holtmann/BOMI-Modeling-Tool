@@ -152,6 +152,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BORoleInteraction> getBoRoleInteractions() {
 		if (boRoleInteractions == null) {
 			boRoleInteractions = new EObjectContainmentEList<BORoleInteraction>(BORoleInteraction.class, this, BomiPackage.BOMI_MODEL__BO_ROLE_INTERACTIONS);
@@ -164,6 +165,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BoundaryObject> getBoundaryObjects() {
 		if (boundaryObjects == null) {
 			boundaryObjects = new EObjectContainmentEList<BoundaryObject>(BoundaryObject.class, this, BomiPackage.BOMI_MODEL__BOUNDARY_OBJECTS);
@@ -176,6 +178,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Role> getRoles() {
 		if (roles == null) {
 			roles = new EObjectContainmentEList<Role>(Role.class, this, BomiPackage.BOMI_MODEL__ROLES);
@@ -188,6 +191,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BOMICoordination> getBoMiCoordinations() {
 		if (boMiCoordinations == null) {
 			boMiCoordinations = new EObjectContainmentEList<BOMICoordination>(BOMICoordination.class, this, BomiPackage.BOMI_MODEL__BO_MI_COORDINATIONS);
@@ -200,6 +204,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MethodologicalIsland> getMethodologicalIslands() {
 		if (methodologicalIslands == null) {
 			methodologicalIslands = new EObjectContainmentEList<MethodologicalIsland>(MethodologicalIsland.class, this, BomiPackage.BOMI_MODEL__METHODOLOGICAL_ISLANDS);
@@ -212,6 +217,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GovernanceTeam> getGovernanceTeams() {
 		if (governanceTeams == null) {
 			governanceTeams = new EObjectContainmentEList<GovernanceTeam>(GovernanceTeam.class, this, BomiPackage.BOMI_MODEL__GOVERNANCE_TEAMS);
@@ -224,6 +230,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BOTeamGovernance> getBoTeamGovernances() {
 		if (boTeamGovernances == null) {
 			boTeamGovernances = new EObjectContainmentEList<BOTeamGovernance>(BOTeamGovernance.class, this, BomiPackage.BOMI_MODEL__BO_TEAM_GOVERNANCES);
@@ -236,6 +243,7 @@ public class BOMIModelImpl extends MinimalEObjectImpl.Container implements BOMIM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Driver> getDrivers() {
 		if (drivers == null) {
 			drivers = new EObjectContainmentEList<Driver>(Driver.class, this, BomiPackage.BOMI_MODEL__DRIVERS);

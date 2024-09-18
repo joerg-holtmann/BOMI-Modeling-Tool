@@ -130,6 +130,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BoundaryObject createBoundaryObject() {
 		BoundaryObjectImpl boundaryObject = new BoundaryObjectImpl();
 		return boundaryObject;
@@ -140,6 +141,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Role createRole() {
 		RoleImpl role = new RoleImpl();
 		return role;
@@ -150,6 +152,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BORoleInteraction createBORoleInteraction() {
 		BORoleInteractionImpl boRoleInteraction = new BORoleInteractionImpl();
 		return boRoleInteraction;
@@ -160,6 +163,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BOMIModel createBOMIModel() {
 		BOMIModelImpl bomiModel = new BOMIModelImpl();
 		return bomiModel;
@@ -170,6 +174,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MethodologicalIsland createMethodologicalIsland() {
 		MethodologicalIslandImpl methodologicalIsland = new MethodologicalIslandImpl();
 		return methodologicalIsland;
@@ -180,6 +185,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BOMICoordination createBOMICoordination() {
 		BOMICoordinationImpl bomiCoordination = new BOMICoordinationImpl();
 		return bomiCoordination;
@@ -190,6 +196,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GovernanceTeam createGovernanceTeam() {
 		GovernanceTeamImpl governanceTeam = new GovernanceTeamImpl();
 		return governanceTeam;
@@ -200,6 +207,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BOTeamGovernance createBOTeamGovernance() {
 		BOTeamGovernanceImpl boTeamGovernance = new BOTeamGovernanceImpl();
 		return boTeamGovernance;
@@ -210,6 +218,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Driver createDriver() {
 		DriverImpl driver = new DriverImpl();
 		return driver;
@@ -360,6 +369,7 @@ public class BomiFactoryImpl extends EFactoryImpl implements BomiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BomiPackage getBomiPackage() {
 		return (BomiPackage)getEPackage();
 	}

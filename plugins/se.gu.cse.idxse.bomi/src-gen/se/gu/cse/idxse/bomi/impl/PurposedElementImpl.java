@@ -69,6 +69,7 @@ public abstract class PurposedElementImpl extends NamedElementImpl implements Pu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPurpose() {
 		return purpose;
 	}
@@ -78,6 +79,7 @@ public abstract class PurposedElementImpl extends NamedElementImpl implements Pu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPurpose(String newPurpose) {
 		String oldPurpose = purpose;
 		purpose = newPurpose;

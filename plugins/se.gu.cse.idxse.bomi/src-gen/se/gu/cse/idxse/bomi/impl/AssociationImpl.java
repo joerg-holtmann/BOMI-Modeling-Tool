@@ -58,6 +58,7 @@ public abstract class AssociationImpl extends PurposedElementImpl implements Ass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BoundaryObject> getBoundaryObjects() {
 		if (boundaryObjects == null) {
 			boundaryObjects = new EObjectResolvingEList<BoundaryObject>(BoundaryObject.class, this, BomiPackage.ASSOCIATION__BOUNDARY_OBJECTS);

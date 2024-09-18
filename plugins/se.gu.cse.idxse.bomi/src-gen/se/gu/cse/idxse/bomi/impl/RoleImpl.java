@@ -73,6 +73,7 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GovernanceTeam> getPartOfGovernanceTeams() {
 		if (partOfGovernanceTeams == null) {
 			partOfGovernanceTeams = new EObjectResolvingEList<GovernanceTeam>(GovernanceTeam.class, this, BomiPackage.ROLE__PART_OF_GOVERNANCE_TEAMS);
@@ -85,6 +86,7 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MethodologicalIsland> getPartOfMIs() {
 		if (partOfMIs == null) {
 			partOfMIs = new EObjectResolvingEList<MethodologicalIsland>(MethodologicalIsland.class, this, BomiPackage.ROLE__PART_OF_MIS);

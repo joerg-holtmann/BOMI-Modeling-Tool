@@ -105,6 +105,7 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCoordinationMechanism() {
 		return coordinationMechanism;
 	}
@@ -114,6 +115,7 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCoordinationMechanism(String newCoordinationMechanism) {
 		String oldCoordinationMechanism = coordinationMechanism;
 		coordinationMechanism = newCoordinationMechanism;
@@ -126,6 +128,7 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HighLow getFrequencyOfCoordination() {
 		return frequencyOfCoordination;
 	}
@@ -135,6 +138,7 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFrequencyOfCoordination(HighLow newFrequencyOfCoordination) {
 		HighLow oldFrequencyOfCoordination = frequencyOfCoordination;
 		frequencyOfCoordination = newFrequencyOfCoordination == null ? FREQUENCY_OF_COORDINATION_EDEFAULT : newFrequencyOfCoordination;
@@ -147,6 +151,7 @@ public class BOTeamGovernanceImpl extends AssociationImpl implements BOTeamGover
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GovernanceTeam> getGovernanceTeams() {
 		if (governanceTeams == null) {
 			governanceTeams = new EObjectResolvingEList<GovernanceTeam>(GovernanceTeam.class, this, BomiPackage.BO_TEAM_GOVERNANCE__GOVERNANCE_TEAMS);

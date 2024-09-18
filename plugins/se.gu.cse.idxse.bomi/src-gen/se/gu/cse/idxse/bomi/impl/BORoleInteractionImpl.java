@@ -71,6 +71,7 @@ public class BORoleInteractionImpl extends UsageAssociationImpl implements BORol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Role> getRoles() {
 		if (roles == null) {
 			roles = new EObjectResolvingEList<Role>(Role.class, this, BomiPackage.BO_ROLE_INTERACTION__ROLES);
@@ -83,6 +84,7 @@ public class BORoleInteractionImpl extends UsageAssociationImpl implements BORol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InteractionKind> getInteractionKinds() {
 		if (interactionKinds == null) {
 			interactionKinds = new EDataTypeUniqueEList<InteractionKind>(InteractionKind.class, this, BomiPackage.BO_ROLE_INTERACTION__INTERACTION_KINDS);

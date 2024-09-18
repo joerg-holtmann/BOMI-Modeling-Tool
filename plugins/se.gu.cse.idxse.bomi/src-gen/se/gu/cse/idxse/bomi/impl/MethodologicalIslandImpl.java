@@ -84,6 +84,7 @@ public class MethodologicalIslandImpl extends NamedElementImpl implements Method
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MIType getType() {
 		return type;
 	}
@@ -93,6 +94,7 @@ public class MethodologicalIslandImpl extends NamedElementImpl implements Method
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(MIType newType) {
 		MIType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
@@ -105,6 +107,7 @@ public class MethodologicalIslandImpl extends NamedElementImpl implements Method
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MethodologicalIsland> getPartOfMIs() {
 		if (partOfMIs == null) {
 			partOfMIs = new EObjectResolvingEList<MethodologicalIsland>(MethodologicalIsland.class, this, BomiPackage.METHODOLOGICAL_ISLAND__PART_OF_MIS);
